@@ -32,5 +32,6 @@ Si necessita dello sviluppo di un’applicazione rivolta agli studenti che offra
     * Media dei voti del semestre: media ponderata calcolata in base ai crediti, media dei voti e voto massimo conseguibile di un corso
     
     
-  4. Tener traccia delle spese effettuate in correlazione ad un determinato evento
-    *	g
+  4. Tener traccia delle spese effettuate in un determinato periodo di tempo 
+    * Possibilità di visualizzare un riepilogo delle spese effettuate e di una eventuale disponibilità finanziaria residua
+    * Possibilità di scegliere il periodo di tempo da consultare
