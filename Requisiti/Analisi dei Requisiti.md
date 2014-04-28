@@ -16,7 +16,8 @@ Analisi dei requisiti
 * **Corso** descrive le attività di un insegnamento
     * `Caratterizzato` da:
         * Uno o più **Docenti**
-        * Uno o più **Esami**
+        * Zero o più **Compiti/Esami**
+        * **Crediti** (opzionale)
         * **Media dei voti del corso**: media aritmedica dei **voti** degli **esami** completati
         * **Voto massimo**: conseguibile in un **esame**
         * **Voto finale**: voto conseguito nel corso
@@ -29,7 +30,8 @@ Analisi dei requisiti
         * **Durata**: in minuti
         * **Luogo**
         * **Descrizione** (opzionale): dettagli riguardanti l'evento
-        * **Spesa** effettuata (opzionale)
+        * **Spesa** effettuata (opzionale): incide sul saldo del **Portafogli**
+        * Una o più **Scadenze**: attività da completare entro la data dell'evento
     * `Può avere` una **cadenza periodica**
     * **Evento** è un evento generico
     * `Può essere` di **tipologia specifica**:
@@ -53,7 +55,7 @@ Analisi dei requisiti
         * **Peso massimale** (opzionale): raggiunto durante l'esecuzione della serie
         * **KCAL** (opzionale): bruciate
         
-* **Evento Esame** descrive un appello d'esame/compito in classe
+* **Evento Compito/Esame** descrive un appello d'esame/compito in classe
     * `Caratterizzato` da:
         * **Tipologia**: scritto o orale
         * **Risultato**: **voto** (opzionale), "non sostenuto", "respinto", "ritirato", ecc
@@ -62,6 +64,12 @@ Analisi dei requisiti
     * `Caratterizzata` da:
         * Uno o più **Docenti**: dai quali viene tenuta
         * **Tipologia**: lezione frontale o laboratorio
+
+* **Compito/Scadenza** attività da svolgere/completare
+    * `Caratterizzato` da:
+        * **Descrizione**
+        * **Data di consegna** (opzionale): in caso di una scadenza(associata ad un evento) la data di consegna è la stessa dell'evento.
+        * **Priorità**
         
 * **Docente** un professore che insegna una materia/tiene un corso
     * `Caratterizzato` da:
@@ -69,3 +77,9 @@ Analisi dei requisiti
     * **Cognome**
     * Uno o più **Recapiti**: numeri di telefono dell'ufficio o indirizzo e-mail
     * Uno o più **Orari di ricevimento studenti**: occasioni di richieste chiarimenti da parte di studenti
+    
+* **Portafogli** raccoglie tutte le voci di spesa su base mensile
+    * `Caratterizzato` da:
+        * Eventi che hanno comportato una spesa
+        * **Tetto massimo di spesa** (opzionale)
+        * **Situazione finanziaria**: in caso di presenza di un tetto massimo mostra la disponibilità residua, altrimenti il totale delle spese effettuate
