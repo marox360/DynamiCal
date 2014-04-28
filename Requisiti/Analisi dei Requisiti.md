@@ -20,7 +20,7 @@ Analisi dei requisiti
         * **Crediti** (opzionale)
         * **Media dei voti del corso**: media aritmedica dei **voti** degli **esami** completati
         * **Voto massimo**: conseguibile in un **esame**
-        * **Voto finale**: voto conseguito nel corso
+        * **Voto finale**: voto conseguito nel **corso**
                
 * **Evento** descrive un **impegno** passato o futuro nel **calendario**
     * `Caratterizzato` da:
@@ -42,20 +42,20 @@ Analisi dei requisiti
         
 * **Evento Spesa** descrive una serie di acquisti da effettuare
     * `Caratterizzato` da:
-       * **Lista di oggetti da comprare**: ogni oggetto è definito da un nome ed una quantità
-       * **Lista di oggetti messi nel carrello**: tutti gli oggetti che son stati acquistati, definiti da nome e prezzo (opzionale)
+       * **Lista di oggetti da comprare**: ogni oggetto è definito da un **nome** ed una **quantità**
+       * **Lista di oggetti messi nel carrello**: tutti gli oggetti che son stati acquistati, definiti da **nome** e **prezzo** (opzionale)
        
 * **Evento Palestra** descrive una sessione di allenamento
     * `Caratterizzato` da:
-        * **Tabella di allenamento** insieme di **esericizi**
+        * **Tabella di allenamento** insieme di **esercizi**
 
 * **Esercizio** descrive un esercizio da effettuare in palestra
     * `Caratterizzato` da:
         * **Serie**: più ripetizioni dello stesso movimento
-        * **Peso massimale** (opzionale): raggiunto durante l'esecuzione della serie
+        * **Peso massimale** (opzionale): raggiunto durante l'esecuzione della **serie**
         * **KCAL** (opzionale): bruciate
         
-* **Evento Compito/Esame** descrive un appello d'esame/compito in classe
+* **Evento Esame** descrive un appello d'esame/compito in classe
     * `Caratterizzato` da:
         * **Tipologia**: scritto o orale
         * **Risultato**: **voto** (opzionale), "non sostenuto", "respinto", "ritirato"
@@ -68,10 +68,10 @@ Analisi dei requisiti
 * **Compito/Scadenza** attività da svolgere/completare
     * `Caratterizzato` da:
         * **Descrizione**
-        * **Data di consegna** (opzionale): in caso di una scadenza(associata ad un evento) la data di consegna è la stessa dell'evento.
+        * **Data di consegna** (opzionale): in caso di una **scadenza**(associata ad un evento) la data di consegna è la stessa dell'evento.
         * **Priorità**
         
-* **Docente** un professore che insegna una materia/tiene un corso
+* **Docente** un professore che insegna una materia/tiene un **corso**
     * `Caratterizzato` da:
         * **Nome**
         * **Cognome**
