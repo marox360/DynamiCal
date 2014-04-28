@@ -73,10 +73,10 @@ Analisi dei requisiti
         
 * **Docente** un professore che insegna una materia/tiene un corso
     * `Caratterizzato` da:
-    * **Nome**
-    * **Cognome**
-    * Uno o più **Recapiti**: numeri di telefono dell'ufficio o indirizzo e-mail
-    * Uno o più **Orari di ricevimento studenti**: occasioni di richieste chiarimenti da parte di studenti
+        * **Nome**
+        * **Cognome**
+        * Uno o più **Recapiti**: numeri di telefono dell'ufficio o indirizzo e-mail
+        * Uno o più **Orari di ricevimento studenti**: occasioni di richieste chiarimenti da parte di studenti
     
 * **Portafogli** raccoglie tutte le voci di spesa su base mensile
     * `Caratterizzato` da:
