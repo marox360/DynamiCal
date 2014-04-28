@@ -58,7 +58,7 @@ Analisi dei requisiti
 * **Evento Compito/Esame** descrive un appello d'esame/compito in classe
     * `Caratterizzato` da:
         * **Tipologia**: scritto o orale
-        * **Risultato**: **voto** (opzionale), "non sostenuto", "respinto", "ritirato", ecc
+        * **Risultato**: **voto** (opzionale), "non sostenuto", "respinto", "ritirato"
         
 * **Lezione** descrive un'attività didattica di un corso
     * `Caratterizzata` da:
