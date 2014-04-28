@@ -17,7 +17,7 @@ Si necessita dello sviluppo di un’applicazione rivolta agli studenti che offra
           * Evento "palestra" caratterizzato da una tabella di allenamento specifica per determinati giorni della settimana, composta da una serie di esercizi (più serie di un certo numero di ripetizioni per ogni gruppo muscolare) per i quali è possibile tener traccia del peso massimale raggiunto nel sollevamento pesi e/o delle kcal bruciate in caso di attività aerobica
           * Evento "dieta" caratterizzato da un insieme di pasti giornalieri per i quali si tiene traccia delle kcal assunte in relazione ad un target massimale
           * Evento "esame", relativo ad un corso, caratterizzato da una tipologia, da un risultato ("non sostenuto", voto, voto finale, "respinto", "ritirato", ecc)
-      * Ogni evento è caratterizzato da data, ora di inizio e fine, luogo, nome e può contenere una descrizione, una spesa effettuata
+      * Ogni evento è caratterizzato da data, ora di inizio, durata, luogo, nome e può contenere una descrizione, una spesa effettuata
       * Ogni evento può avere cadenza periodica o svolgersi in una sola occasione
 
 
