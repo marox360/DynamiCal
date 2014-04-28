@@ -13,7 +13,7 @@ Analisi dei requisiti
         * **Media dei voti del semestre**: media ponderata calcolata in base ai **crediti**, **media dei voti** e **voto massimo conseguibile** di un **corso**
         * uno o più **Corsi**
     
-* **Corso** descrive le attività di un insegnamento
+* **Corso** ≡ **Materia** descrive le attività di un insegnamento
     * `Caratterizzato` da:
         * Uno o più **Docenti**
         * Zero o più **Compiti/Esami**
@@ -71,7 +71,7 @@ Analisi dei requisiti
         * **Data di consegna** (opzionale): in caso di una **scadenza**(associata ad un evento) la data di consegna è la stessa dell'evento.
         * **Priorità**
         
-* **Docente** un professore che insegna una materia/tiene un **corso**
+* **Docente** ≡ **Professore** è titolare e tiene le lezioni di un **corso**
     * `Caratterizzato` da:
         * **Nome**
         * **Cognome**
