@@ -22,7 +22,7 @@ Si necessita dello sviluppo di un’applicazione rivolta agli studenti che offra
 
   2. `Tener traccia` dei **compiti/scadenze da svolgere/consegnare**
     * `Possono essere associati` ad un **evento** o ad un **corso**
-    * `Sono caratterizzati` da una **priorità**, uno o più **step di completamento**, una **data di consegna** ed una **descrizione** (facoltativa)
+    * `Sono caratterizzati` da una **priorità**, uno o più **step di completamento**, una **data di consegna** ed una **descrizione**
     
     
   3. `Tener traccia` dei **progressi** della propria **carriera scolastica**
