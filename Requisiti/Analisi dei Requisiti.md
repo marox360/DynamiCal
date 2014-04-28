@@ -15,7 +15,8 @@ Analisi dei requisiti
     
 * **Corso** descrive le attività di un insegnamento
     * `Caratterizzato` da:
-        *uno o più **Esami**
+        * Uno o più **Docenti**
+        * Uno o più **Esami**
         * **Media dei voti del corso**: media aritmedica dei **voti** degli **esami** completati
         * **Voto massimo**: conseguibile in un **esame**
         * **Voto finale**: voto conseguito nel corso
@@ -57,4 +58,14 @@ Analisi dei requisiti
         * **Tipologia**: scritto o orale
         * **Risultato**: **voto** (opzionale), "non sostenuto", "respinto", "ritirato", ecc
         
-* **Lezione** evento specifico relativo ad un corso/materia
+* **Lezione** descrive un'attività didattica di un corso
+    * `Caratterizzata` da:
+        * Uno o più **Docenti**: dai quali viene tenuta
+        * **Tipologia**: lezione frontale o laboratorio
+        
+* **Docente** un professore che insegna una materia/tiene un corso
+    * `Caratterizzato` da:
+    * **Nome**
+    * **Cognome**
+    * Uno o più **Recapiti**: numeri di telefono dell'ufficio o indirizzo e-mail
+    * Uno o più **Orari di ricevimento studenti**: occasioni di richieste chiarimenti da parte di studenti
