@@ -10,8 +10,7 @@ Si necessita dello sviluppo di un’applicazione rivolta agli studenti che offra
       * Ogni **lezione** `può avere` **cadenza periodica** o svolgersi in una sola occasione
       * Ogni **lezione** `può svolgersi` in **aula** o in **laboratorio**
       * Ogni **lezione** `è tenuta` in una specifica **aula**, ha un **orario di inizio e di fine** ed `è tenuta` da uno o più **docenti**
-      * Ogni **docente** `è caratterizzato` da un elenco di **recapiti**, **orari di ricevimento studenti** e **lezioni/corsi** che `tiene`
-      
+      * Ogni **docente** `è caratterizzato` da un elenco di **recapiti**, **orari di ricevimento studenti** e **lezioni/corsi** che `tiene`   
     * Possibilità di `aggiungere` al **calendario** **eventi di natura non scolastica**
       * Un **evento** `può essere` di una **tipologia specifica** (spesa, palestra, esame/compito in classe, ecc ecc)
           * **Evento "spesa"** `caratterizzato` da **lista di oggetti da comprare** (ed **una di quelli già messi nel carrello**) a cui eventualmente `è associato` un **prezzo**
@@ -27,7 +26,7 @@ Si necessita dello sviluppo di un’applicazione rivolta agli studenti che offra
     
     
   3. `Tener traccia` dei **progressi** della propria **carriera scolastica**
-    * **Media dei voti** del **corso**: media aritmedica dei voti degli **esami** completati 
+    * **Media dei voti** del **corso**: media aritmedica dei **voti** degli **esami** completati 
     * **Media dei voti** del **semestre**: media ponderata calcolata in base ai **crediti**, **media dei voti** e **voto massimo conseguibile** di un **corso**
     
     
