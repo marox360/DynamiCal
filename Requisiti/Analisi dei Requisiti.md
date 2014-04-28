@@ -1,6 +1,6 @@
 Analisi dei requisiti
 ===
-* **Calendario** raccoglitore di **eventi** organizzati per **data**
+* **Calendario** è un raccoglitore di **eventi** organizzati per **data**
     * Al quale è possibile `aggiungere`:
         * **Eventi di natura non scolastica**
         * **Lezioni**
@@ -9,7 +9,7 @@ Analisi dei requisiti
     * `Caratterizzato` da:
         * **Data di inizio**
         * **Data di fine**
-        * **Periodi di vacanza** (opzionale): in un periodo di vacanza le attività dei corsi vengono sospese
+        * **Periodi di vacanza** (opzionale): in un periodo di vacanza le attività dei **corsi** vengono sospese
         * **Media dei voti del semestre**: media ponderata calcolata in base ai **crediti**, **media dei voti** e **voto massimo conseguibile** di un **corso**
         * uno o più **Corsi**
     
