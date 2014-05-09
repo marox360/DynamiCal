@@ -31,8 +31,8 @@ Analisi dei requisiti
 * **Modello** ≡ **Modello di evento**
   * `È identificato da`:
     * **Nome**
-  * `È caratterizzato da`:
-    * zero o più **Voci**
+  * `Contiene`:
+    * zero o più **Voci**, la lista è ordinata
 * **Voce** ≡ **Campo aggiuntivo di un evento**
   * Descrive un campo aggiuntivo di un evento 
   * `È caratterizzata da`:
