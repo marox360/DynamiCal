@@ -57,6 +57,9 @@ Analisi dei requisiti
 * **Filtro per ricerca**
   * `Filtra` per:
     * **Frase** ≡ **Parola**
+* **Criterio di filtraggio**
+  * `È caratterizzata da`:
+    * uno o più **filtri**
 * **Risultato di un filtraggio**
   * Sottoinsieme di eventi ottenuto applicando uno o più filtri agli eventi di uno o più calendari
   * Il cambiamento dell'insieme del calendari o dell'insieme degli eventi di uno qualsiasi dei calendari (`inserimento`, `modifica`, `cancellazione`) `provoca un aggiornamento` automatico del risultato di un filtraggio
