@@ -3,13 +3,14 @@ Descrizione dei casi d'uso
 
 Titolo | titolo
 --- | ---
-**Descrizione** | 
+**Descrizione** |  
 **Relazioni** | 
 **Attori** | 
 **Precondizioni** | 
 **Postcondizioni** | <ul><li></li><li></li></ul>
-**Scenario principale** | 1. </br> 2. </br>
-**Scenari alternativi** | 1-a. </br> 2-a. </br>
+**Postcondizioni** | <ul><li></li><li></li></ul>
+**Scenario principale** | <ol><li></li> <li></li></ol>
+**Scenari alternativi** | <ol start="1"><li><ol type="a"><li></li> <li>*Si ritorna al passo x* dello scenario principale</li></ol></li></ol>
 **Requisiti non funzionali** | 
-**Punti aperti** | 1. </br> 2. </br>
+**Punti aperti** | <ol><li></li> <li></li></ol>
 
