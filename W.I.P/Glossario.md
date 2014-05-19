@@ -7,7 +7,7 @@ Impegno | Avvenimento che si desidera mantenere memorizzato in un calendario del
 Calendario | Raccoglie un insieme di eventi di uno stesso tipo (che seguono quindi il medesimo modello) che possono essere unici o ripetersi nel tempo con una determinata periocidità
 Periodicità | Cadenza ripetuta nel tempo di un determinato evento
 Evento | Descrive un impegno mediante determinati attributi, sulla base di un modello
-Modello | Insieme di voci che descrivono gli attributi che caratterizzano un certo tipo di eventi
+Modello | Insieme di voci che descrivono gli attributi che caratterizzano un certo tipo di evento
 Voce | Attributo del modello di un evento (di tipo testo, numerico ecc.)
 Filtro | Strumento atto alla selezione/visualizzazione dei soli eventi che soddisfano determinati requisiti
 Risultato di un filtraggio | Lista di eventi visualizzati che soddisfano determinati criteri di ricerca
