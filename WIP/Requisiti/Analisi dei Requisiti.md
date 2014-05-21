@@ -3,8 +3,8 @@ Analisi dei requisiti
 * **Agenda**
   * È un'entità che tiene organizzati i propri calendari e modelli di eventi
   * `È caratterizzato da`:
-    * zero o più **Calendari**
-    * zero o più **Modelli**
+    * uno o più **Calendari**, è sempre presente un calendario di default
+    * zero o più **Modelli di eventi**
 * **Calendario**
   * `È identificato da`:
     * **Nome**
@@ -23,12 +23,13 @@ Analisi dei requisiti
     * **Nome**
     * **Data**, data e ora di inizio dell'evento
     * **Durata**, durata in minuti dell'evento
-    * **Luogo**, dove si svolge l'evento
   * `Può avere`
     * **Descrizione**
     * **Periodicità**
+    * **Modello di evento**
+    * **Luogo**, dove si svolge l'evento
 * **Periodicità**
-* **Modello** ≡ **Modello di evento**
+* **Modello di evento** ≡ **Modello**
   * `È identificato da`:
     * **Nome**
   * `Contiene`:
@@ -53,7 +54,7 @@ Analisi dei requisiti
     * **Data fine**
 * **Filtro per modello**
   * `Filtra` per:
-    * **Modello**
+    * **Modello di evento**
 * **Filtro per ricerca**
   * `Filtra` per:
     * **Frase** ≡ **Parola**
