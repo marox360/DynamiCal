@@ -28,7 +28,7 @@ Analisi dei requisiti
     * **Periodicità**
     * **Modello di evento**
     * **Luogo**, dove si svolge l'evento
-* **Periodicità**
+* **Periodicità**, cadenza ripetuta nel tempo di un determinato evento
 * **Modello di evento** ≡ **Modello**
   * `È identificato da`:
     * **Nome**
