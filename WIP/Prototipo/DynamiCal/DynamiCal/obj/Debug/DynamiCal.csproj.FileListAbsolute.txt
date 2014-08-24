@@ -1,1 +1,1 @@
-\\vmware-host\Shared Folders\IdS\WIP\Prototipo\DynamiCal\DynamiCal\bin\Debug\DynamiCal.exe.config
+C:\Users\Tommaso\Documents\GitHub\DynamiCal\WIP\Prototipo\DynamiCal\DynamiCal\bin\Debug\DynamiCal.exe.config
