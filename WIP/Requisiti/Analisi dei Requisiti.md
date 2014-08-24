@@ -29,6 +29,11 @@ Analisi dei requisiti
     * **Modello di evento**
     * **Luogo**, dove si svolge l'evento
 * **Periodicità**, cadenza ripetuta nel tempo di un determinato evento
+  * `Può ripetersi`
+    * **Ogni tot giorni**
+    * **Ogni tot settimane**
+    * **Ogni tot mesi**
+    * **Ogni tot anni**
 * **Modello di evento** ≡ **Modello**
   * `È identificato da`:
     * **Nome**
