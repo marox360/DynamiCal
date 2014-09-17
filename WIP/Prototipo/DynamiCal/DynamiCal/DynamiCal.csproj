@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Agenda.cs" />
     <Compile Include="Model\Amico.cs" />
     <Compile Include="MainView.cs">
       <SubType>Form</SubType>
@@ -51,6 +52,7 @@
     <Compile Include="MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ModelloEvento.cs" />
     <Compile Include="Model\Voce.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
