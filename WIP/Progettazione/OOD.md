@@ -13,4 +13,5 @@ L'utente li visualizzerà nominati come:
    * numerico
    * sì-no/tick
    * data
-   
+
+Ogni **voce** viene creata al momento della conferma da parte dell'utente; una volta create una **voce** non è più modificabile. Bisogna eliminarla e ricrearla.
