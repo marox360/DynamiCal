@@ -9,12 +9,12 @@ namespace DynamiCal.Model
     class Agenda
     {
         private List<Calendario> _calendari;
-        private List<Evento> _eventi;
+        private List<ModelloEvento> _modelliEvento;
 
         public Agenda()
         {
             _calendari = new List<Calendario>();
-            _eventi = new List<Evento>();
+            _modelliEvento = new List<ModelloEvento>();
         }
 
         public List<Calendario> calendari
@@ -25,11 +25,11 @@ namespace DynamiCal.Model
             }
         }
 
-        public List<Evento> eventi
+        public List<ModelloEvento> modelliEvento
         {
             get
             {
-                return _eventi;
+                return _modelliEvento;
             }
         }
     }

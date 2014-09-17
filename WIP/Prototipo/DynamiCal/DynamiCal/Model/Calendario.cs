@@ -10,6 +10,7 @@ namespace DynamiCal.Model
     class Calendario
     {
         private string _nome;
+        private List<Evento> _eventi;
 
         public Calendario(string nome)
         {
@@ -18,6 +19,7 @@ namespace DynamiCal.Model
             #endregion
 
             _nome = nome;
+            _eventi = new List<Evento>();
         }
 
         public string nome
@@ -25,6 +27,14 @@ namespace DynamiCal.Model
             get
             {
                 return _nome;
+            }
+        }
+
+        public List<Evento> eventi
+        {
+            get
+            {
+                return _eventi;
             }
         }
     }
