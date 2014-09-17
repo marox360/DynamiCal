@@ -10,7 +10,7 @@ Per quanto riguarda le **voci** con le quali è possibile personalizzare un nuov
 L'utente li visualizzerà nominati come:
 
    * testo
-   * numero
+   * numerico
    * sì-no/tick
    * data
    
