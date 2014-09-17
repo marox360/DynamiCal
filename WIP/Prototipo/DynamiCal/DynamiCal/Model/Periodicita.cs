@@ -7,5 +7,6 @@ namespace DynamiCal.Model
 {
     class Periodicita
     {
+        //prova
     }
 }
