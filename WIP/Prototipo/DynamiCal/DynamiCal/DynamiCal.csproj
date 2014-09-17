@@ -54,7 +54,7 @@
     </Compile>
     <Compile Include="Model\Calendario.cs" />
     <Compile Include="Model\ModelloEvento.cs" />
-    <Compile Include="Model\Class1.cs" />
+    <Compile Include="Model\Evento.cs" />
     <Compile Include="Model\Voce.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
