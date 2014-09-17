@@ -8,5 +8,11 @@ namespace DynamiCal.Model
 {
     class Evento
     {
+        private string _nome, _descrizione;
+        private DateTime _data;
+        private long _durata;
+
+
+
     }
 }
