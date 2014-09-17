@@ -44,7 +44,7 @@ Analisi dei requisiti
   * `È caratterizzata da`:
     * **Nome**
     * **Tipo**
-* **Filtro** ≡ **Stretegia di filtraggio** ≡ **Tipologia di filtro**
+* **Filtro** ≡ **Strategia di filtraggio** ≡ **Tipologia di filtro**
   * `Può essere`:
     * **Filtro per calendario**
     * **Filtro per arco temporale**
