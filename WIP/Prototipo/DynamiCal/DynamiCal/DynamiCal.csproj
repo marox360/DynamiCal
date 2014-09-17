@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filters\CriterioDiFiltraggio.cs" />
     <Compile Include="Model\Agenda.cs" />
     <Compile Include="Model\Amico.cs" />
     <Compile Include="MainView.cs">
@@ -52,7 +53,9 @@
     <Compile Include="MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Calendario.cs" />
+    <Compile Include="Model\Calendars\Calendario.cs" />
+    <Compile Include="Model\Calendars\CalendarioCondiviso.cs" />
+    <Compile Include="Model\Calendars\CalendarioLocale.cs" />
     <Compile Include="Model\ModelloEvento.cs" />
     <Compile Include="Model\Evento.cs" />
     <Compile Include="Model\Voce.cs" />
