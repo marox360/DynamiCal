@@ -53,6 +53,7 @@
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\ModelloEvento.cs" />
+    <Compile Include="Model\Class1.cs" />
     <Compile Include="Model\Voce.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

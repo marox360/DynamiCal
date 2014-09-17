@@ -9,19 +9,22 @@ namespace DynamiCal.Model
 {
     class Voce
     {
-        private string _nome;
+        public enum TipoVoce {Stringa, Double, Boolean, Data};
 
-        public Voce() : this(null) {}
-        public Voce(String nome) {
+        private string _nome;
+        private TipoVoce _tipo;
+        public Voce(String nome, TipoVoce tipo) 
+        {
+            #region Precondizioni
+            Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Event Name is null");
+            #endregion
+
             _nome = nome;
+            _tipo = tipo;
         }
 
         public string nome
         {
-            set
-            {
-                _nome = value;
-            }
             get
             {
                 return _nome;
