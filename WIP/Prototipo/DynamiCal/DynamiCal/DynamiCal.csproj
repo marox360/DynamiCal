@@ -58,6 +58,7 @@
     <Compile Include="Model\Calendars\CalendarioLocale.cs" />
     <Compile Include="Model\ModelloEvento.cs" />
     <Compile Include="Model\Evento.cs" />
+    <Compile Include="Model\Periodicita.cs" />
     <Compile Include="Model\Voce.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
