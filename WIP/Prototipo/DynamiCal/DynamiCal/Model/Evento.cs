@@ -16,7 +16,7 @@ namespace DynamiCal.Model
 
         public Evento(string nome, DateTime data, long durata, string descrizione, Periodicita periodicita, ModelloEvento modello, string luogo)
         {
- 
+  madonia stronzo
         }
     }
 }
