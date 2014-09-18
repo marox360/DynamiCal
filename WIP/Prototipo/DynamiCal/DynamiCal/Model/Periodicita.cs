@@ -7,5 +7,9 @@ namespace DynamiCal.Model
 {
     class Periodicita
     {
+        public Periodicita()
+        {
+
+        }
     }
 }

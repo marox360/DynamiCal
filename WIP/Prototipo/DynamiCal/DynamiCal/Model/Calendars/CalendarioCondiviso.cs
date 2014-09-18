@@ -8,5 +8,6 @@ namespace DynamiCal.Model
 {
     class CalendarioCondiviso : Calendario
     {
+        private List<Amico> _amici;
     }
 }
