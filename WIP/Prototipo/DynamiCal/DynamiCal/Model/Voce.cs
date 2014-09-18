@@ -4,15 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.ComponentModel;
 
 namespace DynamiCal.Model
 {
     class Voce
     {
-        public enum TipoVoce {Stringa, Double, Boolean, Data};
+        public enum TipoVoce {
+            [Description("Testo")]
+            Stringa,
+            [Description("Numero")]
+            Double,
+            [Description("Sì/No")]
+            Boolean,
+            [Description("Data")]
+            Data};
 
         private string _nome;
         private TipoVoce _tipo;
+
         public Voce(String nome, TipoVoce tipo) 
         {
             #region Precondizioni
