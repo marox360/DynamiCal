@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataGridBindingSources\MonthlySource.cs" />
     <Compile Include="Filters\CriterioDiFiltraggio.cs" />
     <Compile Include="Model\Agenda.cs" />
     <Compile Include="Model\Amico.cs" />
@@ -74,6 +75,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\DynamiCal.DataGridBindingSources.Week.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
