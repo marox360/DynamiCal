@@ -22,7 +22,7 @@ namespace DynamiCal
         private void MainView_Load(object sender, EventArgs e)
         {
             calendarGridView.RowTemplate.Height = (calendarGridView.Height - calendarGridView.ColumnHeadersHeight) / 6;
-            setCurrentMonth(DateTime.Today);
+            SetCurrentMonth(DateTime.Today);
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -46,10 +46,10 @@ namespace DynamiCal
 
         private void datePicker_DateSelected(object sender, DateRangeEventArgs e)
         {
-            setCurrentMonth(e.Start);
+            SetCurrentMonth(e.Start);
         }
 
-        private void setCurrentMonth(DateTime date)
+        private void SetCurrentMonth(DateTime date)
         {
             DateTimeFormatInfo dateTimeFormatInfo = CultureInfo.CurrentCulture.DateTimeFormat;
             TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
@@ -58,5 +58,9 @@ namespace DynamiCal
             MonthlySource.FillSource(weekBindingSource, date);
         }
 
+        private void SelectDay(DateTime date)
+        {
+
+        }
     }
 }
