@@ -22,7 +22,7 @@ namespace DynamiCal.Model
             _eventi = new List<Evento>();
         }
 
-        public string nome
+        public string Nome
         {
             get
             {
@@ -30,7 +30,7 @@ namespace DynamiCal.Model
             }
         }
 
-        public List<Evento> eventi
+        public List<Evento> Eventi
         {
             get
             {

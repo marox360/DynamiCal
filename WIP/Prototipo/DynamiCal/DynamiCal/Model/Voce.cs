@@ -33,7 +33,7 @@ namespace DynamiCal.Model
             _tipo = tipo;
         }
 
-        public string nome
+        public string Nome
         {
             get
             {

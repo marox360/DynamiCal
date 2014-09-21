@@ -22,7 +22,7 @@ namespace DynamiCal.Model
             _voci = new List<Voce>();
         }
 
-        public string nome
+        public string Nome
         {
             get
             {
@@ -30,7 +30,7 @@ namespace DynamiCal.Model
             }
         }
 
-        public List<Voce> voci
+        public List<Voce> Voci
         {
             get
             {

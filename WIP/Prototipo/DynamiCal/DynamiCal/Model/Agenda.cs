@@ -17,7 +17,7 @@ namespace DynamiCal.Model
             _modelliEvento = new List<ModelloEvento>();
         }
 
-        public List<Calendario> calendari
+        public List<Calendario> Calendari
         {
             get
             {
@@ -25,7 +25,7 @@ namespace DynamiCal.Model
             }
         }
 
-        public List<ModelloEvento> modelliEvento
+        public List<ModelloEvento> ModelliEvento
         {
             get
             {

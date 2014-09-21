@@ -22,7 +22,7 @@ namespace DynamiCal
             _email = email;
         }
         
-        public string email
+        public string Email
         {
             get
             {
