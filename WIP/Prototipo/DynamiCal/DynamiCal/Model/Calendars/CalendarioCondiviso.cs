@@ -10,6 +10,17 @@ namespace DynamiCal.Model
     {
         private List<Amico> _amici;
     
-        public CalendarioCondiviso(string nome) : base(nome){}
+        public CalendarioCondiviso(string nome) : base(nome)
+        {
+            _amici = new List<Amico>();
+        }
+
+        public List<Amico> Amici
+        {
+            get
+            {
+                return _amici;
+            }
+        }
     }
 }
