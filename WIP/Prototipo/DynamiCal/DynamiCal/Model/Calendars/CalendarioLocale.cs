@@ -8,6 +8,6 @@ namespace DynamiCal.Model
 {
     class CalendarioLocale : Calendario
     {
-
+        public CalendarioLocale(string nome) : base(nome) {}
     }
 }
