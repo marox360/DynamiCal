@@ -33,8 +33,6 @@
             this.calendarList = new System.Windows.Forms.ListBox();
             this.datePicker = new System.Windows.Forms.MonthCalendar();
             this.calendarPanel = new System.Windows.Forms.Panel();
-            this.calendarTitlePanel = new System.Windows.Forms.Panel();
-            this.displayedMonth = new System.Windows.Forms.Label();
             this.calendarGridView = new System.Windows.Forms.DataGridView();
             this.lunedìDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.martedìDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,11 +42,13 @@
             this.sabatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.domenicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.weekBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.calendarTitlePanel = new System.Windows.Forms.Panel();
+            this.displayedMonth = new System.Windows.Forms.Label();
             this.sidePanel.SuspendLayout();
             this.calendarPanel.SuspendLayout();
-            this.calendarTitlePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).BeginInit();
+            this.calendarTitlePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // sidePanel
@@ -75,8 +75,10 @@
             // 
             this.datePicker.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.datePicker.Location = new System.Drawing.Point(0, 254);
+            this.datePicker.MaxSelectionCount = 1;
             this.datePicker.Name = "datePicker";
             this.datePicker.TabIndex = 0;
+            this.datePicker.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.datePicker_DateSelected);
             // 
             // calendarPanel
             // 
@@ -87,26 +89,6 @@
             this.calendarPanel.Name = "calendarPanel";
             this.calendarPanel.Size = new System.Drawing.Size(508, 416);
             this.calendarPanel.TabIndex = 3;
-            // 
-            // calendarTitlePanel
-            // 
-            this.calendarTitlePanel.Controls.Add(this.displayedMonth);
-            this.calendarTitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.calendarTitlePanel.Location = new System.Drawing.Point(0, 0);
-            this.calendarTitlePanel.Name = "calendarTitlePanel";
-            this.calendarTitlePanel.Size = new System.Drawing.Size(508, 30);
-            this.calendarTitlePanel.TabIndex = 0;
-            // 
-            // displayedMonth
-            // 
-            this.displayedMonth.Dock = System.Windows.Forms.DockStyle.Right;
-            this.displayedMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayedMonth.Location = new System.Drawing.Point(427, 0);
-            this.displayedMonth.Name = "displayedMonth";
-            this.displayedMonth.Size = new System.Drawing.Size(81, 30);
-            this.displayedMonth.TabIndex = 0;
-            this.displayedMonth.Text = "Mese Anno";
-            this.displayedMonth.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // calendarGridView
             // 
@@ -194,6 +176,26 @@
             // 
             this.weekBindingSource.DataSource = typeof(DynamiCal.DataGridBindingSources.Week);
             // 
+            // calendarTitlePanel
+            // 
+            this.calendarTitlePanel.Controls.Add(this.displayedMonth);
+            this.calendarTitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.calendarTitlePanel.Location = new System.Drawing.Point(0, 0);
+            this.calendarTitlePanel.Name = "calendarTitlePanel";
+            this.calendarTitlePanel.Size = new System.Drawing.Size(508, 30);
+            this.calendarTitlePanel.TabIndex = 0;
+            // 
+            // displayedMonth
+            // 
+            this.displayedMonth.Dock = System.Windows.Forms.DockStyle.Right;
+            this.displayedMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayedMonth.Location = new System.Drawing.Point(358, 0);
+            this.displayedMonth.Name = "displayedMonth";
+            this.displayedMonth.Size = new System.Drawing.Size(150, 30);
+            this.displayedMonth.TabIndex = 0;
+            this.displayedMonth.Text = "Mese Anno";
+            this.displayedMonth.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,9 +210,9 @@
             this.Load += new System.EventHandler(this.MainView_Load);
             this.sidePanel.ResumeLayout(false);
             this.calendarPanel.ResumeLayout(false);
-            this.calendarTitlePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.calendarGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).EndInit();
+            this.calendarTitlePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
