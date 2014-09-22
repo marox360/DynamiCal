@@ -36,7 +36,6 @@
             this.calendarGridView = new System.Windows.Forms.DataGridView();
             this.calendarTitlePanel = new System.Windows.Forms.Panel();
             this.displayedMonth = new System.Windows.Forms.Label();
-            this.weekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lunedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.martedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.mercoledìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
@@ -44,6 +43,7 @@
             this.venerdìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.sabatoDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.domenicaDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
+            this.weekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sidePanel.SuspendLayout();
             this.calendarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarGridView)).BeginInit();
@@ -111,6 +111,7 @@
             this.calendarGridView.DataSource = this.weekBindingSource;
             this.calendarGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendarGridView.Location = new System.Drawing.Point(0, 30);
+            this.calendarGridView.MultiSelect = false;
             this.calendarGridView.Name = "calendarGridView";
             this.calendarGridView.ReadOnly = true;
             this.calendarGridView.RowHeadersVisible = false;
@@ -142,10 +143,6 @@
             this.displayedMonth.TabIndex = 0;
             this.displayedMonth.Text = "Mese Anno";
             this.displayedMonth.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // weekBindingSource
-            // 
-            this.weekBindingSource.DataSource = typeof(DynamiCal.DataGridView.BindingSources.CalendarWeek);
             // 
             // lunedìDataGridViewColumn
             // 
@@ -209,6 +206,10 @@
             this.domenicaDataGridViewColumn.ReadOnly = true;
             this.domenicaDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.domenicaDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // weekBindingSource
+            // 
+            this.weekBindingSource.DataSource = typeof(DynamiCal.DataGridView.BindingSources.CalendarWeek);
             // 
             // MainView
             // 

@@ -14,7 +14,7 @@ namespace DynamiCal.DataGridView
 
         protected override void Paint(System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
         {
-            base.Paint(graphics, clipBounds, cellBounds, rowIndex, cellState, value, (value as CalendarDay).Descrizione, errorText, cellStyle, advancedBorderStyle, paintParts);
+            base.Paint(graphics, clipBounds, cellBounds, rowIndex, cellState, value, (value as CalendarDay).Description, errorText, cellStyle, advancedBorderStyle, paintParts);
         }
     }
 }

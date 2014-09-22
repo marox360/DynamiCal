@@ -56,11 +56,22 @@ namespace DynamiCal
             displayedMonth.Text = textInfo.ToTitleCase(dateTimeFormatInfo.GetMonthName(date.Month)) + " " + date.Year;
 
             MonthlySource.FillSource(weekBindingSource, date);
+            SelectDay(date);
         }
 
         private void SelectDay(DateTime date)
         {
-
+            foreach (DataGridViewRow row in calendarGridView.Rows)
+            {
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value is CalendarDay && (cell.Value as CalendarDay).IsSameDayOf(date))
+                    {
+                        calendarGridView.CurrentCell = cell;
+                        return;
+                    }
+                }
+            }
         }
     }
 }

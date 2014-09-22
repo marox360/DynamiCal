@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -10,19 +11,28 @@ namespace DynamiCal.DataGridView.BindingSources
 {
     class CalendarDay
     {
-        private String _descrizione;
+        private DateTime _day;
 
         public CalendarDay(DateTime day)
         {
-            _descrizione = day.Day.ToString();
+            #region Precondizioni
+            Debug.Assert(day != null, "Day is null");
+            #endregion
+
+            _day = day;
         }
 
-        public String Descrizione
+        public String Description
         {
             get
             {
-                return _descrizione;
+                return _day.Day.ToString();
             }
+        }
+
+        public Boolean IsSameDayOf(DateTime day)
+        {
+            return day != null && DateTime.Equals(_day.Date, day.Date);
         }
     }
 
@@ -32,6 +42,11 @@ namespace DynamiCal.DataGridView.BindingSources
 
         public CalendarWeek(Calendar calendar, DateTime day)
         {
+            #region Precondizioni
+            Debug.Assert(day != null, "Day is null");
+            Debug.Assert(calendar != null, "Calendar is null");
+            #endregion
+
             int dayOfWeek = (int)(day.DayOfWeek + 6) % 7;
             day = calendar.AddDays(day, -1 * dayOfWeek);
 
