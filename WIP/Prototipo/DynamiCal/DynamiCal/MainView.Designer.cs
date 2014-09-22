@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.calendarList = new System.Windows.Forms.ListBox();
             this.datePicker = new System.Windows.Forms.MonthCalendar();
@@ -53,27 +55,32 @@
             // 
             // sidePanel
             // 
+            this.sidePanel.BackColor = System.Drawing.SystemColors.Window;
             this.sidePanel.Controls.Add(this.calendarList);
             this.sidePanel.Controls.Add(this.datePicker);
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(226, 416);
+            this.sidePanel.Size = new System.Drawing.Size(227, 416);
             this.sidePanel.TabIndex = 1;
             // 
             // calendarList
             // 
+            this.calendarList.BackColor = System.Drawing.SystemColors.Window;
+            this.calendarList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.calendarList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendarList.FormattingEnabled = true;
             this.calendarList.Location = new System.Drawing.Point(0, 0);
             this.calendarList.Margin = new System.Windows.Forms.Padding(0);
             this.calendarList.Name = "calendarList";
-            this.calendarList.Size = new System.Drawing.Size(226, 254);
+            this.calendarList.Size = new System.Drawing.Size(227, 254);
             this.calendarList.TabIndex = 1;
             // 
             // datePicker
             // 
+            this.datePicker.BackColor = System.Drawing.SystemColors.Window;
             this.datePicker.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.datePicker.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
             this.datePicker.Location = new System.Drawing.Point(0, 254);
             this.datePicker.MaxSelectionCount = 1;
             this.datePicker.Name = "datePicker";
@@ -85,9 +92,9 @@
             this.calendarPanel.Controls.Add(this.calendarGridView);
             this.calendarPanel.Controls.Add(this.calendarTitlePanel);
             this.calendarPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.calendarPanel.Location = new System.Drawing.Point(226, 0);
+            this.calendarPanel.Location = new System.Drawing.Point(227, 0);
             this.calendarPanel.Name = "calendarPanel";
-            this.calendarPanel.Size = new System.Drawing.Size(508, 416);
+            this.calendarPanel.Size = new System.Drawing.Size(507, 416);
             this.calendarPanel.TabIndex = 3;
             // 
             // calendarGridView
@@ -98,6 +105,18 @@
             this.calendarGridView.AllowUserToResizeRows = false;
             this.calendarGridView.AutoGenerateColumns = false;
             this.calendarGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.calendarGridView.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.calendarGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.calendarGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.calendarGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.calendarGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.calendarGridView.ColumnHeadersHeight = 35;
             this.calendarGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.calendarGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -109,8 +128,17 @@
             this.sabatoDataGridViewColumn,
             this.domenicaDataGridViewColumn});
             this.calendarGridView.DataSource = this.weekBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.calendarGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.calendarGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendarGridView.Location = new System.Drawing.Point(0, 30);
+            this.calendarGridView.Margin = new System.Windows.Forms.Padding(0);
             this.calendarGridView.MultiSelect = false;
             this.calendarGridView.Name = "calendarGridView";
             this.calendarGridView.ReadOnly = true;
@@ -119,25 +147,27 @@
             this.calendarGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.calendarGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.calendarGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.calendarGridView.Size = new System.Drawing.Size(508, 386);
+            this.calendarGridView.Size = new System.Drawing.Size(507, 386);
             this.calendarGridView.TabIndex = 1;
             this.calendarGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.calendarGridView_CellContentClick);
             this.calendarGridView.Resize += new System.EventHandler(this.calendarGridView_Resize);
             // 
             // calendarTitlePanel
             // 
+            this.calendarTitlePanel.BackColor = System.Drawing.SystemColors.Window;
             this.calendarTitlePanel.Controls.Add(this.displayedMonth);
             this.calendarTitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.calendarTitlePanel.Location = new System.Drawing.Point(0, 0);
             this.calendarTitlePanel.Name = "calendarTitlePanel";
-            this.calendarTitlePanel.Size = new System.Drawing.Size(508, 30);
+            this.calendarTitlePanel.Size = new System.Drawing.Size(507, 30);
             this.calendarTitlePanel.TabIndex = 0;
             // 
             // displayedMonth
             // 
+            this.displayedMonth.BackColor = System.Drawing.SystemColors.Window;
             this.displayedMonth.Dock = System.Windows.Forms.DockStyle.Right;
             this.displayedMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayedMonth.Location = new System.Drawing.Point(358, 0);
+            this.displayedMonth.Location = new System.Drawing.Point(357, 0);
             this.displayedMonth.Name = "displayedMonth";
             this.displayedMonth.Size = new System.Drawing.Size(150, 30);
             this.displayedMonth.TabIndex = 0;

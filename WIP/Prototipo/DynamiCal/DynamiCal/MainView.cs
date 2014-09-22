@@ -51,9 +51,7 @@ namespace DynamiCal
 
         private void ShowMonthOfDay(DateTime date)
         {
-            DateTimeFormatInfo dateTimeFormatInfo = CultureInfo.CurrentCulture.DateTimeFormat;
-            TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
-            displayedMonth.Text = textInfo.ToTitleCase(dateTimeFormatInfo.GetMonthName(date.Month)) + " " + date.Year;
+            displayedMonth.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(date.Month) + " " + date.Year;
 
             MonthlySource.FillSource(weekBindingSource, date);
             SelectDay(date);

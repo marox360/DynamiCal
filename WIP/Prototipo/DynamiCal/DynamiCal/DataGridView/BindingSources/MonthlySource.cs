@@ -12,13 +12,16 @@ namespace DynamiCal.DataGridView.BindingSources
     class CalendarDay
     {
         private DateTime _day;
+        private Boolean _todayWeek;
 
-        public CalendarDay(DateTime day)
+        public CalendarDay(DateTime day) : this(day, false) { }
+        public CalendarDay(DateTime day, Boolean todayWeek)
         {
             #region Precondizioni
             Debug.Assert(day != null, "Day is null");
             #endregion
 
+            _todayWeek = todayWeek;
             _day = day;
         }
 
@@ -26,13 +29,29 @@ namespace DynamiCal.DataGridView.BindingSources
         {
             get
             {
-                return _day.Day.ToString();
+                if (_todayWeek)
+                {
+                    return CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedDayName(_day.DayOfWeek) + " " + _day.Day.ToString();
+                }
+                else if (_day.Day == 1)
+                {
+                    return _day.Day.ToString() + " " + CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(_day.Month);
+                } 
+                else
+                {
+                    return _day.Day.ToString();
+                }
             }
         }
 
         public Boolean IsSameDayOf(DateTime day)
         {
             return day != null && DateTime.Equals(_day.Date, day.Date);
+        }
+
+        public Boolean IsWeekendDay()
+        {
+            return _day.DayOfWeek == DayOfWeek.Saturday || _day.DayOfWeek == DayOfWeek.Sunday;
         }
     }
 
@@ -49,11 +68,12 @@ namespace DynamiCal.DataGridView.BindingSources
 
             int dayOfWeek = (int)(day.DayOfWeek + 6) % 7;
             day = calendar.AddDays(day, -1 * dayOfWeek);
+            Boolean isTodayWeek = calendar.GetWeekOfYear(day, CultureInfo.CurrentCulture.DateTimeFormat.CalendarWeekRule, CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek) == calendar.GetWeekOfYear(DateTime.Today, CultureInfo.CurrentCulture.DateTimeFormat.CalendarWeekRule, CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek);
 
             _days = new CalendarDay[7];
             for (int i = 0; i < _days.Length; i++)
             {
-                _days[i] = new CalendarDay(day);
+                _days[i] = new CalendarDay(day, isTodayWeek);
                 day = calendar.AddDays(day, 1);
             }
         }
