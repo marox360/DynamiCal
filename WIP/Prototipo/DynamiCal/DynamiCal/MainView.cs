@@ -1,4 +1,4 @@
-﻿using DynamiCal.DataGridBindingSources;
+﻿using DynamiCal.DataGridView.BindingSources;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +22,7 @@ namespace DynamiCal
         private void MainView_Load(object sender, EventArgs e)
         {
             calendarGridView.RowTemplate.Height = (calendarGridView.Height - calendarGridView.ColumnHeadersHeight) / 6;
-            SetCurrentMonth(DateTime.Today);
+            ShowMonthOfDay(DateTime.Today);
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -46,10 +46,10 @@ namespace DynamiCal
 
         private void datePicker_DateSelected(object sender, DateRangeEventArgs e)
         {
-            SetCurrentMonth(e.Start);
+            ShowMonthOfDay(e.Start);
         }
 
-        private void SetCurrentMonth(DateTime date)
+        private void ShowMonthOfDay(DateTime date)
         {
             DateTimeFormatInfo dateTimeFormatInfo = CultureInfo.CurrentCulture.DateTimeFormat;
             TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;

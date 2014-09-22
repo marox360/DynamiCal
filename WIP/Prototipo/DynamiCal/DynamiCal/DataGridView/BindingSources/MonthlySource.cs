@@ -6,15 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamiCal.DataGridBindingSources
+namespace DynamiCal.DataGridView.BindingSources
 {
-    class Day
+    class CalendarDay
     {
         private String _descrizione;
 
-        public Day(int day, int month, int year)
+        public CalendarDay(DateTime day)
         {
-            _descrizione = day.ToString();
+            _descrizione = day.Day.ToString();
         }
 
         public String Descrizione
@@ -26,66 +26,66 @@ namespace DynamiCal.DataGridBindingSources
         }
     }
 
-    class Week
+    class CalendarWeek
     {
-        private String[] _days;
+        private CalendarDay[] _days;
 
-        public Week(Calendar calendar, DateTime day)
+        public CalendarWeek(Calendar calendar, DateTime day)
         {
             int dayOfWeek = (int)(day.DayOfWeek + 6) % 7;
             day = calendar.AddDays(day, -1 * dayOfWeek);
 
-            _days = new String[7];
+            _days = new CalendarDay[7];
             for (int i = 0; i < _days.Length; i++)
             {
-                _days[i] = day.Day.ToString();
+                _days[i] = new CalendarDay(day);
                 day = calendar.AddDays(day, 1);
             }
         }
 
-        public String Lunedì
+        public CalendarDay Lunedì
         {
             get
             {
                 return _days[0];
             }
         }
-        public String Martedì
+        public CalendarDay Martedì
         {
             get
             {
                 return _days[1];
             }
         }
-        public String Mercoledì
+        public CalendarDay Mercoledì
         {
             get
             {
                 return _days[2];
             }
         }
-        public String Giovedì
+        public CalendarDay Giovedì
         {
             get
             {
                 return _days[3];
             }
         }
-        public String Venerdì
+        public CalendarDay Venerdì
         {
             get
             {
                 return _days[4];
             }
         }
-        public String Sabato
+        public CalendarDay Sabato
         {
             get
             {
                 return _days[5];
             }
         }
-        public String Domenica
+        public CalendarDay Domenica
         {
             get
             {
@@ -110,12 +110,12 @@ namespace DynamiCal.DataGridBindingSources
             }
 
             source.Clear();
-            source.Add(new Week(calendar, firstDay));
-            source.Add(new Week(calendar, calendar.AddWeeks(firstDay, 1)));
-            source.Add(new Week(calendar, calendar.AddWeeks(firstDay, 2)));
-            source.Add(new Week(calendar, calendar.AddWeeks(firstDay, 3)));
-            source.Add(new Week(calendar, calendar.AddWeeks(firstDay, 4)));
-            source.Add(new Week(calendar, calendar.AddWeeks(firstDay, 5)));
+            source.Add(new CalendarWeek(calendar, firstDay));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 1)));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 2)));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 3)));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 4)));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 5)));
         }
     }
 }
