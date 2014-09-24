@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace DynamiCal
 {
-    public partial class MainView : Form
+    public partial class MainForm : Form
     {
-        public MainView()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -23,30 +23,6 @@ namespace DynamiCal
         {
             calendarGridView.RowTemplate.Height = (calendarGridView.Height - calendarGridView.ColumnHeadersHeight) / 6;
             ShowMonthOfDay(DateTime.Today);
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void calendarGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void calendarGridView_Resize(object sender, EventArgs e)
-        {
-            calendarGridView.RowTemplate.Height = (calendarGridView.Height - calendarGridView.ColumnHeadersHeight) / 6;
-            foreach (DataGridViewRow row in calendarGridView.Rows)
-            {
-                row.Height = calendarGridView.RowTemplate.Height;
-            }
-        }
-
-        private void datePicker_DateSelected(object sender, DateRangeEventArgs e)
-        {
-            ShowMonthOfDay(e.Start);
         }
 
         private void ShowMonthOfDay(DateTime date)
@@ -70,6 +46,40 @@ namespace DynamiCal
                     }
                 }
             }
+        }
+
+        private void calendarGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void calendarGridView_Resize(object sender, EventArgs e)
+        {
+            calendarGridView.RowTemplate.Height = (calendarGridView.Height - calendarGridView.ColumnHeadersHeight) / 6;
+            foreach (DataGridViewRow row in calendarGridView.Rows)
+            {
+                row.Height = calendarGridView.RowTemplate.Height;
+            }
+        }
+
+        private void datePicker_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            ShowMonthOfDay(e.Start);
+        }
+
+        private void createCalendarMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateCalendarForm testDialog = new CreateCalendarForm();
+
+            // Show testDialog as a modal dialog and determine if DialogResult = OK.
+            if (testDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                // Read the contents of testDialog's TextBox.
+            }
+            else
+            {
+            }
+            testDialog.Dispose();
         }
     }
 }
