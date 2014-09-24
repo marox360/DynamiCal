@@ -69,17 +69,14 @@ namespace DynamiCal
 
         private void createCalendarMenuItem_Click(object sender, EventArgs e)
         {
-            CreateCalendarForm testDialog = new CreateCalendarForm();
+            CreateCalendarForm createCalendarDialog = new CreateCalendarForm();
 
-            // Show testDialog as a modal dialog and determine if DialogResult = OK.
-            if (testDialog.ShowDialog(this) == DialogResult.OK)
+            if (createCalendarDialog.ShowDialog(this) == DialogResult.OK)
             {
-                // Read the contents of testDialog's TextBox.
+
             }
-            else
-            {
-            }
-            testDialog.Dispose();
+
+            createCalendarDialog.Dispose();
         }
     }
 }
