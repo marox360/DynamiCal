@@ -19,6 +19,10 @@ namespace DynamiCal.DataGridView
             {
                 cellStyle.BackColor = Color.FromArgb(242, 242, 242);
             }
+            if ((rowIndex == 0 && (value as CalendarDay).day.Day > 7) || (rowIndex == 5 && (value as CalendarDay).day.Day < 8))
+            {
+                cellStyle.ForeColor = Color.Gray;
+            }
             base.Paint(graphics, clipBounds, cellBounds, rowIndex, cellState, value, (value as CalendarDay).Description, errorText, cellStyle, advancedBorderStyle, paintParts);
         }
     }
