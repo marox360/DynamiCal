@@ -22,7 +22,7 @@ namespace DynamiCal.Model
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or whitespace");
             Debug.Assert(data != null, "Data is null");
-            Debug.Assert(durata > 0, "Durata is zero or negative");
+            Debug.Assert(durata < 0, "Durata is negative");
             Debug.Assert(modello != null, "Modello is null");
             #endregion
 

@@ -1,4 +1,5 @@
 ﻿using DynamiCal.DataGridView.BindingSources;
+using DynamiCal.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,16 @@ namespace DynamiCal
 {
     public partial class MainForm : Form
     {
+        private Agenda _agenda;
         public MainForm()
         {
             InitializeComponent();
+
+            calendarTreeView.ExpandAll();
+
+            _agenda = new Agenda();
+            _agenda.CalendarsChanged += CalendarsChanged;
+            _agenda.AggiungiCalendario(new CalendarioLocale("Test Calendar"));
         }
 
         private void MainView_Load(object sender, EventArgs e)
@@ -48,9 +56,23 @@ namespace DynamiCal
             }
         }
 
-        private void calendarGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void CalendarsChanged(object sender, EventArgs e)
         {
+            calendarTreeView.Nodes["LocalCalendars"].Nodes.Clear();
+            calendarTreeView.Nodes["SharedCalendars"].Nodes.Clear();
 
+            foreach (Calendario calendario in _agenda.Calendari)
+            {
+                TreeNode node = new TreeNode(calendario.Nome);
+                if (calendario is CalendarioLocale)
+                {
+                    calendarTreeView.Nodes["LocalCalendars"].Nodes.Add(node);
+                }
+                else if (calendario is CalendarioCondiviso)
+                {
+                    calendarTreeView.Nodes["SharedCalendars"].Nodes.Add(node);
+                }
+            }
         }
 
         private void calendarGridView_Resize(object sender, EventArgs e)

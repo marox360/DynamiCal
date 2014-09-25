@@ -31,8 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Calendari");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Calendari Condivisi");
             this.sidePanel = new System.Windows.Forms.Panel();
-            this.calendarList = new System.Windows.Forms.ListBox();
             this.datePicker = new System.Windows.Forms.MonthCalendar();
             this.calendarPanel = new System.Windows.Forms.Panel();
             this.calendarGridView = new System.Windows.Forms.DataGridView();
@@ -41,6 +42,7 @@
             this.menuBar = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creaNuovoCalendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calendarTreeView = new System.Windows.Forms.TreeView();
             this.lunedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.martedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.mercoledìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
@@ -60,7 +62,7 @@
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.SystemColors.Window;
-            this.sidePanel.Controls.Add(this.calendarList);
+            this.sidePanel.Controls.Add(this.calendarTreeView);
             this.sidePanel.Controls.Add(this.datePicker);
             this.sidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.sidePanel.Location = new System.Drawing.Point(0, 24);
@@ -68,18 +70,6 @@
             this.sidePanel.Padding = new System.Windows.Forms.Padding(5);
             this.sidePanel.Size = new System.Drawing.Size(237, 392);
             this.sidePanel.TabIndex = 1;
-            // 
-            // calendarList
-            // 
-            this.calendarList.BackColor = System.Drawing.SystemColors.Control;
-            this.calendarList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.calendarList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.calendarList.FormattingEnabled = true;
-            this.calendarList.Location = new System.Drawing.Point(5, 5);
-            this.calendarList.Margin = new System.Windows.Forms.Padding(0);
-            this.calendarList.Name = "calendarList";
-            this.calendarList.Size = new System.Drawing.Size(227, 220);
-            this.calendarList.TabIndex = 1;
             // 
             // datePicker
             // 
@@ -205,6 +195,28 @@
             this.creaNuovoCalendarioToolStripMenuItem.Text = "Crea nuovo calendario";
             this.creaNuovoCalendarioToolStripMenuItem.Click += new System.EventHandler(this.createCalendarMenuItem_Click);
             // 
+            // calendarTreeView
+            // 
+            this.calendarTreeView.Cursor = System.Windows.Forms.Cursors.Default;
+            this.calendarTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calendarTreeView.FullRowSelect = true;
+            this.calendarTreeView.Location = new System.Drawing.Point(5, 5);
+            this.calendarTreeView.Name = "calendarTreeView";
+            treeNode1.ForeColor = System.Drawing.Color.Black;
+            treeNode1.Name = "LocalCalendars";
+            treeNode1.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode1.Text = "Calendari";
+            treeNode2.ForeColor = System.Drawing.Color.Black;
+            treeNode2.Name = "SharedCalendars";
+            treeNode2.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode2.Text = "Calendari Condivisi";
+            this.calendarTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            this.calendarTreeView.ShowLines = false;
+            this.calendarTreeView.Size = new System.Drawing.Size(227, 220);
+            this.calendarTreeView.TabIndex = 1;
+            // 
             // lunedìDataGridViewColumn
             // 
             this.lunedìDataGridViewColumn.DataPropertyName = "Lunedì";
@@ -303,7 +315,6 @@
 
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.MonthCalendar datePicker;
-        private System.Windows.Forms.ListBox calendarList;
         private System.Windows.Forms.Panel calendarPanel;
         private System.Windows.Forms.Panel calendarTitlePanel;
         private System.Windows.Forms.Label displayedMonth;
@@ -319,6 +330,7 @@
         private System.Windows.Forms.MenuStrip menuBar;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem creaNuovoCalendarioToolStripMenuItem;
+        private System.Windows.Forms.TreeView calendarTreeView;
 
     }
 }

@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace DynamiCal.Model
 {
-    class Calendario
+    class Calendario : IEquatable<Calendario>
     {
         private string _nome;
         private List<Evento> _eventi;
@@ -35,6 +35,34 @@ namespace DynamiCal.Model
             get
             {
                 return _eventi;
+            }
+        }
+
+        public bool Equals(Calendario other)
+        {
+            if (ReferenceEquals(null, other))
+                return false;
+            if (ReferenceEquals(this, other))
+                return true;
+            return string.Equals(Nome, other.Nome);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj))
+                return false;
+            if (ReferenceEquals(this, obj))
+                return true;
+            if (obj.GetType() != this.GetType())
+                return false;
+            return Equals((Calendario)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return ((Nome != null ? Nome.GetHashCode() : 0) * 397);
             }
         }
     }
