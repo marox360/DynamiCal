@@ -25,7 +25,7 @@ namespace DynamiCal.DataGridView.BindingSources
             _day = day;
         }
 
-        public DateTime day
+        public DateTime Date
         {
             get
             {

@@ -78,5 +78,22 @@ namespace DynamiCal
 
             createCalendarDialog.Dispose();
         }
+
+        private void calendarGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewCell selectedCell = calendarGridView[e.ColumnIndex, e.RowIndex];
+            if (selectedCell.Value is CalendarDay)
+            {
+                CalendarDay calendarDay = selectedCell.Value as CalendarDay;
+                if (e.RowIndex == 0 && calendarDay.Date.Day > 7)
+                {
+                    ShowMonthOfDay(calendarDay.Date);
+                }
+                else if (e.RowIndex == 5 && calendarDay.Date.Day < 8)
+                {
+                    ShowMonthOfDay(calendarDay.Date);
+                }
+            }
+        }
     }
 }

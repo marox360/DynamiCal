@@ -156,7 +156,7 @@
             this.calendarGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.calendarGridView.Size = new System.Drawing.Size(492, 359);
             this.calendarGridView.TabIndex = 1;
-            this.calendarGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.calendarGridView_CellContentClick);
+            this.calendarGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.calendarGridView_CellClick);
             this.calendarGridView.Resize += new System.EventHandler(this.calendarGridView_Resize);
             // 
             // calendarTitlePanel
