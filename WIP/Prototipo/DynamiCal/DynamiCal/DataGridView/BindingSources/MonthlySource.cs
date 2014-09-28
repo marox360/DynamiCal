@@ -37,7 +37,11 @@ namespace DynamiCal.DataGridView.BindingSources
         {
             get
             {
-                if (_todayWeek)
+                if (_todayWeek && _day.Day == 1)
+                {
+                    return CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedDayName(_day.DayOfWeek) + " " + _day.Day.ToString() + " " + CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(_day.Month);
+                }
+                else if (_todayWeek)
                 {
                     return CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedDayName(_day.DayOfWeek) + " " + _day.Day.ToString();
                 }
