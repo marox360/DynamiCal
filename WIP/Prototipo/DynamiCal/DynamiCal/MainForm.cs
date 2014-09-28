@@ -15,22 +15,25 @@ namespace DynamiCal
 {
     public partial class MainForm : Form
     {
-        private Agenda _agenda;
         public MainForm()
         {
             InitializeComponent();
 
             calendarTreeView.ExpandAll();
 
-            _agenda = new Agenda();
-            _agenda.CalendarsChanged += CalendarsChanged;
-            _agenda.AggiungiCalendario(new CalendarioLocale("Test Calendar"));
+            Agenda.Instance.CalendarsChanged += CalendarsChanged;
+            Agenda.Instance.AggiungiCalendario(new CalendarioLocale("Test Calendar"));
         }
 
-        private void MainView_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             calendarGridView.RowTemplate.Height = (calendarGridView.Height - calendarGridView.ColumnHeadersHeight) / 6;
             ShowMonthOfDay(DateTime.Today);
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Agenda.Instance.CalendarsChanged -= CalendarsChanged;
         }
 
         private void ShowMonthOfDay(DateTime date)
@@ -61,7 +64,7 @@ namespace DynamiCal
             calendarTreeView.Nodes["LocalCalendars"].Nodes.Clear();
             calendarTreeView.Nodes["SharedCalendars"].Nodes.Clear();
 
-            foreach (Calendario calendario in _agenda.Calendari)
+            foreach (Calendario calendario in Agenda.Instance.Calendari)
             {
                 TreeNode node = new TreeNode(calendario.Nome);
                 if (calendario is CalendarioLocale)
@@ -117,5 +120,6 @@ namespace DynamiCal
                 }
             }
         }
+
     }
 }

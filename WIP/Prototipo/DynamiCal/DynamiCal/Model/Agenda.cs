@@ -9,14 +9,23 @@ namespace DynamiCal.Model
 {
     class Agenda
     {
+        private static Agenda _instance = new Agenda();
         private List<Calendario> _calendari;
         private List<ModelloEvento> _modelliEvento;
         public event EventHandler CalendarsChanged; 
 
-        public Agenda()
+        private Agenda()
         {
             _calendari = new List<Calendario>();
             _modelliEvento = new List<ModelloEvento>();
+        }
+
+        public static Agenda Instance
+        {
+            get
+            {
+                return _instance;
+            }
         }
 
         public List<Calendario> Calendari
