@@ -12,7 +12,7 @@ namespace DynamiCal.Model
         private string _nome;
         private List<Voce> _voci;
 
-        public ModelloEvento(String nome)
+        public ModelloEvento(string nome)
         {
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or white space");

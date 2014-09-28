@@ -33,7 +33,7 @@ namespace DynamiCal.DataGridView.BindingSources
             }
         }
 
-        public String Description
+        public string Description
         {
             get
             {

@@ -23,7 +23,7 @@ namespace DynamiCal.Model
         private string _nome;
         private TipoVoce _tipo;
 
-        public Voce(String nome, TipoVoce tipo) 
+        public Voce(string nome, TipoVoce tipo) 
         {
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Event Name is null");
