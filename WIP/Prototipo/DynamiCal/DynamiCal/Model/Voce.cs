@@ -40,5 +40,13 @@ namespace DynamiCal.Model
                 return _nome;
             }
         }
+
+        public TipoVoce Tipo
+        {
+            get
+            {
+                return _tipo;
+            }
+        }
     }
 }
