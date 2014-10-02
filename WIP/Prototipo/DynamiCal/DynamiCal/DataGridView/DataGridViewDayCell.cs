@@ -19,7 +19,7 @@ namespace DynamiCal.DataGridView
             {
                 cellStyle.BackColor = Color.FromArgb(242, 242, 242);
             }
-            if ((rowIndex == 0 && (value as CalendarDay).Date.Day > 7) || (rowIndex == 5 && (value as CalendarDay).Date.Day < 8))
+            if ((rowIndex == 0 && (value as CalendarDay).Date.Day > 7) || (rowIndex >= 4 && (value as CalendarDay).Date.Day < 15))
             {
                 cellStyle.ForeColor = Color.Gray;
             }
