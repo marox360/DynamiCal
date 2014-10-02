@@ -18,7 +18,7 @@ namespace DynamiCal.Model
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or white space");
             #endregion
 
-            _nome = nome;
+            _nome = nome.Trim();
             _eventi = new List<Evento>();
         }
 

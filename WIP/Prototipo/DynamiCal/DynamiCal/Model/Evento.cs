@@ -26,9 +26,9 @@ namespace DynamiCal.Model
             Debug.Assert(modello != null, "Modello is null");
             #endregion
 
-            _nome = nome;
-            _descrizione = descrizione;
-            _luogo = luogo;
+            _nome = nome.Trim();
+            _descrizione = descrizione.Trim();
+            _luogo = luogo.Trim();
             _data = data;
             _durata = durata;
             _periodicita = periodicita;

@@ -19,7 +19,7 @@ namespace DynamiCal.Model
             Debug.Assert(tipo != null, "Tipo is null");
             #endregion
 
-            _nome = nome;
+            _nome = nome.Trim();
             _tipo = tipo;
         }
 

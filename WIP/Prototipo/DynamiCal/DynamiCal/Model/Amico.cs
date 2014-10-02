@@ -19,7 +19,7 @@ namespace DynamiCal
             Debug.Assert(Regex.IsMatch(email, "^.+@.+\\..{2,}$"), "Email is invalid");
             #endregion
 
-            _email = email;
+            _email = email.Trim();
         }
         
         public string Email
