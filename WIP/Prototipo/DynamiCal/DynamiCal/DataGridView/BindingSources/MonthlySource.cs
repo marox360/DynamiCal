@@ -65,6 +65,11 @@ namespace DynamiCal.DataGridView.BindingSources
         {
             return _day.DayOfWeek == DayOfWeek.Saturday || _day.DayOfWeek == DayOfWeek.Sunday;
         }
+
+        public Boolean IsTodayWeek()
+        {
+            return _todayWeek;
+        }
     }
 
     class CalendarWeek

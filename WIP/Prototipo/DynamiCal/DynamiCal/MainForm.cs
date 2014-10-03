@@ -97,7 +97,7 @@ namespace DynamiCal
         private void calendarGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Il click su una delle celle dell'header causa RowIndex == -1
-            if (e.RowIndex < 0)
+            if (e.RowIndex == -1)
             {
                 return;
             }
@@ -115,6 +115,17 @@ namespace DynamiCal
                     ShowMonthOfDay(calendarDay.Date);
                 }
             }
+        }
+        private void calendarGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                return;
+            }
+
+            e.Graphics.FillRectangle(Brushes.White, e.CellBounds);
+            e.Paint(e.ClipBounds, (DataGridViewPaintParts.All & ~DataGridViewPaintParts.Background));
+            e.Handled = true;
         }
 
         private void createCalendarMenuItem_Click(object sender, EventArgs e)
@@ -140,6 +151,8 @@ namespace DynamiCal
 
             createEventModelDialog.Dispose();
         }
+
+
 
     }
 }
