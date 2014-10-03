@@ -26,5 +26,10 @@ namespace DynamiCal
         {
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
+
+        private void nameTextBox_TextChanged(object sender, EventArgs e)
+        {
+            this.createButton.Enabled = !String.IsNullOrWhiteSpace((sender as TextBox).Text);
+        }
     }
 }

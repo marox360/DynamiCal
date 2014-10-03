@@ -41,6 +41,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(260, 20);
             this.nameTextBox.TabIndex = 0;
+            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
             // label1
             // 
@@ -53,6 +54,7 @@
             // 
             // createButton
             // 
+            this.createButton.Enabled = false;
             this.createButton.Location = new System.Drawing.Point(145, 151);
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(127, 23);
