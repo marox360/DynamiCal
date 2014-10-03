@@ -76,6 +76,8 @@ namespace DynamiCal
                     calendarTreeView.Nodes["SharedCalendars"].Nodes.Add(node);
                 }
             }
+
+            calendarTreeView.Sort();
         }
 
         private void calendarGridView_Resize(object sender, EventArgs e)
@@ -90,18 +92,6 @@ namespace DynamiCal
         private void datePicker_DateSelected(object sender, DateRangeEventArgs e)
         {
             ShowMonthOfDay(e.Start);
-        }
-
-        private void createCalendarMenuItem_Click(object sender, EventArgs e)
-        {
-            CreateCalendarForm createCalendarDialog = new CreateCalendarForm();
-
-            if (createCalendarDialog.ShowDialog(this) == DialogResult.OK)
-            {
-
-            }
-
-            createCalendarDialog.Dispose();
         }
 
         private void calendarGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -119,6 +109,18 @@ namespace DynamiCal
                     ShowMonthOfDay(calendarDay.Date);
                 }
             }
+        }
+
+        private void createCalendarMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateCalendarForm createCalendarDialog = new CreateCalendarForm();
+
+            if (createCalendarDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                Agenda.Instance.AggiungiCalendario(new CalendarioLocale(createCalendarDialog.nameTextBox.Text));
+            }
+
+            createCalendarDialog.Dispose();
         }
 
         private void creaModelloEventoToolStripMenuItem_Click(object sender, EventArgs e)
