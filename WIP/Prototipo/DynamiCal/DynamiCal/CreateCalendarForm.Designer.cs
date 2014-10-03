@@ -110,6 +110,6 @@
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Label label2;
-        internal System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox nameTextBox;
     }
 }

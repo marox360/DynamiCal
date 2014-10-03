@@ -12,7 +12,8 @@ namespace DynamiCal.Model
         private static Agenda _instance = new Agenda();
         private List<Calendario> _calendari;
         private List<ModelloEvento> _modelliEvento;
-        public event EventHandler CalendarsChanged; 
+        public event EventHandler CalendarsChanged;
+        public event EventHandler EventModelsChanged; 
 
         private Agenda()
         {
@@ -47,6 +48,7 @@ namespace DynamiCal.Model
         public void AggiungiCalendario(Calendario calendario)
         {
             #region Precondizioni
+            Debug.Assert(calendario != null, "Calendario cannot be null");
             Debug.Assert(!_calendari.Contains(calendario), "Agenda already contains a calendar with identifier " + calendario.Nome);
             #endregion
 
@@ -55,11 +57,31 @@ namespace DynamiCal.Model
             OnCalendarsChanged();
         }
 
+        public void AggiungiModelloEvento(ModelloEvento modelloEvento)
+        {
+            #region Precondizioni
+            Debug.Assert(modelloEvento != null, "ModelloEvento cannot be null");
+            Debug.Assert(!_modelliEvento.Contains(modelloEvento), "Agenda already contains a event model with identifier " + modelloEvento.Nome);
+            #endregion
+
+            _modelliEvento.Add(modelloEvento);
+
+            OnEventModelsChanged();
+        }
+
         protected virtual void OnCalendarsChanged()
         {
             if (CalendarsChanged != null)
             {
                 CalendarsChanged(this, EventArgs.Empty);
+            }
+        }
+
+        protected virtual void OnEventModelsChanged()
+        {
+            if (EventModelsChanged != null)
+            {
+                EventModelsChanged(this, EventArgs.Empty);
             }
         }
     }

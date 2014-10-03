@@ -49,5 +49,11 @@ namespace DynamiCal
             this.entryNameTextBox.Text = "";
         }
 
+        internal ModelloEvento GetModelloEvento()
+        {
+            ModelloEvento modelloEvento = new ModelloEvento(this.modelNameTextBox.Text, this.voceBindingSource.List as List<Voce>);
+
+            return modelloEvento;
+        }
     }
 }

@@ -96,6 +96,12 @@ namespace DynamiCal
 
         private void calendarGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            // Il click su una delle celle dell'header causa RowIndex == -1
+            if (e.RowIndex < 0)
+            {
+                return;
+            }
+
             DataGridViewCell selectedCell = calendarGridView[e.ColumnIndex, e.RowIndex];
             if (selectedCell.Value is CalendarDay)
             {
@@ -117,7 +123,7 @@ namespace DynamiCal
 
             if (createCalendarDialog.ShowDialog(this) == DialogResult.OK)
             {
-                Agenda.Instance.AggiungiCalendario(new CalendarioLocale(createCalendarDialog.nameTextBox.Text));
+                Agenda.Instance.AggiungiCalendario(createCalendarDialog.GetCalendario());
             }
 
             createCalendarDialog.Dispose();
@@ -129,7 +135,7 @@ namespace DynamiCal
 
             if (createEventModelDialog.ShowDialog(this) == DialogResult.OK)
             {
-
+                Agenda.Instance.AggiungiModelloEvento(createEventModelDialog.GetModelloEvento());
             }
 
             createEventModelDialog.Dispose();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DynamiCal.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,11 @@ namespace DynamiCal
         private void nameTextBox_TextChanged(object sender, EventArgs e)
         {
             this.createButton.Enabled = !String.IsNullOrWhiteSpace((sender as TextBox).Text);
+        }
+
+        internal Calendario GetCalendario()
+        {
+            return new Calendario(this.nameTextBox.Text);
         }
     }
 }
