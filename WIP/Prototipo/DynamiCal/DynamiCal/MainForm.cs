@@ -116,6 +116,7 @@ namespace DynamiCal
                 }
             }
         }
+
         private void calendarGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
             if (e.RowIndex != -1)
@@ -151,8 +152,6 @@ namespace DynamiCal
 
             createEventModelDialog.Dispose();
         }
-
-
 
     }
 }

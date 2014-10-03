@@ -16,6 +16,12 @@ namespace DynamiCal.DataGridView
 
         protected override void Paint(System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
         {
+            // Reset della cella perché andremo a rimpicciolire il cellBounds
+            using (Brush brush = new SolidBrush(cellStyle.BackColor))
+            {
+                graphics.FillRectangle(brush, cellBounds);
+            }
+
             CalendarDay dayValue = value as CalendarDay;
             if ((rowIndex == 0 && dayValue.Date.Day > 7) || (rowIndex >= 4 && dayValue.Date.Day < 15))
             {
@@ -63,7 +69,6 @@ namespace DynamiCal.DataGridView
                     graphics.DrawLine(pen, new Point(x, y), new Point(x + width, y));
                 }
             }
-
 
         }
     }
