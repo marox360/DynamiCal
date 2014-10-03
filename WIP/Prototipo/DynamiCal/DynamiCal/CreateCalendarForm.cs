@@ -35,7 +35,7 @@ namespace DynamiCal
 
         internal Calendario GetCalendario()
         {
-            return new Calendario(this.nameTextBox.Text);
+            return new CalendarioLocale(this.nameTextBox.Text);
         }
     }
 }
