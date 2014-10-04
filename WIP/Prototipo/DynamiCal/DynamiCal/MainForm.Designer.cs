@@ -41,7 +41,6 @@
             this.calendarPanel = new System.Windows.Forms.Panel();
             this.calendarGridView = new System.Windows.Forms.DataGridView();
             this.calendarTitlePanel = new System.Windows.Forms.Panel();
-            this.displayedMonth = new System.Windows.Forms.Label();
             this.menuBar = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creaNuovoCalendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +48,9 @@
             this.creaModelloEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rightSidePanel = new System.Windows.Forms.Panel();
             this.noEventsLabel = new System.Windows.Forms.Label();
+            this.topFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.yearLabel = new System.Windows.Forms.Label();
+            this.monthLabel = new System.Windows.Forms.Label();
             this.lunedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.martedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.mercoledìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
@@ -63,6 +65,7 @@
             this.calendarTitlePanel.SuspendLayout();
             this.menuBar.SuspendLayout();
             this.rightSidePanel.SuspendLayout();
+            this.topFlowLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,6 +86,7 @@
             this.calendarTreeView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.calendarTreeView.Cursor = System.Windows.Forms.Cursors.Default;
             this.calendarTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calendarTreeView.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendarTreeView.FullRowSelect = true;
             this.calendarTreeView.Location = new System.Drawing.Point(5, 5);
             this.calendarTreeView.Name = "calendarTreeView";
@@ -98,6 +102,7 @@
             this.calendarTreeView.ShowLines = false;
             this.calendarTreeView.Size = new System.Drawing.Size(227, 365);
             this.calendarTreeView.TabIndex = 1;
+            this.calendarTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.calendarTreeView_AfterSelect);
             // 
             // datePicker
             // 
@@ -183,24 +188,12 @@
             // calendarTitlePanel
             // 
             this.calendarTitlePanel.BackColor = System.Drawing.Color.White;
-            this.calendarTitlePanel.Controls.Add(this.displayedMonth);
+            this.calendarTitlePanel.Controls.Add(this.topFlowLayoutPanel);
             this.calendarTitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.calendarTitlePanel.Location = new System.Drawing.Point(0, 0);
             this.calendarTitlePanel.Name = "calendarTitlePanel";
             this.calendarTitlePanel.Size = new System.Drawing.Size(605, 30);
             this.calendarTitlePanel.TabIndex = 0;
-            // 
-            // displayedMonth
-            // 
-            this.displayedMonth.BackColor = System.Drawing.Color.White;
-            this.displayedMonth.Dock = System.Windows.Forms.DockStyle.Right;
-            this.displayedMonth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayedMonth.Location = new System.Drawing.Point(455, 0);
-            this.displayedMonth.Name = "displayedMonth";
-            this.displayedMonth.Size = new System.Drawing.Size(150, 30);
-            this.displayedMonth.TabIndex = 0;
-            this.displayedMonth.Text = "Mese Anno";
-            this.displayedMonth.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // menuBar
             // 
@@ -258,17 +251,51 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.noEventsLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noEventsLabel.ForeColor = System.Drawing.Color.DarkGray;
-            this.noEventsLabel.Location = new System.Drawing.Point(0, 256);
+            this.noEventsLabel.Location = new System.Drawing.Point(1, 256);
             this.noEventsLabel.Name = "noEventsLabel";
-            this.noEventsLabel.Size = new System.Drawing.Size(237, 71);
+            this.noEventsLabel.Size = new System.Drawing.Size(235, 71);
             this.noEventsLabel.TabIndex = 0;
             this.noEventsLabel.Text = "Nessun evento";
             this.noEventsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // topFlowLayoutPanel
+            // 
+            this.topFlowLayoutPanel.Controls.Add(this.yearLabel);
+            this.topFlowLayoutPanel.Controls.Add(this.monthLabel);
+            this.topFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.topFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
+            this.topFlowLayoutPanel.Location = new System.Drawing.Point(405, 0);
+            this.topFlowLayoutPanel.Name = "topFlowLayoutPanel";
+            this.topFlowLayoutPanel.Size = new System.Drawing.Size(200, 30);
+            this.topFlowLayoutPanel.TabIndex = 1;
+            // 
+            // yearLabel
+            // 
+            this.yearLabel.AutoSize = true;
+            this.yearLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearLabel.Location = new System.Drawing.Point(151, 5);
+            this.yearLabel.Margin = new System.Windows.Forms.Padding(2, 5, 2, 0);
+            this.yearLabel.Name = "yearLabel";
+            this.yearLabel.Size = new System.Drawing.Size(47, 21);
+            this.yearLabel.TabIndex = 0;
+            this.yearLabel.Text = "Anno";
+            // 
+            // monthLabel
+            // 
+            this.monthLabel.AutoSize = true;
+            this.monthLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.monthLabel.Location = new System.Drawing.Point(99, 5);
+            this.monthLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.monthLabel.Name = "monthLabel";
+            this.monthLabel.Size = new System.Drawing.Size(50, 21);
+            this.monthLabel.TabIndex = 1;
+            this.monthLabel.Text = "Mese";
+            // 
             // lunedìDataGridViewColumn
             // 
             this.lunedìDataGridViewColumn.DataPropertyName = "Lunedì";
-            this.lunedìDataGridViewColumn.HeaderText = "Lunedì";
+            this.lunedìDataGridViewColumn.HeaderText = "lunedì";
             this.lunedìDataGridViewColumn.Name = "lunedìDataGridViewColumn";
             this.lunedìDataGridViewColumn.ReadOnly = true;
             this.lunedìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -277,7 +304,7 @@
             // martedìDataGridViewColumn
             // 
             this.martedìDataGridViewColumn.DataPropertyName = "Martedì";
-            this.martedìDataGridViewColumn.HeaderText = "Martedì";
+            this.martedìDataGridViewColumn.HeaderText = "martedì";
             this.martedìDataGridViewColumn.Name = "martedìDataGridViewColumn";
             this.martedìDataGridViewColumn.ReadOnly = true;
             this.martedìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -286,7 +313,7 @@
             // mercoledìDataGridViewColumn
             // 
             this.mercoledìDataGridViewColumn.DataPropertyName = "Mercoledì";
-            this.mercoledìDataGridViewColumn.HeaderText = "Mercoledì";
+            this.mercoledìDataGridViewColumn.HeaderText = "mercoledì";
             this.mercoledìDataGridViewColumn.Name = "mercoledìDataGridViewColumn";
             this.mercoledìDataGridViewColumn.ReadOnly = true;
             this.mercoledìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -295,7 +322,7 @@
             // giovedìDataGridViewColumn
             // 
             this.giovedìDataGridViewColumn.DataPropertyName = "Giovedì";
-            this.giovedìDataGridViewColumn.HeaderText = "Giovedì";
+            this.giovedìDataGridViewColumn.HeaderText = "giovedì";
             this.giovedìDataGridViewColumn.Name = "giovedìDataGridViewColumn";
             this.giovedìDataGridViewColumn.ReadOnly = true;
             this.giovedìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -304,7 +331,7 @@
             // venerdìDataGridViewColumn
             // 
             this.venerdìDataGridViewColumn.DataPropertyName = "Venerdì";
-            this.venerdìDataGridViewColumn.HeaderText = "Venerdì";
+            this.venerdìDataGridViewColumn.HeaderText = "venerdì";
             this.venerdìDataGridViewColumn.Name = "venerdìDataGridViewColumn";
             this.venerdìDataGridViewColumn.ReadOnly = true;
             this.venerdìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -317,7 +344,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DimGray;
             this.sabatoDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.sabatoDataGridViewColumn.HeaderText = "Sabato";
+            this.sabatoDataGridViewColumn.HeaderText = "sabato";
             this.sabatoDataGridViewColumn.Name = "sabatoDataGridViewColumn";
             this.sabatoDataGridViewColumn.ReadOnly = true;
             this.sabatoDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -330,7 +357,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
             this.domenicaDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.domenicaDataGridViewColumn.HeaderText = "Domenica";
+            this.domenicaDataGridViewColumn.HeaderText = "domenica";
             this.domenicaDataGridViewColumn.Name = "domenicaDataGridViewColumn";
             this.domenicaDataGridViewColumn.ReadOnly = true;
             this.domenicaDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -365,6 +392,8 @@
             this.menuBar.ResumeLayout(false);
             this.menuBar.PerformLayout();
             this.rightSidePanel.ResumeLayout(false);
+            this.topFlowLayoutPanel.ResumeLayout(false);
+            this.topFlowLayoutPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -377,7 +406,6 @@
         private System.Windows.Forms.MonthCalendar datePicker;
         private System.Windows.Forms.Panel calendarPanel;
         private System.Windows.Forms.Panel calendarTitlePanel;
-        private System.Windows.Forms.Label displayedMonth;
         private System.Windows.Forms.DataGridView calendarGridView;
         private System.Windows.Forms.BindingSource weekBindingSource;
         private DataGridView.DataGridViewDayColumn lunedìDataGridViewColumn;
@@ -395,6 +423,9 @@
         private System.Windows.Forms.ToolStripMenuItem creaModelloEventoToolStripMenuItem;
         private System.Windows.Forms.Panel rightSidePanel;
         private System.Windows.Forms.Label noEventsLabel;
+        private System.Windows.Forms.FlowLayoutPanel topFlowLayoutPanel;
+        private System.Windows.Forms.Label yearLabel;
+        private System.Windows.Forms.Label monthLabel;
 
     }
 }

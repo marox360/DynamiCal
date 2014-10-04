@@ -39,7 +39,8 @@ namespace DynamiCal
 
         private void ShowMonthOfDay(DateTime date)
         {
-            displayedMonth.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(date.Month) + " " + date.Year;
+            monthLabel.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(date.Month);
+            yearLabel.Text = date.Year.ToString();
 
             MonthlySource.FillSource(weekBindingSource, date);
             SelectDay(date);
@@ -152,6 +153,14 @@ namespace DynamiCal
             }
 
             createEventModelDialog.Dispose();
+        }
+
+        private void calendarTreeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if (calendarTreeView.Nodes.Contains(calendarTreeView.SelectedNode))
+            {
+                calendarTreeView.SelectedNode = null;
+            }
         }
 
     }

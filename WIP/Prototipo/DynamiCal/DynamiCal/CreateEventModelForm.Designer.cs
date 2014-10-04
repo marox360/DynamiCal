@@ -142,10 +142,12 @@
             this.entryTypeComboBox.DataSource = this.tipoVoceBindingSource;
             this.entryTypeComboBox.DisplayMember = "Descrizione";
             this.entryTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.entryTypeComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.entryTypeComboBox.FormattingEnabled = true;
+            this.entryTypeComboBox.ItemHeight = 15;
             this.entryTypeComboBox.Location = new System.Drawing.Point(154, 36);
             this.entryTypeComboBox.Name = "entryTypeComboBox";
-            this.entryTypeComboBox.Size = new System.Drawing.Size(140, 21);
+            this.entryTypeComboBox.Size = new System.Drawing.Size(140, 23);
             this.entryTypeComboBox.TabIndex = 2;
             // 
             // tipoVoceBindingSource
