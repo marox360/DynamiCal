@@ -40,6 +40,11 @@ namespace DynamiCal
         private void modelNameTextBox_TextChanged(object sender, EventArgs e)
         {
             this.createButton.Enabled = !String.IsNullOrWhiteSpace((sender as TextBox).Text);
+            if (this.createButton.Enabled)
+            {
+                ModelloEvento eventModel = new ModelloEvento((sender as TextBox).Text.Trim());
+                this.createButton.Enabled = !Agenda.Instance.ModelliEvento.Contains(eventModel);
+            }
         }
 
         private void addEntryButton_Click(object sender, EventArgs e)
