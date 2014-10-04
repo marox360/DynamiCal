@@ -13,14 +13,16 @@ namespace DynamiCal.DataGridView.BindingSources
     {
         private DateTime _day;
         private bool _todayWeek;
+        private int _weekIndex;
 
-        public CalendarDay(DateTime day) : this(day, false) { }
-        public CalendarDay(DateTime day, bool todayWeek)
+        public CalendarDay(DateTime day) : this(day, false, -1) { }
+        public CalendarDay(DateTime day, bool todayWeek, int weekIndex)
         {
             #region Precondizioni
             Debug.Assert(day != null, "Day is null");
             #endregion
 
+            _weekIndex = weekIndex;
             _todayWeek = todayWeek;
             _day = day;
         }
@@ -37,22 +39,22 @@ namespace DynamiCal.DataGridView.BindingSources
         {
             get
             {
-                if (_todayWeek && _day.Day == 1)
+                DateTimeFormatInfo dateTimeFormat = CultureInfo.CurrentCulture.DateTimeFormat;
+                string description = "";
+                
+                if (_todayWeek && _weekIndex != 0)
                 {
-                    return CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedDayName(_day.DayOfWeek) + " " + _day.Day.ToString() + " " + CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedMonthName(_day.Month);
+                    description += dateTimeFormat.GetAbbreviatedDayName(_day.DayOfWeek) + " ";
                 }
-                else if (_todayWeek)
+
+                description += _day.Day.ToString();
+
+                if (_day.Day == 1)
                 {
-                    return CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedDayName(_day.DayOfWeek) + " " + _day.Day.ToString();
+                    description += " " + (_todayWeek && _weekIndex != 0 ? dateTimeFormat.GetAbbreviatedMonthName(_day.Month) : dateTimeFormat.GetMonthName(_day.Month));
                 }
-                else if (_day.Day == 1)
-                {
-                    return _day.Day.ToString() + " " + CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(_day.Month);
-                } 
-                else
-                {
-                    return _day.Day.ToString();
-                }
+
+                return description;
             }
         }
 
@@ -66,7 +68,7 @@ namespace DynamiCal.DataGridView.BindingSources
     {
         private CalendarDay[] _days;
 
-        public CalendarWeek(Calendar calendar, DateTime day)
+        public CalendarWeek(Calendar calendar, DateTime day, int weekIndex)
         {
             #region Precondizioni
             Debug.Assert(day != null, "Day is null");
@@ -80,7 +82,7 @@ namespace DynamiCal.DataGridView.BindingSources
             _days = new CalendarDay[7];
             for (int i = 0; i < _days.Length; i++)
             {
-                _days[i] = new CalendarDay(day, isTodayWeek);
+                _days[i] = new CalendarDay(day, isTodayWeek, weekIndex);
                 day = calendar.AddDays(day, 1);
             }
         }
@@ -152,12 +154,12 @@ namespace DynamiCal.DataGridView.BindingSources
             }
 
             source.Clear();
-            source.Add(new CalendarWeek(calendar, firstDay));
-            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 1)));
-            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 2)));
-            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 3)));
-            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 4)));
-            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 5)));
+            source.Add(new CalendarWeek(calendar, firstDay, 0));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 1), 1));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 2), 2));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 3), 3));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 4), 4));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 5), 5));
         }
     }
 }

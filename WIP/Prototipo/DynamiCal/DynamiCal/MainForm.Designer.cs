@@ -84,8 +84,10 @@
             // calendarTreeView
             // 
             this.calendarTreeView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.calendarTreeView.CheckBoxes = true;
             this.calendarTreeView.Cursor = System.Windows.Forms.Cursors.Default;
             this.calendarTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calendarTreeView.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
             this.calendarTreeView.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendarTreeView.FullRowSelect = true;
             this.calendarTreeView.Location = new System.Drawing.Point(5, 5);
@@ -102,6 +104,7 @@
             this.calendarTreeView.ShowLines = false;
             this.calendarTreeView.Size = new System.Drawing.Size(227, 365);
             this.calendarTreeView.TabIndex = 1;
+            this.calendarTreeView.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.calendarTreeView_DrawNode);
             this.calendarTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.calendarTreeView_AfterSelect);
             // 
             // datePicker

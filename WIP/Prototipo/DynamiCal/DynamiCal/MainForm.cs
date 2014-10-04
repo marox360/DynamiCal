@@ -157,9 +157,32 @@ namespace DynamiCal
 
         private void calendarTreeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            if (calendarTreeView.Nodes.Contains(calendarTreeView.SelectedNode))
+            calendarTreeView.SelectedNode = null;
+        }
+
+        private void calendarTreeView_DrawNode(object sender, DrawTreeNodeEventArgs e)
+        {
+            e.Node.BackColor = Color.White;
+            e.Node.ForeColor = Color.Black;
+
+            if (calendarTreeView.Nodes.Contains(e.Node))
             {
-                calendarTreeView.SelectedNode = null;
+                Rectangle bounds = e.Node.Bounds;
+                bounds.X = 20;
+                bounds.Width += 10;
+
+                using (SolidBrush brush = new SolidBrush(e.Node.BackColor))
+                {
+                    e.Graphics.FillRectangle(brush, bounds);
+                }
+
+                TextRenderer.DrawText(e.Graphics, e.Node.Text, new Font(calendarTreeView.Font, FontStyle.Bold), bounds, e.Node.ForeColor, e.Node.BackColor);
+
+                e.DrawDefault = false;
+            }
+            else
+            {
+                e.DrawDefault = true;
             }
         }
 
