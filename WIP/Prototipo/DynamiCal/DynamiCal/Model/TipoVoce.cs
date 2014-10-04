@@ -10,7 +10,7 @@ namespace DynamiCal.Model
 {
     class TipoVoce
     {
-        public enum Type
+        public enum Tipo
         {
             [Description("Testo")]
             Stringa,
@@ -22,18 +22,18 @@ namespace DynamiCal.Model
             Data
         };
 
-        private Type _tipo;
+        private Tipo _tipoDiVoce;
 
-        public TipoVoce(Type tipo)
+        public TipoVoce(Tipo tipoDiVoce)
         {
-            _tipo = tipo;
+            _tipoDiVoce = tipoDiVoce;
         }
 
-        public Type Tipo
+        public Tipo TipoDiVoce
         {
             get
             {
-                return _tipo;
+                return _tipoDiVoce;
             }
         }
 
@@ -41,7 +41,7 @@ namespace DynamiCal.Model
         {
             get
             {
-                return this.GetEnumDescription((Type)_tipo);
+                return this.GetEnumDescription((Tipo)_tipoDiVoce);
             }
         }
 
@@ -53,7 +53,7 @@ namespace DynamiCal.Model
         public static List<TipoVoce> GetAllTypes()
         {
             List<TipoVoce> allTypes = new List<TipoVoce>();
-            foreach (Type tipo in Enum.GetValues(typeof(Type)).Cast<Type>())
+            foreach (Tipo tipo in Enum.GetValues(typeof(Tipo)).Cast<Tipo>())
             {
                 allTypes.Add(new TipoVoce(tipo));
             }

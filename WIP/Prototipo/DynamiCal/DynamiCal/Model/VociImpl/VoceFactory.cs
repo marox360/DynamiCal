@@ -10,18 +10,18 @@ namespace DynamiCal.Model.VociImpl
     {
         static Voce GetImplementedVoce(Voce voce)
         {
-            switch (voce.Tipo.Tipo)
+            switch (voce.Tipo.TipoDiVoce)
             {
-                case TipoVoce.Type.Stringa:
+                case TipoVoce.Tipo.Stringa:
                     return new VoceStringa(voce.Nome, voce.Tipo);
 
-                case TipoVoce.Type.Double:
+                case TipoVoce.Tipo.Double:
                     return new VoceDouble(voce.Nome, voce.Tipo);
 
-                case TipoVoce.Type.Boolean:
+                case TipoVoce.Tipo.Boolean:
                     return new VoceBoolean(voce.Nome, voce.Tipo);
 
-                case TipoVoce.Type.Data:
+                case TipoVoce.Tipo.Data:
                     return new VoceData(voce.Nome, voce.Tipo);
 
                 default:

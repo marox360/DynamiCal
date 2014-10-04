@@ -9,29 +9,11 @@ namespace DynamiCal.Model
 {
     class VoceBoolean : Voce
     {
-        private string _nome;
-        private TipoVoce _tipo;
         private bool _valore;
 
         public VoceBoolean(string nome, TipoVoce tipo) : base(nome, tipo)
         {
             _valore = false;
-        }
-
-        public string Nome
-        {
-            get
-            {
-                return _nome;
-            }
-        }
-
-        public TipoVoce Tipo
-        {
-            get
-            {
-                return _tipo;
-            }
         }
 
         public bool Valore

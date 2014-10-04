@@ -9,29 +9,11 @@ namespace DynamiCal.Model
 {
     class VoceDouble : Voce
     {
-        private string _nome;
-        private TipoVoce _tipo;
         private double _valore;
 
         public VoceDouble(string nome, TipoVoce tipo) : base(nome, tipo)
         {
             _valore = 0;
-        }
-
-        public string Nome
-        {
-            get
-            {
-                return _nome;
-            }
-        }
-
-        public TipoVoce Tipo
-        {
-            get
-            {
-                return _tipo;
-            }
         }
 
         public double Valore
