@@ -12,10 +12,10 @@ namespace DynamiCal.DataGridView.BindingSources
     class CalendarDay
     {
         private DateTime _day;
-        private Boolean _todayWeek;
+        private bool _todayWeek;
 
         public CalendarDay(DateTime day) : this(day, false) { }
-        public CalendarDay(DateTime day, Boolean todayWeek)
+        public CalendarDay(DateTime day, bool todayWeek)
         {
             #region Precondizioni
             Debug.Assert(day != null, "Day is null");
@@ -56,17 +56,17 @@ namespace DynamiCal.DataGridView.BindingSources
             }
         }
 
-        public Boolean IsSameDayOf(DateTime day)
+        public bool IsSameDayOf(DateTime day)
         {
             return day != null && DateTime.Equals(_day.Date, day.Date);
         }
 
-        public Boolean IsWeekendDay()
+        public bool IsWeekendDay()
         {
             return _day.DayOfWeek == DayOfWeek.Saturday || _day.DayOfWeek == DayOfWeek.Sunday;
         }
 
-        public Boolean IsTodayWeek()
+        public bool IsTodayWeek()
         {
             return _todayWeek;
         }
@@ -85,7 +85,7 @@ namespace DynamiCal.DataGridView.BindingSources
 
             int dayOfWeek = (int)(day.DayOfWeek + 6) % 7;
             day = calendar.AddDays(day, -1 * dayOfWeek);
-            Boolean isTodayWeek = calendar.GetWeekOfYear(day, CultureInfo.CurrentCulture.DateTimeFormat.CalendarWeekRule, CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek) == calendar.GetWeekOfYear(DateTime.Today, CultureInfo.CurrentCulture.DateTimeFormat.CalendarWeekRule, CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek);
+            bool isTodayWeek = calendar.GetWeekOfYear(day, CultureInfo.CurrentCulture.DateTimeFormat.CalendarWeekRule, CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek) == calendar.GetWeekOfYear(DateTime.Today, CultureInfo.CurrentCulture.DateTimeFormat.CalendarWeekRule, CultureInfo.CurrentCulture.DateTimeFormat.FirstDayOfWeek);
 
             _days = new CalendarDay[7];
             for (int i = 0; i < _days.Length; i++)
