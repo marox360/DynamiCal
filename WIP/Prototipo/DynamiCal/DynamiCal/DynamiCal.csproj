@@ -77,6 +77,11 @@
     <Compile Include="Model\Periodicita.cs" />
     <Compile Include="Model\TipoVoce.cs" />
     <Compile Include="Model\Voce.cs" />
+    <Compile Include="Model\VociImpl\VoceBoolean.cs" />
+    <Compile Include="Model\VociImpl\VoceData.cs" />
+    <Compile Include="Model\VociImpl\VoceDouble.cs" />
+    <Compile Include="Model\VociImpl\VoceFactory.cs" />
+    <Compile Include="Model\VociImpl\VoceStringa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreateCalendarForm.resx">
@@ -113,6 +118,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
