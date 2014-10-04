@@ -186,5 +186,17 @@ namespace DynamiCal
             }
         }
 
+        private void creaEventoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateEventForm createEventDialog = new CreateEventForm();
+
+            if (createEventDialog.ShowDialog(this) == DialogResult.OK)
+            {
+
+            }
+
+            createEventDialog.Dispose();
+        }
+
     }
 }

@@ -76,6 +76,7 @@
             // 
             // okButton
             // 
+            this.okButton.Enabled = false;
             this.okButton.Location = new System.Drawing.Point(110, 397);
             this.okButton.Name = "okButton";
             this.okButton.Size = new System.Drawing.Size(75, 23);
@@ -273,6 +274,7 @@
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.calendarSelectorComboBox);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "CreateEventForm";
             this.Text = "Aggiungi Evento ad un Calendario";
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).EndInit();
