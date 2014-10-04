@@ -16,13 +16,14 @@ namespace DynamiCal.DataGridView
         private static readonly Color TodayColor = Color.FromArgb(192, 85, 87);
         private static readonly Color ThisWeekColor = Color.FromArgb(244, 203, 204);
         private static readonly Color WeekSeparatorColor = Color.FromArgb(214, 211, 211);
+        private const int cellMargin = 3;
 
         public DataGridViewDayCell() : base() { }
 
         protected override void Paint(System.Drawing.Graphics graphics, System.Drawing.Rectangle clipBounds, System.Drawing.Rectangle cellBounds, int rowIndex, DataGridViewElementStates cellState, object value, object formattedValue, string errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts)
         {
             // Reset della cella perché andremo a rimpicciolire il cellBounds
-            using (Brush brush = new SolidBrush(Color.White))
+            using (Brush brush = new SolidBrush(cellStyle.BackColor))
             {
                 graphics.FillRectangle(brush, cellBounds);
             }
@@ -32,33 +33,29 @@ namespace DynamiCal.DataGridView
             {
                 cellStyle.ForeColor = Color.Gray;
             }
-            else if (dayValue.Date.IsToday())
-            {
-                cellStyle.ForeColor = Color.FromArgb(192, 85, 87);
-                cellStyle.BackColor = Color.FromArgb(244, 203, 204);
-                cellStyle.SelectionBackColor = cellStyle.BackColor;
-                cellStyle.SelectionForeColor = cellStyle.ForeColor;
-            }
 
-            int offsetX = 5;
-            Rectangle borderCellBounds = new Rectangle(cellBounds.X + offsetX, cellBounds.Y, cellBounds.Width - offsetX, cellBounds.Height);
+            cellStyle.SelectionBackColor = ThisWeekColor;
+            cellStyle.SelectionForeColor = TodayColor;
 
-            Rectangle backgroundBounds;
-            if (!dayValue.Date.IsWeekendDay() || (dayValue.Date.DayOfWeek == DateTime.Today.DayOfWeek && dayValue.Date.DayOfWeek == DayOfWeek.Saturday))
-            {
-                backgroundBounds = borderCellBounds;
-            }
-            else
-            {
-                backgroundBounds = cellBounds;
-            }
+            bool leftMargin = dayValue.Date.DayOfWeek != DayOfWeek.Monday;
+            bool rightMargin = dayValue.Date.DayOfWeek != DayOfWeek.Sunday;
 
-            if (cellState.HasFlag(DataGridViewElementStates.Selected))
+            Rectangle borderCellBounds = DataGridViewDayCell.CellBorderBounds(cellBounds, cellMargin, leftMargin, rightMargin);
+
+            if (cellState.HasFlag(DataGridViewElementStates.Selected) || dayValue.Date.IsToday())
             {
                 cellStyle.Font = new Font(cellStyle.Font, FontStyle.Bold);
             }
 
-            base.Paint(graphics, clipBounds, backgroundBounds, rowIndex, cellState, value, dayValue.Description, errorText, cellStyle, advancedBorderStyle, paintParts);
+            base.Paint(graphics, clipBounds, borderCellBounds, rowIndex, cellState, value, dayValue.Description, errorText, cellStyle, advancedBorderStyle, paintParts);
+
+            if (dayValue.Date.DayOfWeek == DayOfWeek.Saturday)
+            {
+                using (Brush brush = new SolidBrush(Color.White))
+                {
+                    graphics.FillRectangle(brush, new Rectangle(cellBounds.X, cellBounds.Y, cellMargin, cellBounds.Height));
+                }
+            }
 
             if (dayValue.IsTodayWeek())
             {
@@ -67,6 +64,7 @@ namespace DynamiCal.DataGridView
                     Rectangle bounds = dayValue.Date.DayOfWeek == DayOfWeek.Monday || dayValue.Date.IsToday() ? borderCellBounds : cellBounds;
 
                     int y = bounds.Top + (int)pen.Width/2;
+                    int width = bounds.Width + (leftMargin ? 0 : cellMargin);
 
                     if (dayValue.Date.DayOfWeek != DayOfWeek.Monday && dayValue.Date.IsToday())
                     {
@@ -77,7 +75,7 @@ namespace DynamiCal.DataGridView
 
                     }
 
-                    graphics.DrawLine(pen, new Point(bounds.Left, y), new Point(bounds.Left + bounds.Width, y));
+                    graphics.DrawLine(pen, new Point(bounds.Left, y), new Point(bounds.Left + width, y));
                 }
             }
             else
@@ -91,21 +89,16 @@ namespace DynamiCal.DataGridView
                     graphics.DrawLine(pen, new Point(x, y), new Point(x + width, y));
                 }
             }
+        }
 
-            if (cellState.HasFlag(DataGridViewElementStates.Selected))
-            {
-                using (Pen pen = new Pen(cellStyle.SelectionForeColor, 2))
-                {
-                    pen.Alignment = PenAlignment.Inset;
+        private static Rectangle CellBorderBounds(Rectangle cellBounds, int cellMargin)
+        {
+            return CellBorderBounds(cellBounds, cellMargin, true, true);
+        }
 
-                    int x = borderCellBounds.Left;
-                    int y = borderCellBounds.Top;
-                    int width = borderCellBounds.Width;
-                    int height = borderCellBounds.Height;
-
-                    graphics.DrawRectangle(pen, x, y, width, height);
-                }
-            }
+        private static Rectangle CellBorderBounds(Rectangle cellBounds, int cellMargin, bool left, bool right)
+        {
+            return new Rectangle(cellBounds.X + (left ? cellMargin : 0), cellBounds.Y, cellBounds.Width - cellMargin * ((left ? 1 : 0) + (right ? 1 : 0)), cellBounds.Height);
         }
     }
 }

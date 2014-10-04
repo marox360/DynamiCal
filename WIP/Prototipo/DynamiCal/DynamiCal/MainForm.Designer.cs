@@ -148,7 +148,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.calendarGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.calendarGridView.ColumnHeadersHeight = 35;
+            this.calendarGridView.ColumnHeadersHeight = 30;
             this.calendarGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.calendarGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.lunedìDataGridViewColumn,
@@ -159,7 +159,7 @@
             this.sabatoDataGridViewColumn,
             this.domenicaDataGridViewColumn});
             this.calendarGridView.DataSource = this.weekBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -272,23 +272,23 @@
             // yearLabel
             // 
             this.yearLabel.AutoSize = true;
-            this.yearLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearLabel.Location = new System.Drawing.Point(151, 5);
-            this.yearLabel.Margin = new System.Windows.Forms.Padding(2, 5, 2, 0);
+            this.yearLabel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yearLabel.Location = new System.Drawing.Point(143, 4);
+            this.yearLabel.Margin = new System.Windows.Forms.Padding(0, 4, 2, 0);
             this.yearLabel.Name = "yearLabel";
-            this.yearLabel.Size = new System.Drawing.Size(47, 21);
+            this.yearLabel.Size = new System.Drawing.Size(55, 25);
             this.yearLabel.TabIndex = 0;
             this.yearLabel.Text = "Anno";
             // 
             // monthLabel
             // 
             this.monthLabel.AutoSize = true;
-            this.monthLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.monthLabel.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monthLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.monthLabel.Location = new System.Drawing.Point(99, 5);
-            this.monthLabel.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            this.monthLabel.Location = new System.Drawing.Point(86, 4);
+            this.monthLabel.Margin = new System.Windows.Forms.Padding(0, 4, 0, 0);
             this.monthLabel.Name = "monthLabel";
-            this.monthLabel.Size = new System.Drawing.Size(50, 21);
+            this.monthLabel.Size = new System.Drawing.Size(57, 25);
             this.monthLabel.TabIndex = 1;
             this.monthLabel.Text = "Mese";
             // 
