@@ -154,5 +154,9 @@ namespace DynamiCal
             createEventModelDialog.Dispose();
         }
 
+        private void creaEventoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateEventForm createEventoDialog = new CreateEventForm();
+        }
     }
 }

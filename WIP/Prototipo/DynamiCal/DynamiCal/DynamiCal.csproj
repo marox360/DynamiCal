@@ -50,6 +50,12 @@
     <Compile Include="CreateCalendarForm.Designer.cs">
       <DependentUpon>CreateCalendarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateEventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateEventForm.Designer.cs">
+      <DependentUpon>CreateEventForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateEventModelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     <EmbeddedResource Include="CreateCalendarForm.resx">
       <DependentUpon>CreateCalendarForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateEventForm.resx">
+      <DependentUpon>CreateEventForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateEventModelForm.resx">
       <DependentUpon>CreateEventModelForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,8 +110,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\DynamiCal.DataGridView.BindingSources.Week.datasource" />
+    <None Include="Properties\DataSources\DynamiCal.Model.Agenda.datasource" />
+    <None Include="Properties\DataSources\DynamiCal.Model.ModelloEvento.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.TipoVoce.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Voce.datasource" />
     <None Include="Properties\Settings.settings">
@@ -118,7 +130,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-icon1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

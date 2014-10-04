@@ -29,25 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Calendari");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Calendari Condivisi");
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Calendari");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Calendari Condivisi");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             this.leftSidePanel = new System.Windows.Forms.Panel();
             this.calendarTreeView = new System.Windows.Forms.TreeView();
             this.datePicker = new System.Windows.Forms.MonthCalendar();
             this.calendarPanel = new System.Windows.Forms.Panel();
             this.calendarGridView = new System.Windows.Forms.DataGridView();
-            this.calendarTitlePanel = new System.Windows.Forms.Panel();
-            this.displayedMonth = new System.Windows.Forms.Label();
-            this.menuBar = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.creaNuovoCalendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modelloEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.creaModelloEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rightSidePanel = new System.Windows.Forms.Panel();
             this.lunedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.martedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.mercoledìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
@@ -56,12 +48,22 @@
             this.sabatoDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.domenicaDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.weekBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.calendarTitlePanel = new System.Windows.Forms.Panel();
+            this.displayedMonth = new System.Windows.Forms.Label();
+            this.menuBar = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.creaNuovoCalendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modelloEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.creaModelloEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rightSidePanel = new System.Windows.Forms.Panel();
             this.leftSidePanel.SuspendLayout();
             this.calendarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).BeginInit();
             this.calendarTitlePanel.SuspendLayout();
             this.menuBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // leftSidePanel
@@ -84,17 +86,17 @@
             this.calendarTreeView.FullRowSelect = true;
             this.calendarTreeView.Location = new System.Drawing.Point(5, 5);
             this.calendarTreeView.Name = "calendarTreeView";
-            treeNode1.ForeColor = System.Drawing.Color.Black;
-            treeNode1.Name = "LocalCalendars";
-            treeNode1.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode1.Text = "Calendari";
-            treeNode2.ForeColor = System.Drawing.Color.Black;
-            treeNode2.Name = "SharedCalendars";
-            treeNode2.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            treeNode2.Text = "Calendari Condivisi";
+            treeNode5.ForeColor = System.Drawing.Color.Black;
+            treeNode5.Name = "LocalCalendars";
+            treeNode5.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode5.Text = "Calendari";
+            treeNode6.ForeColor = System.Drawing.Color.Black;
+            treeNode6.Name = "SharedCalendars";
+            treeNode6.NodeFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            treeNode6.Text = "Calendari Condivisi";
             this.calendarTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
+            treeNode5,
+            treeNode6});
             this.calendarTreeView.ShowLines = false;
             this.calendarTreeView.Size = new System.Drawing.Size(227, 315);
             this.calendarTreeView.TabIndex = 1;
@@ -134,14 +136,14 @@
             this.calendarGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.calendarGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.calendarGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.calendarGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.calendarGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.calendarGridView.ColumnHeadersHeight = 35;
             this.calendarGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.calendarGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -153,14 +155,14 @@
             this.sabatoDataGridViewColumn,
             this.domenicaDataGridViewColumn});
             this.calendarGridView.DataSource = this.weekBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.calendarGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.calendarGridView.DefaultCellStyle = dataGridViewCellStyle12;
             this.calendarGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendarGridView.Location = new System.Drawing.Point(0, 30);
             this.calendarGridView.Margin = new System.Windows.Forms.Padding(0);
@@ -178,76 +180,6 @@
             this.calendarGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.calendarGridView_CellClick);
             this.calendarGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.calendarGridView_CellPainting);
             this.calendarGridView.Resize += new System.EventHandler(this.calendarGridView_Resize);
-            // 
-            // calendarTitlePanel
-            // 
-            this.calendarTitlePanel.BackColor = System.Drawing.Color.White;
-            this.calendarTitlePanel.Controls.Add(this.displayedMonth);
-            this.calendarTitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.calendarTitlePanel.Location = new System.Drawing.Point(0, 0);
-            this.calendarTitlePanel.Name = "calendarTitlePanel";
-            this.calendarTitlePanel.Size = new System.Drawing.Size(530, 30);
-            this.calendarTitlePanel.TabIndex = 0;
-            // 
-            // displayedMonth
-            // 
-            this.displayedMonth.BackColor = System.Drawing.Color.White;
-            this.displayedMonth.Dock = System.Windows.Forms.DockStyle.Right;
-            this.displayedMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.displayedMonth.Location = new System.Drawing.Point(380, 0);
-            this.displayedMonth.Name = "displayedMonth";
-            this.displayedMonth.Size = new System.Drawing.Size(150, 30);
-            this.displayedMonth.TabIndex = 0;
-            this.displayedMonth.Text = "Mese Anno";
-            this.displayedMonth.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // menuBar
-            // 
-            this.menuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.modelloEventoToolStripMenuItem});
-            this.menuBar.Location = new System.Drawing.Point(0, 0);
-            this.menuBar.Name = "menuBar";
-            this.menuBar.Size = new System.Drawing.Size(1009, 24);
-            this.menuBar.TabIndex = 2;
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.creaNuovoCalendarioToolStripMenuItem});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.fileToolStripMenuItem.Text = "Calendario";
-            // 
-            // creaNuovoCalendarioToolStripMenuItem
-            // 
-            this.creaNuovoCalendarioToolStripMenuItem.Name = "creaNuovoCalendarioToolStripMenuItem";
-            this.creaNuovoCalendarioToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
-            this.creaNuovoCalendarioToolStripMenuItem.Text = "Crea nuovo calendario";
-            this.creaNuovoCalendarioToolStripMenuItem.Click += new System.EventHandler(this.createCalendarMenuItem_Click);
-            // 
-            // modelloEventoToolStripMenuItem
-            // 
-            this.modelloEventoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.creaModelloEventoToolStripMenuItem});
-            this.modelloEventoToolStripMenuItem.Name = "modelloEventoToolStripMenuItem";
-            this.modelloEventoToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
-            this.modelloEventoToolStripMenuItem.Text = "Modello evento";
-            // 
-            // creaModelloEventoToolStripMenuItem
-            // 
-            this.creaModelloEventoToolStripMenuItem.Name = "creaModelloEventoToolStripMenuItem";
-            this.creaModelloEventoToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
-            this.creaModelloEventoToolStripMenuItem.Text = "Crea nuovo modello evento";
-            this.creaModelloEventoToolStripMenuItem.Click += new System.EventHandler(this.creaModelloEventoToolStripMenuItem_Click);
-            // 
-            // rightSidePanel
-            // 
-            this.rightSidePanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightSidePanel.Location = new System.Drawing.Point(772, 24);
-            this.rightSidePanel.Name = "rightSidePanel";
-            this.rightSidePanel.Size = new System.Drawing.Size(237, 487);
-            this.rightSidePanel.TabIndex = 2;
             // 
             // lunedìDataGridViewColumn
             // 
@@ -297,10 +229,10 @@
             // sabatoDataGridViewColumn
             // 
             this.sabatoDataGridViewColumn.DataPropertyName = "Sabato";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.sabatoDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.sabatoDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.sabatoDataGridViewColumn.HeaderText = "Sabato";
             this.sabatoDataGridViewColumn.Name = "sabatoDataGridViewColumn";
             this.sabatoDataGridViewColumn.ReadOnly = true;
@@ -310,10 +242,10 @@
             // domenicaDataGridViewColumn
             // 
             this.domenicaDataGridViewColumn.DataPropertyName = "Domenica";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.domenicaDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.domenicaDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.domenicaDataGridViewColumn.HeaderText = "Domenica";
             this.domenicaDataGridViewColumn.Name = "domenicaDataGridViewColumn";
             this.domenicaDataGridViewColumn.ReadOnly = true;
@@ -323,6 +255,92 @@
             // weekBindingSource
             // 
             this.weekBindingSource.DataSource = typeof(DynamiCal.DataGridView.BindingSources.CalendarWeek);
+            // 
+            // calendarTitlePanel
+            // 
+            this.calendarTitlePanel.BackColor = System.Drawing.Color.White;
+            this.calendarTitlePanel.Controls.Add(this.displayedMonth);
+            this.calendarTitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.calendarTitlePanel.Location = new System.Drawing.Point(0, 0);
+            this.calendarTitlePanel.Name = "calendarTitlePanel";
+            this.calendarTitlePanel.Size = new System.Drawing.Size(530, 30);
+            this.calendarTitlePanel.TabIndex = 0;
+            // 
+            // displayedMonth
+            // 
+            this.displayedMonth.BackColor = System.Drawing.Color.White;
+            this.displayedMonth.Dock = System.Windows.Forms.DockStyle.Right;
+            this.displayedMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.displayedMonth.Location = new System.Drawing.Point(380, 0);
+            this.displayedMonth.Name = "displayedMonth";
+            this.displayedMonth.Size = new System.Drawing.Size(150, 30);
+            this.displayedMonth.TabIndex = 0;
+            this.displayedMonth.Text = "Mese Anno";
+            this.displayedMonth.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // menuBar
+            // 
+            this.menuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.modelloEventoToolStripMenuItem,
+            this.wToolStripMenuItem});
+            this.menuBar.Location = new System.Drawing.Point(0, 0);
+            this.menuBar.Name = "menuBar";
+            this.menuBar.Size = new System.Drawing.Size(1009, 24);
+            this.menuBar.TabIndex = 2;
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.creaNuovoCalendarioToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.fileToolStripMenuItem.Text = "Calendario";
+            // 
+            // creaNuovoCalendarioToolStripMenuItem
+            // 
+            this.creaNuovoCalendarioToolStripMenuItem.Name = "creaNuovoCalendarioToolStripMenuItem";
+            this.creaNuovoCalendarioToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.creaNuovoCalendarioToolStripMenuItem.Text = "Crea nuovo calendario";
+            this.creaNuovoCalendarioToolStripMenuItem.Click += new System.EventHandler(this.createCalendarMenuItem_Click);
+            // 
+            // modelloEventoToolStripMenuItem
+            // 
+            this.modelloEventoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.creaModelloEventoToolStripMenuItem});
+            this.modelloEventoToolStripMenuItem.Name = "modelloEventoToolStripMenuItem";
+            this.modelloEventoToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
+            this.modelloEventoToolStripMenuItem.Text = "Modello evento";
+            // 
+            // creaModelloEventoToolStripMenuItem
+            // 
+            this.creaModelloEventoToolStripMenuItem.Name = "creaModelloEventoToolStripMenuItem";
+            this.creaModelloEventoToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.creaModelloEventoToolStripMenuItem.Text = "Crea nuovo modello evento";
+            this.creaModelloEventoToolStripMenuItem.Click += new System.EventHandler(this.creaModelloEventoToolStripMenuItem_Click);
+            // 
+            // wToolStripMenuItem
+            // 
+            this.wToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cToolStripMenuItem});
+            this.wToolStripMenuItem.Name = "wToolStripMenuItem";
+            this.wToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.wToolStripMenuItem.Text = "Evento";
+            // 
+            // cToolStripMenuItem
+            // 
+            this.cToolStripMenuItem.Name = "cToolStripMenuItem";
+            this.cToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.cToolStripMenuItem.Text = "Crea nuovo Evento";
+            this.cToolStripMenuItem.Click += new System.EventHandler(this.creaEventoToolStripMenuItem_Click);
+            // 
+            // rightSidePanel
+            // 
+            this.rightSidePanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rightSidePanel.Location = new System.Drawing.Point(772, 24);
+            this.rightSidePanel.Name = "rightSidePanel";
+            this.rightSidePanel.Size = new System.Drawing.Size(237, 487);
+            this.rightSidePanel.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -344,10 +362,10 @@
             this.leftSidePanel.ResumeLayout(false);
             this.calendarPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.calendarGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).EndInit();
             this.calendarTitlePanel.ResumeLayout(false);
             this.menuBar.ResumeLayout(false);
             this.menuBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,6 +394,8 @@
         private System.Windows.Forms.ToolStripMenuItem modelloEventoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem creaModelloEventoToolStripMenuItem;
         private System.Windows.Forms.Panel rightSidePanel;
+        private System.Windows.Forms.ToolStripMenuItem wToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cToolStripMenuItem;
 
     }
 }
