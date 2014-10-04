@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace DynamiCal.Model
 {
-    class ModelloEvento
+    class ModelloEvento : IEquatable<ModelloEvento>
     {
         private string _nome;
         private List<Voce> _voci;
@@ -32,11 +32,11 @@ namespace DynamiCal.Model
             }
         }
 
-        public List<Voce> Voci
+        public IList<Voce> Voci
         {
             get
             {
-                return _voci;
+                return _voci.AsReadOnly();
             }
         }
 
@@ -47,6 +47,34 @@ namespace DynamiCal.Model
             #endregion
 
             _voci.Add(voce);
+        }
+
+        public bool Equals(ModelloEvento other)
+        {
+            if (ReferenceEquals(null, other))
+                return false;
+            if (ReferenceEquals(this, other))
+                return true;
+            return string.Equals(this.Nome, other.Nome);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj))
+                return false;
+            if (ReferenceEquals(this, obj))
+                return true;
+            if (obj.GetType() != this.GetType())
+                return false;
+            return Equals((ModelloEvento)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return ((this.Nome != null ? this.Nome.GetHashCode() : 0) * 397);
+            }
         }
     }
 }

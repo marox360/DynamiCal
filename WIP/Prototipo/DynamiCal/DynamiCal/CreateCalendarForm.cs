@@ -31,6 +31,11 @@ namespace DynamiCal
         private void nameTextBox_TextChanged(object sender, EventArgs e)
         {
             this.createButton.Enabled = !String.IsNullOrWhiteSpace((sender as TextBox).Text);
+            if (this.createButton.Enabled)
+            {
+                Calendario calendar = new CalendarioLocale((sender as TextBox).Text.Trim());
+                this.createButton.Enabled = !Agenda.Instance.Calendari.Contains(calendar);
+            }
         }
 
         internal Calendario GetCalendario()

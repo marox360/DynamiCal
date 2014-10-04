@@ -29,19 +29,19 @@ namespace DynamiCal.Model
             }
         }
 
-        public List<Calendario> Calendari
+        public IList<Calendario> Calendari
         {
             get
             {
-                return _calendari;
+                return _calendari.AsReadOnly();
             }
         }
 
-        public List<ModelloEvento> ModelliEvento
+        public IList<ModelloEvento> ModelliEvento
         {
             get
             {
-                return _modelliEvento;
+                return _modelliEvento.AsReadOnly();
             }
         }
 
