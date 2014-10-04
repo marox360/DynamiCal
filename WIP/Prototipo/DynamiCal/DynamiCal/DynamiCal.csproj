@@ -59,6 +59,7 @@
     <Compile Include="DataGridView\DataGridViewDayCell.cs" />
     <Compile Include="DataGridView\DataGridViewDayColumn.cs" />
     <Compile Include="DataGridView\BindingSources\MonthlySource.cs" />
+    <Compile Include="Extension\DateTimeExtension.cs" />
     <Compile Include="Filters\CriterioDiFiltraggio.cs" />
     <Compile Include="Model\Agenda.cs" />
     <Compile Include="Model\Amico.cs" />
