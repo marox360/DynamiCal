@@ -13,9 +13,9 @@ namespace DynamiCal.DataGridView
 {
     public class DataGridViewDayCell : DataGridViewTextBoxCell
     {
-        private const Color TodayColor = Color.FromArgb(192, 85, 87);
-        private const Color ThisWeekColor = Color.FromArgb(244, 203, 204);
-        private const Color WeekSeparatorColor = Color.FromArgb(214, 211, 211);
+        private static readonly Color TodayColor = Color.FromArgb(192, 85, 87);
+        private static readonly Color ThisWeekColor = Color.FromArgb(244, 203, 204);
+        private static readonly Color WeekSeparatorColor = Color.FromArgb(214, 211, 211);
 
         public DataGridViewDayCell() : base() { }
 
