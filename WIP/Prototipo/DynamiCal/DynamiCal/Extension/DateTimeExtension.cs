@@ -17,5 +17,10 @@ namespace DynamiCal.Extension
         {
             return date != null && DateTime.Equals(thisDate.Date, date.Date);
         }
+
+        public static bool IsToday(this DateTime date)
+        {
+            return date.IsSameDayOf(DateTime.Today);
+        }
     }
 }

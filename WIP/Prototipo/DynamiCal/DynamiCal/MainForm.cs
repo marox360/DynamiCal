@@ -111,7 +111,7 @@ namespace DynamiCal
                 {
                     ShowMonthOfDay(calendarDay.Date);
                 }
-                else if (e.RowIndex == 5 && calendarDay.Date.Day < 8)
+                else if (e.RowIndex >= 4 && calendarDay.Date.Day < 15)
                 {
                     ShowMonthOfDay(calendarDay.Date);
                 }
