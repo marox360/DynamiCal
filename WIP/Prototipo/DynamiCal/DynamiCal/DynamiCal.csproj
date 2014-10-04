@@ -59,6 +59,7 @@
     <Compile Include="DataGridView\DataGridViewDayCell.cs" />
     <Compile Include="DataGridView\DataGridViewDayColumn.cs" />
     <Compile Include="DataGridView\BindingSources\MonthlySource.cs" />
+    <Compile Include="Extension\DateTimeExtension.cs" />
     <Compile Include="Filters\CriterioDiFiltraggio.cs" />
     <Compile Include="Model\Agenda.cs" />
     <Compile Include="Model\Amico.cs" />
@@ -76,11 +77,11 @@
     <Compile Include="Model\Periodicita.cs" />
     <Compile Include="Model\TipoVoce.cs" />
     <Compile Include="Model\Voce.cs" />
-    <Compile Include="Model\VociImpl\VoceDouble.cs" />
-    <Compile Include="Model\VociImpl\VoceStringa.cs" />
-    <Compile Include="Model\VociImpl\VoceData.cs" />
     <Compile Include="Model\VociImpl\VoceBoolean.cs" />
+    <Compile Include="Model\VociImpl\VoceData.cs" />
+    <Compile Include="Model\VociImpl\VoceDouble.cs" />
     <Compile Include="Model\VociImpl\VoceFactory.cs" />
+    <Compile Include="Model\VociImpl\VoceStringa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CreateCalendarForm.resx">

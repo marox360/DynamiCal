@@ -56,16 +56,6 @@ namespace DynamiCal.DataGridView.BindingSources
             }
         }
 
-        public bool IsSameDayOf(DateTime day)
-        {
-            return day != null && DateTime.Equals(_day.Date, day.Date);
-        }
-
-        public bool IsWeekendDay()
-        {
-            return _day.DayOfWeek == DayOfWeek.Saturday || _day.DayOfWeek == DayOfWeek.Sunday;
-        }
-
         public bool IsTodayWeek()
         {
             return _todayWeek;

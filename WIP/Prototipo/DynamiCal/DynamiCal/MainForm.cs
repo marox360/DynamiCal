@@ -1,5 +1,6 @@
 ﻿using DynamiCal.DataGridView.BindingSources;
 using DynamiCal.Model;
+using DynamiCal.Extension;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,7 +51,7 @@ namespace DynamiCal
             {
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    if (cell.Value is CalendarDay && (cell.Value as CalendarDay).IsSameDayOf(date))
+                    if (cell.Value is CalendarDay && (cell.Value as CalendarDay).Date.IsSameDayOf(date))
                     {
                         calendarGridView.CurrentCell = cell;
                         return;

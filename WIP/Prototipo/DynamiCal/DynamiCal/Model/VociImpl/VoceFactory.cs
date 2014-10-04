@@ -14,23 +14,18 @@ namespace DynamiCal.Model.VociImpl
             {
                 case TipoVoce.Type.Stringa:
                     return new VoceStringa(voce.Nome, voce.Tipo);
-                    break;
 
                 case TipoVoce.Type.Double:
                     return new VoceDouble(voce.Nome, voce.Tipo);
-                    break;
 
                 case TipoVoce.Type.Boolean:
                     return new VoceBoolean(voce.Nome, voce.Tipo);
-                    break;
 
                 case TipoVoce.Type.Data:
                     return new VoceData(voce.Nome, voce.Tipo);
-                    break;
 
                 default:
                     return null;
-                    break;
             }
         }
     }
