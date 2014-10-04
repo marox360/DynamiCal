@@ -44,7 +44,7 @@ namespace DynamiCal.Model
                 return false;
             if (ReferenceEquals(this, other))
                 return true;
-            return string.Equals(Nome, other.Nome);
+            return string.Equals(this.Nome, other.Nome);
         }
 
         public override bool Equals(object obj)
@@ -62,7 +62,7 @@ namespace DynamiCal.Model
         {
             unchecked
             {
-                return ((Nome != null ? Nome.GetHashCode() : 0) * 397);
+                return ((this.Nome != null ? this.Nome.GetHashCode() : 0) * 397);
             }
         }
     }
