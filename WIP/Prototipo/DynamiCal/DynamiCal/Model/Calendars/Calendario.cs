@@ -30,11 +30,11 @@ namespace DynamiCal.Model
             }
         }
 
-        public List<Evento> Eventi
+        public IList<Evento> Eventi
         {
             get
             {
-                return _eventi;
+                return _eventi.AsReadOnly();
             }
         }
 

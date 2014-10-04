@@ -32,11 +32,11 @@ namespace DynamiCal.Model
             }
         }
 
-        public List<Voce> Voci
+        public IList<Voce> Voci
         {
             get
             {
-                return _voci;
+                return _voci.AsReadOnly();
             }
         }
 
