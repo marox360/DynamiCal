@@ -39,7 +39,7 @@
             // 
             this.nameTextBox.Location = new System.Drawing.Point(12, 46);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(260, 20);
+            this.nameTextBox.Size = new System.Drawing.Size(260, 22);
             this.nameTextBox.TabIndex = 0;
             this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
@@ -48,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(9, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Inserisci il nome:";
             // 
@@ -79,7 +79,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(9, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
+            this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Condividi con:";
             // 
@@ -95,6 +95,7 @@
             this.Controls.Add(this.createButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameTextBox);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "CreateCalendarForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -94,23 +94,7 @@ namespace DynamiCal.DataGridView
 
             if (cellState.HasFlag(DataGridViewElementStates.Selected))
             {
-                Color penColor;
-
-                /*if (dayValue.Date.IsToday())
-                {
-                    penColor = TodayColor;
-                }
-                else if (dayValue.Date.IsWeekendDay())
-                {
-                    penColor = Color.Gray;
-                }
-                else
-                {
-                    penColor = Color.Black;
-                }*/
-                penColor = cellStyle.SelectionForeColor;
-
-                using (Pen pen = new Pen(penColor, 2))
+                using (Pen pen = new Pen(cellStyle.SelectionForeColor, 2))
                 {
                     pen.Alignment = PenAlignment.Inset;
 
