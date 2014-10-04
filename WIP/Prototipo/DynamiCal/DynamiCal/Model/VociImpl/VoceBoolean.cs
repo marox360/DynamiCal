@@ -42,7 +42,7 @@ namespace DynamiCal.Model
             }
             set
             {
-                this._valore = value;
+                _valore = value;
             }
         }
     }
