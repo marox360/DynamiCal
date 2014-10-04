@@ -79,7 +79,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Inserisci il nome:";
             // 
@@ -99,7 +99,7 @@
             // 
             this.modelNameTextBox.Location = new System.Drawing.Point(9, 39);
             this.modelNameTextBox.Name = "modelNameTextBox";
-            this.modelNameTextBox.Size = new System.Drawing.Size(285, 20);
+            this.modelNameTextBox.Size = new System.Drawing.Size(285, 22);
             this.modelNameTextBox.TabIndex = 3;
             this.modelNameTextBox.TextChanged += new System.EventHandler(this.modelNameTextBox_TextChanged);
             // 
@@ -133,7 +133,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(154, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Scegli il tipo:";
             // 
@@ -142,10 +142,12 @@
             this.entryTypeComboBox.DataSource = this.tipoVoceBindingSource;
             this.entryTypeComboBox.DisplayMember = "Descrizione";
             this.entryTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.entryTypeComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.entryTypeComboBox.FormattingEnabled = true;
+            this.entryTypeComboBox.ItemHeight = 15;
             this.entryTypeComboBox.Location = new System.Drawing.Point(154, 36);
             this.entryTypeComboBox.Name = "entryTypeComboBox";
-            this.entryTypeComboBox.Size = new System.Drawing.Size(140, 21);
+            this.entryTypeComboBox.Size = new System.Drawing.Size(140, 23);
             this.entryTypeComboBox.TabIndex = 2;
             // 
             // tipoVoceBindingSource
@@ -156,7 +158,7 @@
             // 
             this.entryNameTextBox.Location = new System.Drawing.Point(10, 37);
             this.entryNameTextBox.Name = "entryNameTextBox";
-            this.entryNameTextBox.Size = new System.Drawing.Size(140, 20);
+            this.entryNameTextBox.Size = new System.Drawing.Size(140, 22);
             this.entryNameTextBox.TabIndex = 1;
             this.entryNameTextBox.TextChanged += new System.EventHandler(this.entryNameTextBox_TextChanged);
             // 
@@ -165,7 +167,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(7, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "Inserisci il nome:";
             // 
@@ -221,6 +223,7 @@
             this.Controls.Add(this.eventModelGroup);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createButton);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "CreateEventModelForm";
             this.Text = "Crea nuovo modello evento";
