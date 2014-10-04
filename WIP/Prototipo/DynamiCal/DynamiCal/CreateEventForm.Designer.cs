@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateEventForm));
             this.label1 = new System.Windows.Forms.Label();
             this.calendarSelectorComboBox = new System.Windows.Forms.ComboBox();
             this.okButton = new System.Windows.Forms.Button();
@@ -241,6 +242,7 @@
             // 
             // addModelEventButton
             // 
+            this.addModelEventButton.Image = ((System.Drawing.Image)(resources.GetObject("addModelEventButton.Image")));
             this.addModelEventButton.Location = new System.Drawing.Point(317, 180);
             this.addModelEventButton.Name = "addModelEventButton";
             this.addModelEventButton.Size = new System.Drawing.Size(23, 23);
