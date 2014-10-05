@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DynamiCal.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,10 +68,11 @@ namespace DynamiCal
         {
             if (eventModelSelectorComboBox.SelectedItem.ToString().Equals("Nuovo Modello..."))
             {
-                CreateEventModelForm CreateEventModelDialog = new CreateEventModelForm();
+                CreateEventModelForm createEventModelDialog = new CreateEventModelForm();
                 this.Visible = false;
-                if (CreateEventModelDialog.ShowDialog(this).Equals(DialogResult.OK))
+                if (createEventModelDialog.ShowDialog(this).Equals(DialogResult.OK))
                 {
+                    Agenda.Instance.AggiungiModelloEvento(createEventModelDialog.GetModelloEvento());
                     populateEventModelSelectorComboBox();
                 }
                 this.Visible = true;
@@ -101,7 +103,7 @@ namespace DynamiCal
 
         private void populateEventModelSelectorComboBox()
         {
-            foreach (Model.ModelloEvento _modello in Model.Agenda.Instance.ModelliEvento)
+            foreach (ModelloEvento _modello in Agenda.Instance.ModelliEvento)
             {
                 if (!eventModelSelectorComboBox.Items.Contains(_modello.Nome))
                 {
