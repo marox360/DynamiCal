@@ -1,6 +1,7 @@
 ﻿using DynamiCal.DataGridView.BindingSources;
 using DynamiCal.Model;
 using DynamiCal.Extension;
+using DynamiCal.TreeView;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Drawing2D;
 
 namespace DynamiCal
 {
@@ -63,19 +65,24 @@ namespace DynamiCal
 
         private void CalendarsChanged(object sender, EventArgs e)
         {
-            calendarTreeView.Nodes["LocalCalendars"].Nodes.Clear();
-            calendarTreeView.Nodes["SharedCalendars"].Nodes.Clear();
-
             foreach (Calendario calendario in Agenda.Instance.Calendari)
             {
-                TreeNode node = new TreeNode(calendario.Nome);
+                CalendarTreeNode node = new CalendarTreeNode(calendario);
+                node.Checked = true;
+
                 if (calendario is CalendarioLocale)
                 {
-                    calendarTreeView.Nodes["LocalCalendars"].Nodes.Add(node);
+                    if (!calendarTreeView.Nodes["LocalCalendars"].Nodes.ContainsKey(calendario.Nome))
+                    {
+                        calendarTreeView.Nodes["LocalCalendars"].Nodes.Add(node);
+                    }
                 }
                 else if (calendario is CalendarioCondiviso)
                 {
-                    calendarTreeView.Nodes["SharedCalendars"].Nodes.Add(node);
+                    if (!calendarTreeView.Nodes["SharedCalendars"].Nodes.ContainsKey(calendario.Nome))
+                    {
+                        calendarTreeView.Nodes["SharedCalendars"].Nodes.Add(node);
+                    }
                 }
             }
 
@@ -165,7 +172,43 @@ namespace DynamiCal
             e.Node.BackColor = Color.White;
             e.Node.ForeColor = Color.Black;
 
-            if (calendarTreeView.Nodes.Contains(e.Node))
+            if (e.Node is CalendarTreeNode)
+            {
+                CalendarTreeNode calendarNode = e.Node as CalendarTreeNode;
+
+                Rectangle bounds = calendarNode.Bounds;
+                bounds.X = 0;
+                bounds.Width += 20;
+                int textOffset = 14;
+
+                using (SolidBrush brush = new SolidBrush(calendarNode.BackColor))
+                {
+                    e.Graphics.FillRectangle(brush, bounds);
+                }
+
+                using (SolidBrush brush = new SolidBrush(calendarNode.CalendarColor))
+                {
+                    int circleRadius = 6;
+                    Rectangle circleBounds = new Rectangle(bounds.X + textOffset - circleRadius, bounds.Y + bounds.Height / 2 - circleRadius, circleRadius * 2, circleRadius * 2);
+                    SmoothingMode smoothingMode = e.Graphics.SmoothingMode;
+                    e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                    e.Graphics.FillEllipse(brush, circleBounds);
+                    e.Graphics.SmoothingMode = smoothingMode;
+
+                    if (calendarNode.Checked)
+                    {
+                        circleBounds.Offset(1, 0);
+                        TextRenderer.DrawText(e.Graphics, "✔", new Font(calendarTreeView.Font.FontFamily, circleRadius), circleBounds, Color.White, Color.Transparent);
+                    }
+                }
+
+                bounds.Offset(textOffset, 0);
+                TextFormatFlags flags = TextFormatFlags.Default | TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter;
+                TextRenderer.DrawText(e.Graphics, calendarNode.Text, calendarTreeView.Font, bounds, calendarNode.ForeColor, calendarNode.BackColor, flags);
+
+                e.DrawDefault = false;
+            }
+            else
             {
                 Rectangle bounds = e.Node.Bounds;
                 bounds.X = 20;
@@ -180,9 +223,13 @@ namespace DynamiCal
 
                 e.DrawDefault = false;
             }
-            else
+        }
+
+        private void calendarTreeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (!calendarTreeView.Nodes.Contains(e.Node) && e.Button == MouseButtons.Left)
             {
-                e.DrawDefault = true;
+                e.Node.Checked = !e.Node.Checked;
             }
         }
 
@@ -198,5 +245,14 @@ namespace DynamiCal
             createEventDialog.Dispose();
         }
 
+        private void toolStripMenuItem_MouseEnter(object sender, EventArgs e)
+        {
+            ToolStripDropDownItem item = sender as ToolStripDropDownItem;
+
+            if (item.HasDropDownItems)
+            {
+                item.ShowDropDown();
+            }
+        }
     }
 }
