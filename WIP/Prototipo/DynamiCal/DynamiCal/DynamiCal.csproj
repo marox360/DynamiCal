@@ -34,6 +34,9 @@
   <PropertyGroup>
     <StartupObject>DynamiCal.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconfinal.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -135,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconfinal.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
