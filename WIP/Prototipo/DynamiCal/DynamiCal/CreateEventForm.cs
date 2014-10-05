@@ -79,6 +79,7 @@ namespace DynamiCal
             {
                 entriesDataGridView.Enabled = true;
                 //entriesDataGridView.Columns.Add(Model.Agenda.Instance.ModelliEvento.Last().Voci);
+                //entriesDataGridView.Columns.Add(Model.Agenda.Instance.ModelliEvento.Where(modello => modello.Voci).First());
             }
             OKButtonEnableCheck();
         }
