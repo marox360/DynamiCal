@@ -31,6 +31,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DynamiCal.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconfinal.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -90,6 +96,7 @@
     <Compile Include="Model\VociImpl\VoceStringa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TreeView\CalendarTreeNode.cs" />
     <EmbeddedResource Include="CreateCalendarForm.resx">
       <DependentUpon>CreateCalendarForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +139,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconfinal.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
