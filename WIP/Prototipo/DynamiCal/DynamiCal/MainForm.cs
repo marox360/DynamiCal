@@ -22,8 +22,6 @@ namespace DynamiCal
         {
             InitializeComponent();
 
-            calendarTreeView.ExpandAll();
-
             Agenda.Instance.CalendarsChanged += CalendarsChanged;
             Agenda.Instance.AggiungiCalendario(new CalendarioLocale("Test Calendar"));
 
@@ -65,27 +63,33 @@ namespace DynamiCal
             }
         }
 
-        private void CalendarsChanged(object sender, EventArgs e)
+        private void CalendarsChanged(object sender, AgendaCollectionEventArgs e)
         {
-            foreach (Calendario calendario in Agenda.Instance.Calendari)
+            TreeNode treeNode = null;
+            if (e.Item is CalendarioLocale)
             {
-                CalendarTreeNode node = new CalendarTreeNode(calendario);
-                node.Checked = true;
+                treeNode = calendarTreeView.Nodes["LocalCalendars"];
+            }
+            else if (e.Item is CalendarioLocale)
+            {
+                treeNode = calendarTreeView.Nodes["SharedCalendars"];
+            }
 
-                if (calendario is CalendarioLocale)
-                {
-                    if (!calendarTreeView.Nodes["LocalCalendars"].Nodes.ContainsKey(calendario.Nome))
-                    {
-                        calendarTreeView.Nodes["LocalCalendars"].Nodes.Add(node);
-                    }
-                }
-                else if (calendario is CalendarioCondiviso)
-                {
-                    if (!calendarTreeView.Nodes["SharedCalendars"].Nodes.ContainsKey(calendario.Nome))
-                    {
-                        calendarTreeView.Nodes["SharedCalendars"].Nodes.Add(node);
-                    }
-                }
+            if (treeNode == null)
+            {
+                return;
+            }
+
+            switch (e.Action)
+            {
+                case AgendaCollectionEventArgs.EditAction.AddItem:
+                    treeNode.Nodes.Add(new CalendarTreeNode(e.Item as Calendario));
+                    treeNode.Expand();
+                    break;
+
+                case AgendaCollectionEventArgs.EditAction.RemoveItem:
+                    treeNode.Nodes.RemoveByKey((e.Item as Calendario).Nome);
+                    break;
             }
 
             calendarTreeView.Sort();
@@ -164,11 +168,6 @@ namespace DynamiCal
             createEventModelDialog.Dispose();
         }
 
-        private void calendarTreeView_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-            calendarTreeView.SelectedNode = null;
-        }
-
         private void calendarTreeView_DrawNode(object sender, DrawTreeNodeEventArgs e)
         {
             e.Node.BackColor = Color.White;
@@ -226,10 +225,18 @@ namespace DynamiCal
                 e.DrawDefault = false;
             }
         }
+        private void calendarTreeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Node is CalendarTreeNode && e.Button == MouseButtons.Right)
+            {
+                calendarTreeView.SelectedNode = e.Node;
+                treeNodeMenuStrip.Show(calendarTreeView, e.Location);
+            }
+        }
 
         private void calendarTreeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            if (!calendarTreeView.Nodes.Contains(e.Node) && e.Button == MouseButtons.Left)
+            if (e.Node is CalendarTreeNode && e.Button == MouseButtons.Left)
             {
                 e.Node.Checked = !e.Node.Checked;
             }
@@ -256,5 +263,37 @@ namespace DynamiCal
                 item.ShowDropDown();
             }
         }
+
+        private void treeNodeMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            Calendario calendar = null;
+            if (treeNodeMenuStrip.SourceControl is System.Windows.Forms.TreeView)
+            {
+                CalendarTreeNode calendarNode = (treeNodeMenuStrip.SourceControl as System.Windows.Forms.TreeView).SelectedNode as CalendarTreeNode;
+                if (calendarNode.Parent.Name == "LocalCalendars")
+                {
+                    calendar = new CalendarioLocale(calendarNode.Name);
+                }
+                else if (calendarNode.Parent.Name == "SharedCalendars")
+                {
+                    calendar = new CalendarioCondiviso(calendarNode.Name);
+                }
+            }
+
+            if (calendar == null)
+            {
+                return;
+            }
+            
+            switch (e.ClickedItem.Text)
+            {
+                case "Elimina":
+                    Agenda.Instance.RimuoviCalendario(calendar);
+                    break;
+                
+                default: break;
+            }
+        }
+
     }
 }

@@ -12,8 +12,8 @@ namespace DynamiCal.Model
         private static Agenda _instance = new Agenda();
         private List<Calendario> _calendari;
         private List<ModelloEvento> _modelliEvento;
-        public event EventHandler CalendarsChanged;
-        public event EventHandler EventModelsChanged; 
+        public event AgendaCollectionEventHandler CalendarsChanged;
+        public event AgendaCollectionEventHandler EventModelsChanged; 
 
         private Agenda()
         {
@@ -54,7 +54,19 @@ namespace DynamiCal.Model
 
             _calendari.Add(calendario);
 
-            OnCalendarsChanged();
+            OnCalendarsChanged(new AgendaCollectionEventArgs(calendario, AgendaCollectionEventArgs.EditAction.AddItem));
+        }
+
+        public void RimuoviCalendario(Calendario calendario)
+        {
+            #region Precondizioni
+            Debug.Assert(calendario != null, "Calendario cannot be null");
+            #endregion
+
+            if (_calendari.Remove(calendario))
+            {
+                OnCalendarsChanged(new AgendaCollectionEventArgs(calendario, AgendaCollectionEventArgs.EditAction.RemoveItem));
+            }
         }
 
         public void AggiungiModelloEvento(ModelloEvento modelloEvento)
@@ -66,23 +78,52 @@ namespace DynamiCal.Model
 
             _modelliEvento.Add(modelloEvento);
 
-            OnEventModelsChanged();
+            OnCalendarsChanged(new AgendaCollectionEventArgs(modelloEvento, AgendaCollectionEventArgs.EditAction.AddItem));
         }
 
-        protected virtual void OnCalendarsChanged()
+        public void RimuoviModello(ModelloEvento modelloEvento)
+        {
+            #region Precondizioni
+            Debug.Assert(modelloEvento != null, "ModelloEvento cannot be null");
+            #endregion
+
+            if (_modelliEvento.Remove(modelloEvento))
+            {
+                OnCalendarsChanged(new AgendaCollectionEventArgs(modelloEvento, AgendaCollectionEventArgs.EditAction.RemoveItem));
+            }
+        }
+
+        protected virtual void OnCalendarsChanged(AgendaCollectionEventArgs e)
         {
             if (CalendarsChanged != null)
             {
-                CalendarsChanged(this, EventArgs.Empty);
+                CalendarsChanged(this, e);
             }
         }
 
-        protected virtual void OnEventModelsChanged()
+        protected virtual void OnEventModelsChanged(AgendaCollectionEventArgs e)
         {
             if (EventModelsChanged != null)
             {
-                EventModelsChanged(this, EventArgs.Empty);
+                EventModelsChanged(this, e);
             }
         }
     }
+
+    public class AgendaCollectionEventArgs : EventArgs
+    {
+        public enum EditAction { AddItem, RemoveItem }
+
+        public AgendaCollectionEventArgs(object item, EditAction action)
+        {
+            this.Item = item;
+            this.Action = action;
+        }
+
+        public object Item { get; private set; }
+
+        public EditAction Action { get; private set; }
+    }
+
+    public delegate void AgendaCollectionEventHandler(object source, AgendaCollectionEventArgs e);
 }

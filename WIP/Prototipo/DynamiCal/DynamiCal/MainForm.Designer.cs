@@ -54,6 +54,8 @@
             this.creaEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rightSidePanel = new System.Windows.Forms.Panel();
             this.noEventsLabel = new System.Windows.Forms.Label();
+            this.treeNodeMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lunedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.martedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.mercoledìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
@@ -69,6 +71,7 @@
             this.topFlowLayoutPanel.SuspendLayout();
             this.menuBar.SuspendLayout();
             this.rightSidePanel.SuspendLayout();
+            this.treeNodeMenuStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -110,7 +113,7 @@
             this.calendarTreeView.Size = new System.Drawing.Size(227, 390);
             this.calendarTreeView.TabIndex = 1;
             this.calendarTreeView.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.calendarTreeView_DrawNode);
-            this.calendarTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.calendarTreeView_AfterSelect);
+            this.calendarTreeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.calendarTreeView_NodeMouseClick);
             this.calendarTreeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.calendarTreeView_NodeMouseDoubleClick);
             // 
             // datePicker
@@ -316,10 +319,25 @@
             this.noEventsLabel.ForeColor = System.Drawing.Color.DarkGray;
             this.noEventsLabel.Location = new System.Drawing.Point(1, 256);
             this.noEventsLabel.Name = "noEventsLabel";
-            this.noEventsLabel.Size = new System.Drawing.Size(235, 96);
+            this.noEventsLabel.Size = new System.Drawing.Size(235, 72);
             this.noEventsLabel.TabIndex = 0;
             this.noEventsLabel.Text = "Nessun evento";
             this.noEventsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // treeNodeMenuStrip
+            // 
+            this.treeNodeMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteStripMenuItem});
+            this.treeNodeMenuStrip.Name = "treeNodeMenuStrip";
+            this.treeNodeMenuStrip.ShowImageMargin = false;
+            this.treeNodeMenuStrip.Size = new System.Drawing.Size(89, 26);
+            this.treeNodeMenuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.treeNodeMenuStrip_ItemClicked);
+            // 
+            // deleteStripMenuItem
+            // 
+            this.deleteStripMenuItem.Name = "deleteStripMenuItem";
+            this.deleteStripMenuItem.Size = new System.Drawing.Size(88, 22);
+            this.deleteStripMenuItem.Text = "Elimina";
             // 
             // lunedìDataGridViewColumn
             // 
@@ -424,6 +442,7 @@
             this.menuBar.ResumeLayout(false);
             this.menuBar.PerformLayout();
             this.rightSidePanel.ResumeLayout(false);
+            this.treeNodeMenuStrip.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -458,6 +477,8 @@
         private System.Windows.Forms.Label monthLabel;
         private System.Windows.Forms.ToolStripMenuItem eventoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem creaEventoToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip treeNodeMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem deleteStripMenuItem;
 
     }
 }

@@ -17,6 +17,7 @@ namespace DynamiCal.TreeView
         {
             _calendarColor = Color.FromArgb(192, 85, 87);
             this.Name = calendario.Nome;
+            this.Checked = true;
         }
 
         public Color CalendarColor
