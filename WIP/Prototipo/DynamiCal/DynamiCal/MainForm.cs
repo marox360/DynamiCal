@@ -26,6 +26,8 @@ namespace DynamiCal
 
             Agenda.Instance.CalendarsChanged += CalendarsChanged;
             Agenda.Instance.AggiungiCalendario(new CalendarioLocale("Test Calendar"));
+
+            Agenda.Instance.AggiungiModelloEvento(new ModelloEvento("Base"));
         }
 
         private void MainForm_Load(object sender, EventArgs e)
