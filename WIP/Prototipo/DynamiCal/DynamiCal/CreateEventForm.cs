@@ -24,6 +24,11 @@ namespace DynamiCal
                 durationComboBox.Enabled = false;
                 durationUpDown.Enabled = false;
             }
+            else
+            {
+                durationComboBox.Enabled = true;
+                durationUpDown.Enabled = true;
+            }
             OKButtonEnableCheck();
         }
 
@@ -35,7 +40,7 @@ namespace DynamiCal
         private void OKButtonEnableCheck()
         {
             if (eventNameTextBox.Text != ""
-                && ((durationUpDown.Value != null && durationComboBox.SelectedValue != null) || allDayCheckBox.Checked == true))
+                && (durationComboBox.SelectedValue != null || allDayCheckBox.Checked == true))
                 //&& controllo valori delle singole voci inseriti e corretti)
             {
                 okButton.Enabled = true;
@@ -60,6 +65,21 @@ namespace DynamiCal
 
         private void eventModelSelectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (eventModelSelectorComboBox.SelectedItem.ToString().Equals("Nuovo Modello..."))
+            {
+                CreateEventModelForm CreateEventModelDialog = new CreateEventModelForm();
+                this.Visible = false;
+                if (CreateEventModelDialog.ShowDialog(this).Equals(DialogResult.OK))
+                {
+                    populateEventModelSelectorComboBox();
+                }
+                this.Visible = true;
+            }
+            else
+            {
+                entriesDataGridView.Enabled = true;
+                //entriesDataGridView.Columns.Add(Model.Agenda.Instance.ModelliEvento.Last().Voci);
+            }
             OKButtonEnableCheck();
         }
         private void cancelButton_Click(object sender, EventArgs e)
@@ -72,13 +92,30 @@ namespace DynamiCal
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
-        private void addModelEventButton_Click(object sender, EventArgs e)
+        private void CreateEventForm_Load(object sender, EventArgs e)
         {
-            CreateEventModelForm CreateEventModelDialog = new CreateEventModelForm();
-            if (CreateEventModelDialog.ShowDialog(this).Equals(DialogResult.OK))
+            eventModelSelectorComboBox.Items.Add("Nuovo Modello...");
+            populateEventModelSelectorComboBox();
+        }
+
+        private void populateEventModelSelectorComboBox()
+        {
+            foreach (Model.ModelloEvento _modello in Model.Agenda.Instance.ModelliEvento)
             {
-                eventModelSelectorComboBox.Refresh();
+                if (!eventModelSelectorComboBox.Items.Contains(_modello.Nome))
+                {
+                    eventModelSelectorComboBox.Items.Add(_modello.Nome);
+                }
             }
+        }
+
+        private void periodicityCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (periodicityCheckBox.Checked == true)
+            {
+                periodicityRadioButtonsPanel.Enabled = true;
+            }
+            else periodicityRadioButtonsPanel.Enabled = false;
         }
     }
 }

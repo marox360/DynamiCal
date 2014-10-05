@@ -49,10 +49,10 @@
             this.creaNuovoCalendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modelloEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creaModelloEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rightSidePanel = new System.Windows.Forms.Panel();
-            this.noEventsLabel = new System.Windows.Forms.Label();
             this.eventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creaEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rightSidePanel = new System.Windows.Forms.Panel();
+            this.noEventsLabel = new System.Windows.Forms.Label();
             this.lunedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.martedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
             this.mercoledìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
@@ -276,6 +276,21 @@
             this.creaModelloEventoToolStripMenuItem.Text = "Crea nuovo modello evento";
             this.creaModelloEventoToolStripMenuItem.Click += new System.EventHandler(this.creaModelloEventoToolStripMenuItem_Click);
             // 
+            // eventoToolStripMenuItem
+            // 
+            this.eventoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.creaEventoToolStripMenuItem});
+            this.eventoToolStripMenuItem.Name = "eventoToolStripMenuItem";
+            this.eventoToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.eventoToolStripMenuItem.Text = "Evento";
+            // 
+            // creaEventoToolStripMenuItem
+            // 
+            this.creaEventoToolStripMenuItem.Name = "creaEventoToolStripMenuItem";
+            this.creaEventoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.creaEventoToolStripMenuItem.Text = "Crea Evento";
+            this.creaEventoToolStripMenuItem.Click += new System.EventHandler(this.creaEventoToolStripMenuItem_Click);
+            // 
             // rightSidePanel
             // 
             this.rightSidePanel.Controls.Add(this.noEventsLabel);
@@ -298,21 +313,6 @@
             this.noEventsLabel.TabIndex = 0;
             this.noEventsLabel.Text = "Nessun evento";
             this.noEventsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // eventoToolStripMenuItem
-            // 
-            this.eventoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.creaEventoToolStripMenuItem});
-            this.eventoToolStripMenuItem.Name = "eventoToolStripMenuItem";
-            this.eventoToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
-            this.eventoToolStripMenuItem.Text = "Evento";
-            // 
-            // creaEventoToolStripMenuItem
-            // 
-            this.creaEventoToolStripMenuItem.Name = "creaEventoToolStripMenuItem";
-            this.creaEventoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.creaEventoToolStripMenuItem.Text = "Crea Evento";
-            this.creaEventoToolStripMenuItem.Click += new System.EventHandler(this.creaEventoToolStripMenuItem_Click);
             // 
             // lunedìDataGridViewColumn
             // 
