@@ -59,23 +59,21 @@ namespace DynamiCal.DataGridView
 
             if (dayValue.IsTodayWeek())
             {
-                using (Pen pen = new Pen(dayValue.Date.IsToday() ? TodayColor : ThisWeekColor, 2))
+                using (Pen pen = new Pen(ThisWeekColor, 2))
                 {
-                    Rectangle bounds = dayValue.Date.DayOfWeek == DayOfWeek.Monday || dayValue.Date.IsToday() ? borderCellBounds : cellBounds;
+                    int y = cellBounds.Top + (int)pen.Width / 2;
 
-                    int y = bounds.Top + (int)pen.Width/2;
-                    int width = bounds.Width + (leftMargin ? 0 : cellMargin);
+                    graphics.DrawLine(pen, cellBounds.Left, y, cellBounds.Left + cellBounds.Width, y);
+                }
 
-                    if (dayValue.Date.DayOfWeek != DayOfWeek.Monday && dayValue.Date.IsToday())
+                if (dayValue.Date.IsToday())
+                {
+                    using (Pen pen = new Pen(TodayColor, 2))
                     {
-                        using (Pen backPen = new Pen(ThisWeekColor, pen.Width))
-                        {
-                            graphics.DrawLine(backPen, new Point(cellBounds.Left, y), new Point(cellBounds.Left + cellBounds.Width, y));
-                        }
+                        int y = borderCellBounds.Top + (int)pen.Width / 2;
 
+                        graphics.DrawLine(pen, borderCellBounds.Left, y, borderCellBounds.Left + borderCellBounds.Width, y);
                     }
-
-                    graphics.DrawLine(pen, new Point(bounds.Left, y), new Point(bounds.Left + width, y));
                 }
             }
             else
@@ -86,7 +84,7 @@ namespace DynamiCal.DataGridView
                     int y = borderCellBounds.Top;
                     int width = borderCellBounds.Width - (int)pen.Width;
 
-                    graphics.DrawLine(pen, new Point(x, y), new Point(x + width, y));
+                    graphics.DrawLine(pen, x, y, x + width, y);
                 }
             }
         }
