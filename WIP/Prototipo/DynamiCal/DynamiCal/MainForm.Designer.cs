@@ -90,7 +90,6 @@
             // calendarTreeView
             // 
             this.calendarTreeView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.calendarTreeView.CheckBoxes = true;
             this.calendarTreeView.Cursor = System.Windows.Forms.Cursors.Default;
             this.calendarTreeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendarTreeView.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;

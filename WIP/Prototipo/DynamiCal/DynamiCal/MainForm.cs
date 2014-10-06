@@ -170,44 +170,13 @@ namespace DynamiCal
 
         private void calendarTreeView_DrawNode(object sender, DrawTreeNodeEventArgs e)
         {
+            e.DrawDefault = false;
             e.Node.BackColor = Color.White;
             e.Node.ForeColor = Color.Black;
 
             if (e.Node is CalendarTreeNode)
             {
-                CalendarTreeNode calendarNode = e.Node as CalendarTreeNode;
-
-                Rectangle bounds = calendarNode.Bounds;
-                bounds.X = 0;
-                bounds.Width += 20;
-                int textOffset = 14;
-
-                using (SolidBrush brush = new SolidBrush(calendarNode.BackColor))
-                {
-                    e.Graphics.FillRectangle(brush, bounds);
-                }
-
-                using (SolidBrush brush = new SolidBrush(calendarNode.CalendarColor))
-                {
-                    int circleRadius = 6;
-                    Rectangle circleBounds = new Rectangle(bounds.X + textOffset - circleRadius, bounds.Y + bounds.Height / 2 - circleRadius, circleRadius * 2, circleRadius * 2);
-                    SmoothingMode smoothingMode = e.Graphics.SmoothingMode;
-                    e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-                    e.Graphics.FillEllipse(brush, circleBounds);
-                    e.Graphics.SmoothingMode = smoothingMode;
-
-                    if (calendarNode.Checked)
-                    {
-                        circleBounds.Offset(1, 0);
-                        TextRenderer.DrawText(e.Graphics, "✔", new Font(calendarTreeView.Font.FontFamily, circleRadius), circleBounds, Color.White, Color.Transparent);
-                    }
-                }
-
-                bounds.Offset(textOffset, 0);
-                TextFormatFlags flags = TextFormatFlags.Default | TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter;
-                TextRenderer.DrawText(e.Graphics, calendarNode.Text, calendarTreeView.Font, bounds, calendarNode.ForeColor, calendarNode.BackColor, flags);
-
-                e.DrawDefault = false;
+                (e.Node as CalendarTreeNode).DrawNode(e.Graphics, calendarTreeView.Font, 14, 6);
             }
             else
             {
@@ -221,10 +190,9 @@ namespace DynamiCal
                 }
 
                 TextRenderer.DrawText(e.Graphics, e.Node.Text, new Font(calendarTreeView.Font, FontStyle.Bold), bounds, e.Node.ForeColor, e.Node.BackColor);
-
-                e.DrawDefault = false;
             }
         }
+
         private void calendarTreeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             if (e.Node is CalendarTreeNode && e.Button == MouseButtons.Right)
