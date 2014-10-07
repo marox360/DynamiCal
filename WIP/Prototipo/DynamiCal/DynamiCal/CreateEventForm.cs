@@ -20,12 +20,19 @@ namespace DynamiCal
 
         private void CreateEventForm_Load(object sender, EventArgs e)
         {
+            voceContainerBindingSource.Add(new VoceContainer(new Voce("stringa", TipoVoce.Stringa)));
+            voceContainerBindingSource.Add(new VoceContainer(new Voce("boolean", TipoVoce.Boolean)));
+            voceContainerBindingSource.Add(new VoceContainer(new Voce("numero", TipoVoce.Double)));
+            voceContainerBindingSource.Add(new VoceContainer(new Voce("data", TipoVoce.Data)));
+
+            durationComboBox.SelectedIndex = 0;
+
             eventModelSelectorComboBox.BeginUpdate();
-            eventModelContainerBindingSource.Add(new EventModelContainer("Nuovo Modello..."));
+            modelloEventoContainerBindingSource.Add(new ModelloEventoContainer("Nuovo Modello..."));
             foreach (ModelloEvento modello in Agenda.Instance.ModelliEvento)
             {
-                EventModelContainer eventModelContainer = new EventModelContainer(modello);
-                eventModelContainerBindingSource.Add(new EventModelContainer(modello));
+                ModelloEventoContainer eventModelContainer = new ModelloEventoContainer(modello);
+                modelloEventoContainerBindingSource.Add(new ModelloEventoContainer(modello));
 
                 if (modello.Voci.Count == 0)
                 {
@@ -58,17 +65,17 @@ namespace DynamiCal
 
         private void EventModelsChanged(object sender, AgendaCollectionEventArgs e)
         {
-            EventModelContainer eventModelContainer = new EventModelContainer(e.Item as ModelloEvento);
+            ModelloEventoContainer eventModelContainer = new ModelloEventoContainer(e.Item as ModelloEvento);
 
             switch (e.Action)
             {
                 case AgendaCollectionEventArgs.EditAction.AddItem:
-                    eventModelContainerBindingSource.Add(eventModelContainer);
+                    modelloEventoContainerBindingSource.Add(eventModelContainer);
                     eventModelSelectorComboBox.SelectedItem = eventModelContainer;
                     break;
 
                 case AgendaCollectionEventArgs.EditAction.RemoveItem:
-                    eventModelContainerBindingSource.Remove(eventModelContainer);
+                    modelloEventoContainerBindingSource.Remove(eventModelContainer);
                     break;
             }
         }
@@ -109,7 +116,8 @@ namespace DynamiCal
         {
             if (eventModelSelectorComboBox.SelectedItem != null)
             {
-                if ((eventModelSelectorComboBox.SelectedItem as EventModelContainer).EventModel == null)
+                ModelloEvento modelloEvento = (eventModelSelectorComboBox.SelectedItem as ModelloEventoContainer).EventModel;
+                if (modelloEvento == null)
                 {
                     this.Visible = false;
 
@@ -121,7 +129,11 @@ namespace DynamiCal
                 }
                 else
                 {
-                    entriesDataGridView.Enabled = true;
+                    /*voceBindingSource.Clear();
+                    foreach (Voce voce in modelloEvento.Voci)
+                    {
+                        voceBindingSource.Add(VoceFactory.GetImplementedVoce(voce));
+                    }*/
                     //entriesDataGridView.Columns.Add(Model.Agenda.Instance.ModelliEvento.Last().Voci);
                     //entriesDataGridView.Columns.Add(Model.Agenda.Instance.ModelliEvento.Where(modello => modello.Voci).First());
                 }
@@ -144,18 +156,39 @@ namespace DynamiCal
         {
             periodicityRadioButtonsPanel.Enabled = periodicityCheckBox.Checked;
         }
+
+        private void entriesDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 1)
+            {
+                if ((voceContainerBindingSource[e.RowIndex] as VoceContainer).Valore is Voce<bool>)
+                {
+                    Voce<bool> voce = (voceContainerBindingSource[e.RowIndex] as VoceContainer).Valore as Voce<bool>;
+                    voce.Valore = !voce.Valore;
+                    entriesDataGridView.Refresh();
+                }
+            }
+        }
+
+        private void entriesDataGridView_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (entriesDataGridView.SelectedRows.Count > 0)
+            {
+                Voce voce = (voceContainerBindingSource[entriesDataGridView.SelectedRows[0].Index] as VoceContainer).Valore;
+            }
+        }
     }
 
-    internal class EventModelContainer : IEquatable<EventModelContainer>, IComparable<EventModelContainer>
+    internal class ModelloEventoContainer : IEquatable<ModelloEventoContainer>, IComparable<ModelloEventoContainer>
     {
         private object _object;
 
-        public EventModelContainer(ModelloEvento modelloEvento)
+        public ModelloEventoContainer(ModelloEvento modelloEvento)
         {
             _object = modelloEvento;
         }
 
-        public EventModelContainer(string text)
+        public ModelloEventoContainer(string text)
         {
             _object = text;
         }
@@ -186,7 +219,7 @@ namespace DynamiCal
             }
         }
 
-        public bool Equals(EventModelContainer other)
+        public bool Equals(ModelloEventoContainer other)
         {
             if (ReferenceEquals(null, other))
                 return false;
@@ -207,7 +240,7 @@ namespace DynamiCal
                 return true;
             if (obj.GetType() != this.GetType())
                 return false;
-            return Equals((EventModelContainer)obj);
+            return Equals((ModelloEventoContainer)obj);
         }
 
         public override int GetHashCode()
@@ -218,7 +251,7 @@ namespace DynamiCal
             }
         }
 
-        public int CompareTo(EventModelContainer other)
+        public int CompareTo(ModelloEventoContainer other)
         {
             if (this._object.GetType() != other._object.GetType())
             {
@@ -227,5 +260,18 @@ namespace DynamiCal
 
             return this.DisplayValue.CompareTo(other.DisplayValue);
         }
+    }
+
+    internal class VoceContainer
+    {
+        public VoceContainer(Voce voce)
+        {
+            this.Nome = voce.Nome;
+            this.Valore = VoceFactory.GetImplementedVoce(voce);
+        }
+
+        public string Nome { get; private set; }
+
+        public Voce Valore { get; private set; }
     }
 }

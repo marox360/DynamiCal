@@ -71,6 +71,8 @@
     <Compile Include="DataGridView\DataGridViewDayCell.cs" />
     <Compile Include="DataGridView\DataGridViewDayColumn.cs" />
     <Compile Include="DataGridView\BindingSources\MonthlySource.cs" />
+    <Compile Include="DataGridView\DataGridViewVoceCell.cs" />
+    <Compile Include="DataGridView\DataGridViewVoceColumn.cs" />
     <Compile Include="Extension\DateTimeExtension.cs" />
     <Compile Include="Filters\CriterioDiFiltraggio.cs" />
     <Compile Include="Model\Agenda.cs" />
@@ -89,11 +91,7 @@
     <Compile Include="Model\Periodicita.cs" />
     <Compile Include="Model\TipoVoce.cs" />
     <Compile Include="Model\Voce.cs" />
-    <Compile Include="Model\VociImpl\VoceBoolean.cs" />
-    <Compile Include="Model\VociImpl\VoceData.cs" />
-    <Compile Include="Model\VociImpl\VoceDouble.cs" />
-    <Compile Include="Model\VociImpl\VoceFactory.cs" />
-    <Compile Include="Model\VociImpl\VoceStringa.cs" />
+    <Compile Include="Model\VoceFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TreeView\CalendarTreeNode.cs" />
@@ -125,7 +123,8 @@
     <None Include="Properties\DataSources\DynamiCal.Model.ModelloEvento.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.TipoVoce.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Voce.datasource" />
-    <None Include="Properties\DataSources\EventModelContainer.datasource" />
+    <None Include="Properties\DataSources\ModelloEventoContainer.datasource" />
+    <None Include="Properties\DataSources\VoceContainer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,9 +134,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\plus-icon1.png" />

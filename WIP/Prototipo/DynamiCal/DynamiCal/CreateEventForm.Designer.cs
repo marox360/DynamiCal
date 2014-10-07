@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.calendarSelectorComboBox = new System.Windows.Forms.ComboBox();
+            this.calendarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.createButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,8 +43,11 @@
             this.durationUpDown = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.entriesDataGridView = new System.Windows.Forms.DataGridView();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valoreDataGridViewTextBoxColumn = new DynamiCal.DataGridView.DataGridViewVoceColumn();
+            this.voceContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventModelSelectorComboBox = new System.Windows.Forms.ComboBox();
-            this.eventModelContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.modelloEventoContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.eventDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -53,12 +57,12 @@
             this.monthPeriodicRadioButton = new System.Windows.Forms.RadioButton();
             this.yearPeriodicRadioButton = new System.Windows.Forms.RadioButton();
             this.periodicityRadioButtonsPanel = new System.Windows.Forms.Panel();
-            this.calendarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventModelContainerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voceContainerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).BeginInit();
             this.periodicityRadioButtonsPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -81,6 +85,10 @@
             this.calendarSelectorComboBox.Size = new System.Drawing.Size(149, 21);
             this.calendarSelectorComboBox.TabIndex = 1;
             this.calendarSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.validateForm);
+            // 
+            // calendarioBindingSource
+            // 
+            this.calendarioBindingSource.DataSource = typeof(DynamiCal.Model.Calendario);
             // 
             // createButton
             // 
@@ -132,6 +140,7 @@
             // 
             // durationComboBox
             // 
+            this.durationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.durationComboBox.FormattingEnabled = true;
             this.durationComboBox.Items.AddRange(new object[] {
             "Minuti",
@@ -141,7 +150,6 @@
             this.durationComboBox.Name = "durationComboBox";
             this.durationComboBox.Size = new System.Drawing.Size(121, 21);
             this.durationComboBox.TabIndex = 8;
-            this.durationComboBox.Text = "Ore/Minuti/Giorni";
             this.durationComboBox.SelectedIndexChanged += new System.EventHandler(this.validateForm);
             // 
             // eventDateTimePicker
@@ -200,16 +208,49 @@
             this.entriesDataGridView.AllowUserToDeleteRows = false;
             this.entriesDataGridView.AllowUserToResizeColumns = false;
             this.entriesDataGridView.AllowUserToResizeRows = false;
-            this.entriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.entriesDataGridView.Enabled = false;
+            this.entriesDataGridView.AutoGenerateColumns = false;
+            this.entriesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.entriesDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.entriesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.entriesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.entriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.entriesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nomeDataGridViewTextBoxColumn,
+            this.valoreDataGridViewTextBoxColumn});
+            this.entriesDataGridView.DataSource = this.voceContainerBindingSource;
             this.entriesDataGridView.Location = new System.Drawing.Point(24, 457);
+            this.entriesDataGridView.MultiSelect = false;
             this.entriesDataGridView.Name = "entriesDataGridView";
+            this.entriesDataGridView.RowHeadersVisible = false;
+            this.entriesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.entriesDataGridView.Size = new System.Drawing.Size(316, 150);
             this.entriesDataGridView.TabIndex = 14;
+            this.entriesDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.entriesDataGridView_CellDoubleClick);
+            this.entriesDataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entriesDataGridView_KeyPress);
+            // 
+            // nomeDataGridViewTextBoxColumn
+            // 
+            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
+            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
+            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // valoreDataGridViewTextBoxColumn
+            // 
+            this.valoreDataGridViewTextBoxColumn.DataPropertyName = "Valore";
+            this.valoreDataGridViewTextBoxColumn.HeaderText = "Valore";
+            this.valoreDataGridViewTextBoxColumn.Name = "valoreDataGridViewTextBoxColumn";
+            this.valoreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.valoreDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.valoreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // voceContainerBindingSource
+            // 
+            this.voceContainerBindingSource.DataSource = typeof(DynamiCal.VoceContainer);
             // 
             // eventModelSelectorComboBox
             // 
-            this.eventModelSelectorComboBox.DataSource = this.eventModelContainerBindingSource;
+            this.eventModelSelectorComboBox.DataSource = this.modelloEventoContainerBindingSource;
             this.eventModelSelectorComboBox.DisplayMember = "DisplayValue";
             this.eventModelSelectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.eventModelSelectorComboBox.Location = new System.Drawing.Point(190, 410);
@@ -219,9 +260,9 @@
             this.eventModelSelectorComboBox.ValueMember = "EventModel";
             this.eventModelSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.eventModelSelectorComboBox_SelectedIndexChanged);
             // 
-            // eventModelContainerBindingSource
+            // modelloEventoContainerBindingSource
             // 
-            this.eventModelContainerBindingSource.DataSource = typeof(DynamiCal.EventModelContainer);
+            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.ModelloEventoContainer);
             // 
             // label5
             // 
@@ -317,10 +358,6 @@
             this.periodicityRadioButtonsPanel.Size = new System.Drawing.Size(119, 100);
             this.periodicityRadioButtonsPanel.TabIndex = 25;
             // 
-            // calendarioBindingSource
-            // 
-            this.calendarioBindingSource.DataSource = typeof(DynamiCal.Model.Calendario);
-            // 
             // CreateEventForm
             // 
             this.AcceptButton = this.createButton;
@@ -348,16 +385,18 @@
             this.Controls.Add(this.calendarSelectorComboBox);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "CreateEventForm";
             this.Text = "Aggiungi Evento ad un Calendario";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateEventForm_FormClosing);
             this.Load += new System.EventHandler(this.CreateEventForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventModelContainerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.voceContainerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).EndInit();
             this.periodicityRadioButtonsPanel.ResumeLayout(false);
             this.periodicityRadioButtonsPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,7 +427,10 @@
         private System.Windows.Forms.RadioButton monthPeriodicRadioButton;
         private System.Windows.Forms.RadioButton yearPeriodicRadioButton;
         private System.Windows.Forms.Panel periodicityRadioButtonsPanel;
-        private System.Windows.Forms.BindingSource eventModelContainerBindingSource;
         private System.Windows.Forms.BindingSource calendarioBindingSource;
+        private System.Windows.Forms.BindingSource modelloEventoContainerBindingSource;
+        private System.Windows.Forms.BindingSource voceContainerBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private DataGridView.DataGridViewVoceColumn valoreDataGridViewTextBoxColumn;
     }
 }

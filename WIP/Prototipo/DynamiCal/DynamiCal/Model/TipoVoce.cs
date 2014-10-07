@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace DynamiCal.Model
 {
-    class TipoVoce
+    class TipoVoce : IEquatable<TipoVoce>
     {
         public enum Tipo
         {
@@ -91,6 +91,34 @@ namespace DynamiCal.Model
             DescriptionAttribute attribute = Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute)) as DescriptionAttribute;
 
             return attribute == null ? value.ToString() : attribute.Description;
+        }
+
+        public bool Equals(TipoVoce other)
+        {
+            if (ReferenceEquals(null, other))
+                return false;
+            if (ReferenceEquals(this, other))
+                return true;
+            return this.TipoDiVoce == other.TipoDiVoce;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj))
+                return false;
+            if (ReferenceEquals(this, obj))
+                return true;
+            if (obj.GetType() != this.GetType())
+                return false;
+            return Equals((TipoVoce)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (this.TipoDiVoce.GetHashCode() * 397);
+            }
         }
     }
 }

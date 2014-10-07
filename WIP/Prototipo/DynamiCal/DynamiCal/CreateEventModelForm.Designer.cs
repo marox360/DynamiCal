@@ -225,6 +225,7 @@
             this.Controls.Add(this.createButton);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "CreateEventModelForm";
             this.Text = "Crea nuovo modello evento";
             this.eventModelGroup.ResumeLayout(false);
