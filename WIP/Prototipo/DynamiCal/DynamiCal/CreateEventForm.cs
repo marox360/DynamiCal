@@ -20,10 +20,12 @@ namespace DynamiCal
 
         private void CreateEventForm_Load(object sender, EventArgs e)
         {
-            voceContainerBindingSource.Add(new VoceContainer(new Voce("stringa", TipoVoce.Stringa)));
-            voceContainerBindingSource.Add(new VoceContainer(new Voce("boolean", TipoVoce.Boolean)));
-            voceContainerBindingSource.Add(new VoceContainer(new Voce("numero", TipoVoce.Double)));
-            voceContainerBindingSource.Add(new VoceContainer(new Voce("data", TipoVoce.Data)));
+            List<IVoce> voceContainerBindingSource = new List<IVoce>();
+            voceContainerBindingSource.Add(VoceFactory.GetImplementedVoce(new Voce("stringa", TipoVoce.Stringa)));
+            voceContainerBindingSource.Add(VoceFactory.GetImplementedVoce(new Voce("boolean", TipoVoce.Boolean)));
+            voceContainerBindingSource.Add(VoceFactory.GetImplementedVoce(new Voce("numero", TipoVoce.Double)));
+            voceContainerBindingSource.Add(VoceFactory.GetImplementedVoce(new Voce("data", TipoVoce.Data)));
+            entriesDataGridView.DataSource = voceContainerBindingSource;
 
             durationComboBox.SelectedIndex = 0;
 
@@ -159,7 +161,7 @@ namespace DynamiCal
 
         private void entriesDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 1)
+            /*if (e.ColumnIndex == 1)
             {
                 if ((voceContainerBindingSource[e.RowIndex] as VoceContainer).Valore is Voce<bool>)
                 {
@@ -167,15 +169,15 @@ namespace DynamiCal
                     voce.Valore = !voce.Valore;
                     entriesDataGridView.Refresh();
                 }
-            }
+            }*/
         }
 
         private void entriesDataGridView_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (entriesDataGridView.SelectedRows.Count > 0)
+            /*if (entriesDataGridView.SelectedRows.Count > 0)
             {
                 Voce voce = (voceContainerBindingSource[entriesDataGridView.SelectedRows[0].Index] as VoceContainer).Valore;
-            }
+            }*/
         }
     }
 
@@ -260,18 +262,5 @@ namespace DynamiCal
 
             return this.DisplayValue.CompareTo(other.DisplayValue);
         }
-    }
-
-    internal class VoceContainer
-    {
-        public VoceContainer(Voce voce)
-        {
-            this.Nome = voce.Nome;
-            this.Valore = VoceFactory.GetImplementedVoce(voce);
-        }
-
-        public string Nome { get; private set; }
-
-        public Voce Valore { get; private set; }
     }
 }

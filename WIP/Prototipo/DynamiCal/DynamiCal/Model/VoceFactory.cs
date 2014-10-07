@@ -8,21 +8,21 @@ namespace DynamiCal.Model
 {
     static class VoceFactory
     {
-        public static Voce GetImplementedVoce(Voce voce)
+        public static IVoce GetImplementedVoce(Voce voce)
         {
             switch (voce.Tipo.TipoDiVoce)
             {
                 case TipoVoce.Tipo.Stringa:
-                    return new Voce<string>(voce.Nome, voce.Tipo);
+                    return new Voce<string>(voce.Nome);
 
                 case TipoVoce.Tipo.Double:
-                    return new Voce<double>(voce.Nome, voce.Tipo);
+                    return new Voce<double>(voce.Nome);
 
                 case TipoVoce.Tipo.Boolean:
-                    return new Voce<bool>(voce.Nome, voce.Tipo);
+                    return new Voce<bool>(voce.Nome);
 
                 case TipoVoce.Tipo.Data:
-                    return new Voce<DateTime>(voce.Nome, voce.Tipo);
+                    return new Voce<DateTime>(voce.Nome);
 
                 default:
                     return null;

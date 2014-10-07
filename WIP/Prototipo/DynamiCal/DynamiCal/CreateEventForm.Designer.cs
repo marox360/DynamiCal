@@ -43,9 +43,6 @@
             this.durationUpDown = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.entriesDataGridView = new System.Windows.Forms.DataGridView();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valoreDataGridViewTextBoxColumn = new DynamiCal.DataGridView.DataGridViewVoceColumn();
-            this.voceContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventModelSelectorComboBox = new System.Windows.Forms.ComboBox();
             this.modelloEventoContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
@@ -60,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.voceContainerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).BeginInit();
             this.periodicityRadioButtonsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -208,16 +204,11 @@
             this.entriesDataGridView.AllowUserToDeleteRows = false;
             this.entriesDataGridView.AllowUserToResizeColumns = false;
             this.entriesDataGridView.AllowUserToResizeRows = false;
-            this.entriesDataGridView.AutoGenerateColumns = false;
             this.entriesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.entriesDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             this.entriesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.entriesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.entriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.entriesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nomeDataGridViewTextBoxColumn,
-            this.valoreDataGridViewTextBoxColumn});
-            this.entriesDataGridView.DataSource = this.voceContainerBindingSource;
             this.entriesDataGridView.Location = new System.Drawing.Point(24, 457);
             this.entriesDataGridView.MultiSelect = false;
             this.entriesDataGridView.Name = "entriesDataGridView";
@@ -227,26 +218,6 @@
             this.entriesDataGridView.TabIndex = 14;
             this.entriesDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.entriesDataGridView_CellDoubleClick);
             this.entriesDataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entriesDataGridView_KeyPress);
-            // 
-            // nomeDataGridViewTextBoxColumn
-            // 
-            this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
-            this.nomeDataGridViewTextBoxColumn.HeaderText = "Nome";
-            this.nomeDataGridViewTextBoxColumn.Name = "nomeDataGridViewTextBoxColumn";
-            this.nomeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // valoreDataGridViewTextBoxColumn
-            // 
-            this.valoreDataGridViewTextBoxColumn.DataPropertyName = "Valore";
-            this.valoreDataGridViewTextBoxColumn.HeaderText = "Valore";
-            this.valoreDataGridViewTextBoxColumn.Name = "valoreDataGridViewTextBoxColumn";
-            this.valoreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.valoreDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.valoreDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // voceContainerBindingSource
-            // 
-            this.voceContainerBindingSource.DataSource = typeof(DynamiCal.VoceContainer);
             // 
             // eventModelSelectorComboBox
             // 
@@ -393,7 +364,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.voceContainerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).EndInit();
             this.periodicityRadioButtonsPanel.ResumeLayout(false);
             this.periodicityRadioButtonsPanel.PerformLayout();
@@ -429,8 +399,5 @@
         private System.Windows.Forms.Panel periodicityRadioButtonsPanel;
         private System.Windows.Forms.BindingSource calendarioBindingSource;
         private System.Windows.Forms.BindingSource modelloEventoContainerBindingSource;
-        private System.Windows.Forms.BindingSource voceContainerBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private DataGridView.DataGridViewVoceColumn valoreDataGridViewTextBoxColumn;
     }
 }

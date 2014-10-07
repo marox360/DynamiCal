@@ -25,15 +25,44 @@ namespace DynamiCal.Model
         public TipoVoce Tipo { get; private set; }
     }
 
-    class Voce<T> : Voce
+    interface IVoce
     {
-        public Voce(string nome, TipoVoce tipo) : this(nome, tipo, default(T)) { }
+        string Nome { get; set; }
 
-        public Voce(string nome, TipoVoce tipo, T valore) : base(nome, tipo)
+        object Valore { get; set; }
+    }
+
+    class Voce<T> : IVoce
+    {
+        public Voce(string nome) : this(nome, default(T)) { }
+
+        public Voce(string nome, T valore)
         {
+            #region Precondizioni
+            Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or white space");
+            #endregion
+
             this.Valore = valore;
+            this.Nome = nome;
         }
 
+        public string Nome { get; set; }
+
         public T Valore { get; set; }
+
+        object IVoce.Valore
+        {
+            get
+            {
+                return this.Valore;
+            }
+            set
+            {
+                if (value is T)
+                {
+                    this.Valore = (T)value;
+                }
+            }
+        }
     }
 }

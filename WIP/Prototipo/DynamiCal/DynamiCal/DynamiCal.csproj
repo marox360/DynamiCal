@@ -124,7 +124,6 @@
     <None Include="Properties\DataSources\DynamiCal.Model.TipoVoce.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Voce.datasource" />
     <None Include="Properties\DataSources\ModelloEventoContainer.datasource" />
-    <None Include="Properties\DataSources\VoceContainer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
