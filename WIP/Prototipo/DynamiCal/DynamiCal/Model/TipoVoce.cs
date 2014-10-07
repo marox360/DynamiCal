@@ -22,26 +22,50 @@ namespace DynamiCal.Model
             Data
         };
 
-        private Tipo _tipoDiVoce;
-
         public TipoVoce(Tipo tipoDiVoce)
         {
-            _tipoDiVoce = tipoDiVoce;
+            this.TipoDiVoce = tipoDiVoce;
         }
 
-        public Tipo TipoDiVoce
+        public static TipoVoce Stringa
         {
             get
             {
-                return _tipoDiVoce;
+                return new TipoVoce(Tipo.Stringa);
             }
         }
+
+        public static TipoVoce Double
+        {
+            get
+            {
+                return new TipoVoce(Tipo.Double);
+            }
+        }
+
+        public static TipoVoce Boolean
+        {
+            get
+            {
+                return new TipoVoce(Tipo.Boolean);
+            }
+        }
+
+        public static TipoVoce Data
+        {
+            get
+            {
+                return new TipoVoce(Tipo.Data);
+            }
+        }
+
+        public Tipo TipoDiVoce { get; private set; }
 
         public string Descrizione
         {
             get
             {
-                return this.GetEnumDescription((Tipo)_tipoDiVoce);
+                return this.GetEnumDescription(this.TipoDiVoce);
             }
         }
 

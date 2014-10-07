@@ -9,9 +9,6 @@ namespace DynamiCal.Model
 {
     class Voce
     {
-        private string _nome;
-        private TipoVoce _tipo;
-
         public Voce(string nome, TipoVoce tipo) 
         {
             #region Precondizioni
@@ -19,24 +16,24 @@ namespace DynamiCal.Model
             Debug.Assert(tipo != null, "Tipo is null");
             #endregion
 
-            _nome = nome.Trim();
-            _tipo = tipo;
+            this.Nome = nome.Trim();
+            this.Tipo = tipo;
         }
 
-        public string Nome
+        public string Nome { get; private set; }
+
+        public TipoVoce Tipo { get; private set; }
+    }
+
+    class Voce<T> : Voce
+    {
+        public Voce(string nome, TipoVoce tipo) : this(nome, tipo, default(T)) { }
+
+        public Voce(string nome, TipoVoce tipo, T valore) : base(nome, tipo)
         {
-            get
-            {
-                return _nome;
-            }
+            this.Valore = valore;
         }
 
-        public TipoVoce Tipo
-        {
-            get
-            {
-                return _tipo;
-            }
-        }
+        public T Valore { get; set; }
     }
 }
