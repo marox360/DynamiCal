@@ -30,51 +30,34 @@ namespace DynamiCal
                 durationComboBox.Enabled = true;
                 durationUpDown.Enabled = true;
             }
-            OKButtonEnableCheck();
+
+            validateForm();
         }
 
-        private void eventNameTextBox_TextChanged(object sender, EventArgs e)
+        private void validateForm(object sender, EventArgs e)
         {
-            OKButtonEnableCheck();
+            validateForm();
         }
 
-        private void OKButtonEnableCheck()
+        private void validateForm()
         {
-            if (eventNameTextBox.Text != ""
-                && (durationComboBox.SelectedValue != null || allDayCheckBox.Checked == true))
-                //&& controllo valori delle singole voci inseriti e corretti)
-            {
-                okButton.Enabled = true;
-            }
-            else okButton.Enabled = false;
-        }
-
-        private void durationUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            OKButtonEnableCheck();
-        }
-
-        private void durationComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            OKButtonEnableCheck();
-        }
-
-        private void calendarSelectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            OKButtonEnableCheck();
+            createButton.Enabled = !String.IsNullOrWhiteSpace(eventNameTextBox.Text) && (durationComboBox.SelectedValue != null || allDayCheckBox.Checked == true);
         }
 
         private void eventModelSelectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (eventModelSelectorComboBox.SelectedItem.ToString().Equals("Nuovo Modello..."))
             {
-                CreateEventModelForm createEventModelDialog = new CreateEventModelForm();
                 this.Visible = false;
+
+                CreateEventModelForm createEventModelDialog = new CreateEventModelForm();
                 if (createEventModelDialog.ShowDialog(this).Equals(DialogResult.OK))
                 {
                     Agenda.Instance.AggiungiModelloEvento(createEventModelDialog.GetModelloEvento());
                     populateEventModelSelectorComboBox();
                 }
+                createEventModelDialog.Dispose();
+
                 this.Visible = true;
             }
             else
@@ -83,7 +66,8 @@ namespace DynamiCal
                 //entriesDataGridView.Columns.Add(Model.Agenda.Instance.ModelliEvento.Last().Voci);
                 //entriesDataGridView.Columns.Add(Model.Agenda.Instance.ModelliEvento.Where(modello => modello.Voci).First());
             }
-            OKButtonEnableCheck();
+
+            validateForm();
         }
         private void cancelButton_Click(object sender, EventArgs e)
         {
@@ -114,11 +98,7 @@ namespace DynamiCal
 
         private void periodicityCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (periodicityCheckBox.Checked == true)
-            {
-                periodicityRadioButtonsPanel.Enabled = true;
-            }
-            else periodicityRadioButtonsPanel.Enabled = false;
+            periodicityRadioButtonsPanel.Enabled = periodicityCheckBox.Checked;
         }
     }
 }
