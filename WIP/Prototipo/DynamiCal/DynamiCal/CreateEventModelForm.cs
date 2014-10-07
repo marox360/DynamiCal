@@ -29,6 +29,8 @@ namespace DynamiCal
 
         private void createButton_Click(object sender, EventArgs e)
         {
+            Agenda.Instance.AggiungiModelloEvento(this.GetModelloEvento());
+
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
@@ -54,7 +56,7 @@ namespace DynamiCal
             this.entryNameTextBox.Text = "";
         }
 
-        internal ModelloEvento GetModelloEvento()
+        private ModelloEvento GetModelloEvento()
         {
             ModelloEvento modelloEvento = new ModelloEvento(this.modelNameTextBox.Text, this.voceBindingSource.List as List<Voce>);
 

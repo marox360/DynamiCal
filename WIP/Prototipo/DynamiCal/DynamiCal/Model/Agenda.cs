@@ -78,10 +78,10 @@ namespace DynamiCal.Model
 
             _modelliEvento.Add(modelloEvento);
 
-            OnCalendarsChanged(new AgendaCollectionEventArgs(modelloEvento, AgendaCollectionEventArgs.EditAction.AddItem));
+            OnEventModelsChanged(new AgendaCollectionEventArgs(modelloEvento, AgendaCollectionEventArgs.EditAction.AddItem));
         }
 
-        public void RimuoviModello(ModelloEvento modelloEvento)
+        public void RimuoviModelloEvento(ModelloEvento modelloEvento)
         {
             #region Precondizioni
             Debug.Assert(modelloEvento != null, "ModelloEvento cannot be null");
@@ -89,7 +89,7 @@ namespace DynamiCal.Model
 
             if (_modelliEvento.Remove(modelloEvento))
             {
-                OnCalendarsChanged(new AgendaCollectionEventArgs(modelloEvento, AgendaCollectionEventArgs.EditAction.RemoveItem));
+                OnEventModelsChanged(new AgendaCollectionEventArgs(modelloEvento, AgendaCollectionEventArgs.EditAction.RemoveItem));
             }
         }
 

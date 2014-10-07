@@ -121,9 +121,11 @@
     </Compile>
     <None Include="Properties\DataSources\DynamiCal.DataGridView.BindingSources.Week.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Agenda.datasource" />
+    <None Include="Properties\DataSources\DynamiCal.Model.Calendario.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.ModelloEvento.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.TipoVoce.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Voce.datasource" />
+    <None Include="Properties\DataSources\EventModelContainer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.calendarSelectorComboBox = new System.Windows.Forms.ComboBox();
             this.createButton = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.entriesDataGridView = new System.Windows.Forms.DataGridView();
             this.eventModelSelectorComboBox = new System.Windows.Forms.ComboBox();
+            this.eventModelContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.eventDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,9 +53,12 @@
             this.monthPeriodicRadioButton = new System.Windows.Forms.RadioButton();
             this.yearPeriodicRadioButton = new System.Windows.Forms.RadioButton();
             this.periodicityRadioButtonsPanel = new System.Windows.Forms.Panel();
+            this.calendarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventModelContainerBindingSource)).BeginInit();
             this.periodicityRadioButtonsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -67,6 +72,9 @@
             // 
             // calendarSelectorComboBox
             // 
+            this.calendarSelectorComboBox.DataSource = this.calendarioBindingSource;
+            this.calendarSelectorComboBox.DisplayMember = "Nome";
+            this.calendarSelectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.calendarSelectorComboBox.FormattingEnabled = true;
             this.calendarSelectorComboBox.Location = new System.Drawing.Point(24, 410);
             this.calendarSelectorComboBox.Name = "calendarSelectorComboBox";
@@ -77,22 +85,24 @@
             // createButton
             // 
             this.createButton.Enabled = false;
-            this.createButton.Location = new System.Drawing.Point(107, 621);
+            this.createButton.Location = new System.Drawing.Point(190, 621);
             this.createButton.Name = "createButton";
-            this.createButton.Size = new System.Drawing.Size(75, 23);
+            this.createButton.Size = new System.Drawing.Size(149, 23);
             this.createButton.TabIndex = 3;
             this.createButton.Text = "Crea";
             this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
             // cancelButton
             // 
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(188, 621);
+            this.cancelButton.Location = new System.Drawing.Point(24, 621);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(75, 23);
+            this.cancelButton.Size = new System.Drawing.Size(149, 23);
             this.cancelButton.TabIndex = 4;
             this.cancelButton.Text = "Annulla";
             this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // label2
             // 
@@ -199,14 +209,19 @@
             // 
             // eventModelSelectorComboBox
             // 
-            this.eventModelSelectorComboBox.DisplayMember = "ModelliEvento";
-            this.eventModelSelectorComboBox.FormattingEnabled = true;
+            this.eventModelSelectorComboBox.DataSource = this.eventModelContainerBindingSource;
+            this.eventModelSelectorComboBox.DisplayMember = "DisplayValue";
+            this.eventModelSelectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.eventModelSelectorComboBox.Location = new System.Drawing.Point(190, 410);
             this.eventModelSelectorComboBox.Name = "eventModelSelectorComboBox";
             this.eventModelSelectorComboBox.Size = new System.Drawing.Size(149, 21);
             this.eventModelSelectorComboBox.TabIndex = 15;
-            this.eventModelSelectorComboBox.ValueMember = "ModelliEvento";
+            this.eventModelSelectorComboBox.ValueMember = "EventModel";
             this.eventModelSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.eventModelSelectorComboBox_SelectedIndexChanged);
+            // 
+            // eventModelContainerBindingSource
+            // 
+            this.eventModelContainerBindingSource.DataSource = typeof(DynamiCal.EventModelContainer);
             // 
             // label5
             // 
@@ -302,6 +317,10 @@
             this.periodicityRadioButtonsPanel.Size = new System.Drawing.Size(119, 100);
             this.periodicityRadioButtonsPanel.TabIndex = 25;
             // 
+            // calendarioBindingSource
+            // 
+            this.calendarioBindingSource.DataSource = typeof(DynamiCal.Model.Calendario);
+            // 
             // CreateEventForm
             // 
             this.AcceptButton = this.createButton;
@@ -331,11 +350,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "CreateEventForm";
             this.Text = "Aggiungi Evento ad un Calendario";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateEventForm_FormClosing);
             this.Load += new System.EventHandler(this.CreateEventForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventModelContainerBindingSource)).EndInit();
             this.periodicityRadioButtonsPanel.ResumeLayout(false);
             this.periodicityRadioButtonsPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,5 +388,7 @@
         private System.Windows.Forms.RadioButton monthPeriodicRadioButton;
         private System.Windows.Forms.RadioButton yearPeriodicRadioButton;
         private System.Windows.Forms.Panel periodicityRadioButtonsPanel;
+        private System.Windows.Forms.BindingSource eventModelContainerBindingSource;
+        private System.Windows.Forms.BindingSource calendarioBindingSource;
     }
 }

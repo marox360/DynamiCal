@@ -159,12 +159,7 @@ namespace DynamiCal
         private void creaModelloEventoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CreateEventModelForm createEventModelDialog = new CreateEventModelForm();
-
-            if (createEventModelDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                Agenda.Instance.AggiungiModelloEvento(createEventModelDialog.GetModelloEvento());
-            }
-
+            createEventModelDialog.ShowDialog(this);
             createEventModelDialog.Dispose();
         }
 
