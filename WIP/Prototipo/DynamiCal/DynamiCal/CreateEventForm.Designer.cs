@@ -150,9 +150,11 @@
             // 
             // eventDateTimePicker
             // 
+            this.eventDateTimePicker.CustomFormat = "dddd, dd MMMM yyyy alle HH:mm";
+            this.eventDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.eventDateTimePicker.Location = new System.Drawing.Point(24, 189);
             this.eventDateTimePicker.Name = "eventDateTimePicker";
-            this.eventDateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.eventDateTimePicker.Size = new System.Drawing.Size(247, 20);
             this.eventDateTimePicker.TabIndex = 9;
             // 
             // allDayCheckBox
