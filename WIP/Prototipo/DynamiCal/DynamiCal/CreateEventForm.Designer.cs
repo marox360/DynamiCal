@@ -216,8 +216,6 @@
             this.entriesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.entriesDataGridView.Size = new System.Drawing.Size(316, 150);
             this.entriesDataGridView.TabIndex = 14;
-            this.entriesDataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.entriesDataGridView_CellDoubleClick);
-            this.entriesDataGridView.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.entriesDataGridView_KeyPress);
             // 
             // eventModelSelectorComboBox
             // 

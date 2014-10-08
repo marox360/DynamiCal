@@ -68,11 +68,12 @@
     <Compile Include="CreateEventModelForm.Designer.cs">
       <DependentUpon>CreateEventModelForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataGridView\DataGridViewCalendarCell.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataGridView\DataGridViewDayCell.cs" />
     <Compile Include="DataGridView\DataGridViewDayColumn.cs" />
     <Compile Include="DataGridView\BindingSources\MonthlySource.cs" />
-    <Compile Include="DataGridView\DataGridViewVoceCell.cs" />
-    <Compile Include="DataGridView\DataGridViewVoceColumn.cs" />
     <Compile Include="Extension\DateTimeExtension.cs" />
     <Compile Include="Filters\CriterioDiFiltraggio.cs" />
     <Compile Include="Model\Agenda.cs" />

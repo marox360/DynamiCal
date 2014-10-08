@@ -1,4 +1,5 @@
-﻿using DynamiCal.Model;
+﻿using DynamiCal.DataGridView;
+using DynamiCal.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,24 @@ namespace DynamiCal
             voceContainerBindingSource.Add(VoceFactory.GetImplementedVoce(new Voce("numero", TipoVoce.Double)));
             voceContainerBindingSource.Add(VoceFactory.GetImplementedVoce(new Voce("data", TipoVoce.Data)));
             entriesDataGridView.DataSource = voceContainerBindingSource;
+
+            for (int i = 0; i < voceContainerBindingSource.Count; i++)
+            {
+                IVoce voce = voceContainerBindingSource[i];
+
+                if (voce is Voce<bool>)
+                {
+                    entriesDataGridView[1, i] = new DataGridViewCheckBoxCell();
+                }
+                else if (voce is Voce<DateTime>)
+                {
+                    entriesDataGridView[1, i] = new DataGridViewCalendarCell();
+                }
+                else
+                {
+                    entriesDataGridView[1, i] = new DataGridViewTextBoxCell();
+                }
+            }
 
             durationComboBox.SelectedIndex = 0;
 
@@ -157,27 +176,6 @@ namespace DynamiCal
         private void periodicityCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             periodicityRadioButtonsPanel.Enabled = periodicityCheckBox.Checked;
-        }
-
-        private void entriesDataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            /*if (e.ColumnIndex == 1)
-            {
-                if ((voceContainerBindingSource[e.RowIndex] as VoceContainer).Valore is Voce<bool>)
-                {
-                    Voce<bool> voce = (voceContainerBindingSource[e.RowIndex] as VoceContainer).Valore as Voce<bool>;
-                    voce.Valore = !voce.Valore;
-                    entriesDataGridView.Refresh();
-                }
-            }*/
-        }
-
-        private void entriesDataGridView_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            /*if (entriesDataGridView.SelectedRows.Count > 0)
-            {
-                Voce voce = (voceContainerBindingSource[entriesDataGridView.SelectedRows[0].Index] as VoceContainer).Valore;
-            }*/
         }
     }
 
