@@ -9,52 +9,6 @@ namespace DynamiCal.DataGridView
 {
     // Taken from http://msdn.microsoft.com/en-us/library/7tas5c80.aspx
 
-    class DataGridViewCalendarCell : DataGridViewTextBoxCell
-    {
-        public DataGridViewCalendarCell() : base() {
-            this.Style.Format = "d";
-        }
-
-        public override void InitializeEditingControl(int rowIndex, object initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle)
-        {
-            base.InitializeEditingControl(rowIndex, initialFormattedValue, dataGridViewCellStyle);
-            DataGridViewCalendarEditingControl ctl = DataGridView.EditingControl as DataGridViewCalendarEditingControl;
-
-            if (this.Value == null || this.Value.Equals(default(DateTime)))
-            {
-                ctl.Value = (DateTime)this.DefaultNewRowValue;
-            }
-            else
-            {
-                ctl.Value = (DateTime)this.Value;
-            }
-        }
-
-        public override Type EditType
-        {
-            get
-            {
-                return typeof(DataGridViewCalendarEditingControl);
-            }
-        }
-
-        public override Type ValueType
-        {
-            get
-            {
-                return typeof(DateTime);
-            }
-        }
-
-        public override object DefaultNewRowValue
-        {
-            get
-            {
-                return DateTime.Now;
-            }
-        }
-    }
-
     class DataGridViewCalendarEditingControl : DateTimePicker, IDataGridViewEditingControl
     {
         System.Windows.Forms.DataGridView dataGridView;
@@ -88,14 +42,12 @@ namespace DynamiCal.DataGridView
             }
         }
 
-        public object GetEditingControlFormattedValue(
-            DataGridViewDataErrorContexts context)
+        public object GetEditingControlFormattedValue(DataGridViewDataErrorContexts context)
         {
             return EditingControlFormattedValue;
         }
 
-        public void ApplyCellStyleToEditingControl(
-            DataGridViewCellStyle dataGridViewCellStyle)
+        public void ApplyCellStyleToEditingControl(DataGridViewCellStyle dataGridViewCellStyle)
         {
             this.Font = dataGridViewCellStyle.Font;
             this.CalendarForeColor = dataGridViewCellStyle.ForeColor;
@@ -185,4 +137,52 @@ namespace DynamiCal.DataGridView
             base.OnValueChanged(eventargs);
         }
     }
+
+    class DataGridViewCalendarCell : DataGridViewTextBoxCell
+    {
+        public DataGridViewCalendarCell() : base() {
+            this.Style.Format = "d";
+        }
+
+        public override void InitializeEditingControl(int rowIndex, object initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle)
+        {
+            base.InitializeEditingControl(rowIndex, initialFormattedValue, dataGridViewCellStyle);
+            DataGridViewCalendarEditingControl ctl = DataGridView.EditingControl as DataGridViewCalendarEditingControl;
+
+            if (this.Value == null || this.Value.Equals(default(DateTime)))
+            {
+                ctl.Value = (DateTime)this.DefaultNewRowValue;
+            }
+            else
+            {
+                ctl.Value = (DateTime)this.Value;
+            }
+        }
+
+        public override Type EditType
+        {
+            get
+            {
+                return typeof(DataGridViewCalendarEditingControl);
+            }
+        }
+
+        public override Type ValueType
+        {
+            get
+            {
+                return typeof(DateTime);
+            }
+        }
+
+        public override object DefaultNewRowValue
+        {
+            get
+            {
+                return DateTime.Now;
+            }
+        }
+    }
+
+
 }
