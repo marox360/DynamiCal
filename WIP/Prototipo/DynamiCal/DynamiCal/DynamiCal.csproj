@@ -90,7 +90,6 @@
     <Compile Include="Model\ModelloEvento.cs" />
     <Compile Include="Model\Evento.cs" />
     <Compile Include="Model\Periodicita.cs" />
-    <Compile Include="Model\TipoVoce.cs" />
     <Compile Include="Model\Voce.cs" />
     <Compile Include="Model\VoceFactory.cs" />
     <Compile Include="Program.cs" />
@@ -122,9 +121,9 @@
     <None Include="Properties\DataSources\DynamiCal.Model.Agenda.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Calendario.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.ModelloEvento.datasource" />
-    <None Include="Properties\DataSources\DynamiCal.Model.TipoVoce.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Voce.datasource" />
     <None Include="Properties\DataSources\ModelloEventoContainer.datasource" />
+    <None Include="Properties\DataSources\TipoVoceContainer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

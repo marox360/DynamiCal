@@ -4,25 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.ComponentModel;
 
 namespace DynamiCal.Model
 {
     class Voce
     {
-        public Voce(string nome, TipoVoce tipo) 
+        public enum Tipo
+        {
+            [Description("Testo")]
+            Stringa,
+            [Description("Numero")]
+            Double,
+            [Description("Sì/No")]
+            Boolean,
+            [Description("Data")]
+            Data
+        };
+
+        public Voce(string nome, Tipo tipo) 
         {
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or white space");
-            Debug.Assert(tipo != null, "Tipo is null");
             #endregion
 
             this.Nome = nome.Trim();
-            this.Tipo = tipo;
+            this.TipoVoce = tipo;
         }
 
         public string Nome { get; private set; }
 
-        public TipoVoce Tipo { get; private set; }
+        public Tipo TipoVoce { get; private set; }
     }
 
     interface IVoce

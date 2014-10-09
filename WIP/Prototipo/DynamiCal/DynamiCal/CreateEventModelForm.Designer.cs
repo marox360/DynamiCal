@@ -38,18 +38,18 @@
             this.addEntryButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.entryTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.tipoVoceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.entryNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.overviewGridView = new System.Windows.Forms.DataGridView();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipoVoceContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventModelGroup.SuspendLayout();
             this.modelEntryGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoVoceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.overviewGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoVoceContainerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // createButton
@@ -139,7 +139,7 @@
             // 
             // entryTypeComboBox
             // 
-            this.entryTypeComboBox.DataSource = this.tipoVoceBindingSource;
+            this.entryTypeComboBox.DataSource = this.tipoVoceContainerBindingSource;
             this.entryTypeComboBox.DisplayMember = "Descrizione";
             this.entryTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.entryTypeComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,10 +149,7 @@
             this.entryTypeComboBox.Name = "entryTypeComboBox";
             this.entryTypeComboBox.Size = new System.Drawing.Size(140, 23);
             this.entryTypeComboBox.TabIndex = 2;
-            // 
-            // tipoVoceBindingSource
-            // 
-            this.tipoVoceBindingSource.DataSource = typeof(DynamiCal.Model.TipoVoce);
+            this.entryTypeComboBox.ValueMember = "Value";
             // 
             // entryNameTextBox
             // 
@@ -213,6 +210,10 @@
             // 
             this.voceBindingSource.DataSource = typeof(DynamiCal.Model.Voce);
             // 
+            // tipoVoceContainerBindingSource
+            // 
+            this.tipoVoceContainerBindingSource.DataSource = typeof(DynamiCal.TipoVoceContainer);
+            // 
             // CreateEventModelForm
             // 
             this.AcceptButton = this.createButton;
@@ -232,9 +233,9 @@
             this.eventModelGroup.PerformLayout();
             this.modelEntryGroup.ResumeLayout(false);
             this.modelEntryGroup.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoVoceBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.overviewGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.voceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoVoceContainerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -254,8 +255,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView overviewGridView;
         private System.Windows.Forms.BindingSource voceBindingSource;
-        private System.Windows.Forms.BindingSource tipoVoceBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.BindingSource tipoVoceContainerBindingSource;
     }
 }
