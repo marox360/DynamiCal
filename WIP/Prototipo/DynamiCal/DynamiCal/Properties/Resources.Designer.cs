@@ -59,15 +59,5 @@ namespace DynamiCal.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap plus_icon1 {
-            get {
-                object obj = ResourceManager.GetObject("plus-icon1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

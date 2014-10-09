@@ -21,33 +21,34 @@ namespace DynamiCal
 
         private void CreateEventForm_Load(object sender, EventArgs e)
         {
-            durationComboBox.SelectedIndex = 0;
+            this.durationComboBox.SelectedIndex = 0;
+            this.frequencyComboBox.SelectedIndex = 0;
 
-            eventModelSelectorComboBox.BeginUpdate();
-            modelloEventoContainerBindingSource.Add(new ModelloEventoContainer("Nuovo Modello..."));
+            this.eventModelSelectorComboBox.BeginUpdate();
+            this.modelloEventoContainerBindingSource.Add(new ModelloEventoContainer("Nuovo Modello..."));
             foreach (ModelloEvento modello in Agenda.Instance.ModelliEvento)
             {
                 ModelloEventoContainer eventModelContainer = new ModelloEventoContainer(modello);
-                modelloEventoContainerBindingSource.Add(new ModelloEventoContainer(modello));
+                this.modelloEventoContainerBindingSource.Add(new ModelloEventoContainer(modello));
 
                 if (modello.Voci.Count == 0)
                 {
-                    eventModelSelectorComboBox.SelectedItem = eventModelContainer;
+                    this.eventModelSelectorComboBox.SelectedItem = eventModelContainer;
                 }
             }
-            eventModelSelectorComboBox.EndUpdate();
+            this.eventModelSelectorComboBox.EndUpdate();
 
-            calendarSelectorComboBox.BeginUpdate();
+            this.calendarSelectorComboBox.BeginUpdate();
             foreach (Calendario calendario in Agenda.Instance.Calendari)
             {
-                calendarioBindingSource.Add(calendario);
+                this.calendarioBindingSource.Add(calendario);
 
-                if (calendarSelectorComboBox.SelectedItem == null)
+                if (this.calendarSelectorComboBox.SelectedItem == null)
                 {
-                    calendarSelectorComboBox.SelectedItem = calendario;
+                    this.calendarSelectorComboBox.SelectedItem = calendario;
                 }
             }
-            calendarSelectorComboBox.EndUpdate();
+            this.calendarSelectorComboBox.EndUpdate();
 
             Agenda.Instance.EventModelsChanged += EventModelsChanged;
             Agenda.Instance.CalendarsChanged += CalendarsChanged;
@@ -66,12 +67,12 @@ namespace DynamiCal
             switch (e.Action)
             {
                 case AgendaCollectionEventArgs.EditAction.AddItem:
-                    modelloEventoContainerBindingSource.Add(eventModelContainer);
-                    eventModelSelectorComboBox.SelectedItem = eventModelContainer;
+                    this.modelloEventoContainerBindingSource.Add(eventModelContainer);
+                    this.eventModelSelectorComboBox.SelectedItem = eventModelContainer;
                     break;
 
                 case AgendaCollectionEventArgs.EditAction.RemoveItem:
-                    modelloEventoContainerBindingSource.Remove(eventModelContainer);
+                    this.modelloEventoContainerBindingSource.Remove(eventModelContainer);
                     break;
             }
         }
@@ -81,38 +82,35 @@ namespace DynamiCal
             switch (e.Action)
             {
                 case AgendaCollectionEventArgs.EditAction.AddItem:
-                    calendarioBindingSource.Add(e.Item);
+                    this.calendarioBindingSource.Add(e.Item);
                     break;
 
                 case AgendaCollectionEventArgs.EditAction.RemoveItem:
-                    calendarioBindingSource.Remove(e.Item);
+                    this.calendarioBindingSource.Remove(e.Item);
                     break;
             }
         }
 
         private void allDayCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            durationComboBox.Enabled = !allDayCheckBox.Checked;
-            durationUpDown.Enabled = !allDayCheckBox.Checked;
+            this.durationComboBox.Enabled = !this.allDayCheckBox.Checked;
+            this.durationUpDown.Enabled = this.durationComboBox.Enabled;
 
-            validateForm();
+            this.durationUpDown.Value = 1;
+            this.durationUpDown.Text = this.durationUpDown.Value.ToString();
+            this.durationComboBox.SelectedItem = "Giorni";
         }
 
         private void validateForm(object sender, EventArgs e)
         {
-            validateForm();
-        }
-
-        private void validateForm()
-        {
-            createButton.Enabled = !String.IsNullOrWhiteSpace(eventNameTextBox.Text) && (durationComboBox.SelectedValue != null || allDayCheckBox.Checked == true);
+            this.createButton.Enabled = !String.IsNullOrWhiteSpace(this.eventNameTextBox.Text);
         }
 
         private void eventModelSelectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (eventModelSelectorComboBox.SelectedItem != null)
+            if (this.eventModelSelectorComboBox.SelectedItem != null)
             {
-                ModelloEvento modelloEvento = (eventModelSelectorComboBox.SelectedItem as ModelloEventoContainer).EventModel;
+                ModelloEvento modelloEvento = (this.eventModelSelectorComboBox.SelectedItem as ModelloEventoContainer).EventModel;
                 if (modelloEvento == null)
                 {
                     this.Visible = false;
@@ -130,7 +128,7 @@ namespace DynamiCal
                     {
                         voceDataSource.Add(VoceFactory.GetImplementedVoce(voce));
                     }
-                    entriesDataGridView.DataSource = voceDataSource;
+                    this.entriesDataGridView.DataSource = voceDataSource;
 
                     for (int i = 0; i < voceDataSource.Count; i++)
                     {
@@ -138,23 +136,21 @@ namespace DynamiCal
 
                         if (voce is Voce<bool>)
                         {
-                            entriesDataGridView[1, i] = new DataGridViewCheckBoxCell();
+                            this.entriesDataGridView[1, i] = new DataGridViewCheckBoxCell();
                         }
                         else if (voce is Voce<DateTime>)
                         {
-                            entriesDataGridView[1, i] = new DataGridViewCalendarCell();
+                            this.entriesDataGridView[1, i] = new DataGridViewCalendarCell();
                         }
                         else
                         {
-                            entriesDataGridView[1, i] = new DataGridViewTextBoxCell();
+                            this.entriesDataGridView[1, i] = new DataGridViewTextBoxCell();
                         }
                     }
 
-                    entriesDataGridView.Refresh();
+                    this.entriesDataGridView.Refresh();
                 }
             }
-
-            validateForm();
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -167,22 +163,31 @@ namespace DynamiCal
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
-        private void periodicityCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            periodicityRadioButtonsPanel.Enabled = periodicityCheckBox.Checked;
-        }
-
         private void entriesDataGridView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
-            if (e.ColumnIndex == 1 && (entriesDataGridView.DataSource as IList<IVoce>)[e.RowIndex] is Voce<double>)
+            if (e.ColumnIndex == 1 && (this.entriesDataGridView.DataSource as IList<IVoce>)[e.RowIndex] is Voce<double>)
             {
-                Voce<double> voce = (entriesDataGridView.DataSource as IList<IVoce>)[e.RowIndex] as Voce<double>;
+                Voce<double> voce = (this.entriesDataGridView.DataSource as IList<IVoce>)[e.RowIndex] as Voce<double>;
                 try
                 {
                     voce.Valore = Double.Parse(e.FormattedValue as string);
                 }
                 catch{ }
             }
+        }
+
+        private void durationUpDown_Validating(object sender, CancelEventArgs e)
+        {
+            if (String.IsNullOrWhiteSpace(this.durationUpDown.Text))
+            {
+                this.durationUpDown.Text = this.durationUpDown.Value.ToString();
+            }
+        }
+
+        private void frequencyComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.frequencyTypeComboBox.Enabled = this.frequencyComboBox.SelectedItem == "Personalizzata";
+            this.frequencyNumericUpDown.Enabled = this.frequencyTypeComboBox.Enabled;
         }
     }
 
