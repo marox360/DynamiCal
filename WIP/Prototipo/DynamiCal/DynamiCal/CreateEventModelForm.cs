@@ -58,7 +58,8 @@ namespace DynamiCal
 
         private ModelloEvento GetModelloEvento()
         {
-            ModelloEvento modelloEvento = new ModelloEvento(this.modelNameTextBox.Text, this.voceBindingSource.List as List<Voce>);
+            IEnumerable<Voce> voci = this.voceBindingSource.Cast<Voce>();
+            ModelloEvento modelloEvento = new ModelloEvento(this.modelNameTextBox.Text, voci);
 
             return modelloEvento;
         }
