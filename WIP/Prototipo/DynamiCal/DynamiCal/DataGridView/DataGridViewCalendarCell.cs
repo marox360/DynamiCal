@@ -66,8 +66,7 @@ namespace DynamiCal.DataGridView
             }
         }
 
-        public bool EditingControlWantsInputKey(
-            Keys key, bool dataGridViewWantsInputKey)
+        public bool EditingControlWantsInputKey(Keys key, bool dataGridViewWantsInputKey)
         {
             switch (key & Keys.KeyCode)
             {
@@ -147,15 +146,15 @@ namespace DynamiCal.DataGridView
         public override void InitializeEditingControl(int rowIndex, object initialFormattedValue, DataGridViewCellStyle dataGridViewCellStyle)
         {
             base.InitializeEditingControl(rowIndex, initialFormattedValue, dataGridViewCellStyle);
-            DataGridViewCalendarEditingControl ctl = DataGridView.EditingControl as DataGridViewCalendarEditingControl;
+            DataGridViewCalendarEditingControl editingControl = DataGridView.EditingControl as DataGridViewCalendarEditingControl;
 
             if (this.Value == null || this.Value.Equals(default(DateTime)))
             {
-                ctl.Value = (DateTime)this.DefaultNewRowValue;
+                editingControl.Value = (DateTime)this.DefaultNewRowValue;
             }
             else
             {
-                ctl.Value = (DateTime)this.Value;
+                editingControl.Value = (DateTime)this.Value;
             }
         }
 

@@ -21,31 +21,6 @@ namespace DynamiCal
 
         private void CreateEventForm_Load(object sender, EventArgs e)
         {
-            List<IVoce> voceContainerBindingSource = new List<IVoce>();
-            voceContainerBindingSource.Add(VoceFactory.GetImplementedVoce(new Voce("stringa", TipoVoce.Stringa)));
-            voceContainerBindingSource.Add(VoceFactory.GetImplementedVoce(new Voce("boolean", TipoVoce.Boolean)));
-            voceContainerBindingSource.Add(VoceFactory.GetImplementedVoce(new Voce("numero", TipoVoce.Double)));
-            voceContainerBindingSource.Add(VoceFactory.GetImplementedVoce(new Voce("data", TipoVoce.Data)));
-            entriesDataGridView.DataSource = voceContainerBindingSource;
-
-            for (int i = 0; i < voceContainerBindingSource.Count; i++)
-            {
-                IVoce voce = voceContainerBindingSource[i];
-
-                if (voce is Voce<bool>)
-                {
-                    entriesDataGridView[1, i] = new DataGridViewCheckBoxCell();
-                }
-                else if (voce is Voce<DateTime>)
-                {
-                    entriesDataGridView[1, i] = new DataGridViewCalendarCell();
-                }
-                else
-                {
-                    entriesDataGridView[1, i] = new DataGridViewTextBoxCell();
-                }
-            }
-
             durationComboBox.SelectedIndex = 0;
 
             eventModelSelectorComboBox.BeginUpdate();
@@ -150,13 +125,32 @@ namespace DynamiCal
                 }
                 else
                 {
-                    /*voceBindingSource.Clear();
+                    List<IVoce> voceDataSource = new List<IVoce>();
                     foreach (Voce voce in modelloEvento.Voci)
                     {
-                        voceBindingSource.Add(VoceFactory.GetImplementedVoce(voce));
-                    }*/
-                    //entriesDataGridView.Columns.Add(Model.Agenda.Instance.ModelliEvento.Last().Voci);
-                    //entriesDataGridView.Columns.Add(Model.Agenda.Instance.ModelliEvento.Where(modello => modello.Voci).First());
+                        voceDataSource.Add(VoceFactory.GetImplementedVoce(voce));
+                    }
+                    entriesDataGridView.DataSource = voceDataSource;
+
+                    for (int i = 0; i < voceDataSource.Count; i++)
+                    {
+                        IVoce voce = voceDataSource[i];
+
+                        if (voce is Voce<bool>)
+                        {
+                            entriesDataGridView[1, i] = new DataGridViewCheckBoxCell();
+                        }
+                        else if (voce is Voce<DateTime>)
+                        {
+                            entriesDataGridView[1, i] = new DataGridViewCalendarCell();
+                        }
+                        else
+                        {
+                            entriesDataGridView[1, i] = new DataGridViewTextBoxCell();
+                        }
+                    }
+
+                    entriesDataGridView.Refresh();
                 }
             }
 
@@ -176,6 +170,19 @@ namespace DynamiCal
         private void periodicityCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             periodicityRadioButtonsPanel.Enabled = periodicityCheckBox.Checked;
+        }
+
+        private void entriesDataGridView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (e.ColumnIndex == 1 && (entriesDataGridView.DataSource as IList<IVoce>)[e.RowIndex] is Voce<double>)
+            {
+                Voce<double> voce = (entriesDataGridView.DataSource as IList<IVoce>)[e.RowIndex] as Voce<double>;
+                try
+                {
+                    voce.Valore = Double.Parse(e.FormattedValue as string);
+                }
+                catch{ }
+            }
         }
     }
 

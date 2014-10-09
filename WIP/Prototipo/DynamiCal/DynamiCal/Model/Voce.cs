@@ -27,7 +27,7 @@ namespace DynamiCal.Model
 
     interface IVoce
     {
-        string Nome { get; set; }
+        string Nome { get; }
 
         object Valore { get; set; }
     }
@@ -46,7 +46,7 @@ namespace DynamiCal.Model
             this.Nome = nome;
         }
 
-        public string Nome { get; set; }
+        public string Nome { get; private set; }
 
         public T Valore { get; set; }
 
