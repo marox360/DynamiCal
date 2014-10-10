@@ -34,6 +34,38 @@ namespace DynamiCal.Model
             }
         }
 
+        public static Periodicita Giornaliera
+        {
+            get
+            {
+                return new Periodicita(Frequenza.Giornaliera);
+            }
+        }
+
+        public static Periodicita Settimanale
+        {
+            get
+            {
+                return new Periodicita(Frequenza.Settimanale);
+            }
+        }
+
+        public static Periodicita Mensile
+        {
+            get
+            {
+                return new Periodicita(Frequenza.Mensile);
+            }
+        }
+
+        public static Periodicita Annuale
+        {
+            get
+            {
+                return new Periodicita(Frequenza.Annuale);
+            }
+        }
+
         public int Valore
         {
             get
@@ -61,6 +93,10 @@ namespace DynamiCal.Model
                 _frequenza = value;
             }
         }
-        
+
+        public static Periodicita operator *(Periodicita periodicita, int valore)
+        {
+            return new Periodicita(periodicita.Ripetizione, valore);
+        }
     }
 }
