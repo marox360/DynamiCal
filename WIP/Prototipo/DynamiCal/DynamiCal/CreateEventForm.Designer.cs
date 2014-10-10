@@ -44,6 +44,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.entriesDataGridView = new System.Windows.Forms.DataGridView();
             this.eventModelSelectorComboBox = new System.Windows.Forms.ComboBox();
+            this.modelloEventoContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.eventDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,16 +59,15 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.modelloEventoContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frequencyNumericUpDown)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +75,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(202, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 13);
+            this.label1.Size = new System.Drawing.Size(106, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Scegli il calendario:";
             // 
@@ -84,10 +84,11 @@
             this.calendarSelectorComboBox.DataSource = this.calendarioBindingSource;
             this.calendarSelectorComboBox.DisplayMember = "Nome";
             this.calendarSelectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.calendarSelectorComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendarSelectorComboBox.FormattingEnabled = true;
             this.calendarSelectorComboBox.Location = new System.Drawing.Point(205, 36);
             this.calendarSelectorComboBox.Name = "calendarSelectorComboBox";
-            this.calendarSelectorComboBox.Size = new System.Drawing.Size(185, 21);
+            this.calendarSelectorComboBox.Size = new System.Drawing.Size(185, 23);
             this.calendarSelectorComboBox.TabIndex = 1;
             this.calendarSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.validateForm);
             // 
@@ -122,7 +123,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 13);
+            this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "Inserisci il nome:";
             // 
@@ -130,7 +131,7 @@
             // 
             this.eventNameTextBox.Location = new System.Drawing.Point(9, 37);
             this.eventNameTextBox.Name = "eventNameTextBox";
-            this.eventNameTextBox.Size = new System.Drawing.Size(185, 20);
+            this.eventNameTextBox.Size = new System.Drawing.Size(185, 22);
             this.eventNameTextBox.TabIndex = 6;
             this.eventNameTextBox.TextChanged += new System.EventHandler(this.validateForm);
             // 
@@ -139,7 +140,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(9, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 13);
+            this.label3.Size = new System.Drawing.Size(100, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Inserisci la durata:";
             // 
@@ -159,10 +160,11 @@
             // eventDateTimePicker
             // 
             this.eventDateTimePicker.CustomFormat = "dddd, dd MMMM yyyy alle HH:mm";
+            this.eventDateTimePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.eventDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.eventDateTimePicker.Location = new System.Drawing.Point(12, 36);
             this.eventDateTimePicker.Name = "eventDateTimePicker";
-            this.eventDateTimePicker.Size = new System.Drawing.Size(378, 20);
+            this.eventDateTimePicker.Size = new System.Drawing.Size(378, 22);
             this.eventDateTimePicker.TabIndex = 9;
             // 
             // allDayCheckBox
@@ -170,7 +172,7 @@
             this.allDayCheckBox.AutoSize = true;
             this.allDayCheckBox.Location = new System.Drawing.Point(267, 83);
             this.allDayCheckBox.Name = "allDayCheckBox";
-            this.allDayCheckBox.Size = new System.Drawing.Size(90, 17);
+            this.allDayCheckBox.Size = new System.Drawing.Size(100, 17);
             this.allDayCheckBox.TabIndex = 10;
             this.allDayCheckBox.Text = "Tutto il giorno";
             this.allDayCheckBox.UseVisualStyleBackColor = true;
@@ -178,6 +180,7 @@
             // 
             // durationUpDown
             // 
+            this.durationUpDown.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.durationUpDown.Location = new System.Drawing.Point(12, 82);
             this.durationUpDown.Maximum = new decimal(new int[] {
             1440,
@@ -190,8 +193,9 @@
             0,
             0});
             this.durationUpDown.Name = "durationUpDown";
-            this.durationUpDown.Size = new System.Drawing.Size(89, 20);
+            this.durationUpDown.Size = new System.Drawing.Size(89, 23);
             this.durationUpDown.TabIndex = 12;
+            this.durationUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.durationUpDown.Value = new decimal(new int[] {
             1,
             0,
@@ -204,7 +208,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(9, 20);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 13);
+            this.label4.Size = new System.Drawing.Size(150, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "Inserisci data e ora di inizio:";
             // 
@@ -240,12 +244,16 @@
             this.eventModelSelectorComboBox.ValueMember = "Value";
             this.eventModelSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.eventModelSelectorComboBox_SelectedIndexChanged);
             // 
+            // modelloEventoContainerBindingSource
+            // 
+            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.Common.IBindingContainer);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(202, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 13);
+            this.label5.Size = new System.Drawing.Size(94, 13);
             this.label5.TabIndex = 16;
             this.label5.Text = "Scegli il modello:";
             // 
@@ -263,7 +271,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(6, 70);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 13);
+            this.label6.Size = new System.Drawing.Size(124, 13);
             this.label6.TabIndex = 19;
             this.label6.Text = "Inserisci la descrizione:";
             // 
@@ -314,18 +322,20 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(162, 19);
+            this.label8.Location = new System.Drawing.Point(272, 19);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 13);
+            this.label8.Size = new System.Drawing.Size(118, 13);
             this.label8.TabIndex = 4;
             this.label8.Text = "Inserisci la frequenza:";
             // 
             // frequencyNumericUpDown
             // 
+            this.frequencyNumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.frequencyNumericUpDown.Location = new System.Drawing.Point(292, 35);
             this.frequencyNumericUpDown.Name = "frequencyNumericUpDown";
-            this.frequencyNumericUpDown.Size = new System.Drawing.Size(98, 20);
+            this.frequencyNumericUpDown.Size = new System.Drawing.Size(98, 23);
             this.frequencyNumericUpDown.TabIndex = 3;
+            this.frequencyNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frequencyTypeComboBox
             // 
@@ -341,7 +351,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(9, 19);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(150, 13);
+            this.label7.Size = new System.Drawing.Size(167, 13);
             this.label7.TabIndex = 1;
             this.label7.Text = "Ogni quanto si ripete l\'evento?";
             // 
@@ -381,7 +391,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(6, 35);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 20);
+            this.textBox1.Size = new System.Drawing.Size(188, 22);
             this.textBox1.TabIndex = 1;
             // 
             // label9
@@ -389,13 +399,9 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(3, 19);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 13);
+            this.label9.Size = new System.Drawing.Size(94, 13);
             this.label9.TabIndex = 0;
             this.label9.Text = "Inserisci il luogo:";
-            // 
-            // modelloEventoContainerBindingSource
-            // 
-            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.Common.IBindingContainer);
             // 
             // CreateEventForm
             // 
@@ -410,6 +416,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createButton);
+            this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "CreateEventForm";
@@ -419,6 +426,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -428,7 +436,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.frequencyNumericUpDown)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
