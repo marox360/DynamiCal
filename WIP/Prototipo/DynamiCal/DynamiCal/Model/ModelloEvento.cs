@@ -12,16 +12,14 @@ namespace DynamiCal.Model
         private string _nome;
         private List<Voce> _voci;
 
-        public ModelloEvento(string nome) : this(nome, new List<Voce>()) { }
-
-        public ModelloEvento(string nome, IEnumerable<Voce> voci)
+        public ModelloEvento(string nome, IEnumerable<Voce> voci = null)
         {
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or white space");
             #endregion
 
             _nome = nome.Trim();
-            _voci = new List<Voce>(voci);
+            _voci = voci == null ? new List<Voce>() : new List<Voce>(voci);
         }
 
         public string Nome

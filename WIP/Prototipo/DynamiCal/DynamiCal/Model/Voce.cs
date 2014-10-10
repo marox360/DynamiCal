@@ -58,9 +58,7 @@ namespace DynamiCal.Model
 
     class Voce<T> : IVoce
     {
-        public Voce(string nome) : this(nome, default(T)) { }
-
-        public Voce(string nome, T valore)
+        public Voce(string nome, T valore = default(T))
         {
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or white space");

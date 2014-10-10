@@ -57,7 +57,7 @@ namespace DynamiCal.Common
         {
             unchecked
             {
-                return (this.DisplayText.GetHashCode() * 397);
+                return ((this.Value != null ? this.Value.GetHashCode() : 0) * 397);
             }
         }
     }
