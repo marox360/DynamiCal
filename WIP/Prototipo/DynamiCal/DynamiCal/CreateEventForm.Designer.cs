@@ -54,8 +54,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.frequencyNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.frequencyTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.frequenzaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.frequencyComboBox = new System.Windows.Forms.ComboBox();
+            this.periodicitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -67,6 +69,8 @@
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frequencyNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frequenzaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.periodicitaBindingSource)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -330,21 +334,47 @@
             // 
             // frequencyNumericUpDown
             // 
+            this.frequencyNumericUpDown.Enabled = false;
             this.frequencyNumericUpDown.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.frequencyNumericUpDown.Location = new System.Drawing.Point(292, 35);
+            this.frequencyNumericUpDown.Maximum = new decimal(new int[] {
+            365,
+            0,
+            0,
+            0});
+            this.frequencyNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.frequencyNumericUpDown.Name = "frequencyNumericUpDown";
             this.frequencyNumericUpDown.Size = new System.Drawing.Size(98, 23);
             this.frequencyNumericUpDown.TabIndex = 3;
             this.frequencyNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.frequencyNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.frequencyNumericUpDown.ValueChanged += new System.EventHandler(this.setCustomFrequency);
             // 
             // frequencyTypeComboBox
             // 
+            this.frequencyTypeComboBox.DataSource = this.frequenzaBindingSource;
+            this.frequencyTypeComboBox.DisplayMember = "DisplayText";
             this.frequencyTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.frequencyTypeComboBox.Enabled = false;
             this.frequencyTypeComboBox.FormattingEnabled = true;
             this.frequencyTypeComboBox.Location = new System.Drawing.Point(165, 35);
             this.frequencyTypeComboBox.Name = "frequencyTypeComboBox";
             this.frequencyTypeComboBox.Size = new System.Drawing.Size(121, 21);
             this.frequencyTypeComboBox.TabIndex = 2;
+            this.frequencyTypeComboBox.ValueMember = "Value";
+            this.frequencyTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.setCustomFrequency);
+            // 
+            // frequenzaBindingSource
+            // 
+            this.frequenzaBindingSource.DataSource = typeof(DynamiCal.Common.IBindingContainer);
             // 
             // label7
             // 
@@ -357,21 +387,20 @@
             // 
             // frequencyComboBox
             // 
+            this.frequencyComboBox.DataSource = this.periodicitaBindingSource;
+            this.frequencyComboBox.DisplayMember = "DisplayText";
             this.frequencyComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.frequencyComboBox.FormattingEnabled = true;
-            this.frequencyComboBox.Items.AddRange(new object[] {
-            "Mai",
-            "Ogni giorno",
-            "Ogni settimana",
-            "Ogni 2 settimane",
-            "Ogni mese",
-            "Ogni anno",
-            "Personalizzata"});
             this.frequencyComboBox.Location = new System.Drawing.Point(11, 35);
             this.frequencyComboBox.Name = "frequencyComboBox";
             this.frequencyComboBox.Size = new System.Drawing.Size(148, 21);
             this.frequencyComboBox.TabIndex = 0;
+            this.frequencyComboBox.ValueMember = "Value";
             this.frequencyComboBox.SelectedIndexChanged += new System.EventHandler(this.frequencyComboBox_SelectedIndexChanged);
+            // 
+            // periodicitaBindingSource
+            // 
+            this.periodicitaBindingSource.DataSource = typeof(DynamiCal.Common.IBindingContainer);
             // 
             // groupBox4
             // 
@@ -434,6 +463,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frequencyNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frequenzaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.periodicitaBindingSource)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
@@ -472,5 +503,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.BindingSource modelloEventoContainerBindingSource;
+        private System.Windows.Forms.BindingSource periodicitaBindingSource;
+        private System.Windows.Forms.BindingSource frequenzaBindingSource;
     }
 }

@@ -23,7 +23,14 @@ namespace DynamiCal
         private void CreateEventForm_Load(object sender, EventArgs e)
         {
             this.durationComboBox.SelectedIndex = 0;
-            this.frequencyComboBox.SelectedIndex = 0;
+
+            foreach (Periodicita.Frequenza frequenza in Enum.GetValues(typeof(Periodicita.Frequenza)).Cast<Periodicita.Frequenza>())
+            {
+                if (frequenza != Periodicita.Frequenza.Mai)
+                {
+                    this.frequenzaBindingSource.Add(new BindingContainer<Periodicita.Frequenza>(frequenza.ToString(), frequenza));
+                }
+            }
 
             this.eventModelSelectorComboBox.BeginUpdate();
             this.modelloEventoContainerBindingSource.Add(new BindingContainer<ModelloEvento>("Nuovo Modello...", null));
@@ -50,6 +57,15 @@ namespace DynamiCal
                 }
             }
             this.calendarSelectorComboBox.EndUpdate();
+
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Mai", Periodicita.Mai));
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Ogni giorno", Periodicita.Giornaliera));
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Ogni settimana", Periodicita.Settimanale));
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Ogni 2 settimane", Periodicita.Settimanale * 2));
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Ogni mese", Periodicita.Mensile));
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Ogni anno", Periodicita.Annuale));
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Personalizzata", Periodicita.Mai));
+            this.calendarSelectorComboBox.SelectedItem = this.periodicitaBindingSource[0];
 
             Agenda.Instance.EventModelsChanged += EventModelsChanged;
             Agenda.Instance.CalendarsChanged += CalendarsChanged;
@@ -188,8 +204,17 @@ namespace DynamiCal
 
         private void frequencyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.frequencyTypeComboBox.Enabled = this.frequencyComboBox.SelectedItem.Equals("Personalizzata");
+            this.frequencyTypeComboBox.Enabled = this.frequencyComboBox.SelectedIndex >= 0 && (this.periodicitaBindingSource[this.frequencyComboBox.SelectedIndex] as IBindingContainer).DisplayText.Equals("Personalizzata");
             this.frequencyNumericUpDown.Enabled = this.frequencyTypeComboBox.Enabled;
+        }
+
+        private void setCustomFrequency(object sender, EventArgs e)
+        {
+            BindingContainer<Periodicita> custom = this.frequencyComboBox.SelectedItem as BindingContainer<Periodicita>;
+            if (custom != null)
+            {
+                custom.Value = new Periodicita((Periodicita.Frequenza)this.frequencyTypeComboBox.SelectedValue, (int)this.frequencyNumericUpDown.Value);
+            }
         }
     }
 }
