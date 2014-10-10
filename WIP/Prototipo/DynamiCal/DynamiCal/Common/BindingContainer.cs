@@ -21,9 +21,9 @@ namespace DynamiCal.Common
             this.Value = value;
         }
 
-        public string DisplayText { get; private set; }
+        public string DisplayText { get; set; }
 
-        public T Value { get; private set; }
+        public T Value { get; set; }
 
         object IBindingContainer.Value
         {
