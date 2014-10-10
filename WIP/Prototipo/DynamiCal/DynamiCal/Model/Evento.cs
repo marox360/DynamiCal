@@ -18,7 +18,7 @@ namespace DynamiCal.Model
         private ModelloEvento _modello;
         private List<IVoce> _voci;
 
-        public Evento(string nome, DateTime data, long durata, ModelloEvento modello, IEnumerable<IVoce> voci = null, string descrizione = null, string luogo = null, Periodicita periodicita = null)
+        public Evento(string nome, DateTime data, long durata, ModelloEvento modello, IEnumerable<IVoce> voci = null, string descrizione = null, string luogo = null, Periodicita? periodicita = null)
         {
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or whitespace");
@@ -32,7 +32,7 @@ namespace DynamiCal.Model
             _luogo = luogo.Trim();
             _data = data;
             _durata = durata;
-            _periodicita = periodicita;
+            _periodicita = periodicita.HasValue ? periodicita.Value : Periodicita.Mai;
             _modello = modello;
             _voci = voci == null ? new List<IVoce>() : new List<IVoce>(voci);
         }

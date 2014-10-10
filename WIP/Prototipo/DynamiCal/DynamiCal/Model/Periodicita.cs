@@ -1,71 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
 namespace DynamiCal.Model
 {
-    class Periodicita
+    public struct Periodicita
     {
-        private int _ogniGiorno;
-        private int _ogniSettimana;
-        private int _ogniMese;
-        private int _ogniAnno;
-
-        public Periodicita(int ogniGiorno, int ogniSettimana, int ogniMese, int ogniAnno)
+        public enum Frequenza
         {
-            _ogniGiorno = ogniGiorno;
-            _ogniSettimana = ogniSettimana;
-            _ogniMese = ogniMese;
-            _ogniAnno = ogniAnno;
+            Mai = 0, Giornaliera, Settimanale, Mensile, Annuale
         }
 
-        public int OgniGiorno
+        private int _valore;
+        private Frequenza _frequenza;
+
+        public Periodicita(Frequenza frequenza, int valore = 1)
         {
-            set
-            {
-                _ogniGiorno = value;
-            }
+            #region Precondizioni
+            Debug.Assert(valore >= 1, "Valore can't be zero or negative");
+            #endregion
+
+            _valore = valore;
+            _frequenza = frequenza;
+        }
+
+        public static Periodicita Mai
+        {
             get
             {
-                return _ogniGiorno;
+                return new Periodicita(Frequenza.Mai);
             }
         }
 
-        public int OgniSettimana
+        public int Valore
         {
-            set
-            {
-                _ogniSettimana = value;
-            }
             get
             {
-                return _ogniSettimana;
+                return _valore;
+            }
+            set
+            {
+                #region Precondizioni
+                Debug.Assert(value >= 1, "Valore can't be zero or negative");
+                #endregion
+
+                _valore = value;
             }
         }
 
-        public int OgniMese
+        public Frequenza Ripetizione
         {
-            set
-            {
-                _ogniMese = value;
-            }
             get
             {
-                return _ogniMese;
+                return _frequenza;
             }
-        }
-
-        public int OgniAnno
-        {
             set
             {
-                _ogniAnno = value;
-            }
-            get
-            {
-                return _ogniAnno;
+                _frequenza = value;
             }
         }
+        
     }
 }
