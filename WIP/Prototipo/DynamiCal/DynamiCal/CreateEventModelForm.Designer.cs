@@ -38,18 +38,18 @@
             this.addEntryButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.entryTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.tipoVoceContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.entryNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.overviewGridView = new System.Windows.Forms.DataGridView();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.voceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipoVoceContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new DynamiCal.GUI.DataGridView.DataGridViewEntryTypeColumn();
             this.eventModelGroup.SuspendLayout();
             this.modelEntryGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoVoceContainerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.overviewGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voceBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoVoceContainerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // createButton
@@ -140,7 +140,7 @@
             // entryTypeComboBox
             // 
             this.entryTypeComboBox.DataSource = this.tipoVoceContainerBindingSource;
-            this.entryTypeComboBox.DisplayMember = "Descrizione";
+            this.entryTypeComboBox.DisplayMember = "DisplayText";
             this.entryTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.entryTypeComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.entryTypeComboBox.FormattingEnabled = true;
@@ -150,6 +150,10 @@
             this.entryTypeComboBox.Size = new System.Drawing.Size(140, 23);
             this.entryTypeComboBox.TabIndex = 2;
             this.entryTypeComboBox.ValueMember = "Value";
+            // 
+            // tipoVoceContainerBindingSource
+            // 
+            this.tipoVoceContainerBindingSource.DataSource = typeof(DynamiCal.Common.IBindingContainer);
             // 
             // entryNameTextBox
             // 
@@ -186,11 +190,16 @@
             this.overviewGridView.DataSource = this.voceBindingSource;
             this.overviewGridView.Location = new System.Drawing.Point(13, 188);
             this.overviewGridView.Name = "overviewGridView";
+            this.overviewGridView.ReadOnly = true;
             this.overviewGridView.RowHeadersVisible = false;
             this.overviewGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.overviewGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.overviewGridView.Size = new System.Drawing.Size(300, 120);
             this.overviewGridView.TabIndex = 5;
+            // 
+            // voceBindingSource
+            // 
+            this.voceBindingSource.DataSource = typeof(DynamiCal.Model.Voce);
             // 
             // nomeDataGridViewTextBoxColumn
             // 
@@ -201,18 +210,12 @@
             // 
             // Tipo
             // 
-            this.Tipo.DataPropertyName = "Tipo";
+            this.Tipo.DataPropertyName = "TipoVoce";
             this.Tipo.HeaderText = "Tipo";
             this.Tipo.Name = "Tipo";
             this.Tipo.ReadOnly = true;
-            // 
-            // voceBindingSource
-            // 
-            this.voceBindingSource.DataSource = typeof(DynamiCal.Model.Voce);
-            // 
-            // tipoVoceContainerBindingSource
-            // 
-            this.tipoVoceContainerBindingSource.DataSource = typeof(DynamiCal.TipoVoceContainer);
+            this.Tipo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Tipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // CreateEventModelForm
             // 
@@ -233,9 +236,9 @@
             this.eventModelGroup.PerformLayout();
             this.modelEntryGroup.ResumeLayout(false);
             this.modelEntryGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipoVoceContainerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.overviewGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.voceBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipoVoceContainerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,8 +258,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView overviewGridView;
         private System.Windows.Forms.BindingSource voceBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
         private System.Windows.Forms.BindingSource tipoVoceContainerBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
+        private GUI.DataGridView.DataGridViewEntryTypeColumn Tipo;
     }
 }

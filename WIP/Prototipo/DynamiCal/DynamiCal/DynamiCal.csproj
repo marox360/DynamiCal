@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\BindingContainer.cs" />
     <Compile Include="CreateCalendarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,14 +69,16 @@
     <Compile Include="CreateEventModelForm.Designer.cs">
       <DependentUpon>CreateEventModelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataGridView\DataGridViewCalendarCell.cs">
+    <Compile Include="GUI\DataGridView\DataGridViewCalendarCell.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DataGridView\DataGridViewDayCell.cs" />
-    <Compile Include="DataGridView\DataGridViewDayColumn.cs" />
-    <Compile Include="DataGridView\BindingSources\MonthlySource.cs" />
-    <Compile Include="Extension\DateTimeExtension.cs" />
+    <Compile Include="GUI\DataGridView\DataGridViewDayCell.cs" />
+    <Compile Include="GUI\DataGridView\DataGridViewDayColumn.cs" />
+    <Compile Include="GUI\DataGridView\BindingSources\MonthlySource.cs" />
+    <Compile Include="Common\Extensions\DateTimeExtension.cs" />
     <Compile Include="Filters\CriterioDiFiltraggio.cs" />
+    <Compile Include="GUI\DataGridView\DataGridViewEntryTypeCell.cs" />
+    <Compile Include="GUI\DataGridView\DataGridViewEntryTypeColumn.cs" />
     <Compile Include="Model\Agenda.cs" />
     <Compile Include="Model\Amico.cs" />
     <Compile Include="MainForm.cs">
@@ -94,7 +97,7 @@
     <Compile Include="Model\VoceFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TreeView\CalendarTreeNode.cs" />
+    <Compile Include="GUI\TreeView\CalendarTreeNode.cs" />
     <EmbeddedResource Include="CreateCalendarForm.resx">
       <DependentUpon>CreateCalendarForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,13 +120,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\DynamiCal.Common.IBindingContainer.datasource" />
     <None Include="Properties\DataSources\DynamiCal.DataGridView.BindingSources.Week.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Agenda.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Calendario.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.ModelloEvento.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Voce.datasource" />
-    <None Include="Properties\DataSources\ModelloEventoContainer.datasource" />
-    <None Include="Properties\DataSources\TipoVoceContainer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

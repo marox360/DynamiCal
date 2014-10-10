@@ -5,9 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.ComponentModel;
+using System.Reflection;
 
 namespace DynamiCal.Model
 {
+    static class TipoVoceExtension
+    {
+        public static string GetDescription(this Voce.Tipo value)
+        {
+            FieldInfo field = value.GetType().GetField(value.ToString());
+            DescriptionAttribute attribute = Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute)) as DescriptionAttribute;
+
+            return attribute == null ? value.ToString() : attribute.Description;
+        }
+    }
+
     class Voce
     {
         public enum Tipo

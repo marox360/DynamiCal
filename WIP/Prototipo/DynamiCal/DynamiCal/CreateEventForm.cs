@@ -1,4 +1,5 @@
-﻿using DynamiCal.DataGridView;
+﻿using DynamiCal.Common;
+using DynamiCal.DataGridView;
 using DynamiCal.Model;
 using System;
 using System.Collections.Generic;
@@ -25,11 +26,11 @@ namespace DynamiCal
             this.frequencyComboBox.SelectedIndex = 0;
 
             this.eventModelSelectorComboBox.BeginUpdate();
-            this.modelloEventoContainerBindingSource.Add(new ModelloEventoContainer("Nuovo Modello..."));
+            this.modelloEventoContainerBindingSource.Add(new BindingContainer<ModelloEvento>("Nuovo Modello...", null));
             foreach (ModelloEvento modello in Agenda.Instance.ModelliEvento)
             {
-                ModelloEventoContainer eventModelContainer = new ModelloEventoContainer(modello);
-                this.modelloEventoContainerBindingSource.Add(new ModelloEventoContainer(modello));
+                BindingContainer<ModelloEvento> eventModelContainer = new BindingContainer<ModelloEvento>(modello.Nome, modello);
+                this.modelloEventoContainerBindingSource.Add(eventModelContainer);
 
                 if (modello.Voci.Count == 0)
                 {
@@ -62,7 +63,8 @@ namespace DynamiCal
 
         private void EventModelsChanged(object sender, AgendaCollectionEventArgs e)
         {
-            ModelloEventoContainer eventModelContainer = new ModelloEventoContainer(e.Item as ModelloEvento);
+            ModelloEvento eventModel = e.Item as ModelloEvento;
+            BindingContainer<ModelloEvento> eventModelContainer = new BindingContainer<ModelloEvento>(eventModel.Nome, eventModel);
 
             switch (e.Action)
             {
@@ -110,7 +112,7 @@ namespace DynamiCal
         {
             if (this.eventModelSelectorComboBox.SelectedItem != null)
             {
-                ModelloEvento modelloEvento = (this.eventModelSelectorComboBox.SelectedItem as ModelloEventoContainer).EventModel;
+                ModelloEvento modelloEvento = (this.eventModelSelectorComboBox.SelectedItem as BindingContainer<ModelloEvento>).Value;
                 if (modelloEvento == null)
                 {
                     this.Visible = false;
@@ -186,12 +188,12 @@ namespace DynamiCal
 
         private void frequencyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            this.frequencyTypeComboBox.Enabled = this.frequencyComboBox.SelectedItem == "Personalizzata";
+            this.frequencyTypeComboBox.Enabled = this.frequencyComboBox.SelectedItem.Equals("Personalizzata");
             this.frequencyNumericUpDown.Enabled = this.frequencyTypeComboBox.Enabled;
         }
     }
 
-    internal class ModelloEventoContainer : IEquatable<ModelloEventoContainer>, IComparable<ModelloEventoContainer>
+    /*internal class ModelloEventoContainer : IEquatable<ModelloEventoContainer>, IComparable<ModelloEventoContainer>
     {
         private object _object;
 
@@ -272,5 +274,5 @@ namespace DynamiCal
 
             return this.DisplayValue.CompareTo(other.DisplayValue);
         }
-    }
+    }*/
 }

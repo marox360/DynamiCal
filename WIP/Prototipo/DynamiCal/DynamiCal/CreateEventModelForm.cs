@@ -1,4 +1,5 @@
-﻿using DynamiCal.Model;
+﻿using DynamiCal.Common;
+using DynamiCal.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,9 +19,9 @@ namespace DynamiCal
         {
             InitializeComponent();
 
-            foreach (TipoVoceContainer tipo in TipoVoceContainer.GetAllTypes())
+            foreach (Voce.Tipo tipo in Enum.GetValues(typeof(Voce.Tipo)).Cast<Voce.Tipo>())
             {
-                this.tipoVoceContainerBindingSource.Add(tipo);
+                this.tipoVoceContainerBindingSource.Add(new BindingContainer<Voce.Tipo>(tipo.GetDescription(), tipo));
             }
         }
 
@@ -64,71 +65,6 @@ namespace DynamiCal
             ModelloEvento modelloEvento = new ModelloEvento(this.modelNameTextBox.Text, voci);
 
             return modelloEvento;
-        }
-    }
-
-    internal class TipoVoceContainer : IEquatable<TipoVoceContainer>
-    {
-        public TipoVoceContainer(Voce.Tipo tipo)
-        {
-            this.Value = tipo;
-        }
-
-        public Voce.Tipo Value { get; private set; }
-
-        public string Descrizione
-        {
-            get
-            {
-                return this.GetEnumDescription(this.Value);
-            }
-        }
-
-        public static List<TipoVoceContainer> GetAllTypes()
-        {
-            List<TipoVoceContainer> allTypes = new List<TipoVoceContainer>();
-            foreach (Voce.Tipo tipo in Enum.GetValues(typeof(Voce.Tipo)).Cast<Voce.Tipo>())
-            {
-                allTypes.Add(new TipoVoceContainer(tipo));
-            }
-
-            return allTypes;
-        }
-
-        private string GetEnumDescription(Enum value)
-        {
-            FieldInfo field = value.GetType().GetField(value.ToString());
-            DescriptionAttribute attribute = Attribute.GetCustomAttribute(field, typeof(DescriptionAttribute)) as DescriptionAttribute;
-
-            return attribute == null ? value.ToString() : attribute.Description;
-        }
-
-        public bool Equals(TipoVoceContainer other)
-        {
-            if (ReferenceEquals(null, other))
-                return false;
-            if (ReferenceEquals(this, other))
-                return true;
-            return this.Value == other.Value;
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (ReferenceEquals(null, obj))
-                return false;
-            if (ReferenceEquals(this, obj))
-                return true;
-            if (obj.GetType() != this.GetType())
-                return false;
-            return Equals((TipoVoceContainer)obj);
-        }
-
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                return (this.Value.GetHashCode() * 397);
-            }
         }
     }
 }

@@ -44,7 +44,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.entriesDataGridView = new System.Windows.Forms.DataGridView();
             this.eventModelSelectorComboBox = new System.Windows.Forms.ComboBox();
-            this.modelloEventoContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
             this.eventDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,15 +58,16 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.modelloEventoContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frequencyNumericUpDown)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -231,18 +231,14 @@
             // eventModelSelectorComboBox
             // 
             this.eventModelSelectorComboBox.DataSource = this.modelloEventoContainerBindingSource;
-            this.eventModelSelectorComboBox.DisplayMember = "DisplayValue";
+            this.eventModelSelectorComboBox.DisplayMember = "DisplayText";
             this.eventModelSelectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.eventModelSelectorComboBox.Location = new System.Drawing.Point(205, 35);
             this.eventModelSelectorComboBox.Name = "eventModelSelectorComboBox";
             this.eventModelSelectorComboBox.Size = new System.Drawing.Size(185, 21);
             this.eventModelSelectorComboBox.TabIndex = 15;
-            this.eventModelSelectorComboBox.ValueMember = "EventModel";
+            this.eventModelSelectorComboBox.ValueMember = "Value";
             this.eventModelSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.eventModelSelectorComboBox_SelectedIndexChanged);
-            // 
-            // modelloEventoContainerBindingSource
-            // 
-            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.ModelloEventoContainer);
             // 
             // label5
             // 
@@ -397,6 +393,10 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Inserisci il luogo:";
             // 
+            // modelloEventoContainerBindingSource
+            // 
+            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.Common.IBindingContainer);
+            // 
             // CreateEventForm
             // 
             this.AcceptButton = this.createButton;
@@ -419,7 +419,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -429,6 +428,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.frequencyNumericUpDown)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -453,7 +453,6 @@
         private System.Windows.Forms.TextBox eventDescriptionTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.BindingSource calendarioBindingSource;
-        private System.Windows.Forms.BindingSource modelloEventoContainerBindingSource;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -465,5 +464,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.BindingSource modelloEventoContainerBindingSource;
     }
 }
