@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Model
 {
-    class Evento
+    class Evento : IEquatable<Evento>
     {
         private string _nome;
         private string _descrizione;
         private string _luogo;
         private DateTime _data;
-        private long _durata;
+        private int _durata;
         private Periodicita _periodicita;
         private ModelloEvento _modello;
         private List<IVoce> _voci;
 
-        public Evento(string nome, DateTime data, long durata, ModelloEvento modello, IEnumerable<IVoce> voci = null, string descrizione = null, string luogo = null, Periodicita? periodicita = null)
+        public Evento(string nome, DateTime data, int durata, ModelloEvento modello, IEnumerable<IVoce> voci = null, string descrizione = null, string luogo = null, Periodicita? periodicita = null)
         {
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or whitespace");
@@ -93,7 +93,7 @@ namespace DynamiCal.Model
             }
         }
 
-        public long Durata
+        public int Durata
         {
             set
             {
@@ -134,6 +134,34 @@ namespace DynamiCal.Model
             get
             {
                 return _voci.AsReadOnly();
+            }
+        }
+
+        public bool Equals(Evento other)
+        {
+            if (ReferenceEquals(null, other))
+                return false;
+            if (ReferenceEquals(this, other))
+                return true;
+            return string.Equals(this.Nome, other.Nome) && this.Data.Equals(other.Data) && this.Durata == other.Durata;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj))
+                return false;
+            if (ReferenceEquals(this, obj))
+                return true;
+            if (obj.GetType() != this.GetType())
+                return false;
+            return Equals((Evento)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (this.Nome.GetHashCode() * 397) + this.Data.GetHashCode() + this.Durata;
             }
         }
     }
