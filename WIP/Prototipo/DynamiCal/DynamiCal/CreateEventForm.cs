@@ -113,6 +113,19 @@ namespace DynamiCal
         {
             this.durationComboBox.Enabled = !this.allDayCheckBox.Checked;
             this.durationUpDown.Enabled = this.durationComboBox.Enabled;
+
+            if (this.allDayCheckBox.Checked)
+            {
+                this.durationUpDown.Value = 1;
+                this.durationUpDown.Text = this.durationUpDown.Value.ToString();
+                this.durationComboBox.SelectedItem = "Giorni";
+                this.eventDateTimePicker.Value = this.eventDateTimePicker.Value.Date;
+                this.eventDateTimePicker.CustomFormat = "dddd, dd MMMM yyyy";
+            }
+            else
+            {
+                this.eventDateTimePicker.CustomFormat = "dddd, dd MMMM yyyy alle HH:mm";
+            }
         }
 
         private void validateForm(object sender, EventArgs e)

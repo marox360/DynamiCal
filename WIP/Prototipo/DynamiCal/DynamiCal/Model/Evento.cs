@@ -23,7 +23,7 @@ namespace DynamiCal.Model
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or whitespace");
             Debug.Assert(data != null, "Data is null");
-            Debug.Assert(durata >= 0, "Durata is negative"); // Una durata = 0 indica che l'evento dura tutto il giorno
+            Debug.Assert(durata > 0, "Durata is negative or zero");
             Debug.Assert(modello != null, "Modello is null");
             #endregion
 
@@ -98,7 +98,7 @@ namespace DynamiCal.Model
             set
             {
                 #region Precondizioni
-                Debug.Assert(value >= 0, "Durata is negative");
+                Debug.Assert(value > 0, "Durata is negative or zero");
                 #endregion
 
                 _durata = value;
