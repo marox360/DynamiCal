@@ -96,6 +96,7 @@ namespace DynamiCal.Model
 
         public bool TestDate(DateTime startDate, DateTime testDate)
         {
+            #warning L'implentazione attuale non tiene conto della durata dell'evento!! Meglio considerarla qui o in evento?!
             if (testDate < startDate)
             {
                 return false;
