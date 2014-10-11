@@ -14,18 +14,18 @@ namespace DynamiCal.Filters
 
     abstract class Filtro : IFiltro
     {
-        private readonly IFiltro _filtro;
+        private readonly IFiltro _component;
 
         protected Filtro(IFiltro filtro)
         {
-            _filtro = filtro;
+            _component = filtro;
         }
 
         public IFiltro Component
         {
             get
             {
-                return _filtro;
+                return _component;
             }
         }
 
