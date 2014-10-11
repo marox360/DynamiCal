@@ -38,6 +38,15 @@ namespace DynamiCal.Model
             }
         }
 
+        public void AggiungiEvento(Evento evento)
+        {
+            #region Precondizioni
+            Debug.Assert(evento != null, "Evento cannot be null");
+            #endregion
+
+            _eventi.Add(evento);
+        }
+
         public bool Equals(Calendario other)
         {
             if (ReferenceEquals(null, other))

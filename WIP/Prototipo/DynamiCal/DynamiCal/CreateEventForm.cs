@@ -113,15 +113,11 @@ namespace DynamiCal
         {
             this.durationComboBox.Enabled = !this.allDayCheckBox.Checked;
             this.durationUpDown.Enabled = this.durationComboBox.Enabled;
-
-            this.durationUpDown.Value = 1;
-            this.durationUpDown.Text = this.durationUpDown.Value.ToString();
-            this.durationComboBox.SelectedItem = "Giorni";
         }
 
         private void validateForm(object sender, EventArgs e)
         {
-            this.createButton.Enabled = !String.IsNullOrWhiteSpace(this.eventNameTextBox.Text);
+            this.createButton.Enabled = !String.IsNullOrWhiteSpace(this.eventNameTextBox.Text) && this.calendarSelectorComboBox.SelectedValue != null && this.eventModelSelectorComboBox.SelectedValue != null;
         }
 
         private void eventModelSelectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -178,6 +174,8 @@ namespace DynamiCal
 
         private void createButton_Click(object sender, EventArgs e)
         {
+            (this.calendarSelectorComboBox.SelectedValue as Calendario).AggiungiEvento(this.GetEvento());
+
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
@@ -208,13 +206,41 @@ namespace DynamiCal
             this.frequencyNumericUpDown.Enabled = this.frequencyTypeComboBox.Enabled;
         }
 
-        private void setCustomFrequency(object sender, EventArgs e)
+        private void SetCustomFrequency(object sender, EventArgs e)
         {
             BindingContainer<Periodicita> custom = this.frequencyComboBox.SelectedItem as BindingContainer<Periodicita>;
             if (custom != null)
             {
                 custom.Value = new Periodicita((Periodicita.Frequenza)this.frequencyTypeComboBox.SelectedValue, (int)this.frequencyNumericUpDown.Value);
             }
+        }
+
+        private Evento GetEvento()
+        {
+            int duration = this.allDayCheckBox.Checked ? 0 : (int)this.durationUpDown.Value;
+            switch (this.durationComboBox.SelectedValue as string)
+            {
+                case "Ore":
+                    duration *= 60;
+                    break;
+
+                case "Giorni":
+                    duration *= 60 * 24;
+                    break;
+
+                default:
+                    break;
+            }
+
+            return new Evento(
+                this.eventNameTextBox.Text,
+                this.eventDateTimePicker.Value,
+                duration,
+                this.eventModelSelectorComboBox.SelectedValue as ModelloEvento,
+                this.entriesDataGridView.DataSource as IEnumerable<IVoce>,
+                this.eventDescriptionTextBox.Text,
+                this.eventLocationTextBox.Text,
+                (Periodicita)this.frequencyComboBox.SelectedValue);
         }
     }
 }

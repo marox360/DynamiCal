@@ -59,7 +59,7 @@
             this.frequencyComboBox = new System.Windows.Forms.ComboBox();
             this.periodicitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.eventLocationTextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).BeginInit();
@@ -356,7 +356,7 @@
             0,
             0,
             0});
-            this.frequencyNumericUpDown.ValueChanged += new System.EventHandler(this.setCustomFrequency);
+            this.frequencyNumericUpDown.ValueChanged += new System.EventHandler(this.SetCustomFrequency);
             // 
             // frequencyTypeComboBox
             // 
@@ -370,7 +370,7 @@
             this.frequencyTypeComboBox.Size = new System.Drawing.Size(121, 21);
             this.frequencyTypeComboBox.TabIndex = 2;
             this.frequencyTypeComboBox.ValueMember = "Value";
-            this.frequencyTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.setCustomFrequency);
+            this.frequencyTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.SetCustomFrequency);
             // 
             // frequenzaBindingSource
             // 
@@ -404,7 +404,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox1);
+            this.groupBox4.Controls.Add(this.eventLocationTextBox);
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Controls.Add(this.eventModelSelectorComboBox);
             this.groupBox4.Controls.Add(this.label5);
@@ -416,12 +416,12 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Altro";
             // 
-            // textBox1
+            // eventLocationTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 22);
-            this.textBox1.TabIndex = 1;
+            this.eventLocationTextBox.Location = new System.Drawing.Point(6, 35);
+            this.eventLocationTextBox.Name = "eventLocationTextBox";
+            this.eventLocationTextBox.Size = new System.Drawing.Size(188, 22);
+            this.eventLocationTextBox.TabIndex = 1;
             // 
             // label9
             // 
@@ -500,7 +500,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox frequencyComboBox;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox eventLocationTextBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.BindingSource modelloEventoContainerBindingSource;
         private System.Windows.Forms.BindingSource periodicitaBindingSource;
