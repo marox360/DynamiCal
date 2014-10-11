@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Filters
 {
-    class CriterioDiFiltraggio : IFiltro
+    class FiltroCalendario : Filtro
     {
-
     }
 }

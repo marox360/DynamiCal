@@ -69,6 +69,12 @@
     <Compile Include="CreateEventModelForm.Designer.cs">
       <DependentUpon>CreateEventModelForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Filters\Filtro.cs" />
+    <Compile Include="Filters\FiltroCalendario.cs" />
+    <Compile Include="Filters\FiltroFactory.cs" />
+    <Compile Include="Filters\FiltroModello.cs" />
+    <Compile Include="Filters\FiltroRicerca.cs" />
+    <Compile Include="Filters\FiltroTemporale.cs" />
     <Compile Include="GUI\DataGridView\DataGridViewCalendarCell.cs">
       <SubType>Component</SubType>
     </Compile>

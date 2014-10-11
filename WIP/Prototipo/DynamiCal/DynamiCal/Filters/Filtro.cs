@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Filters
 {
-    class CriterioDiFiltraggio : IFiltro
+    interface IFiltro
+    {
+
+    }
+
+    abstract class Filtro : IFiltro
     {
 
     }
