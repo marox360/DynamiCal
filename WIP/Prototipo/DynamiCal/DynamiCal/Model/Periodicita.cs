@@ -94,6 +94,44 @@ namespace DynamiCal.Model
             }
         }
 
+        public bool TestDate(DateTime startDate, DateTime testDate)
+        {
+            if (testDate < startDate)
+            {
+                return false;
+            }
+
+            TimeSpan timeSpan = testDate - startDate;
+
+            switch (_frequenza)
+            {
+                case Frequenza.Mai:
+                    return
+                        timeSpan.TotalDays == 0;
+
+                case Frequenza.Giornaliera:
+                    return
+                        (timeSpan.TotalDays % _valore) == 0;
+
+                case Frequenza.Settimanale:
+                    return
+                        (timeSpan.TotalDays % 7) == 0 && (timeSpan.TotalDays / 7) % _valore == 0;
+
+                case Frequenza.Mensile:
+                    return
+                        testDate.Day == startDate.Day &&
+                        (testDate.Month + (testDate.Year != startDate.Year ? 12 : 0) - startDate.Month) % _valore == 0;
+
+                case Frequenza.Annuale:
+                    return
+                        testDate.Day == startDate.Day &&
+                        testDate.Month == startDate.Month &&
+                        (testDate.Year - startDate.Year) % _valore == 0;
+            }
+
+            return false;
+        }
+
         public static Periodicita operator *(Periodicita periodicita, int valore)
         {
             return new Periodicita(periodicita.Ripetizione, valore);
