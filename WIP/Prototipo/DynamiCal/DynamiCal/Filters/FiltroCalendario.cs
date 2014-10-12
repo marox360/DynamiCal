@@ -25,7 +25,7 @@ namespace DynamiCal.Filters
 
         public override IEnumerable<Evento> FiltraEventi()
         {
-            return null;
+            return Component.FiltraEventi().Where(evento => _calendari.Where(calendario => calendario.Eventi.Contains(evento)).Count() != 0);
         }
     }
 }

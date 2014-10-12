@@ -23,7 +23,7 @@ namespace DynamiCal.Filters
 
         public override IEnumerable<Evento> FiltraEventi()
         {
-            return null;
+            return Component.FiltraEventi().Where(evento => evento.Nome.Contains(_text) || evento.Descrizione.Contains(_text) || evento.Luogo.Contains(_text));
         }
     }
 }

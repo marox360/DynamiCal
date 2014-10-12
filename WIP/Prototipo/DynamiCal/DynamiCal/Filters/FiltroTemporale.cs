@@ -37,7 +37,7 @@ namespace DynamiCal.Filters
 
         public override IEnumerable<Evento> FiltraEventi()
         {
-            return null;
+            return Component.FiltraEventi().Where(evento => (_startDate < evento.Data && evento.Data < _endDate) || (_startDate > evento.Data && (_startDate - evento.Data).TotalMinutes < evento.Durata));
         }
     }
 }

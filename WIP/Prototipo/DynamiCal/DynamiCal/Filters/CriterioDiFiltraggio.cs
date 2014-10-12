@@ -10,17 +10,20 @@ namespace DynamiCal.Filters
 {
     class CriterioDiFiltraggio : IFiltro
     {
-        public CriterioDiFiltraggio(IList<Calendario> calendari)
+        private readonly IEnumerable<Calendario> _calendari;
+
+        public CriterioDiFiltraggio(IEnumerable<Calendario> calendari)
         {
             #region Precondizioni
             Debug.Assert(calendari != null, "Calendari is null");
             #endregion
 
+            _calendari = calendari;
         }
 
         public IEnumerable<Evento> FiltraEventi()
         {
-            return null;
+            return _calendari.SelectMany(calendario => calendario.Eventi);
         }
     }
 }
