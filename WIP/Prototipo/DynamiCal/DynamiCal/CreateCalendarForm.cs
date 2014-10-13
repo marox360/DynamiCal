@@ -25,6 +25,8 @@ namespace DynamiCal
 
         private void createButton_Click(object sender, EventArgs e)
         {
+            Agenda.Instance.AggiungiCalendario(this.GetCalendario());
+
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
@@ -38,7 +40,7 @@ namespace DynamiCal
             }
         }
 
-        internal Calendario GetCalendario()
+        private Calendario GetCalendario()
         {
             return new CalendarioLocale(this.nameTextBox.Text);
         }

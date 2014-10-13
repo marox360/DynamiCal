@@ -172,7 +172,7 @@ namespace DynamiCal
 
             if (createCalendarDialog.ShowDialog(this) == DialogResult.OK)
             {
-                Agenda.Instance.AggiungiCalendario(createCalendarDialog.GetCalendario());
+
             }
 
             createCalendarDialog.Dispose();
