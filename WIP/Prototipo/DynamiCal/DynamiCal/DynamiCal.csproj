@@ -50,7 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\BindingContainer.cs" />
+    <Compile Include="Presentation\BindingContainer.cs" />
     <Compile Include="CreateCalendarForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,16 +75,16 @@
     <Compile Include="Filters\FiltroModello.cs" />
     <Compile Include="Filters\FiltroRicerca.cs" />
     <Compile Include="Filters\FiltroTemporale.cs" />
-    <Compile Include="GUI\DataGridView\DataGridViewCalendarCell.cs">
+    <Compile Include="Presentation\DataGridView\DataGridViewCalendarCell.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="GUI\DataGridView\DataGridViewDayCell.cs" />
-    <Compile Include="GUI\DataGridView\DataGridViewDayColumn.cs" />
-    <Compile Include="GUI\DataGridView\BindingSources\MonthlySource.cs" />
-    <Compile Include="Common\Extensions\DateTimeExtension.cs" />
+    <Compile Include="Presentation\DataGridView\DataGridViewDayCell.cs" />
+    <Compile Include="Presentation\DataGridView\DataGridViewDayColumn.cs" />
+    <Compile Include="Presentation\DataGridView\BindingSources\MonthlySource.cs" />
+    <Compile Include="Presentation\Extensions\DateTimeExtension.cs" />
     <Compile Include="Filters\CriterioDiFiltraggio.cs" />
-    <Compile Include="GUI\DataGridView\DataGridViewEntryTypeCell.cs" />
-    <Compile Include="GUI\DataGridView\DataGridViewEntryTypeColumn.cs" />
+    <Compile Include="Presentation\DataGridView\DataGridViewEntryTypeCell.cs" />
+    <Compile Include="Presentation\DataGridView\DataGridViewEntryTypeColumn.cs" />
     <Compile Include="Model\Agenda.cs" />
     <Compile Include="Model\Amico.cs" />
     <Compile Include="MainForm.cs">
@@ -103,7 +103,7 @@
     <Compile Include="Model\VoceFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GUI\TreeView\CalendarTreeNode.cs" />
+    <Compile Include="Presentation\TreeView\CalendarTreeNode.cs" />
     <EmbeddedResource Include="CreateCalendarForm.resx">
       <DependentUpon>CreateCalendarForm.cs</DependentUpon>
     </EmbeddedResource>

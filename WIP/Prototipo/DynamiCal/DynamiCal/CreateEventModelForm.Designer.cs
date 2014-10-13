@@ -44,7 +44,7 @@
             this.overviewGridView = new System.Windows.Forms.DataGridView();
             this.voceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new DynamiCal.GUI.DataGridView.DataGridViewEntryTypeColumn();
+            this.Tipo = new DynamiCal.Presentation.DataGridView.DataGridViewEntryTypeColumn();
             this.eventModelGroup.SuspendLayout();
             this.modelEntryGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoVoceContainerBindingSource)).BeginInit();
@@ -153,7 +153,7 @@
             // 
             // tipoVoceContainerBindingSource
             // 
-            this.tipoVoceContainerBindingSource.DataSource = typeof(DynamiCal.Common.IBindingContainer);
+            this.tipoVoceContainerBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
             // 
             // entryNameTextBox
             // 
@@ -260,6 +260,6 @@
         private System.Windows.Forms.BindingSource voceBindingSource;
         private System.Windows.Forms.BindingSource tipoVoceContainerBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private GUI.DataGridView.DataGridViewEntryTypeColumn Tipo;
+        private Presentation.DataGridView.DataGridViewEntryTypeColumn Tipo;
     }
 }

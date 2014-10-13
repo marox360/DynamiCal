@@ -1,7 +1,7 @@
-﻿using DynamiCal.DataGridView.BindingSources;
+﻿using DynamiCal.Presentation.DataGridView.BindingSources;
 using DynamiCal.Model;
 using DynamiCal.Extension;
-using DynamiCal.TreeView;
+using DynamiCal.Presentation.TreeView;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

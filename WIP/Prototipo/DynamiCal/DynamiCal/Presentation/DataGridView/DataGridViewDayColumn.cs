@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamiCal.DataGridView
+namespace DynamiCal.Presentation.DataGridView
 {
     public class DataGridViewDayColumn : DataGridViewColumn
     {

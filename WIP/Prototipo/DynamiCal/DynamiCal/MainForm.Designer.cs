@@ -41,13 +41,13 @@
             this.datePicker = new System.Windows.Forms.MonthCalendar();
             this.calendarPanel = new System.Windows.Forms.Panel();
             this.calendarGridView = new System.Windows.Forms.DataGridView();
-            this.lunedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
-            this.martedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
-            this.mercoledìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
-            this.giovedìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
-            this.venerdìDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
-            this.sabatoDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
-            this.domenicaDataGridViewColumn = new DynamiCal.DataGridView.DataGridViewDayColumn();
+            this.lunedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.martedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.mercoledìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.giovedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.venerdìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.sabatoDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.domenicaDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
             this.weekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.calendarTitlePanel = new System.Windows.Forms.Panel();
             this.topFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -270,7 +270,7 @@
             // 
             // weekBindingSource
             // 
-            this.weekBindingSource.DataSource = typeof(DynamiCal.DataGridView.BindingSources.CalendarWeek);
+            this.weekBindingSource.DataSource = typeof(DynamiCal.Presentation.DataGridView.BindingSources.CalendarWeek);
             // 
             // calendarTitlePanel
             // 
@@ -456,13 +456,13 @@
         private System.Windows.Forms.Panel calendarTitlePanel;
         private System.Windows.Forms.DataGridView calendarGridView;
         private System.Windows.Forms.BindingSource weekBindingSource;
-        private DataGridView.DataGridViewDayColumn lunedìDataGridViewColumn;
-        private DataGridView.DataGridViewDayColumn martedìDataGridViewColumn;
-        private DataGridView.DataGridViewDayColumn mercoledìDataGridViewColumn;
-        private DataGridView.DataGridViewDayColumn giovedìDataGridViewColumn;
-        private DataGridView.DataGridViewDayColumn venerdìDataGridViewColumn;
-        private DataGridView.DataGridViewDayColumn sabatoDataGridViewColumn;
-        private DataGridView.DataGridViewDayColumn domenicaDataGridViewColumn;
+        private Presentation.DataGridView.DataGridViewDayColumn lunedìDataGridViewColumn;
+        private Presentation.DataGridView.DataGridViewDayColumn martedìDataGridViewColumn;
+        private Presentation.DataGridView.DataGridViewDayColumn mercoledìDataGridViewColumn;
+        private Presentation.DataGridView.DataGridViewDayColumn giovedìDataGridViewColumn;
+        private Presentation.DataGridView.DataGridViewDayColumn venerdìDataGridViewColumn;
+        private Presentation.DataGridView.DataGridViewDayColumn sabatoDataGridViewColumn;
+        private Presentation.DataGridView.DataGridViewDayColumn domenicaDataGridViewColumn;
         private System.Windows.Forms.MenuStrip menuBar;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem creaNuovoCalendarioToolStripMenuItem;

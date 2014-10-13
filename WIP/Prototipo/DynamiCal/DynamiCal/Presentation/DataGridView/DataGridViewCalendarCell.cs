@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamiCal.DataGridView
+namespace DynamiCal.Presentation.DataGridView
 {
     // Taken from http://msdn.microsoft.com/en-us/library/7tas5c80.aspx
 

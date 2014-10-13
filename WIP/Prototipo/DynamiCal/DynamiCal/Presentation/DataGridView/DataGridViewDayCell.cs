@@ -1,4 +1,4 @@
-﻿using DynamiCal.DataGridView.BindingSources;
+﻿using DynamiCal.Presentation.DataGridView.BindingSources;
 using DynamiCal.Extension;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamiCal.DataGridView
+namespace DynamiCal.Presentation.DataGridView
 {
     public class DataGridViewDayCell : DataGridViewTextBoxCell
     {

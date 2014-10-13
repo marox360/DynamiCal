@@ -1,5 +1,5 @@
-﻿using DynamiCal.Common;
-using DynamiCal.DataGridView;
+﻿using DynamiCal.Presentation;
+using DynamiCal.Presentation.DataGridView;
 using DynamiCal.Model;
 using System;
 using System.Collections.Generic;

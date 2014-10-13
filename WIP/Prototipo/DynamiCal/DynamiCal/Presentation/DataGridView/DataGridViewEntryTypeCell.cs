@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamiCal.GUI.DataGridView
+namespace DynamiCal.Presentation.DataGridView
 {
     class DataGridViewEntryTypeCell : DataGridViewTextBoxCell
     {

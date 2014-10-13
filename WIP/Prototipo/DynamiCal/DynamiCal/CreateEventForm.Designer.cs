@@ -250,7 +250,7 @@
             // 
             // modelloEventoContainerBindingSource
             // 
-            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.Common.IBindingContainer);
+            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
             // 
             // label5
             // 
@@ -374,7 +374,7 @@
             // 
             // frequenzaBindingSource
             // 
-            this.frequenzaBindingSource.DataSource = typeof(DynamiCal.Common.IBindingContainer);
+            this.frequenzaBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
             // 
             // label7
             // 
@@ -400,7 +400,7 @@
             // 
             // periodicitaBindingSource
             // 
-            this.periodicitaBindingSource.DataSource = typeof(DynamiCal.Common.IBindingContainer);
+            this.periodicitaBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
             // 
             // groupBox4
             // 

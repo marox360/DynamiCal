@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DynamiCal.Filters;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -7,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamiCal.DataGridView.BindingSources
+namespace DynamiCal.Presentation.DataGridView.BindingSources
 {
     class CalendarDay
     {
-        private DateTime _day;
-        private bool _todayWeek;
-        private int _weekIndex;
+        private readonly DateTime _day;
+        private readonly bool _todayWeek;
+        private readonly int _weekIndex;
+        private readonly int _numberOfEvents;
 
-        public CalendarDay(DateTime day) : this(day, false, -1) { }
-        public CalendarDay(DateTime day, bool todayWeek, int weekIndex)
+        public CalendarDay(DateTime day, bool todayWeek = false, int weekIndex = -1, int numberOfEvents = 0)
         {
             #region Precondizioni
             Debug.Assert(day != null, "Day is null");
@@ -25,6 +26,7 @@ namespace DynamiCal.DataGridView.BindingSources
             _weekIndex = weekIndex;
             _todayWeek = todayWeek;
             _day = day;
+            _numberOfEvents = numberOfEvents;
         }
 
         public DateTime Date
@@ -32,6 +34,19 @@ namespace DynamiCal.DataGridView.BindingSources
             get
             {
                 return _day;
+            }
+        }
+
+        public bool IsTodayWeek()
+        {
+            return _todayWeek;
+        }
+
+        public int NumberOfEvents
+        {
+            get
+            {
+                return _numberOfEvents;
             }
         }
 
@@ -57,18 +72,13 @@ namespace DynamiCal.DataGridView.BindingSources
                 return description;
             }
         }
-
-        public bool IsTodayWeek()
-        {
-            return _todayWeek;
-        }
     }
 
     class CalendarWeek
     {
-        private CalendarDay[] _days;
+        private readonly CalendarDay[] _days;
 
-        public CalendarWeek(Calendar calendar, DateTime day, int weekIndex)
+        public CalendarWeek(Calendar calendar, DateTime day, int weekIndex, IFiltro filtro = null)
         {
             #region Precondizioni
             Debug.Assert(day != null, "Day is null");
@@ -83,7 +93,13 @@ namespace DynamiCal.DataGridView.BindingSources
             _days = new CalendarDay[7];
             for (int i = 0; i < _days.Length; i++)
             {
-                _days[i] = new CalendarDay(day, isTodayWeek, weekIndex);
+                int numberOfEvents = 0;
+                if (filtro != null)
+                {
+                    numberOfEvents = FiltroFactory.FiltraPerData(filtro, day).FiltraEventi().Count();
+                }
+
+                _days[i] = new CalendarDay(day, isTodayWeek, weekIndex, numberOfEvents);
                 day = calendar.AddDays(day, 1);
             }
         }
@@ -141,11 +157,11 @@ namespace DynamiCal.DataGridView.BindingSources
 
     class MonthlySource
     {
-        public static void FillSource(BindingSource source, DateTime date) {
-            MonthlySource.FillSource(source, date.Month, date.Year);
+        public static void FillSource(BindingSource source, DateTime date, IFiltro filtro = null) {
+            MonthlySource.FillSource(source, date.Month, date.Year, filtro);
         }
 
-        public static void FillSource(BindingSource source, int month, int year)
+        public static void FillSource(BindingSource source, int month, int year, IFiltro filtro = null)
         {
             Calendar calendar = new GregorianCalendar();
             DateTime firstDay = calendar.ToDateTime(year, month, 1, 0, 0, 0, 0);
@@ -155,12 +171,12 @@ namespace DynamiCal.DataGridView.BindingSources
             }
 
             source.Clear();
-            source.Add(new CalendarWeek(calendar, firstDay, 0));
-            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 1), 1));
-            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 2), 2));
-            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 3), 3));
-            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 4), 4));
-            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 5), 5));
+            source.Add(new CalendarWeek(calendar, firstDay, 0, filtro));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 1), 1, filtro));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 2), 2, filtro));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 3), 3, filtro));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 4), 4, filtro));
+            source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 5), 5, filtro));
         }
     }
 }
