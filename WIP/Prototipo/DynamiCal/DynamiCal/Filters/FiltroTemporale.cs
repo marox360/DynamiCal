@@ -13,7 +13,7 @@ namespace DynamiCal.Filters
         private readonly DateTime _startDate;
         private readonly DateTime _endDate;
 
-        public FiltroTemporale(IFiltro filtro, DateTime date) : this(filtro, date.Date, date.AddDays(1).Date) { }
+        public FiltroTemporale(IFiltro filtro, DateTime date) : this(filtro, date.Date, date.AddDays(1).Date.AddSeconds(-1)) { }
 
         public FiltroTemporale(IFiltro filtro, DateTime startDate, DateTime endDate) : base(filtro)
         {
@@ -32,12 +32,11 @@ namespace DynamiCal.Filters
                 _startDate = endDate;
                 _endDate = startDate;
             }
-
         }
 
         public override IEnumerable<Evento> FiltraEventi()
         {
-            return Component.FiltraEventi().Where(evento => (_startDate < evento.Data && evento.Data < _endDate) || (_startDate > evento.Data && (_startDate - evento.Data).TotalMinutes < evento.Durata));
+            return Component.FiltraEventi().Where(evento => (_startDate <= evento.Data && evento.Data <= _endDate) || (_startDate > evento.Data && (_startDate - evento.Data).TotalMinutes <= evento.Durata));
         }
     }
 }

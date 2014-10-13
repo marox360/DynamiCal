@@ -10,11 +10,11 @@ namespace DynamiCal.Filters
 {
     class FiltroCalendario : Filtro
     {
-        private readonly IList<Calendario> _calendari;
+        private readonly IEnumerable<Calendario> _calendari;
 
         public FiltroCalendario(IFiltro filtro, Calendario calendario) : this(filtro, new[] { calendario }) { }
 
-        public FiltroCalendario(IFiltro filtro, IList<Calendario> calendari) : base(filtro)
+        public FiltroCalendario(IFiltro filtro, IEnumerable<Calendario> calendari) : base(filtro)
         {
             #region Precondizioni
             Debug.Assert(calendari != null, "Calendari is null");
