@@ -25,7 +25,7 @@ namespace DynamiCal.Presentation.DataGridView.BindingSources
 
             _weekIndex = weekIndex;
             _todayWeek = todayWeek;
-            _day = day;
+            _day = day.Date;
             _numberOfEvents = numberOfEvents;
         }
 

@@ -19,6 +19,8 @@ namespace DynamiCal
 {
     public partial class MainForm : Form
     {
+        private DateTime _lastDate = DateTime.Today;
+
         public MainForm()
         {
             InitializeComponent();
@@ -48,20 +50,22 @@ namespace DynamiCal
         {
             get
             {
-                return new CriterioDiFiltraggio(Agenda.Instance.Calendari);
+                CriterioDiFiltraggio criterioFiltraggio = new CriterioDiFiltraggio(Agenda.Instance.Calendari);
+
+                return FiltroFactory.FiltraPerPeriodo(criterioFiltraggio,
+                    new DateTime(_lastDate.Year, _lastDate.Month, 1).AddDays(-14),
+                    new DateTime(_lastDate.Year, _lastDate.Month + 1, 14).EndOfTheDay());
             }
         }
 
         private void RefreshCurrentMonth()
         {
-            if (this.calendarGridView.SelectedCells.Count > 0)
-            {
-                this.ShowMonthOfDay((this.calendarGridView.SelectedCells[0].Value as CalendarDay).Date);
-            }
+            this.ShowMonthOfDay(_lastDate);
         }
 
         private void ShowMonthOfDay(DateTime date)
         {
+            _lastDate = date;
             this.monthLabel.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(date.Month);
             this.yearLabel.Text = date.Year.ToString();
 

@@ -22,5 +22,10 @@ namespace DynamiCal.Extension
         {
             return date.IsSameDayOf(DateTime.Today);
         }
+
+        public static DateTime EndOfTheDay(this DateTime date)
+        {
+            return date.Date.AddDays(+1).AddSeconds(-1);
+        }
     }
 }

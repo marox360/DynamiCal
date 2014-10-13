@@ -1,4 +1,5 @@
 ﻿using DynamiCal.Model;
+using DynamiCal.Extension;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,7 +14,7 @@ namespace DynamiCal.Filters
         private readonly DateTime _startDate;
         private readonly DateTime _endDate;
 
-        public FiltroTemporale(IFiltro filtro, DateTime date) : this(filtro, date.Date, date.AddDays(1).Date.AddSeconds(-1)) { }
+        public FiltroTemporale(IFiltro filtro, DateTime date) : this(filtro, date.Date, date.EndOfTheDay()) { }
 
         public FiltroTemporale(IFiltro filtro, DateTime startDate, DateTime endDate) : base(filtro)
         {

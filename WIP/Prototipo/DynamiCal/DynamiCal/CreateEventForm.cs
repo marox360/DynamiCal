@@ -230,7 +230,7 @@ namespace DynamiCal
 
         private Evento GetEvento()
         {
-            int duration = this.allDayCheckBox.Checked ? 0 : (int)this.durationUpDown.Value;
+            int duration = (int)this.durationUpDown.Value;
             switch (this.durationComboBox.SelectedValue as string)
             {
                 case "Ore":
