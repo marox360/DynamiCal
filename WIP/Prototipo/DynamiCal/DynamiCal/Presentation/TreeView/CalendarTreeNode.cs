@@ -12,7 +12,7 @@ namespace DynamiCal.Presentation.TreeView
 {
     class CalendarTreeNode : TreeNode
     {
-        private Color _calendarColor;
+        private readonly Color _calendarColor;
 
         public CalendarTreeNode(Calendario calendario) : base(calendario.Nome)
         {
@@ -32,7 +32,6 @@ namespace DynamiCal.Presentation.TreeView
         public void DrawNode(Graphics graphics, Font font, int textOffset, int checkboxRadius)
         {
             Rectangle bounds = this.Bounds;
-            //bounds.X = 0;
             bounds.Width += 20;
 
             using (SolidBrush brush = new SolidBrush(this.BackColor))

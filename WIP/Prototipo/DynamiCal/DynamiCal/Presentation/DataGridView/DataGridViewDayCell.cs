@@ -87,6 +87,19 @@ namespace DynamiCal.Presentation.DataGridView
                     graphics.DrawLine(pen, x, y, x + width, y);
                 }
             }
+
+            if (dayValue.NumberOfEvents > 0)
+            {
+                using (SolidBrush brush = new SolidBrush(cellState.HasFlag(DataGridViewElementStates.Selected) ? cellStyle.SelectionForeColor : cellStyle.ForeColor))
+                {
+                    int circleRadius = 7;
+                    Rectangle circleBounds = new Rectangle(borderCellBounds.X + borderCellBounds.Width / 2 - circleRadius, borderCellBounds.Y + borderCellBounds.Height - circleRadius * 3, circleRadius * 2, circleRadius * 2);
+                    SmoothingMode smoothingMode = graphics.SmoothingMode;
+                    graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                    graphics.FillEllipse(brush, circleBounds);
+                    graphics.SmoothingMode = smoothingMode;
+                }
+            }
         }
 
         private static Rectangle CellBorderBounds(Rectangle cellBounds, int cellMargin)

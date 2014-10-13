@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using DynamiCal.Filters;
 
 namespace DynamiCal
 {
@@ -22,16 +23,20 @@ namespace DynamiCal
         {
             InitializeComponent();
 
-            Agenda.Instance.CalendarsChanged += CalendarsChanged;
-            Agenda.Instance.AggiungiCalendario(new CalendarioLocale("Test Calendar"));
-
             Agenda.Instance.AggiungiModelloEvento(new ModelloEvento("Base"));
+
+            Agenda.Instance.CalendarsChanged += CalendarsChanged;
+
+            Calendario testCalendar = new CalendarioLocale("Test Calendar");
+            testCalendar.AggiungiEvento(new Evento("Test", DateTime.Today, 60, Agenda.Instance.ModelliEvento[0]));
+            Agenda.Instance.AggiungiCalendario(testCalendar);
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            calendarGridView.RowTemplate.Height = (calendarGridView.Height - calendarGridView.ColumnHeadersHeight) / 6;
-            ShowMonthOfDay(DateTime.Today);
+            this.calendarGridView.RowTemplate.Height = (this.calendarGridView.Height - this.calendarGridView.ColumnHeadersHeight) / 6;
+            this.ShowMonthOfDay(DateTime.Today);
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -39,24 +44,40 @@ namespace DynamiCal
             Agenda.Instance.CalendarsChanged -= CalendarsChanged;
         }
 
+        private IFiltro CurrentFilter
+        {
+            get
+            {
+                return new CriterioDiFiltraggio(Agenda.Instance.Calendari);
+            }
+        }
+
+        private void RefreshCurrentMonth()
+        {
+            if (this.calendarGridView.SelectedCells.Count > 0)
+            {
+                this.ShowMonthOfDay((this.calendarGridView.SelectedCells[0].Value as CalendarDay).Date);
+            }
+        }
+
         private void ShowMonthOfDay(DateTime date)
         {
-            monthLabel.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(date.Month);
-            yearLabel.Text = date.Year.ToString();
+            this.monthLabel.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(date.Month);
+            this.yearLabel.Text = date.Year.ToString();
 
-            MonthlySource.FillSource(weekBindingSource, date);
-            SelectDay(date);
+            MonthlySource.FillSource(this.weekBindingSource, date, this.CurrentFilter);
+            this.SelectDay(date);
         }
 
         private void SelectDay(DateTime date)
         {
-            foreach (DataGridViewRow row in calendarGridView.Rows)
+            foreach (DataGridViewRow row in this.calendarGridView.Rows)
             {
                 foreach (DataGridViewCell cell in row.Cells)
                 {
                     if (cell.Value is CalendarDay && (cell.Value as CalendarDay).Date.IsSameDayOf(date))
                     {
-                        calendarGridView.CurrentCell = cell;
+                        this.calendarGridView.CurrentCell = cell;
                         return;
                     }
                 }
@@ -68,11 +89,11 @@ namespace DynamiCal
             TreeNode treeNode = null;
             if (e.Item is CalendarioLocale)
             {
-                treeNode = calendarTreeView.Nodes["LocalCalendars"];
+                treeNode = this.calendarTreeView.Nodes["LocalCalendars"];
             }
             else if (e.Item is CalendarioLocale)
             {
-                treeNode = calendarTreeView.Nodes["SharedCalendars"];
+                treeNode = this.calendarTreeView.Nodes["SharedCalendars"];
             }
 
             if (treeNode == null)
@@ -92,21 +113,22 @@ namespace DynamiCal
                     break;
             }
 
-            calendarTreeView.Sort();
+            this.calendarTreeView.Sort();
+            this.RefreshCurrentMonth();
         }
 
         private void calendarGridView_Resize(object sender, EventArgs e)
         {
-            calendarGridView.RowTemplate.Height = (calendarGridView.Height - calendarGridView.ColumnHeadersHeight) / 6;
-            foreach (DataGridViewRow row in calendarGridView.Rows)
+            this.calendarGridView.RowTemplate.Height = (this.calendarGridView.Height - this.calendarGridView.ColumnHeadersHeight) / 6;
+            foreach (DataGridViewRow row in this.calendarGridView.Rows)
             {
-                row.Height = calendarGridView.RowTemplate.Height;
+                row.Height = this.calendarGridView.RowTemplate.Height;
             }
         }
 
         private void datePicker_DateSelected(object sender, DateRangeEventArgs e)
         {
-            ShowMonthOfDay(e.Start);
+            this.ShowMonthOfDay(e.Start);
         }
 
         private void calendarGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -117,17 +139,17 @@ namespace DynamiCal
                 return;
             }
 
-            DataGridViewCell selectedCell = calendarGridView[e.ColumnIndex, e.RowIndex];
+            DataGridViewCell selectedCell = this.calendarGridView[e.ColumnIndex, e.RowIndex];
             if (selectedCell.Value is CalendarDay)
             {
                 CalendarDay calendarDay = selectedCell.Value as CalendarDay;
                 if (e.RowIndex == 0 && calendarDay.Date.Day > 7)
                 {
-                    ShowMonthOfDay(calendarDay.Date);
+                    this.ShowMonthOfDay(calendarDay.Date);
                 }
                 else if (e.RowIndex >= 4 && calendarDay.Date.Day < 15)
                 {
-                    ShowMonthOfDay(calendarDay.Date);
+                    this.ShowMonthOfDay(calendarDay.Date);
                 }
             }
         }
@@ -171,7 +193,7 @@ namespace DynamiCal
 
             if (e.Node is CalendarTreeNode)
             {
-                (e.Node as CalendarTreeNode).DrawNode(e.Graphics, calendarTreeView.Font, 14, 6);
+                (e.Node as CalendarTreeNode).DrawNode(e.Graphics, this.calendarTreeView.Font, 14, 6);
             }
             else
             {
@@ -184,7 +206,7 @@ namespace DynamiCal
                     e.Graphics.FillRectangle(brush, bounds);
                 }
 
-                TextRenderer.DrawText(e.Graphics, e.Node.Text, new Font(calendarTreeView.Font, FontStyle.Bold), bounds, e.Node.ForeColor, e.Node.BackColor);
+                TextRenderer.DrawText(e.Graphics, e.Node.Text, new Font(this.calendarTreeView.Font, FontStyle.Bold), bounds, e.Node.ForeColor, e.Node.BackColor);
             }
         }
 
@@ -192,8 +214,8 @@ namespace DynamiCal
         {
             if (e.Node is CalendarTreeNode && e.Button == MouseButtons.Right)
             {
-                calendarTreeView.SelectedNode = e.Node;
-                treeNodeMenuStrip.Show(calendarTreeView, e.Location);
+                this.calendarTreeView.SelectedNode = e.Node;
+                this.treeNodeMenuStrip.Show(this.calendarTreeView, e.Location);
             }
         }
 
@@ -211,7 +233,7 @@ namespace DynamiCal
 
             if (createEventDialog.ShowDialog(this) == DialogResult.OK)
             {
-
+                this.RefreshCurrentMonth();
             }
 
             createEventDialog.Dispose();
@@ -230,9 +252,9 @@ namespace DynamiCal
         private void treeNodeMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             Calendario calendar = null;
-            if (treeNodeMenuStrip.SourceControl is System.Windows.Forms.TreeView)
+            if (this.treeNodeMenuStrip.SourceControl is System.Windows.Forms.TreeView)
             {
-                CalendarTreeNode calendarNode = (treeNodeMenuStrip.SourceControl as System.Windows.Forms.TreeView).SelectedNode as CalendarTreeNode;
+                CalendarTreeNode calendarNode = (this.treeNodeMenuStrip.SourceControl as System.Windows.Forms.TreeView).SelectedNode as CalendarTreeNode;
                 if (calendarNode.Parent.Name == "LocalCalendars")
                 {
                     calendar = new CalendarioLocale(calendarNode.Name);

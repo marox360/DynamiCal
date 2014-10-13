@@ -18,7 +18,7 @@ namespace DynamiCal.Model
         private ModelloEvento _modello;
         private List<IVoce> _voci;
 
-        public Evento(string nome, DateTime data, int durata, ModelloEvento modello, IEnumerable<IVoce> voci = null, string descrizione = null, string luogo = null, Periodicita? periodicita = null)
+        public Evento(string nome, DateTime data, int durata, ModelloEvento modello, IEnumerable<IVoce> voci = null, string descrizione = "", string luogo = "", Periodicita? periodicita = null)
         {
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or whitespace");
