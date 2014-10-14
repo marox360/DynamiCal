@@ -67,11 +67,13 @@ namespace DynamiCal
 
                 if (_eventFilter != null)
                 {
+                    this.eventsListBox.BeginUpdate();
                     this.eventoBindingSource.Clear();
                     foreach (Evento evento in _eventFilter.FiltraEventi())
                     {
                         this.eventoBindingSource.Add(evento);
                     }
+                    this.eventsListBox.EndUpdate();
                 }
             }
             get
@@ -193,10 +195,13 @@ namespace DynamiCal
                 this.topRightPanel.Visible = calendarDay.NumberOfEvents > 0;
                 this.bottomRightPanel.Visible = this.topRightPanel.Visible;
 
-                this.eventoBindingSource.Clear();
                 if (calendarDay.NumberOfEvents > 0)
                 {
                     this.EventFilter = FiltroFactory.FiltraPerTesto(FiltroFactory.FiltraPerData(this.CurrentFilter, calendarDay.Date), this.searchBox.Text.Replace("Inserisci un testo da cercare", ""));
+                }
+                else
+                {
+                    this.eventoBindingSource.Clear();
                 }
             }
         }
@@ -349,6 +354,14 @@ namespace DynamiCal
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
             this.EventFilter = FiltroFactory.FiltraPerTesto((this.EventFilter as Filtro).Component, this.searchBox.Text.Replace("Inserisci un testo da cercare", ""));
+        }
+
+        private void searchBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.eventsListBox.Focus();
+            }
         }
 
     }
