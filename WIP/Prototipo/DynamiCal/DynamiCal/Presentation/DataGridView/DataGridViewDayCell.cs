@@ -90,10 +90,21 @@ namespace DynamiCal.Presentation.DataGridView
 
             if (dayValue.NumberOfEvents > 0)
             {
+                int circleRadius = 7;
+                Rectangle circleBounds = new Rectangle(borderCellBounds.X + borderCellBounds.Width / 2 - circleRadius, borderCellBounds.Y + borderCellBounds.Height - circleRadius * 3, circleRadius * 2, circleRadius * 2);
+
+                using (SolidBrush brush = new SolidBrush(cellStyle.BackColor))
+                {
+                    SmoothingMode smoothingMode = graphics.SmoothingMode;
+                    graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                    graphics.FillEllipse(brush, circleBounds);
+                    graphics.SmoothingMode = smoothingMode;
+                }
+
+                circleBounds.Inflate(-1, -1);
+
                 using (SolidBrush brush = new SolidBrush(cellState.HasFlag(DataGridViewElementStates.Selected) ? cellStyle.SelectionForeColor : cellStyle.ForeColor))
                 {
-                    int circleRadius = 7;
-                    Rectangle circleBounds = new Rectangle(borderCellBounds.X + borderCellBounds.Width / 2 - circleRadius, borderCellBounds.Y + borderCellBounds.Height - circleRadius * 3, circleRadius * 2, circleRadius * 2);
                     SmoothingMode smoothingMode = graphics.SmoothingMode;
                     graphics.SmoothingMode = SmoothingMode.AntiAlias;
                     graphics.FillEllipse(brush, circleBounds);
