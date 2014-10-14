@@ -15,7 +15,7 @@ namespace DynamiCal.Filters
         public FiltroRicerca(IFiltro filtro, string text) : base(filtro)
         {
             #region Precondizioni
-            Debug.Assert(!String.IsNullOrEmpty(text), "Text cannot be null or empty");
+            Debug.Assert(text != null, "Text cannot be null or empty");
             #endregion
 
             _text = text;
@@ -23,7 +23,10 @@ namespace DynamiCal.Filters
 
         public override IEnumerable<Evento> FiltraEventi()
         {
-            return Component.FiltraEventi().Where(evento => evento.Nome.Contains(_text) || evento.Descrizione.Contains(_text) || evento.Luogo.Contains(_text));
+            return Component.FiltraEventi().Where(evento =>
+                evento.Nome.IndexOf(_text, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                evento.Descrizione.IndexOf(_text, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                evento.Luogo.IndexOf(_text, StringComparison.OrdinalIgnoreCase) >= 0);
         }
     }
 }

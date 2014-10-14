@@ -38,7 +38,7 @@ namespace DynamiCal.Filters
             return new FiltroTemporale(filtro, dataIniziale, dataFinale);
         }
 
-        public static Filtro FiltraPerTest(IFiltro filtro, string testo)
+        public static Filtro FiltraPerTesto(IFiltro filtro, string testo)
         {
             return new FiltroRicerca(filtro, testo);
         }

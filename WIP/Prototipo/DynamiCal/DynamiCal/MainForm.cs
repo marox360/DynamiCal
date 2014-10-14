@@ -20,6 +20,7 @@ namespace DynamiCal
     public partial class MainForm : Form
     {
         private DateTime _lastDate = DateTime.Today;
+        private IFiltro _eventFilter = null;
 
         public MainForm()
         {
@@ -55,6 +56,27 @@ namespace DynamiCal
                 return FiltroFactory.FiltraPerPeriodo(criterioFiltraggio,
                     new DateTime(_lastDate.Year, _lastDate.Month, 1).AddDays(-14),
                     new DateTime(_lastDate.Year, _lastDate.Month + 1, 14).EndOfTheDay());
+            }
+        }
+
+        private IFiltro EventFilter
+        {
+            set
+            {
+                _eventFilter = value;
+
+                if (_eventFilter != null)
+                {
+                    this.eventoBindingSource.Clear();
+                    foreach (Evento evento in _eventFilter.FiltraEventi())
+                    {
+                        this.eventoBindingSource.Add(evento);
+                    }
+                }
+            }
+            get
+            {
+                return _eventFilter;
             }
         }
 
@@ -170,6 +192,12 @@ namespace DynamiCal
                 CalendarDay calendarDay = currentCell.Value as CalendarDay;
                 this.topRightPanel.Visible = calendarDay.NumberOfEvents > 0;
                 this.bottomRightPanel.Visible = this.topRightPanel.Visible;
+
+                this.eventoBindingSource.Clear();
+                if (calendarDay.NumberOfEvents > 0)
+                {
+                    this.EventFilter = FiltroFactory.FiltraPerTesto(FiltroFactory.FiltraPerData(this.CurrentFilter, calendarDay.Date), this.searchBox.Text.Replace("Inserisci un testo da cercare", ""));
+                }
             }
         }
 
@@ -318,7 +346,10 @@ namespace DynamiCal
             }
         }
 
-
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+            this.EventFilter = FiltroFactory.FiltraPerTesto((this.EventFilter as Filtro).Component, this.searchBox.Text.Replace("Inserisci un testo da cercare", ""));
+        }
 
     }
 }

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Calendari");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Calendari Condivisi");
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Calendari");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Calendari Condivisi");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.leftSidePanel = new System.Windows.Forms.Panel();
             this.calendarTreeView = new System.Windows.Forms.TreeView();
             this.datePicker = new System.Windows.Forms.MonthCalendar();
@@ -70,6 +70,7 @@
             this.sabatoDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
             this.domenicaDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
             this.weekBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.leftSidePanel.SuspendLayout();
             this.calendarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarGridView)).BeginInit();
@@ -82,6 +83,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // leftSidePanel
@@ -107,15 +109,15 @@
             this.calendarTreeView.ItemHeight = 20;
             this.calendarTreeView.Location = new System.Drawing.Point(5, 5);
             this.calendarTreeView.Name = "calendarTreeView";
-            treeNode1.ForeColor = System.Drawing.Color.Black;
-            treeNode1.Name = "LocalCalendars";
-            treeNode1.Text = "Calendari";
-            treeNode2.ForeColor = System.Drawing.Color.Black;
-            treeNode2.Name = "SharedCalendars";
-            treeNode2.Text = "Calendari Condivisi";
+            treeNode3.ForeColor = System.Drawing.Color.Black;
+            treeNode3.Name = "LocalCalendars";
+            treeNode3.Text = "Calendari";
+            treeNode4.ForeColor = System.Drawing.Color.Black;
+            treeNode4.Name = "SharedCalendars";
+            treeNode4.Text = "Calendari Condivisi";
             this.calendarTreeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
+            treeNode3,
+            treeNode4});
             this.calendarTreeView.ShowLines = false;
             this.calendarTreeView.ShowPlusMinus = false;
             this.calendarTreeView.Size = new System.Drawing.Size(227, 390);
@@ -160,14 +162,14 @@
             this.calendarGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.calendarGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.calendarGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.calendarGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.calendarGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.calendarGridView.ColumnHeadersHeight = 35;
             this.calendarGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.calendarGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -179,15 +181,15 @@
             this.sabatoDataGridViewColumn,
             this.domenicaDataGridViewColumn});
             this.calendarGridView.DataSource = this.weekBindingSource;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.calendarGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.calendarGridView.DefaultCellStyle = dataGridViewCellStyle8;
             this.calendarGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.calendarGridView.Location = new System.Drawing.Point(0, 30);
             this.calendarGridView.Margin = new System.Windows.Forms.Padding(0);
@@ -373,12 +375,15 @@
             this.searchBox.Size = new System.Drawing.Size(202, 22);
             this.searchBox.TabIndex = 0;
             this.searchBox.Text = "Inserisci un testo da cercare";
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
             this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
             // 
             // eventsListBox
             // 
             this.eventsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.eventsListBox.DataSource = this.eventoBindingSource;
+            this.eventsListBox.DisplayMember = "Nome";
             this.eventsListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eventsListBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventsListBox.FormattingEnabled = true;
@@ -468,10 +473,10 @@
             // sabatoDataGridViewColumn
             // 
             this.sabatoDataGridViewColumn.DataPropertyName = "Sabato";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.sabatoDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.sabatoDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle6;
             this.sabatoDataGridViewColumn.HeaderText = "sabato";
             this.sabatoDataGridViewColumn.Name = "sabatoDataGridViewColumn";
             this.sabatoDataGridViewColumn.ReadOnly = true;
@@ -481,10 +486,10 @@
             // domenicaDataGridViewColumn
             // 
             this.domenicaDataGridViewColumn.DataPropertyName = "Domenica";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.domenicaDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.domenicaDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle7;
             this.domenicaDataGridViewColumn.HeaderText = "domenica";
             this.domenicaDataGridViewColumn.Name = "domenicaDataGridViewColumn";
             this.domenicaDataGridViewColumn.ReadOnly = true;
@@ -494,6 +499,10 @@
             // weekBindingSource
             // 
             this.weekBindingSource.DataSource = typeof(DynamiCal.Presentation.DataGridView.BindingSources.CalendarWeek);
+            // 
+            // eventoBindingSource
+            // 
+            this.eventoBindingSource.DataSource = typeof(DynamiCal.Model.Evento);
             // 
             // MainForm
             // 
@@ -529,6 +538,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,6 +580,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel bottomRightPanel;
+        private System.Windows.Forms.BindingSource eventoBindingSource;
 
     }
 }
