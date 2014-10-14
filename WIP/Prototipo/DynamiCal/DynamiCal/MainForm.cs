@@ -162,6 +162,17 @@ namespace DynamiCal
             }
         }
 
+        private void calendarGridView_CurrentCellChanged(object sender, EventArgs e)
+        {
+            DataGridViewCell currentCell = this.calendarGridView.CurrentCell;
+            if (currentCell != null && currentCell.Value != null && currentCell.Value is CalendarDay)
+            {
+                CalendarDay calendarDay = currentCell.Value as CalendarDay;
+                this.topRightPanel.Visible = calendarDay.NumberOfEvents > 0;
+                this.bottomRightPanel.Visible = this.topRightPanel.Visible;
+            }
+        }
+
         private void calendarGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
             if (e.RowIndex != -1)
@@ -287,6 +298,27 @@ namespace DynamiCal
                 default: break;
             }
         }
+
+        private void searchBox_Enter(object sender, EventArgs e)
+        {
+            if (this.searchBox.Text == "Inserisci un testo da cercare")
+            {
+                this.searchBox.Text = "";
+            }
+
+            this.searchBox.ForeColor = Color.Black;
+        }
+
+        private void searchBox_Leave(object sender, EventArgs e)
+        {
+            if (this.searchBox.Text == "")
+            {
+                this.searchBox.ForeColor = Color.DarkGray;
+                this.searchBox.Text = "Inserisci un testo da cercare";
+            }
+        }
+
+
 
     }
 }
