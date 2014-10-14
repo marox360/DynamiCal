@@ -155,6 +155,10 @@ namespace DynamiCal
                 {
                     this.ShowMonthOfDay(calendarDay.Date);
                 }
+                else
+                {
+                    _lastDate = calendarDay.Date;
+                }
             }
         }
 
