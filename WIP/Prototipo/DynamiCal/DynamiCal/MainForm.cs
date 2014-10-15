@@ -55,7 +55,7 @@ namespace DynamiCal
 
                 return FiltroFactory.FiltraPerPeriodo(criterioFiltraggio,
                     new DateTime(_lastDate.Year, _lastDate.Month, 1).AddDays(-14),
-                    new DateTime(_lastDate.Year, _lastDate.Month + 1, 14).EndOfTheDay());
+                    new DateTime(_lastDate.Year, _lastDate.Month + 1 > 12 ? 1 : _lastDate.Month + 1, 14).EndOfTheDay());
             }
         }
 
