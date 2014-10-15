@@ -94,40 +94,53 @@ namespace DynamiCal.Model
             }
         }
 
-        public bool TestDate(DateTime startDate, DateTime testDate)
+        public bool TestaPeriodo(DateTime eventDate, DateTime startDate, DateTime endDate)
+        {
+            for (DateTime date = startDate; date <= endDate; date = date.AddDays(1))
+            {
+                if (this.TestaData(eventDate, date))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public bool TestaData(DateTime eventDate, DateTime testDate)
         {
             #warning L'implentazione attuale non tiene conto della durata dell'evento!! Meglio considerarla qui o in evento?!
-            if (testDate < startDate)
+            if (testDate < eventDate)
             {
                 return false;
             }
 
-            TimeSpan timeSpan = testDate - startDate;
+            TimeSpan timeSpan = testDate - eventDate;
 
             switch (_frequenza)
             {
                 case Frequenza.Mai:
                     return
-                        timeSpan.TotalDays == 0;
+                        timeSpan.Days == 0;
 
                 case Frequenza.Giornaliera:
                     return
-                        (timeSpan.TotalDays % _valore) == 0;
+                        (timeSpan.Days % _valore) == 0;
 
                 case Frequenza.Settimanale:
                     return
-                        (timeSpan.TotalDays % 7) == 0 && (timeSpan.TotalDays / 7) % _valore == 0;
+                        (timeSpan.Days % 7) == 0 && (timeSpan.Days / 7) % _valore == 0;
 
                 case Frequenza.Mensile:
                     return
-                        testDate.Day == startDate.Day &&
-                        (testDate.Month + (testDate.Year != startDate.Year ? 12 : 0) - startDate.Month) % _valore == 0;
+                        testDate.Day == eventDate.Day &&
+                        (testDate.Month + (testDate.Year != eventDate.Year ? 12 : 0) - eventDate.Month) % _valore == 0;
 
                 case Frequenza.Annuale:
                     return
-                        testDate.Day == startDate.Day &&
-                        testDate.Month == startDate.Month &&
-                        (testDate.Year - startDate.Year) % _valore == 0;
+                        testDate.Day == eventDate.Day &&
+                        testDate.Month == eventDate.Month &&
+                        (testDate.Year - eventDate.Year) % _valore == 0;
             }
 
             return false;
