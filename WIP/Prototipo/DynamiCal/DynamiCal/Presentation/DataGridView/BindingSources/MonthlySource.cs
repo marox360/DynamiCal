@@ -88,7 +88,7 @@ namespace DynamiCal.Presentation.DataGridView.BindingSources
             DateTimeFormatInfo dateFormatInfo = CultureInfo.CurrentCulture.DateTimeFormat;
             int dayOfWeek = (int)(day.DayOfWeek + 6) % 7;
             day = calendar.AddDays(day, -1 * dayOfWeek);
-            bool isTodayWeek = calendar.GetWeekOfYear(day, dateFormatInfo.CalendarWeekRule, dateFormatInfo.FirstDayOfWeek) == calendar.GetWeekOfYear(DateTime.Today, dateFormatInfo.CalendarWeekRule, dateFormatInfo.FirstDayOfWeek);
+            bool isTodayWeek = calendar.GetWeekOfYear(day, dateFormatInfo.CalendarWeekRule, dateFormatInfo.FirstDayOfWeek) == calendar.GetWeekOfYear(DateTime.Today, dateFormatInfo.CalendarWeekRule, dateFormatInfo.FirstDayOfWeek) && day.Year == DateTime.Today.Year;
 
             _days = new CalendarDay[7];
             for (int i = 0; i < _days.Length; i++)
