@@ -110,12 +110,12 @@ namespace DynamiCal.Model
         public bool TestaData(DateTime eventDate, DateTime testDate)
         {
             #warning L'implentazione attuale non tiene conto della durata dell'evento!! Meglio considerarla qui o in evento?!
-            if (testDate < eventDate)
+            TimeSpan timeSpan = testDate.Date - eventDate.Date;
+
+            if (timeSpan.TotalDays < 0)
             {
                 return false;
             }
-
-            TimeSpan timeSpan = testDate - eventDate;
 
             switch (_frequenza)
             {
