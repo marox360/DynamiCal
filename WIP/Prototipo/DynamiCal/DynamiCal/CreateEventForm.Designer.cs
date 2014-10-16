@@ -449,7 +449,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "CreateEventForm";
-            this.Text = "Aggiungi Evento ad un Calendario";
+            this.Text = "Crea un nuovo evento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateEventForm_FormClosing);
             this.Load += new System.EventHandler(this.CreateEventForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).EndInit();

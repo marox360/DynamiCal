@@ -81,6 +81,12 @@
     <Compile Include="Presentation\DataGridView\DataGridViewDayCell.cs" />
     <Compile Include="Presentation\DataGridView\DataGridViewDayColumn.cs" />
     <Compile Include="Presentation\DataGridView\BindingSources\MonthlySource.cs" />
+    <Compile Include="Presentation\EventPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation\EventPanel.Designer.cs">
+      <DependentUpon>EventPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Extensions\DateTimeExtension.cs" />
     <Compile Include="Filters\CriterioDiFiltraggio.cs" />
     <Compile Include="Presentation\DataGridView\DataGridViewEntryTypeCell.cs" />
@@ -116,6 +122,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\EventPanel.resx">
+      <DependentUpon>EventPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -131,6 +140,7 @@
     <None Include="Properties\DataSources\DynamiCal.Model.Agenda.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Calendario.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Evento.datasource" />
+    <None Include="Properties\DataSources\DynamiCal.Model.IVoce.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.ModelloEvento.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Voce.datasource" />
     <None Include="Properties\Settings.settings">

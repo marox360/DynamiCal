@@ -33,14 +33,22 @@
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Calendari Condivisi");
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.leftSidePanel = new System.Windows.Forms.Panel();
             this.calendarTreeView = new System.Windows.Forms.TreeView();
             this.datePicker = new System.Windows.Forms.MonthCalendar();
             this.calendarPanel = new System.Windows.Forms.Panel();
             this.calendarGridView = new System.Windows.Forms.DataGridView();
+            this.lunedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.martedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.mercoledìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.giovedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.venerdìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.sabatoDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.domenicaDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
+            this.weekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.calendarTitlePanel = new System.Windows.Forms.Panel();
             this.topFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.yearLabel = new System.Windows.Forms.Label();
@@ -54,36 +62,30 @@
             this.creaEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rightSidePanel = new System.Windows.Forms.Panel();
             this.bottomRightPanel = new System.Windows.Forms.Panel();
+            this.eventPanel = new DynamiCal.Presentation.EventPanel();
             this.topRightPanel = new System.Windows.Forms.Panel();
             this.eventsListBox = new System.Windows.Forms.ListBox();
+            this.eventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.noEventsLabel = new System.Windows.Forms.Label();
             this.treeNodeMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lunedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
-            this.martedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
-            this.mercoledìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
-            this.giovedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
-            this.venerdìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
-            this.sabatoDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
-            this.domenicaDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
-            this.weekBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.leftSidePanel.SuspendLayout();
             this.calendarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).BeginInit();
             this.calendarTitlePanel.SuspendLayout();
             this.topFlowLayoutPanel.SuspendLayout();
             this.menuBar.SuspendLayout();
             this.rightSidePanel.SuspendLayout();
+            this.bottomRightPanel.SuspendLayout();
             this.topRightPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.treeNodeMenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // leftSidePanel
@@ -209,6 +211,81 @@
             this.calendarGridView.CurrentCellChanged += new System.EventHandler(this.calendarGridView_CurrentCellChanged);
             this.calendarGridView.Resize += new System.EventHandler(this.calendarGridView_Resize);
             // 
+            // lunedìDataGridViewColumn
+            // 
+            this.lunedìDataGridViewColumn.DataPropertyName = "Lunedì";
+            this.lunedìDataGridViewColumn.HeaderText = "lunedì";
+            this.lunedìDataGridViewColumn.Name = "lunedìDataGridViewColumn";
+            this.lunedìDataGridViewColumn.ReadOnly = true;
+            this.lunedìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.lunedìDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // martedìDataGridViewColumn
+            // 
+            this.martedìDataGridViewColumn.DataPropertyName = "Martedì";
+            this.martedìDataGridViewColumn.HeaderText = "martedì";
+            this.martedìDataGridViewColumn.Name = "martedìDataGridViewColumn";
+            this.martedìDataGridViewColumn.ReadOnly = true;
+            this.martedìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.martedìDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // mercoledìDataGridViewColumn
+            // 
+            this.mercoledìDataGridViewColumn.DataPropertyName = "Mercoledì";
+            this.mercoledìDataGridViewColumn.HeaderText = "mercoledì";
+            this.mercoledìDataGridViewColumn.Name = "mercoledìDataGridViewColumn";
+            this.mercoledìDataGridViewColumn.ReadOnly = true;
+            this.mercoledìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.mercoledìDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // giovedìDataGridViewColumn
+            // 
+            this.giovedìDataGridViewColumn.DataPropertyName = "Giovedì";
+            this.giovedìDataGridViewColumn.HeaderText = "giovedì";
+            this.giovedìDataGridViewColumn.Name = "giovedìDataGridViewColumn";
+            this.giovedìDataGridViewColumn.ReadOnly = true;
+            this.giovedìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.giovedìDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // venerdìDataGridViewColumn
+            // 
+            this.venerdìDataGridViewColumn.DataPropertyName = "Venerdì";
+            this.venerdìDataGridViewColumn.HeaderText = "venerdì";
+            this.venerdìDataGridViewColumn.Name = "venerdìDataGridViewColumn";
+            this.venerdìDataGridViewColumn.ReadOnly = true;
+            this.venerdìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.venerdìDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // sabatoDataGridViewColumn
+            // 
+            this.sabatoDataGridViewColumn.DataPropertyName = "Sabato";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.sabatoDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            this.sabatoDataGridViewColumn.HeaderText = "sabato";
+            this.sabatoDataGridViewColumn.Name = "sabatoDataGridViewColumn";
+            this.sabatoDataGridViewColumn.ReadOnly = true;
+            this.sabatoDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.sabatoDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // domenicaDataGridViewColumn
+            // 
+            this.domenicaDataGridViewColumn.DataPropertyName = "Domenica";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
+            this.domenicaDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.domenicaDataGridViewColumn.HeaderText = "domenica";
+            this.domenicaDataGridViewColumn.Name = "domenicaDataGridViewColumn";
+            this.domenicaDataGridViewColumn.ReadOnly = true;
+            this.domenicaDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.domenicaDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // weekBindingSource
+            // 
+            this.weekBindingSource.DataSource = typeof(DynamiCal.Presentation.DataGridView.BindingSources.CalendarWeek);
+            // 
             // calendarTitlePanel
             // 
             this.calendarTitlePanel.BackColor = System.Drawing.Color.White;
@@ -308,8 +385,8 @@
             // creaEventoToolStripMenuItem
             // 
             this.creaEventoToolStripMenuItem.Name = "creaEventoToolStripMenuItem";
-            this.creaEventoToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
-            this.creaEventoToolStripMenuItem.Text = "Crea Evento";
+            this.creaEventoToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
+            this.creaEventoToolStripMenuItem.Text = "Crea nuovo evento";
             this.creaEventoToolStripMenuItem.Click += new System.EventHandler(this.creaEventoToolStripMenuItem_Click);
             // 
             // rightSidePanel
@@ -325,12 +402,22 @@
             // 
             // bottomRightPanel
             // 
+            this.bottomRightPanel.Controls.Add(this.eventPanel);
             this.bottomRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bottomRightPanel.Location = new System.Drawing.Point(0, 155);
             this.bottomRightPanel.Name = "bottomRightPanel";
+            this.bottomRightPanel.Padding = new System.Windows.Forms.Padding(5);
             this.bottomRightPanel.Size = new System.Drawing.Size(237, 407);
             this.bottomRightPanel.TabIndex = 2;
             this.bottomRightPanel.Visible = false;
+            // 
+            // eventPanel
+            // 
+            this.eventPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eventPanel.Location = new System.Drawing.Point(5, 5);
+            this.eventPanel.Name = "eventPanel";
+            this.eventPanel.Size = new System.Drawing.Size(227, 397);
+            this.eventPanel.TabIndex = 0;
             // 
             // topRightPanel
             // 
@@ -358,6 +445,10 @@
             this.eventsListBox.Size = new System.Drawing.Size(227, 115);
             this.eventsListBox.TabIndex = 1;
             this.eventsListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.eventsListBox_MouseDown);
+            // 
+            // eventoBindingSource
+            // 
+            this.eventoBindingSource.DataSource = typeof(DynamiCal.Model.Evento);
             // 
             // panel1
             // 
@@ -427,85 +518,6 @@
             this.deleteStripMenuItem.Size = new System.Drawing.Size(88, 22);
             this.deleteStripMenuItem.Text = "Elimina";
             // 
-            // lunedìDataGridViewColumn
-            // 
-            this.lunedìDataGridViewColumn.DataPropertyName = "Lunedì";
-            this.lunedìDataGridViewColumn.HeaderText = "lunedì";
-            this.lunedìDataGridViewColumn.Name = "lunedìDataGridViewColumn";
-            this.lunedìDataGridViewColumn.ReadOnly = true;
-            this.lunedìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.lunedìDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // martedìDataGridViewColumn
-            // 
-            this.martedìDataGridViewColumn.DataPropertyName = "Martedì";
-            this.martedìDataGridViewColumn.HeaderText = "martedì";
-            this.martedìDataGridViewColumn.Name = "martedìDataGridViewColumn";
-            this.martedìDataGridViewColumn.ReadOnly = true;
-            this.martedìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.martedìDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // mercoledìDataGridViewColumn
-            // 
-            this.mercoledìDataGridViewColumn.DataPropertyName = "Mercoledì";
-            this.mercoledìDataGridViewColumn.HeaderText = "mercoledì";
-            this.mercoledìDataGridViewColumn.Name = "mercoledìDataGridViewColumn";
-            this.mercoledìDataGridViewColumn.ReadOnly = true;
-            this.mercoledìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.mercoledìDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // giovedìDataGridViewColumn
-            // 
-            this.giovedìDataGridViewColumn.DataPropertyName = "Giovedì";
-            this.giovedìDataGridViewColumn.HeaderText = "giovedì";
-            this.giovedìDataGridViewColumn.Name = "giovedìDataGridViewColumn";
-            this.giovedìDataGridViewColumn.ReadOnly = true;
-            this.giovedìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.giovedìDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // venerdìDataGridViewColumn
-            // 
-            this.venerdìDataGridViewColumn.DataPropertyName = "Venerdì";
-            this.venerdìDataGridViewColumn.HeaderText = "venerdì";
-            this.venerdìDataGridViewColumn.Name = "venerdìDataGridViewColumn";
-            this.venerdìDataGridViewColumn.ReadOnly = true;
-            this.venerdìDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.venerdìDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // sabatoDataGridViewColumn
-            // 
-            this.sabatoDataGridViewColumn.DataPropertyName = "Sabato";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.sabatoDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle2;
-            this.sabatoDataGridViewColumn.HeaderText = "sabato";
-            this.sabatoDataGridViewColumn.Name = "sabatoDataGridViewColumn";
-            this.sabatoDataGridViewColumn.ReadOnly = true;
-            this.sabatoDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.sabatoDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // domenicaDataGridViewColumn
-            // 
-            this.domenicaDataGridViewColumn.DataPropertyName = "Domenica";
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.DimGray;
-            this.domenicaDataGridViewColumn.DefaultCellStyle = dataGridViewCellStyle3;
-            this.domenicaDataGridViewColumn.HeaderText = "domenica";
-            this.domenicaDataGridViewColumn.Name = "domenicaDataGridViewColumn";
-            this.domenicaDataGridViewColumn.ReadOnly = true;
-            this.domenicaDataGridViewColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.domenicaDataGridViewColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // weekBindingSource
-            // 
-            this.weekBindingSource.DataSource = typeof(DynamiCal.Presentation.DataGridView.BindingSources.CalendarWeek);
-            // 
-            // eventoBindingSource
-            // 
-            this.eventoBindingSource.DataSource = typeof(DynamiCal.Model.Evento);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -528,19 +540,20 @@
             this.leftSidePanel.ResumeLayout(false);
             this.calendarPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.calendarGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).EndInit();
             this.calendarTitlePanel.ResumeLayout(false);
             this.topFlowLayoutPanel.ResumeLayout(false);
             this.topFlowLayoutPanel.PerformLayout();
             this.menuBar.ResumeLayout(false);
             this.menuBar.PerformLayout();
             this.rightSidePanel.ResumeLayout(false);
+            this.bottomRightPanel.ResumeLayout(false);
             this.topRightPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.treeNodeMenuStrip.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.weekBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -583,6 +596,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel bottomRightPanel;
         private System.Windows.Forms.BindingSource eventoBindingSource;
+        private Presentation.EventPanel eventPanel;
 
     }
 }
