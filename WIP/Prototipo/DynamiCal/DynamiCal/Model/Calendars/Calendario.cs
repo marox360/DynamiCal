@@ -47,6 +47,15 @@ namespace DynamiCal.Model
             _eventi.Add(evento);
         }
 
+        public void RimuoviEvento(Evento evento)
+        {
+            #region Precondizioni
+            Debug.Assert(evento != null, "Evento cannot be null");
+            #endregion
+
+            _eventi.Remove(evento);
+        }
+
         public bool Equals(Calendario other)
         {
             if (ReferenceEquals(null, other))

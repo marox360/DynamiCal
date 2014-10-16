@@ -304,6 +304,7 @@ namespace DynamiCal
         private void treeNodeMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             Calendario calendar = null;
+            Evento evento = null;
             if (this.treeNodeMenuStrip.SourceControl is System.Windows.Forms.TreeView)
             {
                 CalendarTreeNode calendarNode = (this.treeNodeMenuStrip.SourceControl as System.Windows.Forms.TreeView).SelectedNode as CalendarTreeNode;
@@ -316,16 +317,25 @@ namespace DynamiCal
                     calendar = new CalendarioCondiviso(calendarNode.Name);
                 }
             }
-
-            if (calendar == null)
-            {
-                return;
+            else if (this.treeNodeMenuStrip.SourceControl is ListBox) {
+                evento = (this.treeNodeMenuStrip.SourceControl as ListBox).SelectedItem as Evento;
             }
             
             switch (e.ClickedItem.Text)
             {
                 case "Elimina":
-                    Agenda.Instance.RimuoviCalendario(calendar);
+                    if (calendar != null)
+                    {
+                        Agenda.Instance.RimuoviCalendario(calendar);
+                    }
+                    if (evento != null)
+                    {
+                        foreach (Calendario calendario in Agenda.Instance.Calendari)
+                        {
+                            calendario.RimuoviEvento(evento);
+                        }
+                        this.RefreshCurrentMonth();
+                    }
                     break;
                 
                 default: break;
@@ -361,6 +371,16 @@ namespace DynamiCal
             if (e.KeyCode == Keys.Enter)
             {
                 this.eventsListBox.Focus();
+            }
+        }
+
+        private void eventsListBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            int index = this.eventsListBox.IndexFromPoint(e.Location);
+            if (index != System.Windows.Forms.ListBox.NoMatches && e.Button == MouseButtons.Right)
+            {
+                this.eventsListBox.SelectedIndex = index;
+                this.treeNodeMenuStrip.Show(this.eventsListBox, e.Location);
             }
         }
 
