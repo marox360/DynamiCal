@@ -81,6 +81,9 @@
     <Compile Include="Presentation\DataGridView\DataGridViewDayCell.cs" />
     <Compile Include="Presentation\DataGridView\DataGridViewDayColumn.cs" />
     <Compile Include="Presentation\DataGridView\BindingSources\MonthlySource.cs" />
+    <Compile Include="Presentation\DataGridView\VociDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Presentation\EventPanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
