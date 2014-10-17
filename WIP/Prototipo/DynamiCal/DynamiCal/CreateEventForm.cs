@@ -156,26 +156,6 @@ namespace DynamiCal
                         voceDataSource.Add(VoceFactory.GetImplementedVoce(voce));
                     }
                     this.entriesDataGridView.DataSource = voceDataSource;
-
-                    /*for (int i = 0; i < voceDataSource.Count; i++)
-                    {
-                        IVoce voce = voceDataSource[i];
-
-                        if (voce is Voce<bool>)
-                        {
-                            this.entriesDataGridView[1, i] = new DataGridViewCheckBoxCell();
-                        }
-                        else if (voce is Voce<DateTime>)
-                        {
-                            this.entriesDataGridView[1, i] = new DataGridViewCalendarCell();
-                        }
-                        else
-                        {
-                            this.entriesDataGridView[1, i] = new DataGridViewTextBoxCell();
-                        }
-                    }
-
-                    this.entriesDataGridView.Refresh();*/
                 }
             }
         }
@@ -190,19 +170,6 @@ namespace DynamiCal
             (this.calendarSelectorComboBox.SelectedValue as Calendario).AggiungiEvento(this.GetEvento());
 
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
-        }
-
-        private void entriesDataGridView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-        {
-            if (e.ColumnIndex == 1 && (this.entriesDataGridView.DataSource as IList<IVoce>)[e.RowIndex] is Voce<double>)
-            {
-                Voce<double> voce = (this.entriesDataGridView.DataSource as IList<IVoce>)[e.RowIndex] as Voce<double>;
-                try
-                {
-                    voce.Valore = Double.Parse(e.FormattedValue as string);
-                }
-                catch{ }
-            }
         }
 
         private void durationUpDown_Validating(object sender, CancelEventArgs e)

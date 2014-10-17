@@ -234,7 +234,6 @@
             this.entriesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.entriesDataGridView.Size = new System.Drawing.Size(384, 120);
             this.entriesDataGridView.TabIndex = 14;
-            this.entriesDataGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.entriesDataGridView_CellValidating);
             // 
             // eventModelSelectorComboBox
             // 

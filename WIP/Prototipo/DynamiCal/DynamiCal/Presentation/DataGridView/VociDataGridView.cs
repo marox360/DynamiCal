@@ -38,5 +38,20 @@ namespace DynamiCal.Presentation.DataGridView
                 this.Refresh();
             }
         }
+
+        protected override void OnCellValidating(DataGridViewCellValidatingEventArgs e)
+        {
+            base.OnCellValidating(e);
+
+            if (e.ColumnIndex == 1 && this.DataSource is IList<IVoce> && (this.DataSource as IList<IVoce>)[e.RowIndex] is Voce<double>)
+            {
+                Voce<double> voce = (this.DataSource as IList<IVoce>)[e.RowIndex] as Voce<double>;
+                try
+                {
+                    voce.Valore = Double.Parse(e.FormattedValue as string);
+                }
+                catch { }
+            }
+        }
     }
 }
