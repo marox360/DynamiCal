@@ -231,7 +231,7 @@ namespace DynamiCal
         private Evento GetEvento()
         {
             int duration = (int)this.durationUpDown.Value;
-            switch (this.durationComboBox.SelectedValue as string)
+            switch (this.durationComboBox.SelectedItem as string)
             {
                 case "Ore":
                     duration *= 60;
