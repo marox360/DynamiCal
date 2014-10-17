@@ -150,5 +150,28 @@ namespace DynamiCal.Model
         {
             return new Periodicita(periodicita.Ripetizione, valore);
         }
+
+        public override string ToString()
+        {
+            switch (_frequenza)
+            {
+                case Frequenza.Mai:
+                    return "Mai";
+
+                case Frequenza.Giornaliera:
+                    return "Ogni " + (_valore == 1 ? "giorno" : _valore + " giorni");
+
+                case Frequenza.Settimanale:
+                    return "Ogni " + (_valore == 1 ? "settimana" : _valore + " settimane");
+
+                case Frequenza.Mensile:
+                    return "Ogni " + (_valore == 1 ? "mese" : _valore + " mesi");
+
+                case Frequenza.Annuale:
+                    return "Ogni " + (_valore == 1 ? "anno" : _valore + " anni");
+            }
+
+            return base.ToString();
+        }
     }
 }

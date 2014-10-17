@@ -15,6 +15,8 @@ namespace DynamiCal.Presentation
 
     class BindingContainer<T> : IBindingContainer, IEquatable<BindingContainer<T>>
     {
+        public BindingContainer(T value) : this(value.ToString(), value) { }
+
         public BindingContainer(string text, T value)
         {
             this.DisplayText = text;

@@ -58,12 +58,12 @@ namespace DynamiCal
             }
             this.calendarSelectorComboBox.EndUpdate();
 
-            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Mai", Periodicita.Mai));
-            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Ogni giorno", Periodicita.Giornaliera));
-            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Ogni settimana", Periodicita.Settimanale));
-            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Ogni 2 settimane", Periodicita.Settimanale * 2));
-            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Ogni mese", Periodicita.Mensile));
-            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Ogni anno", Periodicita.Annuale));
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Mai));
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Giornaliera));
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Settimanale));
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Settimanale * 2));
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Mensile));
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Annuale));
             this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Personalizzata", Periodicita.Mai));
             this.calendarSelectorComboBox.SelectedItem = this.periodicitaBindingSource[0];
 
