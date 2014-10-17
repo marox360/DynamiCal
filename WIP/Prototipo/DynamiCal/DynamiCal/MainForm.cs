@@ -74,6 +74,8 @@ namespace DynamiCal
                         this.eventoBindingSource.Add(evento);
                     }
                     this.eventsListBox.EndUpdate();
+
+                    this.bottomRightPanel.Visible = this.eventoBindingSource.Count != 0;
                 }
             }
             get
