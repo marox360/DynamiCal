@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,16 +11,20 @@ namespace DynamiCal.Model
     {
         private List<Amico> _amici;
     
-        public CalendarioCondiviso(string nome) : base(nome)
+        public CalendarioCondiviso(string nome, IList<Amico> amici) : base(nome)
         {
-            _amici = new List<Amico>();
+            #region Precondizioni
+            Debug.Assert(amici != null && amici.Count > 0, "Amici cannot be null or empty");
+            #endregion
+
+            _amici = new List<Amico>(amici);
         }
 
-        public List<Amico> Amici
+        public IList<Amico> Amici
         {
             get
             {
-                return _amici;
+                return _amici.AsReadOnly();
             }
         }
     }

@@ -33,9 +33,9 @@
             this.createButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.friendsCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.addButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -87,30 +87,32 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Condividi con:";
             // 
-            // checkedListBox1
+            // friendsCheckedListBox
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(12, 76);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(260, 72);
-            this.checkedListBox1.TabIndex = 5;
+            this.friendsCheckedListBox.FormattingEnabled = true;
+            this.friendsCheckedListBox.Location = new System.Drawing.Point(12, 76);
+            this.friendsCheckedListBox.Name = "friendsCheckedListBox";
+            this.friendsCheckedListBox.Size = new System.Drawing.Size(260, 72);
+            this.friendsCheckedListBox.TabIndex = 5;
             // 
-            // textBox1
+            // emailTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(13, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(177, 22);
-            this.textBox1.TabIndex = 6;
+            this.emailTextBox.Location = new System.Drawing.Point(13, 155);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(177, 22);
+            this.emailTextBox.TabIndex = 6;
+            this.emailTextBox.TextChanged += new System.EventHandler(this.emailTextBox_TextChanged);
             // 
-            // button1
+            // addButton
             // 
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(196, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Aggiungi";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addButton.Enabled = false;
+            this.addButton.Location = new System.Drawing.Point(196, 155);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(75, 23);
+            this.addButton.TabIndex = 7;
+            this.addButton.Text = "Aggiungi";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // label3
             // 
@@ -128,9 +130,9 @@
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(284, 236);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.friendsCheckedListBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createButton);
@@ -154,9 +156,9 @@
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckedListBox friendsCheckedListBox;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.Button addButton;
         private System.Windows.Forms.Label label3;
     }
 }

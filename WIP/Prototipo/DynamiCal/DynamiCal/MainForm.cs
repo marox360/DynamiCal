@@ -121,7 +121,7 @@ namespace DynamiCal
             {
                 treeNode = this.calendarTreeView.Nodes["LocalCalendars"];
             }
-            else if (e.Item is CalendarioLocale)
+            else if (e.Item is CalendarioCondiviso)
             {
                 treeNode = this.calendarTreeView.Nodes["SharedCalendars"];
             }
@@ -310,14 +310,7 @@ namespace DynamiCal
             if (this.treeNodeMenuStrip.SourceControl is System.Windows.Forms.TreeView)
             {
                 CalendarTreeNode calendarNode = (this.treeNodeMenuStrip.SourceControl as System.Windows.Forms.TreeView).SelectedNode as CalendarTreeNode;
-                if (calendarNode.Parent.Name == "LocalCalendars")
-                {
-                    calendar = new CalendarioLocale(calendarNode.Name);
-                }
-                else if (calendarNode.Parent.Name == "SharedCalendars")
-                {
-                    calendar = new CalendarioCondiviso(calendarNode.Name);
-                }
+                calendar = calendarNode.Calendario;
             }
             else if (this.treeNodeMenuStrip.SourceControl is ListBox) {
                 evento = (this.treeNodeMenuStrip.SourceControl as ListBox).SelectedItem as Evento;

@@ -13,9 +13,11 @@ namespace DynamiCal.Presentation.TreeView
     class CalendarTreeNode : TreeNode
     {
         private readonly Color _calendarColor;
+        private readonly Calendario _calendario;
 
         public CalendarTreeNode(Calendario calendario) : base(calendario.Nome)
         {
+            _calendario = calendario;
             _calendarColor = Color.FromArgb(192, 85, 87);
             this.Name = calendario.Nome;
             this.Checked = true;
@@ -26,6 +28,14 @@ namespace DynamiCal.Presentation.TreeView
             get
             {
                 return _calendarColor;
+            }
+        }
+
+        public Calendario Calendario
+        {
+            get
+            {
+                return _calendario;
             }
         }
 
