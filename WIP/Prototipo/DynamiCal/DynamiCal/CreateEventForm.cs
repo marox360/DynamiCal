@@ -157,7 +157,7 @@ namespace DynamiCal
                     }
                     this.entriesDataGridView.DataSource = voceDataSource;
 
-                    for (int i = 0; i < voceDataSource.Count; i++)
+                    /*for (int i = 0; i < voceDataSource.Count; i++)
                     {
                         IVoce voce = voceDataSource[i];
 
@@ -175,7 +175,7 @@ namespace DynamiCal
                         }
                     }
 
-                    this.entriesDataGridView.Refresh();
+                    this.entriesDataGridView.Refresh();*/
                 }
             }
         }

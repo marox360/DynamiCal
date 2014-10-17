@@ -42,7 +42,7 @@
             this.allDayCheckBox = new System.Windows.Forms.CheckBox();
             this.durationUpDown = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.entriesDataGridView = new System.Windows.Forms.DataGridView();
+            this.entriesDataGridView = new DynamiCal.Presentation.DataGridView.VociDataGridView();
             this.eventModelSelectorComboBox = new System.Windows.Forms.ComboBox();
             this.modelloEventoContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label5 = new System.Windows.Forms.Label();
@@ -485,7 +485,7 @@
         private System.Windows.Forms.CheckBox allDayCheckBox;
         private System.Windows.Forms.NumericUpDown durationUpDown;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView entriesDataGridView;
+        private DynamiCal.Presentation.DataGridView.VociDataGridView entriesDataGridView;
         private System.Windows.Forms.ComboBox eventModelSelectorComboBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox eventDescriptionTextBox;
