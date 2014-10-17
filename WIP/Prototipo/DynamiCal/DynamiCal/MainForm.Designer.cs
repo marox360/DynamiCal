@@ -414,6 +414,7 @@
             // eventPanel
             // 
             this.eventPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eventPanel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventPanel.Location = new System.Drawing.Point(5, 5);
             this.eventPanel.Name = "eventPanel";
             this.eventPanel.Size = new System.Drawing.Size(227, 397);
@@ -444,6 +445,7 @@
             this.eventsListBox.Name = "eventsListBox";
             this.eventsListBox.Size = new System.Drawing.Size(227, 115);
             this.eventsListBox.TabIndex = 1;
+            this.eventsListBox.SelectedValueChanged += new System.EventHandler(this.eventsListBox_SelectedValueChanged);
             this.eventsListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.eventsListBox_MouseDown);
             // 
             // eventoBindingSource

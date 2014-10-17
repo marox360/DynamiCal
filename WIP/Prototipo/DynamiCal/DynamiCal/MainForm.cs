@@ -31,7 +31,7 @@ namespace DynamiCal
             Agenda.Instance.CalendarsChanged += CalendarsChanged;
 
             Calendario testCalendar = new CalendarioLocale("Test Calendar");
-            testCalendar.AggiungiEvento(new Evento("Test", DateTime.Today, 60, Agenda.Instance.ModelliEvento[0]));
+            testCalendar.AggiungiEvento(new Evento("Test", DateTime.Now, 60, Agenda.Instance.ModelliEvento[0], null, "Questo è un evento generato automaticamente nella giornata di oggi", "Ovunque :D"));
             Agenda.Instance.AggiungiCalendario(testCalendar);
 
         }
@@ -381,6 +381,14 @@ namespace DynamiCal
             {
                 this.eventsListBox.SelectedIndex = index;
                 this.treeNodeMenuStrip.Show(this.eventsListBox, e.Location);
+            }
+        }
+
+        private void eventsListBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (this.eventsListBox.SelectedValue != null)
+            {
+                this.eventPanel.LoadEvent(this.eventsListBox.SelectedValue as Evento);
             }
         }
 

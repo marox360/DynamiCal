@@ -266,6 +266,7 @@
             this.eventDescriptionTextBox.Location = new System.Drawing.Point(9, 86);
             this.eventDescriptionTextBox.Multiline = true;
             this.eventDescriptionTextBox.Name = "eventDescriptionTextBox";
+            this.eventDescriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.eventDescriptionTextBox.Size = new System.Drawing.Size(381, 82);
             this.eventDescriptionTextBox.TabIndex = 18;
             // 
