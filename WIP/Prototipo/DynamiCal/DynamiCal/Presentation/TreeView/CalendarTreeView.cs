@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DynamiCal.Model;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -10,6 +11,17 @@ namespace DynamiCal.Presentation.TreeView
 {
     class CalendarTreeView : System.Windows.Forms.TreeView
     {
+        public IEnumerable<Calendario> CheckedCalendars
+        {
+            get
+            {
+                return this.Nodes.Cast<TreeNode>()
+                    .SelectMany(node => node.Nodes.Cast<TreeNode>())
+                    .Where(node => node.Checked && node is CalendarTreeNode)
+                    .Select(node => (node as CalendarTreeNode).Calendario);
+            }
+        }
+
         protected override void OnDrawNode(System.Windows.Forms.DrawTreeNodeEventArgs e)
         {
             e.DrawDefault = false;

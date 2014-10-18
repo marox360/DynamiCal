@@ -52,7 +52,9 @@ namespace DynamiCal
             {
                 CriterioDiFiltraggio criterioFiltraggio = new CriterioDiFiltraggio(Agenda.Instance.Calendari);
 
-                return FiltroFactory.FiltraPerPeriodo(criterioFiltraggio,
+                Filtro filtroCalendari = FiltroFactory.FiltraPerCalendari(criterioFiltraggio, this.calendarTreeView.CheckedCalendars);
+
+                return FiltroFactory.FiltraPerPeriodo(filtroCalendari,
                     new DateTime(_lastDate.Year, _lastDate.Month, 1).AddDays(-14),
                     new DateTime(_lastDate.Year, _lastDate.Month + 1 > 12 ? 1 : _lastDate.Month + 1, 14).EndOfTheDay());
             }
@@ -250,6 +252,11 @@ namespace DynamiCal
                 this.treeNodeMenuStrip.Show(this.calendarTreeView, e.Location);
             }
         }
+        
+        private void calendarTreeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            this.RefreshCurrentMonth();
+        }
         #endregion
 
         #region TreeNodeMenuStrip
@@ -322,5 +329,6 @@ namespace DynamiCal
             }
         }
         #endregion
+
     }
 }

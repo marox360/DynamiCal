@@ -127,6 +127,7 @@
             this.calendarTreeView.Size = new System.Drawing.Size(227, 390);
             this.calendarTreeView.TabIndex = 1;
             this.calendarTreeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.calendarTreeView_NodeMouseClick);
+            this.calendarTreeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.calendarTreeView_NodeMouseDoubleClick);
             // 
             // datePicker
             // 
