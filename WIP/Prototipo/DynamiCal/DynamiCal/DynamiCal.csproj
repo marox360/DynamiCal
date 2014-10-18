@@ -75,6 +75,9 @@
     <Compile Include="Filters\FiltroModello.cs" />
     <Compile Include="Filters\FiltroRicerca.cs" />
     <Compile Include="Filters\FiltroTemporale.cs" />
+    <Compile Include="Presentation\DataGridView\CalendarDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Presentation\DataGridView\DataGridViewCalendarCell.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -89,6 +92,12 @@
     </Compile>
     <Compile Include="Presentation\EventPanel.Designer.cs">
       <DependentUpon>EventPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\TextBox\SearchBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Presentation\TreeView\CalendarTreeView.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Time\DateTimeExtension.cs" />
     <Compile Include="Filters\CriterioDiFiltraggio.cs" />

@@ -33,7 +33,6 @@ namespace DynamiCal
             Calendario testCalendar = new CalendarioLocale("Test Calendar");
             testCalendar.AggiungiEvento(new Evento("Test", new TimePeriod(DateTime.Now, TimeSpan.FromMinutes(60)), Agenda.Instance.ModelliEvento[0], null, "Questo è un evento generato automaticamente nella giornata di oggi", "Ovunque :D"));
             Agenda.Instance.AggiungiCalendario(testCalendar);
-
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -147,20 +146,14 @@ namespace DynamiCal
             this.RefreshCurrentMonth();
         }
 
-        private void calendarGridView_Resize(object sender, EventArgs e)
-        {
-            this.calendarGridView.RowTemplate.Height = (this.calendarGridView.Height - this.calendarGridView.ColumnHeadersHeight) / 6;
-            foreach (DataGridViewRow row in this.calendarGridView.Rows)
-            {
-                row.Height = this.calendarGridView.RowTemplate.Height;
-            }
-        }
-
+        #region DatePicker
         private void datePicker_DateSelected(object sender, DateRangeEventArgs e)
         {
             this.ShowMonthOfDay(e.Start);
         }
+        #endregion
 
+        #region CalendarGridView
         private void calendarGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Il click su una delle celle dell'header causa RowIndex == -1
@@ -207,20 +200,10 @@ namespace DynamiCal
                 }
             }
         }
+        #endregion
 
-        private void calendarGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.RowIndex != -1)
-            {
-                return;
-            }
-
-            e.Graphics.FillRectangle(Brushes.White, e.CellBounds);
-            e.Paint(e.ClipBounds, (DataGridViewPaintParts.All & ~DataGridViewPaintParts.Background));
-            e.Handled = true;
-        }
-
-        private void createCalendarMenuItem_Click(object sender, EventArgs e)
+        #region ToolStipMenuItems
+        private void createCalendarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CreateCalendarForm createCalendarDialog = new CreateCalendarForm();
             createCalendarDialog.ShowDialog(this);
@@ -233,6 +216,7 @@ namespace DynamiCal
             createEventModelDialog.ShowDialog(this);
             createEventModelDialog.Dispose();
         }
+        
         private void creaEventoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CreateEventForm createEventDialog = new CreateEventForm();
@@ -245,51 +229,7 @@ namespace DynamiCal
 
             createEventDialog.Dispose();
         }
-
-        private void calendarTreeView_DrawNode(object sender, DrawTreeNodeEventArgs e)
-        {
-            e.DrawDefault = false;
-            e.Node.BackColor = Color.White;
-            e.Node.ForeColor = Color.Black;
-
-            if (e.Node is CalendarTreeNode)
-            {
-                (e.Node as CalendarTreeNode).DrawNode(e.Graphics, this.calendarTreeView.Font, 14, 6);
-            }
-            else
-            {
-                Rectangle bounds = e.Node.Bounds;
-                bounds.X = 20;
-                bounds.Width += 10;
-
-                using (SolidBrush brush = new SolidBrush(e.Node.BackColor))
-                {
-                    e.Graphics.FillRectangle(brush, bounds);
-                }
-
-                TextRenderer.DrawText(e.Graphics, e.Node.Text, new Font(this.calendarTreeView.Font, FontStyle.Bold), bounds, e.Node.ForeColor, e.Node.BackColor);
-            }
-        }
-
-        private void calendarTreeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
-        {
-            if (e.Node is CalendarTreeNode && e.Button == MouseButtons.Right)
-            {
-                this.calendarTreeView.SelectedNode = e.Node;
-                this.treeNodeMenuStrip.Show(this.calendarTreeView, e.Location);
-            }
-        }
-
-        private void calendarTreeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
-        {
-            if (e.Node is CalendarTreeNode && e.Button == MouseButtons.Left)
-            {
-                e.Node.Checked = !e.Node.Checked;
-            }
-        }
-
-
-
+        
         private void toolStripMenuItem_MouseEnter(object sender, EventArgs e)
         {
             ToolStripDropDownItem item = sender as ToolStripDropDownItem;
@@ -299,7 +239,20 @@ namespace DynamiCal
                 item.ShowDropDown();
             }
         }
+        #endregion
 
+        #region CalendarTreeView
+        private void calendarTreeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Node is CalendarTreeNode && e.Button == MouseButtons.Right)
+            {
+                this.calendarTreeView.SelectedNode = e.Node;
+                this.treeNodeMenuStrip.Show(this.calendarTreeView, e.Location);
+            }
+        }
+        #endregion
+
+        #region TreeNodeMenuStrip
         private void treeNodeMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             Calendario calendar = null;
@@ -333,26 +286,9 @@ namespace DynamiCal
                 default: break;
             }
         }
+        #endregion
 
-        private void searchBox_Enter(object sender, EventArgs e)
-        {
-            if (this.searchBox.Text == "Inserisci un testo da cercare")
-            {
-                this.searchBox.Text = "";
-            }
-
-            this.searchBox.ForeColor = Color.Black;
-        }
-
-        private void searchBox_Leave(object sender, EventArgs e)
-        {
-            if (this.searchBox.Text == "")
-            {
-                this.searchBox.ForeColor = Color.DarkGray;
-                this.searchBox.Text = "Inserisci un testo da cercare";
-            }
-        }
-
+        #region SearchBox
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
             this.EventFilter = FiltroFactory.FiltraPerTesto((this.EventFilter as Filtro).Component, this.searchBox.Text.Replace("Inserisci un testo da cercare", ""));
@@ -365,7 +301,9 @@ namespace DynamiCal
                 this.eventsListBox.Focus();
             }
         }
+        #endregion
 
+        #region EventsListBox
         private void eventsListBox_MouseDown(object sender, MouseEventArgs e)
         {
             int index = this.eventsListBox.IndexFromPoint(e.Location);
@@ -383,6 +321,6 @@ namespace DynamiCal
                 this.eventPanel.LoadEvent(this.eventsListBox.SelectedValue as Evento);
             }
         }
-
+        #endregion
     }
 }

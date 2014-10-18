@@ -124,7 +124,7 @@ namespace DynamiCal.Model
 
                 case Frequenza.Giornaliera:
                     return this.TestDaySequence(eventPeriod, testPeriod, (_, __, timeSpan, value) =>
-                                 (timeSpan.Days % value) == 0);
+                                (timeSpan.Days % value) == 0);
 
                 case Frequenza.Settimanale:
                     return this.TestDaySequence(eventPeriod, testPeriod, (_, __, timeSpan, value) =>

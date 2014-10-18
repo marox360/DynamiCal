@@ -37,10 +37,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.leftSidePanel = new System.Windows.Forms.Panel();
-            this.calendarTreeView = new System.Windows.Forms.TreeView();
+            this.calendarTreeView = new DynamiCal.Presentation.TreeView.CalendarTreeView();
             this.datePicker = new System.Windows.Forms.MonthCalendar();
             this.calendarPanel = new System.Windows.Forms.Panel();
-            this.calendarGridView = new System.Windows.Forms.DataGridView();
+            this.calendarGridView = new DynamiCal.Presentation.DataGridView.CalendarDataGridView();
             this.lunedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
             this.martedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
             this.mercoledìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
@@ -67,7 +67,7 @@
             this.eventsListBox = new System.Windows.Forms.ListBox();
             this.eventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.searchBox = new System.Windows.Forms.TextBox();
+            this.searchBox = new DynamiCal.Presentation.TextBox.SearchBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.noEventsLabel = new System.Windows.Forms.Label();
             this.treeNodeMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -111,9 +111,11 @@
             this.calendarTreeView.ItemHeight = 20;
             this.calendarTreeView.Location = new System.Drawing.Point(5, 5);
             this.calendarTreeView.Name = "calendarTreeView";
+            treeNode1.BackColor = System.Drawing.Color.White;
             treeNode1.ForeColor = System.Drawing.Color.Black;
             treeNode1.Name = "LocalCalendars";
             treeNode1.Text = "Calendari";
+            treeNode2.BackColor = System.Drawing.Color.White;
             treeNode2.ForeColor = System.Drawing.Color.Black;
             treeNode2.Name = "SharedCalendars";
             treeNode2.Text = "Calendari Condivisi";
@@ -124,9 +126,7 @@
             this.calendarTreeView.ShowPlusMinus = false;
             this.calendarTreeView.Size = new System.Drawing.Size(227, 390);
             this.calendarTreeView.TabIndex = 1;
-            this.calendarTreeView.DrawNode += new System.Windows.Forms.DrawTreeNodeEventHandler(this.calendarTreeView_DrawNode);
             this.calendarTreeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.calendarTreeView_NodeMouseClick);
-            this.calendarTreeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.calendarTreeView_NodeMouseDoubleClick);
             // 
             // datePicker
             // 
@@ -200,16 +200,14 @@
             this.calendarGridView.ReadOnly = true;
             this.calendarGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.calendarGridView.RowHeadersVisible = false;
-            this.calendarGridView.RowTemplate.Height = 50;
+            this.calendarGridView.RowTemplate.Height = 82;
             this.calendarGridView.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.calendarGridView.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.calendarGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.calendarGridView.Size = new System.Drawing.Size(680, 529);
             this.calendarGridView.TabIndex = 1;
             this.calendarGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.calendarGridView_CellClick);
-            this.calendarGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.calendarGridView_CellPainting);
             this.calendarGridView.CurrentCellChanged += new System.EventHandler(this.calendarGridView_CurrentCellChanged);
-            this.calendarGridView.Resize += new System.EventHandler(this.calendarGridView_Resize);
             // 
             // lunedìDataGridViewColumn
             // 
@@ -355,7 +353,7 @@
             this.creaNuovoCalendarioToolStripMenuItem.Name = "creaNuovoCalendarioToolStripMenuItem";
             this.creaNuovoCalendarioToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.creaNuovoCalendarioToolStripMenuItem.Text = "Crea nuovo calendario";
-            this.creaNuovoCalendarioToolStripMenuItem.Click += new System.EventHandler(this.createCalendarMenuItem_Click);
+            this.creaNuovoCalendarioToolStripMenuItem.Click += new System.EventHandler(this.createCalendarToolStripMenuItem_Click);
             // 
             // modelloEventoToolStripMenuItem
             // 
@@ -471,12 +469,11 @@
             this.searchBox.ForeColor = System.Drawing.Color.DarkGray;
             this.searchBox.Location = new System.Drawing.Point(23, 2);
             this.searchBox.Name = "searchBox";
+            this.searchBox.PlaceholderText = "Inserisci un testo da cercare";
             this.searchBox.Size = new System.Drawing.Size(202, 22);
             this.searchBox.TabIndex = 0;
             this.searchBox.Text = "Inserisci un testo da cercare";
             this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            this.searchBox.Enter += new System.EventHandler(this.searchBox_Enter);
-            this.searchBox.Leave += new System.EventHandler(this.searchBox_Leave);
             this.searchBox.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.searchBox_PreviewKeyDown);
             // 
             // pictureBox1
@@ -567,7 +564,7 @@
         private System.Windows.Forms.MonthCalendar datePicker;
         private System.Windows.Forms.Panel calendarPanel;
         private System.Windows.Forms.Panel calendarTitlePanel;
-        private System.Windows.Forms.DataGridView calendarGridView;
+        private DynamiCal.Presentation.DataGridView.CalendarDataGridView calendarGridView;
         private System.Windows.Forms.BindingSource weekBindingSource;
         private Presentation.DataGridView.DataGridViewDayColumn lunedìDataGridViewColumn;
         private Presentation.DataGridView.DataGridViewDayColumn martedìDataGridViewColumn;
@@ -579,7 +576,7 @@
         private System.Windows.Forms.MenuStrip menuBar;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem creaNuovoCalendarioToolStripMenuItem;
-        private System.Windows.Forms.TreeView calendarTreeView;
+        private DynamiCal.Presentation.TreeView.CalendarTreeView calendarTreeView;
         private System.Windows.Forms.ToolStripMenuItem modelloEventoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem creaModelloEventoToolStripMenuItem;
         private System.Windows.Forms.Panel rightSidePanel;
@@ -592,7 +589,7 @@
         private System.Windows.Forms.ContextMenuStrip treeNodeMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem deleteStripMenuItem;
         private System.Windows.Forms.Panel topRightPanel;
-        private System.Windows.Forms.TextBox searchBox;
+        private DynamiCal.Presentation.TextBox.SearchBox searchBox;
         private System.Windows.Forms.ListBox eventsListBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
