@@ -34,19 +34,34 @@ namespace DynamiCal.Model
             Data
         };
 
+        private readonly string _nome;
+        private readonly Tipo _tipo;
+
         public Voce(string nome, Tipo tipo) 
         {
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or white space");
             #endregion
 
-            this.Nome = nome.Trim();
-            this.TipoVoce = tipo;
+            _nome = nome.Trim();
+            _tipo = tipo;
         }
 
-        public string Nome { get; private set; }
+        public string Nome
+        {
+            get
+            {
+                return _nome;
+            }
+        }
 
-        public Tipo TipoVoce { get; private set; }
+        public Tipo TipoVoce
+        {
+            get
+            {
+                return _tipo;
+            }
+        }
     }
 
     interface IVoce
@@ -58,19 +73,38 @@ namespace DynamiCal.Model
 
     class Voce<T> : IVoce
     {
+        private readonly string _nome;
+        private T _valore;
+
         public Voce(string nome, T valore = default(T))
         {
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or white space");
             #endregion
 
-            this.Valore = valore;
-            this.Nome = nome;
+            _valore = valore;
+            _nome = nome;
         }
 
-        public string Nome { get; private set; }
+        public string Nome
+        {
+            get
+            {
+                return _nome;
+            }
+        }
 
-        public T Valore { get; set; }
+        public T Valore
+        {
+            get
+            {
+                return _valore;
+            }
+            set
+            {
+                _valore = value;
+            }
+        }
 
         object IVoce.Valore
         {

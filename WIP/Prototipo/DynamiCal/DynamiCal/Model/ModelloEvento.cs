@@ -9,7 +9,7 @@ namespace DynamiCal.Model
 {
     class ModelloEvento : IEquatable<ModelloEvento>
     {
-        private string _nome;
+        private readonly string _nome;
         private List<Voce> _voci;
 
         public ModelloEvento(string nome, IEnumerable<Voce> voci = null)
