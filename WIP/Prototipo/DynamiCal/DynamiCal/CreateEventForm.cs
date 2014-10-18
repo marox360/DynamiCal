@@ -23,7 +23,7 @@ namespace DynamiCal
 
         private void CreateEventForm_Load(object sender, EventArgs e)
         {
-            this.durationComboBox.SelectedIndex = 0;
+            this.durationComboBox.SelectedIndex = 1;
 
             foreach (Periodicita.Frequenza frequenza in Enum.GetValues(typeof(Periodicita.Frequenza)).Cast<Periodicita.Frequenza>())
             {

@@ -223,12 +223,7 @@ namespace DynamiCal
         private void createCalendarMenuItem_Click(object sender, EventArgs e)
         {
             CreateCalendarForm createCalendarDialog = new CreateCalendarForm();
-
-            if (createCalendarDialog.ShowDialog(this) == DialogResult.OK)
-            {
-
-            }
-
+            createCalendarDialog.ShowDialog(this);
             createCalendarDialog.Dispose();
         }
 
@@ -237,6 +232,18 @@ namespace DynamiCal
             CreateEventModelForm createEventModelDialog = new CreateEventModelForm();
             createEventModelDialog.ShowDialog(this);
             createEventModelDialog.Dispose();
+        }
+        private void creaEventoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateEventForm createEventDialog = new CreateEventForm();
+            createEventDialog.eventDateTimePicker.Value = _lastDate + (DateTime.Now - DateTime.Today);
+
+            if (createEventDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                this.RefreshCurrentMonth();
+            }
+
+            createEventDialog.Dispose();
         }
 
         private void calendarTreeView_DrawNode(object sender, DrawTreeNodeEventArgs e)
@@ -281,17 +288,7 @@ namespace DynamiCal
             }
         }
 
-        private void creaEventoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CreateEventForm createEventDialog = new CreateEventForm();
 
-            if (createEventDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                this.RefreshCurrentMonth();
-            }
-
-            createEventDialog.Dispose();
-        }
 
         private void toolStripMenuItem_MouseEnter(object sender, EventArgs e)
         {

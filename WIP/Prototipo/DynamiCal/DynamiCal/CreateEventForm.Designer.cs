@@ -481,7 +481,6 @@
         private System.Windows.Forms.TextBox eventNameTextBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox durationComboBox;
-        private System.Windows.Forms.DateTimePicker eventDateTimePicker;
         private System.Windows.Forms.CheckBox allDayCheckBox;
         private System.Windows.Forms.NumericUpDown durationUpDown;
         private System.Windows.Forms.Label label4;
@@ -505,5 +504,6 @@
         private System.Windows.Forms.BindingSource modelloEventoContainerBindingSource;
         private System.Windows.Forms.BindingSource periodicitaBindingSource;
         private System.Windows.Forms.BindingSource frequenzaBindingSource;
+        internal System.Windows.Forms.DateTimePicker eventDateTimePicker;
     }
 }
