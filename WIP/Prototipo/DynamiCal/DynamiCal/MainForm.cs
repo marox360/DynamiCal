@@ -102,17 +102,10 @@ namespace DynamiCal
 
         private void SelectDay(DateTime date)
         {
-            foreach (DataGridViewRow row in this.calendarGridView.Rows)
-            {
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    if (cell.Value is CalendarDay && (cell.Value as CalendarDay).Date.IsSameDayOf(date))
-                    {
-                        this.calendarGridView.CurrentCell = cell;
-                        return;
-                    }
-                }
-            }
+            this.calendarGridView.CurrentCell = this.calendarGridView.Rows.Cast<DataGridViewRow>()
+                .SelectMany(row => row.Cells.Cast<DataGridViewCell>())
+                .Where(cell => cell.Value is CalendarDay && (cell.Value as CalendarDay).Date.IsSameDayOf(date))
+                .First();
         }
 
         private void CalendarsChanged(object sender, AgendaCollectionEventArgs e)
