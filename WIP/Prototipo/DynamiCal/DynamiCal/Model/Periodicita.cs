@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DynamiCal.Time;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Text;
 
 namespace DynamiCal.Model
 {
-    public struct Periodicita
+    internal struct Periodicita
     {
         public enum Frequenza
         {
@@ -94,11 +95,11 @@ namespace DynamiCal.Model
             }
         }
 
-        public bool TestaPeriodo(DateTime eventDate, DateTime startDate, DateTime endDate)
+        public bool TestaPeriodo(TimePeriod eventPeriod, TimePeriod otherPeriod)
         {
-            for (DateTime date = startDate; date <= endDate; date = date.AddDays(1))
+            foreach (DateTime date in TimePeriod.DaysSequence(otherPeriod))
             {
-                if (this.TestaData(eventDate, date))
+                if (this.TestaData(eventPeriod, date))
                 {
                     return true;
                 }
@@ -107,12 +108,11 @@ namespace DynamiCal.Model
             return false;
         }
 
-        public bool TestaData(DateTime eventDate, DateTime testDate)
+        public bool TestaData(TimePeriod eventPeriod, DateTime testDate)
         {
-            #warning L'implentazione attuale non tiene conto della durata dell'evento!! Meglio considerarla qui o in evento?!
-            TimeSpan timeSpan = testDate.Date - eventDate.Date;
+            TimePeriod testPeriod = new TimePeriod(testDate.Date, TimeSpan.FromDays(1));
 
-            if (timeSpan.TotalDays < 0)
+            if (testPeriod < eventPeriod)
             {
                 return false;
             }
@@ -120,27 +120,44 @@ namespace DynamiCal.Model
             switch (_frequenza)
             {
                 case Frequenza.Mai:
-                    return
-                        timeSpan.Days == 0;
+                    return eventPeriod.IntersectWith(testPeriod);
 
                 case Frequenza.Giornaliera:
-                    return
-                        (timeSpan.Days % _valore) == 0;
+                    return this.TestDaySequence(eventPeriod, testPeriod, (_, __, timeSpan, value) =>
+                                 (timeSpan.Days % value) == 0);
 
                 case Frequenza.Settimanale:
-                    return
-                        (timeSpan.Days % 7) == 0 && (timeSpan.Days / 7) % _valore == 0;
+                    return this.TestDaySequence(eventPeriod, testPeriod, (_, __, timeSpan, value) =>
+                                (timeSpan.Days % 7) == 0 && (timeSpan.Days / 7) % value == 0);
 
                 case Frequenza.Mensile:
-                    return
-                        testDate.Day == eventDate.Day &&
-                        (testDate.Month + (testDate.Year != eventDate.Year ? 12 : 0) - eventDate.Month) % _valore == 0;
+                    return this.TestDaySequence(eventPeriod, testPeriod, (day, testDay, _, value) =>
+                                 testDay.Day == day.Day &&
+                                (testDay.Month + (testDay.Year != day.Year ? 12 : 0) - day.Month) % value == 0);
 
                 case Frequenza.Annuale:
-                    return
-                        testDate.Day == eventDate.Day &&
-                        testDate.Month == eventDate.Month &&
-                        (testDate.Year - eventDate.Year) % _valore == 0;
+                    return this.TestDaySequence(eventPeriod, testPeriod, (day, testDay, _, value) =>
+                                 testDay.Day == day.Day &&
+                                 testDay.Month == day.Month &&
+                                (testDay.Year - day.Year) % value == 0);
+            }
+
+            return false;
+        }
+
+        private bool TestDaySequence(TimePeriod timePeriod, TimePeriod testPeriod, Func<DateTime, DateTime, TimeSpan, int, bool> test)
+        {
+            foreach (DateTime day in TimePeriod.DaysSequence(timePeriod))
+            {
+                TimeSpan timeSpan = testPeriod.StartDate - day;
+                if (timeSpan.TotalDays < 0)
+                {
+                    return false;
+                }
+                else if (test(day, testPeriod.StartDate, timeSpan, _valore))
+                {
+                    return true;
+                }
             }
 
             return false;

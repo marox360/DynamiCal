@@ -1,5 +1,5 @@
 ﻿using DynamiCal.Presentation.DataGridView.BindingSources;
-using DynamiCal.Extension;
+using DynamiCal.Time;
 using System;
 using System.Collections.Generic;
 using System.Drawing;

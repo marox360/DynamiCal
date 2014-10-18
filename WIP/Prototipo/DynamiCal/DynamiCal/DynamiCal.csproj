@@ -90,7 +90,7 @@
     <Compile Include="Presentation\EventPanel.Designer.cs">
       <DependentUpon>EventPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Extensions\DateTimeExtension.cs" />
+    <Compile Include="Time\DateTimeExtension.cs" />
     <Compile Include="Filters\CriterioDiFiltraggio.cs" />
     <Compile Include="Presentation\DataGridView\DataGridViewEntryTypeCell.cs" />
     <Compile Include="Presentation\DataGridView\DataGridViewEntryTypeColumn.cs" />
@@ -113,6 +113,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Presentation\TreeView\CalendarTreeNode.cs" />
+    <Compile Include="Time\TimePeriod.cs" />
     <EmbeddedResource Include="CreateCalendarForm.resx">
       <DependentUpon>CreateCalendarForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DynamiCal.Time;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -12,26 +13,23 @@ namespace DynamiCal.Model
         private string _nome;
         private string _descrizione;
         private string _luogo;
-        private DateTime _data;
-        private int _durata;
+        private TimePeriod _periodo;
         private Periodicita _periodicita;
         private ModelloEvento _modello;
         private List<IVoce> _voci;
 
-        public Evento(string nome, DateTime data, int durata, ModelloEvento modello, IEnumerable<IVoce> voci = null, string descrizione = "", string luogo = "", Periodicita? periodicita = null)
+        public Evento(string nome, TimePeriod periodo, ModelloEvento modello, IEnumerable<IVoce> voci = null, string descrizione = "", string luogo = "", Periodicita? periodicita = null)
         {
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or whitespace");
-            Debug.Assert(data != null, "Data is null");
-            Debug.Assert(durata > 0, "Durata is negative or zero");
+            Debug.Assert(periodo.Duration.TotalMinutes > 0, "Durata is negative or zero");
             Debug.Assert(modello != null, "Modello is null");
             #endregion
 
             _nome = nome.Trim();
             _descrizione = descrizione.Trim();
             _luogo = luogo.Trim();
-            _data = data;
-            _durata = durata;
+            _periodo = periodo;
             _periodicita = periodicita.HasValue ? periodicita.Value : Periodicita.Mai;
             _modello = modello;
             _voci = voci == null ? new List<IVoce>() : new List<IVoce>(voci);
@@ -77,35 +75,20 @@ namespace DynamiCal.Model
             }
         }
 
-        public DateTime Data
+        public TimePeriod Periodo
         {
             set
             {
                 #region Precondizioni
-                Debug.Assert(value != null, "Data is null");
+                Debug.Assert(value.Duration.TotalMinutes > 0, "Durata is negative or zero");
+
                 #endregion
 
-                _data = value;
+                _periodo = value;
             }
             get
             {
-                return _data;
-            }
-        }
-
-        public int Durata
-        {
-            set
-            {
-                #region Precondizioni
-                Debug.Assert(value > 0, "Durata is negative or zero");
-                #endregion
-
-                _durata = value;
-            }
-            get
-            {
-                return _durata;
+                return _periodo;
             }
         }
 
@@ -143,7 +126,7 @@ namespace DynamiCal.Model
                 return false;
             if (ReferenceEquals(this, other))
                 return true;
-            return string.Equals(this.Nome, other.Nome) && this.Data.Equals(other.Data) && this.Durata == other.Durata;
+            return string.Equals(this.Nome, other.Nome) && this.Periodo.Equals(other.Periodo) && this.Periodicita.Equals(other.Periodicita);
         }
 
         public override bool Equals(object obj)
@@ -161,7 +144,7 @@ namespace DynamiCal.Model
         {
             unchecked
             {
-                return (this.Nome.GetHashCode() * 397) + this.Data.GetHashCode() + this.Durata;
+                return (this.Nome.GetHashCode() * 397) + this.Periodo.GetHashCode() + this.Periodicita.GetHashCode();
             }
         }
     }

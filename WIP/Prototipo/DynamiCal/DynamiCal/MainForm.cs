@@ -1,6 +1,6 @@
 ﻿using DynamiCal.Presentation.DataGridView.BindingSources;
 using DynamiCal.Model;
-using DynamiCal.Extension;
+using DynamiCal.Time;
 using DynamiCal.Presentation.TreeView;
 using System;
 using System.Collections.Generic;
@@ -31,7 +31,7 @@ namespace DynamiCal
             Agenda.Instance.CalendarsChanged += CalendarsChanged;
 
             Calendario testCalendar = new CalendarioLocale("Test Calendar");
-            testCalendar.AggiungiEvento(new Evento("Test", DateTime.Now, 60, Agenda.Instance.ModelliEvento[0], null, "Questo è un evento generato automaticamente nella giornata di oggi", "Ovunque :D"));
+            testCalendar.AggiungiEvento(new Evento("Test", new TimePeriod(DateTime.Now, TimeSpan.FromMinutes(60)), Agenda.Instance.ModelliEvento[0], null, "Questo è un evento generato automaticamente nella giornata di oggi", "Ovunque :D"));
             Agenda.Instance.AggiungiCalendario(testCalendar);
 
         }

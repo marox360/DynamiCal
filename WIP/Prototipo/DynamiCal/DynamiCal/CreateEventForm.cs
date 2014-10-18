@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DynamiCal.Time;
 
 namespace DynamiCal
 {
@@ -197,15 +198,19 @@ namespace DynamiCal
 
         private Evento GetEvento()
         {
-            int duration = (int)this.durationUpDown.Value;
+            TimeSpan duration = TimeSpan.Zero;
             switch (this.durationComboBox.SelectedItem as string)
             {
+                case "Minuti":
+                    duration = TimeSpan.FromMinutes((double)this.durationUpDown.Value);
+                    break;
+
                 case "Ore":
-                    duration *= 60;
+                    duration = TimeSpan.FromHours((double)this.durationUpDown.Value);
                     break;
 
                 case "Giorni":
-                    duration *= 60 * 24;
+                    duration = TimeSpan.FromDays((double)this.durationUpDown.Value);
                     break;
 
                 default:
@@ -214,8 +219,7 @@ namespace DynamiCal
 
             return new Evento(
                 this.eventNameTextBox.Text,
-                this.eventDateTimePicker.Value,
-                duration,
+                new TimePeriod(this.eventDateTimePicker.Value, duration),
                 this.eventModelSelectorComboBox.SelectedValue as ModelloEvento,
                 this.entriesDataGridView.DataSource as IEnumerable<IVoce>,
                 this.eventDescriptionTextBox.Text,

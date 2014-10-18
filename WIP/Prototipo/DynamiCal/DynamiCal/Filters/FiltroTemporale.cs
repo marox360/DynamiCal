@@ -1,5 +1,5 @@
 ﻿using DynamiCal.Model;
-using DynamiCal.Extension;
+using DynamiCal.Time;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -11,8 +11,7 @@ namespace DynamiCal.Filters
 {
     class FiltroTemporale : Filtro
     {
-        private readonly DateTime _startDate;
-        private readonly DateTime _endDate;
+        private readonly TimePeriod _timePeriod;
 
         public FiltroTemporale(IFiltro filtro, DateTime date) : this(filtro, date.Date, date.EndOfTheDay()) { }
 
@@ -25,22 +24,19 @@ namespace DynamiCal.Filters
 
             if (startDate < endDate)
             {
-                _startDate = startDate;
-                _endDate = endDate;
+                _timePeriod = new TimePeriod(startDate, endDate);
             }
             else
             {
-                _startDate = endDate;
-                _endDate = startDate;
+                _timePeriod = new TimePeriod(endDate, startDate);
             }
         }
 
         public override IEnumerable<Evento> FiltraEventi()
         {
             return Component.FiltraEventi().Where(evento =>
-                (_startDate <= evento.Data && evento.Data <= _endDate) ||
-                (_startDate > evento.Data && (_startDate - evento.Data).TotalMinutes <= evento.Durata) ||
-                evento.Periodicita.TestaPeriodo(evento.Data, _startDate, _endDate));
+                evento.Periodo.IntersectWith(_timePeriod)||
+                evento.Periodicita.TestaPeriodo(evento.Periodo, _timePeriod));
         }
     }
 }

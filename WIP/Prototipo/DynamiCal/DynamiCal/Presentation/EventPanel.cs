@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DynamiCal.Model;
-using DynamiCal.Extension;
+using DynamiCal.Time;
 
 namespace DynamiCal.Presentation
 {
@@ -32,23 +32,22 @@ namespace DynamiCal.Presentation
             this.locationLabel.Text = evento.Luogo == null ? "" : evento.Luogo;
             this.toolTip.SetToolTip(this.locationLabel, this.locationLabel.Text);
 
-            this.dateLabel.Text = String.Format("{0:dddd dd MMMM yyyy}", evento.Data);
+            this.dateLabel.Text = String.Format("{0:dddd dd MMMM yyyy}", evento.Periodo.StartDate);
 
-            if (evento.Data == evento.Data.Date && evento.Durata == 60 * 24)
+            if (evento.Periodo.AllDayLong)
             {
                 this.timeLabel.Text = "tutto il giorno";
             }
             else
             {
-                DateTime endDate = evento.Data.AddMinutes(evento.Durata);
-                this.timeLabel.Text = String.Format("dalle {0:HH:mm}", evento.Data);
-                if (endDate.IsSameDayOf(evento.Data))
+                this.timeLabel.Text = String.Format("dalle {0:HH:mm}", evento.Periodo.StartDate);
+                if (evento.Periodo.StartDate.IsSameDayOf(evento.Periodo.EndDate))
                 {
-                    this.timeLabel.Text += String.Format(" alle {0:HH:mm}", endDate);
+                    this.timeLabel.Text += String.Format(" alle {0:HH:mm}", evento.Periodo.EndDate);
                 }
                 else
                 {
-                    this.timeLabel.Text += String.Format(" alle {0:HH:mm} del {0:dd MMMM yyyy}", endDate);
+                    this.timeLabel.Text += String.Format(" alle {0:HH:mm} del {0:dd MMMM yyyy}", evento.Periodo.EndDate);
                 }
             }
 
