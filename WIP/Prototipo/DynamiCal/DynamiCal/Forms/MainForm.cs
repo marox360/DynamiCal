@@ -87,11 +87,11 @@ namespace DynamiCal.Forms
             TreeNode treeNode = null;
             if (e.Item is CalendarioLocale)
             {
-                treeNode = this.calendarTreeView.Nodes["LocalCalendars"];
+                treeNode = this.calendarTreeView.LocalCalendarsNode;
             }
             else if (e.Item is CalendarioCondiviso)
             {
-                treeNode = this.calendarTreeView.Nodes["SharedCalendars"];
+                treeNode = this.calendarTreeView.SharedCalendarsNode;
             }
 
             if (treeNode == null)

@@ -11,6 +11,22 @@ namespace DynamiCal.Presentation.TreeView
 {
     class CalendarTreeView : System.Windows.Forms.TreeView
     {
+        public TreeNode LocalCalendarsNode
+        {
+            get
+            {
+                return this.Nodes["LocalCalendars"];
+            }
+        }
+
+        public TreeNode SharedCalendarsNode
+        {
+            get
+            {
+                return this.Nodes["SharedCalendars"];
+            }
+        }
+
         public IEnumerable<Calendario> CheckedCalendars
         {
             get
