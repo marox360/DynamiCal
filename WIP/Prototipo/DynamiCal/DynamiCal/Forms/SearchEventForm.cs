@@ -15,6 +15,21 @@ namespace DynamiCal.Forms
 {
     public partial class SearchEventForm : Form
     {
+        internal Evento SelectedEvent
+        {
+            get
+            {
+                if (this.eventListBox.SelectedValue != null && this.eventListBox.SelectedValue is Evento)
+                {
+                    return this.eventListBox.SelectedValue as Evento;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
+
         private IFiltro CurrentFilter
         {
             get
@@ -120,9 +135,9 @@ namespace DynamiCal.Forms
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
 
-        private void eventListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void eventListBox_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            this.showInCalendarButton.Enabled = this.eventListBox.SelectedValue != null;
         }
     }
 }

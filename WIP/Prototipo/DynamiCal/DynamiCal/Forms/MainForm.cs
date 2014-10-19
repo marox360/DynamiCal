@@ -190,22 +190,30 @@ namespace DynamiCal.Forms
         
         private void creaEventoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateEventForm createEventDialog = new CreateEventForm();
-            createEventDialog.eventDateTimePicker.Value = _lastDate + (DateTime.Now - DateTime.Today);
-
-            if (createEventDialog.ShowDialog(this) == DialogResult.OK)
+            using (CreateEventForm createEventDialog = new CreateEventForm())
             {
-                this.RefreshCurrentMonth();
-            }
+                createEventDialog.eventDateTimePicker.Value = _lastDate.Date + (DateTime.Now - DateTime.Today);
 
-            createEventDialog.Dispose();
+                if (createEventDialog.ShowDialog(this) == DialogResult.OK)
+                {
+                    this.RefreshCurrentMonth();
+                }
+            }
         }
 
         private void cercaEventoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             using (SearchEventForm searchEventDialog = new SearchEventForm())
             {
-                searchEventDialog.ShowDialog(this);
+                if (searchEventDialog.ShowDialog(this) == DialogResult.OK)
+                {
+                    Evento evento = searchEventDialog.SelectedEvent;
+                    if (evento != null)
+                    {
+                        this.ShowMonthOfDay(evento.Periodo.StartDate);
+                        this.eventsListBox.SelectedItem = evento;
+                    }
+                }
             }
         }   
      

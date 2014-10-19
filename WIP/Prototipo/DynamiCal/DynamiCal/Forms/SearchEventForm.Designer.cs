@@ -120,6 +120,7 @@
             // showInCalendarButton
             // 
             this.showInCalendarButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showInCalendarButton.Enabled = false;
             this.showInCalendarButton.Location = new System.Drawing.Point(20, 13);
             this.showInCalendarButton.Name = "showInCalendarButton";
             this.showInCalendarButton.Size = new System.Drawing.Size(122, 23);
@@ -217,6 +218,7 @@
             this.eventListBox.Name = "eventListBox";
             this.eventListBox.Size = new System.Drawing.Size(162, 230);
             this.eventListBox.TabIndex = 0;
+            this.eventListBox.SelectedValueChanged += new System.EventHandler(this.eventListBox_SelectedValueChanged);
             // 
             // eventLabel
             // 
