@@ -20,7 +20,6 @@ namespace DynamiCal
     public partial class MainForm : Form
     {
         private DateTime _lastDate = DateTime.Today;
-        private IFiltro _eventFilter = null;
 
         public MainForm()
         {
@@ -37,6 +36,7 @@ namespace DynamiCal
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            this.eventsListBox.EventPanel = this.eventPanel;
             this.calendarGridView.RowTemplate.Height = (this.calendarGridView.Height - this.calendarGridView.ColumnHeadersHeight) / 6;
             this.ShowMonthOfDay(DateTime.Today);
         }
@@ -60,31 +60,6 @@ namespace DynamiCal
             }
         }
 
-        private IFiltro EventFilter
-        {
-            set
-            {
-                _eventFilter = value;
-
-                if (_eventFilter != null)
-                {
-                    this.eventsListBox.BeginUpdate();
-                    this.eventoBindingSource.Clear();
-                    foreach (Evento evento in _eventFilter.FiltraEventi())
-                    {
-                        this.eventoBindingSource.Add(evento);
-                    }
-                    this.eventsListBox.EndUpdate();
-
-                    this.bottomRightPanel.Visible = this.eventoBindingSource.Count != 0;
-                }
-            }
-            get
-            {
-                return _eventFilter;
-            }
-        }
-
         private void RefreshCurrentMonth()
         {
             this.ShowMonthOfDay(_lastDate);
@@ -105,7 +80,7 @@ namespace DynamiCal
             this.calendarGridView.CurrentCell = this.calendarGridView.Rows.Cast<DataGridViewRow>()
                 .SelectMany(row => row.Cells.Cast<DataGridViewCell>())
                 .Where(cell => cell.Value is CalendarDay && (cell.Value as CalendarDay).Date.IsSameDayOf(date))
-                .First();
+                .FirstOrDefault();
         }
 
         private void CalendarsChanged(object sender, AgendaCollectionEventArgs e)
@@ -183,15 +158,15 @@ namespace DynamiCal
             {
                 CalendarDay calendarDay = currentCell.Value as CalendarDay;
                 this.topRightPanel.Visible = calendarDay.NumberOfEvents > 0;
-                this.bottomRightPanel.Visible = this.topRightPanel.Visible;
+                this.eventPanel.Visible = this.topRightPanel.Visible;
 
                 if (calendarDay.NumberOfEvents > 0)
                 {
-                    this.EventFilter = FiltroFactory.FiltraPerTesto(FiltroFactory.FiltraPerData(this.CurrentFilter, calendarDay.Date), this.searchBoxPanel.SearchText);
+                    this.eventsListBox.EventFilter = FiltroFactory.FiltraPerTesto(FiltroFactory.FiltraPerData(this.CurrentFilter, calendarDay.Date), this.searchBoxPanel.SearchText);
                 }
                 else
                 {
-                    this.eventoBindingSource.Clear();
+                    this.eventsListBox.EventoBindingSource.Clear();
                 }
             }
         }
@@ -291,7 +266,7 @@ namespace DynamiCal
         #region SearchBox
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            this.EventFilter = FiltroFactory.FiltraPerTesto((this.EventFilter as Filtro).Component, this.searchBoxPanel.SearchText);
+            this.eventsListBox.EventFilter = FiltroFactory.FiltraPerTesto((this.eventsListBox.EventFilter as Filtro).Component, this.searchBoxPanel.SearchText);
         }
         #endregion
 
@@ -303,14 +278,6 @@ namespace DynamiCal
             {
                 this.eventsListBox.SelectedIndex = index;
                 this.treeNodeMenuStrip.Show(this.eventsListBox, e.Location);
-            }
-        }
-
-        private void eventsListBox_SelectedValueChanged(object sender, EventArgs e)
-        {
-            if (this.eventsListBox.SelectedValue != null)
-            {
-                this.eventPanel.LoadEvent(this.eventsListBox.SelectedValue as Evento);
             }
         }
         #endregion

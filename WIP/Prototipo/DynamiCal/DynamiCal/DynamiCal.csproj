@@ -93,6 +93,9 @@
     <Compile Include="Presentation\EventPanel.Designer.cs">
       <DependentUpon>EventPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\ListBox\EventListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Presentation\TextBox\SearchBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -144,6 +147,9 @@
     <EmbeddedResource Include="Presentation\EventPanel.resx">
       <DependentUpon>EventPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\ListBox\EventListBox.resx">
+      <DependentUpon>EventListBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\TextBox\SearchBoxPanel.resx">
       <DependentUpon>SearchBoxPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,8 +163,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Properties\DataSources\DynamiCal.Common.IBindingContainer.datasource" />
-    <None Include="Properties\DataSources\DynamiCal.DataGridView.BindingSources.Week.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Agenda.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Calendario.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Evento.datasource" />

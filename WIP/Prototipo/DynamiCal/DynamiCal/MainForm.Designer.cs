@@ -61,12 +61,10 @@
             this.eventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.creaEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rightSidePanel = new System.Windows.Forms.Panel();
-            this.bottomRightPanel = new System.Windows.Forms.Panel();
             this.eventPanel = new DynamiCal.Presentation.EventPanel();
             this.topRightPanel = new System.Windows.Forms.Panel();
+            this.eventsListBox = new DynamiCal.Presentation.ListBox.EventListBox();
             this.searchBoxPanel = new DynamiCal.Presentation.TextBox.SearchBoxPanel();
-            this.eventsListBox = new System.Windows.Forms.ListBox();
-            this.eventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.noEventsLabel = new System.Windows.Forms.Label();
             this.treeNodeMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,9 +76,7 @@
             this.topFlowLayoutPanel.SuspendLayout();
             this.menuBar.SuspendLayout();
             this.rightSidePanel.SuspendLayout();
-            this.bottomRightPanel.SuspendLayout();
             this.topRightPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).BeginInit();
             this.treeNodeMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -386,7 +382,7 @@
             // 
             // rightSidePanel
             // 
-            this.rightSidePanel.Controls.Add(this.bottomRightPanel);
+            this.rightSidePanel.Controls.Add(this.eventPanel);
             this.rightSidePanel.Controls.Add(this.topRightPanel);
             this.rightSidePanel.Controls.Add(this.noEventsLabel);
             this.rightSidePanel.Dock = System.Windows.Forms.DockStyle.Right;
@@ -395,30 +391,20 @@
             this.rightSidePanel.Size = new System.Drawing.Size(237, 562);
             this.rightSidePanel.TabIndex = 2;
             // 
-            // bottomRightPanel
-            // 
-            this.bottomRightPanel.Controls.Add(this.eventPanel);
-            this.bottomRightPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bottomRightPanel.Location = new System.Drawing.Point(0, 155);
-            this.bottomRightPanel.Name = "bottomRightPanel";
-            this.bottomRightPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.bottomRightPanel.Size = new System.Drawing.Size(237, 407);
-            this.bottomRightPanel.TabIndex = 2;
-            this.bottomRightPanel.Visible = false;
-            // 
             // eventPanel
             // 
             this.eventPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eventPanel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eventPanel.Location = new System.Drawing.Point(5, 5);
+            this.eventPanel.Location = new System.Drawing.Point(0, 155);
             this.eventPanel.Name = "eventPanel";
-            this.eventPanel.Size = new System.Drawing.Size(227, 397);
+            this.eventPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.eventPanel.Size = new System.Drawing.Size(237, 407);
             this.eventPanel.TabIndex = 0;
             // 
             // topRightPanel
             // 
-            this.topRightPanel.Controls.Add(this.searchBoxPanel);
             this.topRightPanel.Controls.Add(this.eventsListBox);
+            this.topRightPanel.Controls.Add(this.searchBoxPanel);
             this.topRightPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topRightPanel.Location = new System.Drawing.Point(0, 0);
             this.topRightPanel.Name = "topRightPanel";
@@ -426,6 +412,22 @@
             this.topRightPanel.Size = new System.Drawing.Size(237, 155);
             this.topRightPanel.TabIndex = 1;
             this.topRightPanel.Visible = false;
+            // 
+            // eventsListBox
+            // 
+            this.eventsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.eventsListBox.DisplayMember = "Nome";
+            this.eventsListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.eventsListBox.EventFilter = null;
+            this.eventsListBox.EventPanel = null;
+            this.eventsListBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eventsListBox.FormattingEnabled = true;
+            this.eventsListBox.ItemHeight = 17;
+            this.eventsListBox.Location = new System.Drawing.Point(5, 35);
+            this.eventsListBox.Name = "eventsListBox";
+            this.eventsListBox.Size = new System.Drawing.Size(227, 115);
+            this.eventsListBox.TabIndex = 1;
+            this.eventsListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.eventsListBox_MouseDown);
             // 
             // searchBoxPanel
             // 
@@ -438,26 +440,6 @@
             this.searchBoxPanel.Size = new System.Drawing.Size(227, 30);
             this.searchBoxPanel.TabIndex = 2;
             this.searchBoxPanel.SearchTextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            // 
-            // eventsListBox
-            // 
-            this.eventsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.eventsListBox.DataSource = this.eventoBindingSource;
-            this.eventsListBox.DisplayMember = "Nome";
-            this.eventsListBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.eventsListBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.eventsListBox.FormattingEnabled = true;
-            this.eventsListBox.ItemHeight = 17;
-            this.eventsListBox.Location = new System.Drawing.Point(5, 5);
-            this.eventsListBox.Name = "eventsListBox";
-            this.eventsListBox.Size = new System.Drawing.Size(227, 145);
-            this.eventsListBox.TabIndex = 1;
-            this.eventsListBox.SelectedValueChanged += new System.EventHandler(this.eventsListBox_SelectedValueChanged);
-            this.eventsListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.eventsListBox_MouseDown);
-            // 
-            // eventoBindingSource
-            // 
-            this.eventoBindingSource.DataSource = typeof(DynamiCal.Model.Evento);
             // 
             // noEventsLabel
             // 
@@ -517,9 +499,7 @@
             this.menuBar.ResumeLayout(false);
             this.menuBar.PerformLayout();
             this.rightSidePanel.ResumeLayout(false);
-            this.bottomRightPanel.ResumeLayout(false);
             this.topRightPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).EndInit();
             this.treeNodeMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -557,9 +537,7 @@
         private System.Windows.Forms.ContextMenuStrip treeNodeMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem deleteStripMenuItem;
         private System.Windows.Forms.Panel topRightPanel;
-        private System.Windows.Forms.ListBox eventsListBox;
-        private System.Windows.Forms.Panel bottomRightPanel;
-        private System.Windows.Forms.BindingSource eventoBindingSource;
+        private DynamiCal.Presentation.ListBox.EventListBox eventsListBox;
         private Presentation.EventPanel eventPanel;
         private Presentation.TextBox.SearchBoxPanel searchBoxPanel;
 
