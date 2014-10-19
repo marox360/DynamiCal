@@ -58,5 +58,38 @@ namespace DynamiCal.Presentation.TreeView
 
             base.OnNodeMouseDoubleClick(e);
         }
+
+        public CalendarTreeView() : base()
+        {
+            InitializeComponent();
+        }
+
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Calendari");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Calendari Condivisi");
+            this.SuspendLayout();
+            // 
+            // CalendarTreeView
+            // 
+            this.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DrawMode = System.Windows.Forms.TreeViewDrawMode.OwnerDrawAll;
+            this.FullRowSelect = true;
+            treeNode1.BackColor = System.Drawing.Color.White;
+            treeNode1.ForeColor = System.Drawing.Color.Black;
+            treeNode1.Name = "LocalCalendars";
+            treeNode1.Text = "Calendari";
+            treeNode2.BackColor = System.Drawing.Color.White;
+            treeNode2.ForeColor = System.Drawing.Color.Black;
+            treeNode2.Name = "SharedCalendars";
+            treeNode2.Text = "Calendari Condivisi";
+            this.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            this.ShowLines = false;
+            this.ShowPlusMinus = false;
+            this.ResumeLayout(false);
+
+        }
     }
 }

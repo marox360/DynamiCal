@@ -16,7 +16,7 @@ namespace DynamiCal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new DynamiCal.Forms.MainForm());
         }
     }
 }

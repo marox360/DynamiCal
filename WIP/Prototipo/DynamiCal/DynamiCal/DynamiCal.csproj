@@ -50,23 +50,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Presentation\BindingContainer.cs" />
-    <Compile Include="CreateCalendarForm.cs">
+    <Compile Include="Forms\SearchEventForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateCalendarForm.Designer.cs">
+    <Compile Include="Forms\SearchEventForm.Designer.cs">
+      <DependentUpon>SearchEventForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\BindingContainer.cs" />
+    <Compile Include="Forms\CreateCalendarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateCalendarForm.Designer.cs">
       <DependentUpon>CreateCalendarForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateEventForm.cs">
+    <Compile Include="Forms\CreateEventForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateEventForm.Designer.cs">
+    <Compile Include="Forms\CreateEventForm.Designer.cs">
       <DependentUpon>CreateEventForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CreateEventModelForm.cs">
+    <Compile Include="Forms\CreateEventModelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateEventModelForm.Designer.cs">
+    <Compile Include="Forms\CreateEventModelForm.Designer.cs">
       <DependentUpon>CreateEventModelForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Filters\Filtro.cs" />
@@ -114,10 +120,10 @@
     <Compile Include="Presentation\DataGridView\DataGridViewEntryTypeColumn.cs" />
     <Compile Include="Model\Agenda.cs" />
     <Compile Include="Model\Amico.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Calendars\Calendario.cs" />
@@ -132,17 +138,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Presentation\TreeView\CalendarTreeNode.cs" />
     <Compile Include="Time\TimePeriod.cs" />
-    <EmbeddedResource Include="CreateCalendarForm.resx">
+    <EmbeddedResource Include="Forms\CreateCalendarForm.resx">
       <DependentUpon>CreateCalendarForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateEventForm.resx">
+    <EmbeddedResource Include="Forms\CreateEventForm.resx">
       <DependentUpon>CreateEventForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CreateEventModelForm.resx">
+    <EmbeddedResource Include="Forms\CreateEventModelForm.resx">
       <DependentUpon>CreateEventModelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SearchEventForm.resx">
+      <DependentUpon>SearchEventForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\EventPanel.resx">
       <DependentUpon>EventPanel.cs</DependentUpon>
@@ -152,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\TextBox\SearchBoxPanel.resx">
       <DependentUpon>SearchBoxPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\TreeView\CalendarTreeView.resx">
+      <DependentUpon>CalendarTreeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

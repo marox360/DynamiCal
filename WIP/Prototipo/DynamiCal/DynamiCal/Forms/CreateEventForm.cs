@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DynamiCal.Time;
 
-namespace DynamiCal
+namespace DynamiCal.Forms
 {
     public partial class CreateEventForm : Form
     {

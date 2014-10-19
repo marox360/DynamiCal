@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamiCal
+namespace DynamiCal.Forms
 {
     public partial class CreateCalendarForm : Form
     {

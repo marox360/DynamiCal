@@ -15,7 +15,7 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using DynamiCal.Filters;
 
-namespace DynamiCal
+namespace DynamiCal.Forms
 {
     public partial class MainForm : Form
     {
@@ -174,16 +174,18 @@ namespace DynamiCal
         #region ToolStipMenuItems
         private void createCalendarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateCalendarForm createCalendarDialog = new CreateCalendarForm();
-            createCalendarDialog.ShowDialog(this);
-            createCalendarDialog.Dispose();
+            using (CreateCalendarForm createCalendarDialog = new CreateCalendarForm())
+            {
+                createCalendarDialog.ShowDialog(this);
+            }
         }
 
         private void creaModelloEventoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CreateEventModelForm createEventModelDialog = new CreateEventModelForm();
-            createEventModelDialog.ShowDialog(this);
-            createEventModelDialog.Dispose();
+            using (CreateEventModelForm createEventModelDialog = new CreateEventModelForm())
+            {
+                createEventModelDialog.ShowDialog(this);
+            }
         }
         
         private void creaEventoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -198,7 +200,15 @@ namespace DynamiCal
 
             createEventDialog.Dispose();
         }
-        
+
+        private void cercaEventoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (SearchEventForm searchEventDialog = new SearchEventForm())
+            {
+                searchEventDialog.ShowDialog(this);
+            }
+        }   
+     
         private void toolStripMenuItem_MouseEnter(object sender, EventArgs e)
         {
             ToolStripDropDownItem item = sender as ToolStripDropDownItem;

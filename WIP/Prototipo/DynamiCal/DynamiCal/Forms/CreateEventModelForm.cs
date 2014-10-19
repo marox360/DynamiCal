@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamiCal
+namespace DynamiCal.Forms
 {
     public partial class CreateEventModelForm : Form
     {

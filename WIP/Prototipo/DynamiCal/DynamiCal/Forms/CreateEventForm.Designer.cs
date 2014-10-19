@@ -1,4 +1,4 @@
-﻿namespace DynamiCal
+﻿namespace DynamiCal.Forms
 {
     partial class CreateEventForm
     {

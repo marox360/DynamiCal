@@ -72,7 +72,7 @@ namespace DynamiCal.Presentation.ListBox
             }
         }
 
-        public EventListBox()
+        public EventListBox() : base()
         {
             InitializeComponent();
         }
