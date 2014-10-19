@@ -54,7 +54,7 @@ namespace DynamiCal.Model
 
             _calendari.Add(calendario);
 
-            OnCalendarsChanged(new AgendaCollectionEventArgs(calendario, AgendaCollectionEventArgs.EditAction.AddItem));
+            this.OnCalendarsChanged(new AgendaCollectionEventArgs(calendario, AgendaCollectionEventArgs.EditAction.AddItem));
         }
 
         public void RimuoviCalendario(Calendario calendario)
@@ -65,7 +65,7 @@ namespace DynamiCal.Model
 
             if (_calendari.Remove(calendario))
             {
-                OnCalendarsChanged(new AgendaCollectionEventArgs(calendario, AgendaCollectionEventArgs.EditAction.RemoveItem));
+                this.OnCalendarsChanged(new AgendaCollectionEventArgs(calendario, AgendaCollectionEventArgs.EditAction.RemoveItem));
             }
         }
 
@@ -78,7 +78,7 @@ namespace DynamiCal.Model
 
             _modelliEvento.Add(modelloEvento);
 
-            OnEventModelsChanged(new AgendaCollectionEventArgs(modelloEvento, AgendaCollectionEventArgs.EditAction.AddItem));
+            this.OnEventModelsChanged(new AgendaCollectionEventArgs(modelloEvento, AgendaCollectionEventArgs.EditAction.AddItem));
         }
 
         public void RimuoviModelloEvento(ModelloEvento modelloEvento)
@@ -89,23 +89,23 @@ namespace DynamiCal.Model
 
             if (_modelliEvento.Remove(modelloEvento))
             {
-                OnEventModelsChanged(new AgendaCollectionEventArgs(modelloEvento, AgendaCollectionEventArgs.EditAction.RemoveItem));
+                this.OnEventModelsChanged(new AgendaCollectionEventArgs(modelloEvento, AgendaCollectionEventArgs.EditAction.RemoveItem));
             }
         }
 
         protected virtual void OnCalendarsChanged(AgendaCollectionEventArgs e)
         {
-            if (CalendarsChanged != null)
+            if (this.CalendarsChanged != null)
             {
-                CalendarsChanged(this, e);
+                this.CalendarsChanged(this, e);
             }
         }
 
         protected virtual void OnEventModelsChanged(AgendaCollectionEventArgs e)
         {
-            if (EventModelsChanged != null)
+            if (this.EventModelsChanged != null)
             {
-                EventModelsChanged(this, e);
+                this.EventModelsChanged(this, e);
             }
         }
     }

@@ -81,7 +81,6 @@ namespace DynamiCal.Model
             {
                 #region Precondizioni
                 Debug.Assert(value.Duration.TotalMinutes > 0, "Durata is negative or zero");
-
                 #endregion
 
                 _periodo = value;
