@@ -229,11 +229,11 @@ namespace DynamiCal.Forms
                 this.treeNodeMenuStrip.Show(this.calendarTreeView, e.Location);
             }
         }
-        
-        private void calendarTreeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+
+        private void calendarTreeView_AfterCheck(object sender, TreeViewEventArgs e)
         {
             this.RefreshCurrentMonth();
-        }
+        }   
         #endregion
 
         #region TreeNodeMenuStrip

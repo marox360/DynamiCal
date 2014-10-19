@@ -2,6 +2,8 @@
 using DynamiCal.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +17,7 @@ namespace DynamiCal.Presentation.ListBox
         private System.ComponentModel.IContainer components;
         private IFiltro _eventFilter = null;
 
+        [Browsable(false)]
         public IFiltro EventFilter
         {
             set
@@ -64,6 +67,21 @@ namespace DynamiCal.Presentation.ListBox
              base.OnSelectedValueChanged(e);
         }
 
+        protected override void OnDrawItem(DrawItemEventArgs e)
+        {
+            if (e.Index < this.Items.Count)
+            {
+                using (Brush brush = new SolidBrush(e.BackColor))
+                {
+                    e.Graphics.FillRectangle(brush, e.Bounds);
+                }
+                TextFormatFlags flags = TextFormatFlags.Default | TextFormatFlags.VerticalCenter;
+                TextRenderer.DrawText(e.Graphics, this.GetItemText(this.Items[e.Index]), e.Font, e.Bounds, e.ForeColor, e.BackColor, flags);
+            }
+
+            base.OnDrawItem(e);
+        }
+
         private void eventoBindingSource_ListChanged(object sender, System.ComponentModel.ListChangedEventArgs e)
         {
             if (this.EventPanel != null)
@@ -93,6 +111,7 @@ namespace DynamiCal.Presentation.ListBox
             // 
             this.DataSource = this.eventoBindingSource;
             this.DisplayMember = "Nome";
+            this.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Size = new System.Drawing.Size(120, 95);
             ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).EndInit();
             this.ResumeLayout(false);

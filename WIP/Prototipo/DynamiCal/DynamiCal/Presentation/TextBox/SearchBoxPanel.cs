@@ -19,6 +19,7 @@ namespace DynamiCal.Presentation.TextBox
             InitializeComponent();
         }
 
+        [Browsable(false)]
         public string SearchText
         {
             get

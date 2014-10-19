@@ -59,7 +59,7 @@ namespace DynamiCal.Presentation.TreeView
 
                 if (this.Checked)
                 {
-                    circleBounds.Offset(textOffset / 2 - checkboxRadius, 0);
+                    circleBounds.Offset(textOffset + checkboxRadius / 4, 0);
                     TextRenderer.DrawText(graphics, "✔", new Font(font.FontFamily, checkboxRadius), circleBounds, Color.White, Color.Transparent);
                 }
             }

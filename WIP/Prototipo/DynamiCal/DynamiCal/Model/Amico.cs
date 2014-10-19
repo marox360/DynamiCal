@@ -32,7 +32,7 @@ namespace DynamiCal
 
         public override string ToString()
         {
-            return _email;
+            return this.Email;
         }
     }
 }

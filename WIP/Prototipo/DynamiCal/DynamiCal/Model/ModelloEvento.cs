@@ -74,5 +74,10 @@ namespace DynamiCal.Model
                 return ((this.Nome != null ? this.Nome.GetHashCode() : 0) * 397);
             }
         }
+
+        public override string ToString()
+        {
+            return this.Nome;
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DynamiCal.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,6 +12,8 @@ namespace DynamiCal.Presentation.TreeView
 {
     class CalendarTreeView : System.Windows.Forms.TreeView
     {
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public TreeNode LocalCalendarsNode
         {
             get
@@ -19,6 +22,8 @@ namespace DynamiCal.Presentation.TreeView
             }
         }
 
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public TreeNode SharedCalendarsNode
         {
             get
@@ -27,6 +32,8 @@ namespace DynamiCal.Presentation.TreeView
             }
         }
 
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public IEnumerable<Calendario> CheckedCalendars
         {
             get
@@ -38,6 +45,11 @@ namespace DynamiCal.Presentation.TreeView
             }
         }
 
+        // Questo corregge un bug con il designer di Visual Studio
+        [Browsable(false)]
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public new TreeNodeCollection Nodes { get { return base.Nodes; } }
+
         protected override void OnDrawNode(System.Windows.Forms.DrawTreeNodeEventArgs e)
         {
             e.DrawDefault = false;
@@ -46,12 +58,12 @@ namespace DynamiCal.Presentation.TreeView
 
             if (e.Node is CalendarTreeNode)
             {
-                (e.Node as CalendarTreeNode).DrawNode(e.Graphics, this.Font, 14, 6);
+                (e.Node as CalendarTreeNode).DrawNode(e.Graphics, this.Font, 0, 6);
             }
             else
             {
                 Rectangle bounds = e.Node.Bounds;
-                bounds.X = 20;
+                bounds.X = 6;
                 bounds.Width += 10;
 
                 using (SolidBrush brush = new SolidBrush(e.Node.BackColor))
