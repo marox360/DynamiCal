@@ -45,7 +45,7 @@ namespace DynamiCal.Presentation.TextBox
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            this.OnTextChanged(e);
+            this.OnSearchTextChanged(e);
         }
     }
 }
