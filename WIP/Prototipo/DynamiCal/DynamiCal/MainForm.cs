@@ -187,7 +187,7 @@ namespace DynamiCal
 
                 if (calendarDay.NumberOfEvents > 0)
                 {
-                    this.EventFilter = FiltroFactory.FiltraPerTesto(FiltroFactory.FiltraPerData(this.CurrentFilter, calendarDay.Date), this.searchBox.Text.Replace("Inserisci un testo da cercare", ""));
+                    this.EventFilter = FiltroFactory.FiltraPerTesto(FiltroFactory.FiltraPerData(this.CurrentFilter, calendarDay.Date), this.searchBoxPanel.SearchText);
                 }
                 else
                 {
@@ -291,15 +291,7 @@ namespace DynamiCal
         #region SearchBox
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            this.EventFilter = FiltroFactory.FiltraPerTesto((this.EventFilter as Filtro).Component, this.searchBox.Text.Replace("Inserisci un testo da cercare", ""));
-        }
-
-        private void searchBox_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                this.eventsListBox.Focus();
-            }
+            this.EventFilter = FiltroFactory.FiltraPerTesto((this.EventFilter as Filtro).Component, this.searchBoxPanel.SearchText);
         }
         #endregion
 

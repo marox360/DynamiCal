@@ -96,6 +96,12 @@
     <Compile Include="Presentation\TextBox\SearchBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Presentation\TextBox\SearchBoxPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation\TextBox\SearchBoxPanel.Designer.cs">
+      <DependentUpon>SearchBoxPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\TreeView\CalendarTreeView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\EventPanel.resx">
       <DependentUpon>EventPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\TextBox\SearchBoxPanel.resx">
+      <DependentUpon>SearchBoxPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

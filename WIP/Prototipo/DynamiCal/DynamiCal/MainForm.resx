@@ -126,24 +126,13 @@
   <metadata name="eventoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>435, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1
-        MAAA6mAAADqYAAAXb5JfxUYAAAAJcEhZcwAACxMAAAsTAQCanBgAAAETSURBVDhPjdI/S0JhFMfxNiFy
-        MFsiQprbGrR0tAYlyAYrCAKHxEBURMg1Whx06c/UIFTDAyK+A0mMZt9Kr+D2PXIPnOyqXfjAfX7ndx7u
-        cFc8z5tyzkXQQhdNNPCIF8S1Z+liAp+oY0eHvK/hBEOUNVdS2MAIZ7NDxWwLXzi1uQw6qNkwCJ1dDBDW
-        TMJ3rNviPPQecKxnCW5tYRG6VyjqWYKqLSxCN4+SniV4RsiW5qF3h0s9S/CGjC0FobOKPmKaSZjEB6K2
-        PIt5GxWb6eAGY6Ts0J9tQv68b+zZmS3lIM8TCjjHPV4hf94B5Av3/yz7F4SQxTXkay6wbeZywQRHcv61
-        /B8sHvoXpAMLy7CYcs71fgBZO21LXwxX9AAAAABJRU5ErkJggg==
-</value>
-  </data>
   <metadata name="treeNodeMenuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>275, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>52</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAYAAAAAAAEAIAAoIAQAZgAAAICAAAABACAAKAgBAI4gBABAQAAAAQAgAChCAAC2KAUAMDAAAAEA

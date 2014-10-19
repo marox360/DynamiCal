@@ -64,11 +64,9 @@
             this.bottomRightPanel = new System.Windows.Forms.Panel();
             this.eventPanel = new DynamiCal.Presentation.EventPanel();
             this.topRightPanel = new System.Windows.Forms.Panel();
+            this.searchBoxPanel = new DynamiCal.Presentation.TextBox.SearchBoxPanel();
             this.eventsListBox = new System.Windows.Forms.ListBox();
             this.eventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.searchBox = new DynamiCal.Presentation.TextBox.SearchBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.noEventsLabel = new System.Windows.Forms.Label();
             this.treeNodeMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,8 +81,6 @@
             this.bottomRightPanel.SuspendLayout();
             this.topRightPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.treeNodeMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -421,8 +417,8 @@
             // 
             // topRightPanel
             // 
+            this.topRightPanel.Controls.Add(this.searchBoxPanel);
             this.topRightPanel.Controls.Add(this.eventsListBox);
-            this.topRightPanel.Controls.Add(this.panel1);
             this.topRightPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topRightPanel.Location = new System.Drawing.Point(0, 0);
             this.topRightPanel.Name = "topRightPanel";
@@ -430,6 +426,18 @@
             this.topRightPanel.Size = new System.Drawing.Size(237, 155);
             this.topRightPanel.TabIndex = 1;
             this.topRightPanel.Visible = false;
+            // 
+            // searchBoxPanel
+            // 
+            this.searchBoxPanel.BackColor = System.Drawing.SystemColors.Window;
+            this.searchBoxPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchBoxPanel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchBoxPanel.Location = new System.Drawing.Point(5, 5);
+            this.searchBoxPanel.Name = "searchBoxPanel";
+            this.searchBoxPanel.Padding = new System.Windows.Forms.Padding(0, 2, 2, 5);
+            this.searchBoxPanel.Size = new System.Drawing.Size(227, 30);
+            this.searchBoxPanel.TabIndex = 2;
+            this.searchBoxPanel.SearchTextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // eventsListBox
             // 
@@ -440,9 +448,9 @@
             this.eventsListBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventsListBox.FormattingEnabled = true;
             this.eventsListBox.ItemHeight = 17;
-            this.eventsListBox.Location = new System.Drawing.Point(5, 35);
+            this.eventsListBox.Location = new System.Drawing.Point(5, 5);
             this.eventsListBox.Name = "eventsListBox";
-            this.eventsListBox.Size = new System.Drawing.Size(227, 115);
+            this.eventsListBox.Size = new System.Drawing.Size(227, 145);
             this.eventsListBox.TabIndex = 1;
             this.eventsListBox.SelectedValueChanged += new System.EventHandler(this.eventsListBox_SelectedValueChanged);
             this.eventsListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.eventsListBox_MouseDown);
@@ -450,44 +458,6 @@
             // eventoBindingSource
             // 
             this.eventoBindingSource.DataSource = typeof(DynamiCal.Model.Evento);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.searchBox);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(5, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(0, 2, 2, 5);
-            this.panel1.Size = new System.Drawing.Size(227, 30);
-            this.panel1.TabIndex = 2;
-            // 
-            // searchBox
-            // 
-            this.searchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.searchBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.searchBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBox.ForeColor = System.Drawing.Color.DarkGray;
-            this.searchBox.Location = new System.Drawing.Point(23, 2);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.PlaceholderText = "Inserisci un testo da cercare";
-            this.searchBox.Size = new System.Drawing.Size(202, 22);
-            this.searchBox.TabIndex = 0;
-            this.searchBox.Text = "Inserisci un testo da cercare";
-            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
-            this.searchBox.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.searchBox_PreviewKeyDown);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(5, 5, 0, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // noEventsLabel
             // 
@@ -550,9 +520,6 @@
             this.bottomRightPanel.ResumeLayout(false);
             this.topRightPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.eventoBindingSource)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.treeNodeMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -590,13 +557,11 @@
         private System.Windows.Forms.ContextMenuStrip treeNodeMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem deleteStripMenuItem;
         private System.Windows.Forms.Panel topRightPanel;
-        private DynamiCal.Presentation.TextBox.SearchBox searchBox;
         private System.Windows.Forms.ListBox eventsListBox;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel bottomRightPanel;
         private System.Windows.Forms.BindingSource eventoBindingSource;
         private Presentation.EventPanel eventPanel;
+        private Presentation.TextBox.SearchBoxPanel searchBoxPanel;
 
     }
 }
