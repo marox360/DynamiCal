@@ -79,8 +79,7 @@ namespace DynamiCal
         {
             this.calendarGridView.CurrentCell = this.calendarGridView.Rows.Cast<DataGridViewRow>()
                 .SelectMany(row => row.Cells.Cast<DataGridViewCell>())
-                .Where(cell => cell.Value is CalendarDay && (cell.Value as CalendarDay).Date.IsSameDayOf(date))
-                .FirstOrDefault();
+                .FirstOrDefault(cell => cell.Value is CalendarDay && (cell.Value as CalendarDay).Date.IsSameDayOf(date));
         }
 
         private void CalendarsChanged(object sender, AgendaCollectionEventArgs e)
