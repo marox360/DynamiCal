@@ -10,11 +10,27 @@ namespace DynamiCal.Presentation.TextBox
 {
     class SearchBox : System.Windows.Forms.TextBox
     {
+        private string _placeholderText = "Cerca";
         private Color _placeholderColor = Color.DarkGray;
         private Color _textColor = Color.Black;
 
         [DefaultValue("Cerca")]
-        public String PlaceholderText { get; set; }
+        public string PlaceholderText
+        {
+            get
+            {
+                return _placeholderText;
+            }
+            set
+            {
+                if (this.Text == _placeholderText)
+                {
+                    this.Text = value;
+                }
+
+                _placeholderText = value;
+            }
+        }
 
         [DefaultValue(typeof(Color), "DarkGray")]
         public Color PlaceholderColor
