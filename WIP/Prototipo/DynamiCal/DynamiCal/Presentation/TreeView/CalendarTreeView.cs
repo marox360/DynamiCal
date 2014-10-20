@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,7 +59,7 @@ namespace DynamiCal.Presentation.TreeView
 
             if (e.Node is CalendarTreeNode)
             {
-                (e.Node as CalendarTreeNode).DrawNode(e.Graphics, this.Font, 0, 6);
+                this.DrawCalendarNode(e.Graphics, e.Node, (e.Node as CalendarTreeNode).CalendarColor, 0, 6);
             }
             else
             {
@@ -75,6 +76,36 @@ namespace DynamiCal.Presentation.TreeView
             }
             
             base.OnDrawNode(e);
+        }
+
+        private void DrawCalendarNode(Graphics graphics, TreeNode node, Color circleColor, int textOffset, int checkboxRadius)
+        {
+            Rectangle bounds = node.Bounds;
+            bounds.Width += 20;
+
+            using (Brush brush = new SolidBrush(node.BackColor))
+            {
+                graphics.FillRectangle(brush, bounds);
+            }
+
+            using (Brush brush = new SolidBrush(circleColor))
+            {
+                Rectangle circleBounds = new Rectangle(bounds.X + textOffset - checkboxRadius, bounds.Y + bounds.Height / 2 - checkboxRadius, checkboxRadius * 2, checkboxRadius * 2);
+                SmoothingMode smoothingMode = graphics.SmoothingMode;
+                graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                graphics.FillEllipse(brush, circleBounds);
+                graphics.SmoothingMode = smoothingMode;
+
+                if (node.Checked)
+                {
+                    circleBounds.Offset(textOffset + checkboxRadius / 4, 0);
+                    TextRenderer.DrawText(graphics, "✔", new Font(this.Font.FontFamily, checkboxRadius), circleBounds, Color.White, Color.Transparent);
+                }
+            }
+
+            bounds.Offset(textOffset, 0);
+            TextFormatFlags flags = TextFormatFlags.Default | TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter;
+            TextRenderer.DrawText(graphics, node.Text, this.Font, bounds, node.ForeColor, node.BackColor, flags);
         }
 
         protected override void OnNodeMouseDoubleClick(TreeNodeMouseClickEventArgs e)

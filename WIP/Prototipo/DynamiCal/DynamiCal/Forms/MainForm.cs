@@ -52,7 +52,7 @@ namespace DynamiCal.Forms
             {
                 CriterioDiFiltraggio criterioFiltraggio = new CriterioDiFiltraggio(Agenda.Instance.Calendari);
 
-                Filtro filtroCalendari = FiltroFactory.FiltraPerCalendari(criterioFiltraggio, this.calendarTreeView.CheckedCalendars);
+                IFiltro filtroCalendari = FiltroFactory.FiltraPerCalendari(criterioFiltraggio, this.calendarTreeView.CheckedCalendars);
 
                 return FiltroFactory.FiltraPerPeriodo(filtroCalendari,
                     new DateTime(_lastDate.Year, _lastDate.Month, 1).AddDays(-14),

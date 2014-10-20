@@ -37,17 +37,17 @@ namespace DynamiCal.Forms
             {
                 CriterioDiFiltraggio criterioFiltraggio = new CriterioDiFiltraggio(Agenda.Instance.Calendari);
 
-                List<ModelloEvento> modelliEvento = new List<ModelloEvento>();
+                IList<ModelloEvento> modelliEvento = new List<ModelloEvento>();
                 foreach (ModelloEvento modelloEvento in this.eventModelListBox.CheckedItems)
                 {
                     modelliEvento.Add(modelloEvento);
                 }
 
-                Filtro filtroCalendari = FiltroFactory.FiltraPerCalendari(criterioFiltraggio, this.calendarTreeView.CheckedCalendars);
-                Filtro filtroModelli = FiltroFactory.FiltraPerModelli(filtroCalendari, modelliEvento);
-                Filtro filtroTesto = FiltroFactory.FiltraPerTesto(filtroModelli, this.searchBoxPanel.SearchText);
+                IFiltro filtroCalendari = FiltroFactory.FiltraPerCalendari(criterioFiltraggio, this.calendarTreeView.CheckedCalendars);
+                IFiltro filtroModelli = FiltroFactory.FiltraPerModelli(filtroCalendari, modelliEvento);
+                IFiltro filtroTesto = FiltroFactory.FiltraPerTesto(filtroModelli, this.searchBoxPanel.SearchText);
 
-                Filtro filtroData = null;
+                IFiltro filtroData = null;
                 switch (this.dateComboBox.SelectedIndex)
                 {
                     case 1:
