@@ -41,17 +41,18 @@
             System.Windows.Forms.Label calendarLabel;
             System.Windows.Forms.Panel bottomCalendarPanel;
             System.Windows.Forms.Panel sidePanel;
+            System.Windows.Forms.Panel topPanel;
+            System.Windows.Forms.Label dateLabel;
             this.showInCalendarButton = new System.Windows.Forms.Button();
-            this.mDeselectAllButton = new System.Windows.Forms.Button();
-            this.mSelectAllButton = new System.Windows.Forms.Button();
             this.eventModelListBox = new System.Windows.Forms.CheckedListBox();
             this.eventListBox = new DynamiCal.Presentation.ListBox.EventListBox();
             this.calendarTreeView = new DynamiCal.Presentation.TreeView.CalendarTreeView();
-            this.cDeselectAllButton = new System.Windows.Forms.Button();
-            this.cSelectAllButton = new System.Windows.Forms.Button();
             this.searchBoxPanel = new DynamiCal.Presentation.TextBox.SearchBoxPanel();
             this.eventPanel = new DynamiCal.Presentation.EventPanel();
             this.noEventsLabel = new System.Windows.Forms.Label();
+            this.startDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.endDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.dateComboBox = new System.Windows.Forms.ComboBox();
             panel = new System.Windows.Forms.Panel();
             tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             eventBottomPanel = new System.Windows.Forms.Panel();
@@ -64,6 +65,8 @@
             calendarLabel = new System.Windows.Forms.Label();
             bottomCalendarPanel = new System.Windows.Forms.Panel();
             sidePanel = new System.Windows.Forms.Panel();
+            topPanel = new System.Windows.Forms.Panel();
+            dateLabel = new System.Windows.Forms.Label();
             panel.SuspendLayout();
             tableLayoutPanel.SuspendLayout();
             eventBottomPanel.SuspendLayout();
@@ -73,12 +76,13 @@
             calendarPanel.SuspendLayout();
             bottomCalendarPanel.SuspendLayout();
             sidePanel.SuspendLayout();
+            topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
             // 
             panel.Controls.Add(tableLayoutPanel);
-            panel.Controls.Add(this.searchBoxPanel);
+            panel.Controls.Add(topPanel);
             panel.Dock = System.Windows.Forms.DockStyle.Fill;
             panel.Location = new System.Drawing.Point(0, 0);
             panel.Name = "panel";
@@ -131,36 +135,13 @@
             // 
             // bottomModelPanel
             // 
-            bottomModelPanel.Controls.Add(this.mDeselectAllButton);
-            bottomModelPanel.Controls.Add(this.mSelectAllButton);
+            bottomModelPanel.Controls.Add(this.endDateTimePicker);
+            bottomModelPanel.Controls.Add(this.startDateTimePicker);
             bottomModelPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             bottomModelPanel.Location = new System.Drawing.Point(170, 264);
             bottomModelPanel.Name = "bottomModelPanel";
-            bottomModelPanel.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
             bottomModelPanel.Size = new System.Drawing.Size(161, 49);
             bottomModelPanel.TabIndex = 7;
-            // 
-            // mDeselectAllButton
-            // 
-            this.mDeselectAllButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.mDeselectAllButton.Location = new System.Drawing.Point(20, 26);
-            this.mDeselectAllButton.Name = "mDeselectAllButton";
-            this.mDeselectAllButton.Size = new System.Drawing.Size(121, 23);
-            this.mDeselectAllButton.TabIndex = 1;
-            this.mDeselectAllButton.Text = "Deseleziona tutti";
-            this.mDeselectAllButton.UseVisualStyleBackColor = true;
-            this.mDeselectAllButton.Click += new System.EventHandler(this.mDeselectAllButton_Click);
-            // 
-            // mSelectAllButton
-            // 
-            this.mSelectAllButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.mSelectAllButton.Location = new System.Drawing.Point(20, 0);
-            this.mSelectAllButton.Name = "mSelectAllButton";
-            this.mSelectAllButton.Size = new System.Drawing.Size(121, 23);
-            this.mSelectAllButton.TabIndex = 0;
-            this.mSelectAllButton.Text = "Seleziona tutti";
-            this.mSelectAllButton.UseVisualStyleBackColor = true;
-            this.mSelectAllButton.Click += new System.EventHandler(this.mSelectAllButton_Click);
             // 
             // eventModelPanel
             // 
@@ -269,8 +250,8 @@
             // 
             // bottomCalendarPanel
             // 
-            bottomCalendarPanel.Controls.Add(this.cDeselectAllButton);
-            bottomCalendarPanel.Controls.Add(this.cSelectAllButton);
+            bottomCalendarPanel.Controls.Add(this.dateComboBox);
+            bottomCalendarPanel.Controls.Add(dateLabel);
             bottomCalendarPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             bottomCalendarPanel.Location = new System.Drawing.Point(3, 264);
             bottomCalendarPanel.Name = "bottomCalendarPanel";
@@ -278,37 +259,15 @@
             bottomCalendarPanel.Size = new System.Drawing.Size(161, 49);
             bottomCalendarPanel.TabIndex = 6;
             // 
-            // cDeselectAllButton
-            // 
-            this.cDeselectAllButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.cDeselectAllButton.Location = new System.Drawing.Point(20, 26);
-            this.cDeselectAllButton.Name = "cDeselectAllButton";
-            this.cDeselectAllButton.Size = new System.Drawing.Size(121, 23);
-            this.cDeselectAllButton.TabIndex = 1;
-            this.cDeselectAllButton.Text = "Deseleziona tutti";
-            this.cDeselectAllButton.UseVisualStyleBackColor = true;
-            this.cDeselectAllButton.Click += new System.EventHandler(this.cDeselectAllButton_Click);
-            // 
-            // cSelectAllButton
-            // 
-            this.cSelectAllButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cSelectAllButton.Location = new System.Drawing.Point(20, 0);
-            this.cSelectAllButton.Name = "cSelectAllButton";
-            this.cSelectAllButton.Size = new System.Drawing.Size(121, 23);
-            this.cSelectAllButton.TabIndex = 0;
-            this.cSelectAllButton.Text = "Seleziona tutti";
-            this.cSelectAllButton.UseVisualStyleBackColor = true;
-            this.cSelectAllButton.Click += new System.EventHandler(this.cSelectAllButton_Click);
-            // 
             // searchBoxPanel
             // 
             this.searchBoxPanel.BackColor = System.Drawing.SystemColors.Window;
-            this.searchBoxPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchBoxPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.searchBoxPanel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBoxPanel.Location = new System.Drawing.Point(5, 10);
+            this.searchBoxPanel.Location = new System.Drawing.Point(15, 0);
             this.searchBoxPanel.Name = "searchBoxPanel";
             this.searchBoxPanel.Padding = new System.Windows.Forms.Padding(0, 2, 2, 5);
-            this.searchBoxPanel.Size = new System.Drawing.Size(502, 30);
+            this.searchBoxPanel.Size = new System.Drawing.Size(487, 30);
             this.searchBoxPanel.TabIndex = 1;
             this.searchBoxPanel.SearchTextChanged += new System.EventHandler(this.UpdateFilter);
             // 
@@ -343,6 +302,64 @@
             this.noEventsLabel.Text = "Nessun evento";
             this.noEventsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // topPanel
+            // 
+            topPanel.Controls.Add(this.searchBoxPanel);
+            topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            topPanel.Location = new System.Drawing.Point(5, 10);
+            topPanel.Name = "topPanel";
+            topPanel.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            topPanel.Size = new System.Drawing.Size(502, 30);
+            topPanel.TabIndex = 5;
+            // 
+            // startDateTimePicker
+            // 
+            this.startDateTimePicker.CustomFormat = "dd MMMM yyyy";
+            this.startDateTimePicker.Dock = System.Windows.Forms.DockStyle.Top;
+            this.startDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.startDateTimePicker.Location = new System.Drawing.Point(0, 0);
+            this.startDateTimePicker.Name = "startDateTimePicker";
+            this.startDateTimePicker.Size = new System.Drawing.Size(161, 22);
+            this.startDateTimePicker.TabIndex = 2;
+            this.startDateTimePicker.ValueChanged += new System.EventHandler(this.startDateTimePicker_ValueChanged);
+            // 
+            // endDateTimePicker
+            // 
+            this.endDateTimePicker.CustomFormat = "dd MMMM yyyy";
+            this.endDateTimePicker.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.endDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.endDateTimePicker.Location = new System.Drawing.Point(0, 27);
+            this.endDateTimePicker.Name = "endDateTimePicker";
+            this.endDateTimePicker.Size = new System.Drawing.Size(161, 22);
+            this.endDateTimePicker.TabIndex = 3;
+            this.endDateTimePicker.ValueChanged += new System.EventHandler(this.endDateTimePicker_ValueChanged);
+            // 
+            // dateLabel
+            // 
+            dateLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            dateLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dateLabel.Location = new System.Drawing.Point(20, 0);
+            dateLabel.Name = "dateLabel";
+            dateLabel.Size = new System.Drawing.Size(121, 17);
+            dateLabel.TabIndex = 5;
+            dateLabel.Text = "Filtra data:";
+            dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dateComboBox
+            // 
+            this.dateComboBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dateComboBox.FormattingEnabled = true;
+            this.dateComboBox.Items.AddRange(new object[] {
+            "Nessuna",
+            "Giornata",
+            "Periodo"});
+            this.dateComboBox.Location = new System.Drawing.Point(20, 28);
+            this.dateComboBox.Name = "dateComboBox";
+            this.dateComboBox.Size = new System.Drawing.Size(121, 21);
+            this.dateComboBox.TabIndex = 6;
+            this.dateComboBox.SelectedIndexChanged += new System.EventHandler(this.dateComboBox_SelectedIndexChanged);
+            // 
             // SearchEventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,6 +382,7 @@
             calendarPanel.ResumeLayout(false);
             bottomCalendarPanel.ResumeLayout(false);
             sidePanel.ResumeLayout(false);
+            topPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -376,12 +394,11 @@
         private Presentation.ListBox.EventListBox eventListBox;
         private Presentation.TreeView.CalendarTreeView calendarTreeView;
         private System.Windows.Forms.CheckedListBox eventModelListBox;
-        private System.Windows.Forms.Button cDeselectAllButton;
-        private System.Windows.Forms.Button cSelectAllButton;
-        private System.Windows.Forms.Button mDeselectAllButton;
-        private System.Windows.Forms.Button mSelectAllButton;
         private System.Windows.Forms.Button showInCalendarButton;
         private System.Windows.Forms.Label noEventsLabel;
+        private System.Windows.Forms.DateTimePicker startDateTimePicker;
+        private System.Windows.Forms.DateTimePicker endDateTimePicker;
+        private System.Windows.Forms.ComboBox dateComboBox;
 
     }
 }
