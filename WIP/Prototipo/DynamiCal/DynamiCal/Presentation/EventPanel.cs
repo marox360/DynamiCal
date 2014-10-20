@@ -58,7 +58,41 @@ namespace DynamiCal.Presentation
             this.locationLabel.Text = evento.Luogo == null ? "" : evento.Luogo;
             this.toolTip.SetToolTip(this.locationLabel, this.locationLabel.Text);
 
-            TimePeriod periodo = this.OverrideDate == default(DateTime) ? evento.Periodo : new TimePeriod(this.OverrideDate.DateWithTime(evento.Periodo.StartDate), evento.Periodo.Duration);
+            TimePeriod periodo;
+            if (this.OverrideDate == default(DateTime))
+            {
+                periodo = evento.Periodo;
+            }
+            else
+            {
+                DateTime overrideDate = this.OverrideDate.DateWithTime(evento.Periodo.StartDate);
+                int numberOfRepetitions = evento.Periodicita.NumberOfRepetitions(evento.Periodo, overrideDate);
+
+                if (numberOfRepetitions != -1)
+                {
+                    switch (evento.Periodicita.Ripetizione)
+                    {
+                        case Periodicita.Frequenza.Giornaliera:
+                            overrideDate = evento.Periodo.StartDate.AddDays(evento.Periodicita.Valore * numberOfRepetitions);
+                            break;
+
+                        case Periodicita.Frequenza.Settimanale:
+                            overrideDate = evento.Periodo.StartDate.AddDays(7 * evento.Periodicita.Valore * numberOfRepetitions);
+                            break;
+
+                        case Periodicita.Frequenza.Mensile:
+                            overrideDate = evento.Periodo.StartDate.AddMonths(evento.Periodicita.Valore * numberOfRepetitions);
+                            break;
+
+                        case Periodicita.Frequenza.Annuale:
+                            overrideDate = evento.Periodo.StartDate.AddYears(evento.Periodicita.Valore * numberOfRepetitions);
+                            break;
+                    }
+                }
+
+                periodo = new TimePeriod(overrideDate, evento.Periodo.Duration);
+            }
+
             this.dateLabel.Text = String.Format("{0:dddd dd MMMM yyyy}", periodo.StartDate);
 
             if (periodo.AllDayLong)

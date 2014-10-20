@@ -123,30 +123,84 @@ namespace DynamiCal.Model
                     return eventPeriod.IntersectWith(testPeriod);
 
                 case Frequenza.Giornaliera:
-                    return this.TestDaySequence(eventPeriod, testPeriod, (_, __, timeSpan, value) =>
-                                (timeSpan.Days % value) == 0);
+                    return Periodicita.TestDaySequence(eventPeriod, testPeriod, _valore, Frequenza.Giornaliera);
 
                 case Frequenza.Settimanale:
-                    return this.TestDaySequence(eventPeriod, testPeriod, (_, __, timeSpan, value) =>
-                                (timeSpan.Days % 7) == 0 && (timeSpan.Days / 7) % value == 0);
+                    return Periodicita.TestDaySequence(eventPeriod, testPeriod, _valore, Frequenza.Settimanale);
 
                 case Frequenza.Mensile:
-                    return this.TestDaySequence(eventPeriod, testPeriod, (day, testDay, _, value) =>
-                                 testDay.Day == day.Day &&
-                                (testDay.Month + (testDay.Year != day.Year ? 12 : 0) - day.Month) % value == 0);
+                    return Periodicita.TestDaySequence(eventPeriod, testPeriod, _valore, Frequenza.Mensile);
 
                 case Frequenza.Annuale:
-                    return this.TestDaySequence(eventPeriod, testPeriod, (day, testDay, _, value) =>
-                                 testDay.Day == day.Day &&
-                                 testDay.Month == day.Month &&
-                                (testDay.Year - day.Year) % value == 0);
+                    return Periodicita.TestDaySequence(eventPeriod, testPeriod, _valore, Frequenza.Annuale);
             }
 
             return false;
         }
 
-        private bool TestDaySequence(TimePeriod timePeriod, TimePeriod testPeriod, Func<DateTime, DateTime, TimeSpan, int, bool> test)
+        public int NumberOfRepetitions(TimePeriod eventPeriod, DateTime testDate)
         {
+            if (!this.TestaData(eventPeriod, testDate))
+            {
+                return -1;
+            }
+
+            TimePeriod testPeriod = new TimePeriod(testDate.Date, TimeSpan.FromDays(1));
+
+            switch (_frequenza)
+            {
+                case Frequenza.Mai:
+                    return 0;
+
+                case Frequenza.Giornaliera:
+                    return Periodicita.CountRepetitions(eventPeriod, testPeriod, _valore, Frequenza.Giornaliera);
+
+                case Frequenza.Settimanale:
+                    return Periodicita.CountRepetitions(eventPeriod, testPeriod, _valore, Frequenza.Settimanale);
+
+                case Frequenza.Mensile:
+                    return Periodicita.CountRepetitions(eventPeriod, testPeriod, _valore, Frequenza.Mensile);
+
+                case Frequenza.Annuale:
+                    return Periodicita.CountRepetitions(eventPeriod, testPeriod, _valore, Frequenza.Annuale);
+            }
+
+            return -1;
+        }
+
+        private static int CountRepetitions(TimePeriod timePeriod, TimePeriod testPeriod, int valore, Frequenza frequenza)
+        {
+            Func<DateTime, DateTime, TimeSpan, int, bool> testFunction = Periodicita.TestRepetitionFunction(frequenza);
+            Func<DateTime, DateTime, TimeSpan, int, int> repetitionFunction = Periodicita.NumberOfRepetitionsFunction(frequenza);
+            if (testFunction == null || repetitionFunction == null)
+            {
+                return -1;
+            }
+
+            foreach (DateTime day in TimePeriod.DaysSequence(timePeriod))
+            {
+                TimeSpan timeSpan = testPeriod.StartDate - day;
+                if (timeSpan.TotalDays < 0)
+                {
+                    return -1;
+                }
+                else if (testFunction(day, testPeriod.StartDate, timeSpan, valore))
+                {
+                    return repetitionFunction(day, testPeriod.StartDate, timeSpan, valore);
+                }
+            }
+
+            return -1;
+        }
+
+        private static bool TestDaySequence(TimePeriod timePeriod, TimePeriod testPeriod, int valore, Frequenza frequenza)
+        {
+            Func<DateTime, DateTime, TimeSpan, int, bool> testFunction = Periodicita.TestRepetitionFunction(frequenza);
+            if (testFunction == null)
+            {
+                return false;
+            }
+
             foreach (DateTime day in TimePeriod.DaysSequence(timePeriod))
             {
                 TimeSpan timeSpan = testPeriod.StartDate - day;
@@ -154,13 +208,66 @@ namespace DynamiCal.Model
                 {
                     return false;
                 }
-                else if (test(day, testPeriod.StartDate, timeSpan, _valore))
+                else if (testFunction(day, testPeriod.StartDate, timeSpan, valore))
                 {
                     return true;
                 }
             }
 
             return false;
+        }
+
+        private static Func<DateTime, DateTime, TimeSpan, int, bool> TestRepetitionFunction(Frequenza frequenza)
+        {
+            switch (frequenza)
+            {
+                case Frequenza.Giornaliera:
+                    return (_, __, timeSpan, value) =>
+                                (timeSpan.Days % value) == 0;
+
+                case Frequenza.Settimanale:
+                    return (_, __, timeSpan, value) =>
+                                (timeSpan.Days % 7) == 0 && (timeSpan.Days / 7) % value == 0;
+
+                case Frequenza.Mensile:
+                    return (day, testDay, _, value) =>
+                                 testDay.Day == day.Day &&
+                                (testDay.Month + (testDay.Year != day.Year ? 12 : 0) - day.Month) % value == 0;
+
+                case Frequenza.Annuale:
+                    return (day, testDay, _, value) =>
+                                 testDay.Day == day.Day &&
+                                 testDay.Month == day.Month &&
+                                (testDay.Year - day.Year) % value == 0;
+
+                default:
+                    return null;
+            }
+        }
+
+        private static Func<DateTime, DateTime, TimeSpan, int, int> NumberOfRepetitionsFunction(Frequenza frequenza)
+        {
+            switch (frequenza)
+            {
+                case Frequenza.Giornaliera:
+                    return (_, __, timeSpan, value) =>
+                                timeSpan.Days / value;
+
+                case Frequenza.Settimanale:
+                    return (_, __, timeSpan, value) =>
+                                timeSpan.Days / (7 * value);
+
+                case Frequenza.Mensile:
+                    return (day, testDay, _, value) =>
+                                (testDay.Month + (testDay.Year - day.Year) * 12 - day.Month) / value;
+
+                case Frequenza.Annuale:
+                    return (day, testDay, _, value) =>
+                                (testDay.Year - day.Year) / value;
+
+                default:
+                    return null;
+            }
         }
 
         public static Periodicita operator *(Periodicita periodicita, int valore)
