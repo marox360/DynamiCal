@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace DynamiCal.Model
+namespace DynamiCal.Model.Calendars
 {
     abstract class Calendario : IEquatable<Calendario>
     {

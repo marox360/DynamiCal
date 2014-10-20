@@ -1,4 +1,5 @@
 ﻿using DynamiCal.Model;
+using DynamiCal.Model.Calendars;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,29 +34,13 @@ namespace DynamiCal.Forms
 
         private void nameTextBox_TextChanged(object sender, EventArgs e)
         {
-            this.createButton.Enabled = !String.IsNullOrWhiteSpace((sender as TextBox).Text);
-            if (this.createButton.Enabled)
-            {
-                Calendario calendar = new CalendarioLocale((sender as TextBox).Text.Trim());
-                this.createButton.Enabled = !Agenda.Instance.Calendari.Contains(calendar);
-            }
+            string text = (sender as TextBox).Text.Trim();
+            this.createButton.Enabled = !Agenda.Instance.Calendari.Where(calendar => calendar.Nome == text).Any();
         }
 
         private Calendario GetCalendario()
         {
-            if (this.friendsCheckedListBox.CheckedItems.Count == 0)
-            {
-                return new CalendarioLocale(this.nameTextBox.Text);
-            }
-            else
-            {
-                List<Amico> friends = new List<Amico>();
-                foreach (Amico friend in this.friendsCheckedListBox.CheckedItems)
-                {
-                    friends.Add(friend);
-                }
-                return new CalendarioCondiviso(this.nameTextBox.Text, friends);
-            }
+            return CalendarioFactory.CreaCalendario(this.nameTextBox.Text, this.friendsCheckedListBox.CheckedItems.Cast<Amico>());
         }
 
         private void emailTextBox_TextChanged(object sender, EventArgs e)

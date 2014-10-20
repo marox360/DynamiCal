@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using DynamiCal.Filters;
+using DynamiCal.Model.Calendars;
 
 namespace DynamiCal.Forms
 {

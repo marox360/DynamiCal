@@ -5,16 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamiCal.Model
+namespace DynamiCal.Model.Calendars
 {
     class CalendarioCondiviso : Calendario
     {
         private List<Amico> _amici;
     
-        public CalendarioCondiviso(string nome, IList<Amico> amici) : base(nome)
+        public CalendarioCondiviso(string nome, IEnumerable<Amico> amici) : base(nome)
         {
             #region Precondizioni
-            Debug.Assert(amici != null && amici.Count > 0, "Amici cannot be null or empty");
+            Debug.Assert(amici != null && amici.Any(), "Amici cannot be null or empty");
             #endregion
 
             _amici = new List<Amico>(amici);

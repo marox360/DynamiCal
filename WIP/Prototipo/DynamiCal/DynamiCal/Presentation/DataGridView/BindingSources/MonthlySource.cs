@@ -55,14 +55,12 @@ namespace DynamiCal.Presentation.DataGridView.BindingSources
             get
             {
                 DateTimeFormatInfo dateTimeFormat = CultureInfo.CurrentCulture.DateTimeFormat;
-                string description = "";
+                string description = _day.Day.ToString();
                 
                 if (_todayWeek && _weekIndex != 0)
                 {
-                    description += dateTimeFormat.GetAbbreviatedDayName(_day.DayOfWeek) + " ";
+                    description = dateTimeFormat.GetAbbreviatedDayName(_day.DayOfWeek) + " " + description;
                 }
-
-                description += _day.Day.ToString();
 
                 if (_day.Day == 1)
                 {

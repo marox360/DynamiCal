@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DynamiCal.Model.Calendars;
 
 namespace DynamiCal.Forms
 {
@@ -37,14 +38,8 @@ namespace DynamiCal.Forms
             {
                 CriterioDiFiltraggio criterioFiltraggio = new CriterioDiFiltraggio(Agenda.Instance.Calendari);
 
-                IList<ModelloEvento> modelliEvento = new List<ModelloEvento>();
-                foreach (ModelloEvento modelloEvento in this.eventModelListBox.CheckedItems)
-                {
-                    modelliEvento.Add(modelloEvento);
-                }
-
                 IFiltro filtroCalendari = FiltroFactory.FiltraPerCalendari(criterioFiltraggio, this.calendarTreeView.CheckedCalendars);
-                IFiltro filtroModelli = FiltroFactory.FiltraPerModelli(filtroCalendari, modelliEvento);
+                IFiltro filtroModelli = FiltroFactory.FiltraPerModelli(filtroCalendari, this.eventModelListBox.CheckedItems.Cast<ModelloEvento>());
                 IFiltro filtroTesto = FiltroFactory.FiltraPerTesto(filtroModelli, this.searchBoxPanel.SearchText);
 
                 IFiltro filtroData = null;

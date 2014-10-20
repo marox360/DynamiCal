@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamiCal.Model
+namespace DynamiCal.Model.Calendars
 {
     class CalendarioLocale : Calendario
     {

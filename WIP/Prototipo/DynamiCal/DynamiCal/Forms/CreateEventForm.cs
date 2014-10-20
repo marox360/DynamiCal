@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DynamiCal.Time;
+using DynamiCal.Model.Calendars;
 
 namespace DynamiCal.Forms
 {
@@ -25,24 +26,21 @@ namespace DynamiCal.Forms
         {
             this.durationComboBox.SelectedIndex = 1;
 
-            foreach (Periodicita.Frequenza frequenza in Enum.GetValues(typeof(Periodicita.Frequenza)).Cast<Periodicita.Frequenza>())
+            foreach (Periodicita.Frequenza frequenza in Enum.GetValues(typeof(Periodicita.Frequenza)).Cast<Periodicita.Frequenza>().Where(f => f != Periodicita.Frequenza.Mai))
             {
-                if (frequenza != Periodicita.Frequenza.Mai)
-                {
-                    this.frequenzaBindingSource.Add(new BindingContainer<Periodicita.Frequenza>(frequenza.ToString(), frequenza));
-                }
+                 this.frequenzaBindingSource.Add(new BindingContainer<Periodicita.Frequenza>(frequenza.ToString(), frequenza));
             }
 
             this.eventModelSelectorComboBox.BeginUpdate();
             this.modelloEventoContainerBindingSource.Add(new BindingContainer<ModelloEvento>("Nuovo Modello...", null));
             foreach (ModelloEvento modello in Agenda.Instance.ModelliEvento)
             {
-                BindingContainer<ModelloEvento> eventModelContainer = new BindingContainer<ModelloEvento>(modello.Nome, modello);
-                this.modelloEventoContainerBindingSource.Add(eventModelContainer);
+                BindingContainer<ModelloEvento> modelloContainer = new BindingContainer<ModelloEvento>(modello.Nome, modello);
+                this.modelloEventoContainerBindingSource.Add(modelloContainer);
 
-                if (modello.Voci.Count == 0)
+                if (!modelloContainer.Value.Voci.Any())
                 {
-                    this.eventModelSelectorComboBox.SelectedItem = eventModelContainer;
+                    this.eventModelSelectorComboBox.SelectedItem = modelloContainer;
                 }
             }
             this.eventModelSelectorComboBox.EndUpdate();
@@ -51,12 +49,8 @@ namespace DynamiCal.Forms
             foreach (Calendario calendario in Agenda.Instance.Calendari)
             {
                 this.calendarioBindingSource.Add(calendario);
-
-                if (this.calendarSelectorComboBox.SelectedItem == null)
-                {
-                    this.calendarSelectorComboBox.SelectedItem = calendario;
-                }
             }
+            this.calendarSelectorComboBox.SelectedItem = this.calendarioBindingSource.Cast<Calendario>().FirstOrDefault();
             this.calendarSelectorComboBox.EndUpdate();
 
             this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Mai));
@@ -151,7 +145,7 @@ namespace DynamiCal.Forms
                 }
                 else
                 {
-                    List<IVoce> voceDataSource = new List<IVoce>();
+                    IList<IVoce> voceDataSource = new List<IVoce>();
                     foreach (Voce voce in modelloEvento.Voci)
                     {
                         voceDataSource.Add(VoceFactory.GetImplementedVoce(voce));

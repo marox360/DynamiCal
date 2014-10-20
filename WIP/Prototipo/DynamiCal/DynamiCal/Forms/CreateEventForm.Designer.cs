@@ -111,7 +111,7 @@
             // 
             // calendarioBindingSource
             // 
-            this.calendarioBindingSource.DataSource = typeof(DynamiCal.Model.Calendario);
+            this.calendarioBindingSource.DataSource = typeof(DynamiCal.Model.Calendars.Calendario);
             // 
             // createButton
             // 
