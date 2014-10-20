@@ -29,24 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.GroupBox eventModelGroup;
+            System.Windows.Forms.GroupBox modelEntryGroup;
+            System.Windows.Forms.Label label3;
+            System.Windows.Forms.Label label2;
             this.createButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.eventModelGroup = new System.Windows.Forms.GroupBox();
             this.modelNameTextBox = new System.Windows.Forms.TextBox();
-            this.modelEntryGroup = new System.Windows.Forms.GroupBox();
             this.addEntryButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.entryTypeComboBox = new System.Windows.Forms.ComboBox();
             this.tipoVoceContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.entryNameTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.overviewGridView = new System.Windows.Forms.DataGridView();
-            this.voceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new DynamiCal.Presentation.DataGridView.DataGridViewEntryTypeColumn();
-            this.eventModelGroup.SuspendLayout();
-            this.modelEntryGroup.SuspendLayout();
+            this.voceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            label1 = new System.Windows.Forms.Label();
+            eventModelGroup = new System.Windows.Forms.GroupBox();
+            modelEntryGroup = new System.Windows.Forms.GroupBox();
+            label3 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            eventModelGroup.SuspendLayout();
+            modelEntryGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoVoceContainerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.overviewGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voceBindingSource)).BeginInit();
@@ -76,24 +81,24 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Inserisci il nome:";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(6, 22);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(92, 13);
+            label1.TabIndex = 2;
+            label1.Text = "Inserisci il nome:";
             // 
             // eventModelGroup
             // 
-            this.eventModelGroup.Controls.Add(this.modelNameTextBox);
-            this.eventModelGroup.Controls.Add(this.label1);
-            this.eventModelGroup.Cursor = System.Windows.Forms.Cursors.Default;
-            this.eventModelGroup.Location = new System.Drawing.Point(13, 13);
-            this.eventModelGroup.Name = "eventModelGroup";
-            this.eventModelGroup.Size = new System.Drawing.Size(300, 67);
-            this.eventModelGroup.TabIndex = 3;
-            this.eventModelGroup.TabStop = false;
-            this.eventModelGroup.Text = "Modello Evento";
+            eventModelGroup.Controls.Add(this.modelNameTextBox);
+            eventModelGroup.Controls.Add(label1);
+            eventModelGroup.Cursor = System.Windows.Forms.Cursors.Default;
+            eventModelGroup.Location = new System.Drawing.Point(13, 13);
+            eventModelGroup.Name = "eventModelGroup";
+            eventModelGroup.Size = new System.Drawing.Size(300, 67);
+            eventModelGroup.TabIndex = 3;
+            eventModelGroup.TabStop = false;
+            eventModelGroup.Text = "Modello Evento";
             // 
             // modelNameTextBox
             // 
@@ -105,17 +110,17 @@
             // 
             // modelEntryGroup
             // 
-            this.modelEntryGroup.Controls.Add(this.addEntryButton);
-            this.modelEntryGroup.Controls.Add(this.label3);
-            this.modelEntryGroup.Controls.Add(this.entryTypeComboBox);
-            this.modelEntryGroup.Controls.Add(this.entryNameTextBox);
-            this.modelEntryGroup.Controls.Add(this.label2);
-            this.modelEntryGroup.Location = new System.Drawing.Point(13, 86);
-            this.modelEntryGroup.Name = "modelEntryGroup";
-            this.modelEntryGroup.Size = new System.Drawing.Size(300, 95);
-            this.modelEntryGroup.TabIndex = 4;
-            this.modelEntryGroup.TabStop = false;
-            this.modelEntryGroup.Text = "Voce";
+            modelEntryGroup.Controls.Add(this.addEntryButton);
+            modelEntryGroup.Controls.Add(label3);
+            modelEntryGroup.Controls.Add(this.entryTypeComboBox);
+            modelEntryGroup.Controls.Add(this.entryNameTextBox);
+            modelEntryGroup.Controls.Add(label2);
+            modelEntryGroup.Location = new System.Drawing.Point(13, 86);
+            modelEntryGroup.Name = "modelEntryGroup";
+            modelEntryGroup.Size = new System.Drawing.Size(300, 95);
+            modelEntryGroup.TabIndex = 4;
+            modelEntryGroup.TabStop = false;
+            modelEntryGroup.Text = "Voce";
             // 
             // addEntryButton
             // 
@@ -130,12 +135,12 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(154, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Scegli il tipo:";
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(154, 19);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(73, 13);
+            label3.TabIndex = 3;
+            label3.Text = "Scegli il tipo:";
             // 
             // entryTypeComboBox
             // 
@@ -165,12 +170,12 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Inserisci il nome:";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(7, 20);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(92, 13);
+            label2.TabIndex = 0;
+            label2.Text = "Inserisci il nome:";
             // 
             // overviewGridView
             // 
@@ -197,10 +202,6 @@
             this.overviewGridView.Size = new System.Drawing.Size(300, 120);
             this.overviewGridView.TabIndex = 5;
             // 
-            // voceBindingSource
-            // 
-            this.voceBindingSource.DataSource = typeof(DynamiCal.Model.Voce);
-            // 
             // nomeDataGridViewTextBoxColumn
             // 
             this.nomeDataGridViewTextBoxColumn.DataPropertyName = "Nome";
@@ -217,14 +218,18 @@
             this.Tipo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Tipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // voceBindingSource
+            // 
+            this.voceBindingSource.DataSource = typeof(DynamiCal.Model.Voce);
+            // 
             // CreateEventModelForm
             // 
             this.AcceptButton = this.createButton;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(325, 349);
             this.Controls.Add(this.overviewGridView);
-            this.Controls.Add(this.modelEntryGroup);
-            this.Controls.Add(this.eventModelGroup);
+            this.Controls.Add(modelEntryGroup);
+            this.Controls.Add(eventModelGroup);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createButton);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,10 +237,10 @@
             this.MaximizeBox = false;
             this.Name = "CreateEventModelForm";
             this.Text = "Crea nuovo modello evento";
-            this.eventModelGroup.ResumeLayout(false);
-            this.eventModelGroup.PerformLayout();
-            this.modelEntryGroup.ResumeLayout(false);
-            this.modelEntryGroup.PerformLayout();
+            eventModelGroup.ResumeLayout(false);
+            eventModelGroup.PerformLayout();
+            modelEntryGroup.ResumeLayout(false);
+            modelEntryGroup.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoVoceContainerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.overviewGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.voceBindingSource)).EndInit();
@@ -247,15 +252,10 @@
 
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox eventModelGroup;
         private System.Windows.Forms.TextBox modelNameTextBox;
-        private System.Windows.Forms.GroupBox modelEntryGroup;
         private System.Windows.Forms.ComboBox entryTypeComboBox;
         private System.Windows.Forms.TextBox entryNameTextBox;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button addEntryButton;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView overviewGridView;
         private System.Windows.Forms.BindingSource voceBindingSource;
         private System.Windows.Forms.BindingSource tipoVoceContainerBindingSource;

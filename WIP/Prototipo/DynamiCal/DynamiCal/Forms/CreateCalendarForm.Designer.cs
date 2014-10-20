@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.Label label1;
+            System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label label3;
             this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.createButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.friendsCheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.addButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            label1 = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // nameTextBox
@@ -49,12 +52,12 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Inserisci il nome:";
+            label1.AutoSize = true;
+            label1.Location = new System.Drawing.Point(9, 13);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(92, 13);
+            label1.TabIndex = 1;
+            label1.Text = "Inserisci il nome:";
             // 
             // createButton
             // 
@@ -80,12 +83,12 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Condividi con:";
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(9, 59);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(81, 13);
+            label2.TabIndex = 4;
+            label2.Text = "Condividi con:";
             // 
             // friendsCheckedListBox
             // 
@@ -116,11 +119,11 @@
             // 
             // label3
             // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(0, 190);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(300, 2);
-            this.label3.TabIndex = 8;
+            label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            label3.Location = new System.Drawing.Point(0, 190);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(300, 2);
+            label3.TabIndex = 8;
             // 
             // CreateCalendarForm
             // 
@@ -129,14 +132,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(284, 236);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(label3);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.friendsCheckedListBox);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(label2);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.createButton);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(label1);
             this.Controls.Add(this.nameTextBox);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -151,14 +154,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button createButton;
         private System.Windows.Forms.Button cancelButton;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.CheckedListBox friendsCheckedListBox;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Button addButton;
-        private System.Windows.Forms.Label label3;
     }
 }
