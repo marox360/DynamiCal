@@ -161,6 +161,7 @@ namespace DynamiCal.Forms
 
                 if (calendarDay.NumberOfEvents > 0)
                 {
+                    this.eventPanel.OverrideDate = calendarDay.Date;
                     this.eventsListBox.EventFilter = FiltroFactory.FiltraPerTesto(FiltroFactory.FiltraPerData(this.CurrentFilter, calendarDay.Date), this.searchBoxPanel.SearchText);
                 }
                 else

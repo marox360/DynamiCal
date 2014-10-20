@@ -39,6 +39,10 @@ namespace DynamiCal.Presentation.ListBox
 
                         this.EndUpdate();
                     }
+                    else if (this.EventPanel != null && this.SelectedValue != null && this.SelectedValue is Evento)
+                    {
+                        this.EventPanel.RefreshEvent(this.SelectedValue as Evento);
+                    }
                 }
             }
             get

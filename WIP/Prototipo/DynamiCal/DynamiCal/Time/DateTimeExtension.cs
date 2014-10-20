@@ -27,5 +27,10 @@ namespace DynamiCal.Time
         {
             return date.Date.AddDays(+1).AddSeconds(-1);
         }
+
+        public static DateTime DateWithTime(this DateTime date, DateTime otherDate)
+        {
+            return new DateTime(date.Year, date.Month, date.Day, otherDate.Hour, otherDate.Minute, otherDate.Second, otherDate.Kind);
+        }
     }
 }

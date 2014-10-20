@@ -14,9 +14,33 @@ namespace DynamiCal.Presentation
 {
     public partial class EventPanel : UserControl
     {
+        private DateTime _overrideDate = default(DateTime);
+        private bool _needRefresh = false;
+
         public EventPanel()
         {
             InitializeComponent();
+        }
+
+        public DateTime OverrideDate
+        {
+            get
+            {
+                return _overrideDate;
+            }
+            set
+            {
+                _overrideDate = value;
+                _needRefresh = true;
+            }
+        }
+
+        internal void RefreshEvent(Evento evento)
+        {
+            if (_needRefresh)
+            {
+                this.LoadEvent(evento);
+            }
         }
 
         internal void LoadEvent(Evento evento)
@@ -26,28 +50,31 @@ namespace DynamiCal.Presentation
                 return;
             }
 
+            _needRefresh = false;
+
             this.nameLabel.Text = evento.Nome;
             this.toolTip.SetToolTip(this.nameLabel, this.nameLabel.Text);
 
             this.locationLabel.Text = evento.Luogo == null ? "" : evento.Luogo;
             this.toolTip.SetToolTip(this.locationLabel, this.locationLabel.Text);
 
-            this.dateLabel.Text = String.Format("{0:dddd dd MMMM yyyy}", evento.Periodo.StartDate);
+            TimePeriod periodo = this.OverrideDate == default(DateTime) ? evento.Periodo : new TimePeriod(this.OverrideDate.DateWithTime(evento.Periodo.StartDate), evento.Periodo.Duration);
+            this.dateLabel.Text = String.Format("{0:dddd dd MMMM yyyy}", periodo.StartDate);
 
-            if (evento.Periodo.AllDayLong)
+            if (periodo.AllDayLong)
             {
                 this.timeLabel.Text = "tutto il giorno";
             }
             else
             {
-                this.timeLabel.Text = String.Format("dalle {0:HH:mm}", evento.Periodo.StartDate);
-                if (evento.Periodo.StartDate.IsSameDayOf(evento.Periodo.EndDate))
+                this.timeLabel.Text = String.Format("dalle {0:HH:mm}", periodo.StartDate);
+                if (periodo.StartDate.IsSameDayOf(periodo.EndDate))
                 {
-                    this.timeLabel.Text += String.Format(" alle {0:HH:mm}", evento.Periodo.EndDate);
+                    this.timeLabel.Text += String.Format(" alle {0:HH:mm}", periodo.EndDate);
                 }
                 else
                 {
-                    this.timeLabel.Text += String.Format(" alle {0:HH:mm} del {0:dd MMMM yyyy}", evento.Periodo.EndDate);
+                    this.timeLabel.Text += String.Format(" alle {0:HH:mm} del {0:dd MMMM yyyy}", periodo.EndDate);
                 }
             }
 
