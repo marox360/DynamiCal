@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace DynamiCal
+namespace DynamiCal.Model
 {
     class Amico
     {
