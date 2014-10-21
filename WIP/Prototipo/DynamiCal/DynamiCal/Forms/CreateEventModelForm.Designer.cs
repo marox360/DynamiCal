@@ -34,13 +34,14 @@
             System.Windows.Forms.GroupBox modelEntryGroup;
             System.Windows.Forms.Label label3;
             System.Windows.Forms.Label label2;
-            this.createButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
+            System.Windows.Forms.Label label4;
             this.modelNameTextBox = new System.Windows.Forms.TextBox();
             this.addEntryButton = new System.Windows.Forms.Button();
             this.entryTypeComboBox = new System.Windows.Forms.ComboBox();
             this.tipoVoceContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.entryNameTextBox = new System.Windows.Forms.TextBox();
+            this.createButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
             this.overviewGridView = new System.Windows.Forms.DataGridView();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new DynamiCal.Presentation.DataGridView.DataGridViewEntryTypeColumn();
@@ -50,34 +51,13 @@
             modelEntryGroup = new System.Windows.Forms.GroupBox();
             label3 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
             eventModelGroup.SuspendLayout();
             modelEntryGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipoVoceContainerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.overviewGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.voceBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // createButton
-            // 
-            this.createButton.Enabled = false;
-            this.createButton.Location = new System.Drawing.Point(167, 314);
-            this.createButton.Name = "createButton";
-            this.createButton.Size = new System.Drawing.Size(146, 23);
-            this.createButton.TabIndex = 0;
-            this.createButton.Text = "Crea";
-            this.createButton.UseVisualStyleBackColor = true;
-            this.createButton.Click += new System.EventHandler(this.createButton_Click);
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(12, 314);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(151, 23);
-            this.cancelButton.TabIndex = 1;
-            this.cancelButton.Text = "Annulla";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
             // label1
             // 
@@ -177,6 +157,28 @@
             label2.TabIndex = 0;
             label2.Text = "Inserisci il nome:";
             // 
+            // createButton
+            // 
+            this.createButton.Enabled = false;
+            this.createButton.Location = new System.Drawing.Point(167, 320);
+            this.createButton.Name = "createButton";
+            this.createButton.Size = new System.Drawing.Size(146, 23);
+            this.createButton.TabIndex = 0;
+            this.createButton.Text = "Crea";
+            this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancelButton.Location = new System.Drawing.Point(12, 320);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(151, 23);
+            this.cancelButton.TabIndex = 1;
+            this.cancelButton.Text = "Annulla";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
             // overviewGridView
             // 
             this.overviewGridView.AllowUserToAddRows = false;
@@ -222,11 +224,20 @@
             // 
             this.voceBindingSource.DataSource = typeof(DynamiCal.Model.Voce);
             // 
+            // label4
+            // 
+            label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            label4.Location = new System.Drawing.Point(0, 314);
+            label4.Name = "label4";
+            label4.Size = new System.Drawing.Size(330, 2);
+            label4.TabIndex = 9;
+            // 
             // CreateEventModelForm
             // 
             this.AcceptButton = this.createButton;
             this.CancelButton = this.cancelButton;
             this.ClientSize = new System.Drawing.Size(325, 349);
+            this.Controls.Add(label4);
             this.Controls.Add(this.overviewGridView);
             this.Controls.Add(modelEntryGroup);
             this.Controls.Add(eventModelGroup);
