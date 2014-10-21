@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\DeleteEventModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DeleteEventModel.Designer.cs">
+      <DependentUpon>DeleteEventModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SearchEventForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     <EmbeddedResource Include="Forms\CreateEventModelForm.resx">
       <DependentUpon>CreateEventModelForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DeleteEventModel.resx">
+      <DependentUpon>DeleteEventModel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,7 +186,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\DynamiCal.Model.Agenda.datasource" />
-    <None Include="Properties\DataSources\DynamiCal.Model.Calendario.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Evento.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.IVoce.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.ModelloEvento.datasource" />

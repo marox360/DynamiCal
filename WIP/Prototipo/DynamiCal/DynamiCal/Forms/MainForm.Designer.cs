@@ -67,6 +67,7 @@
             this.calendarGridView = new DynamiCal.Presentation.DataGridView.CalendarDataGridView();
             this.weekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.treeNodeMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.eliminaModelloEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             lunedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
             martedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
             mercoledìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
@@ -274,6 +275,7 @@
             this.eventPanel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventPanel.Location = new System.Drawing.Point(0, 155);
             this.eventPanel.Name = "eventPanel";
+            this.eventPanel.OverrideDate = new System.DateTime(((long)(0)));
             this.eventPanel.Padding = new System.Windows.Forms.Padding(5);
             this.eventPanel.Size = new System.Drawing.Size(237, 407);
             this.eventPanel.TabIndex = 0;
@@ -352,7 +354,8 @@
             // modelloEventoToolStripMenuItem
             // 
             modelloEventoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            creaModelloEventoToolStripMenuItem});
+            creaModelloEventoToolStripMenuItem,
+            this.eliminaModelloEventoToolStripMenuItem});
             modelloEventoToolStripMenuItem.Name = "modelloEventoToolStripMenuItem";
             modelloEventoToolStripMenuItem.Size = new System.Drawing.Size(102, 20);
             modelloEventoToolStripMenuItem.Text = "Modello evento";
@@ -488,6 +491,13 @@
             this.treeNodeMenuStrip.Size = new System.Drawing.Size(89, 26);
             this.treeNodeMenuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.treeNodeMenuStrip_ItemClicked);
             // 
+            // eliminaModelloEventoToolStripMenuItem
+            // 
+            this.eliminaModelloEventoToolStripMenuItem.Name = "eliminaModelloEventoToolStripMenuItem";
+            this.eliminaModelloEventoToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.eliminaModelloEventoToolStripMenuItem.Text = "Elimina modello evento";
+            this.eliminaModelloEventoToolStripMenuItem.Click += new System.EventHandler(this.eliminaModelloEventoToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -538,6 +548,7 @@
         private Presentation.ListBox.EventListBox eventsListBox;
         private Presentation.EventPanel eventPanel;
         private Presentation.TextBox.SearchBoxPanel searchBoxPanel;
+        private System.Windows.Forms.ToolStripMenuItem eliminaModelloEventoToolStripMenuItem;
 
     }
 }

@@ -137,9 +137,10 @@ namespace DynamiCal.Forms
                 {
                     this.Visible = false;
 
-                    CreateEventModelForm createEventModelDialog = new CreateEventModelForm();
-                    createEventModelDialog.ShowDialog(this);
-                    createEventModelDialog.Dispose();
+                    using (CreateEventModelForm createEventModelDialog = new CreateEventModelForm())
+                    {
+                        createEventModelDialog.ShowDialog(this);
+                    }
 
                     this.Visible = true;
                 }

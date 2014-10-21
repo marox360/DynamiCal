@@ -40,19 +40,19 @@
             System.Windows.Forms.Panel calendarPanel;
             System.Windows.Forms.Label calendarLabel;
             System.Windows.Forms.Panel bottomCalendarPanel;
-            System.Windows.Forms.Panel sidePanel;
-            System.Windows.Forms.Panel topPanel;
             System.Windows.Forms.Label dateLabel;
+            System.Windows.Forms.Panel topPanel;
+            System.Windows.Forms.Panel sidePanel;
             this.showInCalendarButton = new System.Windows.Forms.Button();
+            this.endDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.startDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.eventModelListBox = new System.Windows.Forms.CheckedListBox();
             this.eventListBox = new DynamiCal.Presentation.ListBox.EventListBox();
             this.calendarTreeView = new DynamiCal.Presentation.TreeView.CalendarTreeView();
+            this.dateComboBox = new System.Windows.Forms.ComboBox();
             this.searchBoxPanel = new DynamiCal.Presentation.TextBox.SearchBoxPanel();
             this.eventPanel = new DynamiCal.Presentation.EventPanel();
             this.noEventsLabel = new System.Windows.Forms.Label();
-            this.startDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.endDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dateComboBox = new System.Windows.Forms.ComboBox();
             panel = new System.Windows.Forms.Panel();
             tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             eventBottomPanel = new System.Windows.Forms.Panel();
@@ -64,9 +64,9 @@
             calendarPanel = new System.Windows.Forms.Panel();
             calendarLabel = new System.Windows.Forms.Label();
             bottomCalendarPanel = new System.Windows.Forms.Panel();
-            sidePanel = new System.Windows.Forms.Panel();
-            topPanel = new System.Windows.Forms.Panel();
             dateLabel = new System.Windows.Forms.Label();
+            topPanel = new System.Windows.Forms.Panel();
+            sidePanel = new System.Windows.Forms.Panel();
             panel.SuspendLayout();
             tableLayoutPanel.SuspendLayout();
             eventBottomPanel.SuspendLayout();
@@ -75,8 +75,8 @@
             eventListPanel.SuspendLayout();
             calendarPanel.SuspendLayout();
             bottomCalendarPanel.SuspendLayout();
-            sidePanel.SuspendLayout();
             topPanel.SuspendLayout();
+            sidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel
@@ -142,6 +142,28 @@
             bottomModelPanel.Name = "bottomModelPanel";
             bottomModelPanel.Size = new System.Drawing.Size(161, 49);
             bottomModelPanel.TabIndex = 7;
+            // 
+            // endDateTimePicker
+            // 
+            this.endDateTimePicker.CustomFormat = "dd MMMM yyyy";
+            this.endDateTimePicker.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.endDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.endDateTimePicker.Location = new System.Drawing.Point(0, 27);
+            this.endDateTimePicker.Name = "endDateTimePicker";
+            this.endDateTimePicker.Size = new System.Drawing.Size(161, 22);
+            this.endDateTimePicker.TabIndex = 3;
+            this.endDateTimePicker.ValueChanged += new System.EventHandler(this.endDateTimePicker_ValueChanged);
+            // 
+            // startDateTimePicker
+            // 
+            this.startDateTimePicker.CustomFormat = "dd MMMM yyyy";
+            this.startDateTimePicker.Dock = System.Windows.Forms.DockStyle.Top;
+            this.startDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.startDateTimePicker.Location = new System.Drawing.Point(0, 0);
+            this.startDateTimePicker.Name = "startDateTimePicker";
+            this.startDateTimePicker.Size = new System.Drawing.Size(161, 22);
+            this.startDateTimePicker.TabIndex = 2;
+            this.startDateTimePicker.ValueChanged += new System.EventHandler(this.startDateTimePicker_ValueChanged);
             // 
             // eventModelPanel
             // 
@@ -259,6 +281,42 @@
             bottomCalendarPanel.Size = new System.Drawing.Size(161, 49);
             bottomCalendarPanel.TabIndex = 6;
             // 
+            // dateComboBox
+            // 
+            this.dateComboBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dateComboBox.FormattingEnabled = true;
+            this.dateComboBox.Items.AddRange(new object[] {
+            "Nessuna",
+            "Giornata",
+            "Periodo"});
+            this.dateComboBox.Location = new System.Drawing.Point(20, 28);
+            this.dateComboBox.Name = "dateComboBox";
+            this.dateComboBox.Size = new System.Drawing.Size(121, 21);
+            this.dateComboBox.TabIndex = 6;
+            this.dateComboBox.SelectedIndexChanged += new System.EventHandler(this.dateComboBox_SelectedIndexChanged);
+            // 
+            // dateLabel
+            // 
+            dateLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            dateLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dateLabel.Location = new System.Drawing.Point(20, 0);
+            dateLabel.Name = "dateLabel";
+            dateLabel.Size = new System.Drawing.Size(121, 17);
+            dateLabel.TabIndex = 5;
+            dateLabel.Text = "Filtra data:";
+            dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // topPanel
+            // 
+            topPanel.Controls.Add(this.searchBoxPanel);
+            topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            topPanel.Location = new System.Drawing.Point(5, 10);
+            topPanel.Name = "topPanel";
+            topPanel.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            topPanel.Size = new System.Drawing.Size(502, 30);
+            topPanel.TabIndex = 5;
+            // 
             // searchBoxPanel
             // 
             this.searchBoxPanel.BackColor = System.Drawing.SystemColors.Window;
@@ -287,6 +345,7 @@
             this.eventPanel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventPanel.Location = new System.Drawing.Point(0, 0);
             this.eventPanel.Name = "eventPanel";
+            this.eventPanel.OverrideDate = new System.DateTime(((long)(0)));
             this.eventPanel.Size = new System.Drawing.Size(222, 361);
             this.eventPanel.TabIndex = 0;
             // 
@@ -301,64 +360,6 @@
             this.noEventsLabel.TabIndex = 1;
             this.noEventsLabel.Text = "Nessun evento";
             this.noEventsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // topPanel
-            // 
-            topPanel.Controls.Add(this.searchBoxPanel);
-            topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            topPanel.Location = new System.Drawing.Point(5, 10);
-            topPanel.Name = "topPanel";
-            topPanel.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            topPanel.Size = new System.Drawing.Size(502, 30);
-            topPanel.TabIndex = 5;
-            // 
-            // startDateTimePicker
-            // 
-            this.startDateTimePicker.CustomFormat = "dd MMMM yyyy";
-            this.startDateTimePicker.Dock = System.Windows.Forms.DockStyle.Top;
-            this.startDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.startDateTimePicker.Location = new System.Drawing.Point(0, 0);
-            this.startDateTimePicker.Name = "startDateTimePicker";
-            this.startDateTimePicker.Size = new System.Drawing.Size(161, 22);
-            this.startDateTimePicker.TabIndex = 2;
-            this.startDateTimePicker.ValueChanged += new System.EventHandler(this.startDateTimePicker_ValueChanged);
-            // 
-            // endDateTimePicker
-            // 
-            this.endDateTimePicker.CustomFormat = "dd MMMM yyyy";
-            this.endDateTimePicker.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.endDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.endDateTimePicker.Location = new System.Drawing.Point(0, 27);
-            this.endDateTimePicker.Name = "endDateTimePicker";
-            this.endDateTimePicker.Size = new System.Drawing.Size(161, 22);
-            this.endDateTimePicker.TabIndex = 3;
-            this.endDateTimePicker.ValueChanged += new System.EventHandler(this.endDateTimePicker_ValueChanged);
-            // 
-            // dateLabel
-            // 
-            dateLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            dateLabel.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dateLabel.Location = new System.Drawing.Point(20, 0);
-            dateLabel.Name = "dateLabel";
-            dateLabel.Size = new System.Drawing.Size(121, 17);
-            dateLabel.TabIndex = 5;
-            dateLabel.Text = "Filtra data:";
-            dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dateComboBox
-            // 
-            this.dateComboBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dateComboBox.FormattingEnabled = true;
-            this.dateComboBox.Items.AddRange(new object[] {
-            "Nessuna",
-            "Giornata",
-            "Periodo"});
-            this.dateComboBox.Location = new System.Drawing.Point(20, 28);
-            this.dateComboBox.Name = "dateComboBox";
-            this.dateComboBox.Size = new System.Drawing.Size(121, 21);
-            this.dateComboBox.TabIndex = 6;
-            this.dateComboBox.SelectedIndexChanged += new System.EventHandler(this.dateComboBox_SelectedIndexChanged);
             // 
             // SearchEventForm
             // 
@@ -381,8 +382,8 @@
             eventListPanel.ResumeLayout(false);
             calendarPanel.ResumeLayout(false);
             bottomCalendarPanel.ResumeLayout(false);
-            sidePanel.ResumeLayout(false);
             topPanel.ResumeLayout(false);
+            sidePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
