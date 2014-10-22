@@ -220,7 +220,7 @@ namespace DynamiCal.Forms
         }   
         private void eliminaModelloEventoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (DeleteEventModel deleteEventModelDialog = new DeleteEventModel())
+            using (DeleteEventModelForm deleteEventModelDialog = new DeleteEventModelForm())
             {
                 deleteEventModelDialog.ShowDialog(this);
             }

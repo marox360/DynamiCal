@@ -1,6 +1,6 @@
 ﻿namespace DynamiCal.Forms
 {
-    partial class DeleteEventModel
+    partial class DeleteEventModelForm
     {
         /// <summary>
         /// Required designer variable.

@@ -12,11 +12,11 @@ using System.Windows.Forms;
 
 namespace DynamiCal.Forms
 {
-    public partial class DeleteEventModel : Form
+    public partial class DeleteEventModelForm : Form
     {
         private CriterioDiFiltraggio _criterioFiltraggio;
 
-        public DeleteEventModel()
+        public DeleteEventModelForm()
         {
             InitializeComponent();
         }

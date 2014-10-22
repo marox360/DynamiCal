@@ -50,11 +50,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\DeleteEventModel.cs">
+    <Compile Include="Forms\DeleteEventModelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\DeleteEventModel.Designer.cs">
-      <DependentUpon>DeleteEventModel.cs</DependentUpon>
+    <Compile Include="Forms\DeleteEventModelForm.Designer.cs">
+      <DependentUpon>DeleteEventModelForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SearchEventForm.cs">
       <SubType>Form</SubType>
@@ -154,8 +154,8 @@
     <EmbeddedResource Include="Forms\CreateEventModelForm.resx">
       <DependentUpon>CreateEventModelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\DeleteEventModel.resx">
-      <DependentUpon>DeleteEventModel.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\DeleteEventModelForm.resx">
+      <DependentUpon>DeleteEventModelForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
