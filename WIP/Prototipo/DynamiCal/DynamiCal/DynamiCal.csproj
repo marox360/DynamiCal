@@ -70,11 +70,11 @@
     <Compile Include="Forms\ManageCalendarForm.Designer.cs">
       <DependentUpon>ManageCalendarForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\CreateEventForm.cs">
+    <Compile Include="Forms\ManageEventForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CreateEventForm.Designer.cs">
-      <DependentUpon>CreateEventForm.cs</DependentUpon>
+    <Compile Include="Forms\ManageEventForm.Designer.cs">
+      <DependentUpon>ManageEventForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CreateEventModelForm.cs">
       <SubType>Form</SubType>
@@ -148,8 +148,8 @@
     <EmbeddedResource Include="Forms\ManageCalendarForm.resx">
       <DependentUpon>ManageCalendarForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\CreateEventForm.resx">
-      <DependentUpon>CreateEventForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ManageEventForm.resx">
+      <DependentUpon>ManageEventForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateEventModelForm.resx">
       <DependentUpon>CreateEventModelForm.cs</DependentUpon>

@@ -1,6 +1,6 @@
 ﻿namespace DynamiCal.Forms
 {
-    partial class CreateEventForm
+    partial class ManageEventForm
     {
         /// <summary>
         /// Required designer variable.

@@ -15,52 +15,77 @@ using DynamiCal.Model.Calendars;
 
 namespace DynamiCal.Forms
 {
-    public partial class CreateEventForm : Form
+    public partial class ManageEventForm : Form
     {
-        public CreateEventForm()
+        private Evento _evento = null;
+
+        public ManageEventForm()
         {
             InitializeComponent();
         }
 
         private void CreateEventForm_Load(object sender, EventArgs e)
         {
-            this.durationComboBox.SelectedIndex = 1;
+            if (this.durationComboBox.SelectedItem == null)
+            {
+                this.durationComboBox.SelectedIndex = 1;
+            }
 
             foreach (Periodicita.Frequenza frequenza in Enum.GetValues(typeof(Periodicita.Frequenza)).Cast<Periodicita.Frequenza>().Where(f => f != Periodicita.Frequenza.Mai))
             {
-                 this.frequenzaBindingSource.Add(new BindingContainer<Periodicita.Frequenza>(frequenza.ToString(), frequenza));
+                 this.frequenzaBindingSource.Add(new BindingContainer<Periodicita.Frequenza>(frequenza));
             }
 
             this.eventModelSelectorComboBox.BeginUpdate();
-            this.modelloEventoContainerBindingSource.Add(new BindingContainer<ModelloEvento>("Nuovo Modello...", null));
-            foreach (ModelloEvento modello in Agenda.Instance.ModelliEvento)
+            if (_evento != null)
             {
-                BindingContainer<ModelloEvento> modelloContainer = new BindingContainer<ModelloEvento>(modello.Nome, modello);
+                BindingContainer<ModelloEvento> modelloContainer = new BindingContainer<ModelloEvento>(_evento.Modello.Nome, _evento.Modello);
                 this.modelloEventoContainerBindingSource.Add(modelloContainer);
-
-                if (!modelloContainer.Value.Voci.Any())
+                this.eventModelSelectorComboBox.SelectedItem = modelloContainer;
+            }
+            else
+            {
+                this.modelloEventoContainerBindingSource.Add(new BindingContainer<ModelloEvento>("Nuovo Modello...", null));
+                foreach (ModelloEvento modello in Agenda.Instance.ModelliEvento)
                 {
-                    this.eventModelSelectorComboBox.SelectedItem = modelloContainer;
+                    BindingContainer<ModelloEvento> modelloContainer = new BindingContainer<ModelloEvento>(modello.Nome, modello);
+                    this.modelloEventoContainerBindingSource.Add(modelloContainer);
+
+                    if (!modelloContainer.Value.Voci.Any())
+                    {
+                        this.eventModelSelectorComboBox.SelectedItem = modelloContainer;
+                    }
                 }
             }
             this.eventModelSelectorComboBox.EndUpdate();
 
             this.calendarSelectorComboBox.BeginUpdate();
-            foreach (Calendario calendario in Agenda.Instance.Calendari)
+            if (_evento != null)
             {
-                this.calendarioBindingSource.Add(calendario);
+                this.calendarioBindingSource.Add(Agenda.Instance.Calendari.First(c => c.Eventi.Contains(_evento)));
+            }
+            else
+            {
+                foreach (Calendario calendario in Agenda.Instance.Calendari)
+                {
+                    this.calendarioBindingSource.Add(calendario);
+                }
             }
             this.calendarSelectorComboBox.SelectedItem = this.calendarioBindingSource.Cast<Calendario>().FirstOrDefault();
             this.calendarSelectorComboBox.EndUpdate();
 
+            Periodicita selectedPeriodicita = _evento != null ? _evento.Periodicita : Periodicita.Mai;
+            Periodicita customPeriodicita = _evento != null && !_evento.Periodicita.Equals(Periodicita.Mai) ? _evento.Periodicita : Periodicita.Giornaliera;
             this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Mai));
             this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Giornaliera));
             this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Settimanale));
             this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Settimanale * 2));
             this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Mensile));
             this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>(Periodicita.Annuale));
-            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Personalizzata", Periodicita.Mai));
-            this.calendarSelectorComboBox.SelectedItem = this.periodicitaBindingSource[0];
+            this.periodicitaBindingSource.Add(new BindingContainer<Periodicita>("Personalizzata", customPeriodicita));
+            this.frequencyComboBox.SelectedValue = selectedPeriodicita;
+            this.frequencyNumericUpDown.Value = customPeriodicita.Valore;
+            this.frequencyTypeComboBox.SelectedValue = customPeriodicita.Ripetizione;
 
             Agenda.Instance.EventModelsChanged += EventModelsChanged;
             Agenda.Instance.CalendarsChanged += CalendarsChanged;
@@ -70,6 +95,43 @@ namespace DynamiCal.Forms
         {
             Agenda.Instance.EventModelsChanged -= EventModelsChanged;
             Agenda.Instance.CalendarsChanged -= CalendarsChanged;
+        }
+
+        internal void LoadEvento(Evento evento)
+        {
+            _evento = evento;
+
+            this.eventModelSelectorComboBox.Enabled = false;
+            this.calendarSelectorComboBox.Enabled = false;
+            this.createButton.Text = "Modifica";
+
+            this.eventNameTextBox.Text = evento.Nome;
+            this.eventLocationTextBox.Text = evento.Luogo;
+            this.eventDescriptionTextBox.Text = evento.Descrizione;
+            this.eventDateTimePicker.Value = evento.Periodo.StartDate;
+
+            int minutes = (int)evento.Periodo.Duration.TotalMinutes;
+            if (evento.Periodo.StartDate == evento.Periodo.StartDate.Date && minutes == 60 * 24)
+            {
+                this.allDayCheckBox.Checked = true;
+            }
+            else if (minutes % (24 * 60) == 0)
+            {
+                this.durationUpDown.Value = minutes / (24 * 60);
+                this.durationComboBox.SelectedItem = "Giorni";
+            }
+            else if (minutes % 60 == 0)
+            {
+                this.durationUpDown.Value = minutes / 60;
+                this.durationComboBox.SelectedItem = "Ore";
+            }
+            else
+            {
+                this.durationUpDown.Value = minutes;
+                this.durationComboBox.SelectedItem = "Minuti";
+            }
+
+            this.entriesDataGridView.DataSource = evento.Voci.Select(voce => voce.Copy()).ToList();
         }
 
         private void EventModelsChanged(object sender, AgendaCollectionEventArgs e)
@@ -146,12 +208,7 @@ namespace DynamiCal.Forms
                 }
                 else
                 {
-                    IList<IVoce> voceDataSource = new List<IVoce>();
-                    foreach (Voce voce in modelloEvento.Voci)
-                    {
-                        voceDataSource.Add(VoceFactory.GetImplementedVoce(voce));
-                    }
-                    this.entriesDataGridView.DataSource = voceDataSource;
+                    this.entriesDataGridView.DataSource = modelloEvento.Voci.Select(voce => VoceFactory.GetImplementedVoce(voce)).ToList();
                 }
             }
         }

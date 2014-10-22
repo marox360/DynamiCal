@@ -192,7 +192,7 @@ namespace DynamiCal.Forms
         
         private void creaEventoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (CreateEventForm createEventDialog = new CreateEventForm())
+            using (ManageEventForm createEventDialog = new ManageEventForm())
             {
                 createEventDialog.eventDateTimePicker.Value = _lastDate.Date + (DateTime.Now - DateTime.Today);
 
@@ -256,12 +256,12 @@ namespace DynamiCal.Forms
         #region TreeNodeMenuStrip
         private void treeNodeMenuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            Calendario calendar = null;
+            Calendario calendario = null;
             Evento evento = null;
             if (this.treeNodeMenuStrip.SourceControl is System.Windows.Forms.TreeView)
             {
                 CalendarTreeNode calendarNode = (this.treeNodeMenuStrip.SourceControl as System.Windows.Forms.TreeView).SelectedNode as CalendarTreeNode;
-                calendar = calendarNode.Calendario;
+                calendario = calendarNode.Calendario;
             }
             else if (this.treeNodeMenuStrip.SourceControl is ListBox) {
                 evento = (this.treeNodeMenuStrip.SourceControl as ListBox).SelectedItem as Evento;
@@ -270,27 +270,35 @@ namespace DynamiCal.Forms
             switch (e.ClickedItem.Text)
             {
                 case "Elimina":
-                    if (calendar != null)
+                    if (calendario != null)
                     {
-                        Agenda.Instance.RimuoviCalendario(calendar);
+                        Agenda.Instance.RimuoviCalendario(calendario);
                     }
                     if (evento != null)
                     {
-                        foreach (Calendario calendario in Agenda.Instance.Calendari)
+                        foreach (Calendario calendar in Agenda.Instance.Calendari)
                         {
-                            calendario.RimuoviEvento(evento);
+                            calendar.RimuoviEvento(evento);
                         }
                         this.RefreshCurrentMonth();
                     }
                     break;
 
                 case "Modifica":
-                    if (calendar != null)
+                    if (calendario != null)
                     {
                         using (ManageCalendarForm editCalendarDialog = new ManageCalendarForm())
                         {
-                            editCalendarDialog.LoadCalendario(calendar);
+                            editCalendarDialog.LoadCalendario(calendario);
                             editCalendarDialog.ShowDialog(this);
+                        }
+                    }
+                    if (evento != null)
+                    {
+                        using (ManageEventForm editEventDialog = new ManageEventForm())
+                        {
+                            editEventDialog.LoadEvento(evento);
+                            editEventDialog.ShowDialog(this);
                         }
                     }
                     break;

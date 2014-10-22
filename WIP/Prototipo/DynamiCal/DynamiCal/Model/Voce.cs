@@ -69,6 +69,8 @@ namespace DynamiCal.Model
         string Nome { get; }
 
         object Valore { get; set; }
+
+        IVoce Copy();
     }
 
     class Voce<T> : IVoce
@@ -119,6 +121,11 @@ namespace DynamiCal.Model
                     this.Valore = (T)value;
                 }
             }
+        }
+
+        public IVoce Copy()
+        {
+            return new Voce<T>(_nome, _valore);
         }
     }
 }
