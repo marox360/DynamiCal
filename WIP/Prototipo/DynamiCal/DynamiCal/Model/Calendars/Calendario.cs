@@ -24,6 +24,14 @@ namespace DynamiCal.Model.Calendars
 
         public string Nome
         {
+            set
+            {
+                #region Precondizioni
+                Debug.Assert(!String.IsNullOrWhiteSpace(value), "Nome is null or white space");
+                #endregion
+
+                _nome = value;
+            }
             get
             {
                 return _nome;
@@ -45,6 +53,15 @@ namespace DynamiCal.Model.Calendars
             #endregion
 
             _eventi.Add(evento);
+        }
+
+        public void AggiungiEventi(IEnumerable<Evento> eventi)
+        {
+            #region Precondizioni
+            Debug.Assert(eventi != null, "Eventi cannot be null");
+            #endregion
+
+            _eventi.AddRange(eventi);
         }
 
         public void RimuoviEvento(Evento evento)

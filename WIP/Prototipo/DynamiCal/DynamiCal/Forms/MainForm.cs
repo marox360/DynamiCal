@@ -176,7 +176,7 @@ namespace DynamiCal.Forms
         #region ToolStipMenuItems
         private void createCalendarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (CreateCalendarForm createCalendarDialog = new CreateCalendarForm())
+            using (ManageCalendarForm createCalendarDialog = new ManageCalendarForm())
             {
                 createCalendarDialog.ShowDialog(this);
             }
@@ -281,6 +281,17 @@ namespace DynamiCal.Forms
                             calendario.RimuoviEvento(evento);
                         }
                         this.RefreshCurrentMonth();
+                    }
+                    break;
+
+                case "Modifica":
+                    if (calendar != null)
+                    {
+                        using (ManageCalendarForm editCalendarDialog = new ManageCalendarForm())
+                        {
+                            editCalendarDialog.LoadCalendario(calendar);
+                            editCalendarDialog.ShowDialog(this);
+                        }
                     }
                     break;
                 

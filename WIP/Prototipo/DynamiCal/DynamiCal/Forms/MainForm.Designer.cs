@@ -64,10 +64,11 @@
             this.eventsListBox = new DynamiCal.Presentation.ListBox.EventListBox();
             this.searchBoxPanel = new DynamiCal.Presentation.TextBox.SearchBoxPanel();
             this.noEventsLabel = new System.Windows.Forms.Label();
+            this.eliminaModelloEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.calendarGridView = new DynamiCal.Presentation.DataGridView.CalendarDataGridView();
             this.weekBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.treeNodeMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.eliminaModelloEventoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             lunedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
             martedìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
             mercoledìDataGridViewColumn = new DynamiCal.Presentation.DataGridView.DataGridViewDayColumn();
@@ -368,6 +369,13 @@
             creaModelloEventoToolStripMenuItem.Text = "Crea nuovo modello evento";
             creaModelloEventoToolStripMenuItem.Click += new System.EventHandler(this.creaModelloEventoToolStripMenuItem_Click);
             // 
+            // eliminaModelloEventoToolStripMenuItem
+            // 
+            this.eliminaModelloEventoToolStripMenuItem.Name = "eliminaModelloEventoToolStripMenuItem";
+            this.eliminaModelloEventoToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.eliminaModelloEventoToolStripMenuItem.Text = "Elimina modello evento";
+            this.eliminaModelloEventoToolStripMenuItem.Click += new System.EventHandler(this.eliminaModelloEventoToolStripMenuItem_Click);
+            // 
             // eventoToolStripMenuItem
             // 
             eventoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -406,7 +414,7 @@
             // deleteStripMenuItem
             // 
             deleteStripMenuItem.Name = "deleteStripMenuItem";
-            deleteStripMenuItem.Size = new System.Drawing.Size(88, 22);
+            deleteStripMenuItem.Size = new System.Drawing.Size(127, 22);
             deleteStripMenuItem.Text = "Elimina";
             // 
             // calendarPanel
@@ -485,18 +493,18 @@
             // treeNodeMenuStrip
             // 
             this.treeNodeMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            deleteStripMenuItem});
+            deleteStripMenuItem,
+            this.modificaToolStripMenuItem});
             this.treeNodeMenuStrip.Name = "treeNodeMenuStrip";
             this.treeNodeMenuStrip.ShowImageMargin = false;
-            this.treeNodeMenuStrip.Size = new System.Drawing.Size(89, 26);
+            this.treeNodeMenuStrip.Size = new System.Drawing.Size(128, 70);
             this.treeNodeMenuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.treeNodeMenuStrip_ItemClicked);
             // 
-            // eliminaModelloEventoToolStripMenuItem
+            // modificaToolStripMenuItem
             // 
-            this.eliminaModelloEventoToolStripMenuItem.Name = "eliminaModelloEventoToolStripMenuItem";
-            this.eliminaModelloEventoToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
-            this.eliminaModelloEventoToolStripMenuItem.Text = "Elimina modello evento";
-            this.eliminaModelloEventoToolStripMenuItem.Click += new System.EventHandler(this.eliminaModelloEventoToolStripMenuItem_Click);
+            this.modificaToolStripMenuItem.Name = "modificaToolStripMenuItem";
+            this.modificaToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.modificaToolStripMenuItem.Text = "Modifica";
             // 
             // MainForm
             // 
@@ -549,6 +557,7 @@
         private Presentation.EventPanel eventPanel;
         private Presentation.TextBox.SearchBoxPanel searchBoxPanel;
         private System.Windows.Forms.ToolStripMenuItem eliminaModelloEventoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificaToolStripMenuItem;
 
     }
 }

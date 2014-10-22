@@ -1,6 +1,6 @@
 ﻿namespace DynamiCal.Forms
 {
-    partial class CreateCalendarForm
+    partial class ManageCalendarForm
     {
         /// <summary>
         /// Required designer variable.
@@ -42,14 +42,6 @@
             label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Location = new System.Drawing.Point(12, 29);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(260, 22);
-            this.nameTextBox.TabIndex = 0;
-            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -58,6 +50,31 @@
             label1.Size = new System.Drawing.Size(92, 13);
             label1.TabIndex = 1;
             label1.Text = "Inserisci il nome:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(9, 59);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(81, 13);
+            label2.TabIndex = 4;
+            label2.Text = "Condividi con:";
+            // 
+            // label3
+            // 
+            label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            label3.Location = new System.Drawing.Point(0, 190);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(300, 2);
+            label3.TabIndex = 8;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Location = new System.Drawing.Point(12, 29);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(260, 22);
+            this.nameTextBox.TabIndex = 0;
+            this.nameTextBox.TextChanged += new System.EventHandler(this.nameTextBox_TextChanged);
             // 
             // createButton
             // 
@@ -81,15 +98,6 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(9, 59);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(81, 13);
-            label2.TabIndex = 4;
-            label2.Text = "Condividi con:";
-            // 
             // friendsCheckedListBox
             // 
             this.friendsCheckedListBox.FormattingEnabled = true;
@@ -97,6 +105,7 @@
             this.friendsCheckedListBox.Name = "friendsCheckedListBox";
             this.friendsCheckedListBox.Size = new System.Drawing.Size(260, 72);
             this.friendsCheckedListBox.TabIndex = 5;
+            this.friendsCheckedListBox.Click += new System.EventHandler(this.friendsCheckedListBox_Click);
             // 
             // emailTextBox
             // 
@@ -116,14 +125,6 @@
             this.addButton.Text = "Aggiungi";
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
-            // 
-            // label3
-            // 
-            label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            label3.Location = new System.Drawing.Point(0, 190);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(300, 2);
-            label3.TabIndex = 8;
             // 
             // CreateCalendarForm
             // 
