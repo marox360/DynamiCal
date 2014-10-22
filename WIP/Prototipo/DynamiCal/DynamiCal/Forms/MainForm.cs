@@ -300,6 +300,8 @@ namespace DynamiCal.Forms
                             editEventDialog.LoadEvento(evento);
                             editEventDialog.ShowDialog(this);
                         }
+
+                        this.RefreshCurrentMonth();
                     }
                     break;
                 

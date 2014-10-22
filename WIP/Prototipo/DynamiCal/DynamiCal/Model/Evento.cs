@@ -125,7 +125,13 @@ namespace DynamiCal.Model
                 return false;
             if (ReferenceEquals(this, other))
                 return true;
-            return string.Equals(this.Nome, other.Nome) && this.Periodo.Equals(other.Periodo) && this.Periodicita.Equals(other.Periodicita);
+            return string.Equals(this.Nome, other.Nome)
+                && string.Equals(this.Descrizione, other.Descrizione)
+                && string.Equals(this.Luogo, other.Luogo)
+                && this.Periodo.Equals(other.Periodo)
+                && this.Periodicita.Equals(other.Periodicita)
+                && this.Modello.Equals(other.Modello)
+                && this.Voci.SequenceEqual(other.Voci);
         }
 
         public override bool Equals(object obj)

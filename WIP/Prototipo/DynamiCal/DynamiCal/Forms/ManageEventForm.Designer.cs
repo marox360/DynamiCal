@@ -42,25 +42,25 @@
             System.Windows.Forms.Label label7;
             System.Windows.Forms.GroupBox groupBox4;
             System.Windows.Forms.Label label9;
-            this.calendarSelectorComboBox = new System.Windows.Forms.ComboBox();
-            this.calendarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.createButton = new System.Windows.Forms.Button();
-            this.cancelButton = new System.Windows.Forms.Button();
             this.eventNameTextBox = new System.Windows.Forms.TextBox();
-            this.durationComboBox = new System.Windows.Forms.ComboBox();
-            this.eventDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.allDayCheckBox = new System.Windows.Forms.CheckBox();
-            this.durationUpDown = new System.Windows.Forms.NumericUpDown();
-            this.entriesDataGridView = new DynamiCal.Presentation.DataGridView.VociDataGridView();
-            this.eventModelSelectorComboBox = new System.Windows.Forms.ComboBox();
-            this.modelloEventoContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.calendarSelectorComboBox = new System.Windows.Forms.ComboBox();
+            this.eventDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.durationUpDown = new System.Windows.Forms.NumericUpDown();
+            this.durationComboBox = new System.Windows.Forms.ComboBox();
+            this.allDayCheckBox = new System.Windows.Forms.CheckBox();
             this.frequencyNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.frequencyTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.frequenzaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.frequencyComboBox = new System.Windows.Forms.ComboBox();
-            this.periodicitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventLocationTextBox = new System.Windows.Forms.TextBox();
+            this.eventModelSelectorComboBox = new System.Windows.Forms.ComboBox();
+            this.entriesDataGridView = new DynamiCal.Presentation.DataGridView.VociDataGridView();
+            this.createButton = new System.Windows.Forms.Button();
+            this.cancelButton = new System.Windows.Forms.Button();
+            this.modelloEventoContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.frequenzaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.periodicitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.calendarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -74,17 +74,17 @@
             label7 = new System.Windows.Forms.Label();
             groupBox4 = new System.Windows.Forms.GroupBox();
             label9 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).BeginInit();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).BeginInit();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frequencyNumericUpDown)).BeginInit();
+            groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frequenzaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.periodicitaBindingSource)).BeginInit();
-            groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -96,45 +96,6 @@
             label1.TabIndex = 0;
             label1.Text = "Scegli il calendario:";
             // 
-            // calendarSelectorComboBox
-            // 
-            this.calendarSelectorComboBox.DataSource = this.calendarioBindingSource;
-            this.calendarSelectorComboBox.DisplayMember = "Nome";
-            this.calendarSelectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.calendarSelectorComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calendarSelectorComboBox.FormattingEnabled = true;
-            this.calendarSelectorComboBox.Location = new System.Drawing.Point(205, 36);
-            this.calendarSelectorComboBox.Name = "calendarSelectorComboBox";
-            this.calendarSelectorComboBox.Size = new System.Drawing.Size(185, 23);
-            this.calendarSelectorComboBox.TabIndex = 1;
-            this.calendarSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.validateForm);
-            // 
-            // calendarioBindingSource
-            // 
-            this.calendarioBindingSource.DataSource = typeof(DynamiCal.Model.Calendars.Calendario);
-            // 
-            // createButton
-            // 
-            this.createButton.Enabled = false;
-            this.createButton.Location = new System.Drawing.Point(217, 585);
-            this.createButton.Name = "createButton";
-            this.createButton.Size = new System.Drawing.Size(195, 23);
-            this.createButton.TabIndex = 3;
-            this.createButton.Text = "Crea";
-            this.createButton.UseVisualStyleBackColor = true;
-            this.createButton.Click += new System.EventHandler(this.createButton_Click);
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(12, 585);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(194, 23);
-            this.cancelButton.TabIndex = 4;
-            this.cancelButton.Text = "Annulla";
-            this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -143,14 +104,6 @@
             label2.Size = new System.Drawing.Size(92, 13);
             label2.TabIndex = 5;
             label2.Text = "Inserisci il nome:";
-            // 
-            // eventNameTextBox
-            // 
-            this.eventNameTextBox.Location = new System.Drawing.Point(9, 37);
-            this.eventNameTextBox.Name = "eventNameTextBox";
-            this.eventNameTextBox.Size = new System.Drawing.Size(185, 22);
-            this.eventNameTextBox.TabIndex = 6;
-            this.eventNameTextBox.TextChanged += new System.EventHandler(this.validateForm);
             // 
             // label3
             // 
@@ -161,65 +114,6 @@
             label3.TabIndex = 7;
             label3.Text = "Inserisci la durata:";
             // 
-            // durationComboBox
-            // 
-            this.durationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.durationComboBox.FormattingEnabled = true;
-            this.durationComboBox.Items.AddRange(new object[] {
-            "Minuti",
-            "Ore",
-            "Giorni"});
-            this.durationComboBox.Location = new System.Drawing.Point(107, 81);
-            this.durationComboBox.Name = "durationComboBox";
-            this.durationComboBox.Size = new System.Drawing.Size(154, 21);
-            this.durationComboBox.TabIndex = 8;
-            // 
-            // eventDateTimePicker
-            // 
-            this.eventDateTimePicker.CustomFormat = "dddd, dd MMMM yyyy alle HH:mm";
-            this.eventDateTimePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.eventDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.eventDateTimePicker.Location = new System.Drawing.Point(12, 36);
-            this.eventDateTimePicker.Name = "eventDateTimePicker";
-            this.eventDateTimePicker.Size = new System.Drawing.Size(378, 22);
-            this.eventDateTimePicker.TabIndex = 9;
-            // 
-            // allDayCheckBox
-            // 
-            this.allDayCheckBox.AutoSize = true;
-            this.allDayCheckBox.Location = new System.Drawing.Point(267, 83);
-            this.allDayCheckBox.Name = "allDayCheckBox";
-            this.allDayCheckBox.Size = new System.Drawing.Size(100, 17);
-            this.allDayCheckBox.TabIndex = 10;
-            this.allDayCheckBox.Text = "Tutto il giorno";
-            this.allDayCheckBox.UseVisualStyleBackColor = true;
-            this.allDayCheckBox.CheckedChanged += new System.EventHandler(this.allDayCheckBox_CheckedChanged);
-            // 
-            // durationUpDown
-            // 
-            this.durationUpDown.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.durationUpDown.Location = new System.Drawing.Point(12, 82);
-            this.durationUpDown.Maximum = new decimal(new int[] {
-            1440,
-            0,
-            0,
-            0});
-            this.durationUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.durationUpDown.Name = "durationUpDown";
-            this.durationUpDown.Size = new System.Drawing.Size(89, 23);
-            this.durationUpDown.TabIndex = 12;
-            this.durationUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.durationUpDown.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.durationUpDown.Validating += new System.ComponentModel.CancelEventHandler(this.durationUpDown_Validating);
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -229,41 +123,6 @@
             label4.TabIndex = 13;
             label4.Text = "Inserisci data e ora di inizio:";
             // 
-            // entriesDataGridView
-            // 
-            this.entriesDataGridView.AllowUserToAddRows = false;
-            this.entriesDataGridView.AllowUserToDeleteRows = false;
-            this.entriesDataGridView.AllowUserToResizeColumns = false;
-            this.entriesDataGridView.AllowUserToResizeRows = false;
-            this.entriesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.entriesDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.entriesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.entriesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.entriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.entriesDataGridView.Location = new System.Drawing.Point(6, 62);
-            this.entriesDataGridView.MultiSelect = false;
-            this.entriesDataGridView.Name = "entriesDataGridView";
-            this.entriesDataGridView.RowHeadersVisible = false;
-            this.entriesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.entriesDataGridView.Size = new System.Drawing.Size(384, 120);
-            this.entriesDataGridView.TabIndex = 14;
-            // 
-            // eventModelSelectorComboBox
-            // 
-            this.eventModelSelectorComboBox.DataSource = this.modelloEventoContainerBindingSource;
-            this.eventModelSelectorComboBox.DisplayMember = "DisplayText";
-            this.eventModelSelectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.eventModelSelectorComboBox.Location = new System.Drawing.Point(205, 35);
-            this.eventModelSelectorComboBox.Name = "eventModelSelectorComboBox";
-            this.eventModelSelectorComboBox.Size = new System.Drawing.Size(185, 21);
-            this.eventModelSelectorComboBox.TabIndex = 15;
-            this.eventModelSelectorComboBox.ValueMember = "Value";
-            this.eventModelSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.eventModelSelectorComboBox_SelectedIndexChanged);
-            // 
-            // modelloEventoContainerBindingSource
-            // 
-            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -272,16 +131,6 @@
             label5.Size = new System.Drawing.Size(94, 13);
             label5.TabIndex = 16;
             label5.Text = "Scegli il modello:";
-            // 
-            // eventDescriptionTextBox
-            // 
-            this.eventDescriptionTextBox.AcceptsReturn = true;
-            this.eventDescriptionTextBox.Location = new System.Drawing.Point(9, 86);
-            this.eventDescriptionTextBox.Multiline = true;
-            this.eventDescriptionTextBox.Name = "eventDescriptionTextBox";
-            this.eventDescriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.eventDescriptionTextBox.Size = new System.Drawing.Size(381, 82);
-            this.eventDescriptionTextBox.TabIndex = 18;
             // 
             // label6
             // 
@@ -307,6 +156,38 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Generali";
             // 
+            // eventNameTextBox
+            // 
+            this.eventNameTextBox.Location = new System.Drawing.Point(9, 37);
+            this.eventNameTextBox.Name = "eventNameTextBox";
+            this.eventNameTextBox.Size = new System.Drawing.Size(185, 22);
+            this.eventNameTextBox.TabIndex = 6;
+            this.eventNameTextBox.TextChanged += new System.EventHandler(this.validateForm);
+            // 
+            // eventDescriptionTextBox
+            // 
+            this.eventDescriptionTextBox.AcceptsReturn = true;
+            this.eventDescriptionTextBox.Location = new System.Drawing.Point(9, 86);
+            this.eventDescriptionTextBox.Multiline = true;
+            this.eventDescriptionTextBox.Name = "eventDescriptionTextBox";
+            this.eventDescriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.eventDescriptionTextBox.Size = new System.Drawing.Size(381, 82);
+            this.eventDescriptionTextBox.TabIndex = 18;
+            this.eventDescriptionTextBox.TextChanged += new System.EventHandler(this.validateForm);
+            // 
+            // calendarSelectorComboBox
+            // 
+            this.calendarSelectorComboBox.DataSource = this.calendarioBindingSource;
+            this.calendarSelectorComboBox.DisplayMember = "Nome";
+            this.calendarSelectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.calendarSelectorComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calendarSelectorComboBox.FormattingEnabled = true;
+            this.calendarSelectorComboBox.Location = new System.Drawing.Point(205, 36);
+            this.calendarSelectorComboBox.Name = "calendarSelectorComboBox";
+            this.calendarSelectorComboBox.Size = new System.Drawing.Size(185, 23);
+            this.calendarSelectorComboBox.TabIndex = 1;
+            this.calendarSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.validateForm);
+            // 
             // groupBox2
             // 
             groupBox2.Controls.Add(label4);
@@ -321,6 +202,68 @@
             groupBox2.TabIndex = 27;
             groupBox2.TabStop = false;
             groupBox2.Text = "Durata";
+            // 
+            // eventDateTimePicker
+            // 
+            this.eventDateTimePicker.CustomFormat = "dddd, dd MMMM yyyy alle HH:mm";
+            this.eventDateTimePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.eventDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.eventDateTimePicker.Location = new System.Drawing.Point(12, 36);
+            this.eventDateTimePicker.Name = "eventDateTimePicker";
+            this.eventDateTimePicker.Size = new System.Drawing.Size(378, 22);
+            this.eventDateTimePicker.TabIndex = 9;
+            this.eventDateTimePicker.ValueChanged += new System.EventHandler(this.validateForm);
+            // 
+            // durationUpDown
+            // 
+            this.durationUpDown.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.durationUpDown.Location = new System.Drawing.Point(12, 82);
+            this.durationUpDown.Maximum = new decimal(new int[] {
+            1440,
+            0,
+            0,
+            0});
+            this.durationUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.durationUpDown.Name = "durationUpDown";
+            this.durationUpDown.Size = new System.Drawing.Size(89, 23);
+            this.durationUpDown.TabIndex = 12;
+            this.durationUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.durationUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.durationUpDown.ValueChanged += new System.EventHandler(this.validateForm);
+            this.durationUpDown.Validating += new System.ComponentModel.CancelEventHandler(this.durationUpDown_Validating);
+            // 
+            // durationComboBox
+            // 
+            this.durationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.durationComboBox.FormattingEnabled = true;
+            this.durationComboBox.Items.AddRange(new object[] {
+            "Minuti",
+            "Ore",
+            "Giorni"});
+            this.durationComboBox.Location = new System.Drawing.Point(107, 81);
+            this.durationComboBox.Name = "durationComboBox";
+            this.durationComboBox.Size = new System.Drawing.Size(154, 21);
+            this.durationComboBox.TabIndex = 8;
+            this.durationComboBox.SelectedValueChanged += new System.EventHandler(this.validateForm);
+            // 
+            // allDayCheckBox
+            // 
+            this.allDayCheckBox.AutoSize = true;
+            this.allDayCheckBox.Location = new System.Drawing.Point(267, 83);
+            this.allDayCheckBox.Name = "allDayCheckBox";
+            this.allDayCheckBox.Size = new System.Drawing.Size(100, 17);
+            this.allDayCheckBox.TabIndex = 10;
+            this.allDayCheckBox.Text = "Tutto il giorno";
+            this.allDayCheckBox.UseVisualStyleBackColor = true;
+            this.allDayCheckBox.CheckedChanged += new System.EventHandler(this.allDayCheckBox_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -385,10 +328,6 @@
             this.frequencyTypeComboBox.ValueMember = "Value";
             this.frequencyTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.SetCustomFrequency);
             // 
-            // frequenzaBindingSource
-            // 
-            this.frequenzaBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -411,10 +350,6 @@
             this.frequencyComboBox.ValueMember = "Value";
             this.frequencyComboBox.SelectedIndexChanged += new System.EventHandler(this.frequencyComboBox_SelectedIndexChanged);
             // 
-            // periodicitaBindingSource
-            // 
-            this.periodicitaBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
-            // 
             // groupBox4
             // 
             groupBox4.Controls.Add(this.eventLocationTextBox);
@@ -435,6 +370,7 @@
             this.eventLocationTextBox.Name = "eventLocationTextBox";
             this.eventLocationTextBox.Size = new System.Drawing.Size(188, 22);
             this.eventLocationTextBox.TabIndex = 1;
+            this.eventLocationTextBox.TextChanged += new System.EventHandler(this.validateForm);
             // 
             // label9
             // 
@@ -445,7 +381,77 @@
             label9.TabIndex = 0;
             label9.Text = "Inserisci il luogo:";
             // 
-            // CreateEventForm
+            // eventModelSelectorComboBox
+            // 
+            this.eventModelSelectorComboBox.DataSource = this.modelloEventoContainerBindingSource;
+            this.eventModelSelectorComboBox.DisplayMember = "DisplayText";
+            this.eventModelSelectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.eventModelSelectorComboBox.Location = new System.Drawing.Point(205, 35);
+            this.eventModelSelectorComboBox.Name = "eventModelSelectorComboBox";
+            this.eventModelSelectorComboBox.Size = new System.Drawing.Size(185, 21);
+            this.eventModelSelectorComboBox.TabIndex = 15;
+            this.eventModelSelectorComboBox.ValueMember = "Value";
+            this.eventModelSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.eventModelSelectorComboBox_SelectedIndexChanged);
+            // 
+            // entriesDataGridView
+            // 
+            this.entriesDataGridView.AllowUserToAddRows = false;
+            this.entriesDataGridView.AllowUserToDeleteRows = false;
+            this.entriesDataGridView.AllowUserToResizeColumns = false;
+            this.entriesDataGridView.AllowUserToResizeRows = false;
+            this.entriesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.entriesDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.entriesDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.entriesDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.entriesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.entriesDataGridView.Location = new System.Drawing.Point(6, 62);
+            this.entriesDataGridView.MultiSelect = false;
+            this.entriesDataGridView.Name = "entriesDataGridView";
+            this.entriesDataGridView.RowHeadersVisible = false;
+            this.entriesDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.entriesDataGridView.Size = new System.Drawing.Size(384, 120);
+            this.entriesDataGridView.TabIndex = 14;
+            this.entriesDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.validateForm);
+            // 
+            // createButton
+            // 
+            this.createButton.Enabled = false;
+            this.createButton.Location = new System.Drawing.Point(217, 585);
+            this.createButton.Name = "createButton";
+            this.createButton.Size = new System.Drawing.Size(195, 23);
+            this.createButton.TabIndex = 3;
+            this.createButton.Text = "Crea";
+            this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancelButton.Location = new System.Drawing.Point(12, 585);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(194, 23);
+            this.cancelButton.TabIndex = 4;
+            this.cancelButton.Text = "Annulla";
+            this.cancelButton.UseVisualStyleBackColor = true;
+            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            // 
+            // modelloEventoContainerBindingSource
+            // 
+            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
+            // 
+            // frequenzaBindingSource
+            // 
+            this.frequenzaBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
+            // 
+            // periodicitaBindingSource
+            // 
+            this.periodicitaBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
+            // 
+            // calendarioBindingSource
+            // 
+            this.calendarioBindingSource.DataSource = typeof(DynamiCal.Model.Calendars.Calendario);
+            // 
+            // ManageEventForm
             // 
             this.AcceptButton = this.createButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -461,25 +467,25 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "CreateEventForm";
+            this.Name = "ManageEventForm";
             this.Text = "Crea un nuovo evento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreateEventForm_FormClosing);
             this.Load += new System.EventHandler(this.CreateEventForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frequencyNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.frequenzaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.periodicitaBindingSource)).EndInit();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.frequenzaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.periodicitaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

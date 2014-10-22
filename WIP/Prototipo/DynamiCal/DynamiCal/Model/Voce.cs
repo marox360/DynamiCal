@@ -64,7 +64,7 @@ namespace DynamiCal.Model
         }
     }
 
-    interface IVoce
+    interface IVoce : IEquatable<IVoce>
     {
         string Nome { get; }
 
@@ -73,7 +73,7 @@ namespace DynamiCal.Model
         IVoce Copy();
     }
 
-    class Voce<T> : IVoce
+    class Voce<T> : IVoce, IEquatable<Voce<T>>
     {
         private readonly string _nome;
         private T _valore;
@@ -126,6 +126,43 @@ namespace DynamiCal.Model
         public IVoce Copy()
         {
             return new Voce<T>(_nome, _valore);
+        }
+
+        public bool Equals(IVoce other)
+        {
+            if (ReferenceEquals(null, other))
+                return false;
+            if (ReferenceEquals(this, other))
+                return true;
+            return string.Equals(this.Nome, other.Nome) && this.Valore.Equals(other.Valore);
+        }
+
+        public bool Equals(Voce<T> other)
+        {
+            if (ReferenceEquals(null, other))
+                return false;
+            if (ReferenceEquals(this, other))
+                return true;
+            return string.Equals(this.Nome, other.Nome) && EqualityComparer<T>.Default.Equals(this.Valore, other.Valore);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj))
+                return false;
+            if (ReferenceEquals(this, obj))
+                return true;
+            if (obj.GetType() != this.GetType())
+                return false;
+            return Equals((Voce<T>)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (this.Nome.GetHashCode() * 397) + (this.Valore != null ? this.Valore.GetHashCode() : 0);
+            }
         }
     }
 }

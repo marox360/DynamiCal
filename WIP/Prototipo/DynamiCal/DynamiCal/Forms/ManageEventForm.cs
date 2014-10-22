@@ -87,6 +87,12 @@ namespace DynamiCal.Forms
             this.frequencyNumericUpDown.Value = customPeriodicita.Valore;
             this.frequencyTypeComboBox.SelectedValue = customPeriodicita.Ripetizione;
 
+            //CreateEventForm_Load viene chiamato dopo LoadEvento e settare il DataSource in LoadEvento non fa creare le celle editabili
+            if (_evento != null)
+            {
+                this.entriesDataGridView.DataSource = _evento.Voci.Select(voce => voce.Copy()).ToList();
+            }
+
             Agenda.Instance.EventModelsChanged += EventModelsChanged;
             Agenda.Instance.CalendarsChanged += CalendarsChanged;
         }
@@ -130,8 +136,6 @@ namespace DynamiCal.Forms
                 this.durationUpDown.Value = minutes;
                 this.durationComboBox.SelectedItem = "Minuti";
             }
-
-            this.entriesDataGridView.DataSource = evento.Voci.Select(voce => voce.Copy()).ToList();
         }
 
         private void EventModelsChanged(object sender, AgendaCollectionEventArgs e)
@@ -184,10 +188,19 @@ namespace DynamiCal.Forms
                 this.eventDateTimePicker.CustomFormat = "dddd, dd MMMM yyyy alle HH:mm";
             }
         }
+        
+        private void validateForm(object sender, DataGridViewCellEventArgs e)
+        {
+            this.validateForm(sender, EventArgs.Empty);
+        }
 
         private void validateForm(object sender, EventArgs e)
         {
             this.createButton.Enabled = !String.IsNullOrWhiteSpace(this.eventNameTextBox.Text) && this.calendarSelectorComboBox.SelectedValue != null && this.eventModelSelectorComboBox.SelectedValue != null;
+            if (this.createButton.Enabled && _evento != null)
+            {
+                this.createButton.Enabled = !this.GetEvento().Equals(_evento);
+            }
         }
 
         private void eventModelSelectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -220,7 +233,15 @@ namespace DynamiCal.Forms
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            (this.calendarSelectorComboBox.SelectedValue as Calendario).AggiungiEvento(this.GetEvento());
+            Calendario calendario = this.calendarSelectorComboBox.SelectedValue as Calendario;
+            Evento evento = this.GetEvento();
+
+            if (_evento != null)
+            {
+                calendario.RimuoviEvento(_evento);
+            }
+
+            calendario.AggiungiEvento(evento);
 
             this.DialogResult = System.Windows.Forms.DialogResult.OK;
         }
@@ -231,12 +252,16 @@ namespace DynamiCal.Forms
             {
                 this.durationUpDown.Text = this.durationUpDown.Value.ToString();
             }
+
+            this.validateForm(sender, EventArgs.Empty);
         }
 
         private void frequencyComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.frequencyTypeComboBox.Enabled = this.frequencyComboBox.SelectedIndex >= 0 && (this.periodicitaBindingSource[this.frequencyComboBox.SelectedIndex] as IBindingContainer).DisplayText.Equals("Personalizzata");
             this.frequencyNumericUpDown.Enabled = this.frequencyTypeComboBox.Enabled;
+
+            this.validateForm(sender, EventArgs.Empty);
         }
 
         private void SetCustomFrequency(object sender, EventArgs e)
@@ -246,6 +271,8 @@ namespace DynamiCal.Forms
             {
                 custom.Value = new Periodicita((Periodicita.Frequenza)this.frequencyTypeComboBox.SelectedValue, (int)this.frequencyNumericUpDown.Value);
             }
+
+            this.validateForm(sender, EventArgs.Empty);
         }
 
         private Evento GetEvento()
@@ -278,5 +305,7 @@ namespace DynamiCal.Forms
                 this.eventLocationTextBox.Text,
                 (Periodicita)this.frequencyComboBox.SelectedValue);
         }
+
+
     }
 }
