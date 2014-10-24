@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.GroupBox groupBox1;
-            this.eventLabel = new System.Windows.Forms.Label();
             this.eventModelListBox = new System.Windows.Forms.ListBox();
             this.modelloEventoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eventLabel = new System.Windows.Forms.Label();
             this.overviewGridView = new System.Windows.Forms.DataGridView();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new DynamiCal.Presentation.DataGridView.DataGridViewEntryTypeColumn();
@@ -48,22 +48,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.voceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // eventLabel
-            // 
-            this.eventLabel.Location = new System.Drawing.Point(174, 14);
-            this.eventLabel.Name = "eventLabel";
-            this.eventLabel.Size = new System.Drawing.Size(102, 31);
-            this.eventLabel.TabIndex = 11;
-            this.eventLabel.Text = "Eventi con questo modello:";
-            this.eventLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.eventLabel.Visible = false;
-            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(this.eventModelListBox);
-            groupBox1.Location = new System.Drawing.Point(12, 13);
+            groupBox1.Location = new System.Drawing.Point(12, 7);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new System.Drawing.Size(156, 108);
+            groupBox1.Size = new System.Drawing.Size(156, 115);
             groupBox1.TabIndex = 12;
             groupBox1.TabStop = false;
             groupBox1.Text = "Modelli";
@@ -78,13 +68,23 @@
             this.eventModelListBox.FormattingEnabled = true;
             this.eventModelListBox.Location = new System.Drawing.Point(3, 18);
             this.eventModelListBox.Name = "eventModelListBox";
-            this.eventModelListBox.Size = new System.Drawing.Size(150, 87);
+            this.eventModelListBox.Size = new System.Drawing.Size(150, 94);
             this.eventModelListBox.TabIndex = 7;
             this.eventModelListBox.SelectedValueChanged += new System.EventHandler(this.eventModelListBox_SelectedValueChanged);
             // 
             // modelloEventoBindingSource
             // 
             this.modelloEventoBindingSource.DataSource = typeof(DynamiCal.Model.ModelloEvento);
+            // 
+            // eventLabel
+            // 
+            this.eventLabel.Location = new System.Drawing.Point(174, 7);
+            this.eventLabel.Name = "eventLabel";
+            this.eventLabel.Size = new System.Drawing.Size(102, 31);
+            this.eventLabel.TabIndex = 11;
+            this.eventLabel.Text = "Eventi con questo modello:";
+            this.eventLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.eventLabel.Visible = false;
             // 
             // overviewGridView
             // 
@@ -155,7 +155,7 @@
             // countEventLabel
             // 
             this.countEventLabel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countEventLabel.Location = new System.Drawing.Point(173, 48);
+            this.countEventLabel.Location = new System.Drawing.Point(173, 41);
             this.countEventLabel.Name = "countEventLabel";
             this.countEventLabel.Size = new System.Drawing.Size(103, 18);
             this.countEventLabel.TabIndex = 10;
@@ -172,7 +172,7 @@
             this.dataGridViewEntryTypeColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewEntryTypeColumn1.Width = 261;
             // 
-            // DeleteEventModel
+            // DeleteEventModelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,7 +186,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "DeleteEventModel";
+            this.Name = "DeleteEventModelForm";
             this.Text = "Gestione modelli evento";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DeleteEventModel_FormClosing);
             this.Load += new System.EventHandler(this.DeleteEventModel_Load);
