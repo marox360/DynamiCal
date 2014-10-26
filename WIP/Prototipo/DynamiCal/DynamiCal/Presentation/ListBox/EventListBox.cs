@@ -16,6 +16,7 @@ namespace DynamiCal.Presentation.ListBox
         private BindingSource eventoBindingSource;
         private System.ComponentModel.IContainer components;
         private IFiltro _eventFilter = null;
+        private EventPanel _eventPanel = null;
 
         [Browsable(false)]
         public IFiltro EventFilter
@@ -51,7 +52,21 @@ namespace DynamiCal.Presentation.ListBox
             }
         }
 
-        public EventPanel EventPanel { get; set; }
+        public EventPanel EventPanel {
+            set
+            {
+                _eventPanel = value;
+
+                if (_eventPanel != null)
+                {
+                    _eventPanel.Visible = this.Items.Count > 0;
+                }
+            }
+            get
+            {
+                return _eventPanel;
+            }
+        }
 
         public BindingSource EventoBindingSource
         {
