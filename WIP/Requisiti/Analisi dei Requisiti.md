@@ -3,7 +3,7 @@ Analisi dei requisiti
 * **Agenda**
   * È un'entità che tiene organizzati i propri calendari e modelli di eventi
   * `È caratterizzato da`:
-    * uno o più **Calendari**, è sempre presente un calendario di default
+    * zero o più **Calendari**
     * zero o più **Modelli di eventi**
 * **Calendario**
   * `È identificato da`:
@@ -17,7 +17,7 @@ Analisi dei requisiti
 * **Calendario condiviso**
   * Deve essere possibile `condividere` il calendario con altri utenti 
   * `È caratterizzato da`:
-    * zero o più **Amici**, persone con le quali condividere un calendario
+    * uno o più **Amici**, persone con le quali condividere un calendario
 * **Evento** ≡ **Impegno**
   * `È caratterizzato da`:
     * **Nome**
