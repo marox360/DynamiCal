@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="78014e65-e565-438f-b815-2fc84128b57e" name="DiagrammaClassiAnalisi" linkedPackageId="4ab776e7-1614-4c27-8271-28bd5c16bad2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="a1dbfbf1-7a23-4ff7-8b65-8a0107aa6430">
+      <profileInstance Id="a72cbb16-a853-44f5-9560-0c85c7c9e5d3" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d9d57b85-c162-4891-880b-861e034f3a49">
+      <profileInstance Id="be871d40-e724-4aaf-bb11-03b255fc74ae" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="36a71be4-7e6b-4523-b7a7-b2f7e9883766">
+      <profileInstance Id="3247e436-a121-4510-9117-cdb16962c90c" name="CSharpProfile">
+        <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
+      </profileInstance>
+      <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d4890853-2b02-403e-9c04-92d9d85c29c6" name="Agenda" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f50cb9c3-ab39-46a0-943d-3130011f7715" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e5ee4b0b-2b97-4a6b-b2b3-e3b7d2d79639" name="Calendario" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="344227f2-2724-4632-8e33-0f3bd8863907" />
+        <targetEnds>
+          <association Id="50c04c34-f104-4f4a-80a8-ff5be0f070c8" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d4890853-2b02-403e-9c04-92d9d85c29c6" LastKnownName="Agenda" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e8231324-fb89-4219-980f-b233b1cac1a0" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="7b9977da-2615-4d42-ab07-35737e31646e" name="Lower" value="*">
+                      <elementDefinition Id="f9432474-e046-4991-82ef-527408998e53" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c0b15938-c6cc-4f89-911e-9b91e8da627c" name="Upper" value="*">
+                      <elementDefinition Id="8b931285-b57d-41b8-80d9-0a0c429e22d1" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="abdb78e6-3228-4e47-8bad-9e9c0f028bc4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b9799c34-9f93-4961-b59c-ab5105f0fcff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0542f0da-c07d-474a-8372-f85beb3fbbcb" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6dff1465-505e-4108-9a8c-aa215a348565" />
+          </association>
+          <association Id="5082f11b-59da-403a-83cb-21ce5c7267af" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="40cc4927-35cd-4a66-ba6d-3ac455f3984d" LastKnownName="Evento" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b3b89fc7-1fc9-4ac3-bec8-122f38ea6928" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3992b0ed-7521-43f8-9b93-c6ad1c7c0567" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f78c2531-97e4-45fa-b6c8-36c853b2f54d" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <lowerValueInternal>
+                    <literalString Id="86db7550-fdc4-4ebf-813a-6f26002d0ade" name="Lower" value="*">
+                      <elementDefinition Id="4b5716fd-c75a-4dd2-94f9-b4d491b8f0b6" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="87be45ab-67d1-4e32-907c-f313a8097ccc" name="Upper" value="*">
+                      <elementDefinition Id="663348f2-6e47-4b8e-8bf2-8ce513676f0a" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="15614706-cd78-4b8b-8242-1ed719e3836c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="735bacf7-d30e-4a0e-b669-9b1dc22787e2" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="c16c1023-9cf4-4a7c-9492-eb5bdf7844d8" name="nome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ec884456-46e4-4042-89b9-f7bdd0d5a16f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b3943283-b5a4-4ca0-b56e-d7d3d0daf988" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dd2c69cc-4f31-4e63-a945-de9e5b0b6f4f" name="ModelloEvento" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8531772f-f265-4f01-be94-bee490a31e35" />
+        <targetEnds>
+          <association Id="9b7ced57-589c-4949-8d75-218463093f92" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d4890853-2b02-403e-9c04-92d9d85c29c6" LastKnownName="Agenda" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7d3abb0c-264a-43c9-88fa-413afc8d9fbe" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="f05e0828-fa54-44fd-b305-b816259aec0b" name="Lower" value="*">
+                      <elementDefinition Id="3fc003c1-a39c-45f2-aa6c-b87cf9a5d994" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="0656a18b-de59-4ee4-a593-ab4890d84e75" name="Upper" value="*">
+                      <elementDefinition Id="d6235f8a-862d-48b6-b610-0f7f171d5420" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="0ecaf628-b516-44ab-b92b-0d278ef69769" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b2d8bce4-6d09-4b8c-8a18-083cf6ae5e14" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c0007f21-8896-47ec-9e72-b2635eb8e438" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="580638fe-9049-4484-9607-bee60f3a1400" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="8b158176-87cb-49e0-a3e9-17fb5692ad41" name="nome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="55c233b9-850a-4cfa-814a-40c026429d88" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b3943283-b5a4-4ca0-b56e-d7d3d0daf988" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="75f9c26f-d1c2-4542-b504-e95b4a76d981" name="CalendarioLocale" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4ac731b5-5853-4e38-925d-1877eef0bb8d" />
+        <generalsInternal>
+          <generalization Id="fe2755d0-39e6-4071-9600-465364ead65e" isSubstitutable="false">
+            <classMoniker Id="e5ee4b0b-2b97-4a6b-b2b3-e3b7d2d79639" LastKnownName="Calendario" />
+            <elementDefinition Id="7b1adec7-1173-494f-8979-8730968e3b02" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2a94eec5-ccf0-41e6-982e-3be3fca0a79b" name="Agenda3" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="05c228bd-8af8-4f67-b6c2-65efe449f78b" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="77bcf6c7-89d2-4af4-963e-a746fddbd9c8" name="Agenda4" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2c21936f-6bdb-416c-b907-78dd05141519" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4b14e7e6-4cd8-47e5-9245-230c18c07a28" name="Agenda5" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="925876bf-fe07-4968-9c79-cc6b395fd047" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b6a29335-ba74-4d37-8afb-1a9a9c290863" name="Agenda6" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ea1a107b-ba4e-47d5-bb44-af82a3eaa3a8" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e2b362ee-36cd-4ce6-9dce-1023b0604fdd" name="Agenda7" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dacf35d8-3629-408b-a910-2442897815bd" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e08202e9-2239-4041-b65c-3942eb7a9bf7" name="Filtro" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0223aba3-2ee7-4932-89d3-1cf56512de0d" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e8d78afd-2b22-4cb8-81dd-d0997e1104e8" name="CriterioDiFiltraggio" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="81a143d9-16ee-4d97-a687-16777de515f0" />
+        <suppliersInternal>
+          <dependency Id="f188169f-10aa-44e1-904d-2faeb6f185d6">
+            <classMoniker Id="40cc4927-35cd-4a66-ba6d-3ac455f3984d" LastKnownName="Evento" />
+            <elementDefinition Id="46da5f8f-b041-436a-af2e-b426bec3fce3" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="10a672d3-ab3b-43f6-949f-f5b93c4c40c2" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e08202e9-2239-4041-b65c-3942eb7a9bf7" LastKnownName="Filtro" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ad9fb920-2172-43f8-8ba8-92fa8b2f5054" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fbb3483e-6f26-4a63-80b0-318513e14b1e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7254743a-d6db-4671-8d1e-cfa2ef2c0b7f" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="62dec32a-b2a8-4a19-b195-029e0417a1e0" name="Lower" value="*">
+                      <elementDefinition Id="e833df01-553d-4aac-9060-a097a05f7db0" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b2f16397-9813-4907-9d4b-c62994dd4eea" name="Upper" value="*">
+                      <elementDefinition Id="9cde62ae-5545-4327-902e-88517c17a71e" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="412e1c14-a06d-41bd-a921-24400435c4bf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9e1352e3-6a33-43c0-835e-8fcf13cb8dcf" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d4f1a2c6-648f-404b-89f1-fee9da42c4eb" name="Periodicità" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="09f38387-83bf-4ff3-b0bf-accfd455fd67" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="40cc4927-35cd-4a66-ba6d-3ac455f3984d" name="Evento" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="dda65388-532f-45fd-ba89-c722f84bac94" />
+        <targetEnds>
+          <association Id="998ec45c-fc80-4904-a83a-9cd3a2755dc4" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="dd2c69cc-4f31-4e63-a945-de9e5b0b6f4f" LastKnownName="ModelloEvento" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c8e74814-26e2-45e2-a0da-348d35e8f360" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="5c73c4dd-2856-4457-9eda-2371ba13aa22" name="Lower" value="*">
+                      <elementDefinition Id="e97d391b-5c13-4bbd-8814-613301dfbd46" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="7eb577a6-9e35-4366-acc6-ed26edb0c999" name="Upper" value="*">
+                      <elementDefinition Id="f34d3349-b43e-45f1-831a-f7a0c6189199" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="69f8b87b-e50e-4f47-939e-caa2cac81eaf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6e170fe5-73e6-4bd7-bc39-3ad0e56e4707" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a5805041-0c33-4c3d-ad56-96498034eeb8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="faa132d3-31d4-4c8f-b869-5955544c25fd" />
+          </association>
+          <association Id="aa783978-f904-42df-acb0-8f3707fabe60" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="d4f1a2c6-648f-404b-89f1-fee9da42c4eb" LastKnownName="Periodicità" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b8b35013-4052-4428-8f83-9746ee1eb617" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="04f549c3-81de-467c-b0b4-beed60b0e829" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb4b90b1-8a9b-4e51-9289-13afd0263f66" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d8f142d3-e644-4c56-91a7-21cbbe73f6cf" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="914ea952-4aa8-4a70-b60c-52b715f8ee9b" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="3d5b60d2-5b75-4a58-aed3-bae8771fc62f" name="luogo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d0ab5a94-6038-4710-ac8e-8e1cc2dd3cc3" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b3943283-b5a4-4ca0-b56e-d7d3d0daf988" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="fab86609-503d-4d1b-9b05-6fb42d22ff08" name="modello" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="086609fd-5f10-40f2-b9ec-53c2013c52ee" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a1093f14-e7e4-48e9-9aa4-2c140bb79ed1" LastKnownName="ModelloEvento" />
+            </type_NamedElement>
+          </property>
+          <property Id="921043ab-3cfc-4471-a821-da0c16c9c592" name="periodicita" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0992144a-aafc-4a4d-a2ae-068141351db8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0ae1f0b5-15c5-45c3-b614-e275637cbbb3" LastKnownName="Periodicità" />
+            </type_NamedElement>
+          </property>
+          <property Id="4d011f50-7ac2-4fd8-9eae-ea7057160e6d" name="descrizione" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6b39f209-519c-4232-b18f-293a1093142c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b3943283-b5a4-4ca0-b56e-d7d3d0daf988" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+          <property Id="272bcc23-8c30-4154-ba8c-37bed7fb70a0" name="durata" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="97b12688-e398-43e4-8e90-abed26a0f09f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="985ec666-60f2-4347-8c31-722a08b41f1d" LastKnownName="long" />
+            </type_NamedElement>
+          </property>
+          <property Id="0b734259-2e2e-425c-862c-3814ff4fb0d1" name="data" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e75f8184-019e-4da1-8f7e-c46b7c060cbb" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e7c9d9b5-1baf-48af-825a-21f5c3e74a11" LastKnownName="Date" />
+            </type_NamedElement>
+          </property>
+          <property Id="5ef0dae3-027e-48a5-9465-1e43237c9cf1" name="nome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8159f2ef-978b-4631-909c-a45e55594d5f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b3943283-b5a4-4ca0-b56e-d7d3d0daf988" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="cd82642b-7d7f-4ecb-a0af-d7c997c5946a" name="Amico" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="17ae4bfb-08de-4cbf-be7e-3f3c069ad543" />
+        <targetEnds>
+          <association Id="e2f05e48-97c6-4f98-81fd-d3ec08483c4d" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c9c97029-b3c5-44c8-ad18-ce885fbf32e6" LastKnownName="CalendarioCondiviso" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3fad99ef-a7de-4cda-bb42-41025acbe9d0" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="ec0ea83c-5e6f-4cc2-b955-fd9fad7f2550" name="Lower" value="*">
+                      <elementDefinition Id="92c1c2a1-034c-4d96-965e-2ae7e0250b5c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b779e707-1870-4bd2-82b8-203be6236c97" name="Upper" value="*">
+                      <elementDefinition Id="08316f3f-24c0-4633-8996-45fca8b338c5" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="910c22eb-fbc6-49ea-ac13-40ccbe5f2122" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5971ff26-59ca-4eb7-bf2b-24998eb97c92" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="48bab6b6-6671-4487-840d-94868f273071" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9c544aae-8ccb-4038-a9b7-8997fb8fb6ff" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="be44f3c7-c185-4f9e-9b2b-b3a2d2fcff6c" name="email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="68e89a58-fb6e-49af-aca7-d035a6a7a326" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b3943283-b5a4-4ca0-b56e-d7d3d0daf988" LastKnownName="string" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c9c97029-b3c5-44c8-ad18-ce885fbf32e6" name="CalendarioCondiviso" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1320ab54-0969-4b7a-b856-a9e5077a167c" />
+        <generalsInternal>
+          <generalization Id="0fcf5bb3-abf5-48f2-895a-a7c12fc3f7a6" isSubstitutable="false">
+            <classMoniker Id="e5ee4b0b-2b97-4a6b-b2b3-e3b7d2d79639" LastKnownName="Calendario" />
+            <elementDefinition Id="49668932-59db-4d40-977a-75d6f88a8656" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="b3943283-b5a4-4ca0-b56e-d7d3d0daf988" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="1b3fa12e-861a-4e83-934c-a2dd75a45c5b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a1093f14-e7e4-48e9-9aa4-2c140bb79ed1" name="ModelloEvento" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::ModelloEvento">
+        <elementDefinition Id="8531772f-f265-4f01-be94-bee490a31e35" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0ae1f0b5-15c5-45c3-b614-e275637cbbb3" name="Periodicità" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::Periodicità">
+        <elementDefinition Id="09f38387-83bf-4ff3-b0bf-accfd455fd67" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="985ec666-60f2-4347-8c31-722a08b41f1d" name="long" isAbstract="false" isLeaf="false" cachedFullName="long">
+        <elementDefinition Id="c8ea3e7f-2ff6-45fa-a01e-d8d854747e84" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e7c9d9b5-1baf-48af-825a-21f5c3e74a11" name="Date" isAbstract="false" isLeaf="false" cachedFullName="Date">
+        <elementDefinition Id="71aa55c5-3ce3-4c6d-b858-81282e5c3706" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="4ab776e7-1614-4c27-8271-28bd5c16bad2" name="DynamiCalModeling">
+    <elementDefinition Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c" />
+  </package>
+</logicalClassDesignerModel>
