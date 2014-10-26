@@ -241,6 +241,56 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="4ef5f253-ed12-4c7a-a620-e6bd81c01206"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="de9ee98a-9083-42d6-bedd-431c57941b67"
+              LastKnownName="Voce"
+              LastKnownLocation="DynamiCalModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d6de2e4c-c34a-446a-a96a-982c74188427"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6dda5b4b-fa0a-4b08-8077-fa9911964142"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e72b9624-cb1f-40d2-b367-112b72b6079d"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="07ea51ed-5c9c-4b6d-8387-01e283ee00de"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -294,34 +344,176 @@
     <packageHasNamedElement>
       <class
         Id="2c21936f-6bdb-416c-b907-78dd05141519"
-        name="Agenda4"
+        name="FiltroRicerca"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="17dd6886-ae13-4c8c-b55c-02bccd52d026"
+            isSubstitutable="false">
+            <classMoniker
+              Id="0223aba3-2ee7-4932-89d3-1cf56512de0d"
+              LastKnownName="Filtro"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="98fefbf2-3b18-4b8a-bd80-1c75d67afca4"
+            name="frase"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="1b3fa12e-861a-4e83-934c-a2dd75a45c5b"
+                LastKnownName="string"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="925876bf-fe07-4968-9c79-cc6b395fd047"
-        name="Agenda5"
+        name="FiltroModello"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="87a45ac9-349f-4619-910f-a55c3a1fe673"
+            isSubstitutable="false">
+            <classMoniker
+              Id="0223aba3-2ee7-4932-89d3-1cf56512de0d"
+              LastKnownName="Filtro"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="226f6995-0548-478a-837c-3cf51609eaef"
+            name="modello"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="8531772f-f265-4f01-be94-bee490a31e35"
+                LastKnownName="ModelloEvento"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="ea1a107b-ba4e-47d5-bb44-af82a3eaa3a8"
-        name="Agenda6"
+        name="FiltroTemporale"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="b3bc9b5d-3c10-42c3-a4c0-1909aeb10350"
+            isSubstitutable="false">
+            <classMoniker
+              Id="0223aba3-2ee7-4932-89d3-1cf56512de0d"
+              LastKnownName="Filtro"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="f247b6e4-026f-4664-b183-a4c1e18d2440"
+            name="dataInizio"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="71aa55c5-3ce3-4c6d-b858-81282e5c3706"
+                LastKnownName="Date"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e30f91c0-14a1-4bb3-b3d1-88c67491ac68"
+            name="dataFine"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="71aa55c5-3ce3-4c6d-b858-81282e5c3706"
+                LastKnownName="Date"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
         Id="dacf35d8-3629-408b-a910-2442897815bd"
-        name="Agenda7"
+        name="FiltroCalendario"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="a12fa4bf-662b-4677-a747-f1df1b4ef674"
+            isSubstitutable="false">
+            <classMoniker
+              Id="0223aba3-2ee7-4932-89d3-1cf56512de0d"
+              LastKnownName="Filtro"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="e75f684b-1668-40d7-bcfd-11fd9eb322b4"
+            name="calendario"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="344227f2-2724-4632-8e33-0f3bd8863907"
+                LastKnownName="Calendario"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -407,7 +599,85 @@
         name="Periodicità"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="893a1089-0fa0-43ad-88fe-7ef872c4ad21"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="d8e8eb79-8823-4d16-bed7-ed1065aa8fbe"
+              LastKnownName="Frequenza"
+              LastKnownLocation="DynamiCalModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b3a97134-94b1-4c1f-a8eb-967c64d26bf4"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="98c14b90-04c2-486a-9f3f-1589f0656df0"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="261b3c46-291e-4bb0-8faa-0fec4f502a7a"
+            name="valore"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a7abfac0-39a8-4202-9a5c-9bc20811ec96"
+                LastKnownName="int"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f75b5aa5-eef9-4fae-9147-a2b2ac00ffee"
+            name="ripetizione"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="ef346e3a-8f14-41d3-8fcb-891d67562464"
+                LastKnownName="Frequenza"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
@@ -749,6 +1019,167 @@
       <undefinedType
         Id="c8ea3e7f-2ff6-45fa-a01e-d8d854747e84"
         name="long" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="de9ee98a-9083-42d6-bedd-431c57941b67"
+        name="Voce"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="e6fa7dad-11fd-4330-85c2-553cc2c90616"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="f0e333b8-c7ca-4f4e-ad5f-81e0e7d0594e"
+              LastKnownName="Tipo"
+              LastKnownLocation="DynamiCalModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b4d22215-c4b6-45b4-a53f-af23ef6c2f48"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="13f1e32a-3711-4bfb-9438-7ad8d42b9786"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="cf0ce974-ee10-4e22-802d-5579bd946707"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72d25c9c-3ff9-4016-9acf-0c57c0e6ab69"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="b77083f1-2064-46fb-9e77-00dcc5c2f6f5"
+            name="nome"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="1b3fa12e-861a-4e83-934c-a2dd75a45c5b"
+                LastKnownName="string"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="455d4f5e-6caa-408d-9a2b-aa5b34739714"
+            name="tipo"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="28e0fa2b-c818-4946-8cda-9e92e1b49ac9"
+                LastKnownName="Tipo"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a7abfac0-39a8-4202-9a5c-9bc20811ec96"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="ef346e3a-8f14-41d3-8fcb-891d67562464"
+        name="Frequenza" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="f0e333b8-c7ca-4f4e-ad5f-81e0e7d0594e"
+        name="Tipo"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="ace429c0-bacb-40b5-afb4-f991add8a2f8"
+            name="Boolean" />
+          <enumerationLiteral
+            Id="f1207c48-3d08-4805-af34-83702c51a476"
+            name="String" />
+          <enumerationLiteral
+            Id="6c3c20c1-ce97-4dc2-878f-0ceabca97cd7"
+            name="Double" />
+          <enumerationLiteral
+            Id="561867e4-cc9a-4e89-bc75-ca44863db29e"
+            name="Data" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="d8e8eb79-8823-4d16-bed7-ed1065aa8fbe"
+        name="Frequenza"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="d04763ac-6e84-4775-9a83-bdf76626bbf6"
+            name="Mai" />
+          <enumerationLiteral
+            Id="d453eb79-bab4-4959-8533-1fe906bde89c"
+            name="Giornaliera" />
+          <enumerationLiteral
+            Id="4e87381b-7d25-42ec-9f0e-0c69c71fc36e"
+            name="Settimanale" />
+          <enumerationLiteral
+            Id="08452a79-8eb4-4521-a7ff-209ebadf91fe"
+            name="Mensile" />
+          <enumerationLiteral
+            Id="46908166-038f-4454-b46b-23b5d551e88a"
+            name="Annuale" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="28e0fa2b-c818-4946-8cda-9e92e1b49ac9"
+        name="Tipo" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
