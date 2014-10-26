@@ -330,7 +330,5 @@ namespace DynamiCal.Forms
                 (Periodicita)this.frequencyComboBox.SelectedValue);
         }
 
-
-
     }
 }
