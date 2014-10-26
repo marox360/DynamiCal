@@ -114,10 +114,10 @@ namespace DynamiCal.Forms
             this.eventNameTextBox.Text = evento.Nome;
             this.eventLocationTextBox.Text = evento.Luogo;
             this.eventDescriptionTextBox.Text = evento.Descrizione;
-            this.eventDateTimePicker.Value = evento.Periodo.StartDate;
+            this.eventDateTimePicker.Value = evento.Periodo.DataInizio;
 
-            int minutes = (int)evento.Periodo.Duration.TotalMinutes;
-            if (evento.Periodo.StartDate == evento.Periodo.StartDate.Date && minutes == 60 * 24)
+            int minutes = (int)evento.Periodo.Durata.TotalMinutes;
+            if (evento.Periodo.DataInizio == evento.Periodo.DataInizio.Date && minutes == 60 * 24)
             {
                 this.allDayCheckBox.Checked = true;
             }
@@ -298,7 +298,7 @@ namespace DynamiCal.Forms
 
             return new Evento(
                 this.eventNameTextBox.Text,
-                new TimePeriod(this.eventDateTimePicker.Value, duration),
+                new PeriodoTempo(this.eventDateTimePicker.Value, duration),
                 this.eventModelSelectorComboBox.SelectedValue as ModelloEvento,
                 this.entriesDataGridView.DataSource as IEnumerable<IVoce>,
                 this.eventDescriptionTextBox.Text,

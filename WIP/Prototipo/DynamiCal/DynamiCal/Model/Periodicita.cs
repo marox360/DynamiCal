@@ -95,9 +95,9 @@ namespace DynamiCal.Model
             }
         }
 
-        public bool TestaPeriodo(TimePeriod eventPeriod, TimePeriod otherPeriod)
+        public bool TestaPeriodo(PeriodoTempo eventPeriod, PeriodoTempo otherPeriod)
         {
-            foreach (DateTime date in TimePeriod.DaysSequence(otherPeriod))
+            foreach (DateTime date in PeriodoTempo.DaysSequence(otherPeriod))
             {
                 if (this.TestaData(eventPeriod, date))
                 {
@@ -108,9 +108,9 @@ namespace DynamiCal.Model
             return false;
         }
 
-        public bool TestaData(TimePeriod eventPeriod, DateTime testDate)
+        public bool TestaData(PeriodoTempo eventPeriod, DateTime testDate)
         {
-            TimePeriod testPeriod = new TimePeriod(testDate.Date, TimeSpan.FromDays(1));
+            PeriodoTempo testPeriod = new PeriodoTempo(testDate.Date, TimeSpan.FromDays(1));
 
             if (testPeriod < eventPeriod)
             {
@@ -120,7 +120,7 @@ namespace DynamiCal.Model
             switch (_frequenza)
             {
                 case Frequenza.Mai:
-                    return eventPeriod.IntersectWith(testPeriod);
+                    return eventPeriod.Interseca(testPeriod);
 
                 case Frequenza.Giornaliera:
                     return Periodicita.TestDaySequence(eventPeriod, testPeriod, _valore, Frequenza.Giornaliera);
@@ -138,14 +138,14 @@ namespace DynamiCal.Model
             return false;
         }
 
-        public int NumberOfRepetitions(TimePeriod eventPeriod, DateTime testDate)
+        public int NumberOfRepetitions(PeriodoTempo eventPeriod, DateTime testDate)
         {
             if (!this.TestaData(eventPeriod, testDate))
             {
                 return -1;
             }
 
-            TimePeriod testPeriod = new TimePeriod(testDate.Date, TimeSpan.FromDays(1));
+            PeriodoTempo testPeriod = new PeriodoTempo(testDate.Date, TimeSpan.FromDays(1));
 
             switch (_frequenza)
             {
@@ -168,7 +168,7 @@ namespace DynamiCal.Model
             return -1;
         }
 
-        private static int CountRepetitions(TimePeriod timePeriod, TimePeriod testPeriod, int valore, Frequenza frequenza)
+        private static int CountRepetitions(PeriodoTempo timePeriod, PeriodoTempo testPeriod, int valore, Frequenza frequenza)
         {
             Func<DateTime, DateTime, TimeSpan, int, bool> testFunction = Periodicita.TestRepetitionFunction(frequenza);
             Func<DateTime, DateTime, TimeSpan, int, int> repetitionFunction = Periodicita.NumberOfRepetitionsFunction(frequenza);
@@ -177,23 +177,23 @@ namespace DynamiCal.Model
                 return -1;
             }
 
-            foreach (DateTime day in TimePeriod.DaysSequence(timePeriod))
+            foreach (DateTime day in PeriodoTempo.DaysSequence(timePeriod))
             {
-                TimeSpan timeSpan = testPeriod.StartDate - day;
+                TimeSpan timeSpan = testPeriod.DataInizio - day;
                 if (timeSpan.TotalDays < 0)
                 {
                     return -1;
                 }
-                else if (testFunction(day, testPeriod.StartDate, timeSpan, valore))
+                else if (testFunction(day, testPeriod.DataInizio, timeSpan, valore))
                 {
-                    return repetitionFunction(day, testPeriod.StartDate, timeSpan, valore);
+                    return repetitionFunction(day, testPeriod.DataInizio, timeSpan, valore);
                 }
             }
 
             return -1;
         }
 
-        private static bool TestDaySequence(TimePeriod timePeriod, TimePeriod testPeriod, int valore, Frequenza frequenza)
+        private static bool TestDaySequence(PeriodoTempo timePeriod, PeriodoTempo testPeriod, int valore, Frequenza frequenza)
         {
             Func<DateTime, DateTime, TimeSpan, int, bool> testFunction = Periodicita.TestRepetitionFunction(frequenza);
             if (testFunction == null)
@@ -201,14 +201,14 @@ namespace DynamiCal.Model
                 return false;
             }
 
-            foreach (DateTime day in TimePeriod.DaysSequence(timePeriod))
+            foreach (DateTime day in PeriodoTempo.DaysSequence(timePeriod))
             {
-                TimeSpan timeSpan = testPeriod.StartDate - day;
+                TimeSpan timeSpan = testPeriod.DataInizio - day;
                 if (timeSpan.TotalDays < 0)
                 {
                     return false;
                 }
-                else if (testFunction(day, testPeriod.StartDate, timeSpan, valore))
+                else if (testFunction(day, testPeriod.DataInizio, timeSpan, valore))
                 {
                     return true;
                 }

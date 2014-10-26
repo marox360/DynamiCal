@@ -13,16 +13,16 @@ namespace DynamiCal.Model
         private string _nome;
         private string _descrizione;
         private string _luogo;
-        private TimePeriod _periodo;
+        private PeriodoTempo _periodo;
         private Periodicita _periodicita;
         private ModelloEvento _modello;
         private List<IVoce> _voci;
 
-        public Evento(string nome, TimePeriod periodo, ModelloEvento modello, IEnumerable<IVoce> voci = null, string descrizione = "", string luogo = "", Periodicita? periodicita = null)
+        public Evento(string nome, PeriodoTempo periodo, ModelloEvento modello, IEnumerable<IVoce> voci = null, string descrizione = "", string luogo = "", Periodicita? periodicita = null)
         {
             #region Precondizioni
             Debug.Assert(!String.IsNullOrWhiteSpace(nome), "Nome is null or whitespace");
-            Debug.Assert(periodo.Duration.TotalMinutes > 0, "Durata is negative or zero");
+            Debug.Assert(periodo.Durata.TotalMinutes > 0, "Durata is negative or zero");
             Debug.Assert(modello != null, "Modello is null");
             #endregion
 
@@ -75,12 +75,12 @@ namespace DynamiCal.Model
             }
         }
 
-        public TimePeriod Periodo
+        public PeriodoTempo Periodo
         {
             set
             {
                 #region Precondizioni
-                Debug.Assert(value.Duration.TotalMinutes > 0, "Durata is negative or zero");
+                Debug.Assert(value.Durata.TotalMinutes > 0, "Durata is negative or zero");
                 #endregion
 
                 _periodo = value;

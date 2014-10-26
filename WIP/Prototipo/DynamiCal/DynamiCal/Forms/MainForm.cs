@@ -31,7 +31,7 @@ namespace DynamiCal.Forms
             Agenda.Instance.CalendarsChanged += CalendarsChanged;
 
             Calendario testCalendar = new CalendarioLocale("Test Calendar");
-            testCalendar.AggiungiEvento(new Evento("Test", new TimePeriod(DateTime.Now, TimeSpan.FromMinutes(60)), Agenda.Instance.ModelliEvento[0], null, "Questo è un evento generato automaticamente nella giornata di oggi", "Ovunque :D"));
+            testCalendar.AggiungiEvento(new Evento("Test", new PeriodoTempo(DateTime.Now, TimeSpan.FromMinutes(60)), Agenda.Instance.ModelliEvento[0], null, "Questo è un evento generato automaticamente nella giornata di oggi", "Ovunque :D"));
             Agenda.Instance.AggiungiCalendario(testCalendar);
         }
 
@@ -212,7 +212,7 @@ namespace DynamiCal.Forms
                     Evento evento = searchEventDialog.SelectedEvent;
                     if (evento != null)
                     {
-                        this.ShowMonthOfDay(evento.Periodo.StartDate);
+                        this.ShowMonthOfDay(evento.Periodo.DataInizio);
                         this.eventsListBox.SelectedItem = evento;
                     }
                 }
