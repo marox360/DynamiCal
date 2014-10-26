@@ -23,13 +23,14 @@ Analisi dei requisiti
     * **Nome**
     * **Data**, data e ora di inizio dell'evento
     * **Durata**, durata in minuti dell'evento
-  * `Può avere`
-    * **Descrizione**
     * **Periodicità**
     * **Modello di evento**
+  * `Può avere`
+    * **Descrizione**
     * **Luogo**, dove si svolge l'evento
 * **Periodicità**, cadenza ripetuta nel tempo di un determinato evento
   * `Può ripetersi`
+    * **Mai**
     * **Ogni tot giorni**
     * **Ogni tot settimane**
     * **Ogni tot mesi**
