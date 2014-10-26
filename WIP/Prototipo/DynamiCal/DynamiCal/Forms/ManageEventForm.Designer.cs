@@ -45,22 +45,22 @@
             this.eventNameTextBox = new System.Windows.Forms.TextBox();
             this.eventDescriptionTextBox = new System.Windows.Forms.TextBox();
             this.calendarSelectorComboBox = new System.Windows.Forms.ComboBox();
+            this.calendarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.durationUpDown = new System.Windows.Forms.NumericUpDown();
             this.durationComboBox = new System.Windows.Forms.ComboBox();
             this.allDayCheckBox = new System.Windows.Forms.CheckBox();
             this.frequencyNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.frequencyTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.frequenzaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.frequencyComboBox = new System.Windows.Forms.ComboBox();
+            this.periodicitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eventLocationTextBox = new System.Windows.Forms.TextBox();
             this.eventModelSelectorComboBox = new System.Windows.Forms.ComboBox();
+            this.modelloEventoContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.entriesDataGridView = new DynamiCal.Presentation.DataGridView.VociDataGridView();
             this.createButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
-            this.modelloEventoContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.frequenzaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.periodicitaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.calendarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -75,16 +75,16 @@
             groupBox4 = new System.Windows.Forms.GroupBox();
             label9 = new System.Windows.Forms.Label();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).BeginInit();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).BeginInit();
             groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frequencyNumericUpDown)).BeginInit();
-            groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frequenzaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.periodicitaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).BeginInit();
+            groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -178,7 +178,7 @@
             // calendarSelectorComboBox
             // 
             this.calendarSelectorComboBox.DataSource = this.calendarioBindingSource;
-            this.calendarSelectorComboBox.DisplayMember = "Nome";
+            this.calendarSelectorComboBox.DisplayMember = "DisplayText";
             this.calendarSelectorComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.calendarSelectorComboBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendarSelectorComboBox.FormattingEnabled = true;
@@ -186,7 +186,12 @@
             this.calendarSelectorComboBox.Name = "calendarSelectorComboBox";
             this.calendarSelectorComboBox.Size = new System.Drawing.Size(185, 23);
             this.calendarSelectorComboBox.TabIndex = 1;
-            this.calendarSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.validateForm);
+            this.calendarSelectorComboBox.ValueMember = "Value";
+            this.calendarSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.calendarSelectorComboBox_SelectedIndexChanged);
+            // 
+            // calendarioBindingSource
+            // 
+            this.calendarioBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
             // 
             // groupBox2
             // 
@@ -328,6 +333,10 @@
             this.frequencyTypeComboBox.ValueMember = "Value";
             this.frequencyTypeComboBox.SelectedIndexChanged += new System.EventHandler(this.SetCustomFrequency);
             // 
+            // frequenzaBindingSource
+            // 
+            this.frequenzaBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
+            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -349,6 +358,10 @@
             this.frequencyComboBox.TabIndex = 0;
             this.frequencyComboBox.ValueMember = "Value";
             this.frequencyComboBox.SelectedIndexChanged += new System.EventHandler(this.frequencyComboBox_SelectedIndexChanged);
+            // 
+            // periodicitaBindingSource
+            // 
+            this.periodicitaBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
             // 
             // groupBox4
             // 
@@ -393,6 +406,10 @@
             this.eventModelSelectorComboBox.ValueMember = "Value";
             this.eventModelSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.eventModelSelectorComboBox_SelectedIndexChanged);
             // 
+            // modelloEventoContainerBindingSource
+            // 
+            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
+            // 
             // entriesDataGridView
             // 
             this.entriesDataGridView.AllowUserToAddRows = false;
@@ -435,22 +452,6 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
-            // modelloEventoContainerBindingSource
-            // 
-            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
-            // 
-            // frequenzaBindingSource
-            // 
-            this.frequenzaBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
-            // 
-            // periodicitaBindingSource
-            // 
-            this.periodicitaBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
-            // 
-            // calendarioBindingSource
-            // 
-            this.calendarioBindingSource.DataSource = typeof(DynamiCal.Model.Calendars.Calendario);
-            // 
             // ManageEventForm
             // 
             this.AcceptButton = this.createButton;
@@ -473,19 +474,19 @@
             this.Load += new System.EventHandler(this.CreateEventForm_Load);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.durationUpDown)).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.frequencyNumericUpDown)).EndInit();
-            groupBox4.ResumeLayout(false);
-            groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.frequenzaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.periodicitaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.calendarioBindingSource)).EndInit();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.modelloEventoContainerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.entriesDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }

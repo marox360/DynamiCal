@@ -62,16 +62,17 @@ namespace DynamiCal.Forms
             this.calendarSelectorComboBox.BeginUpdate();
             if (_evento != null)
             {
-                this.calendarioBindingSource.Add(Agenda.Instance.Calendari.First(c => c.Eventi.Contains(_evento)));
+                this.calendarioBindingSource.Add(new BindingContainer<Calendario>(Agenda.Instance.Calendari.First(c => c.Eventi.Contains(_evento))));
             }
             else
             {
+                this.calendarioBindingSource.Add(new BindingContainer<Calendario>("Nuovo Calendario...", null));
                 foreach (Calendario calendario in Agenda.Instance.Calendari)
                 {
-                    this.calendarioBindingSource.Add(calendario);
+                    this.calendarioBindingSource.Add(new BindingContainer<Calendario>(calendario.Nome, calendario));
                 }
             }
-            this.calendarSelectorComboBox.SelectedItem = this.calendarioBindingSource.Cast<Calendario>().FirstOrDefault();
+            this.calendarSelectorComboBox.SelectedItem = this.calendarioBindingSource.Cast<BindingContainer<Calendario>>().FirstOrDefault(b => b.Value != null);
             this.calendarSelectorComboBox.EndUpdate();
 
             Periodicita selectedPeriodicita = _evento != null ? _evento.Periodicita : Periodicita.Mai;
@@ -158,14 +159,18 @@ namespace DynamiCal.Forms
 
         private void CalendarsChanged(object sender, AgendaCollectionEventArgs e)
         {
+            Calendario calendar = e.Item as Calendario;
+            BindingContainer<Calendario> calendarContainer = new BindingContainer<Calendario>(calendar.Nome, calendar);
+
             switch (e.Action)
             {
                 case AgendaCollectionEventArgs.EditAction.AddItem:
-                    this.calendarioBindingSource.Add(e.Item);
+                    this.calendarioBindingSource.Add(calendarContainer);
+                    this.calendarSelectorComboBox.SelectedItem = calendarContainer;
                     break;
 
                 case AgendaCollectionEventArgs.EditAction.RemoveItem:
-                    this.calendarioBindingSource.Remove(e.Item);
+                    this.calendarioBindingSource.Remove(calendarContainer);
                     break;
             }
         }
@@ -203,12 +208,28 @@ namespace DynamiCal.Forms
             }
         }
 
+        private void calendarSelectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (this.calendarSelectorComboBox.SelectedItem != null && this.calendarSelectorComboBox.SelectedValue == null)
+            {
+                this.Visible = false;
+
+                using (ManageCalendarForm createCalendarDialog = new ManageCalendarForm())
+                {
+                    createCalendarDialog.ShowDialog(this);
+                }
+
+                this.Visible = true;
+            }
+
+            this.validateForm(sender, EventArgs.Empty);
+        }
+
         private void eventModelSelectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (this.eventModelSelectorComboBox.SelectedItem != null)
             {
-                ModelloEvento modelloEvento = (this.eventModelSelectorComboBox.SelectedItem as BindingContainer<ModelloEvento>).Value;
-                if (modelloEvento == null)
+                if (this.eventModelSelectorComboBox.SelectedValue == null)
                 {
                     this.Visible = false;
 
@@ -221,9 +242,12 @@ namespace DynamiCal.Forms
                 }
                 else
                 {
+                    ModelloEvento modelloEvento = this.eventModelSelectorComboBox.SelectedValue as ModelloEvento;
                     this.entriesDataGridView.DataSource = modelloEvento.Voci.Select(voce => VoceFactory.GetImplementedVoce(voce)).ToList();
                 }
             }
+
+            this.validateForm(sender, EventArgs.Empty);
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -305,6 +329,7 @@ namespace DynamiCal.Forms
                 this.eventLocationTextBox.Text,
                 (Periodicita)this.frequencyComboBox.SelectedValue);
         }
+
 
 
     }

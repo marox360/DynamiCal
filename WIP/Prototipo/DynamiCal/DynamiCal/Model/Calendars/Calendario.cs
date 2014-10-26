@@ -73,6 +73,11 @@ namespace DynamiCal.Model.Calendars
             _eventi.Remove(evento);
         }
 
+        public override string ToString()
+        {
+            return this.Nome;
+        }
+
         public bool Equals(Calendario other)
         {
             if (ReferenceEquals(null, other))

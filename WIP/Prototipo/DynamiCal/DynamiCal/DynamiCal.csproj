@@ -185,11 +185,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Properties\DataSources\DynamiCal.Model.Agenda.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Evento.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.IVoce.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.ModelloEvento.datasource" />
     <None Include="Properties\DataSources\DynamiCal.Model.Voce.datasource" />
+    <None Include="Properties\DataSources\DynamiCal.Presentation.IBindingContainer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
