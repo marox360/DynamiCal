@@ -101,5 +101,10 @@ namespace DynamiCal.Forms
             }
         }
 
+        private void friendsCheckedListBox_MouseUp(object sender, MouseEventArgs e)
+        {
+            this.friendsCheckedListBox_Click(sender, EventArgs.Empty);
+        }
+
     }
 }

@@ -106,6 +106,7 @@
             this.friendsCheckedListBox.Size = new System.Drawing.Size(260, 72);
             this.friendsCheckedListBox.TabIndex = 5;
             this.friendsCheckedListBox.Click += new System.EventHandler(this.friendsCheckedListBox_Click);
+            this.friendsCheckedListBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.friendsCheckedListBox_MouseUp);
             // 
             // emailTextBox
             // 
@@ -126,7 +127,7 @@
             this.addButton.UseVisualStyleBackColor = true;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // CreateCalendarForm
+            // ManageCalendarForm
             // 
             this.AcceptButton = this.createButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,7 +146,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "CreateCalendarForm";
+            this.Name = "ManageCalendarForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crea nuovo calendario";
             this.ResumeLayout(false);
