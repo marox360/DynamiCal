@@ -4,6 +4,7 @@ Agenda elettronica | Strumento per la gestione di uno o più calendari di eventi
 Amico | Contatto con il quale si desidera condividere uno o più calendari<br> Identificato da:<ul><li>indirizzo Email</li></ul>
 Calendario | Raccoglie un insieme di eventi che possono essere unici o ripetersi nel tempo con una determinata periodicità<br>Identificato da:<br><ul><li>Nome</li></ul>Caratterizzato da:<ul><li>zero o più Eventi</li></ul>Può essere:<ul><li>Locale</li><li>Condiviso</li></ul>
 Condivisione di un calendario | Operazione che permette la condivisione di un singolo calendario con uno o più amici
+Eliminazione di un modello | Operazione che permette l'eliminazione di un modello all'interno del sistema, possibile solo se non esistono eventi descritti da tale modello
 Evento | Descrive un impegno mediante determinati attributi, sulla base di un modello<br>Caratterizzato da:<ul><li>Nome</li><li>Data (data e ora di inizio dell'evento)</li><li>Durata (durata in minuti dell'evento)</li><li>Periodicità</li><li>Modello di evento</li></ul>Può avere<ul><li>Descrizione</li><li>Luogo (dove si svolge l'evento)</li></ul>
 Filtro | Strumento atto alla selezione/visualizzazione dei soli eventi che soddisfano determinati requisiti
 Filtro per arco temporale | Permette di visualizzare tutti gli eventi che si terranno in un determinato arco temporale
@@ -18,5 +19,5 @@ Periodicità | Cadenza ripetuta nel tempo di un determinato evento
 Risultato di un filtraggio | Lista di eventi visualizzati che soddisfano determinati criteri di ricerca
 Strategia di filtraggio | Tipologia di filtro che si decide di utilizzare per la visualizzazione di determinati eventi 
 Tipologia di filtro | Uno a scelta tra i filtri: "per calendario", "per arco temporale", "per modello", "per ricerca"
-Utente | Utilizzatore del calendario elettronico, può creare/cancellare calendari, eventi, modelli di eventi ed effettuare delle ricerche di eventi o gruppi di eventi, spefificando dei criteri di ricerca
+Utente | Utilizzatore del calendario elettronico, può creare/cancellare calendari, eventi, modelli di eventi ed effettuare delle ricerche di eventi o gruppi di eventi, specificando dei criteri di ricerca
 Voce | Attributo del modello di un evento (di tipo testo, numerico ecc.)<br>Caratterizzata da:<ul><li>Nome</li><li>Tipo</li</ul>
