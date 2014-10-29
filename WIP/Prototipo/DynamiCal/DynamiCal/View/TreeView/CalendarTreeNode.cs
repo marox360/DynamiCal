@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamiCal.Presentation.TreeView
+namespace DynamiCal.View.TreeView
 {
     class CalendarTreeNode : TreeNode
     {

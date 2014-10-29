@@ -1,4 +1,4 @@
-﻿namespace DynamiCal.Presentation
+﻿namespace DynamiCal.View
 {
     partial class EventPanel
     {
@@ -37,7 +37,7 @@
             this.locationLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.entriesdataGridView = new DynamiCal.Presentation.DataGridView.VociDataGridView();
+            this.entriesdataGridView = new DynamiCal.View.DataGridView.VociDataGridView();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.entriesdataGridView)).BeginInit();
             this.SuspendLayout();
@@ -159,7 +159,7 @@
 
         #endregion
 
-        private DynamiCal.Presentation.DataGridView.VociDataGridView entriesdataGridView;
+        private DynamiCal.View.DataGridView.VociDataGridView entriesdataGridView;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Label locationLabel;
         private System.Windows.Forms.Label nameLabel;

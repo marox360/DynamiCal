@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamiCal.Presentation.TextBox
+namespace DynamiCal.View.TextBox
 {
     public partial class SearchBoxPanel : UserControl
     {

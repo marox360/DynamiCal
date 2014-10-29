@@ -1,4 +1,4 @@
-﻿namespace DynamiCal.Presentation.TextBox
+﻿namespace DynamiCal.View.TextBox
 {
     partial class SearchBoxPanel
     {
@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchBoxPanel));
             this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.searchBox = new DynamiCal.Presentation.TextBox.SearchBox();
+            this.searchBox = new DynamiCal.View.TextBox.SearchBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 

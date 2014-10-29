@@ -44,7 +44,7 @@
             this.cancelButton = new System.Windows.Forms.Button();
             this.overviewGridView = new System.Windows.Forms.DataGridView();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new DynamiCal.Presentation.DataGridView.DataGridViewEntryTypeColumn();
+            this.Tipo = new DynamiCal.View.DataGridView.DataGridViewEntryTypeColumn();
             this.voceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             label1 = new System.Windows.Forms.Label();
             eventModelGroup = new System.Windows.Forms.GroupBox();
@@ -138,7 +138,7 @@
             // 
             // tipoVoceContainerBindingSource
             // 
-            this.tipoVoceContainerBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
+            this.tipoVoceContainerBindingSource.DataSource = typeof(DynamiCal.View.IBindingContainer);
             // 
             // entryNameTextBox
             // 
@@ -271,6 +271,6 @@
         private System.Windows.Forms.BindingSource voceBindingSource;
         private System.Windows.Forms.BindingSource tipoVoceContainerBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private Presentation.DataGridView.DataGridViewEntryTypeColumn Tipo;
+        private View.DataGridView.DataGridViewEntryTypeColumn Tipo;
     }
 }

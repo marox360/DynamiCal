@@ -47,11 +47,11 @@
             this.endDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.startDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.eventModelListBox = new System.Windows.Forms.CheckedListBox();
-            this.eventListBox = new DynamiCal.Presentation.ListBox.EventListBox();
-            this.calendarTreeView = new DynamiCal.Presentation.TreeView.CalendarTreeView();
+            this.eventListBox = new DynamiCal.View.ListBox.EventListBox();
+            this.calendarTreeView = new DynamiCal.View.TreeView.CalendarTreeView();
             this.dateComboBox = new System.Windows.Forms.ComboBox();
-            this.searchBoxPanel = new DynamiCal.Presentation.TextBox.SearchBoxPanel();
-            this.eventPanel = new DynamiCal.Presentation.EventPanel();
+            this.searchBoxPanel = new DynamiCal.View.TextBox.SearchBoxPanel();
+            this.eventPanel = new DynamiCal.View.EventPanel();
             this.noEventsLabel = new System.Windows.Forms.Label();
             panel = new System.Windows.Forms.Panel();
             tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -390,10 +390,10 @@
 
         #endregion
 
-        private Presentation.EventPanel eventPanel;
-        private Presentation.TextBox.SearchBoxPanel searchBoxPanel;
-        private Presentation.ListBox.EventListBox eventListBox;
-        private Presentation.TreeView.CalendarTreeView calendarTreeView;
+        private View.EventPanel eventPanel;
+        private View.TextBox.SearchBoxPanel searchBoxPanel;
+        private View.ListBox.EventListBox eventListBox;
+        private View.TreeView.CalendarTreeView calendarTreeView;
         private System.Windows.Forms.CheckedListBox eventModelListBox;
         private System.Windows.Forms.Button showInCalendarButton;
         private System.Windows.Forms.Label noEventsLabel;

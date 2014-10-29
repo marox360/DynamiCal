@@ -58,7 +58,7 @@
             this.eventLocationTextBox = new System.Windows.Forms.TextBox();
             this.eventModelSelectorComboBox = new System.Windows.Forms.ComboBox();
             this.modelloEventoContainerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.entriesDataGridView = new DynamiCal.Presentation.DataGridView.VociDataGridView();
+            this.entriesDataGridView = new DynamiCal.View.DataGridView.VociDataGridView();
             this.createButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
@@ -191,7 +191,7 @@
             // 
             // calendarioBindingSource
             // 
-            this.calendarioBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
+            this.calendarioBindingSource.DataSource = typeof(DynamiCal.View.IBindingContainer);
             // 
             // groupBox2
             // 
@@ -335,7 +335,7 @@
             // 
             // frequenzaBindingSource
             // 
-            this.frequenzaBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
+            this.frequenzaBindingSource.DataSource = typeof(DynamiCal.View.IBindingContainer);
             // 
             // label7
             // 
@@ -361,7 +361,7 @@
             // 
             // periodicitaBindingSource
             // 
-            this.periodicitaBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
+            this.periodicitaBindingSource.DataSource = typeof(DynamiCal.View.IBindingContainer);
             // 
             // groupBox4
             // 
@@ -408,7 +408,7 @@
             // 
             // modelloEventoContainerBindingSource
             // 
-            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.Presentation.IBindingContainer);
+            this.modelloEventoContainerBindingSource.DataSource = typeof(DynamiCal.View.IBindingContainer);
             // 
             // entriesDataGridView
             // 
@@ -500,7 +500,7 @@
         private System.Windows.Forms.ComboBox durationComboBox;
         private System.Windows.Forms.CheckBox allDayCheckBox;
         private System.Windows.Forms.NumericUpDown durationUpDown;
-        private Presentation.DataGridView.VociDataGridView entriesDataGridView;
+        private View.DataGridView.VociDataGridView entriesDataGridView;
         private System.Windows.Forms.ComboBox eventModelSelectorComboBox;
         private System.Windows.Forms.TextBox eventDescriptionTextBox;
         private System.Windows.Forms.BindingSource calendarioBindingSource;

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamiCal.Presentation.TextBox
+namespace DynamiCal.View.TextBox
 {
     class SearchBox : System.Windows.Forms.TextBox
     {

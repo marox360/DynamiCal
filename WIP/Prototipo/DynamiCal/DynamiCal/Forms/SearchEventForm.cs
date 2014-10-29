@@ -1,7 +1,7 @@
 ﻿using DynamiCal.Filters;
 using DynamiCal.Model;
 using DynamiCal.Time;
-using DynamiCal.Presentation.TreeView;
+using DynamiCal.View.TreeView;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

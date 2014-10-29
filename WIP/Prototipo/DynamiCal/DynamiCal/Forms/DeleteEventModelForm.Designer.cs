@@ -35,12 +35,12 @@
             this.eventLabel = new System.Windows.Forms.Label();
             this.overviewGridView = new System.Windows.Forms.DataGridView();
             this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new DynamiCal.Presentation.DataGridView.DataGridViewEntryTypeColumn();
+            this.Tipo = new DynamiCal.View.DataGridView.DataGridViewEntryTypeColumn();
             this.voceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deleteButton = new System.Windows.Forms.Button();
             this.addNewButton = new System.Windows.Forms.Button();
             this.countEventLabel = new System.Windows.Forms.Label();
-            this.dataGridViewEntryTypeColumn1 = new DynamiCal.Presentation.DataGridView.DataGridViewEntryTypeColumn();
+            this.dataGridViewEntryTypeColumn1 = new DynamiCal.View.DataGridView.DataGridViewEntryTypeColumn();
             groupBox1 = new System.Windows.Forms.GroupBox();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.modelloEventoBindingSource)).BeginInit();
@@ -203,13 +203,13 @@
         private System.Windows.Forms.BindingSource voceBindingSource;
         private System.Windows.Forms.DataGridView overviewGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private Presentation.DataGridView.DataGridViewEntryTypeColumn Tipo;
+        private View.DataGridView.DataGridViewEntryTypeColumn Tipo;
         private System.Windows.Forms.ListBox eventModelListBox;
         private System.Windows.Forms.BindingSource modelloEventoBindingSource;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button addNewButton;
         private System.Windows.Forms.Label countEventLabel;
-        private Presentation.DataGridView.DataGridViewEntryTypeColumn dataGridViewEntryTypeColumn1;
+        private View.DataGridView.DataGridViewEntryTypeColumn dataGridViewEntryTypeColumn1;
         private System.Windows.Forms.Label eventLabel;
     }
 }

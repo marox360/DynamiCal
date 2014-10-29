@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamiCal.Presentation.DataGridView
+namespace DynamiCal.View.DataGridView
 {
     class CalendarDataGridView : System.Windows.Forms.DataGridView
     {

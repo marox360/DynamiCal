@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using DynamiCal.Model;
 using DynamiCal.Time;
 
-namespace DynamiCal.Presentation
+namespace DynamiCal.View
 {
     public partial class EventPanel : UserControl
     {

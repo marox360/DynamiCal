@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DynamiCal.Presentation.ListBox
+namespace DynamiCal.View.ListBox
 {
     class EventListBox : System.Windows.Forms.ListBox
     {

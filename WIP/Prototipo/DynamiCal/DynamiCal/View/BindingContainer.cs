@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamiCal.Presentation
+namespace DynamiCal.View
 {
     interface IBindingContainer
     {
