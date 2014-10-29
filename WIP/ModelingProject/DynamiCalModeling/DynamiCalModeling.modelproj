@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>DiagrammaClassiProgettazione.classdiagram</DependentUpon>
     </Content>
+    <Content Include="FiltroTemporale_FiltraEventi.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="FiltroTemporale_FiltraEventi.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>FiltroTemporale_FiltraEventi.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Package1_1645.uml">
       <SubType>Content</SubType>
     </Content>
@@ -49,6 +56,13 @@
     </Content>
     <Content Include="ModelDefinition\Package_1645.uml">
       <SubType>Content</SubType>
+    </Content>
+    <Content Include="Periodicita_TestaPeriodo.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Periodicita_TestaPeriodo.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Periodicita_TestaPeriodo.sequencediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="DiagrammaClassiAnalisi.classdiagram">
