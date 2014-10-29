@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Model.Calendars
 {
-    class CalendarioLocale : Calendario
+    public class CalendarioLocale : Calendario
     {
         public CalendarioLocale(string nome) : base(nome) {}
     }

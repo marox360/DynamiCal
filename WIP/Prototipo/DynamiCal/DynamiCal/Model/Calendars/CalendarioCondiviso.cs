@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Model.Calendars
 {
-    class CalendarioCondiviso : Calendario
+    public class CalendarioCondiviso : Calendario
     {
         private List<Amico> _amici;
     

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace DynamiCal.Model
 {
-    internal struct Periodicita
+    public struct Periodicita
     {
         public enum Frequenza
         {

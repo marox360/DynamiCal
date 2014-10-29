@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Filters
 {
-    class FiltroRicerca : Filtro
+    public class FiltroRicerca : Filtro
     {
         private readonly string _text;
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Filters
 {
-    class FiltroFactory
+    public class FiltroFactory
     {
         public static Filtro FiltraPerCalendario(IFiltro filtro, Calendario calendario)
         {

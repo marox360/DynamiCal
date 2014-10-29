@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Filters
 {
-    class FiltroCalendario : Filtro
+    public class FiltroCalendario : Filtro
     {
         private readonly IEnumerable<Calendario> _calendari;
 

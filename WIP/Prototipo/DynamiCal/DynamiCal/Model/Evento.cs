@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Model
 {
-    class Evento : IEquatable<Evento>
+    public class Evento : IEquatable<Evento>
     {
         private string _nome;
         private string _descrizione;

@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Filters
 {
-    interface IFiltro
+    public interface IFiltro
     {
         IEnumerable<Evento> FiltraEventi();
     }
 
-    abstract class Filtro : IFiltro
+    public abstract class Filtro : IFiltro
     {
         private readonly IFiltro _component;
 

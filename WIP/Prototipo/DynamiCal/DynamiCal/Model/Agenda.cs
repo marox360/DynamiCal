@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Model
 {
-    class Agenda
+    public class Agenda
     {
         private static Agenda _instance = new Agenda();
         private List<Calendario> _calendari;

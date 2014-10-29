@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace DynamiCal.Model
 {
-    class ModelloEvento : IEquatable<ModelloEvento>
+    public class ModelloEvento : IEquatable<ModelloEvento>
     {
         private readonly string _nome;
         private List<Voce> _voci;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Model
 {
-    struct PeriodoTempo
+    public struct PeriodoTempo
     {
         private readonly DateTime _startDate;
         private readonly DateTime _endDate;

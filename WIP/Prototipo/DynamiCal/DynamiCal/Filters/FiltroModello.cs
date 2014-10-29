@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Filters
 {
-    class FiltroModello : Filtro
+    public class FiltroModello : Filtro
     {
         private readonly IEnumerable<ModelloEvento> _modelli;
 

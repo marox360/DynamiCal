@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Model.Calendars
 {
-    class CalendarioFactory
+    public class CalendarioFactory
     {
         public static Calendario CreaCalendario(string nome, IEnumerable<Amico> amici)
         {

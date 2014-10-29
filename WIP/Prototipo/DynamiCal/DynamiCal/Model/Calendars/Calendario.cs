@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace DynamiCal.Model.Calendars
 {
-    abstract class Calendario : IEquatable<Calendario>
+    public abstract class Calendario : IEquatable<Calendario>
     {
         private string _nome;
         private List<Evento> _eventi;

@@ -9,7 +9,7 @@ using System.Reflection;
 
 namespace DynamiCal.Model
 {
-    static class TipoVoceExtension
+    internal static class TipoVoceExtension
     {
         public static string GetDescription(this Voce.Tipo value)
         {
@@ -20,7 +20,7 @@ namespace DynamiCal.Model
         }
     }
 
-    class Voce
+    public class Voce
     {
         public enum Tipo
         {
@@ -64,7 +64,7 @@ namespace DynamiCal.Model
         }
     }
 
-    interface IVoce : IEquatable<IVoce>
+    public interface IVoce : IEquatable<IVoce>
     {
         string Nome { get; }
 
@@ -73,7 +73,7 @@ namespace DynamiCal.Model
         IVoce Copy();
     }
 
-    class Voce<T> : IVoce, IEquatable<Voce<T>>
+    public class Voce<T> : IVoce, IEquatable<Voce<T>>
     {
         private readonly string _nome;
         private T _valore;

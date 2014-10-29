@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Model
 {
-    static class VoceFactory
+    public static class VoceFactory
     {
         public static IVoce GetImplementedVoce(Voce voce)
         {

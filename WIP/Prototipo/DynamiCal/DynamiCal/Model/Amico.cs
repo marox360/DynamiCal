@@ -8,7 +8,7 @@ using System.Diagnostics;
 
 namespace DynamiCal.Model
 {
-    class Amico
+    public class Amico
     {
         private readonly string _email;
 

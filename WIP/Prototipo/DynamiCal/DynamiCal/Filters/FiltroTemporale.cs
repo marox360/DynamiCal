@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Filters
 {
-    class FiltroTemporale : Filtro
+    public class FiltroTemporale : Filtro
     {
         private readonly PeriodoTempo _timePeriod;
 
