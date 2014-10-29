@@ -18,6 +18,10 @@ Analisi dei requisiti
   * Deve essere possibile `condividere` il calendario con altri utenti 
   * `È caratterizzato da`:
     * uno o più **Amici**, persone con le quali condividere un calendario
+* **Amico**
+  * Descrive un utente con il quale si vuole condividere un calendario 
+  * `È identificato da`:
+    * **Email**
 * **Evento** ≡ **Impegno**
   * `È caratterizzato da`:
     * **Nome**
@@ -71,7 +75,3 @@ Analisi dei requisiti
   * Sottoinsieme di eventi ottenuto applicando uno o più filtri agli eventi di uno o più calendari
   * Il cambiamento dell'insieme del calendari o dell'insieme degli eventi di uno qualsiasi dei calendari (`inserimento`, `modifica`, `cancellazione`) `provoca un aggiornamento` automatico del risultato di un filtraggio
   * Deve essere `visualizzabile`
-* **Amico**
-  * Descrive un utente con il quale si vuole condividere un calendario 
-  * `È identificato da`:
-    * **Email**

@@ -22,12 +22,12 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-    <Content Include="FiltroTemporale_FiltraEventi.sequencediagram">
+    <Content Include="DiagrammaClassiProgettazione.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="FiltroTemporale_FiltraEventi.sequencediagram.layout">
+    <Content Include="DiagrammaClassiProgettazione.classdiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>FiltroTemporale_FiltraEventi.sequencediagram</DependentUpon>
+      <DependentUpon>DiagrammaClassiProgettazione.classdiagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\Package1_1645.uml">
       <SubType>Content</SubType>
@@ -44,15 +44,11 @@
     <Content Include="ModelDefinition\Package5_1645.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_0316.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package_1645.uml">
       <SubType>Content</SubType>
-    </Content>
-    <Content Include="Periodicita_TestaPeriodo.sequencediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Periodicita_TestaPeriodo.sequencediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Periodicita_TestaPeriodo.sequencediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="DiagrammaClassiAnalisi.classdiagram">

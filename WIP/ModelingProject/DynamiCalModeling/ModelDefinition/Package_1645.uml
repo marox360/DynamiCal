@@ -17,5 +17,11 @@
         LastKnownName="Model"
         LastKnownLocation="Package1_1645.uml" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="254957eb-4a59-4495-9f8b-eae04ae6ca92"
+        LastKnownName="Filters"
+        LastKnownLocation="Package_0316.uml" />
+    </packageHasNamedElement>
   </packagedElements>
 </package>
