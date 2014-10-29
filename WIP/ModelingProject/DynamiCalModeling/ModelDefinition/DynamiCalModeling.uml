@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c"
   name="DynamiCalModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -749,6 +749,145 @@
       <undefinedType
         Id="c8ea3e7f-2ff6-45fa-a01e-d8d854747e84"
         name="long" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="56be769d-5590-47ae-ad32-59a931366577"
+        name="FiltraggioTemporale"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="7fd6c25b-c9a1-4dcf-867a-31c0e4517e66"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="90c2f3e5-b75d-4360-9240-8abe06cedc92"
+                LastKnownName="FiltroTemporale"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="e5e75fc8-db8b-4142-a4fe-322bb97dab9d"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="940c9ae4-6f76-4327-9e1b-9ac7de0f1c8e"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="d7275860-e4ff-4f83-b75c-26fe6effd3d6"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="940c9ae4-6f76-4327-9e1b-9ac7de0f1c8e"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="10d714ac-2101-4d3c-be5d-4ab1bc4b6a31"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="DynamiCalModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="90c2f3e5-b75d-4360-9240-8abe06cedc92"
+                LastKnownName="FiltroTemporale"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget
+            Id="71c570f3-8fbb-4dd2-bad2-06944f7b25e2"
+            name="LostFoundTarget1" />
+          <messageOccurrenceSpecification
+            Id="d7275860-e4ff-4f83-b75c-26fe6effd3d6"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="90c2f3e5-b75d-4360-9240-8abe06cedc92"
+                LastKnownName="FiltroTemporale"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="e5e75fc8-db8b-4142-a4fe-322bb97dab9d"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c1af556c-5367-40a6-82c5-e7e536157181"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="DynamiCalModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="90c2f3e5-b75d-4360-9240-8abe06cedc92"
+                LastKnownName="FiltroTemporale"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="90c2f3e5-b75d-4360-9240-8abe06cedc92"
+            name="FiltroTemporale"
+            isActor="false"
+            lifelineDisplayName="FiltroTemporale">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="940c9ae4-6f76-4327-9e1b-9ac7de0f1c8e"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="DynamiCalModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="e5e75fc8-db8b-4142-a4fe-322bb97dab9d"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="0e8784c5-cd03-4546-a6ce-3d5adefaa16f"
+            name="FiltraEventi"
+            messageKind="Found"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <lostFoundTargetMoniker
+                Id="71c570f3-8fbb-4dd2-bad2-06944f7b25e2"
+                LastKnownName="LostFoundTarget1"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d7275860-e4ff-4f83-b75c-26fe6effd3d6"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="10d714ac-2101-4d3c-be5d-4ab1bc4b6a31"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c1af556c-5367-40a6-82c5-e7e536157181"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
