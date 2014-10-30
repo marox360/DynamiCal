@@ -203,13 +203,13 @@
         private System.Windows.Forms.BindingSource voceBindingSource;
         private System.Windows.Forms.DataGridView overviewGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeDataGridViewTextBoxColumn;
-        private View.DataGridView.DataGridViewEntryTypeColumn Tipo;
+        private DynamiCal.View.DataGridView.DataGridViewEntryTypeColumn Tipo;
         private System.Windows.Forms.ListBox eventModelListBox;
         private System.Windows.Forms.BindingSource modelloEventoBindingSource;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button addNewButton;
         private System.Windows.Forms.Label countEventLabel;
-        private View.DataGridView.DataGridViewEntryTypeColumn dataGridViewEntryTypeColumn1;
+        private DynamiCal.View.DataGridView.DataGridViewEntryTypeColumn dataGridViewEntryTypeColumn1;
         private System.Windows.Forms.Label eventLabel;
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace DynamiCal.View.DataGridView.BindingSources
 {
-    class CalendarDay
+    internal class CalendarDay
     {
         private readonly DateTime _day;
         private readonly bool _todayWeek;
@@ -72,7 +72,7 @@ namespace DynamiCal.View.DataGridView.BindingSources
         }
     }
 
-    class CalendarWeek
+    internal class CalendarWeek
     {
         private readonly CalendarDay[] _days;
 
@@ -153,7 +153,7 @@ namespace DynamiCal.View.DataGridView.BindingSources
         }
     }
 
-    class MonthlySource
+    internal class MonthlySource
     {
         public static void FillSource(BindingSource source, DateTime date, IFiltro filtro = null) {
             MonthlySource.FillSource(source, date.Month, date.Year, filtro);
