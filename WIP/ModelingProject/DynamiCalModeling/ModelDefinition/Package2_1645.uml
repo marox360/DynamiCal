@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="bb290fea-f111-4732-8977-b1110a5595f0"
   name="Calendars"
@@ -184,6 +184,43 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="0b8983a3-01fc-498f-a336-afeed5b24eb3"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="c75106e4-21fb-430e-820d-7e5cbee6d911"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c1671f7c-1874-46a0-a32f-f5679f8be679"
+              LastKnownName="Evento"
+              LastKnownLocation="Package1_1645.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e376ed3c-092c-4940-8526-1271478e5173"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bb327d38-d476-41f1-813e-7383ee962511"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1250,15 +1287,6 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
-        <suppliersInternal>
-          <dependency
-            Id="6e4c1ca4-89ab-4372-96ca-38416682c735">
-            <classMoniker
-              Id="bc7944a6-7dc4-4800-9163-ee82f8000ee3"
-              LastKnownName="CalendarioFactory"
-              LastKnownLocation="Package2_1645.uml" />
-          </dependency>
-        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="15d2f342-1a91-429c-9366-fbe284ddc445"
@@ -1416,15 +1444,6 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
-        <suppliersInternal>
-          <dependency
-            Id="970e2682-bac2-45ae-ac96-673a9a4a5694">
-            <classMoniker
-              Id="bc7944a6-7dc4-4800-9163-ee82f8000ee3"
-              LastKnownName="CalendarioFactory"
-              LastKnownLocation="Package2_1645.uml" />
-          </dependency>
-        </suppliersInternal>
         <generalsInternal>
           <generalization
             Id="b9a3f366-3f1e-4288-a2b1-df75fdc4cd5b"
