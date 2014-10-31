@@ -21,12 +21,12 @@ namespace DynamiCal.Filters
             _text = text;
         }
 
-        public override IEnumerable<Evento> FiltraEventi()
+        protected override Func<Evento, bool> StrategiaFiltro()
         {
-            return Component.FiltraEventi().Where(evento =>
+            return evento =>
                 evento.Nome.IndexOf(_text, StringComparison.OrdinalIgnoreCase) >= 0 ||
                 evento.Descrizione.IndexOf(_text, StringComparison.OrdinalIgnoreCase) >= 0 ||
-                evento.Luogo.IndexOf(_text, StringComparison.OrdinalIgnoreCase) >= 0);
+                evento.Luogo.IndexOf(_text, StringComparison.OrdinalIgnoreCase) >= 0;
         }
     }
 }

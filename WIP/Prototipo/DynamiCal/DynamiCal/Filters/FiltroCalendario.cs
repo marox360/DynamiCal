@@ -24,9 +24,9 @@ namespace DynamiCal.Filters
             _calendari = calendari;
         }
 
-        public override IEnumerable<Evento> FiltraEventi()
+        protected override Func<Evento, bool> StrategiaFiltro()
         {
-            return Component.FiltraEventi().Where(evento => _calendari.Where(calendario => calendario.Eventi.Contains(evento)).Count() != 0);
+            return evento => _calendari.Where(calendario => calendario.Eventi.Contains(evento)).Count() != 0;
         }
     }
 }

@@ -34,6 +34,11 @@ namespace DynamiCal.Filters
             }
         }
 
-        public abstract IEnumerable<Evento> FiltraEventi();
+        public IEnumerable<Evento> FiltraEventi()
+        {
+            return Component.FiltraEventi().Where(this.StrategiaFiltro());
+        }
+
+        protected abstract Func<Evento, bool> StrategiaFiltro();
     }
 }
