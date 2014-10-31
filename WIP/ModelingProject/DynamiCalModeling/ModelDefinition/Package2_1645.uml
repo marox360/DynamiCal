@@ -15,7 +15,6 @@
       <class
         Id="acfa17db-a3a5-4fb3-ba58-e6cc3e173a0a"
         name="Calendario"
-        visibility="Package"
         isAbstract="true"
         isLeaf="false"
         isActiveClass="false">

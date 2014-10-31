@@ -1149,5 +1149,173 @@
         </signatures>
       </Interface>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="43bc38c1-0712-4607-81f5-d286fdcade4f"
+        name="Func&lt;Evento‎, Boolean‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b6f63d06-226e-4cf8-a42a-24d50d6329ed"
+            name="delegate"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="72a722d6-6acb-4298-bb17-1cac525a839a">
+                <propertyInstance
+                  Id="02bc889c-ecc7-4072-b7db-7d6a49f72f9e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2470408f-8443-486b-a4aa-fa599653efd0">
+                <propertyInstance
+                  Id="1de98398-11b9-497f-9677-59fec5e13532"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="be0ab0ef-c5fa-47fd-b0a8-0eb8091d5d95">
+                <propertyInstance
+                  Id="483382ef-2646-4d29-93b6-0171f6cca6f4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="0a7b949b-0202-4155-94bf-617815d09432">
+            <redefinableTemplateSignatureMoniker
+              Id="f73781ea-8c5c-46e0-a4c1-78146b56bb19"
+              LastKnownLocation="Package3_1645.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="eb118627-2cf9-4af3-8179-d5dac24e5895">
+                  <actuals>
+                    <classMoniker
+                      Id="c1671f7c-1874-46a0-a32f-f5679f8be679"
+                      LastKnownName="Evento"
+                      LastKnownLocation="Package1_1645.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="87ecd862-5a65-4ebe-a15d-917fa7eda598"
+                      LastKnownLocation="Package3_1645.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="15a088eb-bda0-4bd3-aa9e-ee8eef9f2cd3">
+                  <actuals>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="DynamiCalModeling.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="38bdb165-69bc-4990-acd1-f0757087479f"
+                      LastKnownLocation="Package3_1645.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="40fdb942-6e73-477e-9eaf-a1782510ccd7"
+        name="Func"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ad95043e-c119-42c8-a067-0371f4632371"
+            handle="viewcode://./CodeSchema_Delegate?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="11aaa2d7-cfd1-47ee-97e2-f42ed8ddd0ec"
+            name="delegate"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cfbe17e6-21d5-4ae1-9336-13a5a9a7659c">
+                <propertyInstance
+                  Id="68e786bc-31cb-4a3c-8c62-4dd4449c0280"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0dd8a0c3-1d91-460b-b0ef-a696f45df6df">
+                <propertyInstance
+                  Id="a07d63bb-0e70-4aa0-83e1-1c8bda780e22"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1a1a0d8c-624a-44b0-a7d2-f73ba329af8f">
+                <propertyInstance
+                  Id="b21de942-1432-49d1-b704-42736f841982"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="f73781ea-8c5c-46e0-a4c1-78146b56bb19"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="87ecd862-5a65-4ebe-a15d-917fa7eda598">
+                <referencesInternal>
+                  <reference
+                    Id="866f655e-0eae-4de9-80aa-6044188f557c"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="55832ac0-3bca-453d-875f-ec342205bdbb"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+              <classifierTemplateParameter
+                Id="38bdb165-69bc-4990-acd1-f0757087479f">
+                <referencesInternal>
+                  <reference
+                    Id="27f59047-aa50-4e0b-adc7-571c86ff83ae"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DFunc GenericParameterCount%3D2) ParameterIdentifier%3D1"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="337c367d-30ce-47ab-8368-08b4c4ac5c0e"
+                    name="TResult"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
   </packagedElements>
 </package>

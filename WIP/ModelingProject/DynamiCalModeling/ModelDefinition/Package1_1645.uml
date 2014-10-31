@@ -1375,7 +1375,6 @@
       <class
         Id="fcf905f2-c8e7-4f74-8044-a91b4ed823c8"
         name="ModelloEvento"
-        visibility="Package"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -2506,7 +2505,6 @@
       <class
         Id="c1671f7c-1874-46a0-a32f-f5679f8be679"
         name="Evento"
-        visibility="Package"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
