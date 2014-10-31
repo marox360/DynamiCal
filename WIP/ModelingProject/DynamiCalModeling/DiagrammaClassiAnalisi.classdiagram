@@ -1,5 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="78014e65-e565-438f-b815-2fc84128b57e" name="DiagrammaClassiAnalisi" linkedPackageId="4ab776e7-1614-4c27-8271-28bd5c16bad2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="78014e65-e565-438f-b815-2fc84128b57e" name="DiagrammaClassiAnalisi" linkedPackageId="4ab776e7-1614-4c27-8271-28bd5c16bad2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="a1dbfbf1-7a23-4ff7-8b65-8a0107aa6430">
+      <profileInstance Id="a72cbb16-a853-44f5-9560-0c85c7c9e5d3" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="d9d57b85-c162-4891-880b-861e034f3a49">
+      <profileInstance Id="be871d40-e724-4aaf-bb11-03b255fc74ae" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="36a71be4-7e6b-4523-b7a7-b2f7e9883766">
+      <profileInstance Id="3247e436-a121-4510-9117-cdb16962c90c" name="CSharpProfile">
+        <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
+      </profileInstance>
+      <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
+    </packageHasProfileInstances>
+  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="d4890853-2b02-403e-9c04-92d9d85c29c6" name="Agenda" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -280,6 +300,24 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="d4f1a2c6-648f-404b-89f1-fee9da42c4eb" name="Periodicità" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="09f38387-83bf-4ff3-b0bf-accfd455fd67" />
+        <targetEnds>
+          <association Id="8fe11be6-d9fb-4c6f-9b3c-726f87f5af67" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="bfbff81d-add3-40be-84a4-bd2dfacabb19" LastKnownName="Frequenza" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="603b3348-bd78-4649-9605-b24d824acdba" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b3a97134-94b1-4c1f-a8eb-967c64d26bf4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="98b4f711-17e6-4796-b985-b4392a9a886a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="98c14b90-04c2-486a-9f3f-1589f0656df0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="893a1089-0fa0-43ad-88fe-7ef872c4ad21" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="7c2b1a50-4c35-4432-ba60-d6043711fa2e" name="valore" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="261b3c46-291e-4bb0-8faa-0fec4f502a7a" />
@@ -469,6 +507,34 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="67938298-b999-44d5-afa7-330b7f444e0c" name="Voce" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="de9ee98a-9083-42d6-bedd-431c57941b67" />
+        <targetEnds>
+          <association Id="a8450689-e42b-40c1-b4e7-97c93f25da7e" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="8a47ee5f-881b-43de-a4a0-37cf73077cc5" LastKnownName="Tipo" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="14b0c31e-ffc6-4d14-94ee-706e41c602e7" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="ec7bb892-f921-4234-ae25-bb635a9dd436" name="Lower" value="*">
+                      <elementDefinition Id="13f1e32a-3711-4bfb-9438-7ad8d42b9786" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="4ce0d491-abd9-47b8-add3-6a0c1c936928" name="Upper" value="*">
+                      <elementDefinition Id="cf0ce974-ee10-4e22-802d-5579bd946707" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="b4d22215-c4b6-45b4-a53f-af23ef6c2f48" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5d7b2d1a-d3ac-4da2-9e16-18265f7190f9" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="72d25c9c-3ff9-4016-9acf-0c57c0e6ab69" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e6fa7dad-11fd-4330-85c2-553cc2c90616" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="18c8ae31-ddb7-4c75-bb9e-60d0dd4a918b" name="nome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="b77083f1-2064-46fb-9e77-00dcc5c2f6f5" />
@@ -525,43 +591,18 @@
         <ownedLiterals>
           <enumerationLiteral Id="8a1d0455-04a7-4af0-9f43-2df4b9071801" name="Mai">
             <elementDefinition Id="d04763ac-6e84-4775-9a83-bdf76626bbf6" />
-            <specification>
-              <literalInteger Id="fed4fd90-2488-4b20-959e-8135250cc2af" name="Integer" value="0">
-                <elementDefinition Id="9452c1a2-ce60-477b-a4f8-2adce6450d32" />
-              </literalInteger>
-            </specification>
           </enumerationLiteral>
           <enumerationLiteral Id="572cb6f1-fb5c-44d1-aa74-82d51902cf8d" name="Giornaliera">
             <elementDefinition Id="d453eb79-bab4-4959-8533-1fe906bde89c" />
-            <specification>
-              <literalInteger Id="25630115-4f57-4a7b-af3b-6c23cff97c4b" name="Integer" value="1">
-                <elementDefinition Id="2b67a7b9-28d2-4f3f-92a4-90accb690e32" />
-              </literalInteger>
-            </specification>
           </enumerationLiteral>
           <enumerationLiteral Id="7af137ea-248d-42ca-8bdb-61a7bdc2cbda" name="Settimanale">
             <elementDefinition Id="4e87381b-7d25-42ec-9f0e-0c69c71fc36e" />
-            <specification>
-              <literalInteger Id="65cd0cf5-ff8c-4cb0-b28f-8d905b659ae6" name="Integer" value="2">
-                <elementDefinition Id="6cd04b5e-ca49-4ed4-9fe4-f0199d60c6f2" />
-              </literalInteger>
-            </specification>
           </enumerationLiteral>
           <enumerationLiteral Id="d64b6504-ded8-4cf2-a795-9caef343a006" name="Mensile">
             <elementDefinition Id="08452a79-8eb4-4521-a7ff-209ebadf91fe" />
-            <specification>
-              <literalInteger Id="596dc71a-44cc-4d0d-8cef-7190f1fd5a3c" name="Integer" value="3">
-                <elementDefinition Id="a515feb7-0107-436f-8a84-44fe6d101bf5" />
-              </literalInteger>
-            </specification>
           </enumerationLiteral>
           <enumerationLiteral Id="204ca43b-aac9-4692-b96b-60045e9422c2" name="Annuale">
             <elementDefinition Id="46908166-038f-4454-b46b-23b5d551e88a" />
-            <specification>
-              <literalInteger Id="53fd67c6-36ae-497d-a2a0-9de43960e2f3" name="Integer" value="4">
-                <elementDefinition Id="a06564fd-180b-42ff-972c-65c572e3c766" />
-              </literalInteger>
-            </specification>
           </enumerationLiteral>
         </ownedLiterals>
       </enumeration>
@@ -574,25 +615,5 @@
   </packagedElements>
   <package Id="4ab776e7-1614-4c27-8271-28bd5c16bad2" name="DynamiCalModeling">
     <elementDefinition Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c" />
-    <profileInstances>
-      <packageHasProfileInstances Id="a1dbfbf1-7a23-4ff7-8b65-8a0107aa6430">
-        <profileInstance Id="a72cbb16-a853-44f5-9560-0c85c7c9e5d3" name="StandardProfileL2">
-          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-        </profileInstance>
-        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-      </packageHasProfileInstances>
-      <packageHasProfileInstances Id="d9d57b85-c162-4891-880b-861e034f3a49">
-        <profileInstance Id="be871d40-e724-4aaf-bb11-03b255fc74ae" name="StandardProfileL3">
-          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-        </profileInstance>
-        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-      </packageHasProfileInstances>
-      <packageHasProfileInstances Id="36a71be4-7e6b-4523-b7a7-b2f7e9883766">
-        <profileInstance Id="3247e436-a121-4510-9117-cdb16962c90c" name="CSharpProfile">
-          <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
-        </profileInstance>
-        <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
-      </packageHasProfileInstances>
-    </profileInstances>
   </package>
 </logicalClassDesignerModel>

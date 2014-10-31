@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c"
   name="DynamiCalModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -600,6 +600,45 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="893a1089-0fa0-43ad-88fe-7ef872c4ad21"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="d8e8eb79-8823-4d16-bed7-ed1065aa8fbe"
+              LastKnownName="Frequenza"
+              LastKnownLocation="DynamiCalModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b3a97134-94b1-4c1f-a8eb-967c64d26bf4"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="98c14b90-04c2-486a-9f3f-1589f0656df0"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="261b3c46-291e-4bb0-8faa-0fec4f502a7a"
@@ -988,6 +1027,58 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="e6fa7dad-11fd-4330-85c2-553cc2c90616"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="f0e333b8-c7ca-4f4e-ad5f-81e0e7d0594e"
+              LastKnownName="Tipo"
+              LastKnownLocation="DynamiCalModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b4d22215-c4b6-45b4-a53f-af23ef6c2f48"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="13f1e32a-3711-4bfb-9438-7ad8d42b9786"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="cf0ce974-ee10-4e22-802d-5579bd946707"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="72d25c9c-3ff9-4016-9acf-0c57c0e6ab69"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="b77083f1-2064-46fb-9e77-00dcc5c2f6f5"
@@ -1069,54 +1160,19 @@
         <ownedLiterals>
           <enumerationLiteral
             Id="d04763ac-6e84-4775-9a83-bdf76626bbf6"
-            name="Mai">
-            <specification>
-              <literalInteger
-                Id="9452c1a2-ce60-477b-a4f8-2adce6450d32"
-                name="Integer"
-                value="0" />
-            </specification>
-          </enumerationLiteral>
+            name="Mai" />
           <enumerationLiteral
             Id="d453eb79-bab4-4959-8533-1fe906bde89c"
-            name="Giornaliera">
-            <specification>
-              <literalInteger
-                Id="2b67a7b9-28d2-4f3f-92a4-90accb690e32"
-                name="Integer"
-                value="1" />
-            </specification>
-          </enumerationLiteral>
+            name="Giornaliera" />
           <enumerationLiteral
             Id="4e87381b-7d25-42ec-9f0e-0c69c71fc36e"
-            name="Settimanale">
-            <specification>
-              <literalInteger
-                Id="6cd04b5e-ca49-4ed4-9fe4-f0199d60c6f2"
-                name="Integer"
-                value="2" />
-            </specification>
-          </enumerationLiteral>
+            name="Settimanale" />
           <enumerationLiteral
             Id="08452a79-8eb4-4521-a7ff-209ebadf91fe"
-            name="Mensile">
-            <specification>
-              <literalInteger
-                Id="a515feb7-0107-436f-8a84-44fe6d101bf5"
-                name="Integer"
-                value="3" />
-            </specification>
-          </enumerationLiteral>
+            name="Mensile" />
           <enumerationLiteral
             Id="46908166-038f-4454-b46b-23b5d551e88a"
-            name="Annuale">
-            <specification>
-              <literalInteger
-                Id="a06564fd-180b-42ff-972c-65c572e3c766"
-                name="Integer"
-                value="4" />
-            </specification>
-          </enumerationLiteral>
+            name="Annuale" />
         </ownedLiterals>
       </enumeration>
     </packageHasNamedElement>
