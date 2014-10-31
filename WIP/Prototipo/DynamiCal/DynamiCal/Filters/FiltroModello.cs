@@ -23,9 +23,9 @@ namespace DynamiCal.Filters
             _modelli = modelli;
         }
 
-        public override IEnumerable<Evento> FiltraEventi()
+        protected override Func<Evento, bool> StrategiaFiltro()
         {
-            return Component.FiltraEventi().Where(evento => _modelli.Contains(evento.Modello));
+            return evento => _modelli.Contains(evento.Modello);
         }
     }
 }

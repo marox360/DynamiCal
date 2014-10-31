@@ -32,11 +32,11 @@ namespace DynamiCal.Filters
             }
         }
 
-        public override IEnumerable<Evento> FiltraEventi()
+        protected override Func<Evento, bool> StrategiaFiltro()
         {
-            return Component.FiltraEventi().Where(evento =>
-                evento.Periodo.Interseca(_timePeriod)||
-                evento.Periodicita.TestaPeriodo(evento.Periodo, _timePeriod));
+            return evento =>
+                evento.Periodo.Interseca(_timePeriod) ||
+                evento.Periodicita.TestaPeriodo(evento.Periodo, _timePeriod);
         }
     }
 }
