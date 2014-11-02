@@ -1,0 +1,1804 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="b2992077-5446-43e0-9ccf-2c2fe10c0d0c" name="PatternTemplate" linkedPackageId="50cb05af-a121-474f-9cc0-d938c3388cdd" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="ba08bb08-a60d-4357-8fd7-84e222f76670">
+      <profileInstance Id="5f79602d-c7e5-48e5-90a5-9a2f3abb4d23" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="ea590c23-5a4b-4197-82d3-4c5986adc598">
+      <profileInstance Id="6fb3e59a-e364-44c0-86a2-c1a15d47dc9c" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8fba22ac-4cfc-4e08-8cdc-1a987253ffbb">
+      <profileInstance Id="6398fb86-acbf-4018-bd75-8640715a189b" name="CSharpProfile">
+        <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
+      </profileInstance>
+      <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="84cea97a-9800-42a1-8ea9-6e7656e2fa70" name="Filtro" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="1a189c67-d766-426d-8087-fc1c7dd13830" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro" tag="ViewCode">
+            <elementDefinition Id="60762377-3e6b-4bdc-a084-0f6b4f5c07a1" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="c2d0dd06-1f38-4dfb-adee-48669f1cb099" name="class" profile="CSharpProfile">
+            <elementDefinition Id="1516a45e-93be-4c4f-98a2-9f180d621e0c" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="9bc9389c-d851-40d9-a12d-84bdf3934411">
+                <propertyInstance Id="3e415439-aed3-4a08-b480-ef5e046c7c0a" name="ClrAttributes">
+                  <elementDefinition Id="6c7fb5cc-32ef-49e9-bfb2-4c1c3a21102f" />
+                </propertyInstance>
+                <elementDefinition Id="0285a518-da73-4574-835b-41759e01bcaa" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="5ad9adbf-e1fb-4f1b-9453-84f75061056f">
+                <propertyInstance Id="590e9d96-c526-46aa-be8e-3d0b3298d4e4" name="IsPartial" value="false">
+                  <elementDefinition Id="17fec8c1-a94a-4e74-891a-20460518cab7" />
+                </propertyInstance>
+                <elementDefinition Id="728c7204-ead9-4eee-8f0a-63d5180c85bb" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="7708d131-062b-4b6c-b624-aa13c382443c">
+                <propertyInstance Id="aa8df52c-afbc-4f8b-8965-904c61782133" name="IsStatic" value="False">
+                  <elementDefinition Id="93f449c5-4e2f-4ba1-8016-7ba37a487855" />
+                </propertyInstance>
+                <elementDefinition Id="cc0ff12f-3904-4142-a472-69b856af137d" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="077b2c68-0c1e-43b9-8f70-de2c994ae204">
+                <propertyInstance Id="a36f79d5-209e-4104-9b1f-0f7f7d3162e9" name="IsUnsafe" value="false">
+                  <elementDefinition Id="9d2824bf-1271-43ca-87c3-026cd61ae92a" />
+                </propertyInstance>
+                <elementDefinition Id="ac78d5bb-3635-4aff-8985-0d0d94d8dd19" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="b5e8c24e-9343-406f-b0c0-b21b3e1cfecb">
+                <propertyInstance Id="2864308d-a71c-4fac-9b3a-9aeefb5e5f33" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="91d66f69-e078-46d1-acf8-89001aa42db1" />
+                </propertyInstance>
+                <elementDefinition Id="28afb4f4-3f1f-4166-b6d2-4fae56ee6088" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="803bdbd7-1c59-48d8-a780-72877940665a" />
+        <suppliersInternal>
+          <interfaceRealization Id="d6ce1330-42cc-4558-8a21-be7837d4601c">
+            <interfaceMoniker Id="a414b308-e95b-453b-b841-45f1d420b76a" LastKnownName="IFiltro" />
+            <elementDefinition Id="af4acc88-e0f7-417e-9655-4f65d178e770" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="5f2f3fc2-460c-4cc2-9db8-80ee01bca1fe" isDerived="false" sourceEndRoleName="Filtro" targetEndRoleName="Component" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="a414b308-e95b-453b-b841-45f1d420b76a" LastKnownName="IFiltro" />
+            <description>Property Component references type IFiltro.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="13c6c023-7ef8-4dd7-aa7f-6a77cb069143" name="Filtro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="59da825d-8217-4f9c-94de-b2e7049eabc8" name="Lower" value="*">
+                      <elementDefinition Id="7f899996-106d-4788-961f-a94190adc37b" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="5cea9c16-ce58-462c-8f01-4f8a74d6532b" name="Upper" value="*">
+                      <elementDefinition Id="9c8fa4a3-89c3-481e-aedf-af15253116b2" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="dd45e465-867d-4927-8278-a5b25c2b1427" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="124cdeb8-a6bd-4ec5-8b69-f42680ff5870" name="Component" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="068b7ca1-5d4d-4f4b-b7e5-439f4bbe3077" name="Lower" value="1">
+                      <elementDefinition Id="2d566924-cf0a-404a-9305-f52d31522c70" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="2a74fa48-5787-4be0-ae23-545993e0f95b" name="Upper" value="1">
+                      <elementDefinition Id="3f10706f-929e-4c9c-9fda-dce770426c65" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="78f16c84-fd53-495b-afc2-389d8783de8c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9f669351-2a43-4d0d-b6ec-13d32d3a2f7e" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="5b4b092c-1ad7-4e30-b088-62675f41cd6a" name="Component" isLeaf="false" isStatic="false" isReadOnly="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="20f3677e-7012-4e48-af9a-1bac68898717" handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3DComponent" tag="ViewCode">
+                <elementDefinition Id="689b6481-3474-411d-87cd-7dc9705d6abb" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="779f002b-d96d-46d0-a819-99c78378ff76" name="property" profile="CSharpProfile">
+                <elementDefinition Id="c3b9badc-e121-4b87-8ba6-1e9bb19fb513" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="442f3fae-aafb-4acf-aeed-94b15dfa4c65">
+                    <propertyInstance Id="b0d072e9-505d-42ad-9f40-ca464a39b414" name="ClrAttributes">
+                      <elementDefinition Id="7ee964fe-9b1f-48ca-8217-6be0f9e0b6a5" />
+                    </propertyInstance>
+                    <elementDefinition Id="1d5430f1-6505-43ad-a12a-c806720df547" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7ac2fecc-fceb-4db0-8f88-37ecbc5a8399">
+                    <propertyInstance Id="cf1303b0-64be-4afe-8856-2fd7080dba68" name="Get" value="public">
+                      <elementDefinition Id="eb47f21d-908a-41af-acd0-623d7eba0eca" />
+                    </propertyInstance>
+                    <elementDefinition Id="15cf31d0-cfba-4398-b86c-26f19cc36ff9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f518c350-8582-4aa0-9b33-7d3f98a31727">
+                    <propertyInstance Id="057aeed0-8586-4f04-b427-2cf184fd36e3" name="HasBody" value="false">
+                      <elementDefinition Id="f69a5d6a-2a6c-44fe-b801-69ecf3efa1b8" />
+                    </propertyInstance>
+                    <elementDefinition Id="8c7d25c9-326f-4fce-acd5-a3ffdc0df7fd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="158f7551-4c12-43b5-93b9-bbba3ac53545">
+                    <propertyInstance Id="05d4d65a-4667-439b-8446-a77eadb06945" name="IsUnsafe" value="false">
+                      <elementDefinition Id="be9496b5-57a3-4c8b-90a1-d90275ad9de0" />
+                    </propertyInstance>
+                    <elementDefinition Id="e451a1bd-6f60-4830-b906-b6482a9a49f9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0ddde50a-f76f-40e8-8208-627ef2f7b455">
+                    <propertyInstance Id="4251d9f1-acf6-4d85-a6a4-dc1c0985e272" name="Inheritance" value="none">
+                      <elementDefinition Id="8ba76452-21e4-4497-8f9a-b9d2a77fe657" />
+                    </propertyInstance>
+                    <elementDefinition Id="7925c7df-9d50-45f9-aece-5484324bb342" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="23deec08-41f6-4e51-8bbf-35bbf43feda9">
+                    <propertyInstance Id="60328b98-0968-4a07-ae6a-d4ac9d0e7104" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="9f131b93-ce20-49e5-b63c-f70c12862c4e" />
+                    </propertyInstance>
+                    <elementDefinition Id="99385165-c634-4abf-9e38-19bfe821ca45" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ccdc3436-3c64-4851-91ce-ea34da5da7ba">
+                    <propertyInstance Id="a1f048d6-aeae-41ae-8233-347b4db718a4" name="Set" value="none">
+                      <elementDefinition Id="efe4e6bf-6148-4d20-99aa-c91141fa2c22" />
+                    </propertyInstance>
+                    <elementDefinition Id="f2854f44-a727-45e0-a00d-e322effb7044" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="726a9fb4-4951-4c39-81fe-48f6ba926484" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="63ed7d2b-0303-4c32-9b40-7207e0b92443" LastKnownName="IFiltro" />
+            </type_NamedElement>
+          </property>
+          <property Id="bb9f7a64-4625-42b4-ae99-725b90cb480e" name="_component" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="6c9a66f5-1966-49bb-8bbd-a5a067069c15" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3D_component" tag="ViewCode">
+                <elementDefinition Id="71babc49-0019-4d5f-b9cf-902b995e8e4e" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="0c5542c6-4705-49b9-9e03-57d433d8643c" name="field" profile="CSharpProfile">
+                <elementDefinition Id="1eb8c5ad-22c3-40d5-8a6c-e23444b83142" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f12fc2ad-21a0-464e-80c3-f3651796fc36">
+                    <propertyInstance Id="5dd98d34-c206-4678-8c98-3a573974c305" name="ClrAttributes">
+                      <elementDefinition Id="e9deed6f-6b4a-429e-bdd9-9f4d688abc3f" />
+                    </propertyInstance>
+                    <elementDefinition Id="21e72843-9123-44cf-92f6-b841e83926c3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e245e700-1751-4e56-b941-16b147bef446">
+                    <propertyInstance Id="ef10d6e8-9810-4a1e-b36b-484441606808" name="IsConst" value="false">
+                      <elementDefinition Id="dcf428df-308b-4b7f-8bd2-f2c92fc31d5d" />
+                    </propertyInstance>
+                    <elementDefinition Id="80ad4f59-32d6-494e-8434-9438f9d6324c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="dd8bdd3f-1023-414d-a003-7a73eca4a258">
+                    <propertyInstance Id="4835ba11-2abf-47b9-b672-d4798fd79556" name="IsNullable" value="false">
+                      <elementDefinition Id="bbd1c88e-7567-40a9-b346-0a03a14c105d" />
+                    </propertyInstance>
+                    <elementDefinition Id="1a2d3d5b-4285-4320-8d91-0baaaa5fafdf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ccad5b43-d717-4359-997e-5c8b7c660148">
+                    <propertyInstance Id="f5d4b242-b49a-4ae4-b2d0-d5069e287ac1" name="IsVolatile" value="false">
+                      <elementDefinition Id="773e9880-542c-46ae-bf0c-219d0de1d40f" />
+                    </propertyInstance>
+                    <elementDefinition Id="26885452-d3d1-477d-b709-6040547f8ee8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="46dbefeb-75b8-49fb-8390-8f8f776f3059">
+                    <propertyInstance Id="e4948ff3-8b4c-4f9e-9275-3bab9bb5f2d2" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="0857a9f1-d088-455d-bbe3-867d3e7887d4" />
+                    </propertyInstance>
+                    <elementDefinition Id="c084aea2-2f73-46ab-9857-0c7ee1f392ce" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="b1d224ff-db7b-4495-8381-fb35942a011f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="63ed7d2b-0303-4c32-9b40-7207e0b92443" LastKnownName="IFiltro" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="2ac1173d-2d02-4e02-aa78-500f53605259" name="Filtro" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="194260cf-4388-4f40-8e94-7f4144e7b34d" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)])" tag="ViewCode">
+                <elementDefinition Id="f4dd25d0-4b2b-4ae2-b911-b1adef220efe" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="68485d3b-77a1-44c9-87ad-02d8fa4f205d" name="method" profile="CSharpProfile">
+                <elementDefinition Id="6670cd8e-ad51-456c-ab4a-f8e0940521cf" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="139d1358-935d-4e8f-bcb9-bfcdd04cf9fd">
+                    <propertyInstance Id="c7b40ae0-f494-4f69-83a4-57e65558df1b" name="ClrAttributes">
+                      <elementDefinition Id="bc5c0c24-d381-4a8e-8392-2ad85cf5584f" />
+                    </propertyInstance>
+                    <elementDefinition Id="ce6aaaaf-036e-4377-ae3f-216c42f3264b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3308f66a-60d8-4b33-a66f-7ee1c51428a9">
+                    <propertyInstance Id="063d5329-e96e-4d22-8da4-561414cf4895" name="IsPartial" value="false">
+                      <elementDefinition Id="c99a5373-730b-4b3b-af59-43c2ca2d26ab" />
+                    </propertyInstance>
+                    <elementDefinition Id="f3f898d6-ee56-41a3-9de9-1ebdb0491b8e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="cb4b24ce-1c73-486b-9a8a-f7345494268c">
+                    <propertyInstance Id="3fd8ae1f-9854-4f20-8eac-00db680d63d3" name="IsUnsafe" value="false">
+                      <elementDefinition Id="71fca81b-0fe7-4b7d-9694-80e4205e5054" />
+                    </propertyInstance>
+                    <elementDefinition Id="aa35843a-7da9-4276-a859-f238de0dcd3b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d43cc107-024a-4b66-904b-c544a9f2644e">
+                    <propertyInstance Id="93c2948e-7290-4392-9814-deded7a7268b" name="Inheritance" value="none">
+                      <elementDefinition Id="30f784fb-29b4-4934-b377-7de3358d7660" />
+                    </propertyInstance>
+                    <elementDefinition Id="93641b08-dd63-41d5-93e1-4fa613b87929" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="10199576-c6cc-44be-b975-10f869360b93">
+                    <propertyInstance Id="342f27c3-ca64-4317-bd0a-721f281cb96e" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="07d46ca4-dd9d-4dd4-a215-7a6eccab4403" />
+                    </propertyInstance>
+                    <elementDefinition Id="d319a255-cb25-43d8-b6a6-dea0737f9354" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a669770e-2f69-4dc8-87bd-9f76d9c6f1c0">
+                    <propertyInstance Id="d69cf067-45c9-4b1d-8583-dc47b2918682" name="params" value="false">
+                      <elementDefinition Id="d1928911-199e-4411-a765-4aef405dfd5f" />
+                    </propertyInstance>
+                    <elementDefinition Id="f7ccb9fe-46f6-40a4-87ae-0c47583b45f8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="ade6bda1-e293-4638-95a0-3c6c64144d5c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9b1b5e16-c6d2-40b0-a7b7-6775f1ba8e1e" name="filtro" direction="In">
+                  <referencesInternal>
+                    <reference Id="3345ae3e-b5a2-4921-b71a-65a7d0b9c837" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)]) ParameterIdentifier%3Dfiltro" tag="ViewCode">
+                      <elementDefinition Id="34e29bc3-f50a-428a-90de-462e3c3293f3" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="7b3f5a8e-a11b-4f7e-9419-a4aa0abbde82" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="63ed7d2b-0303-4c32-9b40-7207e0b92443" LastKnownName="IFiltro" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="ac1c8afd-f1e4-452a-aaf8-215980162d42" name="FiltraEventi" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="0ccdcfb1-146d-4983-abca-4662ea51c0fd" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3DFiltraEventi" tag="ViewCode">
+                <elementDefinition Id="6ee9ef6f-96e4-4396-87dd-85818e6fd4a3" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="fab680d7-4e4d-409d-bc4a-4fe7e5ca2577" name="method" profile="CSharpProfile">
+                <elementDefinition Id="948ead75-fc6b-4c06-9679-4769f35063dd" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e93d6483-18a0-47d8-87d9-f7264330315c">
+                    <propertyInstance Id="b46ef322-a10f-4ae4-a825-73008b34c606" name="ClrAttributes">
+                      <elementDefinition Id="11ea8e0e-50f3-4515-a22c-dfeb2a33da05" />
+                    </propertyInstance>
+                    <elementDefinition Id="97ff4ab8-a446-44c6-b020-b33e58bbe2ba" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="092c624d-3fac-4e2c-8a50-763a965cceb2">
+                    <propertyInstance Id="b675adbc-6c35-47ab-a0e1-66a811f2bf2f" name="IsPartial" value="false">
+                      <elementDefinition Id="95eb5dc8-4d36-46d3-9882-e6116e6cd1ff" />
+                    </propertyInstance>
+                    <elementDefinition Id="67103932-ff32-4b8e-8eee-43fc9490420c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="022c4359-df31-45a3-873a-396bedfe2f30">
+                    <propertyInstance Id="11fe5b8a-3f3d-4d93-bb7f-24c93bc4d469" name="IsUnsafe" value="false">
+                      <elementDefinition Id="239448ce-978c-4979-af40-953860367369" />
+                    </propertyInstance>
+                    <elementDefinition Id="d25ed245-3520-429b-86f3-a0e922b28db6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b7cded67-a6cf-4dab-8f73-615dbdb2cb68">
+                    <propertyInstance Id="c573b786-4cdf-42f5-8fec-a03eaf42b20d" name="Inheritance" value="none">
+                      <elementDefinition Id="955eaf8f-a847-4dde-827b-b0abd21af9d9" />
+                    </propertyInstance>
+                    <elementDefinition Id="29299404-9425-4cf8-9fa6-12d8fef7099a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ac4090b1-962a-4984-a860-5af8faa02799">
+                    <propertyInstance Id="b49226c0-8739-432a-9ba5-118f0d85f595" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="8a6bc97f-b432-456f-aedc-217dff21db49" />
+                    </propertyInstance>
+                    <elementDefinition Id="d41b478b-d5c2-406e-b2e8-8f8fa800cbca" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="933b17b6-d181-49d5-969d-29f41d2e339a">
+                    <propertyInstance Id="335186eb-240a-4b68-b477-2c2710971f5f" name="params" value="false">
+                      <elementDefinition Id="fe40cbd1-63c0-428e-924e-7a11d0ae0a0d" />
+                    </propertyInstance>
+                    <elementDefinition Id="307df0c4-0473-4b6c-8063-23a866c7aa11" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="66e78a24-25c5-4bd0-9691-e97e7e277cc7" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="dae8f73f-1dcd-4d61-8f26-8781404a69ff" direction="Return">
+                  <elementDefinition Id="19205c48-eb4c-4b33-a474-8b03ca0a8c92" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a3edacba-7952-43c8-8760-651d6de88af2" LastKnownName="IEnumerable&lt;Evento‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="71d2d378-bbdd-4ba3-90fd-f4ad1864e2c4" name="StrategiaFiltro" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="fdf70c5a-1671-41c0-8a13-bf78aa04dddf" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3DStrategiaFiltro" tag="ViewCode">
+                <elementDefinition Id="52bb584f-7ebb-4ca6-add0-0613a059d62a" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="585c8db0-8466-4ade-a091-0b92572046b0" name="method" profile="CSharpProfile">
+                <elementDefinition Id="b062f216-10fc-4a60-ab19-fba3f4ad43b8" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9fe04b24-7af7-4df2-90a4-8ec3f4772fed">
+                    <propertyInstance Id="34b7adc9-9188-47af-9dd1-6bd724ab6c21" name="ClrAttributes">
+                      <elementDefinition Id="b8996bc7-7d58-4b29-bc99-c7141671cbc9" />
+                    </propertyInstance>
+                    <elementDefinition Id="1ff44949-bd07-4adf-b7f2-4c1b15d14f03" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2a9a47eb-6ad8-478c-bd83-b8e5b87f3232">
+                    <propertyInstance Id="4a1b238c-b141-4564-9b48-dad666de7eda" name="IsPartial" value="false">
+                      <elementDefinition Id="d3d0d8e0-afd8-4f29-bdd5-158729c3fab0" />
+                    </propertyInstance>
+                    <elementDefinition Id="c675ca52-97e1-4e3d-a84e-b4e68ec6afac" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3499d798-74aa-482d-a052-44f73b252262">
+                    <propertyInstance Id="7598ddb1-f020-4e74-8b11-8ef15417b11b" name="IsUnsafe" value="false">
+                      <elementDefinition Id="b0fab527-737e-45ef-af00-eb93cb60c3a0" />
+                    </propertyInstance>
+                    <elementDefinition Id="cea3c872-8430-4b9f-88c8-1bcfc4b1bca9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="305a4e39-ac82-4f49-80de-333baf9eb8b4">
+                    <propertyInstance Id="0ad57fbb-5f5c-4769-a53e-db6b781e7607" name="Inheritance" value="none">
+                      <elementDefinition Id="db269304-2365-42e1-9574-15dd763d48df" />
+                    </propertyInstance>
+                    <elementDefinition Id="349147b3-c9b8-44c3-9efa-3f54fbc0d738" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="462428a7-e7d5-42fa-be44-7126050e8a89">
+                    <propertyInstance Id="9a831aaa-62b1-49dc-ae7e-bd01690ed8d6" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="6c9fca3c-244d-40e8-b7be-34e5094d244c" />
+                    </propertyInstance>
+                    <elementDefinition Id="691387fc-bd05-417e-8a93-55680baafc8f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="18fae4bb-045d-420e-953d-8e6a97282473">
+                    <propertyInstance Id="cb691a79-67a7-4529-9346-96df25894f27" name="params" value="false">
+                      <elementDefinition Id="fb7715ba-ed8b-4987-81c4-f419214b26ec" />
+                    </propertyInstance>
+                    <elementDefinition Id="93f13502-3254-4a01-967e-b85002d978de" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="a647d67f-3bd1-41f8-b5c0-7ddbcf1e095a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2035d8ad-3a84-457d-b7ab-8047781bb512" direction="Return">
+                  <elementDefinition Id="4e4734d4-13f9-4b93-854e-93d000522342" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6bba13bd-9bcd-44cb-b784-1c60d01c8bfb" LastKnownName="Func&lt;Evento‎, Boolean‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="63ed7d2b-0303-4c32-9b40-7207e0b92443" name="IFiltro" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::DynamiCal::Filters::IFiltro">
+        <elementDefinition Id="6a482ea4-3821-4346-bc2b-52af4d2b065b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a3edacba-7952-43c8-8760-651d6de88af2" name="IEnumerable&lt;Evento‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::System::Collections::Generic::IEnumerable&lt;Evento‎&gt;">
+        <elementDefinition Id="ec595590-c868-49f8-b746-c2a969cb60c7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6bba13bd-9bcd-44cb-b784-1c60d01c8bfb" name="Func&lt;Evento‎, Boolean‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::System::Func&lt;Evento‎, Boolean‎&gt;">
+        <elementDefinition Id="43bc38c1-0712-4607-81f5-d286fdcade4f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3c149287-9cc2-45a5-9906-0c8e14978750" name="FiltroRicerca" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="a8071a83-da9b-47eb-936d-14779731c4e5" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca" tag="ViewCode">
+            <elementDefinition Id="01c0e23f-a229-4638-b2da-ebd0748e2ba1" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="8aaf4f90-98a3-49d0-86de-951548a53878" name="class" profile="CSharpProfile">
+            <elementDefinition Id="bbc388c9-119d-4f8e-a3af-97715fff0063" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="75d156a2-da4d-4c1a-acf8-202dcff6944f">
+                <propertyInstance Id="75500358-0a01-4adb-9b4f-3fb74606780e" name="ClrAttributes">
+                  <elementDefinition Id="5d7e3a5a-d50a-4cba-b7f2-53f2c9ccb3e0" />
+                </propertyInstance>
+                <elementDefinition Id="7a9e6452-b875-402a-9880-afbc53f9df73" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="e2c03c84-dd27-43d7-a4cf-10e7c4cff50c">
+                <propertyInstance Id="2c74ae32-1341-4a34-97a8-3567e1b3a567" name="IsPartial" value="false">
+                  <elementDefinition Id="44631060-1bc8-459f-89cf-0850d7d2b2cc" />
+                </propertyInstance>
+                <elementDefinition Id="ca72f713-b78e-4ed0-98a8-bcb0d88a8b88" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="825f3ac9-8016-4956-87f6-46952545d3c0">
+                <propertyInstance Id="10a8d5a6-9a99-4769-a86f-cf1bf65cac37" name="IsStatic" value="False">
+                  <elementDefinition Id="1c3c3a2b-fdd9-41d7-b0bb-1d9be48a947f" />
+                </propertyInstance>
+                <elementDefinition Id="e7984b45-48d2-414c-8c1d-50aabeb6b5d7" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="9814a250-9cba-4e77-adbb-b88d7ba8183b">
+                <propertyInstance Id="d6c5f3a5-addb-4454-8c69-f18b6b1a9e71" name="IsUnsafe" value="false">
+                  <elementDefinition Id="de4a2ca9-0dd6-4aa1-a6f8-1c15290a98bc" />
+                </propertyInstance>
+                <elementDefinition Id="087c4129-3bc6-4744-9078-9b1ffe6b7d22" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="47382336-ceda-416c-a27e-f6d503224070">
+                <propertyInstance Id="c5237d7b-3d39-4bf7-8dcb-71497f9737ed" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="c591b5e5-4749-4633-aafa-25b6ddafc361" />
+                </propertyInstance>
+                <elementDefinition Id="9224a2c4-c4ba-4e15-bdcc-480d980df1d9" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="4817b93a-a7a2-49e5-bbef-7c969c2a1285" />
+        <generalsInternal>
+          <generalization Id="af9bf52d-8692-4f78-96e0-fd36edfd9f14" isSubstitutable="false">
+            <classMoniker Id="84cea97a-9800-42a1-8ea9-6e7656e2fa70" LastKnownName="Filtro" />
+            <elementDefinition Id="164b6517-bf1a-4ad6-9347-3bf66c2e64a7" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="e610b040-8b7c-4916-adce-82c05266c267" name="_text" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="64f2e6ba-75e3-4636-8ec1-599d21609bc3" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3D_text" tag="ViewCode">
+                <elementDefinition Id="b330cae3-429e-4758-b42b-d617fe45293f" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="e752797e-1ab4-4aeb-937a-f3f0bb54389c" name="field" profile="CSharpProfile">
+                <elementDefinition Id="5f5029a4-aa4f-47e9-9510-e7709cfbf603" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4e9c7661-d4fb-4679-92cf-6fd30d67bdbd">
+                    <propertyInstance Id="e1ebc40b-c46c-45ef-ad79-bac17ddb119b" name="ClrAttributes">
+                      <elementDefinition Id="9ed7fbb0-a41d-48b6-9e1a-389202265509" />
+                    </propertyInstance>
+                    <elementDefinition Id="e5287bfd-fadf-4168-bfd6-0cd5ac79b280" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a68d0f50-3c2a-4e3d-b964-41b24912143d">
+                    <propertyInstance Id="acef030d-d8e6-4ebd-b9fa-db34aa89e79b" name="IsConst" value="false">
+                      <elementDefinition Id="fef7c426-15f8-40d7-84e9-fdd18b8ffe77" />
+                    </propertyInstance>
+                    <elementDefinition Id="aa9dd21e-d727-48ba-bfc5-d9e8fe2d436f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="795176ef-edd1-44de-9c63-9a18a93db4de">
+                    <propertyInstance Id="6be9b6e2-c161-458c-815a-04f432b76b5f" name="IsNullable" value="false">
+                      <elementDefinition Id="f312d7f3-a36d-42fa-87e6-2eb3b0ff0ece" />
+                    </propertyInstance>
+                    <elementDefinition Id="e05ea338-43a6-4b89-a12b-ca076d2dc4d4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5e2d3877-5318-4e16-906a-aafa861b8797">
+                    <propertyInstance Id="4601a8c4-b23c-49e6-9a56-87e6618063ad" name="IsVolatile" value="false">
+                      <elementDefinition Id="f9b9ecc8-e3f4-4c5a-8cfa-5812f6058bf1" />
+                    </propertyInstance>
+                    <elementDefinition Id="cb11bf81-e680-490d-b310-1495261c4ec1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e43c5692-be33-4518-b730-c0a2100867bd">
+                    <propertyInstance Id="a0b47eba-b120-48cb-a2e4-a89a2b3f48a8" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="1462a284-5c5f-408d-9d8c-d43f0b09053c" />
+                    </propertyInstance>
+                    <elementDefinition Id="9227546d-ba85-4ab1-97d3-6e6568f7f673" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="7f0dcdc7-4eb8-42af-8cde-3f7327ccea5f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="74b7d21f-08e9-4126-aa7c-8928e221efd0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="ddad1830-f2d0-400a-8665-e351e3b99ece" name="FiltroRicerca" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="3b91e6ef-54af-42d3-9935-d422595f31ee" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])" tag="ViewCode">
+                <elementDefinition Id="84dbe637-f2a7-4c84-8a9d-ece0897c5f4f" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="2fa9de54-1446-4862-8b17-9c7745ff6f39" name="method" profile="CSharpProfile">
+                <elementDefinition Id="c89af8d1-ad23-4e4b-be02-34e9dc4b4830" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="262fc077-ae1a-4b1e-8a79-3c89133499e0">
+                    <propertyInstance Id="ef4480ef-2cf5-4c39-8bc0-2244a8cb3845" name="ClrAttributes">
+                      <elementDefinition Id="1e98be80-4f3e-4690-896e-becefae12e8a" />
+                    </propertyInstance>
+                    <elementDefinition Id="f45ffb0b-2dc2-4b05-af06-0ed065de5ef1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bb4e1607-40d6-4728-9282-d8550e3d589e">
+                    <propertyInstance Id="dece89b7-74e8-4258-b356-0e6b3a7e9081" name="IsPartial" value="false">
+                      <elementDefinition Id="d6aef5a7-13e7-4e1a-b267-3e1e383237d0" />
+                    </propertyInstance>
+                    <elementDefinition Id="7242673e-3ab1-480e-add6-e05481fa8a79" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a88c70e5-4d99-4f4d-adbb-a579c9cd3d9f">
+                    <propertyInstance Id="39985372-c65a-4758-8c1c-f9c6a879ba4f" name="IsUnsafe" value="false">
+                      <elementDefinition Id="92dcdebf-fde0-4e07-86a4-31ccb045a910" />
+                    </propertyInstance>
+                    <elementDefinition Id="32df3dc8-dd08-43cd-976d-d952f0c9d2cc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8fcd16c2-6693-4040-a4ad-d8cdefeb3ed4">
+                    <propertyInstance Id="e98dbbb7-2075-4e8d-84f5-015b53cb21e0" name="Inheritance" value="none">
+                      <elementDefinition Id="a2db111d-a999-428d-a23d-3b9fdc664a81" />
+                    </propertyInstance>
+                    <elementDefinition Id="a1bca9d1-5fa7-48b1-aaa8-fa30197822b5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3ba798bf-574a-471c-b725-a8962c0073f2">
+                    <propertyInstance Id="8fe487c7-97cc-476a-a38d-1f1d6de8f4ab" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="a6d8553d-584a-4f09-be5b-be4e24c757ed" />
+                    </propertyInstance>
+                    <elementDefinition Id="171352e1-7763-4951-8fbd-72530bdc5c8a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7147bbdd-5b14-4e4b-b019-ea6cee08b41f">
+                    <propertyInstance Id="46183fd6-b3e8-4d12-a716-0644be998449" name="params" value="false">
+                      <elementDefinition Id="1c692761-93c0-4192-b876-69f1fd214564" />
+                    </propertyInstance>
+                    <elementDefinition Id="ff8fed52-f029-4de2-b6df-5a310d447057" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="dbf47d53-5116-49fb-a5ce-bfaee40a236b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7987653e-871f-4fc7-87a5-e02abe997e3b" name="filtro" direction="In">
+                  <referencesInternal>
+                    <reference Id="ad5500fd-6691-436a-892b-53cdf58b6eb6" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dfiltro" tag="ViewCode">
+                      <elementDefinition Id="6055f9a4-2cca-48b5-ac88-eb9240581010" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="b2429fd2-89b0-4ed1-a164-06aa17d82cbb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="63ed7d2b-0303-4c32-9b40-7207e0b92443" LastKnownName="IFiltro" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="04552fca-c223-461e-895d-9ba00987a7cf" name="text" direction="In">
+                  <referencesInternal>
+                    <reference Id="54430d9f-a468-493b-af3c-1784bde9fa26" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dtext" tag="ViewCode">
+                      <elementDefinition Id="e812a1b1-3cad-4500-b1b9-3d4298d36bd3" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="1929c06f-72f1-4e1f-a0b5-b437db5dade4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="74b7d21f-08e9-4126-aa7c-8928e221efd0" LastKnownName="String" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="cf2cc23f-cca9-4933-a3ff-eaf68312c396" name="StrategiaFiltro" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="3e366388-f497-4935-9d09-1ee149d022d0" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3DStrategiaFiltro" tag="ViewCode">
+                <elementDefinition Id="4731d417-6617-4f95-b770-7beb952a0e18" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="d7ff60fc-2188-4647-a811-8cd67415f321" name="method" profile="CSharpProfile">
+                <elementDefinition Id="0a68c8a2-f45b-47cf-97eb-ea55dde80a53" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="423f1a15-8de2-429d-9c2a-2147a9498cc7">
+                    <propertyInstance Id="b431799a-5789-43cd-b32d-db78f2a6b6ac" name="ClrAttributes">
+                      <elementDefinition Id="15590b08-9132-4710-a1ec-33ee0b193634" />
+                    </propertyInstance>
+                    <elementDefinition Id="630b7b23-4b8e-477c-aa86-698b3a9d3bc1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f5ef45aa-bba1-40c1-81e9-35d9f68c1356">
+                    <propertyInstance Id="6f15b2f2-3d36-4ead-a617-fb4397de7d48" name="IsPartial" value="false">
+                      <elementDefinition Id="c70330ab-98fb-4bf9-a9ec-6b372b8f4add" />
+                    </propertyInstance>
+                    <elementDefinition Id="1cd50840-a8fd-4bd8-9097-15c20244d9e6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fdc76f74-b061-411a-a76b-f11f8a9f8ba5">
+                    <propertyInstance Id="83e17401-5846-46fe-8099-82122ce0b902" name="IsUnsafe" value="false">
+                      <elementDefinition Id="46de5efd-53d3-4348-b749-ba1d4f93802e" />
+                    </propertyInstance>
+                    <elementDefinition Id="d799b541-b708-4187-8386-9d43c763256f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d4f614de-6db2-47da-aad3-faca50213eb7">
+                    <propertyInstance Id="a580c35d-f2f6-4f27-a90b-862bfc671d91" name="Inheritance" value="none">
+                      <elementDefinition Id="6c35e7b8-a8a0-43eb-9ba7-adc4a6328815" />
+                    </propertyInstance>
+                    <elementDefinition Id="01f49987-bd97-4938-bb57-01dfdabccd85" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a101b64d-706a-48c1-a886-2251e8a22439">
+                    <propertyInstance Id="2427cdd9-d67f-4c2a-9bd5-e3f31a401e4f" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="65e93315-86dd-423d-8c1d-b54c282ddaed" />
+                    </propertyInstance>
+                    <elementDefinition Id="6259f44b-ac04-4459-ad7d-077a05af96d0" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3823b840-fb6b-431b-9357-9a438c0b11b5">
+                    <propertyInstance Id="461cc2b3-b52d-4ad1-b35f-31f5c1b5434a" name="params" value="false">
+                      <elementDefinition Id="8a022e00-f898-40a9-8b1e-a8a288266e85" />
+                    </propertyInstance>
+                    <elementDefinition Id="a0870274-b03d-4668-a38b-fb167a3363b4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="d4fe1d2c-c343-452d-bbfa-637526bb02d9" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d9e55ec0-27ac-4cc6-bcc0-e2e1a6fc051d" direction="Return">
+                  <elementDefinition Id="7966629d-d799-4706-8bec-f7dc0e89c4e2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6bba13bd-9bcd-44cb-b784-1c60d01c8bfb" LastKnownName="Func&lt;Evento‎, Boolean‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="74b7d21f-08e9-4126-aa7c-8928e221efd0" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c71ef2e3-93af-410c-8d23-82c7cd9b9106" name="FiltroTemporale" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="8c76774c-074b-48f4-be0c-793e0f7b56fe" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale" tag="ViewCode">
+            <elementDefinition Id="f2f903ea-ba08-44c6-b033-05e50ea16b16" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="ab82f705-11d9-4a95-8cbe-a1ca9a033770" name="class" profile="CSharpProfile">
+            <elementDefinition Id="94fef4ff-6217-4334-bcf5-84f881d2615b" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="35438fef-b3a3-4519-9103-91d099293762">
+                <propertyInstance Id="a3192ec3-0426-4b27-99a2-9be9d28379c7" name="ClrAttributes">
+                  <elementDefinition Id="f2cd8d72-2173-4c34-8904-677ba0e2cfdf" />
+                </propertyInstance>
+                <elementDefinition Id="da148f83-76ba-4509-bdf8-e9ccb78972f8" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="8e933579-65a3-4c35-a5ee-5060d30af336">
+                <propertyInstance Id="628f7124-3e83-43b2-810d-a9baf38a8118" name="IsPartial" value="false">
+                  <elementDefinition Id="7e380531-8e05-4ec0-ac50-e53bad26964c" />
+                </propertyInstance>
+                <elementDefinition Id="af339289-f36d-4aff-a469-d69fd1c7a0f5" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="2cfd4b2e-28d9-4347-a294-74f4d1b581f9">
+                <propertyInstance Id="b40732dd-6f31-4376-8090-b9e6468e35ce" name="IsStatic" value="False">
+                  <elementDefinition Id="38a2ba4e-3cb1-413a-ba28-22d7aad51891" />
+                </propertyInstance>
+                <elementDefinition Id="889d88ca-bb53-49c8-a9bc-65900f24f09d" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="9d76268e-32b5-4fc4-aa6e-f057729ac4d8">
+                <propertyInstance Id="4fd06dd4-4039-44a6-92c1-4c7501c81f11" name="IsUnsafe" value="false">
+                  <elementDefinition Id="821ea9a9-ca21-44ad-bba9-5702176da853" />
+                </propertyInstance>
+                <elementDefinition Id="95260252-74da-41e8-821b-4ef341f8d578" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="7e4657ca-36ac-4efd-98a9-a3aae0fb8823">
+                <propertyInstance Id="95fe8c60-5031-4ba8-8d4e-83c300dc4924" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="1b044126-0083-419f-886f-fb4290f79808" />
+                </propertyInstance>
+                <elementDefinition Id="f37937c3-3de9-40bf-8f82-b75c90ec9a1d" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="b01c397d-7504-465a-b319-607d9efc761e" />
+        <generalsInternal>
+          <generalization Id="51bb680e-60ac-40d3-b582-526568d97e1c" isSubstitutable="false">
+            <classMoniker Id="84cea97a-9800-42a1-8ea9-6e7656e2fa70" LastKnownName="Filtro" />
+            <elementDefinition Id="25b3eb2f-eac4-4b31-a5f8-af95fd923daf" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="a975dd4a-9599-481d-a62e-6057a5c70036" name="_timePeriod" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="ec4cc152-653a-4d78-9634-50917947e0b1" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D_timePeriod" tag="ViewCode">
+                <elementDefinition Id="0a83d7c6-b30a-4e3a-970f-28ad6ea261a1" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="7ec60db0-e8e3-4f5b-842f-39f280d28559" name="field" profile="CSharpProfile">
+                <elementDefinition Id="e4ee41bd-1738-4505-ba39-981be1fe0f88" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e07390a4-2ea9-40dd-85dd-333e6cadc7a9">
+                    <propertyInstance Id="22819de5-f793-41d9-9117-f82ba879b976" name="ClrAttributes">
+                      <elementDefinition Id="aa4cdb41-5d8f-4613-8a17-505bc98dfb3b" />
+                    </propertyInstance>
+                    <elementDefinition Id="9ddc375b-a2e1-48a6-88f7-bbf0d8914553" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="512bc67f-7c41-4602-9f27-61af29cdc06f">
+                    <propertyInstance Id="90c5a3bc-5e7a-4e75-b766-b53f27cad2df" name="IsConst" value="false">
+                      <elementDefinition Id="cbbadfc4-d099-4b8d-992b-c4bdfdb3745f" />
+                    </propertyInstance>
+                    <elementDefinition Id="32f1ac90-1390-48e3-80e4-af16edba4329" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4442e18c-209f-46e9-ba0a-caaf2689a85b">
+                    <propertyInstance Id="d42efe01-a92f-4919-a081-d986731f55b9" name="IsNullable" value="false">
+                      <elementDefinition Id="9f2f1501-7bb8-4b79-932e-0987e5d11993" />
+                    </propertyInstance>
+                    <elementDefinition Id="a1bc8111-7067-4d4c-acf0-efa983d6a654" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f4357326-2100-46a1-aefe-efb9169dc539">
+                    <propertyInstance Id="b68f66a2-e6b3-44ba-81fe-0825903636e3" name="IsVolatile" value="false">
+                      <elementDefinition Id="9d910ec0-3b1a-4aec-98ed-293a886e31c6" />
+                    </propertyInstance>
+                    <elementDefinition Id="58ae9c9d-ada2-4911-a6b1-210c6f6b6e8b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="73c6cd0b-2dca-482d-a07f-d5fa7e4ae729">
+                    <propertyInstance Id="2f71c2aa-92ef-407e-b604-2ba6a5cb1e3f" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="d72107e0-b254-4cde-b002-febffe6c8882" />
+                    </propertyInstance>
+                    <elementDefinition Id="a074144e-563c-4942-aa60-debe5d301f5c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="2e0bb0f6-1c2b-491e-af88-9f687b414afc" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3ba49b37-fc1f-450a-ba0c-cfd0948d3504" LastKnownName="PeriodoTempo" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="1ce597ea-297b-4df2-b83b-1c553171229d" name="FiltroTemporale" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="dbbf28e0-43e8-4fcd-b1fc-4606265d4aa1" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])" tag="ViewCode">
+                <elementDefinition Id="da11b649-02c2-480f-b6ee-ad6f566fdca5" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="bbe1f07b-138a-449e-99df-147502fcab8a" name="method" profile="CSharpProfile">
+                <elementDefinition Id="2013f950-d860-4431-ba41-2f4aacdf8dc6" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b362a18d-1250-4ee4-898e-d5d8dfc7452b">
+                    <propertyInstance Id="468f2014-1387-4921-963f-293910d61447" name="ClrAttributes">
+                      <elementDefinition Id="b1227c99-f3a9-4f55-8008-6448f1d94469" />
+                    </propertyInstance>
+                    <elementDefinition Id="9ea28186-87bb-4b59-a1f5-58a967f302ba" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7d89b348-ca64-4ea0-baa7-015871d9604a">
+                    <propertyInstance Id="3a1eb74e-3a10-4db4-9e7e-ad547d9194e0" name="IsPartial" value="false">
+                      <elementDefinition Id="17db3e18-af58-4f86-8002-4f102eeb83fe" />
+                    </propertyInstance>
+                    <elementDefinition Id="3b292860-0df4-4d8c-8776-30ef2bff203f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a9c82bb0-b37a-4ecf-91b7-001e23fbc8f9">
+                    <propertyInstance Id="3781a514-8950-41b6-99ea-f28b9d720fd3" name="IsUnsafe" value="false">
+                      <elementDefinition Id="78d8b18f-9736-4cb0-8351-c06b2e5ff2bd" />
+                    </propertyInstance>
+                    <elementDefinition Id="37d9c7bb-1c7a-48d8-9bc1-6d165654556f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f15da5ca-b8e4-4112-bce4-53e091e2c066">
+                    <propertyInstance Id="e2a22657-827d-4e01-a483-c03f0e28a127" name="Inheritance" value="none">
+                      <elementDefinition Id="86bbb901-0c0f-4e35-97bd-924140379fd5" />
+                    </propertyInstance>
+                    <elementDefinition Id="76f657d8-07cd-4bde-9366-efb9e118a253" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3a049b48-be93-4e09-96bb-4bd092f12fd8">
+                    <propertyInstance Id="84e03280-e63f-4cb2-ab2e-101d8f91b941" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="743d6b2d-d510-46c4-a79d-9a67fe65b47e" />
+                    </propertyInstance>
+                    <elementDefinition Id="d5f9ee0c-0423-4256-b482-4cb45ef63f15" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1a2994ce-121a-404d-9b63-c672c2f6915b">
+                    <propertyInstance Id="93db796d-bc08-4517-a5ad-f44b4388f1eb" name="params" value="false">
+                      <elementDefinition Id="3e3bc7ba-8473-4b59-902b-f95ddd8fb3fa" />
+                    </propertyInstance>
+                    <elementDefinition Id="47dfd994-d701-4285-b409-e99d2995151c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="59d7e5f5-3e38-4332-9e74-bce6a86a1c27" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="063d18e7-bd86-447f-b238-49ee099ba3a8" name="filtro" direction="In">
+                  <referencesInternal>
+                    <reference Id="cd989c96-00c6-492a-b560-331fd060a974" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Dfiltro" tag="ViewCode">
+                      <elementDefinition Id="f1d50aa6-6e9f-4475-9c60-332023bb683d" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="ffddec97-63b6-4a9d-8197-0e5666b950df" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="63ed7d2b-0303-4c32-9b40-7207e0b92443" LastKnownName="IFiltro" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9320f90e-8098-49ea-830b-b56a1910f898" name="startDate" direction="In">
+                  <referencesInternal>
+                    <reference Id="a7128ea9-3eeb-416e-9a2e-59ebd0fb7921" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DstartDate" tag="ViewCode">
+                      <elementDefinition Id="80fda442-baba-49eb-9006-fe1bc491ef3e" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="b4353d8a-730d-431f-9c9d-da935b52af85" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="404ffc5b-9a9a-479c-89e3-4f0935efdf03" LastKnownName="DateTime" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="29380df2-d0c0-4fec-8492-95e7190b1eb5" name="endDate" direction="In">
+                  <referencesInternal>
+                    <reference Id="527850ab-cab0-4fef-8769-e5829b27d58a" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DendDate" tag="ViewCode">
+                      <elementDefinition Id="648f3641-243e-4312-aa50-00cac0a48e34" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="9d7d82df-a32f-4ce7-8359-166ffdbbe60f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="404ffc5b-9a9a-479c-89e3-4f0935efdf03" LastKnownName="DateTime" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0a4f04b5-899e-4f3c-91fd-62639495b36c" name="FiltroTemporale" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="d64a2b3f-7e4f-4ae0-abc4-82ccc180762c" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])" tag="ViewCode">
+                <elementDefinition Id="30ddc82f-f532-47f7-a205-92d56a3e7bdc" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="cb9b6433-4de0-426d-9e9a-d006e35f481f" name="method" profile="CSharpProfile">
+                <elementDefinition Id="5e7dd635-1884-4042-af8a-743c856e5f75" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3fe1879f-52fc-4a62-9c0a-eadb7455df94">
+                    <propertyInstance Id="3ff09067-02eb-4387-b4b0-13977c1e8ea8" name="ClrAttributes">
+                      <elementDefinition Id="52da3fa5-b7d7-4fdc-80ae-22efd9369d45" />
+                    </propertyInstance>
+                    <elementDefinition Id="04380d85-19d9-4c74-8a80-c32148651599" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="498bd6da-e087-4c6c-b874-c7781989cb12">
+                    <propertyInstance Id="f67625fb-ac2d-406b-9b4a-55f1c9dbbb61" name="IsPartial" value="false">
+                      <elementDefinition Id="9765e716-1233-4420-93d5-c5c98126a312" />
+                    </propertyInstance>
+                    <elementDefinition Id="766dc563-cfa6-4ef8-b816-359810b889a9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a72ff3d4-0647-4d5f-abf9-a8ca264c8f1d">
+                    <propertyInstance Id="9bdccad9-728c-4de5-ba2f-1533f08c31ff" name="IsUnsafe" value="false">
+                      <elementDefinition Id="0e186431-c49e-4f14-ad67-56ddd643e782" />
+                    </propertyInstance>
+                    <elementDefinition Id="e9fa1601-9f23-44c8-bf55-ca0b4b5380b1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4a7c3c8c-f6a6-4a29-9712-5f9a7fb639b0">
+                    <propertyInstance Id="285f941b-0b32-421f-bf5f-ad792d2f21a8" name="Inheritance" value="none">
+                      <elementDefinition Id="2274f6ec-69dd-406a-9e0d-69c1adf53b37" />
+                    </propertyInstance>
+                    <elementDefinition Id="621c6a2a-e2ea-4df0-ab3c-74edce23c158" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="14c719b4-cae2-483d-9ed9-c03948c2617c">
+                    <propertyInstance Id="50f49447-f214-48ba-afe2-3144cc087627" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="66a3a8e4-a942-4258-bdc5-f3549301ec22" />
+                    </propertyInstance>
+                    <elementDefinition Id="2e81d6ed-5cdc-433b-a7ce-45166ce7549a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8ff0bc85-a1a3-49f5-b6b4-babb80ffebee">
+                    <propertyInstance Id="e1c96995-c9ff-4e91-84a4-4f390aa7c14f" name="params" value="false">
+                      <elementDefinition Id="cc5a7f5a-8ab6-4521-9614-ddef2a8b7876" />
+                    </propertyInstance>
+                    <elementDefinition Id="e17d4156-c055-45fb-a69f-d4938cfa5f17" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="6a6a0a46-08f0-4ce4-9495-00682debf059" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="462f796f-9881-4425-b0f6-e4373b7914bc" name="filtro" direction="In">
+                  <referencesInternal>
+                    <reference Id="36f4d894-ed4a-4bd7-a079-ed922aecd6ff" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Dfiltro" tag="ViewCode">
+                      <elementDefinition Id="6060e286-1139-4835-b0ac-6145daec4221" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="6fb07e5b-78f1-400d-b856-2a7dde4c5aca" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="63ed7d2b-0303-4c32-9b40-7207e0b92443" LastKnownName="IFiltro" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="dcafd994-022f-411e-9d68-0423aac74e4c" name="date" direction="In">
+                  <referencesInternal>
+                    <reference Id="c642199a-f87a-4ee8-bcd1-923b7d108e49" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Ddate" tag="ViewCode">
+                      <elementDefinition Id="82faeefc-b2cf-4ca3-948a-a1ca45ae9a1e" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="6366325c-2800-48ce-8d50-e61e106088e2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="404ffc5b-9a9a-479c-89e3-4f0935efdf03" LastKnownName="DateTime" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="7fae20a3-cad8-4865-b29d-092b6b7b7d8a" name="StrategiaFiltro" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="be44fa7e-4628-4017-8c43-eb84c22198b2" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3DStrategiaFiltro" tag="ViewCode">
+                <elementDefinition Id="dcd16010-f04a-4c10-8827-a3a594e2d1d7" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="6cb02ccb-bdac-4c57-a3b9-dbd08d25ea60" name="method" profile="CSharpProfile">
+                <elementDefinition Id="9fd574e4-f9cd-44b5-a33f-053781f12be6" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fd0274bf-3770-407a-98ec-8f1bc61beb57">
+                    <propertyInstance Id="70475935-be89-43b7-8e74-18e8cfb7f050" name="ClrAttributes">
+                      <elementDefinition Id="cefb625b-160d-4bd9-9b0f-1252329b40ba" />
+                    </propertyInstance>
+                    <elementDefinition Id="51a7e883-dd52-4f4e-8a2e-e2a9fc45efe6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="202b72d8-da5f-4526-b355-74e2466a2d10">
+                    <propertyInstance Id="893d3621-ebd4-46f3-b86d-b3b969df4f15" name="IsPartial" value="false">
+                      <elementDefinition Id="2a29e7a1-383f-4916-ba33-9af0b6ef9ff6" />
+                    </propertyInstance>
+                    <elementDefinition Id="2341e06a-3a6d-4fb2-a3cc-e24f37dca117" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0078653e-e5b0-481f-ad8c-5b567a34d45e">
+                    <propertyInstance Id="a2f2c4b6-5782-4b6a-b495-87ec96d42a80" name="IsUnsafe" value="false">
+                      <elementDefinition Id="804636af-3121-4da8-9d86-1ef3d792958f" />
+                    </propertyInstance>
+                    <elementDefinition Id="13462a9f-5c6b-4259-aa02-cf037ace5848" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="93696f57-5291-4502-930b-e8116879d7ee">
+                    <propertyInstance Id="b035653a-3e30-4b9b-b36c-e507305d1907" name="Inheritance" value="none">
+                      <elementDefinition Id="2a317648-b530-4df2-bfd5-0e1e6065fb07" />
+                    </propertyInstance>
+                    <elementDefinition Id="a4f94045-a70c-43e9-a9dd-5b428ded08f5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8e1a7484-055b-4b52-be65-d46438cf3c02">
+                    <propertyInstance Id="25a9e789-a79d-482c-80b6-36a2a7dbfdd6" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="5e5ffe03-01f7-49bc-8699-5c426ec0a676" />
+                    </propertyInstance>
+                    <elementDefinition Id="e9783b22-d5ff-47b0-9da7-db95954639a8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4a4845cf-0ad2-4607-9784-693b65e337b3">
+                    <propertyInstance Id="f92c425c-6525-43d3-bc22-309bc02a1381" name="params" value="false">
+                      <elementDefinition Id="ef875517-0fb7-401c-991a-bec1a40d3320" />
+                    </propertyInstance>
+                    <elementDefinition Id="7fabf2c0-85e1-4783-9d1f-7533a0196269" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="0707f387-190e-4702-b271-603d3c8e0ee4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c8077bae-b831-48de-bb62-4eca206bae15" direction="Return">
+                  <elementDefinition Id="5b855e1b-1f6a-4d74-a18d-bef0c3fa5fb8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6bba13bd-9bcd-44cb-b784-1c60d01c8bfb" LastKnownName="Func&lt;Evento‎, Boolean‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="3ba49b37-fc1f-450a-ba0c-cfd0948d3504" name="PeriodoTempo" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::DynamiCal::Model::PeriodoTempo">
+        <elementDefinition Id="289d3679-90db-49ae-bace-5344f351a2ca" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="404ffc5b-9a9a-479c-89e3-4f0935efdf03" name="DateTime" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::System::DateTime">
+        <elementDefinition Id="ac05f9ee-4535-4741-b7d4-c5cb0c00b6d3" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="83af3bc7-fe29-4d4b-82f2-700816a136ae" name="FiltroCalendario" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="458fb8bd-d311-4925-921a-1ff749274092" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario" tag="ViewCode">
+            <elementDefinition Id="3ef5d899-78b0-471a-adf6-bc28177d2ea6" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="9cad7a93-ae41-4e9d-b239-16a4a78b0915" name="class" profile="CSharpProfile">
+            <elementDefinition Id="e37b82cd-dcd1-46e4-9914-cec9961b771f" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="d41d088d-d571-4e49-aa82-e4d26e368082">
+                <propertyInstance Id="da8fe263-0f17-43d7-a7b2-c1c5115f8b33" name="ClrAttributes">
+                  <elementDefinition Id="e073ba77-703d-435f-88bf-e52d7e2b80a4" />
+                </propertyInstance>
+                <elementDefinition Id="7afbd5ae-6b54-4ba6-853e-186d245fe428" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="92a121f6-7d80-4ce0-9ad9-35ac5f27871e">
+                <propertyInstance Id="9dbc270d-04da-4703-a4c0-dc378c3182e6" name="IsPartial" value="false">
+                  <elementDefinition Id="459e60ed-cfaf-4a15-a2de-a2ada5ba51ff" />
+                </propertyInstance>
+                <elementDefinition Id="14fb6c07-4b24-4002-8ab1-289ba5aa2022" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="6ac11ad0-00f4-45a6-b4b9-45fceabc143a">
+                <propertyInstance Id="399baad6-a7ff-433a-b5ec-005dba96f7f2" name="IsStatic" value="False">
+                  <elementDefinition Id="e3e430b8-24e3-42de-8c8d-3247e93c6f49" />
+                </propertyInstance>
+                <elementDefinition Id="864fd6fd-2e70-4189-94ab-99f20522cfa2" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="97c5ab9a-8ddc-4e8d-974f-1acacd4283fd">
+                <propertyInstance Id="1fb457a4-8271-4840-9e7b-4f19bc3b52e6" name="IsUnsafe" value="false">
+                  <elementDefinition Id="a2c04a93-690d-4da8-b3bc-11fa641dd761" />
+                </propertyInstance>
+                <elementDefinition Id="98803a98-6262-4e58-9ed2-45261548f2b8" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="ffb7629c-eb30-4143-ac20-6acf97d56b24">
+                <propertyInstance Id="621c4306-e0b9-4684-be89-caca6624c043" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="b4c9f064-6cd3-46f9-a4a2-cacfa2c242cc" />
+                </propertyInstance>
+                <elementDefinition Id="15844474-19ec-4457-981c-38ba1a6601c0" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="31484759-70b2-4633-95c0-dc80d28917ed" />
+        <generalsInternal>
+          <generalization Id="c236fa11-7c22-4555-8430-8db336ceba0d" isSubstitutable="false">
+            <classMoniker Id="84cea97a-9800-42a1-8ea9-6e7656e2fa70" LastKnownName="Filtro" />
+            <elementDefinition Id="e094a6fb-63f1-455c-ae15-d50fb4226fa1" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="029a4cfd-0d78-4c46-9593-6c4993d94d0f" name="_calendari" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="a3d119cc-4391-42da-ae6d-51380f8094f7" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D_calendari" tag="ViewCode">
+                <elementDefinition Id="1fdc780b-12b3-459a-9387-f6eb1379c719" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="6ad56127-012a-428d-afa4-b71513df88f2" name="field" profile="CSharpProfile">
+                <elementDefinition Id="434477f7-04c0-48c1-899d-10a6997a75d2" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="61208571-dddd-4d8b-ae02-187742d4451f">
+                    <propertyInstance Id="09c827bc-f533-435f-bce5-ab00534748b6" name="ClrAttributes">
+                      <elementDefinition Id="8c400ef3-5791-4de6-b81f-2ee006ddc0ba" />
+                    </propertyInstance>
+                    <elementDefinition Id="cc3bee53-052c-4f72-b095-8bf7c228c87c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a1631fdf-f36d-4564-8723-948f4b65bd07">
+                    <propertyInstance Id="001705f2-a2d3-46e0-ade7-c117c1db0578" name="IsConst" value="false">
+                      <elementDefinition Id="91dc6ec0-682c-4eb3-9f1a-d92836c48f0a" />
+                    </propertyInstance>
+                    <elementDefinition Id="6160be02-3325-4b1f-b08d-d85f76bd6df4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1b8923f8-ed26-4a85-952a-813862395a34">
+                    <propertyInstance Id="fc171547-47fe-4a79-8beb-bf0162c068f9" name="IsNullable" value="false">
+                      <elementDefinition Id="6378b7d4-4967-4be2-af27-416d6d0aff4f" />
+                    </propertyInstance>
+                    <elementDefinition Id="6154326a-769a-4619-8746-da273854f5d8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c60f4853-2f4f-4ea3-bfc1-2c1f66942cd8">
+                    <propertyInstance Id="2d437203-cece-4c8d-8284-1796356a0765" name="IsVolatile" value="false">
+                      <elementDefinition Id="39ab4f1f-28a3-4eec-80df-1424ddae5a54" />
+                    </propertyInstance>
+                    <elementDefinition Id="1ae91c14-ceaf-4a8e-831b-b254bd67e7ea" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="afb53a29-a1b0-43a3-9357-8eab0b796061">
+                    <propertyInstance Id="14850714-3077-4a37-8673-6012d44ff7b6" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="fe235f10-47ff-41e0-83fb-59c2c09e1db8" />
+                    </propertyInstance>
+                    <elementDefinition Id="a2e4ca9e-a457-440e-9cd6-4e0c8c9685ff" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="7f09d217-ff32-41be-a0ad-6164f3d1cc2f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9f9fcd75-6db9-407f-a898-84429a29548c" LastKnownName="IEnumerable&lt;Calendario‎&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="85bff7cb-f5ea-415e-878b-96945ec64c1f" name="FiltroCalendario" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="bdca348e-7128-497d-98b5-2e126823dc54" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)])" tag="ViewCode">
+                <elementDefinition Id="00e0c03d-564e-42b7-a601-880f7a2e41e7" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="37743570-48a4-4396-9bdd-2903c5fde529" name="method" profile="CSharpProfile">
+                <elementDefinition Id="07aa31f0-fb59-4aed-8caf-3c960ea39bce" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6ed2ef70-85c5-406a-b6fd-dcc2a1b66d93">
+                    <propertyInstance Id="f2430424-c345-4892-856b-63fa234b3bc9" name="ClrAttributes">
+                      <elementDefinition Id="0b2853fe-b33a-4952-b403-11b6e073ec07" />
+                    </propertyInstance>
+                    <elementDefinition Id="0968e099-4b65-4bfd-adfa-188c3b332466" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="abf3f160-926d-43a4-a77d-b2bca9d41ace">
+                    <propertyInstance Id="b0ef15a1-6ce6-43b1-963f-881db6fb2113" name="IsPartial" value="false">
+                      <elementDefinition Id="db3c867f-afb1-4f45-9ce3-6bbbf49d3a37" />
+                    </propertyInstance>
+                    <elementDefinition Id="00c13ff8-36df-4cc4-bcbe-1d32bd950051" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="89d16cac-6b7b-4359-8001-b0b157d950ab">
+                    <propertyInstance Id="f620b97a-9132-46db-8572-9facfe199578" name="IsUnsafe" value="false">
+                      <elementDefinition Id="11a58f36-cf57-4e4d-afd2-8d9935113d3b" />
+                    </propertyInstance>
+                    <elementDefinition Id="353a00ce-fe85-45b0-bdc9-3660976749fa" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f7e8343b-5f1a-49a1-b3c4-067f9b08eac0">
+                    <propertyInstance Id="004a7675-dee4-483d-8304-39870d0db073" name="Inheritance" value="none">
+                      <elementDefinition Id="89863250-1704-4010-ae3c-16193d01a381" />
+                    </propertyInstance>
+                    <elementDefinition Id="652757eb-bd2a-4fc5-854b-7ab6bc16f127" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8c3087ae-da60-40ee-9fb4-5c4322e6f0b5">
+                    <propertyInstance Id="6ff176c8-db03-4df5-83c5-71774961df6e" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="c7820c96-dec9-4a71-9813-bad7981c0e90" />
+                    </propertyInstance>
+                    <elementDefinition Id="8cb307e9-39f3-433b-996e-380bee02d48a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d610631b-2f48-49c6-9e37-68c972d90e93">
+                    <propertyInstance Id="4c261cd1-967c-4bbb-a009-9f8913e98e5f" name="params" value="false">
+                      <elementDefinition Id="2d1c8b6d-5720-40fd-9062-255e057d1f41" />
+                    </propertyInstance>
+                    <elementDefinition Id="b231091d-f53f-4c08-a8b0-75972b969d1a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="9dd8db9f-33e5-4517-8bd0-62568dcc735d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e93a885a-ea96-4f68-bf5c-6f7a4601b0ba" name="filtro" direction="In">
+                  <referencesInternal>
+                    <reference Id="dec71a01-f32c-45d0-822c-3561efeda02e" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]) ParameterIdentifier%3Dfiltro" tag="ViewCode">
+                      <elementDefinition Id="525dd7e9-930a-4b93-96c1-995de6d46a83" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="76e2b406-41e3-4420-b9f4-437f2b64adbe" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="63ed7d2b-0303-4c32-9b40-7207e0b92443" LastKnownName="IFiltro" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="de1da4e4-b5c8-4979-a90d-a7967360363c" name="calendario" direction="In">
+                  <referencesInternal>
+                    <reference Id="f93e2100-0c93-4737-b83d-d8db9f0a0f7d" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]) ParameterIdentifier%3Dcalendario" tag="ViewCode">
+                      <elementDefinition Id="1c3effc3-62dd-4db3-a8ed-1a8056bf1418" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="ac8451ab-78a2-436d-8f28-6bdf2302969a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="2cc26974-f85f-441a-bb44-3fac0007c23d" LastKnownName="Calendario" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="6ec32f2f-d2cd-4c8e-a6e8-63af39453926" name="StrategiaFiltro" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="40a4d660-b67d-468e-bfae-9b8537bcb16e" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3DStrategiaFiltro" tag="ViewCode">
+                <elementDefinition Id="765dd1a9-a4ae-474b-8ef5-b26ea21ee0fc" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="d727be55-f1cb-4689-91ff-4943b9bfa75e" name="method" profile="CSharpProfile">
+                <elementDefinition Id="52026d2d-519e-4bd5-9762-ef1be80b2c53" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fd6ee530-eb3d-404b-9559-25cf6b18ba90">
+                    <propertyInstance Id="3018657a-9000-47e6-b6f9-3db74c301d0d" name="ClrAttributes">
+                      <elementDefinition Id="b1315e90-58f7-4eaf-abd7-472a70b2fd97" />
+                    </propertyInstance>
+                    <elementDefinition Id="1931e6a3-91fc-4505-80dc-695576128f25" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2bbbcd10-2693-4a50-b9d0-18c1b0b588eb">
+                    <propertyInstance Id="e0701224-6a1c-404b-8e81-ca9afc73f70a" name="IsPartial" value="false">
+                      <elementDefinition Id="1bd2f5d8-5e27-4c6d-8e75-48b681e33d98" />
+                    </propertyInstance>
+                    <elementDefinition Id="7995ace8-3c10-44e9-a053-c69bea108f6f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="961511a2-4b51-46ae-b32c-948716614e7d">
+                    <propertyInstance Id="801834ee-549b-48a5-8913-f0fdc12bc680" name="IsUnsafe" value="false">
+                      <elementDefinition Id="d944da1e-3c2a-46b9-8cd1-54d5accd978d" />
+                    </propertyInstance>
+                    <elementDefinition Id="236119bf-3207-4c9f-aedf-9a61fa71e494" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="da2f00e3-93de-493f-b7f0-2bd0a24c1e61">
+                    <propertyInstance Id="81ca7809-23f3-40ba-be43-f7ae83352936" name="Inheritance" value="none">
+                      <elementDefinition Id="dcd0098c-3baf-4a76-80fe-8e3de5fae9ca" />
+                    </propertyInstance>
+                    <elementDefinition Id="c270193d-9115-4c0a-a0b1-a1c76db8008c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e5c1f619-066a-434f-a9d3-4d44d202c436">
+                    <propertyInstance Id="b072c8f8-de04-4f02-8165-c065ce34c1e4" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="fbaa0908-03fd-478b-8d31-c8d0aa68bf23" />
+                    </propertyInstance>
+                    <elementDefinition Id="a28f9d10-fc77-435f-b44f-06a2cb8226e8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="aff6b3ef-e89f-4d06-9ee4-79f3ec3a3362">
+                    <propertyInstance Id="3d84e1b7-cc5d-4459-9bb2-d1ba240b1dcb" name="params" value="false">
+                      <elementDefinition Id="2e36ac9e-285d-4c3a-ad60-6aaf5b50c9cb" />
+                    </propertyInstance>
+                    <elementDefinition Id="7532ec37-bc60-4221-b584-99dd94106894" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="6276e595-b577-4ba8-a756-4e12a85ed2d8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2449ab43-a303-472a-80da-b23c36ff79cb" direction="Return">
+                  <elementDefinition Id="8c46b083-4711-402a-b417-32a58e2da0fb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6bba13bd-9bcd-44cb-b784-1c60d01c8bfb" LastKnownName="Func&lt;Evento‎, Boolean‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="dff8e6ea-ed3a-4c60-beb2-f286deae09b6" name="FiltroCalendario" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="c4df7731-d4af-4c15-84b0-e7cdb3af2b2d" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))])" tag="ViewCode">
+                <elementDefinition Id="eea8a150-244a-485f-85ab-a8a7d45d928f" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="d940cf6c-c7bc-482b-b7d1-cc2eaa9edaba" name="method" profile="CSharpProfile">
+                <elementDefinition Id="0ae5ab75-379b-45ec-8f9f-39ec2a4631f0" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="4ac6f2a8-807a-4d27-aa3e-a922db785eeb">
+                    <propertyInstance Id="ef022a4c-3298-4abb-a6f3-4f26eec8007e" name="ClrAttributes">
+                      <elementDefinition Id="9fc1986b-58cc-455c-a912-2c1f35777a33" />
+                    </propertyInstance>
+                    <elementDefinition Id="503729e6-dc33-4233-808d-defecd246e87" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6bcae126-4c0b-428a-9926-48f2f25dd6b6">
+                    <propertyInstance Id="fe933c5a-f2d3-4098-ba6d-15fc469b9956" name="IsPartial" value="false">
+                      <elementDefinition Id="5f05c296-8591-46a6-b476-db1f597f0e01" />
+                    </propertyInstance>
+                    <elementDefinition Id="4b95e71c-bff2-4109-9f0e-0d2d8e3e9acc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="685f39e4-cdcc-4a0b-a0b5-7b2ce5272e4b">
+                    <propertyInstance Id="ca188220-2766-4e9d-af09-4924b7439244" name="IsUnsafe" value="false">
+                      <elementDefinition Id="0e90c44f-988c-4bb1-9f02-8c4d63883217" />
+                    </propertyInstance>
+                    <elementDefinition Id="1381d4d5-d26c-4178-87b4-38270c57bba1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8008a679-7c3e-40cf-885a-3480255d40e5">
+                    <propertyInstance Id="e3862627-cd88-460f-976e-ca7ac9d9b527" name="Inheritance" value="none">
+                      <elementDefinition Id="41e310c1-4a16-46f5-80cb-376e6d48463c" />
+                    </propertyInstance>
+                    <elementDefinition Id="bdb47451-7d06-4eec-aab6-9688ee46787a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="89ab5ca7-d74e-41fc-a5c1-9a1a4acfc2bf">
+                    <propertyInstance Id="5baddd2d-4c05-4c50-bec8-c379592e8d25" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="6b507227-b1fc-40ba-bafc-22f900f5507e" />
+                    </propertyInstance>
+                    <elementDefinition Id="dffaebcc-90a3-46c8-8e79-a226b4bd1350" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1bc647c0-3392-4224-a467-082d95e804b0">
+                    <propertyInstance Id="ca85b0f6-737c-46ed-bdff-d99d749e9925" name="params" value="false">
+                      <elementDefinition Id="7f130cb0-4da0-4ffb-adc9-f6c3f184152f" />
+                    </propertyInstance>
+                    <elementDefinition Id="dd741e39-1dd0-4b29-a79d-846238a6ef6e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="bb6cacb7-901c-4ba2-a636-c85ad2f18447" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="bc255981-9ab6-46c7-ab89-227ee451ac8b" name="filtro" direction="In">
+                  <referencesInternal>
+                    <reference Id="1a339b86-ea0f-4687-8b22-a7d25b83dd06" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))]) ParameterIdentifier%3Dfiltro" tag="ViewCode">
+                      <elementDefinition Id="b6c66e11-46b1-4bcb-b241-e301af7f5364" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="c32adcb0-611f-4c86-80e3-b835be7c2a43" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="63ed7d2b-0303-4c32-9b40-7207e0b92443" LastKnownName="IFiltro" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="22593d9a-aec9-4896-bc2f-3fe60772f114" name="calendari" direction="In">
+                  <referencesInternal>
+                    <reference Id="20b7206e-570f-4bfc-8bde-1ca8040c6bd7" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))]) ParameterIdentifier%3Dcalendari" tag="ViewCode">
+                      <elementDefinition Id="4ddea2bc-6ec3-42b6-affb-2a8773217882" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="28af7d0c-d5ec-4203-ba81-fdae4349b50f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="9f9fcd75-6db9-407f-a898-84429a29548c" LastKnownName="IEnumerable&lt;Calendario‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="9f9fcd75-6db9-407f-a898-84429a29548c" name="IEnumerable&lt;Calendario‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::System::Collections::Generic::IEnumerable&lt;Calendario‎&gt;">
+        <elementDefinition Id="685ad2f7-3e12-40ab-89c4-b1d5db493f4a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2cc26974-f85f-441a-bb44-3fac0007c23d" name="Calendario" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::DynamiCal::Model::Calendars::Calendario">
+        <elementDefinition Id="acfa17db-a3a5-4fb3-ba58-e6cc3e173a0a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="2bda6049-e800-4758-80ef-96e9a29af1c1" name="FiltroModello" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="01ac8236-72ee-4f18-97a7-fc88e937b082" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello" tag="ViewCode">
+            <elementDefinition Id="d143e77f-09d1-4e11-91b3-95ad55bd5ebd" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="04e9ab2a-6d34-4f52-bbb1-e5e200146649" name="class" profile="CSharpProfile">
+            <elementDefinition Id="5b72c63f-a572-412c-b9bd-6b9e84cb8af9" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="5dceef3e-ade5-4c30-9bbc-f253fa501d11">
+                <propertyInstance Id="c41daed8-1a06-47cc-bdbc-5996f5ba93f8" name="ClrAttributes">
+                  <elementDefinition Id="5aaab559-1b8b-4d1c-8b75-17c76d291138" />
+                </propertyInstance>
+                <elementDefinition Id="129e6c02-718f-4238-bf2e-a76b1e321ca9" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="cdb24fc8-2baf-4482-ab3f-84d020ebd58d">
+                <propertyInstance Id="71170e11-652a-4298-850d-bf8e43564802" name="IsPartial" value="false">
+                  <elementDefinition Id="ba066705-55de-48a0-bad6-a57ec10d2d88" />
+                </propertyInstance>
+                <elementDefinition Id="899a9c51-c5c4-4e23-8b81-440ab6fe69a0" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="302f7a1c-571b-41ae-baee-328e09db5b1a">
+                <propertyInstance Id="01ded998-3036-4963-9cce-99c529390a30" name="IsStatic" value="False">
+                  <elementDefinition Id="559d17c7-0508-424f-861f-008f08af2775" />
+                </propertyInstance>
+                <elementDefinition Id="a0f7ee3d-11a1-473b-ad7a-e39d151445e9" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="e806978f-a6c1-4b80-ab5f-bacfeab9ec30">
+                <propertyInstance Id="92e2101e-8c02-457f-996f-8f5ca817159e" name="IsUnsafe" value="false">
+                  <elementDefinition Id="d80be874-a980-48c5-956f-45c93fe969a9" />
+                </propertyInstance>
+                <elementDefinition Id="d6f6515d-bc7b-4996-83d4-8715a2ad6ae3" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="6ccb3635-c938-443d-9905-931d7a6f9da6">
+                <propertyInstance Id="9d645064-ee0b-449c-9a58-98e4aa6a2894" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="63ded28a-9c21-4a02-a058-a80ee49d79c9" />
+                </propertyInstance>
+                <elementDefinition Id="f0be00ee-f98e-419d-a990-872489e316f3" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="f2e2b4a8-be65-40f5-924a-4b65929fa18a" />
+        <generalsInternal>
+          <generalization Id="20e31afd-d361-4910-bf7c-9403d504c837" isSubstitutable="false">
+            <classMoniker Id="84cea97a-9800-42a1-8ea9-6e7656e2fa70" LastKnownName="Filtro" />
+            <elementDefinition Id="cfa39772-ba6d-4909-930e-fbabb0dbcb90" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="0582d49c-8e32-4b9a-8571-54773c66817d" name="_modelli" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <referencesInternal>
+              <reference Id="b2ab23f3-fb7c-40d4-9aee-ea18863e7319" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D_modelli" tag="ViewCode">
+                <elementDefinition Id="216075d2-77dc-4c01-933d-e3a9bce77416" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="15c3929f-0701-4f6a-a111-90d54c64139e" name="field" profile="CSharpProfile">
+                <elementDefinition Id="6d9644c7-c71e-429c-881d-d976696149d1" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7ed0c13e-ca99-451e-80b5-ca4e26535ca3">
+                    <propertyInstance Id="88234b78-83fc-48dd-acfb-d1d67c417196" name="ClrAttributes">
+                      <elementDefinition Id="ea5aee6a-f314-4100-bf03-1ae160a074ce" />
+                    </propertyInstance>
+                    <elementDefinition Id="e38a4a95-aff5-426d-9a7e-830322efdedb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="991ae6c8-90f9-4350-ae27-fa2c8bf4a4e4">
+                    <propertyInstance Id="7dd4c1ca-e5b0-40b8-8197-86206be271c1" name="IsConst" value="false">
+                      <elementDefinition Id="f13a53c3-68af-4546-b943-996e0bac0723" />
+                    </propertyInstance>
+                    <elementDefinition Id="80e1a763-dfe1-4f61-b9a3-87b34ff241bc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="256ce166-5190-4f8b-9414-f3f36910b416">
+                    <propertyInstance Id="d5725f5e-82f4-4bec-a50f-40f0dd5f9b53" name="IsNullable" value="false">
+                      <elementDefinition Id="3c837c09-d0a6-461b-9aa1-44e12aa7fe09" />
+                    </propertyInstance>
+                    <elementDefinition Id="b41b1894-20d4-4043-9ee0-cb466d5a5f0e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1b0ebca6-b338-4841-85e9-295ef8f95713">
+                    <propertyInstance Id="43204c68-d29d-4dd8-8bbf-8e63c6e985a5" name="IsVolatile" value="false">
+                      <elementDefinition Id="1d7a257e-0e3b-4651-9f5d-f35c20eea39e" />
+                    </propertyInstance>
+                    <elementDefinition Id="9e8f2f38-c4a4-45d0-a13c-14d153f46286" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a80909da-1d02-4e14-b2c6-263476636a4b">
+                    <propertyInstance Id="b6507e2e-948b-439a-86f8-6f4d1338be24" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="02eb8010-7e40-4957-810b-6d13157d7816" />
+                    </propertyInstance>
+                    <elementDefinition Id="b3d42664-f3eb-414b-a7e8-46c8afc93bd2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="0b1951ec-7f73-48dc-8641-ef68ae4dfd57" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0a470532-31f4-4196-b010-b17a2e3c1c40" LastKnownName="IEnumerable&lt;ModelloEvento‎&gt;" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="ed06c407-da41-4603-9292-afb6ec7d915d" name="FiltroModello" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="f85228c5-4ae7-4224-86b2-56e386488f56" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)])" tag="ViewCode">
+                <elementDefinition Id="d0198fd6-8de2-46ba-8c48-fc85243945d3" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="badd679e-d849-4f84-9de9-2f037a53359c" name="method" profile="CSharpProfile">
+                <elementDefinition Id="c589ce52-3b84-4e15-8fe6-af361f47dee5" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c23b74cf-1959-4049-ab32-e31117d21539">
+                    <propertyInstance Id="12c0ba57-1256-4e98-87e7-2d513442df91" name="ClrAttributes">
+                      <elementDefinition Id="5a177b08-a04d-4c66-8377-1c13f0a99029" />
+                    </propertyInstance>
+                    <elementDefinition Id="ab1ff893-7d11-42bb-ad2b-0517842192b6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5c93afe1-cfd0-4d88-9816-362c078d960c">
+                    <propertyInstance Id="c195a3bd-f78a-4444-81ea-673af72a02d6" name="IsPartial" value="false">
+                      <elementDefinition Id="62248c83-54d8-4616-af96-fc8247efdc1c" />
+                    </propertyInstance>
+                    <elementDefinition Id="34ae17c9-b285-4f40-b9b1-a45c4fb56b94" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9d1df360-9114-4ca8-9133-1dc4bf054322">
+                    <propertyInstance Id="6fc70c79-3660-42ff-8a0f-2ce677a0e7e7" name="IsUnsafe" value="false">
+                      <elementDefinition Id="2e0a3223-4c06-4c83-931c-ae226b989de7" />
+                    </propertyInstance>
+                    <elementDefinition Id="adec781c-58a9-45b2-a091-dbe2b823c3ec" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e610f545-f6a0-44bc-945f-1709ce727d31">
+                    <propertyInstance Id="3762be81-c9da-465d-afaa-ea1ec8e5b444" name="Inheritance" value="none">
+                      <elementDefinition Id="e9fd3818-c56e-4e8c-a4a0-f74909238903" />
+                    </propertyInstance>
+                    <elementDefinition Id="930e7983-913a-4376-b33d-6ab805477aa6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9a240934-d9e1-4e95-a892-3fdf94974d3f">
+                    <propertyInstance Id="7d5674e4-041b-4f1b-a8c0-ce958af5ad15" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="6166718e-8ab7-4ffb-a217-6d29ccdfa4da" />
+                    </propertyInstance>
+                    <elementDefinition Id="fc177143-8885-4912-9f84-e6d8e1ad75d2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c2f119b5-a46a-40a9-bf23-6225cf9a7dcc">
+                    <propertyInstance Id="ccfc8663-d30b-4ff1-ad98-874a57eced3e" name="params" value="false">
+                      <elementDefinition Id="05cde63a-9d9a-42dd-b18b-5398e5a7ab92" />
+                    </propertyInstance>
+                    <elementDefinition Id="2a24eee6-f1ce-4b81-8130-d634e5c60d18" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="b1b6ab13-b594-426a-bea8-746bf170771d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a0ba25eb-a1e7-4655-919a-fa8c61f05cf9" name="filtro" direction="In">
+                  <referencesInternal>
+                    <reference Id="acf70aa2-985d-47fa-8d0f-573e921d7f1a" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]) ParameterIdentifier%3Dfiltro" tag="ViewCode">
+                      <elementDefinition Id="db5a1876-b00a-45f3-a245-d67ce862922e" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="678e2e05-06d9-4e7b-9fcf-df06708253bf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="63ed7d2b-0303-4c32-9b40-7207e0b92443" LastKnownName="IFiltro" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8db75e1d-872e-45e9-aa4e-43e2d77b3fde" name="modello" direction="In">
+                  <referencesInternal>
+                    <reference Id="c56eb8cf-5952-4de3-a82d-f74c11846ded" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]) ParameterIdentifier%3Dmodello" tag="ViewCode">
+                      <elementDefinition Id="0f8555df-fcbf-4f3e-a001-69177eae76d0" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="0c05edb8-5894-43e3-b3ab-8f01f4f3d8d8" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="57fa477f-8173-4918-a3b1-0d7257a2b2c3" LastKnownName="ModelloEvento" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="ede40846-bae5-47b2-9bee-45b8b29fbc3c" name="StrategiaFiltro" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="23ca7446-5e19-4baa-b98b-124e9d08c2c5" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3DStrategiaFiltro" tag="ViewCode">
+                <elementDefinition Id="ce3b0ece-b3df-4ac8-9bb9-57076db7e6c1" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="1d260455-6fce-4ef5-8850-5079b6801a65" name="method" profile="CSharpProfile">
+                <elementDefinition Id="5565d5eb-138a-45dd-965d-d89a3b21e13d" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d4a92bbc-3dfc-4814-a470-b709df2a7abd">
+                    <propertyInstance Id="1aeb36c9-a50c-4a9c-b6cf-0a9f8198e2f9" name="ClrAttributes">
+                      <elementDefinition Id="548cc6ef-20e1-4153-b40c-ad4a3d8799a7" />
+                    </propertyInstance>
+                    <elementDefinition Id="e4b1752f-7a9f-45e5-b84f-0e997b1f2ad6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a3abb9a8-1ccb-42bf-8ff4-6c5c8f4ce97b">
+                    <propertyInstance Id="65a72abf-b4f1-49f0-b792-071ad6cfd059" name="IsPartial" value="false">
+                      <elementDefinition Id="f901e1b3-3177-4f87-8743-262171d87f1e" />
+                    </propertyInstance>
+                    <elementDefinition Id="a130f320-1805-4153-9e36-de58af0febbc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="da97068c-8d06-4d18-adc6-d6636d3dc5b8">
+                    <propertyInstance Id="645061e8-ac14-4e7c-b00e-cf42e73480c3" name="IsUnsafe" value="false">
+                      <elementDefinition Id="d3e45d83-9947-48f6-a51c-9e242c86ebf8" />
+                    </propertyInstance>
+                    <elementDefinition Id="91030d55-a4cd-4b8b-8826-eb5dd9399b10" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6b9d8663-c715-4db1-bd5d-9e521e05895a">
+                    <propertyInstance Id="d5417311-71ce-46ba-aa15-095053914cfe" name="Inheritance" value="none">
+                      <elementDefinition Id="9d5fc35a-f55d-40aa-8834-0fe204b650cc" />
+                    </propertyInstance>
+                    <elementDefinition Id="5c2c6268-50be-4f7b-a315-ddd973b5cb43" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="72749713-9b3c-4a46-91e9-e67dff4231c5">
+                    <propertyInstance Id="bc2b4b7f-bd80-4d95-ad96-276aff805943" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="ccee5f6e-a041-41d1-ad34-fd4f6cdb2640" />
+                    </propertyInstance>
+                    <elementDefinition Id="059fcd25-75c8-4e21-9989-e0a8e87aef45" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b5b1bd1b-0794-41ad-a121-0c88f387b321">
+                    <propertyInstance Id="fd086a4c-9e03-4094-9c42-3bf1fab33bc3" name="params" value="false">
+                      <elementDefinition Id="8d3ad023-4cf8-407c-ae4e-1fd19f2cc534" />
+                    </propertyInstance>
+                    <elementDefinition Id="ff79722f-bc95-47fd-9f69-089458212041" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="fa28fc18-a7ea-487f-80c5-ff8b45c8557b" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a37cc045-a7c5-4543-ab46-34d0d5d95542" direction="Return">
+                  <elementDefinition Id="122ba908-4b2f-4b21-ad43-807880d765f4" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="6bba13bd-9bcd-44cb-b784-1c60d01c8bfb" LastKnownName="Func&lt;Evento‎, Boolean‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="587c5934-2713-4c65-8e09-a3f584a8ed4d" name="FiltroModello" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="a145b98d-3d3a-4cc1-8c40-b286a0af7bf9" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))])" tag="ViewCode">
+                <elementDefinition Id="e45b817a-8752-4e27-b589-1098fad488cb" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="53f75e05-d248-4358-ab6a-26f3c178eda4" name="method" profile="CSharpProfile">
+                <elementDefinition Id="e521a384-4f67-46e7-a072-3d5762aadb46" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="629350c1-0e91-491c-b042-d347408af95f">
+                    <propertyInstance Id="cc7d25ce-ebb4-4a23-b4c3-b0c72d6af1af" name="ClrAttributes">
+                      <elementDefinition Id="8d89042d-fec3-41ff-b598-37111a3d3231" />
+                    </propertyInstance>
+                    <elementDefinition Id="90cb29e1-72b0-441e-91c2-f9ef99e8c07e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e370116b-eeb9-4fe9-b053-62ad7399e6b6">
+                    <propertyInstance Id="b7e35275-43ca-42b6-8193-047429ed3452" name="IsPartial" value="false">
+                      <elementDefinition Id="df9e6de4-87a1-404e-89bf-60b57f7f099c" />
+                    </propertyInstance>
+                    <elementDefinition Id="a9b4a0b6-08e6-49a5-a182-948d8bdbc422" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="198bde32-cf61-4392-9aad-902abcdae2ba">
+                    <propertyInstance Id="966a6383-6166-4e3e-8a07-6ec8034e67cb" name="IsUnsafe" value="false">
+                      <elementDefinition Id="cf1498a5-6d8e-4af8-b7b6-1fae38503948" />
+                    </propertyInstance>
+                    <elementDefinition Id="547ee105-282d-49e9-8b84-aca2ae4d16f9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="473b4a0e-862d-45de-a3e2-f638715d4f6a">
+                    <propertyInstance Id="e451eedd-6564-470d-9618-9c8b1ce16c3c" name="Inheritance" value="none">
+                      <elementDefinition Id="0d19abe1-3d29-4da6-8b27-5823ed1e8f31" />
+                    </propertyInstance>
+                    <elementDefinition Id="5ee87904-23c8-424b-82b3-6e7b2cb0d27b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="381854e9-75b0-40ad-b48a-a26738f6a53e">
+                    <propertyInstance Id="1203b33f-4aa9-406b-b3ef-b4325d59d726" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="2498a0f1-7ad4-44d2-9bd4-922eaaebb3b8" />
+                    </propertyInstance>
+                    <elementDefinition Id="aac90e10-8d88-4d98-8a71-d77911c0c8d5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3a9a34dd-d175-4988-ba61-28f5fd64a4c0">
+                    <propertyInstance Id="8c5be848-4316-42e1-b4f4-fd40e7be51a5" name="params" value="false">
+                      <elementDefinition Id="f4d55d3e-889b-46be-b601-af9f25454541" />
+                    </propertyInstance>
+                    <elementDefinition Id="94fa2d31-3700-4b6b-b817-36ba1692bab6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="c89e4029-af5f-4d63-a5d2-2f2234e2b9ff" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="107b35d3-585c-44ec-ad75-43aa3a07fb47" name="filtro" direction="In">
+                  <referencesInternal>
+                    <reference Id="fc2283d7-a926-4215-9f1b-2870f88c803c" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))]) ParameterIdentifier%3Dfiltro" tag="ViewCode">
+                      <elementDefinition Id="ace77377-e9db-4470-bb6c-5786508f5fd5" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="5c6d3528-c856-4efd-b339-2790387385bd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="63ed7d2b-0303-4c32-9b40-7207e0b92443" LastKnownName="IFiltro" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1ce13327-53f8-4522-acfc-dffabf71e1dd" name="modelli" direction="In">
+                  <referencesInternal>
+                    <reference Id="a8914f7f-e8d8-439f-b486-72ff892b3c6e" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))]) ParameterIdentifier%3Dmodelli" tag="ViewCode">
+                      <elementDefinition Id="8cbf5409-43aa-41a1-afa0-6f7be7c5b299" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="e57dca20-4f26-4838-97e9-75d6dbe7e12e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="0a470532-31f4-4196-b010-b17a2e3c1c40" LastKnownName="IEnumerable&lt;ModelloEvento‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="0a470532-31f4-4196-b010-b17a2e3c1c40" name="IEnumerable&lt;ModelloEvento‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::System::Collections::Generic::IEnumerable&lt;ModelloEvento‎&gt;">
+        <elementDefinition Id="07ac80b9-6adc-49d5-a966-87915ad47f06" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="57fa477f-8173-4918-a3b1-0d7257a2b2c3" name="ModelloEvento" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::DynamiCal::Model::ModelloEvento">
+        <elementDefinition Id="fcf905f2-c8e7-4f74-8044-a91b4ed823c8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="a414b308-e95b-453b-b841-45f1d420b76a" name="IFiltro" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="947bf7f1-c31e-4291-82f6-bc21e137d147" handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro" tag="ViewCode">
+            <elementDefinition Id="feafd8b3-d715-4499-a1cc-2516617c72b9" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="654b0819-ffe9-4471-91ab-1e9afd07ef65" name="interface" profile="CSharpProfile">
+            <elementDefinition Id="51d2422b-781a-4f9d-97be-da96171ab8fd" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="21c33360-8af6-48b1-9621-0b35d419d157">
+                <propertyInstance Id="77f7b2c8-ff35-4b9f-b7ec-405440120a0d" name="ClrAttributes">
+                  <elementDefinition Id="53ba2aab-3e12-4c5c-97cd-e8e2b2093d23" />
+                </propertyInstance>
+                <elementDefinition Id="046d092c-22ab-47e1-bebd-6377bb75bf2d" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="c742b7f3-cc2d-43a7-8855-3affd0424d0b">
+                <propertyInstance Id="f6b20a4d-488f-43cd-a692-e32f5527e278" name="IsPartial" value="false">
+                  <elementDefinition Id="f4c43f6a-815a-4a42-be66-98ea0de4ef33" />
+                </propertyInstance>
+                <elementDefinition Id="34964f9b-fe82-459c-ad32-11a1128dde2c" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="a32b2653-68db-48c9-9e14-91248017d0c6">
+                <propertyInstance Id="08bbfd45-508d-42b1-b616-796819379813" name="IsUnsafe" value="false">
+                  <elementDefinition Id="d7cbe045-9f92-4e2c-9947-09ef71b3a29f" />
+                </propertyInstance>
+                <elementDefinition Id="668457d4-410c-4adc-acac-e270eacac24f" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="7aafa6be-0531-4929-8ace-65c7bfe4b691">
+                <propertyInstance Id="8969b3c4-a5b4-44fa-915e-949f6551027a" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="c2aa3739-c831-4c7f-8193-c69577eae71a" />
+                </propertyInstance>
+                <elementDefinition Id="2e6fa2aa-3e58-48e0-95d7-b93763d7b9b3" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="6a482ea4-3821-4346-bc2b-52af4d2b065b" />
+        <ownedOperations>
+          <operation Id="023998bc-277a-4abf-b27f-25077dd2016d" name="FiltraEventi" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="c64dd6c8-0b0d-4f95-a17b-c3b4b333d16b" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro Member%3DFiltraEventi" tag="ViewCode">
+                <elementDefinition Id="ad63ff05-2994-413e-9f13-67fc5f3d8b4d" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="4beb3f97-80e4-4478-a319-5f3bb561b245" name="method" profile="CSharpProfile">
+                <elementDefinition Id="a0042c30-8b7f-4a30-87e4-234c22fa4c3c" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="da59e65e-f685-40d4-a64a-a5f2698f010c">
+                    <propertyInstance Id="6d83b121-c066-4330-ac25-3339439e0b20" name="ClrAttributes">
+                      <elementDefinition Id="5de23974-a3dc-4089-a0cf-eb9fe1d3ba41" />
+                    </propertyInstance>
+                    <elementDefinition Id="f1a6cc76-04b9-4a40-90ec-9c4f72646d50" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8a40c4b4-459f-4e3b-bcc2-de63881bc4bb">
+                    <propertyInstance Id="4f42925b-5705-46c7-95e7-8e49bc007d8d" name="IsPartial" value="false">
+                      <elementDefinition Id="1fec1138-4ea7-43e0-864c-7a00570513f1" />
+                    </propertyInstance>
+                    <elementDefinition Id="a773cef9-8346-458f-9e75-dfabea10dfdf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="985bc15e-58f7-4aff-ac2e-aeb6bd6cb387">
+                    <propertyInstance Id="fd0ca707-4ac7-4605-a247-4ae28e2fa780" name="IsUnsafe" value="false">
+                      <elementDefinition Id="a8d737a0-2928-4042-9753-a994b2549689" />
+                    </propertyInstance>
+                    <elementDefinition Id="ec35b162-a375-4ae5-8625-44f757531f4b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="98b381ba-6ea2-4851-a120-22b70cb2c947">
+                    <propertyInstance Id="8d6fc682-e0cb-41e1-8401-0a38b34aeb4c" name="Inheritance" value="none">
+                      <elementDefinition Id="fad28cce-04d3-45c3-81a0-e319b1a0dadc" />
+                    </propertyInstance>
+                    <elementDefinition Id="f2ddcffc-e659-48c3-a958-7ca616a48f81" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5f930716-a52a-41ec-8055-1dd8fcf45b55">
+                    <propertyInstance Id="c539c890-3f51-4e9d-81dd-a30b5ca2d82a" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="24d937df-5685-4aa2-873a-8d8bc23c9ff7" />
+                    </propertyInstance>
+                    <elementDefinition Id="c6246a3a-4cbe-4b39-b513-017870c5d662" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a031cf00-dcac-4d55-a137-73ea9baae4e5">
+                    <propertyInstance Id="2faef6f1-877b-406e-8cc6-fa713872a627" name="params" value="false">
+                      <elementDefinition Id="8ead59d4-0215-429f-bfd0-3f4584c50b58" />
+                    </propertyInstance>
+                    <elementDefinition Id="ba17669d-a931-4aed-bdb0-01e370485085" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="a95acd44-05d4-40fe-8f0a-fffb8e494647" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e78d6b99-fd1c-4e38-bf4e-0b549d7ad4de" direction="Return">
+                  <elementDefinition Id="a213efd8-8fe4-4f87-9c10-3e67bd6f59c6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="a3edacba-7952-43c8-8760-651d6de88af2" LastKnownName="IEnumerable&lt;Evento‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="50cb05af-a121-474f-9cc0-d938c3388cdd" name="DynamiCalModeling">
+    <elementDefinition Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="254957eb-4a59-4495-9f8b-eae04ae6ca92"
   name="Filters"
@@ -15,14 +15,13 @@
       <class
         Id="289d782f-8329-4daa-96aa-d9623e849929"
         name="CriterioDiFiltraggio"
-        visibility="Package"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <referencesInternal>
           <reference
             Id="116047f5-8473-4f9c-a16f-0e483eba1ab6"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DCriterioDiFiltraggio"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DCriterioDiFiltraggio"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -92,7 +91,7 @@
             <referencesInternal>
               <reference
                 Id="9c49f54d-0ec1-41c5-a3d7-27ba781a736e"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DCriterioDiFiltraggio Member%3D_calendari"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DCriterioDiFiltraggio Member%3D_calendari"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -148,92 +147,6 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="55782e4e-e75e-4073-b119-1844b00d84ed"
-            name="CriterioDiFiltraggio"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="22969809-f0f7-4488-a346-38426aa22a0e"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DCriterioDiFiltraggio Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="6df5f36b-ad0a-4065-a53f-7960f4344c83"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="834d845b-d217-46ed-afc2-21d32a1e963e">
-                    <propertyInstance
-                      Id="477ada18-bab5-41f5-835a-be4422d98937"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5463a17d-27d6-4c6e-b8be-6b94e240c07e">
-                    <propertyInstance
-                      Id="7b2f97fb-02a2-4100-9ad5-3ff17a3f71ab"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="0bf3d9bd-e4fd-4ab6-8bae-42ca9d27817b">
-                    <propertyInstance
-                      Id="61b2cec6-8ae6-4a4a-b164-7a300486437d"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="09e52b99-5b27-489d-a9b6-57e5d888b56d">
-                    <propertyInstance
-                      Id="b7c4e9cb-78ed-4f29-953a-d928a2cca236"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="22f1783d-421d-42a4-87b5-a0bc486f8ff7">
-                    <propertyInstance
-                      Id="d9aab61e-2d71-49ed-8622-9901df123d52"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="0a6115c4-0f2d-4030-8100-537fe74904e5">
-                    <propertyInstance
-                      Id="17380319-2bca-4d80-9fb8-4a5471215f8d"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="f4398f1d-b253-4b4c-8909-3fa8ec942662"
-                  name="calendari"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="dd808df9-1275-4cfc-8806-36d8bec9e0b6"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DCriterioDiFiltraggio Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))]) ParameterIdentifier%3Dcalendari"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <interfaceMoniker
-                      Id="685ad2f7-3e12-40ab-89c4-b1d5db493f4a"
-                      LastKnownName="IEnumerable&lt;Calendario‎&gt;"
-                      LastKnownLocation="Package5_1645.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="b160a182-0dae-483c-aa1c-bed6e291f290"
             name="FiltraEventi"
             isLeaf="false"
@@ -244,7 +157,7 @@
             <referencesInternal>
               <reference
                 Id="39f2645d-cf93-4f15-be7f-72c73cfd08ea"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DCriterioDiFiltraggio Member%3DFiltraEventi"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DCriterioDiFiltraggio Member%3DFiltraEventi"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -312,6 +225,92 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="f63f5480-e511-4811-858d-4a5fe7c23873"
+            name="CriterioDiFiltraggio"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3214d9df-d710-4299-9fad-db8db97ae39b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DCriterioDiFiltraggio Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="14e56200-b615-4d58-9e0c-e5b0b842c271"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="271e3dd0-6784-4e44-b2cc-f56b66e3cc69">
+                    <propertyInstance
+                      Id="ae585233-2abd-4aa1-9c47-5ecb7bb6e608"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b30b592e-9bbf-4dbb-8250-396784376dd5">
+                    <propertyInstance
+                      Id="46c42b1a-8497-42af-be49-ec8e42db7310"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30a85b8c-ffe8-4b04-a4e8-696dd2465ba0">
+                    <propertyInstance
+                      Id="f34f469e-c564-4d93-acc4-486209739348"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="030b88e3-8705-412c-820a-457eb5208356">
+                    <propertyInstance
+                      Id="3a7f9f8f-451d-4ed0-8fc2-a3469ff989f1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca6ef557-3404-4325-9733-ddc4511d99a9">
+                    <propertyInstance
+                      Id="d280bb66-758f-4862-99c1-d93258a462cb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="19b3fa54-2fa7-4be2-b3c7-f632e21059dc">
+                    <propertyInstance
+                      Id="ddbd0dee-96cb-412a-857d-a0615134fc4b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="76a5f844-7b2d-4899-b93f-6ec5402d5a20"
+                  name="calendari"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="91a5c712-9d88-45d6-a7c6-0d972fabf6d0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DCriterioDiFiltraggio Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))]) ParameterIdentifier%3Dcalendari"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="685ad2f7-3e12-40ab-89c4-b1d5db493f4a"
+                      LastKnownName="IEnumerable&lt;Calendario‎&gt;"
+                      LastKnownLocation="Package5_1645.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -324,7 +323,7 @@
         <referencesInternal>
           <reference
             Id="feafd8b3-d715-4499-a1cc-2516617c72b9"
-            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -378,13 +377,13 @@
             name="FiltraEventi"
             isLeaf="false"
             isStatic="false"
-            isAbstract="true"
+            isAbstract="false"
             concurrency="Sequential"
             isQuery="false">
             <referencesInternal>
               <reference
                 Id="ad63ff05-2994-413e-9f13-67fc5f3d8b4d"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro Member%3DFiltraEventi"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro Member%3DFiltraEventi"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -465,7 +464,7 @@
         <referencesInternal>
           <reference
             Id="60762377-3e6b-4bdc-a084-0f6b4f5c07a1"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltro"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -522,10 +521,10 @@
         </suppliersInternal>
         <targetEnds>
           <association
-            Id="98e85001-66e6-43b5-8f6b-411870684e61"
+            Id="9f669351-2a43-4d0d-b6ec-13d32d3a2f7e"
             isDerived="false"
-            sourceEndRoleName=""
-            targetEndRoleName=""
+            sourceEndRoleName="Filtro"
+            targetEndRoleName="Component"
             isLeaf="false"
             isAbstract="false">
             <interfaceMoniker
@@ -536,7 +535,8 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="d976a3ba-8960-4633-98c8-b84f5c5ff90c"
+                  Id="dd45e465-867d-4927-8278-a5b25c2b1427"
+                  name="Filtro"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -547,13 +547,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="ebc96a3f-b3e9-4c69-8d6a-2aba7185e69f"
+                      Id="7f899996-106d-4788-961f-a94190adc37b"
                       name="Lower"
                       value="*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="0a5b37b3-8748-4522-aea9-e9f784c8d762"
+                      Id="9c8fa4a3-89c3-481e-aedf-af15253116b2"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -561,7 +561,8 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="2a8a3b87-8633-4d98-a57b-4b59a6f96d32"
+                  Id="78f16c84-fd53-495b-afc2-389d8783de8c"
+                  name="Component"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -571,13 +572,13 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="34fbf2aa-5c48-4acc-beec-0610ec127efa"
+                      Id="2d566924-cf0a-404a-9305-f52d31522c70"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="4ce111cc-f019-46a8-a4f7-d8c1006206d3"
+                      Id="3f10706f-929e-4c9c-9fda-dce770426c65"
                       name="Upper"
                       value="1" />
                   </upperValueInternal>
@@ -600,7 +601,7 @@
             <referencesInternal>
               <reference
                 Id="689b6481-3474-411d-87cd-7dc9705d6abb"
-                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3DComponent"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3DComponent"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -681,7 +682,7 @@
             <referencesInternal>
               <reference
                 Id="71babc49-0019-4d5f-b9cf-902b995e8e4e"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3D_component"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3D_component"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -748,7 +749,7 @@
             <referencesInternal>
               <reference
                 Id="f4dd25d0-4b2b-4ae2-b911-b1adef220efe"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -810,7 +811,7 @@
                   <referencesInternal>
                     <reference
                       Id="34e29bc3-f50a-428a-90de-462e3c3293f3"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)]) ParameterIdentifier%3Dfiltro"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -834,7 +835,7 @@
             <referencesInternal>
               <reference
                 Id="6ee9ef6f-96e4-4396-87dd-85818e6fd4a3"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3DFiltraEventi"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3DFiltraEventi"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -914,7 +915,7 @@
             <referencesInternal>
               <reference
                 Id="52bb584f-7ebb-4ca6-add0-0613a059d62a"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3DStrategiaFiltro"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro Member%3DStrategiaFiltro"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -995,7 +996,7 @@
         <referencesInternal>
           <reference
             Id="d143e77f-09d1-4e11-91b3-95ad55bd5ebd"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroModello"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -1066,7 +1067,7 @@
             <referencesInternal>
               <reference
                 Id="216075d2-77dc-4c01-933d-e3a9bce77416"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D_modelli"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D_modelli"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1132,7 +1133,7 @@
             <referencesInternal>
               <reference
                 Id="d0198fd6-8de2-46ba-8c48-fc85243945d3"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1194,7 +1195,7 @@
                   <referencesInternal>
                     <reference
                       Id="db5a1876-b00a-45f3-a245-d67ce862922e"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)]) ParameterIdentifier%3Dfiltro"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -1213,7 +1214,7 @@
                   <referencesInternal>
                     <reference
                       Id="0f8555df-fcbf-4f3e-a001-69177eae76d0"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)]) ParameterIdentifier%3Dmodello"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]) ParameterIdentifier%3Dmodello"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -1221,111 +1222,6 @@
                       Id="fcf905f2-c8e7-4f74-8044-a91b4ed823c8"
                       LastKnownName="ModelloEvento"
                       LastKnownLocation="Package1_1645.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="3f55d7c2-b770-44e0-90d2-0f256c1adea0"
-            name="FiltroModello"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="86f5d00e-fc1d-4330-a59f-2116815f26f1"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="d5b29632-7466-4be8-ad1d-11313c0b30dd"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="bcadb739-bd44-460d-8580-e865e12912db">
-                    <propertyInstance
-                      Id="ac8a60e6-9678-48f2-9981-9075fabd25ba"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="7c520c88-6c4a-4140-85e2-a1a74f84527d">
-                    <propertyInstance
-                      Id="ff9b164a-8023-4870-87a9-5b94ec374ccf"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9dadb55e-2f5d-4c63-9dab-c91d88988615">
-                    <propertyInstance
-                      Id="17c57a3e-c8b5-4c01-b343-28547e7c7f34"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="d488c2ee-1d78-4d77-8285-fc149693023a">
-                    <propertyInstance
-                      Id="6a499e89-3bb8-4351-8c83-7df40d2c1d1d"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="42ad2d5c-39f3-4ccc-abe8-eb6e413c47f2">
-                    <propertyInstance
-                      Id="2d302c0d-4664-4a76-8951-b42ed57cd4f5"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="9d211ea0-6233-499d-8b03-018f1ce582b1">
-                    <propertyInstance
-                      Id="d3fba2c4-9031-4184-99d5-1fc4e6ca0974"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="ab3660a8-0f05-4137-be9e-0f5474a253f2"
-                  name="filtro"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="9ea4d27d-878f-43d1-8b49-2602aac73fa7"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))]) ParameterIdentifier%3Dfiltro"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <interfaceMoniker
-                      Id="6a482ea4-3821-4346-bc2b-52af4d2b065b"
-                      LastKnownName="IFiltro"
-                      LastKnownLocation="Package_0316.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="7da2dce4-d58c-4fb9-b3dd-f31ebe974f37"
-                  name="modelli"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="665d67bf-e62e-4c7b-a686-1ef1988a26e3"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))]) ParameterIdentifier%3Dmodelli"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <interfaceMoniker
-                      Id="07ac80b9-6adc-49d5-a966-87915ad47f06"
-                      LastKnownName="IEnumerable&lt;ModelloEvento‎&gt;"
-                      LastKnownLocation="Package5_1645.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -1343,7 +1239,7 @@
             <referencesInternal>
               <reference
                 Id="ce3b0ece-b3df-4ac8-9bb9-57076db7e6c1"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3DStrategiaFiltro"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3DStrategiaFiltro"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1411,6 +1307,111 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="c89e4029-af5f-4d63-a5d2-2f2234e2b9ff"
+            name="FiltroModello"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e45b817a-8752-4e27-b589-1098fad488cb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e521a384-4f67-46e7-a072-3d5762aadb46"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="90cb29e1-72b0-441e-91c2-f9ef99e8c07e">
+                    <propertyInstance
+                      Id="8d89042d-fec3-41ff-b598-37111a3d3231"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a9b4a0b6-08e6-49a5-a182-948d8bdbc422">
+                    <propertyInstance
+                      Id="df9e6de4-87a1-404e-89bf-60b57f7f099c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="547ee105-282d-49e9-8b84-aca2ae4d16f9">
+                    <propertyInstance
+                      Id="cf1498a5-6d8e-4af8-b7b6-1fae38503948"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ee87904-23c8-424b-82b3-6e7b2cb0d27b">
+                    <propertyInstance
+                      Id="0d19abe1-3d29-4da6-8b27-5823ed1e8f31"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aac90e10-8d88-4d98-8a71-d77911c0c8d5">
+                    <propertyInstance
+                      Id="2498a0f1-7ad4-44d2-9bd4-922eaaebb3b8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="94fa2d31-3700-4b6b-b817-36ba1692bab6">
+                    <propertyInstance
+                      Id="f4d55d3e-889b-46be-b601-af9f25454541"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5c6d3528-c856-4efd-b339-2790387385bd"
+                  name="filtro"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ace77377-e9db-4470-bb6c-5786508f5fd5"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))]) ParameterIdentifier%3Dfiltro"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="6a482ea4-3821-4346-bc2b-52af4d2b065b"
+                      LastKnownName="IFiltro"
+                      LastKnownLocation="Package_0316.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e57dca20-4f26-4838-97e9-75d6dbe7e12e"
+                  name="modelli"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8cbf5409-43aa-41a1-afa0-6f7be7c5b299"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))]) ParameterIdentifier%3Dmodelli"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="07ac80b9-6adc-49d5-a966-87915ad47f06"
+                      LastKnownName="IEnumerable&lt;ModelloEvento‎&gt;"
+                      LastKnownLocation="Package5_1645.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -1424,7 +1425,7 @@
         <referencesInternal>
           <reference
             Id="01c0e23f-a229-4638-b2da-ebd0748e2ba1"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -1495,7 +1496,7 @@
             <referencesInternal>
               <reference
                 Id="b330cae3-429e-4758-b42b-d617fe45293f"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3D_text"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3D_text"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1561,7 +1562,7 @@
             <referencesInternal>
               <reference
                 Id="84dbe637-f2a7-4c84-8a9d-ece0897c5f4f"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1623,7 +1624,7 @@
                   <referencesInternal>
                     <reference
                       Id="6055f9a4-2cca-48b5-ac88-eb9240581010"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dfiltro"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -1642,7 +1643,7 @@
                   <referencesInternal>
                     <reference
                       Id="e812a1b1-3cad-4500-b1b9-3d4298d36bd3"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dtext"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dtext"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -1667,7 +1668,7 @@
             <referencesInternal>
               <reference
                 Id="4731d417-6617-4f95-b770-7beb952a0e18"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3DStrategiaFiltro"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca Member%3DStrategiaFiltro"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1748,7 +1749,7 @@
         <referencesInternal>
           <reference
             Id="f2f903ea-ba08-44c6-b033-05e50ea16b16"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -1819,7 +1820,7 @@
             <referencesInternal>
               <reference
                 Id="0a83d7c6-b30a-4e3a-970f-28ad6ea261a1"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D_timePeriod"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D_timePeriod"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1885,7 +1886,7 @@
             <referencesInternal>
               <reference
                 Id="da11b649-02c2-480f-b6ee-ad6f566fdca5"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -1947,7 +1948,7 @@
                   <referencesInternal>
                     <reference
                       Id="f1d50aa6-6e9f-4475-9c60-332023bb683d"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Dfiltro"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -1966,7 +1967,7 @@
                   <referencesInternal>
                     <reference
                       Id="80fda442-baba-49eb-9006-fe1bc491ef3e"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DstartDate"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DstartDate"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -1985,7 +1986,7 @@
                   <referencesInternal>
                     <reference
                       Id="648f3641-243e-4312-aa50-00cac0a48e34"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DendDate"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DendDate"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -2009,7 +2010,7 @@
             <referencesInternal>
               <reference
                 Id="30ddc82f-f532-47f7-a205-92d56a3e7bdc"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2071,7 +2072,7 @@
                   <referencesInternal>
                     <reference
                       Id="6060e286-1139-4835-b0ac-6145daec4221"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Dfiltro"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -2090,7 +2091,7 @@
                   <referencesInternal>
                     <reference
                       Id="82faeefc-b2cf-4ca3-948a-a1ca45ae9a1e"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Ddate"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Ddate"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -2115,7 +2116,7 @@
             <referencesInternal>
               <reference
                 Id="dcd16010-f04a-4c10-8827-a3a594e2d1d7"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3DStrategiaFiltro"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale Member%3DStrategiaFiltro"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2196,7 +2197,7 @@
         <referencesInternal>
           <reference
             Id="3ef5d899-78b0-471a-adf6-bc28177d2ea6"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -2267,7 +2268,7 @@
             <referencesInternal>
               <reference
                 Id="1fdc780b-12b3-459a-9387-f6eb1379c719"
-                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D_calendari"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D_calendari"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2333,7 +2334,7 @@
             <referencesInternal>
               <reference
                 Id="00e0c03d-564e-42b7-a601-880f7a2e41e7"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2395,7 +2396,7 @@
                   <referencesInternal>
                     <reference
                       Id="525dd7e9-930a-4b93-96c1-995de6d46a83"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]) ParameterIdentifier%3Dfiltro"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -2414,7 +2415,7 @@
                   <referencesInternal>
                     <reference
                       Id="1c3effc3-62dd-4db3-a8ed-1a8056bf1418"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]) ParameterIdentifier%3Dcalendario"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]) ParameterIdentifier%3Dcalendario"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -2422,111 +2423,6 @@
                       Id="acfa17db-a3a5-4fb3-ba58-e6cc3e173a0a"
                       LastKnownName="Calendario"
                       LastKnownLocation="Package2_1645.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="060b1af7-8241-44ed-ad96-a063e1c4a7ac"
-            name="FiltroCalendario"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="26511989-a8ba-45da-a2bd-50f5f5ebc8ff"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="b97a6e38-d34d-476a-a228-ea99bd14c1b9"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f5b2e291-9722-4c86-8550-515761aa61ae">
-                    <propertyInstance
-                      Id="138ceb2d-9adf-4846-8e97-a3a823146ab6"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="63522536-7e08-4237-9e67-7d65d1654d77">
-                    <propertyInstance
-                      Id="65fcb9de-dbfa-4165-8f62-39d708ebc7c9"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="b9849f6b-b6df-463b-aab1-e86ade86e9c2">
-                    <propertyInstance
-                      Id="51b7dd33-4b15-4f25-b342-c344e82f4bf1"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="798229e4-34f6-4b38-a330-b13cdf63154d">
-                    <propertyInstance
-                      Id="60939deb-244b-4780-b83d-f6654b15fee4"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="942b3f2f-ea8e-4b8e-abed-08b7e376a1b3">
-                    <propertyInstance
-                      Id="e57904f0-1e9e-44ae-8ab6-ba28ce99fee7"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c3814791-58b3-4e19-be6e-3a86d4b2aec3">
-                    <propertyInstance
-                      Id="ccaf48b0-0420-4490-a5d0-38183fa902c7"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="640563eb-d2d5-4826-b524-6045ee16a50c"
-                  name="filtro"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="ca13574e-451e-4e49-a288-4291e2ce3758"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))]) ParameterIdentifier%3Dfiltro"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <interfaceMoniker
-                      Id="6a482ea4-3821-4346-bc2b-52af4d2b065b"
-                      LastKnownName="IFiltro"
-                      LastKnownLocation="Package_0316.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="3faa3e83-9f29-4ed3-997e-2300b3222b5a"
-                  name="calendari"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="d436992c-ecb1-4326-b2bf-a37ff3819ba2"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))]) ParameterIdentifier%3Dcalendari"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <interfaceMoniker
-                      Id="685ad2f7-3e12-40ab-89c4-b1d5db493f4a"
-                      LastKnownName="IEnumerable&lt;Calendario‎&gt;"
-                      LastKnownLocation="Package5_1645.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -2544,7 +2440,7 @@
             <referencesInternal>
               <reference
                 Id="765dd1a9-a4ae-474b-8ef5-b26ea21ee0fc"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3DStrategiaFiltro"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3DStrategiaFiltro"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2612,6 +2508,111 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="bb6cacb7-901c-4ba2-a636-c85ad2f18447"
+            name="FiltroCalendario"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="eea8a150-244a-485f-85ab-a8a7d45d928f"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0ae5ab75-379b-45ec-8f9f-39ec2a4631f0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="503729e6-dc33-4233-808d-defecd246e87">
+                    <propertyInstance
+                      Id="9fc1986b-58cc-455c-a912-2c1f35777a33"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4b95e71c-bff2-4109-9f0e-0d2d8e3e9acc">
+                    <propertyInstance
+                      Id="5f05c296-8591-46a6-b476-db1f597f0e01"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1381d4d5-d26c-4178-87b4-38270c57bba1">
+                    <propertyInstance
+                      Id="0e90c44f-988c-4bb1-9f02-8c4d63883217"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bdb47451-7d06-4eec-aab6-9688ee46787a">
+                    <propertyInstance
+                      Id="41e310c1-4a16-46f5-80cb-376e6d48463c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dffaebcc-90a3-46c8-8e79-a226b4bd1350">
+                    <propertyInstance
+                      Id="6b507227-b1fc-40ba-bafc-22f900f5507e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd741e39-1dd0-4b29-a79d-846238a6ef6e">
+                    <propertyInstance
+                      Id="7f130cb0-4da0-4ffb-adc9-f6c3f184152f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c32adcb0-611f-4c86-80e3-b835be7c2a43"
+                  name="filtro"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="b6c66e11-46b1-4bcb-b241-e301af7f5364"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))]) ParameterIdentifier%3Dfiltro"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="6a482ea4-3821-4346-bc2b-52af4d2b065b"
+                      LastKnownName="IFiltro"
+                      LastKnownLocation="Package_0316.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="28af7d0c-d5ec-4203-ba81-fdae4349b50f"
+                  name="calendari"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="4ddea2bc-6ec3-42b6-affb-2a8773217882"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))]) ParameterIdentifier%3Dcalendari"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="685ad2f7-3e12-40ab-89c4-b1d5db493f4a"
+                      LastKnownName="IEnumerable&lt;Calendario‎&gt;"
+                      LastKnownLocation="Package5_1645.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -2625,7 +2626,7 @@
         <referencesInternal>
           <reference
             Id="0c9e317b-e020-4ab5-9cd7-c3fdbc71be55"
-            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -2683,7 +2684,7 @@
             <referencesInternal>
               <reference
                 Id="adb79071-dbed-4d54-808b-50567136422f"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerCalendario OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerCalendario OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2757,7 +2758,7 @@
                   <referencesInternal>
                     <reference
                       Id="82441c22-7593-48db-80bf-7d604f47724b"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerCalendario OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]) ParameterIdentifier%3Dfiltro"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerCalendario OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -2776,7 +2777,7 @@
                   <referencesInternal>
                     <reference
                       Id="7159e5f5-1a0a-4686-baeb-ec095f59d706"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerCalendario OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]) ParameterIdentifier%3Dcalendario"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerCalendario OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]) ParameterIdentifier%3Dcalendario"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -2800,7 +2801,7 @@
             <referencesInternal>
               <reference
                 Id="47b357d8-6e2a-4b1a-87c9-bba917511f84"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerData OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerData OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2874,7 +2875,7 @@
                   <referencesInternal>
                     <reference
                       Id="901a8b9c-a9a0-43c2-b335-6c12d2c18d4a"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerData OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Dfiltro"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerData OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -2893,7 +2894,7 @@
                   <referencesInternal>
                     <reference
                       Id="f8ce5368-1d9b-4d6b-a5e8-e3e93020158a"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerData OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Ddata"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerData OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Ddata"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -2917,7 +2918,7 @@
             <referencesInternal>
               <reference
                 Id="52beeab0-3e70-43c3-b090-1cf508acde12"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerModello OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerModello OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -2991,7 +2992,7 @@
                   <referencesInternal>
                     <reference
                       Id="9a3a7562-fcc0-4aeb-8b54-f072b1743a8b"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerModello OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)]) ParameterIdentifier%3Dfiltro"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerModello OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -3010,7 +3011,7 @@
                   <referencesInternal>
                     <reference
                       Id="fccffaf5-5d84-4ba3-8a7a-e7c1f1afc8ee"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerModello OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)]) ParameterIdentifier%3Dmodello"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerModello OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]) ParameterIdentifier%3Dmodello"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -3034,7 +3035,7 @@
             <referencesInternal>
               <reference
                 Id="240bd002-f21a-43d1-841e-d94e0cef66fa"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerPeriodo OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerPeriodo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -3108,7 +3109,7 @@
                   <referencesInternal>
                     <reference
                       Id="84816411-1f90-464c-8022-e0c07df7e638"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerPeriodo OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Dfiltro"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerPeriodo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -3127,7 +3128,7 @@
                   <referencesInternal>
                     <reference
                       Id="e578aef9-68e0-489e-a481-ce24c19b1b62"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerPeriodo OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DdataIniziale"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerPeriodo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DdataIniziale"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -3146,7 +3147,7 @@
                   <referencesInternal>
                     <reference
                       Id="17f584e1-b1f5-4a35-80d2-49a291c19e6b"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerPeriodo OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DdataFinale"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerPeriodo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DDateTime)]) ParameterIdentifier%3DdataFinale"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -3170,7 +3171,7 @@
             <referencesInternal>
               <reference
                 Id="654edf9e-ddcf-4a69-87a4-e4fc15cc1776"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerTesto OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerTesto OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
@@ -3244,7 +3245,7 @@
                   <referencesInternal>
                     <reference
                       Id="bb0862d7-3650-44c5-97de-d3aa082783c0"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerTesto OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dfiltro"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerTesto OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -3263,7 +3264,7 @@
                   <referencesInternal>
                     <reference
                       Id="bc694d5a-324c-42fd-8d03-e1ea7fdbe68e"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerTesto OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dtesto"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerTesto OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dtesto"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -3277,7 +3278,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="36c964fd-3496-48ee-b152-25ae80c5e626"
+            Id="91feca9e-5a7c-4b5b-aa30-20f9e8319ba2"
             name="FiltraPerCalendari"
             isLeaf="false"
             isStatic="true"
@@ -3286,54 +3287,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="c2fe5061-4ebc-4c99-8e32-3fa739fcd52a"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerCalendari OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))])"
+                Id="4e41372e-2a2a-42b5-8a91-4dd071784d9b"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerCalendari OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="8ae43509-bcc7-43eb-8c48-be8a361f353d"
+                Id="5160c141-ea86-4765-aff0-b19fe33fe66d"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="b01bebcf-a892-41e6-b5e7-b5763cab5143">
+                    Id="3d9c1ecd-f6d1-4089-ae2b-c449a623a084">
                     <propertyInstance
-                      Id="6f9c51c7-51d2-432a-8a26-eb50f4e12c8d"
+                      Id="7328a9c1-b879-4563-bf1f-305ff95c2864"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="42d06872-ede9-47ec-814b-7faec78600d1">
+                    Id="0e7a43de-6ff7-4517-93d5-d2ad5bf8e926">
                     <propertyInstance
-                      Id="998cce81-238d-45db-957a-458ac2efb01a"
+                      Id="158b5792-0a13-4a6c-8550-92e302b96cce"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="451dfd1f-a035-48db-951b-37df1265aa16">
+                    Id="42f331b6-bbe1-49ca-ab7b-b41b5511f1af">
                     <propertyInstance
-                      Id="3bf15464-4f1c-4cf9-baab-ec5cd8b33f1e"
+                      Id="39af62bb-b1a7-4566-bc79-9d60153b70d2"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="5d09f938-fdc4-407d-bb86-48ffe07b5c13">
+                    Id="f1fdeb11-b688-4115-a7c9-f9fea21d0e79">
                     <propertyInstance
-                      Id="0afb42c6-ccc4-4a3d-9e8c-145597ffd680"
+                      Id="00b003a9-3bbe-40ac-9f31-53b0e764d85e"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="2eb9521c-016f-435b-b5db-7c5aaa008ad4">
+                    Id="047f2a90-3425-4733-9bc2-406d4400bcfd">
                     <propertyInstance
-                      Id="cadc7f40-67bb-4606-9b02-9208b05e1c6f"
+                      Id="5aef4936-a7fc-4e0f-8e3d-dd44f30d3479"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="cc4c059e-705b-4926-b223-03f3917d5938">
+                    Id="a184cfd6-e8ab-4cfb-af41-188e54f4a04c">
                     <propertyInstance
-                      Id="fefc53e2-6b4d-4f55-9dab-8aadb49d4e87"
+                      Id="2a31b7d1-fd4c-4907-b597-993ed3d96a54"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -3343,7 +3344,7 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="cbb91fbe-8d94-4ba4-b5c2-7d158204c9b1"
+                  Id="35b71bb4-8108-4d55-98f8-10d56ffbfa85"
                   direction="Return">
                   <type_NamedElement>
                     <classMoniker
@@ -3355,13 +3356,13 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e2c4a309-d25a-4ae6-b89a-977cde8ffac8"
+                  Id="565bdfb4-8b55-40dd-bdc3-f18b6aa04ccc"
                   name="filtro"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="01bcaf15-65da-488e-9082-84e6ea2d4a10"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerCalendari OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))]) ParameterIdentifier%3Dfiltro"
+                      Id="a6baf30f-abf7-4665-a6b9-3786ec1cce4d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerCalendari OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -3374,13 +3375,13 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b41ef812-0848-431e-9f88-fd4e7e4e3966"
+                  Id="769b1120-9b20-4180-ac34-ef2a11425335"
                   name="calendari"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="bc10ab4c-ae83-4cf9-b2ea-af26bc83190d"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerCalendari OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))]) ParameterIdentifier%3Dcalendari"
+                      Id="b253cc3f-9d69-43ad-b44a-4502de4f54f7"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerCalendari OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model.Calendars Type%3DCalendario)]))]) ParameterIdentifier%3Dcalendari"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -3394,7 +3395,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="9c74ab28-db6e-45c8-b91e-586fbba467e0"
+            Id="eae41666-fd05-4106-bd22-70c4e5a9cdab"
             name="FiltraPerModelli"
             isLeaf="false"
             isStatic="true"
@@ -3403,54 +3404,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="8a7664ce-b3df-43be-a091-265bf5a87dc1"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerModelli OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))])"
+                Id="e038a49e-d88c-4a94-8bac-fe28e5549e05"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerModelli OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="8789fc9f-4f0e-46de-8a50-d77815dde2c5"
+                Id="ce268643-5e55-4e95-8a4e-da962bc048e9"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="d2f6d3c3-312d-4092-aa8b-1732114a55a4">
+                    Id="14d84ec7-eb7e-4079-a17d-fbab3a08b8f4">
                     <propertyInstance
-                      Id="7e35fd6e-25be-4a72-b8af-93d8b89785d9"
+                      Id="31f627e7-81d8-4877-9960-46cef6e65573"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="bd1cae09-36eb-4d3c-beec-a81f7ff5cdb2">
+                    Id="568719f1-9482-47a8-a3d6-f5082e0ec308">
                     <propertyInstance
-                      Id="9593d314-8cbf-4c47-a927-71089974e709"
+                      Id="bb746a33-bcd7-4170-9b92-e7cc8c1fdc8c"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="6f87e83b-fc23-4c03-9f99-8b6dfee22e26">
+                    Id="a0404c6f-902c-458a-84f4-da100d554324">
                     <propertyInstance
-                      Id="7c92080c-547f-4be6-8430-610c3ce39000"
+                      Id="1efbe0fa-4265-45d6-8214-a8428872d97a"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f8c48110-ed22-486d-ab10-d967efb63b31">
+                    Id="c33544c9-0046-46e7-ab95-cbcca7275f6f">
                     <propertyInstance
-                      Id="938fdf81-ea1c-4620-8ac6-62c3827cf7c5"
+                      Id="266e5d55-3a2c-4930-8b5d-fc8a296d3fd4"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="05baefd2-b69b-4a0b-b01b-2f2d5f8d3074">
+                    Id="f3391029-bca4-4dc1-81a2-888690fa4de4">
                     <propertyInstance
-                      Id="bde07430-1e06-4316-a39b-4514a5714b53"
+                      Id="1c1f71d1-6eb3-40dd-a478-9e139965284c"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="b9bbee1b-3a37-4668-98d0-aa7f79d68008">
+                    Id="497eff3e-558c-4d0d-bd15-5e5b72033e11">
                     <propertyInstance
-                      Id="e9c38c05-3c53-4cd9-90f7-b979b5dca713"
+                      Id="7db8bd14-4df5-4fc5-9887-ef6bfd7dd106"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -3460,7 +3461,7 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c399764d-3168-49ac-a773-dec71296766a"
+                  Id="c7a8b00f-117a-4b6b-9095-242e0f52666a"
                   direction="Return">
                   <type_NamedElement>
                     <classMoniker
@@ -3472,13 +3473,13 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="b7791955-8004-4d77-8110-8393ba07b8c3"
+                  Id="6e102060-fde2-4334-910a-024c70538710"
                   name="filtro"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="0e4aac0d-a564-4b16-a7b2-5ee1bfe78fd3"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerModelli OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))]) ParameterIdentifier%3Dfiltro"
+                      Id="c96c8c4a-2414-4700-9998-bab460d984c1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerModelli OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))]) ParameterIdentifier%3Dfiltro"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -3491,13 +3492,13 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="fdfbe06e-6176-42fd-8594-eb526f5fa7da"
+                  Id="915b7977-5a01-42be-8d58-6af43b686d56"
                   name="modelli"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="412023bf-bdf2-4158-bbb3-47f84a18af08"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerModelli OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))]) ParameterIdentifier%3Dmodelli"
+                      Id="dc8c1fd0-f78d-4d8d-913d-85f0e7804eb8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D(Name%3DFiltraPerModelli OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DIFiltro)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento)]))]) ParameterIdentifier%3Dmodelli"
                       tag="ViewCode" />
                   </referencesInternal>
                   <type_NamedElement>
@@ -3511,7 +3512,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="cab6c5b8-357c-4c73-ace0-597ce6629317"
+            Id="e6dd3bcc-e083-40cb-b3a3-f47caba672de"
             name="FiltroFactory"
             isLeaf="false"
             isStatic="false"
@@ -3520,54 +3521,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="d5bf5420-f3b7-4493-8f90-16c824db03c3"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D.ctor"
+                Id="bf4ae337-9e58-4581-b904-fb7119f68881"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroFactory Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="61fab132-643b-4ad7-85e2-8a305950d37b"
+                Id="49bb5f74-d98a-4e9a-b05a-8426f3352647"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="e53d0df7-b17f-4e8c-bc82-f22d096c4ad6">
+                    Id="a266c9b0-9fcf-4585-8329-065dbe33c4c9">
                     <propertyInstance
-                      Id="275b9091-7d02-4395-9831-171ce6bccc5f"
+                      Id="1203bf63-c5bf-4a4b-b3a4-fdef546a3317"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="7e4613b8-fd1b-43f7-bd89-7082cac078f1">
+                    Id="36dcbc09-2e92-4dc2-bdb4-281b38e15efe">
                     <propertyInstance
-                      Id="b97b5ad3-ae9f-496a-b1aa-5898bf7c36c2"
+                      Id="3af68a14-77b0-4c1a-86e2-f793cf6f89ee"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="8775b139-4cba-40ea-bc0b-caf8efa3221c">
+                    Id="f374fb04-3f90-41f9-ad03-da2e23b3f959">
                     <propertyInstance
-                      Id="88e7371f-7bf5-4237-92c1-b26458a6da53"
+                      Id="175bd40c-eb93-4163-a271-de934d7cffad"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="595a45a7-1cd5-4cc2-8487-74461d9dd6b7">
+                    Id="efd80f75-0dcb-4b13-a113-edc9cdd439fe">
                     <propertyInstance
-                      Id="02da6535-c679-41d6-b964-95318eb953fc"
+                      Id="c127f3ab-ed9e-4aa4-aaf1-4d776548690b"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="e17a7a3a-f2cc-4905-a266-bf5ca3a3c9ce">
+                    Id="4ff40329-d930-4fd7-9d7a-aa4b140e46ab">
                     <propertyInstance
-                      Id="a1ff9d7b-5689-4550-9d6f-c666b7227df3"
+                      Id="15c9f789-b53f-4f24-b1eb-bb823b27d325"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="fde5522f-2f80-49c9-a412-16d47f30a87b">
+                    Id="6899faa1-d2b1-4d2e-9019-edbe0ad6cc9d">
                     <propertyInstance
-                      Id="a483695d-036b-4e7f-81f8-3a7e05bc3a27"
+                      Id="a4feb9b8-9932-4f2a-beac-81ff35fd3db3"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>

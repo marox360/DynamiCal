@@ -57,6 +57,20 @@
     <Content Include="ModelDefinition\Package_1645.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="PatternDecorator.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PatternDecorator.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PatternDecorator.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="PatternTemplate.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PatternTemplate.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>PatternTemplate.classdiagram</DependentUpon>
+    </Content>
     <Content Include="Periodicita_TestaPeriodo.sequencediagram">
       <SubType>Content</SubType>
     </Content>
