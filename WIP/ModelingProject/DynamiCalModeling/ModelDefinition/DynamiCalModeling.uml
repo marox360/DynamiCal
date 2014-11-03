@@ -738,6 +738,56 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="dc6b134a-dbf1-46f8-9b31-790df8e7c202"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="de9ee98a-9083-42d6-bedd-431c57941b67"
+              LastKnownName="Voce"
+              LastKnownLocation="DynamiCalModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4e2857eb-a164-42be-a5cf-9f8afe099bdc"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2ae6f88c-4181-445f-abe4-87b5163e08b6"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a000ac44-4fcd-4923-8e91-edd5a5ad1433"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="6f5865ef-fcd1-435f-b80e-4f931e61563f"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -751,6 +801,18 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="a517d8f0-0b39-4dfc-8255-c80f45586916"
+                name="Lower"
+                value="0" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="56770f0c-1d7c-4bf7-af49-d8b778174d14"
+                name="Upper"
+                value="1" />
+            </upperValueInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
                 Id="1b3fa12e-861a-4e83-934c-a2dd75a45c5b"
@@ -787,6 +849,18 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="7bf6a613-4545-4bdd-9177-3c0f34fcc5f5"
+                name="Lower"
+                value="0" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="a27c3e4b-53e0-4df1-9e19-1667ad24e804"
+                name="Upper"
+                value="1" />
+            </upperValueInternal>
             <type_NamedElement>
               <undefinedTypeMoniker
                 Id="1b3fa12e-861a-4e83-934c-a2dd75a45c5b"
@@ -858,58 +932,6 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="9c544aae-8ccb-4038-a9b7-8997fb8fb6ff"
-            isDerived="false"
-            sourceEndRoleName=""
-            targetEndRoleName=""
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="1320ab54-0969-4b7a-b856-a9e5077a167c"
-              LastKnownName="CalendarioCondiviso"
-              LastKnownLocation="DynamiCalModeling.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="910c22eb-fbc6-49ea-ac13-40ccbe5f2122"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="92c1c2a1-034c-4d96-965e-2ae7e0250b5c"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="08316f3f-24c0-4633-8996-45fca8b338c5"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="48bab6b6-6671-4487-840d-94868f273071"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="68e89a58-fb6e-49af-aca7-d035a6a7a326"
@@ -949,6 +971,71 @@
               LastKnownLocation="DynamiCalModeling.uml" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association
+            Id="9c544aae-8ccb-4038-a9b7-8997fb8fb6ff"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="17ae4bfb-08de-4cbf-be7e-3f3c069ad543"
+              LastKnownName="Amico"
+              LastKnownLocation="DynamiCalModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="910c22eb-fbc6-49ea-ac13-40ccbe5f2122"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="92c1c2a1-034c-4d96-965e-2ae7e0250b5c"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="08316f3f-24c0-4633-8996-45fca8b338c5"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="48bab6b6-6671-4487-840d-94868f273071"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5a7c0c5b-8e7f-43c1-8521-f7bc8710973c"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b69ab56a-3caf-4e66-9198-7e3249938643"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -1010,6 +1097,36 @@
                 LastKnownLocation="DynamiCalModeling.uml" />
             </type_NamedElement>
           </property>
+          <property
+            Id="bb34b61d-6c1b-4b1d-9ba6-3de6bb8ad3b9"
+            name="valore"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <lowerValueInternal>
+              <literalString
+                Id="fc50c384-d98d-4453-813a-839df9bc1e70"
+                name="Lower"
+                value="0" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="7dd49f55-8922-4616-a0f1-74ffa905c4b1"
+                name="Upper"
+                value="1" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="a9c31da2-1995-4496-9822-7bb769e96f6f"
+                LastKnownName="object"
+                LastKnownLocation="DynamiCalModeling.uml" />
+            </type_NamedElement>
+          </property>
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -1054,16 +1171,44 @@
         <ownedLiterals>
           <enumerationLiteral
             Id="d04763ac-6e84-4775-9a83-bdf76626bbf6"
-            name="Mai" />
+            name="Mai">
+            <specification>
+              <literalInteger
+                Id="f795f952-f090-49c5-8e05-3ecdefdf4b3e"
+                name="Integer"
+                value="0" />
+            </specification>
+          </enumerationLiteral>
           <enumerationLiteral
             Id="d453eb79-bab4-4959-8533-1fe906bde89c"
-            name="Giornaliera" />
+            name="Giornaliera">
+            <specification>
+              <literalInteger
+                Id="418d228c-b723-413b-9fe2-6339fc0d40fa"
+                name="Integer"
+                value="1" />
+            </specification>
+          </enumerationLiteral>
           <enumerationLiteral
             Id="4e87381b-7d25-42ec-9f0e-0c69c71fc36e"
-            name="Settimanale" />
+            name="Settimanale">
+            <specification>
+              <literalInteger
+                Id="d2867d74-f812-4cc4-ad56-8fba59d61c45"
+                name="Integer"
+                value="2" />
+            </specification>
+          </enumerationLiteral>
           <enumerationLiteral
             Id="08452a79-8eb4-4521-a7ff-209ebadf91fe"
-            name="Mensile" />
+            name="Mensile">
+            <specification>
+              <literalInteger
+                Id="564c4cef-ed2a-4e87-8d21-f235899d5a30"
+                name="Integer"
+                value="3" />
+            </specification>
+          </enumerationLiteral>
           <enumerationLiteral
             Id="46908166-038f-4454-b46b-23b5d551e88a"
             name="Annuale" />
@@ -1074,6 +1219,11 @@
       <undefinedType
         Id="28e0fa2b-c818-4946-8cda-9e92e1b49ac9"
         name="Tipo" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a9c31da2-1995-4496-9822-7bb769e96f6f"
+        name="object" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

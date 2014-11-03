@@ -344,9 +344,45 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="914ea952-4aa8-4a70-b60c-52b715f8ee9b" />
           </association>
+          <association Id="df437ce7-4488-450b-a648-273ba9bfa834" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="67938298-b999-44d5-afa7-330b7f444e0c" LastKnownName="Voce" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="83ff8eef-f84c-438d-87df-b9c182e8b58e" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4e2857eb-a164-42be-a5cf-9f8afe099bdc" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="bf84e487-566a-4f9e-b1f6-038b2487f7e1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <lowerValueInternal>
+                    <literalString Id="9eff0e61-5bbd-435a-8898-c96fd39b37ee" name="Lower" value="*">
+                      <elementDefinition Id="a000ac44-4fcd-4923-8e91-edd5a5ad1433" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="8a236910-ff5b-4799-9d3d-9411827194a1" name="Upper" value="*">
+                      <elementDefinition Id="6f5865ef-fcd1-435f-b80e-4f931e61563f" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="2ae6f88c-4181-445f-abe4-87b5163e08b6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="dc6b134a-dbf1-46f8-9b31-790df8e7c202" />
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property Id="3d5b60d2-5b75-4a58-aed3-bae8771fc62f" name="luogo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="4a0d2ae6-e8d8-4e4e-8c6e-c64b9c7ac5a3" name="Lower" value="0">
+                <elementDefinition Id="a517d8f0-0b39-4dfc-8255-c80f45586916" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="001b58f0-b4ff-4c6f-a6ed-54121168dc10" name="Upper" value="1">
+                <elementDefinition Id="56770f0c-1d7c-4bf7-af49-d8b778174d14" />
+              </literalString>
+            </upperValueInternal>
             <elementDefinition Id="d0ab5a94-6038-4710-ac8e-8e1cc2dd3cc3" />
             <type_NamedElement>
               <referencedTypeMoniker Id="b3943283-b5a4-4ca0-b56e-d7d3d0daf988" LastKnownName="string" />
@@ -359,6 +395,16 @@
             </type_NamedElement>
           </property>
           <property Id="4d011f50-7ac2-4fd8-9eae-ea7057160e6d" name="descrizione" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="88b140ae-d507-42f0-bb49-fd5f92845ac6" name="Lower" value="0">
+                <elementDefinition Id="7bf6a613-4545-4bdd-9177-3c0f34fcc5f5" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="bd4f4028-1876-421a-a07e-0e2310853865" name="Upper" value="1">
+                <elementDefinition Id="a27c3e4b-53e0-4df1-9e19-1667ad24e804" />
+              </literalString>
+            </upperValueInternal>
             <elementDefinition Id="6b39f209-519c-4232-b18f-293a1093142c" />
             <type_NamedElement>
               <referencedTypeMoniker Id="b3943283-b5a4-4ca0-b56e-d7d3d0daf988" LastKnownName="string" />
@@ -388,34 +434,6 @@
     <logicalClassDesignerModelHasTypes>
       <class Id="cd82642b-7d7f-4ecb-a0af-d7c997c5946a" name="Amico" isAbstract="false" isLeaf="false" isActiveClass="false">
         <elementDefinition Id="17ae4bfb-08de-4cbf-be7e-3f3c069ad543" />
-        <targetEnds>
-          <association Id="e2f05e48-97c6-4f98-81fd-d3ec08483c4d" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
-            <classMoniker Id="c9c97029-b3c5-44c8-ad18-ce885fbf32e6" LastKnownName="CalendarioCondiviso" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="3fad99ef-a7de-4cda-bb42-41025acbe9d0" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString Id="ec0ea83c-5e6f-4cc2-b955-fd9fad7f2550" name="Lower" value="1">
-                      <elementDefinition Id="92c1c2a1-034c-4d96-965e-2ae7e0250b5c" />
-                    </literalString>
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString Id="b779e707-1870-4bd2-82b8-203be6236c97" name="Upper" value="*">
-                      <elementDefinition Id="08316f3f-24c0-4633-8996-45fca8b338c5" />
-                    </literalString>
-                  </upperValueInternal>
-                  <elementDefinition Id="910c22eb-fbc6-49ea-ac13-40ccbe5f2122" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="5971ff26-59ca-4eb7-bf2b-24998eb97c92" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="48bab6b6-6671-4487-840d-94868f273071" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="9c544aae-8ccb-4038-a9b7-8997fb8fb6ff" />
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property Id="be44f3c7-c185-4f9e-9b2b-b3a2d2fcff6c" name="email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="68e89a58-fb6e-49af-aca7-d035a6a7a326" />
@@ -435,6 +453,44 @@
             <elementDefinition Id="49668932-59db-4d40-977a-75d6f88a8656" />
           </generalization>
         </generalsInternal>
+        <targetEnds>
+          <association Id="e2f05e48-97c6-4f98-81fd-d3ec08483c4d" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+            <classMoniker Id="cd82642b-7d7f-4ecb-a0af-d7c997c5946a" LastKnownName="Amico" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3fad99ef-a7de-4cda-bb42-41025acbe9d0" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="ec0ea83c-5e6f-4cc2-b955-fd9fad7f2550" name="Lower" value="1">
+                      <elementDefinition Id="92c1c2a1-034c-4d96-965e-2ae7e0250b5c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b779e707-1870-4bd2-82b8-203be6236c97" name="Upper" value="1">
+                      <elementDefinition Id="08316f3f-24c0-4633-8996-45fca8b338c5" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="910c22eb-fbc6-49ea-ac13-40ccbe5f2122" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5971ff26-59ca-4eb7-bf2b-24998eb97c92" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="c1156566-68ae-4342-a75f-c2e9365ae488" name="Lower" value="1">
+                      <elementDefinition Id="5a7c0c5b-8e7f-43c1-8521-f7bc8710973c" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="6c9144de-1951-4efb-9323-d344d9ea3e3c" name="Upper" value="*">
+                      <elementDefinition Id="b69ab56a-3caf-4e66-9198-7e3249938643" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="48bab6b6-6671-4487-840d-94868f273071" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9c544aae-8ccb-4038-a9b7-8997fb8fb6ff" />
+          </association>
+        </targetEnds>
       </class>
     </logicalClassDesignerModelHasTypes>
     <packageHasNamedElement>
@@ -464,13 +520,29 @@
           <property Id="18c8ae31-ddb7-4c75-bb9e-60d0dd4a918b" name="nome" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="b77083f1-2064-46fb-9e77-00dcc5c2f6f5" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="b3943283-b5a4-4ca0-b56e-d7d3d0daf988" LastKnownName="string" />
+              <referencedTypeMoniker Id="fe141a6a-4d3b-4d63-9951-f976b53e1d22" LastKnownName="string" />
             </type_NamedElement>
           </property>
           <property Id="02847419-3970-463a-9ace-87994f721e24" name="tipo" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="455d4f5e-6caa-408d-9a2b-aa5b34739714" />
             <type_NamedElement>
               <referencedTypeMoniker Id="f79044eb-e7c0-43d3-a75a-125cc6622380" LastKnownName="Tipo" />
+            </type_NamedElement>
+          </property>
+          <property Id="34a9720f-e7af-41e4-8ce1-3c7f60f5659e" name="valore" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="33331f29-e54f-4d9d-8d9b-335a9c8f4ded" name="Lower" value="0">
+                <elementDefinition Id="fc50c384-d98d-4453-813a-839df9bc1e70" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="5b8fc4c8-0d5b-40c3-a11b-8e90c8b6293a" name="Upper" value="1">
+                <elementDefinition Id="7dd49f55-8922-4616-a0f1-74ffa905c4b1" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="bb34b61d-6c1b-4b1d-9ba6-3de6bb8ad3b9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d65edc27-1585-4c1e-a1ec-9b50e4ffd553" LastKnownName="object" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -516,15 +588,35 @@
         <ownedLiterals>
           <enumerationLiteral Id="8a1d0455-04a7-4af0-9f43-2df4b9071801" name="Mai">
             <elementDefinition Id="d04763ac-6e84-4775-9a83-bdf76626bbf6" />
+            <specification>
+              <literalInteger Id="5473aa5c-5940-42ac-af32-c18cf0195298" name="Integer" value="0">
+                <elementDefinition Id="f795f952-f090-49c5-8e05-3ecdefdf4b3e" />
+              </literalInteger>
+            </specification>
           </enumerationLiteral>
           <enumerationLiteral Id="572cb6f1-fb5c-44d1-aa74-82d51902cf8d" name="Giornaliera">
             <elementDefinition Id="d453eb79-bab4-4959-8533-1fe906bde89c" />
+            <specification>
+              <literalInteger Id="488a3c8d-542b-4a5c-ad25-013aaf0e8d53" name="Integer" value="1">
+                <elementDefinition Id="418d228c-b723-413b-9fe2-6339fc0d40fa" />
+              </literalInteger>
+            </specification>
           </enumerationLiteral>
           <enumerationLiteral Id="7af137ea-248d-42ca-8bdb-61a7bdc2cbda" name="Settimanale">
             <elementDefinition Id="4e87381b-7d25-42ec-9f0e-0c69c71fc36e" />
+            <specification>
+              <literalInteger Id="eaeab5a7-db6b-4567-892b-9fca3a87d9b0" name="Integer" value="2">
+                <elementDefinition Id="d2867d74-f812-4cc4-ad56-8fba59d61c45" />
+              </literalInteger>
+            </specification>
           </enumerationLiteral>
           <enumerationLiteral Id="d64b6504-ded8-4cf2-a795-9caef343a006" name="Mensile">
             <elementDefinition Id="08452a79-8eb4-4521-a7ff-209ebadf91fe" />
+            <specification>
+              <literalInteger Id="b362ba0a-bf77-4d68-9bb6-92afa62d9e66" name="Integer" value="3">
+                <elementDefinition Id="564c4cef-ed2a-4e87-8d21-f235899d5a30" />
+              </literalInteger>
+            </specification>
           </enumerationLiteral>
           <enumerationLiteral Id="204ca43b-aac9-4692-b96b-60045e9422c2" name="Annuale">
             <elementDefinition Id="46908166-038f-4454-b46b-23b5d551e88a" />
@@ -535,6 +627,16 @@
     <packageHasNamedElement>
       <referencedType Id="f79044eb-e7c0-43d3-a75a-125cc6622380" name="Tipo" isAbstract="false" isLeaf="false" cachedFullName="Tipo">
         <elementDefinition Id="28e0fa2b-c818-4946-8cda-9e92e1b49ac9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d65edc27-1585-4c1e-a1ec-9b50e4ffd553" name="object" isAbstract="false" isLeaf="false" cachedFullName="object">
+        <elementDefinition Id="a9c31da2-1995-4496-9822-7bb769e96f6f" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fe141a6a-4d3b-4d63-9951-f976b53e1d22" name="string" isAbstract="false" isLeaf="false" cachedFullName="string">
+        <elementDefinition Id="1b3fa12e-861a-4e83-934c-a2dd75a45c5b" />
       </referencedType>
     </packageHasNamedElement>
   </packagedElements>
