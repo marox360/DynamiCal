@@ -58,6 +58,9 @@ namespace DynamiCal.View
             this.locationLabel.Text = evento.Luogo ?? "";
             this.toolTip.SetToolTip(this.locationLabel, this.locationLabel.Text);
 
+            this.modelLabel.Text = "Modello: " + evento.Modello.Nome;
+            this.toolTip.SetToolTip(this.locationLabel, this.modelLabel.Text);
+
             PeriodoTempo periodo;
             if (this.OverrideDate == default(DateTime))
             {

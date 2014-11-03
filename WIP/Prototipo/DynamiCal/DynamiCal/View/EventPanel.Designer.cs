@@ -38,6 +38,7 @@
             this.nameLabel = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.entriesdataGridView = new DynamiCal.View.DataGridView.VociDataGridView();
+            this.modelLabel = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.entriesdataGridView)).BeginInit();
             this.SuspendLayout();
@@ -141,10 +142,22 @@
             this.entriesdataGridView.TabIndex = 0;
             this.entriesdataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.entriesdataGridView_CellPainting);
             // 
+            // modelLabel
+            // 
+            this.modelLabel.BackColor = System.Drawing.SystemColors.Window;
+            this.modelLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.modelLabel.Location = new System.Drawing.Point(0, 387);
+            this.modelLabel.Name = "modelLabel";
+            this.modelLabel.Size = new System.Drawing.Size(237, 20);
+            this.modelLabel.TabIndex = 2;
+            this.modelLabel.Text = "Modello: Base";
+            this.modelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // EventPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.modelLabel);
             this.Controls.Add(this.entriesdataGridView);
             this.Controls.Add(this.topPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -168,6 +181,7 @@
         private System.Windows.Forms.Label dateLabel;
         private System.Windows.Forms.TextBox descriptionTextBox;
         private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Label modelLabel;
 
     }
 }
