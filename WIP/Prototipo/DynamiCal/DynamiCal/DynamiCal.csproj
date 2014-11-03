@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filters\Filtraggio.cs" />
     <Compile Include="Forms\DeleteEventModelForm.cs">
       <SubType>Form</SubType>
     </Compile>
