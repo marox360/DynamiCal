@@ -55,7 +55,7 @@ namespace DynamiCal.View
             this.nameLabel.Text = evento.Nome;
             this.toolTip.SetToolTip(this.nameLabel, this.nameLabel.Text);
 
-            this.locationLabel.Text = evento.Luogo == null ? "" : evento.Luogo;
+            this.locationLabel.Text = evento.Luogo ?? "";
             this.toolTip.SetToolTip(this.locationLabel, this.locationLabel.Text);
 
             PeriodoTempo periodo;
@@ -114,7 +114,7 @@ namespace DynamiCal.View
 
             this.repeatLabel.Text = "ripeti: " + evento.Periodicita.ToString().ToLower();
 
-            this.descriptionTextBox.Text = evento.Descrizione == null ? "" : evento.Descrizione;
+            this.descriptionTextBox.Text = evento.Descrizione ?? "";
             this.descriptionTextBox.ScrollBars = this.descriptionTextBox.Text.Length > 0 ? ScrollBars.Vertical : ScrollBars.None;
 
             this.entriesdataGridView.DataSource = evento.Voci;
