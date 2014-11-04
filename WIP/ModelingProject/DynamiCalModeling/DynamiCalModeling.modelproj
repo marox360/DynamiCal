@@ -36,6 +36,20 @@
       <SubType>Content</SubType>
       <DependentUpon>FiltroTemporale_FiltraEventi.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="GestioneCalendario.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GestioneCalendario.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>GestioneCalendario.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="GestioneModelloEvento.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GestioneModelloEvento.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>GestioneModelloEvento.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Package1_1645.uml">
       <SubType>Content</SubType>
     </Content>
