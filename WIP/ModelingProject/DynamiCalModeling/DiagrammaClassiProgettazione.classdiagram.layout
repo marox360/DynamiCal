@@ -294,7 +294,7 @@
       <generalizationMoniker Id="8a51196e-a477-44ad-9f6b-cfb35d6f8237" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="8.7222222201526165, 5.5, 0.125, 0.1341145783662796" shapeFieldName="Stereotype" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="8.72916666418314, 5.5, 0.125, 0.1341145783662796" shapeFieldName="Stereotype" />
       </moveableDecoratorHostShapes>
       <nodes>
         <classShapeMoniker Id="7be581e5-05f5-4147-b0fb-ec0a9fe7fe4e" />
@@ -340,7 +340,7 @@
       <associationMoniker Id="9ce3abb4-9338-4424-bcfa-c17411f9a1d8" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="20.273727411437491, 8.0625, 0.125, 0.14800345897674561" shapeFieldName="SourceMultiplicity" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="20.280671855468015, 8.0625, 0.125, 0.14800345897674561" shapeFieldName="SourceMultiplicity" />
       </moveableDecoratorHostShapes>
       <nodes>
         <classShapeMoniker Id="b6e9fb0f-d027-46f6-bf8d-cdf0fbe7f9a6" />

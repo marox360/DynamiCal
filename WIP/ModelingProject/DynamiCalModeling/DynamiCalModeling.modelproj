@@ -50,12 +50,12 @@
       <SubType>Content</SubType>
       <DependentUpon>DiagrammaModelloEvento.classdiagram</DependentUpon>
     </Content>
-    <Content Include="DiagrammaPeridicita.classdiagram">
+    <Content Include="DiagrammaPeriodicita.classdiagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="DiagrammaPeridicita.classdiagram.layout">
+    <Content Include="DiagrammaPeriodicita.classdiagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>DiagrammaPeridicita.classdiagram</DependentUpon>
+      <DependentUpon>DiagrammaPeriodicita.classdiagram</DependentUpon>
     </Content>
     <Content Include="FiltroTemporale_FiltraEventi.sequencediagram">
       <SubType>Content</SubType>
