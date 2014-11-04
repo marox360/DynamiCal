@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DynamiCal.Presentation
 {
@@ -22,6 +23,7 @@ namespace DynamiCal.Presentation
         {
             base.InitializeControl();
 
+            this.Control.EventList.BindingSource.Clear();
             foreach (Evento evento in this.Filtraggio.Eventi())
             {
                 this.Control.EventList.BindingSource.Add(evento);
@@ -42,13 +44,16 @@ namespace DynamiCal.Presentation
         private void filtraggio_FilterChanged(object sender, EventArgs e)
         {
             IEnumerable<Evento> eventi = this.Filtraggio.Eventi();
-            if (!this.Control.EventList.BindingSource.List.Cast<Evento>().SequenceEqual(eventi))
+            BindingSource bindingSource = this.Control.EventList.BindingSource;
+            if (!bindingSource.List.Cast<Evento>().SequenceEqual(eventi))
             {
-                this.Control.EventList.BindingSource.Clear();
+                bindingSource.SuspendBinding();
+                bindingSource.Clear();
                 foreach (Evento evento in eventi)
                 {
-                    this.Control.EventList.BindingSource.Add(evento);
+                    bindingSource.Add(evento);
                 }
+                bindingSource.ResumeBinding();
             }
             else
             {
