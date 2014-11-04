@@ -29,6 +29,13 @@
       <SubType>Content</SubType>
       <DependentUpon>DiagrammaClassiProgettazione.classdiagram</DependentUpon>
     </Content>
+    <Content Include="DiagrammaFiltri.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DiagrammaFiltri.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DiagrammaFiltri.classdiagram</DependentUpon>
+    </Content>
     <Content Include="FiltroTemporale_FiltraEventi.sequencediagram">
       <SubType>Content</SubType>
     </Content>
