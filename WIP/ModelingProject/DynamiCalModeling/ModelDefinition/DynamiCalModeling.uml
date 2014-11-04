@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c"
   name="DynamiCalModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -3068,7 +3068,7 @@
     <packageHasNamedElement>
       <class
         Id="856cbd97-0609-483f-9669-55df24ebdb81"
-        name="CriterioDiFiltraggio1"
+        name="CriterioDiFiltraggio"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -3371,7 +3371,7 @@
     <packageHasNamedElement>
       <class
         Id="db2e124e-bd1a-46b1-a87a-32cd63cd185f"
-        name="Filtro1"
+        name="Filtro"
         isAbstract="true"
         isLeaf="false"
         isActiveClass="false">
@@ -3835,7 +3835,7 @@
     <packageHasNamedElement>
       <class
         Id="efb35c48-50cb-4870-9966-d2e0e5d440c3"
-        name="FiltroModello1"
+        name="FiltroModello"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -3894,7 +3894,7 @@
             isSubstitutable="false">
             <classMoniker
               Id="db2e124e-bd1a-46b1-a87a-32cd63cd185f"
-              LastKnownName="Filtro1"
+              LastKnownName="Filtro"
               LastKnownLocation="DynamiCalModeling.uml" />
           </generalization>
         </generalsInternal>
@@ -4264,7 +4264,7 @@
     <packageHasNamedElement>
       <class
         Id="270216e9-8ea2-4f29-868d-fc8c1f971c34"
-        name="FiltroRicerca1"
+        name="FiltroRicerca"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -4323,7 +4323,7 @@
             isSubstitutable="false">
             <classMoniker
               Id="db2e124e-bd1a-46b1-a87a-32cd63cd185f"
-              LastKnownName="Filtro1"
+              LastKnownName="Filtro"
               LastKnownLocation="DynamiCalModeling.uml" />
           </generalization>
         </generalsInternal>
@@ -4588,7 +4588,7 @@
     <packageHasNamedElement>
       <class
         Id="72f60f84-47c2-422a-9e1e-208264502124"
-        name="FiltroTemporale1"
+        name="FiltroTemporale"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -4647,7 +4647,7 @@
             isSubstitutable="false">
             <classMoniker
               Id="db2e124e-bd1a-46b1-a87a-32cd63cd185f"
-              LastKnownName="Filtro1"
+              LastKnownName="Filtro"
               LastKnownLocation="DynamiCalModeling.uml" />
           </generalization>
         </generalsInternal>
@@ -5036,7 +5036,7 @@
     <packageHasNamedElement>
       <class
         Id="ec72ec00-8d8a-4b20-8f83-410f6efdc0b1"
-        name="FiltroCalendario1"
+        name="FiltroCalendario"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -5095,7 +5095,7 @@
             isSubstitutable="false">
             <classMoniker
               Id="db2e124e-bd1a-46b1-a87a-32cd63cd185f"
-              LastKnownName="Filtro1"
+              LastKnownName="Filtro"
               LastKnownLocation="DynamiCalModeling.uml" />
           </generalization>
         </generalsInternal>
@@ -6621,72 +6621,6 @@
               LastKnownLocation="DynamiCalModeling.uml" />
           </interfaceRealization>
         </suppliersInternal>
-        <targetEnds>
-          <association
-            Id="4543f816-9c46-437d-b91d-8d47552355f4"
-            isDerived="false"
-            sourceEndRoleName=""
-            targetEndRoleName=""
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="fbde12c0-4acb-4240-953d-f59c3036bab4"
-              LastKnownName="IFiltro"
-              LastKnownLocation="DynamiCalModeling.uml" />
-            <description>Property Filtro references type IFiltro.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="ead7668b-c355-4dac-87dd-6f8fac65bf4f"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="4d072c08-1b2d-4e1a-95c8-a3f578b0f539"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="51ea7ed6-a12e-4c49-8783-c4663137a437"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="37d4dcab-d311-4f22-a1fd-8dcfdf48bf17"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="d8a97fa7-725e-4f27-bb99-f00f2859a59e"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="29612c78-c9e0-41c0-9a5b-1f93c7794c71"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="61315a22-59ff-4780-ad65-719f99ed0ac5"

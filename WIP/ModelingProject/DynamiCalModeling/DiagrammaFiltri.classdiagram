@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="3c09920b-b8f9-4cef-ad03-bd5bcd1d9479" name="DiagrammaFiltri" linkedPackageId="1dda86ae-d992-43ea-ad2e-f8f544f6ba1e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="27fa6f3a-68b8-4625-a292-a205e31686f9">
-      <profileInstance Id="c95c70f6-011b-423f-84eb-5afa177319e8" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="06ef2e41-d065-4623-8e91-f7604f26853a">
-      <profileInstance Id="92ccdb20-7128-4b66-99fb-156e593aad52" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="3533066f-c3df-4d47-b3c5-d120121c962e">
-      <profileInstance Id="3f81128e-560b-4802-be89-1de94eb496db" name="CSharpProfile">
-        <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
-      </profileInstance>
-      <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="3c09920b-b8f9-4cef-ad03-bd5bcd1d9479" name="DiagrammaFiltri" linkedPackageId="1dda86ae-d992-43ea-ad2e-f8f544f6ba1e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="b05858c7-a4bb-4671-a66b-602705402413" name="IEnumerable&lt;Calendario‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::System::Collections::Generic::IEnumerable&lt;Calendario‎&gt;">
@@ -82,7 +62,7 @@
       </referencedType>
     </packageHasNamedElement>
     <logicalClassDesignerModelHasTypes>
-      <class Id="11c70c22-77c2-40e1-9122-dff94589c5dc" name="CriterioDiFiltraggio1" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="11c70c22-77c2-40e1-9122-dff94589c5dc" name="CriterioDiFiltraggio" isAbstract="false" isLeaf="false" isActiveClass="false">
         <referencesInternal>
           <reference Id="5448af28-27fe-4d95-bdf1-b1a9a5d36d9e" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DCriterioDiFiltraggio" tag="ViewCode">
             <elementDefinition Id="93e5a27b-a166-44d7-a952-45a0b7ce4a50" />
@@ -314,7 +294,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="96b3185f-11cf-4d06-899e-5a872aff99fc" name="Filtro1" isAbstract="true" isLeaf="false" isActiveClass="false">
+      <class Id="96b3185f-11cf-4d06-899e-5a872aff99fc" name="Filtro" isAbstract="true" isLeaf="false" isActiveClass="false">
         <referencesInternal>
           <reference Id="bc56d89e-59d1-4e10-a440-d1000c804577" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltro" tag="ViewCode">
             <elementDefinition Id="492a0f76-b212-4ed5-a91d-1dceeefaae83" />
@@ -667,7 +647,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="084184f6-46e5-4ed2-8927-4dd06460d51e" name="FiltroModello1" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="084184f6-46e5-4ed2-8927-4dd06460d51e" name="FiltroModello" isAbstract="false" isLeaf="false" isActiveClass="false">
         <referencesInternal>
           <reference Id="f814a6ef-7d67-435d-873f-b64da054944e" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroModello" tag="ViewCode">
             <elementDefinition Id="0f93d753-631b-4af9-861c-3c1f8845e85e" />
@@ -713,7 +693,7 @@
         <elementDefinition Id="efb35c48-50cb-4870-9966-d2e0e5d440c3" />
         <generalsInternal>
           <generalization Id="f349be65-6fc9-4173-bf27-85048028481c" isSubstitutable="false">
-            <classMoniker Id="96b3185f-11cf-4d06-899e-5a872aff99fc" LastKnownName="Filtro1" />
+            <classMoniker Id="96b3185f-11cf-4d06-899e-5a872aff99fc" LastKnownName="Filtro" />
             <elementDefinition Id="72725e92-14ad-4a7a-9132-a5dbc47293b0" />
           </generalization>
         </generalsInternal>
@@ -991,7 +971,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="fda4f37c-41ae-42ad-9415-457f8d42368e" name="FiltroRicerca1" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="fda4f37c-41ae-42ad-9415-457f8d42368e" name="FiltroRicerca" isAbstract="false" isLeaf="false" isActiveClass="false">
         <referencesInternal>
           <reference Id="bfd4f067-c8bc-4e6f-82e3-4e31bcf8f960" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroRicerca" tag="ViewCode">
             <elementDefinition Id="b77656ad-9660-4d81-bb1b-d4bf3fd2e5b9" />
@@ -1037,7 +1017,7 @@
         <elementDefinition Id="270216e9-8ea2-4f29-868d-fc8c1f971c34" />
         <generalsInternal>
           <generalization Id="74b9e198-3307-459d-8ce5-31a415ec6d79" isSubstitutable="false">
-            <classMoniker Id="96b3185f-11cf-4d06-899e-5a872aff99fc" LastKnownName="Filtro1" />
+            <classMoniker Id="96b3185f-11cf-4d06-899e-5a872aff99fc" LastKnownName="Filtro" />
             <elementDefinition Id="4ab79084-1183-472c-9a68-08dbafc5becf" />
           </generalization>
         </generalsInternal>
@@ -1236,7 +1216,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="73e25b34-f54b-4722-af78-25db12e2d992" name="FiltroTemporale1" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="73e25b34-f54b-4722-af78-25db12e2d992" name="FiltroTemporale" isAbstract="false" isLeaf="false" isActiveClass="false">
         <referencesInternal>
           <reference Id="7313d682-a07b-4c9b-acc8-46609261549f" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroTemporale" tag="ViewCode">
             <elementDefinition Id="390a2d92-d661-4f47-bfb0-64a23c9c3252" />
@@ -1282,7 +1262,7 @@
         <elementDefinition Id="72f60f84-47c2-422a-9e1e-208264502124" />
         <generalsInternal>
           <generalization Id="90fdeb8a-09ff-4308-9420-edd91acfbee0" isSubstitutable="false">
-            <classMoniker Id="96b3185f-11cf-4d06-899e-5a872aff99fc" LastKnownName="Filtro1" />
+            <classMoniker Id="96b3185f-11cf-4d06-899e-5a872aff99fc" LastKnownName="Filtro" />
             <elementDefinition Id="aa0dd436-9e1a-44a1-80a3-8b0ca439d64d" />
           </generalization>
         </generalsInternal>
@@ -1573,7 +1553,7 @@
       </class>
     </logicalClassDesignerModelHasTypes>
     <logicalClassDesignerModelHasTypes>
-      <class Id="40fcb8f8-f858-4d3a-a55f-c8926cba858f" name="FiltroCalendario1" isAbstract="false" isLeaf="false" isActiveClass="false">
+      <class Id="40fcb8f8-f858-4d3a-a55f-c8926cba858f" name="FiltroCalendario" isAbstract="false" isLeaf="false" isActiveClass="false">
         <referencesInternal>
           <reference Id="3359367b-2de9-4c9b-ae0a-4e9c50d35ad6" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Filters Type%3DFiltroCalendario" tag="ViewCode">
             <elementDefinition Id="5819ba78-48b8-49a7-96ea-e848b8ec0e27" />
@@ -1619,7 +1599,7 @@
         <elementDefinition Id="ec72ec00-8d8a-4b20-8f83-410f6efdc0b1" />
         <generalsInternal>
           <generalization Id="8ee42e2c-1e55-4897-a2ff-bf5f9b5ce185" isSubstitutable="false">
-            <classMoniker Id="96b3185f-11cf-4d06-899e-5a872aff99fc" LastKnownName="Filtro1" />
+            <classMoniker Id="96b3185f-11cf-4d06-899e-5a872aff99fc" LastKnownName="Filtro" />
             <elementDefinition Id="aa09b30c-adc7-42fa-97ea-ad691f84edbe" />
           </generalization>
         </generalsInternal>
@@ -2773,45 +2753,6 @@
             <elementDefinition Id="3b12f569-d60f-4517-add9-57acfa8ad01a" />
           </interfaceRealization>
         </suppliersInternal>
-        <targetEnds>
-          <association Id="235cbeac-0d56-458e-9389-4352a69fad5b" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
-            <interfaceMoniker Id="325213de-ccfd-4a69-8263-54246aad0504" LastKnownName="IFiltro" />
-            <description>Property Filtro references type IFiltro.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="d21c19ce-b0ea-4abd-8674-641272678dd6" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString Id="f747a9c1-18f1-4d1b-99b1-157e556b6541" name="Lower" value="*">
-                      <elementDefinition Id="4d072c08-1b2d-4e1a-95c8-a3f578b0f539" />
-                    </literalString>
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString Id="08cd47fc-af74-44ce-90c9-53028d5d2a44" name="Upper" value="*">
-                      <elementDefinition Id="51ea7ed6-a12e-4c49-8783-c4663137a437" />
-                    </literalString>
-                  </upperValueInternal>
-                  <elementDefinition Id="ead7668b-c355-4dac-87dd-6f8fac65bf4f" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="1cfae589-5c1d-422d-9db1-9be96860590a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <lowerValueInternal>
-                    <literalString Id="96c0e251-1114-411b-92ed-a9627f9279af" name="Lower" value="1">
-                      <elementDefinition Id="d8a97fa7-725e-4f27-bb99-f00f2859a59e" />
-                    </literalString>
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString Id="bc95a81a-51a2-4854-96f3-3d4a56ee82cc" name="Upper" value="1">
-                      <elementDefinition Id="29612c78-c9e0-41c0-9a5b-1f93c7794c71" />
-                    </literalString>
-                  </upperValueInternal>
-                  <elementDefinition Id="37d4dcab-d311-4f22-a1fd-8dcfdf48bf17" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="4543f816-9c46-437d-b91d-8d47552355f4" />
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property Id="738bcc9c-ca22-46a3-8670-0d576a47f76a" name="Filtro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -3507,5 +3448,25 @@
   </packagedElements>
   <package Id="1dda86ae-d992-43ea-ad2e-f8f544f6ba1e" name="DynamiCalModeling">
     <elementDefinition Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="27fa6f3a-68b8-4625-a292-a205e31686f9">
+        <profileInstance Id="c95c70f6-011b-423f-84eb-5afa177319e8" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="06ef2e41-d065-4623-8e91-f7604f26853a">
+        <profileInstance Id="92ccdb20-7128-4b66-99fb-156e593aad52" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3533066f-c3df-4d47-b3c5-d120121c962e">
+        <profileInstance Id="3f81128e-560b-4802-be89-1de94eb496db" name="CSharpProfile">
+          <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
+        </profileInstance>
+        <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>
