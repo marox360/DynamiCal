@@ -38,6 +38,7 @@ namespace DynamiCal.Filters
                 if (_filtro != value)
                 {
                     _filtro = value;
+
                     this.Reset();
                 }
             }

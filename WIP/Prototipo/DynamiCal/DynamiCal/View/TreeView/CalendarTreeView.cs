@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DynamiCal.View.TreeView
 {
-    class CalendarTreeView : System.Windows.Forms.TreeView
+    public class CalendarTreeView : System.Windows.Forms.TreeView
     {
         [Browsable(false)]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -30,19 +30,6 @@ namespace DynamiCal.View.TreeView
             get
             {
                 return this.Nodes["SharedCalendars"];
-            }
-        }
-
-        [Browsable(false)]
-        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public IEnumerable<Calendario> CheckedCalendars
-        {
-            get
-            {
-                return this.Nodes.Cast<TreeNode>()
-                    .SelectMany(node => node.Nodes.Cast<TreeNode>())
-                    .Where(node => node.Checked && node is CalendarTreeNode)
-                    .Select(node => (node as CalendarTreeNode).Calendario);
             }
         }
 

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace DynamiCal.View.DataGridView
 {
-    class CalendarDataGridView : System.Windows.Forms.DataGridView
+    public class CalendarDataGridView : System.Windows.Forms.DataGridView
     {
         protected override void OnResize(EventArgs e)
         {

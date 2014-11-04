@@ -43,6 +43,7 @@
             System.Windows.Forms.Label dateLabel;
             System.Windows.Forms.Panel topPanel;
             System.Windows.Forms.Panel sidePanel;
+            System.Windows.Forms.Label noEventsLabel;
             this.showInCalendarButton = new System.Windows.Forms.Button();
             this.endDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.startDateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -52,7 +53,6 @@
             this.dateComboBox = new System.Windows.Forms.ComboBox();
             this.searchBoxPanel = new DynamiCal.View.TextBox.SearchBoxPanel();
             this.eventPanel = new DynamiCal.View.EventPanel();
-            this.noEventsLabel = new System.Windows.Forms.Label();
             panel = new System.Windows.Forms.Panel();
             tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             eventBottomPanel = new System.Windows.Forms.Panel();
@@ -67,6 +67,7 @@
             dateLabel = new System.Windows.Forms.Label();
             topPanel = new System.Windows.Forms.Panel();
             sidePanel = new System.Windows.Forms.Panel();
+            noEventsLabel = new System.Windows.Forms.Label();
             panel.SuspendLayout();
             tableLayoutPanel.SuspendLayout();
             eventBottomPanel.SuspendLayout();
@@ -152,7 +153,6 @@
             this.endDateTimePicker.Name = "endDateTimePicker";
             this.endDateTimePicker.Size = new System.Drawing.Size(161, 22);
             this.endDateTimePicker.TabIndex = 3;
-            this.endDateTimePicker.ValueChanged += new System.EventHandler(this.endDateTimePicker_ValueChanged);
             // 
             // startDateTimePicker
             // 
@@ -163,7 +163,6 @@
             this.startDateTimePicker.Name = "startDateTimePicker";
             this.startDateTimePicker.Size = new System.Drawing.Size(161, 22);
             this.startDateTimePicker.TabIndex = 2;
-            this.startDateTimePicker.ValueChanged += new System.EventHandler(this.startDateTimePicker_ValueChanged);
             // 
             // eventModelPanel
             // 
@@ -184,7 +183,6 @@
             this.eventModelListBox.Name = "eventModelListBox";
             this.eventModelListBox.Size = new System.Drawing.Size(161, 230);
             this.eventModelListBox.TabIndex = 2;
-            this.eventModelListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.eventModelListBox_ItemCheck);
             // 
             // eventModelLabel
             // 
@@ -213,8 +211,6 @@
             this.eventListBox.DisplayMember = "Nome";
             this.eventListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eventListBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.eventListBox.EventFilter = null;
-            this.eventListBox.EventPanel = null;
             this.eventListBox.FormattingEnabled = true;
             this.eventListBox.ItemHeight = 17;
             this.eventListBox.Location = new System.Drawing.Point(0, 25);
@@ -257,7 +253,6 @@
             this.calendarTreeView.ShowPlusMinus = false;
             this.calendarTreeView.Size = new System.Drawing.Size(161, 230);
             this.calendarTreeView.TabIndex = 1;
-            this.calendarTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.UpdateFilter);
             // 
             // calendarLabel
             // 
@@ -294,7 +289,6 @@
             this.dateComboBox.Name = "dateComboBox";
             this.dateComboBox.Size = new System.Drawing.Size(121, 21);
             this.dateComboBox.TabIndex = 6;
-            this.dateComboBox.SelectedIndexChanged += new System.EventHandler(this.dateComboBox_SelectedIndexChanged);
             // 
             // dateLabel
             // 
@@ -327,12 +321,11 @@
             this.searchBoxPanel.Padding = new System.Windows.Forms.Padding(0, 2, 2, 5);
             this.searchBoxPanel.Size = new System.Drawing.Size(487, 30);
             this.searchBoxPanel.TabIndex = 1;
-            this.searchBoxPanel.SearchTextChanged += new System.EventHandler(this.UpdateFilter);
             // 
             // sidePanel
             // 
             sidePanel.Controls.Add(this.eventPanel);
-            sidePanel.Controls.Add(this.noEventsLabel);
+            sidePanel.Controls.Add(noEventsLabel);
             sidePanel.Dock = System.Windows.Forms.DockStyle.Right;
             sidePanel.Location = new System.Drawing.Point(512, 0);
             sidePanel.Name = "sidePanel";
@@ -351,15 +344,15 @@
             // 
             // noEventsLabel
             // 
-            this.noEventsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.noEventsLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noEventsLabel.ForeColor = System.Drawing.Color.DarkGray;
-            this.noEventsLabel.Location = new System.Drawing.Point(0, 0);
-            this.noEventsLabel.Name = "noEventsLabel";
-            this.noEventsLabel.Size = new System.Drawing.Size(222, 361);
-            this.noEventsLabel.TabIndex = 1;
-            this.noEventsLabel.Text = "Nessun evento";
-            this.noEventsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            noEventsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            noEventsLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            noEventsLabel.ForeColor = System.Drawing.Color.DarkGray;
+            noEventsLabel.Location = new System.Drawing.Point(0, 0);
+            noEventsLabel.Name = "noEventsLabel";
+            noEventsLabel.Size = new System.Drawing.Size(222, 361);
+            noEventsLabel.TabIndex = 1;
+            noEventsLabel.Text = "Nessun evento";
+            noEventsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SearchEventForm
             // 
@@ -396,7 +389,6 @@
         private View.TreeView.CalendarTreeView calendarTreeView;
         private System.Windows.Forms.CheckedListBox eventModelListBox;
         private System.Windows.Forms.Button showInCalendarButton;
-        private System.Windows.Forms.Label noEventsLabel;
         private System.Windows.Forms.DateTimePicker startDateTimePicker;
         private System.Windows.Forms.DateTimePicker endDateTimePicker;
         private System.Windows.Forms.ComboBox dateComboBox;

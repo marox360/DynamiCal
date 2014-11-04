@@ -15,20 +15,24 @@ using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 using DynamiCal.Filters;
 using DynamiCal.Model.Calendars;
+using DynamiCal.Presentation;
+using DynamiCal.View;
 
 namespace DynamiCal.Forms
 {
     public partial class MainForm : Form
     {
-        private DateTime _lastDate = DateTime.Today;
+        private IFiltroPresenter _calendarTreeViewPresenter;
+        private IFiltroPresenter _searchBoxPresenter;
+        private CalendarDataGridViewPresenter _calendarGridViewPresenter;
+        private IFiltraggio _filtraggio;
+        private IFiltraggio _filtraggioCalendarGrid;
 
         public MainForm()
         {
             InitializeComponent();
 
             Agenda.Instance.AggiungiModelloEvento(new ModelloEvento("Base"));
-
-            Agenda.Instance.CalendarsChanged += CalendarsChanged;
 
             Calendario testCalendar = new CalendarioLocale("Test Calendar");
             testCalendar.AggiungiEvento(new Evento("Test", new PeriodoTempo(DateTime.Now, TimeSpan.FromMinutes(60)), Agenda.Instance.ModelliEvento[0], null, "Questo è un evento generato automaticamente nella giornata di oggi", "Ovunque :D"));
@@ -37,14 +41,21 @@ namespace DynamiCal.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.eventsListBox.EventPanel = this.eventPanel;
-            this.calendarGridView.RowTemplate.Height = (this.calendarGridView.Height - this.calendarGridView.ColumnHeadersHeight) / 6;
-            this.ShowMonthOfDay(DateTime.Today);
-        }
+            _filtraggio = new Filtraggio(null);
+            EventPickerControl eventPicker = new EventPickerControl(this.eventPanel, this.eventsListBox);
+            new EventPickerPresenter(eventPicker, _filtraggio);
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Agenda.Instance.CalendarsChanged -= CalendarsChanged;
+            _calendarTreeViewPresenter = new CalendarTreeViewPresenter(this.calendarTreeView);
+            _calendarTreeViewPresenter.FilterChanged += UpdateFilter;
+
+            _searchBoxPresenter = new SearchBoxPanelPresenter(this.searchBoxPanel);
+            _searchBoxPresenter.FilterChanged += UpdateTextFilter;
+
+            _filtraggioCalendarGrid = new Filtraggio(null);
+            _calendarGridViewPresenter = new CalendarDataGridViewPresenter(this.calendarGridView, _filtraggioCalendarGrid);
+            _calendarGridViewPresenter.LastDateChanged += LastDateChanged;
+            _calendarGridViewPresenter.FilterChanged += UpdateTextFilter;
+            _filtraggioCalendarGrid.Filtro = this.CurrentFilter;
         }
 
         private IFiltro CurrentFilter
@@ -53,123 +64,38 @@ namespace DynamiCal.Forms
             {
                 CriterioDiFiltraggio criterioFiltraggio = new CriterioDiFiltraggio(Agenda.Instance.Calendari);
 
-                IFiltro filtroCalendari = FiltroFactory.FiltraPerCalendari(criterioFiltraggio, this.calendarTreeView.CheckedCalendars);
+                IFiltro filtroCalendari = _calendarTreeViewPresenter.Filter(criterioFiltraggio);
 
-                return FiltroFactory.FiltraPerPeriodo(filtroCalendari,
-                    new DateTime(_lastDate.Year, _lastDate.Month, 1).AddDays(-14),
-                    new DateTime(_lastDate.Year, _lastDate.Month + 1 > 12 ? 1 : _lastDate.Month + 1, 14).EndOfTheDay());
+                return filtroCalendari;
             }
         }
 
-        private void RefreshCurrentMonth()
+        private void UpdateTextFilter(object sender, EventArgs e)
         {
-            this.ShowMonthOfDay(_lastDate);
+            _filtraggio.Filtro = _searchBoxPresenter.Filter(FiltroFactory.FiltraPerData(this.CurrentFilter, _calendarGridViewPresenter.LastDate));
         }
 
-        private void ShowMonthOfDay(DateTime date)
+        private void UpdateFilter(object sender, EventArgs e)
         {
-            _lastDate = date;
-            this.monthLabel.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(date.Month);
-            this.yearLabel.Text = date.Year.ToString();
-
-            MonthlySource.FillSource(this.weekBindingSource, date, this.CurrentFilter);
-            this.SelectDay(date);
+            _filtraggioCalendarGrid.Filtro = this.CurrentFilter;
         }
 
-        private void SelectDay(DateTime date)
+        private void LastDateChanged(object sender, CalendarDataGridViewEventArgs e)
         {
-            this.calendarGridView.CurrentCell = this.calendarGridView.Rows.Cast<DataGridViewRow>()
-                .SelectMany(row => row.Cells.Cast<DataGridViewCell>())
-                .FirstOrDefault(cell => cell.Value is CalendarDay && (cell.Value as CalendarDay).Date.IsSameDayOf(date));
-        }
-
-        private void CalendarsChanged(object sender, AgendaCollectionEventArgs e)
-        {
-            TreeNode treeNode = null;
-            if (e.Item is CalendarioLocale)
+            this.monthLabel.Text = CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(e.Date.Month);
+            this.yearLabel.Text = e.Date.Year.ToString();
+            this.topRightPanel.Visible = e.NumberOfEvents > 0;
+            
+            if (e.NumberOfEvents > 0)
             {
-                treeNode = this.calendarTreeView.LocalCalendarsNode;
+                this.eventPanel.OverrideDate = e.Date;
             }
-            else if (e.Item is CalendarioCondiviso)
-            {
-                treeNode = this.calendarTreeView.SharedCalendarsNode;
-            }
-
-            if (treeNode == null)
-            {
-                return;
-            }
-
-            switch (e.Action)
-            {
-                case AgendaCollectionEventArgs.EditAction.AddItem:
-                    treeNode.Nodes.Add(new CalendarTreeNode(e.Item as Calendario));
-                    treeNode.Expand();
-                    break;
-
-                case AgendaCollectionEventArgs.EditAction.RemoveItem:
-                    treeNode.Nodes.RemoveByKey((e.Item as Calendario).Nome);
-                    break;
-            }
-
-            this.calendarTreeView.Sort();
-            this.RefreshCurrentMonth();
         }
 
         #region DatePicker
         private void datePicker_DateSelected(object sender, DateRangeEventArgs e)
         {
-            this.ShowMonthOfDay(e.Start);
-        }
-        #endregion
-
-        #region CalendarGridView
-        private void calendarGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // Il click su una delle celle dell'header causa RowIndex == -1
-            if (e.RowIndex == -1)
-            {
-                return;
-            }
-
-            DataGridViewCell selectedCell = this.calendarGridView[e.ColumnIndex, e.RowIndex];
-            if (selectedCell.Value is CalendarDay)
-            {
-                CalendarDay calendarDay = selectedCell.Value as CalendarDay;
-                if (e.RowIndex == 0 && calendarDay.Date.Day > 7)
-                {
-                    this.ShowMonthOfDay(calendarDay.Date);
-                }
-                else if (e.RowIndex >= 4 && calendarDay.Date.Day < 15)
-                {
-                    this.ShowMonthOfDay(calendarDay.Date);
-                }
-                else
-                {
-                    _lastDate = calendarDay.Date;
-                }
-            }
-        }
-
-        private void calendarGridView_CurrentCellChanged(object sender, EventArgs e)
-        {
-            DataGridViewCell currentCell = this.calendarGridView.CurrentCell;
-            if (currentCell != null && currentCell.Value != null && currentCell.Value is CalendarDay)
-            {
-                CalendarDay calendarDay = currentCell.Value as CalendarDay;
-                this.topRightPanel.Visible = calendarDay.NumberOfEvents > 0;
-                this.eventPanel.Visible = this.topRightPanel.Visible;
-
-                if (calendarDay.NumberOfEvents > 0)
-                {
-                    this.eventPanel.OverrideDate = calendarDay.Date;
-                    this.eventsListBox.EventFilter = FiltroFactory.FiltraPerTesto(FiltroFactory.FiltraPerData(this.CurrentFilter, calendarDay.Date), this.searchBoxPanel.SearchText);
-                }
-                else
-                {
-                    this.eventsListBox.EventoBindingSource.Clear();
-                }
-            }
+            _calendarGridViewPresenter.ShowMonthOfDay(e.Start);
         }
         #endregion
 
@@ -194,11 +120,11 @@ namespace DynamiCal.Forms
         {
             using (ManageEventForm createEventDialog = new ManageEventForm())
             {
-                createEventDialog.eventDateTimePicker.Value = _lastDate.Date + (DateTime.Now - DateTime.Today);
+                createEventDialog.eventDateTimePicker.Value = _calendarGridViewPresenter.LastDate.Date + (DateTime.Now - DateTime.Today);
 
                 if (createEventDialog.ShowDialog(this) == DialogResult.OK)
                 {
-                    this.RefreshCurrentMonth();
+                    _calendarGridViewPresenter.RefreshControl();
                 }
             }
         }
@@ -212,7 +138,7 @@ namespace DynamiCal.Forms
                     Evento evento = searchEventDialog.SelectedEvent;
                     if (evento != null)
                     {
-                        this.ShowMonthOfDay(evento.Periodo.DataInizio);
+                        _calendarGridViewPresenter.ShowMonthOfDay(evento.Periodo.DataInizio);
                         this.eventsListBox.SelectedItem = evento;
                     }
                 }
@@ -246,11 +172,6 @@ namespace DynamiCal.Forms
                 this.treeNodeMenuStrip.Show(this.calendarTreeView, e.Location);
             }
         }
-
-        private void calendarTreeView_AfterCheck(object sender, TreeViewEventArgs e)
-        {
-            this.RefreshCurrentMonth();
-        }   
         #endregion
 
         #region TreeNodeMenuStrip
@@ -280,7 +201,8 @@ namespace DynamiCal.Forms
                         {
                             calendar.RimuoviEvento(evento);
                         }
-                        this.RefreshCurrentMonth();
+
+                        _calendarGridViewPresenter.RefreshControl();
                     }
                     break;
 
@@ -301,19 +223,12 @@ namespace DynamiCal.Forms
                             editEventDialog.ShowDialog(this);
                         }
 
-                        this.RefreshCurrentMonth();
+                        _calendarGridViewPresenter.RefreshControl();
                     }
                     break;
                 
                 default: break;
             }
-        }
-        #endregion
-
-        #region SearchBox
-        private void searchBox_TextChanged(object sender, EventArgs e)
-        {
-            this.eventsListBox.EventFilter = FiltroFactory.FiltraPerTesto((this.eventsListBox.EventFilter as Filtro).Component, this.searchBoxPanel.SearchText);
         }
         #endregion
 

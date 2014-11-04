@@ -200,7 +200,6 @@
             this.calendarTreeView.ShowPlusMinus = false;
             this.calendarTreeView.Size = new System.Drawing.Size(227, 390);
             this.calendarTreeView.TabIndex = 1;
-            this.calendarTreeView.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.calendarTreeView_AfterCheck);
             this.calendarTreeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.calendarTreeView_NodeMouseClick);
             // 
             // datePicker
@@ -299,8 +298,6 @@
             this.eventsListBox.DisplayMember = "Nome";
             this.eventsListBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.eventsListBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.eventsListBox.EventFilter = null;
-            this.eventsListBox.EventPanel = null;
             this.eventsListBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eventsListBox.FormattingEnabled = true;
             this.eventsListBox.ItemHeight = 17;
@@ -320,7 +317,6 @@
             this.searchBoxPanel.Padding = new System.Windows.Forms.Padding(0, 2, 2, 5);
             this.searchBoxPanel.Size = new System.Drawing.Size(227, 30);
             this.searchBoxPanel.TabIndex = 2;
-            this.searchBoxPanel.SearchTextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // noEventsLabel
             // 
@@ -414,7 +410,7 @@
             // deleteStripMenuItem
             // 
             deleteStripMenuItem.Name = "deleteStripMenuItem";
-            deleteStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            deleteStripMenuItem.Size = new System.Drawing.Size(96, 22);
             deleteStripMenuItem.Text = "Elimina";
             // 
             // calendarPanel
@@ -483,8 +479,6 @@
             this.calendarGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.calendarGridView.Size = new System.Drawing.Size(680, 529);
             this.calendarGridView.TabIndex = 1;
-            this.calendarGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.calendarGridView_CellClick);
-            this.calendarGridView.CurrentCellChanged += new System.EventHandler(this.calendarGridView_CurrentCellChanged);
             // 
             // weekBindingSource
             // 
@@ -497,13 +491,13 @@
             this.modificaToolStripMenuItem});
             this.treeNodeMenuStrip.Name = "treeNodeMenuStrip";
             this.treeNodeMenuStrip.ShowImageMargin = false;
-            this.treeNodeMenuStrip.Size = new System.Drawing.Size(128, 70);
+            this.treeNodeMenuStrip.Size = new System.Drawing.Size(97, 48);
             this.treeNodeMenuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.treeNodeMenuStrip_ItemClicked);
             // 
             // modificaToolStripMenuItem
             // 
             this.modificaToolStripMenuItem.Name = "modificaToolStripMenuItem";
-            this.modificaToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.modificaToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.modificaToolStripMenuItem.Text = "Modifica";
             // 
             // MainForm
@@ -523,7 +517,6 @@
             this.MinimumSize = new System.Drawing.Size(1175, 625);
             this.Name = "MainForm";
             this.Text = "DynamiCal";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             leftSidePanel.ResumeLayout(false);
             calendarTitlePanel.ResumeLayout(false);

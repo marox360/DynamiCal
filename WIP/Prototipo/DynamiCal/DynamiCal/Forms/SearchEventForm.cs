@@ -12,11 +12,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DynamiCal.Model.Calendars;
+using DynamiCal.Presentation;
+using DynamiCal.View;
 
 namespace DynamiCal.Forms
 {
     public partial class SearchEventForm : Form
     {
+        private IFiltroPresenter _calendarTreeViewPresenter;
+        private IFiltroPresenter _eventModelListBoxPresenter;
+        private IFiltroPresenter _searchBoxPresenter;
+        private IFiltroPresenter _timePeriodPickerPresenter;
+        private IFiltraggio _filtraggio;
+
         internal Evento SelectedEvent
         {
             get
@@ -38,24 +46,10 @@ namespace DynamiCal.Forms
             {
                 CriterioDiFiltraggio criterioFiltraggio = new CriterioDiFiltraggio(Agenda.Instance.Calendari);
 
-                IFiltro filtroCalendari = FiltroFactory.FiltraPerCalendari(criterioFiltraggio, this.calendarTreeView.CheckedCalendars);
-                IFiltro filtroModelli = FiltroFactory.FiltraPerModelli(filtroCalendari, this.eventModelListBox.CheckedItems.Cast<ModelloEvento>());
-                IFiltro filtroTesto = FiltroFactory.FiltraPerTesto(filtroModelli, this.searchBoxPanel.SearchText);
-
-                IFiltro filtroData = null;
-                switch (this.dateComboBox.SelectedIndex)
-                {
-                    case 1:
-                        filtroData = FiltroFactory.FiltraPerData(filtroTesto, this.startDateTimePicker.Value);
-                        break;
-
-                    case 2:
-                        filtroData = FiltroFactory.FiltraPerPeriodo(filtroTesto, this.startDateTimePicker.Value, this.endDateTimePicker.Value.EndOfTheDay());
-                        break;
-
-                    default:
-                        return filtroTesto;
-                }
+                IFiltro filtroCalendari = _calendarTreeViewPresenter.Filter(criterioFiltraggio);
+                IFiltro filtroModelli = _eventModelListBoxPresenter.Filter(filtroCalendari);
+                IFiltro filtroTesto = _searchBoxPresenter.Filter(filtroModelli);
+                IFiltro filtroData = _timePeriodPickerPresenter.Filter(filtroTesto);
 
                 return filtroData;
             }
@@ -68,47 +62,29 @@ namespace DynamiCal.Forms
 
         private void SearchEventForm_Load(object sender, EventArgs e)
         {
-            this.eventListBox.EventPanel = this.eventPanel;
+            TimePeriodPickerControl timePeriodPicker = new TimePeriodPickerControl(this.startDateTimePicker, this.endDateTimePicker, this.dateComboBox);
+            _timePeriodPickerPresenter = new TimePeriodPickerPresenter(timePeriodPicker);
+            _timePeriodPickerPresenter.FilterChanged += UpdateFilter;
 
-            this.dateComboBox.SelectedIndex = 0;
+            _calendarTreeViewPresenter = new CalendarTreeViewPresenter(this.calendarTreeView);
+            _calendarTreeViewPresenter.FilterChanged += UpdateFilter;
 
-            this.calendarTreeView.BeginUpdate();
-            foreach (Calendario calendario in Agenda.Instance.Calendari)
-            {
-                CalendarTreeNode treeNode = new CalendarTreeNode(calendario);
-                if (calendario is CalendarioLocale)
-                {
-                    this.calendarTreeView.LocalCalendarsNode.Nodes.Add(treeNode);
-                }
-                else if (calendario is CalendarioCondiviso)
-                {
-                    this.calendarTreeView.SharedCalendarsNode.Nodes.Add(treeNode);
-                }
-            }
-            this.calendarTreeView.EndUpdate();
-            this.calendarTreeView.ExpandAll();
+            _eventModelListBoxPresenter = new EventModelCheckedListBoxPresenter(this.eventModelListBox);
+            _eventModelListBoxPresenter.FilterChanged += UpdateFilter;
 
-            this.eventModelListBox.BeginUpdate();
-            foreach (ModelloEvento modelloEvento in Agenda.Instance.ModelliEvento)
-            {
-                this.eventModelListBox.Items.Add(modelloEvento);
-                this.eventModelListBox.SetItemChecked(this.eventModelListBox.Items.IndexOf(modelloEvento), true);
-            }
-            this.eventModelListBox.EndUpdate();
+            _searchBoxPresenter = new SearchBoxPanelPresenter(this.searchBoxPanel);
+            _searchBoxPresenter.FilterChanged += UpdateFilter;
+
+            _filtraggio = new Filtraggio(this.CurrentFilter);
+            EventPickerControl eventPicker = new EventPickerControl(this.eventPanel, this.eventListBox);
+            new EventPickerPresenter(eventPicker, _filtraggio);
+
+            //this.UpdateFilter(this, EventArgs.Empty);
         }
 
         private void UpdateFilter(object sender, EventArgs e)
         {
-            this.eventListBox.EventFilter = this.CurrentFilter;
-        }
-        private void UpdateFilter(object sender, TreeViewEventArgs e)
-        {
-            this.UpdateFilter(sender, (EventArgs)e);
-        }
-
-        private void eventModelListBox_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            this.BeginInvoke((MethodInvoker)(() => this.UpdateFilter(sender, e)));
+            _filtraggio.Filtro = this.CurrentFilter;
         }
 
         private void showInCalendarButton_Click(object sender, EventArgs e)
@@ -119,52 +95,6 @@ namespace DynamiCal.Forms
         private void eventListBox_SelectedValueChanged(object sender, EventArgs e)
         {
             this.showInCalendarButton.Enabled = this.eventListBox.SelectedValue != null;
-        }
-
-        private void dateComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (this.dateComboBox.SelectedIndex)
-            {
-                case 0:
-                    this.startDateTimePicker.Enabled = false;
-                    this.endDateTimePicker.Enabled = false;
-                    break;
-
-                case 1:
-                    this.startDateTimePicker.Enabled = true;
-                    this.endDateTimePicker.Enabled = false;
-                    break;
-
-                case 2:
-                    this.endDateTimePicker.MinDate = this.startDateTimePicker.Value;
-                    this.startDateTimePicker.Enabled = true;
-                    this.endDateTimePicker.Enabled = true;
-                    break;
-            }
-        }
-
-        private void startDateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            if (!this.endDateTimePicker.Enabled)
-            {
-                this.endDateTimePicker.Value = this.startDateTimePicker.Value;
-            }
-            else if (this.endDateTimePicker.Value < this.startDateTimePicker.Value)
-            {
-                this.endDateTimePicker.Value = this.startDateTimePicker.Value.AddDays(1);
-            }
-
-            this.endDateTimePicker.MinDate = this.startDateTimePicker.Value;
-
-            this.UpdateFilter(sender, e);
-        }
-
-        private void endDateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            if (this.endDateTimePicker.Enabled)
-            {
-                this.UpdateFilter(sender, e);
-            }
         }
     }
 }

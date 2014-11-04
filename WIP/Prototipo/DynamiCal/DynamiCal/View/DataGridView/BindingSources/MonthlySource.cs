@@ -168,6 +168,7 @@ namespace DynamiCal.View.DataGridView.BindingSources
                 firstDay = calendar.AddWeeks(firstDay, -1);
             }
 
+            source.SuspendBinding();
             source.Clear();
             source.Add(new CalendarWeek(calendar, firstDay, 0, filtro));
             source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 1), 1, filtro));
@@ -175,6 +176,7 @@ namespace DynamiCal.View.DataGridView.BindingSources
             source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 3), 3, filtro));
             source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 4), 4, filtro));
             source.Add(new CalendarWeek(calendar, calendar.AddWeeks(firstDay, 5), 5, filtro));
+            source.ResumeBinding();
         }
     }
 }

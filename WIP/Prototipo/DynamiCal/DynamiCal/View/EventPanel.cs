@@ -12,7 +12,16 @@ using DynamiCal.Time;
 
 namespace DynamiCal.View
 {
-    public partial class EventPanel : UserControl
+    public interface IShowEvento
+    {
+        DateTime OverrideDate { get; set; }
+
+        void LoadEvent(Evento evento);
+
+        void RefreshEvent(Evento evento);
+    }
+
+    public partial class EventPanel : UserControl, IShowEvento
     {
         private DateTime _overrideDate = default(DateTime);
         private bool _needRefresh = false;
@@ -35,7 +44,7 @@ namespace DynamiCal.View
             }
         }
 
-        internal void RefreshEvent(Evento evento)
+        public void RefreshEvent(Evento evento)
         {
             if (_needRefresh)
             {
@@ -43,13 +52,15 @@ namespace DynamiCal.View
             }
         }
 
-        internal void LoadEvent(Evento evento)
+        public void LoadEvent(Evento evento)
         {
             if (evento == null)
             {
+                this.Visible = false;
                 return;
             }
 
+            this.Visible = true;
             _needRefresh = false;
 
             this.nameLabel.Text = evento.Nome;

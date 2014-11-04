@@ -11,64 +11,21 @@ using System.Windows.Forms;
 
 namespace DynamiCal.View.ListBox
 {
-    class EventListBox : System.Windows.Forms.ListBox
+    public interface IBindingSource
+    {
+        BindingSource BindingSource { get; }
+
+        object SelectedValue { get; set; }
+
+        event EventHandler SelectedValueChanged;
+    }
+
+    public class EventListBox : System.Windows.Forms.ListBox, IBindingSource
     {
         private BindingSource eventoBindingSource;
         private System.ComponentModel.IContainer components;
-        private IFiltro _eventFilter = null;
-        private EventPanel _eventPanel = null;
 
-        [Browsable(false)]
-        public IFiltro EventFilter
-        {
-            set
-            {
-                _eventFilter = value;
-
-                if (_eventFilter != null)
-                {
-                    IList<Evento> eventi = new List<Evento>(_eventFilter.FiltraEventi());
-                    if (!this.eventoBindingSource.List.Cast<Evento>().SequenceEqual(eventi))
-                    {
-                        this.BeginUpdate();
-
-                        this.eventoBindingSource.Clear();
-                        foreach (Evento evento in eventi)
-                        {
-                            this.eventoBindingSource.Add(evento);
-                        }
-
-                        this.EndUpdate();
-                    }
-                    else if (this.EventPanel != null && this.SelectedValue != null && this.SelectedValue is Evento)
-                    {
-                        this.EventPanel.RefreshEvent(this.SelectedValue as Evento);
-                    }
-                }
-            }
-            get
-            {
-                return _eventFilter;
-            }
-        }
-
-        public EventPanel EventPanel {
-            set
-            {
-                _eventPanel = value;
-
-                if (_eventPanel != null)
-                {
-                    _eventPanel.Visible = this.Items.Count > 0;
-                }
-            }
-            get
-            {
-                return _eventPanel;
-            }
-        }
-
-        public BindingSource EventoBindingSource
+        public BindingSource BindingSource
         {
             get
             {
@@ -76,19 +33,9 @@ namespace DynamiCal.View.ListBox
             }
         }
 
-        protected override void OnSelectedValueChanged(EventArgs e)
-        {
-            if (this.EventPanel != null && this.SelectedValue != null && this.SelectedValue is Evento)
-            {
-                this.EventPanel.LoadEvent(this.SelectedValue as Evento);
-            }
-
-             base.OnSelectedValueChanged(e);
-        }
-
         protected override void OnDrawItem(DrawItemEventArgs e)
         {
-            if (e.Index < this.Items.Count)
+            if (e.Index != -1 && e.Index < this.Items.Count)
             {
                 using (Brush brush = new SolidBrush(e.BackColor))
                 {
@@ -99,14 +46,6 @@ namespace DynamiCal.View.ListBox
             }
 
             base.OnDrawItem(e);
-        }
-
-        private void eventoBindingSource_ListChanged(object sender, System.ComponentModel.ListChangedEventArgs e)
-        {
-            if (this.EventPanel != null)
-            {
-                this.EventPanel.Visible = this.Items.Count > 0;
-            }
         }
 
         public EventListBox() : base()
@@ -124,7 +63,6 @@ namespace DynamiCal.View.ListBox
             // eventoBindingSource
             // 
             this.eventoBindingSource.DataSource = typeof(DynamiCal.Model.Evento);
-            this.eventoBindingSource.ListChanged += new System.ComponentModel.ListChangedEventHandler(this.eventoBindingSource_ListChanged);
             // 
             // EventListBox
             // 

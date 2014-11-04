@@ -64,6 +64,14 @@
       <DependentUpon>SearchEventForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Calendars\CalendarioFactory.cs" />
+    <Compile Include="Presentation\CalendarDataGridViewPresenter.cs" />
+    <Compile Include="Presentation\CalendarTreeViewPresenter.cs" />
+    <Compile Include="Presentation\EventModelCheckedListBoxPresenter.cs" />
+    <Compile Include="Presentation\EventPickerPresenter.cs" />
+    <Compile Include="Presentation\FiltraggioPresenter.cs" />
+    <Compile Include="Presentation\FiltroPresenter.cs" />
+    <Compile Include="Presentation\SearchBoxPanelPresenter.cs" />
+    <Compile Include="Presentation\TimePeriodPickerPresenter.cs" />
     <Compile Include="View\BindingContainer.cs" />
     <Compile Include="Forms\ManageCalendarForm.cs">
       <SubType>Form</SubType>
@@ -107,6 +115,9 @@
     <Compile Include="View\EventPanel.Designer.cs">
       <DependentUpon>EventPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EventPickerControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\ListBox\EventListBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -118,6 +129,9 @@
     </Compile>
     <Compile Include="View\TextBox\SearchBoxPanel.Designer.cs">
       <DependentUpon>SearchBoxPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TimePeriodPickerControl.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\TreeView\CalendarTreeView.cs">
       <SubType>Component</SubType>
