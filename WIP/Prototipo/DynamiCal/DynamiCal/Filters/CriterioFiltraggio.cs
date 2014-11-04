@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Filters
 {
-    public class CriterioDiFiltraggio : IFiltro
+    public class CriterioFiltraggio : IFiltro
     {
         private readonly IEnumerable<Calendario> _calendari;
 
-        public CriterioDiFiltraggio(IEnumerable<Calendario> calendari)
+        public CriterioFiltraggio(IEnumerable<Calendario> calendari)
         {
             #region Precondizioni
             Debug.Assert(calendari != null, "Calendari is null");

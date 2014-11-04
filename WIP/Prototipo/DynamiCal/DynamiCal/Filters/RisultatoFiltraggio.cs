@@ -7,22 +7,20 @@ using System.Threading.Tasks;
 
 namespace DynamiCal.Filters
 {
-    public interface IFiltraggio
+    public interface IFiltraggio : IFiltro
     {
         IFiltro Filtro { get; set; }
-
-        IEnumerable<Evento> Eventi();
 
         event EventHandler FilterChanged;
     }
 
-    public class Filtraggio : IFiltraggio
+    public class RisultatoFiltraggio : IFiltraggio
     {
         private IFiltro _filtro;
         private IEnumerable<Evento> _eventi;
         public event EventHandler FilterChanged;
 
-        public Filtraggio(IFiltro filtro = null)
+        public RisultatoFiltraggio(IFiltro filtro = null)
         {
             _filtro = filtro;
         }
@@ -44,7 +42,7 @@ namespace DynamiCal.Filters
             }
         }
 
-        public IEnumerable<Evento> Eventi()
+        public IEnumerable<Evento> FiltraEventi()
         {
             if (_eventi == null && _filtro != null)
             {

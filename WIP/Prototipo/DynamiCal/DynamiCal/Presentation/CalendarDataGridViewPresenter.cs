@@ -125,7 +125,7 @@ namespace DynamiCal.Presentation
         {
             this.LastDate = date;
 
-            MonthlySource.FillSource(this.Control.DataSource as BindingSource, date, this.Filtraggio.Filtro != null ? this.Filter(this.Filtraggio.Filtro) : null);
+            MonthlySource.FillSource(this.Control.DataSource as BindingSource, date, this.Filter(this.Filtraggio));
 
             this.SelectDay(date);
         }

@@ -24,7 +24,7 @@ namespace DynamiCal.Presentation
             base.InitializeControl();
 
             this.Control.EventList.BindingSource.Clear();
-            foreach (Evento evento in this.Filtraggio.Eventi())
+            foreach (Evento evento in this.Filtraggio.FiltraEventi())
             {
                 this.Control.EventList.BindingSource.Add(evento);
             }
@@ -43,7 +43,7 @@ namespace DynamiCal.Presentation
 
         private void filtraggio_FilterChanged(object sender, EventArgs e)
         {
-            IEnumerable<Evento> eventi = this.Filtraggio.Eventi();
+            IEnumerable<Evento> eventi = this.Filtraggio.FiltraEventi();
             BindingSource bindingSource = this.Control.EventList.BindingSource;
             if (!bindingSource.List.Cast<Evento>().SequenceEqual(eventi))
             {
