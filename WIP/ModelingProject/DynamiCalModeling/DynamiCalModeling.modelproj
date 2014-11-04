@@ -43,6 +43,13 @@
       <SubType>Content</SubType>
       <DependentUpon>GestioneCalendario.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="GestioneEvento.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GestioneEvento.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>GestioneEvento.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="GestioneModelloEvento.usecasediagram">
       <SubType>Content</SubType>
     </Content>

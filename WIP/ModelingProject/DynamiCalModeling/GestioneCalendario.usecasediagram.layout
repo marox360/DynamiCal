@@ -6,7 +6,7 @@
       <actorMoniker Id="76821283-50c5-415e-871d-a0443a769805" LastKnownName="Utente" />
       <relativeChildShapes />
     </actorShape>
-    <SubsystemShape Id="762ffcb9-3557-4326-b3a5-3d15864b931f" absoluteBounds="4.625, 2.25, 5.625, 3.125" customColor="White">
+    <SubsystemShape Id="762ffcb9-3557-4326-b3a5-3d15864b931f" absoluteBounds="4.625, 2.25, 5.75, 3.125" customColor="White">
       <subsystemMoniker Id="25176891-45bd-4f43-aeac-9135e50fa7bb" LastKnownName="Gestione Calendario" />
       <nestedChildShapes>
         <useCaseShape Id="1b4b7a37-95c2-46a5-87d0-f705e094fb65" absoluteBounds="4.75, 3.75, 1, 0.5" customColor="DarkSalmon" heightOffset="0">
@@ -25,21 +25,21 @@
           <useCaseMoniker Id="9c3bf46c-e319-4fad-bad7-4ec9b125ea7a" LastKnownName="Eliminazione Calendario" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="b036cf0f-dc91-471d-b8de-90d5d096d67d" absoluteBounds="9.125, 2.75, 1, 0.5" customColor="DarkSalmon" heightOffset="0">
+        <useCaseShape Id="b036cf0f-dc91-471d-b8de-90d5d096d67d" absoluteBounds="9.125, 2.75, 1.125, 0.5" customColor="DarkSalmon" heightOffset="0">
           <useCaseMoniker Id="78e66ae8-96bb-43d6-8d50-9f95dffe5993" LastKnownName="Condividisione Calendario" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="1c628abf-6be5-4733-ba95-84f59f9926c1" absoluteBounds="9.125, 3.75, 1, 0.5" customColor="DarkSalmon" heightOffset="0">
+        <useCaseShape Id="1c628abf-6be5-4733-ba95-84f59f9926c1" absoluteBounds="9.125, 3.75, 1.125, 0.5" customColor="DarkSalmon" heightOffset="0">
           <useCaseMoniker Id="aeff27ee-a18d-4371-95a3-1ebaee0403f1" LastKnownName="Selezione Calendario" />
           <relativeChildShapes />
         </useCaseShape>
-        <useCaseShape Id="3c832cae-7d26-46ab-b033-e9fce6ef7134" absoluteBounds="9.125, 4.75, 1, 0.5" customColor="DarkSalmon" heightOffset="0">
+        <useCaseShape Id="3c832cae-7d26-46ab-b033-e9fce6ef7134" absoluteBounds="9.125, 4.75, 1.125, 0.5" customColor="DarkSalmon" heightOffset="0">
           <useCaseMoniker Id="5f1841a4-d027-47c8-88b6-6c5369fe80bb" LastKnownName="Eliminazione Evento" />
           <relativeChildShapes />
         </useCaseShape>
       </nestedChildShapes>
     </SubsystemShape>
-    <useCaseAssociationConnector edgePoints="[(4.25 : 4); (4.75 : 4)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(4.25 : 4); (4.75 : 4)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="d4b6e8ca-8279-442f-9e00-99834eb2271a" />
       <relativeChildShapes />
       <nodes>
@@ -82,7 +82,7 @@
         <useCaseShapeMoniker Id="1b4b7a37-95c2-46a5-87d0-f705e094fb65" />
       </nodes>
     </useCaseAssociationConnector>
-    <useCaseAssociationConnector edgePoints="[(7.63245559905853 : 4.83896606355431); (9.24254440094147 : 4.1610339364457)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(7.6365366852413 : 4.84142084708049); (9.27417306239704 : 4.16957002568327)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="8cadb79f-b8ab-4634-a7a3-2d85952b6aa8" />
       <relativeChildShapes />
       <nodes>
@@ -98,7 +98,7 @@
         <useCaseShapeMoniker Id="89d7a0ef-fddd-479a-b77c-8a43ec9bb516" />
       </nodes>
     </useCaseAssociationConnector>
-    <useCaseAssociationConnector edgePoints="[(9.24254440094147 : 3.1610339364457); (7.63245559905853 : 3.83896606355431)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+    <useCaseAssociationConnector edgePoints="[(9.27417306239704 : 3.16957002568327); (7.6365366852413 : 3.84142084708049)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
       <associationMoniker Id="bfba279e-d74a-4061-a479-f027873fa4a9" />
       <relativeChildShapes />
       <nodes>
