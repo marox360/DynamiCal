@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="78014e65-e565-438f-b815-2fc84128b57e" name="DiagrammaClassiProgettazione" linkedPackageId="4ab776e7-1614-4c27-8271-28bd5c16bad2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="78014e65-e565-438f-b815-2fc84128b57e" name="DiagrammaClassiProgettazione" linkedPackageId="4ab776e7-1614-4c27-8271-28bd5c16bad2" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasTypes>
       <class Id="fe19197b-63be-4be5-99ab-c352e5ecfd5c" name="CriterioDiFiltraggio" isAbstract="false" isLeaf="false" isActiveClass="false">
@@ -12245,45 +12245,6 @@
             <elementDefinition Id="0c695ada-461b-4b3b-9a1d-ce05b5f6f7ea" />
           </interfaceRealization>
         </suppliersInternal>
-        <targetEnds>
-          <association Id="48d0a57f-744e-4bd2-a82d-11a80e3fd6f3" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
-            <interfaceMoniker Id="2e5dfd39-94de-4dc9-a654-c6a44d63f7db" LastKnownName="IFiltro" />
-            <description>Property Filtro references type IFiltro.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="a7ca4960-4eb7-4e73-89a3-8285a3e44404" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString Id="1c34a41a-cc34-46e1-b1be-8024e0b123e0" name="Lower" value="*">
-                      <elementDefinition Id="c9633364-6d5e-4cc4-b8ed-03b2890e6df6" />
-                    </literalString>
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString Id="fdde93aa-aa33-4bec-8598-8d6567f711b6" name="Upper" value="*">
-                      <elementDefinition Id="63896ce7-1d90-40f5-8cee-9015a162dc01" />
-                    </literalString>
-                  </upperValueInternal>
-                  <elementDefinition Id="9bdab873-8889-4a71-9116-3678cdb8ad9d" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="e9d62d1e-b3b5-48cd-aa02-fa10261ef9ca" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <lowerValueInternal>
-                    <literalString Id="ed883381-6d9a-4159-ae4c-06e99321fbf8" name="Lower" value="1">
-                      <elementDefinition Id="45feb874-3332-4175-a448-c3349e8c1e01" />
-                    </literalString>
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString Id="3ee742ea-94ae-4a4a-9991-47a795b70dac" name="Upper" value="1">
-                      <elementDefinition Id="53a8a3c7-7e18-41ae-8d59-a3d31b8dd3de" />
-                    </literalString>
-                  </upperValueInternal>
-                  <elementDefinition Id="6db196fa-b370-4910-bb94-eb4ab7dd0c15" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="52b19d71-21b9-4172-bd1e-3dee85c2d896" />
-          </association>
-        </targetEnds>
         <ownedAttributesInternal>
           <property Id="57607137-903e-428c-8300-4e13b462217d" name="Filtro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
