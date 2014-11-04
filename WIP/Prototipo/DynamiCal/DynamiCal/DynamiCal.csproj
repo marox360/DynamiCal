@@ -50,7 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Filters\RisultatoFiltraggio.cs" />
+    <Compile Include="Filters\Filtraggio.cs" />
     <Compile Include="Forms\DeleteEventModelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,7 +137,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Time\DateTimeExtension.cs" />
-    <Compile Include="Filters\CriterioFiltraggio.cs" />
+    <Compile Include="Filters\CriterioDiFiltraggio.cs" />
     <Compile Include="View\DataGridView\DataGridViewEntryTypeCell.cs" />
     <Compile Include="View\DataGridView\DataGridViewEntryTypeColumn.cs" />
     <Compile Include="Model\Agenda.cs" />

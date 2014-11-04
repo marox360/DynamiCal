@@ -41,7 +41,7 @@ namespace DynamiCal.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            _filtraggio = new RisultatoFiltraggio(null);
+            _filtraggio = new Filtraggio(null);
             EventPickerControl eventPicker = new EventPickerControl(this.eventPanel, this.eventsListBox);
             new EventPickerPresenter(eventPicker, _filtraggio);
 
@@ -51,7 +51,7 @@ namespace DynamiCal.Forms
             _searchBoxPresenter = new SearchBoxPanelPresenter(this.searchBoxPanel);
             _searchBoxPresenter.FilterChanged += UpdateTextFilter;
 
-            _filtraggioCalendarGrid = new RisultatoFiltraggio(null);
+            _filtraggioCalendarGrid = new Filtraggio(null);
             _calendarGridViewPresenter = new CalendarDataGridViewPresenter(this.calendarGridView, _filtraggioCalendarGrid);
             _calendarGridViewPresenter.LastDateChanged += LastDateChanged;
             _calendarGridViewPresenter.FilterChanged += UpdateTextFilter;
@@ -62,7 +62,7 @@ namespace DynamiCal.Forms
         {
             get
             {
-                CriterioFiltraggio criterioFiltraggio = new CriterioFiltraggio(Agenda.Instance.Calendari);
+                CriterioDiFiltraggio criterioFiltraggio = new CriterioDiFiltraggio(Agenda.Instance.Calendari);
 
                 IFiltro filtroCalendari = _calendarTreeViewPresenter.Filter(criterioFiltraggio);
 

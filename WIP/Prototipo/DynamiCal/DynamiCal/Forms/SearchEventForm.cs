@@ -44,7 +44,7 @@ namespace DynamiCal.Forms
         {
             get
             {
-                CriterioFiltraggio criterioFiltraggio = new CriterioFiltraggio(Agenda.Instance.Calendari);
+                CriterioDiFiltraggio criterioFiltraggio = new CriterioDiFiltraggio(Agenda.Instance.Calendari);
 
                 IFiltro filtroCalendari = _calendarTreeViewPresenter.Filter(criterioFiltraggio);
                 IFiltro filtroModelli = _eventModelListBoxPresenter.Filter(filtroCalendari);
@@ -75,7 +75,7 @@ namespace DynamiCal.Forms
             _searchBoxPresenter = new SearchBoxPanelPresenter(this.searchBoxPanel);
             _searchBoxPresenter.FilterChanged += UpdateFilter;
 
-            _filtraggio = new RisultatoFiltraggio(this.CurrentFilter);
+            _filtraggio = new Filtraggio(this.CurrentFilter);
             EventPickerControl eventPicker = new EventPickerControl(this.eventPanel, this.eventListBox);
             new EventPickerPresenter(eventPicker, _filtraggio);
 

@@ -14,7 +14,7 @@ namespace DynamiCal.Forms
 {
     public partial class DeleteEventModelForm : Form
     {
-        private CriterioFiltraggio _criterioFiltraggio;
+        private CriterioDiFiltraggio _criterioFiltraggio;
 
         public DeleteEventModelForm()
         {
@@ -23,7 +23,7 @@ namespace DynamiCal.Forms
 
         private void DeleteEventModel_Load(object sender, EventArgs e)
         {
-            _criterioFiltraggio = new CriterioFiltraggio(Agenda.Instance.Calendari);
+            _criterioFiltraggio = new CriterioDiFiltraggio(Agenda.Instance.Calendari);
 
             this.eventModelListBox.BeginUpdate();
             foreach (ModelloEvento modelloEvento in Agenda.Instance.ModelliEvento)
