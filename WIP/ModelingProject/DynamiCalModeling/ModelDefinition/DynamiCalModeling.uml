@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c"
   name="DynamiCalModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -7256,7 +7256,7 @@
             Id="6fcb781b-cad9-42a1-a379-5784064a40a1"
             isDerived="false"
             sourceEndRoleName=""
-            targetEndRoleName=""
+            targetEndRoleName="Filtro"
             isLeaf="false"
             isAbstract="false">
             <interfaceMoniker
@@ -7293,6 +7293,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="8fde8f72-ba23-490e-a84b-a62591ab3556"
+                  name="Filtro"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -7902,7 +7903,7 @@
             Id="12d52be0-a5af-4e25-954c-b137e6968476"
             isDerived="false"
             sourceEndRoleName=""
-            targetEndRoleName=""
+            targetEndRoleName="_voci"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
@@ -7925,6 +7926,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="43b24a29-c06e-4cf8-bad8-e7fe18a54f9f"
+                  name="_voci"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -9014,7 +9016,7 @@
             Id="0db2a8ba-fc2c-46a6-88f2-a57d68b02998"
             isDerived="false"
             sourceEndRoleName=""
-            targetEndRoleName=""
+            targetEndRoleName="_tipo"
             isLeaf="false"
             isAbstract="false">
             <enumerationMoniker
@@ -9051,6 +9053,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="e3852eaf-4804-4706-bbae-01970a115cb8"
+                  name="_tipo"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -13310,6 +13313,7 @@
             sourceEndRoleName=""
             targetEndRoleName=""
             isLeaf="false"
+            name="_amici"
             isAbstract="false">
             <classMoniker
               Id="206e9e62-e261-4bb6-8bdc-891fa92a78df"
@@ -16012,7 +16016,7 @@
             Id="bf8db636-e111-4136-96d6-3900693930f1"
             isDerived="false"
             sourceEndRoleName=""
-            targetEndRoleName=""
+            targetEndRoleName="_periodo"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
@@ -16049,6 +16053,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="0317e3d6-45db-4203-82f9-97e5365adff0"
+                  name="_periodo"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -16078,6 +16083,7 @@
             sourceEndRoleName=""
             targetEndRoleName=""
             isLeaf="false"
+            name="_periodicita"
             isAbstract="false">
             <classMoniker
               Id="f02f9a0f-b093-43cd-b515-5ded42d3751a"
@@ -16131,6 +16137,57 @@
                       Id="3f1d3796-e46c-4e9b-89fc-4fbb22009d3e"
                       name="Upper"
                       value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2661d808-4ccb-43e4-beed-4ae661c3bfb0"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="_voci"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="c8c1502e-ffb3-46c2-8842-56042a393e51"
+              LastKnownName="IVoce"
+              LastKnownLocation="Package1_1645.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c7e35e3f-9598-4863-afbc-78daf6173fd5"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c3470c10-7ac0-4504-ade4-195822384589"
+                  name="_voci"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e8858e1a-3234-464e-9a43-1692eb7036d9"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d3a89f2f-c862-440e-b08e-5fd1fdb314bb"
+                      name="Upper"
+                      value="*" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -17821,12 +17878,21 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="078097b3-1fa0-493d-874f-84ce0314bd85">
+            <classMoniker
+              Id="2066fc5d-d794-47f6-ba66-a2be97bee9e3"
+              LastKnownName="PeriodoTempo"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </dependency>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="d2bc140c-2e87-4eac-84a4-c6889459ec1f"
             isDerived="false"
             sourceEndRoleName=""
-            targetEndRoleName=""
+            targetEndRoleName="_frequenza"
             isLeaf="false"
             isAbstract="false">
             <enumerationMoniker
@@ -17863,6 +17929,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="03ec2ebf-208a-46aa-92f1-ab8ef13f4d91"
+                  name="_frequenza"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
