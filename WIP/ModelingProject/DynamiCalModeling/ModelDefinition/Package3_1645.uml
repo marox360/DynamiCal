@@ -1361,5 +1361,75 @@
         </appliedStereotypesInternal>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="898f09f9-ca74-4012-9f75-e200b025972b"
+        name="IEquatable&lt;Voce‎&lt;T‎&gt;‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b725bae7-29dd-4b95-93b2-ea5eae6d90c8"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ce1415c8-b96a-44c8-a33e-a952629cc59a">
+                <propertyInstance
+                  Id="d49b2a8e-c3f7-468d-bf2a-235d44f270d4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7f8619d1-3b4b-41a4-b422-c4f197b17c24">
+                <propertyInstance
+                  Id="b9a38ef1-c72c-43d9-b55c-149868f34d4f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="faee6971-dde1-4039-a965-67ed80176994">
+                <propertyInstance
+                  Id="d920a175-8e1f-4d99-af62-741acdc48b2a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f09d27ab-ba6f-4250-9dd1-f1d7ec4441b3">
+                <propertyInstance
+                  Id="7824306c-8815-4098-9819-00315744cd4a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="6b52e1c2-82ee-4eb0-a653-72f2ac22941b">
+            <redefinableTemplateSignatureMoniker
+              Id="82cb30e4-a5b9-4d3c-95dd-93ff318335e6"
+              LastKnownLocation="Package3_1645.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="18e9a04d-57f9-4130-b6a4-ae992e17e5fa">
+                  <actuals>
+                    <classMoniker
+                      Id="9e780e61-4d50-4e0b-bf2b-eb69b998c4c1"
+                      LastKnownName="Voce&lt;T‎&gt;"
+                      LastKnownLocation="Package1_1645.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="1e064fae-f79c-4d6c-9e8e-4b4b582d3dc8"
+                      LastKnownLocation="Package3_1645.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
   </packagedElements>
 </package>

@@ -15,7 +15,6 @@
       <class
         Id="e17f8ecd-dd2b-482f-a509-40131a427f9d"
         name="Agenda"
-        visibility="Package"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -202,57 +201,7 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="80d3e5a8-6e8d-4c8e-b329-3e5db8bf3a41"
-            isDerived="false"
-            sourceEndRoleName=""
-            targetEndRoleName=""
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="acfa17db-a3a5-4fb3-ba58-e6cc3e173a0a"
-              LastKnownName="Calendario"
-              LastKnownLocation="Package2_1645.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="9f4129a1-d0a8-47e9-a94f-dadde0ec9d28"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c3e7ad07-7aeb-4b33-ab70-1e6cbdbe1a7b"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="6de07644-36cd-4849-a01e-1b29d56d8732"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="fee23780-c789-4a49-8203-4415fe8571af"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="6f165d7b-3355-4964-bb21-2891b8d7b222"
+            Id="6f7a829b-fa74-4b77-b3f9-34cb5e29017e"
             isDerived="false"
             sourceEndRoleName=""
             targetEndRoleName=""
@@ -265,7 +214,7 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="785366d5-ca8f-4017-846e-a1892bd98e8c"
+                  Id="896186cc-1808-4c52-b4aa-205a380f5ef2"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -277,27 +226,51 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="3d08a72c-9391-4b98-9c6c-2c325df4c825"
+                  Id="5a5a82e1-862d-4f14-9d3d-094502242e1f"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="c71f4405-665a-4ef3-996f-2be2343af024"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="6b0b140a-7275-4f44-a61e-961ad3f5b6ce"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5c3be0dd-213c-4f43-b3fb-0dd77455bc1c"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="acfa17db-a3a5-4fb3-ba58-e6cc3e173a0a"
+              LastKnownName="Calendario"
+              LastKnownLocation="Package2_1645.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e63c409b-fb61-4b07-b8e2-a76fd88dda56"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f2f12f62-70ba-4267-9fe4-10e4ee1ac22d"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -1397,7 +1370,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="5c0d62aa-d187-4241-86e4-e0c666b937fa"
+            Id="ae5dd17c-dba7-4a66-8477-cdbbe1946c39"
             name="Agenda"
             visibility="Private"
             isLeaf="false"
@@ -1407,54 +1380,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="958c5b99-d3e0-4127-9223-c9cc99d22452"
+                Id="f71710b7-c806-41b6-b733-aeff3b386888"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DAgenda Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="baa90434-1743-48e3-87b0-52522e08476b"
+                Id="749d634f-50dd-4815-9e41-c6d0c2b19ae2"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="3f988391-56be-41fb-8659-67ffbf628713">
+                    Id="c4668376-7752-48ba-80a9-b929ce244308">
                     <propertyInstance
-                      Id="2e8582eb-c56a-4c1e-bfc4-347dd60d5640"
+                      Id="4373216f-b887-45a7-b549-a5e7487737b9"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="fb4f1f58-67a0-48ad-8786-45e5f7ceae4f">
+                    Id="3d26d09f-01d4-491a-ab78-19610ce910ba">
                     <propertyInstance
-                      Id="21672021-c5cc-41aa-99cf-9ad9bd6a5ce3"
+                      Id="5c544c16-a7e7-4d5c-8688-bdbb3ef16447"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="a6c75e01-74f2-4b64-8378-df10091536a5">
+                    Id="2105c367-cb06-47d6-b1a6-c070021e2687">
                     <propertyInstance
-                      Id="92b768bd-d11c-4ce4-bf96-d4a919d1fa71"
+                      Id="256f660b-a446-4fb3-9d26-d01cfb3a4b4d"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="58282356-4309-4933-987b-a09e342a4485">
+                    Id="b097647b-91bb-4f1a-8422-da3d87e72db6">
                     <propertyInstance
-                      Id="91283786-6c43-424f-81dc-8e7e84425323"
+                      Id="de6c19c6-d1d8-4098-9c86-78a4b9fc6533"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="676dc745-dcd9-48f3-a51f-2c979d5a0a6d">
+                    Id="ccc00823-1860-4fea-a12a-5fde7d23fe96">
                     <propertyInstance
-                      Id="9c13df73-29d4-4d2a-9591-4f97034c3b21"
+                      Id="cdd33ee0-3d0c-4364-815c-2334dfdafd66"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="81dd2004-38c2-445f-957b-7629a33c6199">
+                    Id="d135c6f8-51ca-4709-a9bc-65ca90cd997e">
                     <propertyInstance
-                      Id="070f1446-073f-4750-a0b7-e23d95c22e76"
+                      Id="12db178a-7f0a-4afa-b1a6-be7a6beea6b7"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -1481,7 +1454,7 @@
         <referencesInternal>
           <reference
             Id="6a5a73df-4a9f-49a1-a203-c4bf6732b422"
-            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -1604,7 +1577,7 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="1453c550-5e95-41e3-b6ce-e467f97df065"
+            Id="0999829e-8bd2-4970-942b-9a6ced3b32bc"
             isDerived="false"
             sourceEndRoleName=""
             targetEndRoleName=""
@@ -1617,39 +1590,26 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="47b6c9b8-2c3a-4e72-b144-506b79d7ec04"
+                  Id="17d90a73-5447-47b1-ac59-105317326902"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
-                  aggregation="None"
+                  aggregation="Composite"
                   isComposite="false"
                   isNavigableOwned="false" />
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="6e518a10-66e7-4097-818d-3980a5f69b4f"
+                  Id="c2969198-5129-4e23-9e88-e9deb4db9627"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="28bd7862-33bb-464b-b31f-9780034c3cc1"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="5395398a-8a9d-4bec-8702-7d5172acc555"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
+                  isComposite="true" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
@@ -2392,7 +2352,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="4f8359c1-5a39-472d-9070-81eac59e1b2d"
+            Id="4893dc3f-096c-4715-81eb-5a04d9d9cfd4"
             name="ModelloEvento"
             isLeaf="false"
             isStatic="false"
@@ -2401,54 +2361,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="e47a9892-c0cc-4335-877d-c2b0c6c93497"
+                Id="fbbf705e-c1af-473b-ad5b-507ca9ff51b5"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DVoce)]))])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="9212381f-ce3f-4528-9fc6-c948982e6940"
+                Id="2b9ee36c-8de2-4f0d-985c-111c4bfab9a1"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="95b2b0c7-9fe5-4dc0-a9ac-b4acd65bdc29">
+                    Id="3a8056e2-1ccc-4548-bb74-9e06c3739747">
                     <propertyInstance
-                      Id="58d85034-c528-49b9-943e-d48ff4955383"
+                      Id="eb23b829-6d16-45c3-9daa-9b8406374890"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="2002e21d-c350-487d-bc6c-44a0a187c4bc">
+                    Id="b9bd02cc-545b-4254-8d7a-77e832b7a3ac">
                     <propertyInstance
-                      Id="51b99fb5-0aa0-4c9e-98c9-2f85e4e8079a"
+                      Id="b1c9d7d2-cb88-4adc-b2f3-bffb164ba32e"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="8aa3b1b8-3dbb-41ee-9694-b4879e7497a1">
+                    Id="7069060f-86ba-47c6-871f-de3c4aa221db">
                     <propertyInstance
-                      Id="c0e3bed8-c688-47f0-b832-383021c48a8f"
+                      Id="4f35003b-529d-462b-8dd2-3b57fa3f66ba"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="80de87b8-4d01-420a-a6c0-dd0ae49d6480">
+                    Id="3c23d81c-145d-4e49-864f-b9df33da2ca4">
                     <propertyInstance
-                      Id="180d163a-5eba-440b-9af6-ba9510da27cb"
+                      Id="34a5e1ce-4215-465d-bc71-e492cb769090"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="39bf2ff6-d34c-4ae3-876c-b965c93ef6b1">
+                    Id="938e82c4-5256-4daf-ac69-10b6f80be6cf">
                     <propertyInstance
-                      Id="3455fe5b-1e9c-4e52-bdc4-99bdda6d125d"
+                      Id="f1482c67-ed1f-4261-9181-2783f6389cff"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f65e8f0c-3f40-40ab-9bc0-51e91277e988">
+                    Id="d681d78b-30ce-4925-8ff8-8eb9fc7e88af">
                     <propertyInstance
-                      Id="dbb0f35b-90b6-466c-b31e-bc9a9d029065"
+                      Id="db3a752d-dd27-43d3-9f3e-43909e4d58ef"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -2458,12 +2418,12 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="d23331d4-9e73-4802-b55f-c985dc44a740"
+                  Id="0b48580b-7ad7-4cdb-8a29-5c9aab4c1c3e"
                   name="nome"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="91943132-37ee-488e-9a3b-6a34fc4b733a"
+                      Id="3016f1ab-f2cb-4910-bc72-61c26bb890d5"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DVoce)]))]) ParameterIdentifier%3Dnome"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -2477,12 +2437,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="e424274f-0c67-4c4b-b7ee-2901c6ff4155"
+                  Id="ac084528-0c74-4341-adcd-6f7c52d0eb8a"
                   name="voci"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="7d15c3a3-79b7-494c-8050-87b58991d7f8"
+                      Id="68950c83-33a1-46b0-b4a9-b945034f9c54"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DVoce)]))]) ParameterIdentifier%3Dvoci"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -2668,198 +2628,6 @@
         </suppliersInternal>
         <targetEnds>
           <association
-            Id="bb638240-745f-40de-bec3-940df4ad699d"
-            isDerived="false"
-            sourceEndRoleName=""
-            targetEndRoleName=""
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="289d3679-90db-49ae-bace-5344f351a2ca"
-              LastKnownName="PeriodoTempo"
-              LastKnownLocation="Package1_1645.uml" />
-            <description>Property Periodo references type PeriodoTempo.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="20b22e00-7bc5-4d30-9407-71490f2ace94"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="c425ec38-da7b-4be9-a1af-93241db7e368"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="d6f11e19-257a-4240-9b7e-4c4e9306f139"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="62c0d847-6bbf-48b3-b620-b9d361b6e968"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="c622e4f4-81fe-4eae-a6e5-9e826d99b170"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="e1d575c8-0e53-484b-a36a-8913db63ed4b"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="13d7b5d6-de63-4390-aed5-ddbf9fb00ffb"
-            isDerived="false"
-            sourceEndRoleName=""
-            targetEndRoleName=""
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="efe1cf75-356c-4993-9d4a-6ba65c56377b"
-              LastKnownName="Periodicita"
-              LastKnownLocation="Package1_1645.uml" />
-            <description>Property Periodicita references type Periodicita.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="4277864f-a276-4a9c-bde8-485641fd990a"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="79758338-1692-4a09-8942-9826a6614b08"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="eeda258b-aad1-49ba-b684-e2aefce46260"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="23ac94a8-de54-4b2c-8c7e-b62e3e1a80e6"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="87dd501c-9950-41a3-9e53-97f95c95d767"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="70cf50f2-d137-4965-b9ec-39e1498d0a9d"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="4dd3f49e-9753-4637-9ce0-c3d45c6cb5d7"
-            isDerived="false"
-            sourceEndRoleName=""
-            targetEndRoleName=""
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="fcf905f2-c8e7-4f74-8044-a91b4ed823c8"
-              LastKnownName="ModelloEvento"
-              LastKnownLocation="Package1_1645.uml" />
-            <description>Property Modello references type ModelloEvento.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="996f8726-03e5-428d-81d9-3c788c8ed691"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="d4f471d5-362d-4e1b-8960-9528545ebb52"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="3e4bdf5c-6f2e-456b-b277-05b33a298de9"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="28de4f1e-4a08-4da4-969b-08ae0386d6ae"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="c22b03a4-9f7b-4a91-94f1-364b30f94606"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="6065c755-cb4d-4266-a876-a558a54d353d"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="69d3af37-c17c-4827-94ca-57f49cb50037"
             isDerived="false"
             sourceEndRoleName="Evento"
@@ -2926,7 +2694,205 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="d5dfa209-8631-422e-b699-7ec16f9ff94e"
+            Id="49247968-553b-4843-9e5e-18dc91b586d7"
+            isDerived="false"
+            sourceEndRoleName="Evento"
+            targetEndRoleName="Modello"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fcf905f2-c8e7-4f74-8044-a91b4ed823c8"
+              LastKnownName="ModelloEvento"
+              LastKnownLocation="Package1_1645.uml" />
+            <description>Property Modello references type ModelloEvento.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="77d579cd-35d7-412f-9dc9-575bcc48f675"
+                  name="Evento"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ef7fea40-9f2c-45f6-8d45-0f7954b4d370"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="ba659a82-f39d-4f8e-a843-13c93605f2df"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="798c8dc8-86c2-4391-9951-82bbd0d133c0"
+                  name="Modello"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="124f6456-b9f1-42a0-a0f1-76f3f077d3c1"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1377b6c9-1d04-49d9-baf3-fc538f7ee066"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ef877488-8303-48c0-b9e3-c03faaee95a1"
+            isDerived="false"
+            sourceEndRoleName="Evento"
+            targetEndRoleName="Periodo"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="289d3679-90db-49ae-bace-5344f351a2ca"
+              LastKnownName="PeriodoTempo"
+              LastKnownLocation="Package1_1645.uml" />
+            <description>Property Periodo references type PeriodoTempo.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c5ea4c65-2f9c-44d5-86d1-c950bb6c0306"
+                  name="Evento"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="60ac4c2a-a593-4eba-8e54-1cddb355f4bd"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="23678d24-3540-4b30-8db9-951d1d5712ca"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5572f2d3-838c-4764-b188-b2e33b3cdecb"
+                  name="Periodo"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="1baf95fa-4e51-4bf7-a094-126cd86f8e09"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="0527aef3-3aa8-4b7a-a0ec-0c622d3a0e17"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="09eeb260-c3c4-48a0-ab36-24ff2230caa7"
+            isDerived="false"
+            sourceEndRoleName="Evento"
+            targetEndRoleName="Periodicita"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="efe1cf75-356c-4993-9d4a-6ba65c56377b"
+              LastKnownName="Periodicita"
+              LastKnownLocation="Package1_1645.uml" />
+            <description>Property Periodicita references type Periodicita.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7310f6a6-d3e9-47ea-935d-c2db0fdbef58"
+                  name="Evento"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="43f7e312-d386-4cf3-a653-67664153730c"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c47bfb57-059d-4f4b-97ca-61f4ce3ee428"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c6e2d1a4-d1c1-41ff-9764-efaab1581014"
+                  name="Periodicita"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="40627e50-9c3a-44ab-a718-40dd1f11a48b"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="9acfad05-6cc6-4731-aa51-ac00285213c7"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="030f90de-8834-4e82-b16b-563f59a636a2"
             isDerived="false"
             sourceEndRoleName=""
             targetEndRoleName=""
@@ -2939,7 +2905,44 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="56d01812-b7aa-494c-8c1c-8102ea7f7c76"
+                  Id="6a70cd2d-2afb-49d5-8d12-3beac21ce29b"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="63d4c7de-5607-4ea0-8efb-2bff9026626e"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="3bfe24d7-bfc9-48e6-a5a3-cef88ccf87cf"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="efe1cf75-356c-4993-9d4a-6ba65c56377b"
+              LastKnownName="Periodicita"
+              LastKnownLocation="Package1_1645.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b04cd84-e350-478f-ba0a-d60a8aa6a168"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2951,7 +2954,44 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="8a4e1968-0366-4fce-8e01-7123177fd5f0"
+                  Id="ce8eee11-b682-4b9b-84a8-9de5ea3ef793"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="a4764780-d04e-430b-b30a-18e44974e39e"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName=""
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="289d3679-90db-49ae-bace-5344f351a2ca"
+              LastKnownName="PeriodoTempo"
+              LastKnownLocation="Package1_1645.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="045d723e-86c1-4776-b7a7-f03fe167bab6"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="41e004a8-4c9c-4dbd-9173-4bbd4559593a"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -4271,7 +4311,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="f55d4edf-bdc3-4e1a-9c59-20c96065fea3"
+            Id="93ecc67f-9891-4ea1-8f99-594015d98620"
             name="Evento"
             isLeaf="false"
             isStatic="false"
@@ -4280,54 +4320,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="9f8ffa54-f7fa-4a7b-9423-8439aac2f88f"
+                Id="6ae0cee8-24c1-42f1-b75a-b5e53d0dfc77"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodoTempo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DIVoce)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodicita)]))])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="4b21a1a9-c6b1-4278-8867-75f337db6c14"
+                Id="41c335ba-fd90-474f-af69-05fcc6630479"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4fe6d7b2-d8c3-441d-9cb4-985958da8f76">
+                    Id="98057b29-3c91-4e89-b5eb-40eee9a7ac56">
                     <propertyInstance
-                      Id="c52ee5f8-660f-4982-8d19-391735ee3f66"
+                      Id="750a9471-5d00-4c35-8c3a-9b08bb79ba42"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="b1b67f0e-cdd5-41fa-8f92-6481327429a9">
+                    Id="91f139f8-372e-4ed5-9b1d-34186b3484e4">
                     <propertyInstance
-                      Id="68f63e37-9463-4f6b-9607-8d79e1d22ad6"
+                      Id="1ac94b4c-df4e-40c1-b962-730b93a55b26"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="85ceccb4-dfaf-4fbe-a50c-3404afc48396">
+                    Id="dd17c049-3a71-437f-b4ab-943ac0050a11">
                     <propertyInstance
-                      Id="3c4bd26b-b3cc-4cbb-8f55-869e64044449"
+                      Id="e75d344c-c637-4df6-b155-46bddbd60d31"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0094b894-369d-46df-9cd2-07da5ea71a62">
+                    Id="827d04d1-b2ac-42b1-88ea-469f4522778d">
                     <propertyInstance
-                      Id="783a215c-7af4-456f-a968-274a8ca84c72"
+                      Id="d226c39c-563c-47b7-b9fe-113de60c4fe6"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="3d83bb8e-c642-44b8-9f3c-b682922d9b34">
+                    Id="b17adc1e-6962-4a5c-b565-be433a045d3b">
                     <propertyInstance
-                      Id="11a48f14-a6b1-4647-8050-4c7da8853868"
+                      Id="271ab49c-369e-49a2-91d9-28592e816e2c"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="b5955582-c829-464d-ac55-b9e07900bf73">
+                    Id="e263a161-1ddf-49aa-9149-a31157c993f6">
                     <propertyInstance
-                      Id="792456d9-cd04-4c3c-85ed-fbf254304d94"
+                      Id="3f646a8d-f371-4da9-9ee3-af15ce8a068d"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -4337,12 +4377,12 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="06457b25-5b16-40df-8c69-6312a04532a4"
+                  Id="f42c048b-89db-43ae-a0a3-03acb92e698e"
                   name="nome"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="488fe61e-b430-4caa-81e5-d38f032001da"
+                      Id="c5e8b0c0-62b6-468e-a46e-0a51f3b6b25a"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodoTempo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DIVoce)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodicita)]))]) ParameterIdentifier%3Dnome"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -4356,12 +4396,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="5e1bbec0-d8c3-45f6-9cd6-f6c7027918cf"
+                  Id="bf1d6b94-9a23-4d92-b6f0-8711c97b746a"
                   name="periodo"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="f42e7561-5903-4d36-9f97-23a7dce6ee41"
+                      Id="7c60b5e7-a0ef-4a4b-9dc5-ccae950b4b6d"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodoTempo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DIVoce)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodicita)]))]) ParameterIdentifier%3Dperiodo"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -4375,12 +4415,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="8f1f9e08-d139-4e13-8ffa-526ece8cd55a"
+                  Id="25e1c426-a891-4d33-8ca3-1edf020748f0"
                   name="modello"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="abdbb0f0-c2bd-4bb5-869d-1c17fcee96f5"
+                      Id="2093abc3-b6d9-4b46-8b54-a2c2e753ab9b"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodoTempo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DIVoce)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodicita)]))]) ParameterIdentifier%3Dmodello"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -4394,12 +4434,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="dc7b9032-6561-478d-9899-60d5a6121cbf"
+                  Id="2c81f2a2-2798-45c8-9094-1ba07e05423d"
                   name="voci"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="934d3961-1668-4536-946c-1e85ec27128c"
+                      Id="59c68d72-df6a-4471-9247-95dcc117d90d"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodoTempo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DIVoce)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodicita)]))]) ParameterIdentifier%3Dvoci"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -4413,12 +4453,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="a02d121a-81f1-4d82-b14b-3340d304bb8f"
+                  Id="ba08d499-2f97-4129-9491-4e0bbdf081f1"
                   name="descrizione"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="66eb130a-13d0-447d-87b1-b1962d9ed744"
+                      Id="10f02fb9-03c1-4f60-8d7d-617d4e4cf133"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodoTempo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DIVoce)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodicita)]))]) ParameterIdentifier%3Ddescrizione"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -4432,12 +4472,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="c8a2b416-7b3c-4b77-a543-1aff300590f4"
+                  Id="8d79ccd8-1559-4603-9743-63a05a0ff910"
                   name="luogo"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="1f516e4c-6905-487f-a548-11cec04ab89a"
+                      Id="09688124-93ed-40d4-bbb2-f60c7e7b64d1"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodoTempo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DIVoce)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodicita)]))]) ParameterIdentifier%3Dluogo"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -4451,12 +4491,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="a2e8031a-83c5-4a5e-beb7-d50757461658"
+                  Id="3a39cb23-58ae-4ae3-89ba-323d07bfc3ca"
                   name="periodicita"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="b84fa5f4-feef-4e0a-b1e9-e31827b76a7f"
+                      Id="63f330a4-46e0-46ea-b054-34a2c0948d29"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodoTempo)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DModelloEvento)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DIVoce)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodicita)]))]) ParameterIdentifier%3Dperiodicita"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -4483,7 +4523,7 @@
         <referencesInternal>
           <reference
             Id="003ed49a-0b59-452e-9c18-70aeca400765"
-            handle="viewcode://./CodeSchema_Struct?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DPeriodoTempo"
+            handle="viewcode://./CodeSchema_Struct?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodoTempo"
             tag="ViewCode" />
         </referencesInternal>
         <appliedStereotypesInternal>
@@ -6313,7 +6353,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="e36cf70c-5e9c-4f31-8132-8e3ae9a85f3c"
+            Id="94e49f2b-0716-4233-8222-c5b42338d049"
             name="PeriodoTempo"
             isLeaf="false"
             isStatic="false"
@@ -6322,54 +6362,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="a739aea4-0b70-4ee8-9925-fb2fc5d73505"
+                Id="251e6769-319b-43f3-92a5-301130f1f921"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodoTempo Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="b968534e-0fbd-47c2-a17b-85874e94d2e6"
+                Id="4a78569d-d342-4d36-b7bd-00f0d7cbdbfe"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f051cf65-cc68-4a7c-8e5e-3c13b71a419d">
+                    Id="cb1f9a68-8633-46fd-991e-848f7330da49">
                     <propertyInstance
-                      Id="0e13e08b-c186-4261-96c2-f518d814113a"
+                      Id="095de540-1c22-40a8-b8d8-ee255b2b21e4"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="75b7fe60-d9ab-4b50-bb87-869e8a02e1f4">
+                    Id="d1a53991-d00a-4cdd-ac20-35af800054fc">
                     <propertyInstance
-                      Id="9b0da9c6-6979-4bc8-bdd3-d8b519e58e6f"
+                      Id="fe2d2e98-156a-44cd-b5e4-01b03c599ec2"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="2dfa4940-7ee6-4bf6-b029-8ed154fa2ba4">
+                    Id="334f6204-ef0c-4c7b-9082-78838043b71a">
                     <propertyInstance
-                      Id="98535b31-c2eb-44e5-a3a2-793915b3e0c7"
+                      Id="5ecb8614-31ed-4571-a6fa-29f349916677"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="b596482e-53c8-498c-8ee8-cdbee9af9ee4">
+                    Id="348658fe-bb7f-4f44-88d8-8e198b248a5a">
                     <propertyInstance
-                      Id="c624012d-7be3-4967-b5bf-5a4197b801b0"
+                      Id="377f1094-a7bb-44ca-8e11-a39f8a4221cd"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="504ef96c-b4f8-4c7d-a48c-fc2faaca4cc1">
+                    Id="9e0ae378-92d2-4de7-b2f9-16e54a65ba46">
                     <propertyInstance
-                      Id="df8f1228-b8c4-411a-b22a-3af79b36ae3b"
+                      Id="f8cd328a-01c0-4485-bbb2-2a4ba002c4a9"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="2b67b615-62d7-490e-a14b-c035399c0dbf">
+                    Id="bcb96d0b-2e64-42fe-a85e-f05eb7777d8a">
                     <propertyInstance
-                      Id="511a18db-cc68-43b6-af93-d85fbded62ca"
+                      Id="ad2dd39a-9a5e-45a7-be03-1817e3a238da"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -6438,15 +6478,7 @@
               LastKnownLocation="Package3_1645.uml" />
           </generalization>
           <generalization
-            Id="fad8612b-0d1c-472f-b23d-847ce1745aae"
-            isSubstitutable="false">
-            <interfaceMoniker
-              Id="773395b5-9cec-4cab-bf38-a5afd2bbe2b9"
-              LastKnownName="IEquatable&lt;Evento‎&gt;"
-              LastKnownLocation="Package3_1645.uml" />
-          </generalization>
-          <generalization
-            Id="7485aec6-104d-4fb1-afec-3a30fee355d0"
+            Id="5196d7b7-ea75-4033-ad6e-4443ca7271ca"
             isSubstitutable="false">
             <interfaceMoniker
               Id="0127d9c5-0529-45be-9a27-5e922fdb6878"
@@ -6454,26 +6486,10 @@
               LastKnownLocation="Package3_1645.uml" />
           </generalization>
           <generalization
-            Id="914bd8a9-1d6f-4f6b-aeff-1d5bc7fb3772"
+            Id="1a008036-4558-4b9a-b136-29690c471652"
             isSubstitutable="false">
             <interfaceMoniker
-              Id="0c0efdc7-ee7d-4901-a93a-b7fdc65b9c33"
-              LastKnownName="IEquatable&lt;ModelloEvento‎&gt;"
-              LastKnownLocation="Package3_1645.uml" />
-          </generalization>
-          <generalization
-            Id="e6e0d78b-7ecb-43b9-a7db-a22aa2d57065"
-            isSubstitutable="false">
-            <interfaceMoniker
-              Id="230d178c-6071-4753-ba04-4105d3ee9cbb"
-              LastKnownName="IEquatable&lt;Calendario‎&gt;"
-              LastKnownLocation="Package3_1645.uml" />
-          </generalization>
-          <generalization
-            Id="2e7d8323-ae1a-49bf-aff7-62e60d6da7f0"
-            isSubstitutable="false">
-            <interfaceMoniker
-              Id="23e72a50-ce74-4dda-aafd-4e01b00df5ad"
+              Id="898f09f9-ca74-4012-9f75-e200b025972b"
               LastKnownName="IEquatable&lt;Voce‎&lt;T‎&gt;‎&gt;"
               LastKnownLocation="Package3_1645.uml" />
           </generalization>
@@ -6842,7 +6858,7 @@
         </appliedStereotypesInternal>
         <targetEnds>
           <association
-            Id="dc339107-8932-4632-a4d7-08f50d2d2c46"
+            Id="98f9399b-a079-4711-a05c-06af637736ff"
             isDerived="false"
             sourceEndRoleName=""
             targetEndRoleName=""
@@ -6856,7 +6872,7 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="a219605b-12cd-4608-a337-8a9e3f10eeb2"
+                  Id="426ab6f9-ccd2-45f8-ad9f-ca0e86ebb95a"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6867,13 +6883,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="2d685dec-ca22-4cc6-87e6-58e84b428cfa"
+                      Id="2649bb93-9411-4691-92c0-e626e78f6f54"
                       name="Lower"
                       value="*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="55abdf28-e048-41da-989e-6dd192f126cf"
+                      Id="16ae98ca-f4a0-4500-8280-a844185b763d"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -6881,7 +6897,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="91b89d36-b05d-4c7e-86ed-220ddd8b2e83"
+                  Id="06d2c149-e822-470a-b09f-af960365a6ba"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -6891,13 +6907,13 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="abb53a28-e5f1-41f6-8a71-9950aaf46f78"
+                      Id="df1ac7cd-9fa8-4a12-a9a6-2555494e3cae"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="38c96b8a-93ff-4bd7-8a13-edd05656630d"
+                      Id="d9204875-e6af-4de1-8b57-615d2851c27e"
                       name="Upper"
                       value="1" />
                   </upperValueInternal>
@@ -8568,7 +8584,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="cbec2e6f-c300-4dce-ae5d-c2fda69d53d8"
+            Id="cd8594c5-4463-47b6-bec8-7f5b5aa1d232"
             name="Periodicita"
             isLeaf="false"
             isStatic="false"
@@ -8577,54 +8593,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="8b067786-6e8e-4110-8c8d-cc6737139fd1"
+                Id="e45e775d-b126-4c5f-b229-d3dcd8de5fe7"
                 handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3DPeriodicita Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="aa4376cb-43d7-49e3-8802-666c3722d02b"
+                Id="21461b8f-f659-486b-a860-d8bd1c6865fc"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="5b68367b-eab4-44c4-9654-48f3998cdb52">
+                    Id="aff3cf18-b494-4c01-a391-7b345b2d8a50">
                     <propertyInstance
-                      Id="9b121024-4aee-4ee3-98f9-34b45486fec0"
+                      Id="91904021-141b-48f2-bfa6-b2bf371a1105"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="1de04543-dd6a-4056-a5bd-556d879335f2">
+                    Id="6bdaa8ff-4d73-4b20-a249-3328e17b8d3f">
                     <propertyInstance
-                      Id="8e9154f6-fe64-4024-aa2b-086e9efb9745"
+                      Id="22e39e76-27ec-43ac-8be6-40c132231941"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="0797193a-c68f-4d47-acfc-42c1474ce116">
+                    Id="97a7d98f-f624-4a01-ba6c-c844f74a2324">
                     <propertyInstance
-                      Id="78649671-e53d-45fb-8916-ecdd2c7ebfe1"
+                      Id="5e9987d0-e2af-4a3b-a3ed-8eb611f6c8d3"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="a03b31b8-d9bb-41d5-b3e3-8deb3a016309">
+                    Id="f10ace63-4547-429f-b410-183747cf2791">
                     <propertyInstance
-                      Id="50c79b5a-cf24-43ff-a6ec-5fcf8a778da9"
+                      Id="a777ea98-68f9-43d8-90ac-43ee902989cc"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="44262087-c866-4099-9071-e0baa94291cf">
+                    Id="7f149f11-3000-4f67-8896-b08d61615e7a">
                     <propertyInstance
-                      Id="f69f6c0e-d2e4-4e96-8185-29cdd321d312"
+                      Id="9ee7c4c2-a299-4797-b81f-8580802b8d54"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="1b379ea1-b14a-480a-b0f0-5748214b4cf0">
+                    Id="7b6652db-ab00-4df1-bbb7-ffe58b598adb">
                     <propertyInstance
-                      Id="d1149bc8-aa96-43da-8d0f-19b815634de0"
+                      Id="7e6b70b2-525d-43b6-a7b4-f6317fc3e250"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -8693,7 +8709,7 @@
         </appliedStereotypesInternal>
         <targetEnds>
           <association
-            Id="e8e1d292-c165-4532-81ee-b6f0f9d80ce4"
+            Id="2d0b212a-bf2c-4bb1-a91a-d1795dd19906"
             isDerived="false"
             sourceEndRoleName=""
             targetEndRoleName=""
@@ -8707,7 +8723,7 @@
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="7167c5ac-d7f9-4e17-81b1-b3318130fc5d"
+                  Id="857aa102-47b8-49d0-b943-c2d026e6e97a"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -8718,13 +8734,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="f5e096cd-ec3f-40b3-a52f-bd2161b77f57"
+                      Id="aadb065e-72ad-4178-832c-3627c6d39533"
                       name="Lower"
                       value="*" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="363d3f56-97ee-4123-97ea-20c709a6545a"
+                      Id="21c7a226-4893-4948-b07b-77fbbabe19a5"
                       name="Upper"
                       value="*" />
                   </upperValueInternal>
@@ -8732,7 +8748,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="930ff05c-18e1-4674-aa12-cff77382cd7c"
+                  Id="a51cae78-b4d7-4431-bb3c-55872bdd5c2c"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -8742,13 +8758,13 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="3b0d508c-a57c-442b-88ad-6d625eb3bce4"
+                      Id="285d9b02-c53d-4a2f-a5a3-b56a19b3395c"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="a65ee473-25d9-47bd-a159-41f5cbdaee81"
+                      Id="71bc6b6e-0528-4814-9d0a-4adea6c6d09b"
                       name="Upper"
                       value="1" />
                   </upperValueInternal>
@@ -9166,7 +9182,6 @@
       <class
         Id="2e818778-f8cb-4ad3-b1a9-0a71cd477aab"
         name="Amico"
-        visibility="Package"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
@@ -9971,9 +9986,9 @@
               LastKnownLocation="Package1_1645.uml" />
           </interfaceRealization>
           <interfaceRealization
-            Id="69b7c565-fb0c-4f09-adfc-43c70deb1dfc">
+            Id="d46575e1-2ead-41c0-bd53-eba5675d0d12">
             <interfaceMoniker
-              Id="23e72a50-ce74-4dda-aafd-4e01b00df5ad"
+              Id="898f09f9-ca74-4012-9f75-e200b025972b"
               LastKnownName="IEquatable&lt;Voce‎&lt;T‎&gt;‎&gt;"
               LastKnownLocation="Package3_1645.uml" />
           </interfaceRealization>
@@ -10384,111 +10399,6 @@
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="d5a74bac-0f09-4c1e-9f73-2cefda9df52f"
-            name="Voce"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="a84b3220-8277-48b4-a3da-73f0640f049d"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="d4c8f1aa-910d-4b83-99f8-43cd8a8cf077"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="502b4207-4181-464c-892f-d7f1fe8aab17">
-                    <propertyInstance
-                      Id="ddbd3219-65af-4d31-ac6f-ead2446016af"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e75a80b0-3d52-4d32-b59f-131cedf54f69">
-                    <propertyInstance
-                      Id="4a7ccb76-ec07-4b49-9746-100db8752919"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="79b5788e-c280-4d3a-8d83-cf00ba3da93d">
-                    <propertyInstance
-                      Id="41c9a26d-4452-402a-9410-97d13c8aa5d1"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="3972108a-1fb0-45d1-aa79-1e09c668ece6">
-                    <propertyInstance
-                      Id="92855cf0-e1f4-44f4-81a8-d2f7e8e45b8f"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="cdb0eb4e-e8bb-412d-a580-48209db0106e">
-                    <propertyInstance
-                      Id="3b0361ac-8d34-45dd-a53f-85c1316391b9"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="728ef427-c75d-488d-9af8-9ffc593c1caf">
-                    <propertyInstance
-                      Id="e354b2f4-7e89-42c0-a091-504651f4f717"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="471e1aa9-31b9-423d-8718-71b347d8ebc9"
-                  name="nome"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="e8926e25-edb2-4086-9b0e-b625acb3337e"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dnome"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
-                      LastKnownName="String"
-                      LastKnownLocation="DynamiCalModeling.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="583351c3-bdba-443c-afb3-69318cd54a31"
-                  name="valore"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="295b9163-8f93-4089-b401-21f8713e8961"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dvalore"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="82cebc50-1827-476c-9357-7318b4dc8c0e"
-                      LastKnownName="T"
-                      LastKnownLocation="Package1_1645.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
             Id="91a150ad-de88-49ea-9cd7-044291da4b5f"
             name="Copy"
             isLeaf="false"
@@ -10659,104 +10569,6 @@
                     <interfaceMoniker
                       Id="c8c1502e-ffb3-46c2-8842-56042a393e51"
                       LastKnownName="IVoce"
-                      LastKnownLocation="Package1_1645.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-            </ownedParameters>
-          </operation>
-          <operation
-            Id="d06395a0-26fa-498b-baf6-bb31c9285479"
-            name="Equals"
-            isLeaf="false"
-            isStatic="false"
-            isAbstract="false"
-            concurrency="Sequential"
-            isQuery="false">
-            <referencesInternal>
-              <reference
-                Id="775644d8-6fc2-495e-bb7d-e204d17f7d13"
-                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) Member%3D(Name%3DEquals OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) ParameterIdentifier%3D0)]))])"
-                tag="ViewCode" />
-            </referencesInternal>
-            <appliedStereotypesInternal>
-              <stereotypeInstance
-                Id="cc4819ad-f90e-4c2b-a739-bef379b85f82"
-                name="method"
-                profile="CSharpProfile">
-                <propertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5b30bf88-2223-4887-976f-db29997fb041">
-                    <propertyInstance
-                      Id="d13accc3-a349-4226-982b-348555db579f"
-                      name="ClrAttributes" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="446bacf4-d877-4788-9f4f-5033802d1d49">
-                    <propertyInstance
-                      Id="bf629d63-0f01-40c6-a9c8-1f29c90b1bab"
-                      name="IsPartial"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="e4872ddb-fcf6-4d89-91f9-977d868dccf5">
-                    <propertyInstance
-                      Id="087485d0-353c-436b-a934-e3df11c535f8"
-                      name="IsUnsafe"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="f0953151-7584-40f4-a8ba-10fad8dd20cf">
-                    <propertyInstance
-                      Id="453e830d-8b51-46d4-b152-6197cef69138"
-                      name="Inheritance"
-                      value="none" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="5da76e15-987c-4538-aeef-403f86d37de9">
-                    <propertyInstance
-                      Id="dc2c2cd5-8b72-468c-a805-4fd3c4d22595"
-                      name="PackageVisibility"
-                      value="internal" />
-                  </stereotypeInstanceHasPropertyInstances>
-                  <stereotypeInstanceHasPropertyInstances
-                    Id="c873f2ea-d90e-4e42-99c5-89e778b62cff">
-                    <propertyInstance
-                      Id="ed01052e-56d3-4cb6-acec-a6c48a390221"
-                      name="params"
-                      value="false" />
-                  </stereotypeInstanceHasPropertyInstances>
-                </propertyInstances>
-              </stereotypeInstance>
-            </appliedStereotypesInternal>
-            <ownedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="66efd1e8-3ae2-4aa9-b43f-39c20b117e47"
-                  direction="Return">
-                  <type_NamedElement>
-                    <primitiveTypeMoniker
-                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
-                      LastKnownName="Boolean"
-                      LastKnownLocation="DynamiCalModeling.uml" />
-                  </type_NamedElement>
-                </parameter>
-              </operationHasOwnedParameters>
-              <operationHasOwnedParameters>
-                <parameter
-                  Id="7344f1d4-d8a3-4589-b41d-41914b26a9fb"
-                  name="other"
-                  direction="In">
-                  <referencesInternal>
-                    <reference
-                      Id="8f238b27-04e1-4d21-92b1-f30e844d64b1"
-                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) Member%3D(Name%3DEquals OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) ParameterIdentifier%3D0)]))]) ParameterIdentifier%3Dother"
-                      tag="ViewCode" />
-                  </referencesInternal>
-                  <type_NamedElement>
-                    <classMoniker
-                      Id="9e780e61-4d50-4e0b-bf2b-eb69b998c4c1"
-                      LastKnownName="Voce&lt;T‎&gt;"
                       LastKnownLocation="Package1_1645.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -10940,6 +10752,209 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="5d1b50d4-abab-4367-8312-d1a35d962fb4"
+            name="Voce"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="44149d3a-25b0-423c-9bd9-d9d28b2a0e6e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) ParameterIdentifier%3D0)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="508051c4-1cc4-4a75-9c97-cede11c4c572"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85a2eb14-0cdb-4adb-9d6b-72b71cf1090e">
+                    <propertyInstance
+                      Id="621629fe-66d0-4a37-8cf7-ccfdeaecd5df"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17f93094-ba3f-41a1-a1b4-06a68a14d360">
+                    <propertyInstance
+                      Id="e030f708-0ea0-4391-96c3-6a1fa6b70f80"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56c1a640-f445-4769-96bb-6af07950fc65">
+                    <propertyInstance
+                      Id="3ecb98d8-7146-463d-9a28-b9f4e22584d0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="26d0a86e-577d-42da-9ce6-2148686899fc">
+                    <propertyInstance
+                      Id="57d02818-372c-4813-a3e4-762a540cdf81"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="346758fe-a3bf-4092-8607-25555a765f94">
+                    <propertyInstance
+                      Id="18d4ce74-c5d1-409d-9d8b-58dabe8bcf73"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="720624cf-03d2-4e89-b9fe-4679e7859a20">
+                    <propertyInstance
+                      Id="2d942710-a558-4d67-ac13-19c43d2fced5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="99c07af3-e4fe-4621-a1a4-df1319ddf4b1"
+                  name="nome"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0349b80f-1590-4eb1-a0f0-57cc6001b741"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dnome"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="DynamiCalModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="60278b33-b889-47a8-80e1-97ace0197360"
+                  name="valore"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a9553c2c-0a81-4384-9f63-f9ccf5440992"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) ParameterIdentifier%3D0)]) ParameterIdentifier%3Dvalore"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="82cebc50-1827-476c-9357-7318b4dc8c0e"
+                      LastKnownName="T"
+                      LastKnownLocation="Package1_1645.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="4a35a136-4f1b-442d-b719-963c072b6b64"
+            name="Equals"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f21dec77-3a5e-4622-ac11-c7fdea85a9bb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) Member%3D(Name%3DEquals OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) ParameterIdentifier%3D0)]))])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="64f82099-c882-414a-80c7-c34ecadeb5c3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af0043f8-6378-4442-b32c-ac122ee53d0b">
+                    <propertyInstance
+                      Id="551cc5fc-6ab1-4302-b141-61ee131e8762"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ffa7562d-2a99-4b4d-9efe-e1ae3010ac13">
+                    <propertyInstance
+                      Id="b2e3eb9b-2b55-4230-9e1c-060a8c062340"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f7f5578-dc7f-42dc-a09b-9848f7bd5074">
+                    <propertyInstance
+                      Id="43f64815-0e5b-451b-90f5-8a97af5e81d1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="300a5d69-b69c-4bbf-b7ad-ef3d4e049f03">
+                    <propertyInstance
+                      Id="c7b6d701-7a28-4fb8-a86d-014e82ae9ca1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="47c9ccb4-5629-438a-b237-f29c92875798">
+                    <propertyInstance
+                      Id="057e8e2b-5cb0-4d6f-8b22-673cb8cdc67c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="782cd2d6-b4a8-482a-94e7-86bb94ab6ddd">
+                    <propertyInstance
+                      Id="ea604bfa-e6fc-4d4c-aeaf-6d95e7900e3b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e68cfa0a-7bc7-4fed-8e9a-ac347674b812"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="DynamiCalModeling.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="eb3ad96c-1892-445d-9915-8d18707f6415"
+                  name="other"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="97455329-0587-4180-9c05-a586d6141011"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) Member%3D(Name%3DEquals OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FLuca Marogna%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe&quot; Namespace%3DDynamiCal.Model Type%3D(Name%3DVoce GenericParameterCount%3D1) ParameterIdentifier%3D0)]))]) ParameterIdentifier%3Dother"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="9e780e61-4d50-4e0b-bf2b-eb69b998c4c1"
+                      LastKnownName="Voce&lt;T‎&gt;"
+                      LastKnownLocation="Package1_1645.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -11005,6 +11020,13 @@
             Id="69130b25-6bce-4c54-bca0-da6f98698f04">
             <interfaceMoniker
               Id="23e72a50-ce74-4dda-aafd-4e01b00df5ad"
+              LastKnownName="IEquatable&lt;Voce‎&lt;T‎&gt;‎&gt;"
+              LastKnownLocation="Package3_1645.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="c7a8569e-4bf5-497d-8c6f-0c1314801026">
+            <interfaceMoniker
+              Id="898f09f9-ca74-4012-9f75-e200b025972b"
               LastKnownName="IEquatable&lt;Voce‎&lt;T‎&gt;‎&gt;"
               LastKnownLocation="Package3_1645.uml" />
           </interfaceRealization>
