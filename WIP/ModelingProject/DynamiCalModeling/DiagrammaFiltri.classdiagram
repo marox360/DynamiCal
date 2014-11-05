@@ -1,5 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="3c09920b-b8f9-4cef-ad03-bd5bcd1d9479" name="DiagrammaFiltri" linkedPackageId="1dda86ae-d992-43ea-ad2e-f8f544f6ba1e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+=======
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="3c09920b-b8f9-4cef-ad03-bd5bcd1d9479" name="DiagrammaFiltri" linkedPackageId="1dda86ae-d992-43ea-ad2e-f8f544f6ba1e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+>>>>>>> origin/master
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="b05858c7-a4bb-4671-a66b-602705402413" name="IEnumerable&lt;Calendario‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="DynamiCalModeling::System::Collections::Generic::IEnumerable&lt;Calendario‎&gt;">
@@ -3232,7 +3236,7 @@
         </appliedStereotypesInternal>
         <elementDefinition Id="534af8a5-4cc7-4b84-bb98-621d0bde5127" />
         <targetEnds>
-          <association Id="745d5119-46ef-40ae-a41d-f149f02a32ae" isDerived="false" sourceEndRoleName="" targetEndRoleName="" isLeaf="false" isAbstract="false">
+          <association Id="745d5119-46ef-40ae-a41d-f149f02a32ae" isDerived="false" sourceEndRoleName="" targetEndRoleName="Filtro" isLeaf="false" isAbstract="false">
             <interfaceMoniker Id="325213de-ccfd-4a69-8263-54246aad0504" LastKnownName="IFiltro" />
             <description>Property Filtro references type IFiltro.</description>
             <relationshipOwnedElementsInternal>
@@ -3252,7 +3256,7 @@
                 </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
-                <memberEnd Id="96b52312-032c-4cb8-a36b-67f455cc4ef4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <memberEnd Id="96b52312-032c-4cb8-a36b-67f455cc4ef4" name="Filtro" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <lowerValueInternal>
                     <literalString Id="7d22d180-c647-4e64-92cc-ef6e5ba23777" name="Lower" value="1">
                       <elementDefinition Id="15be8230-3310-44f0-9361-ae85c34abfbc" />
