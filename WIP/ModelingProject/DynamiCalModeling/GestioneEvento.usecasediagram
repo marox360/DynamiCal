@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="84252e05-ba43-4683-a863-336b802f30c3" name="GestioneEvento" linkedPackageId="6e638df3-8c36-4830-aa53-5ffd9b72524f" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="8cd102ab-038b-4fa6-8f1e-123f2f1ea0af">
-      <profileInstance Id="7eaf4417-39b0-4426-91b2-39a8596ed7bc" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="8ef09d97-1a14-4ecd-930b-c10d8d6fbc62">
-      <profileInstance Id="1af2b670-15aa-4a04-842b-4da18c7c0853" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="76fc2eec-6931-4700-bc50-aa2b05f6186c">
-      <profileInstance Id="eb8c65bc-7bb1-46ce-a4dd-f6c222332173" name="CSharpProfile">
-        <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
-      </profileInstance>
-      <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="84252e05-ba43-4683-a863-336b802f30c3" name="GestioneEvento" linkedPackageId="6e638df3-8c36-4830-aa53-5ffd9b72524f" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="f2fb475a-6fb7-4da9-a563-c6598552934e" name="Utente" isAbstract="false" isLeaf="false">
@@ -60,56 +40,22 @@
     <useCaseModelRootHasTypes>
       <useCase Id="e7444254-74f5-4530-a71e-8827eb389342" name="Creazione Evento" isAbstract="false" isLeaf="false">
         <elementDefinition Id="98f98482-375e-40d6-be82-cb8be97d0865" />
-        <targetEnds>
-          <association Id="e4553fe0-cef6-4496-9299-1e6b84be7d03" isDerived="false" sourceEndRoleName="Creazione Calendario" targetEndRoleName="Gestione Calendario" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
+        <extendedCases>
+          <extend Id="2e74da97-aeca-4121-a453-28967f0e21d3">
             <useCaseMoniker Id="94b77652-a8e3-4d25-9cdf-6228c29cd9d4" LastKnownName="Gestione Evento" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="bc232e91-66ac-497d-8ac3-5635505a1c5f" name="Creazione Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="ee05fef1-9f04-4b9a-813a-51f3d45cc1d1" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="36acf409-6d52-4077-a9f9-94a39f9ecafe" name="Gestione Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="f154c2bd-41f3-4a62-84c3-917f6037751e" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="28f07ab7-2c0c-407f-a010-49f253b508fa" />
-          </association>
-          <association Id="3ce64d9a-dae3-4f48-b7ac-77e4c84ffbd6" isDerived="false" sourceEndRoleName="Creazione Evento" targetEndRoleName="Selezione Modello Evento" isLeaf="false" name="&lt;include&gt;" isAbstract="false">
-            <useCaseMoniker Id="6a21e1ee-fab0-4105-8591-c55548fc4baf" LastKnownName="Selezione Modello Evento" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="bb700e77-8c77-4a50-b146-851901d88184" name="Creazione Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="38d69a9d-b9ac-4e70-8735-a5f75a849a93" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="96895ee7-3b0b-4ce1-a7f3-ab20428d3819" name="Selezione Modello Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="184671ae-0728-477d-8119-64dc01cb8fb0" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="e7cef25a-38b1-4349-8f80-5af585abf405" />
-          </association>
-          <association Id="a287c3a2-9d0a-404d-8ea2-95d76064581e" isDerived="false" sourceEndRoleName="Creazione Evento" targetEndRoleName="Selezione Calendario" isLeaf="false" name="&lt;include&gt;" isAbstract="false">
+            <elementDefinition Id="a75c4c21-04ff-43fd-941f-9aede2fb3f1d" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="e7ae4417-982e-4797-a4eb-d8f4ae1550ae">
             <useCaseMoniker Id="5fe11e9d-f9a2-4765-a96a-19d95d5d9cbe" LastKnownName="Selezione Calendario" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="77b747d6-dda9-4558-a465-86303821f632" name="Creazione Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="c908197c-1ca8-4352-bfcd-63889e653ad3" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="a321f7e8-4dac-444a-b1ca-0f365ed4a350" name="Selezione Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="687f7c7f-1348-4477-ae05-a7456c30e360" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="bb58553a-d2cb-4bf1-9850-24e1956fd572" />
-          </association>
-        </targetEnds>
+            <elementDefinition Id="d9099c9f-781c-45f3-b358-8fa995de0f75" />
+          </include>
+          <include Id="89589e0d-ba44-47e1-8c1f-f101e49cdfb0">
+            <useCaseMoniker Id="6a21e1ee-fab0-4105-8591-c55548fc4baf" LastKnownName="Selezione Modello Evento" />
+            <elementDefinition Id="58e97989-d6cf-4538-85a0-597a6599bd58" />
+          </include>
+        </additions>
         <subjects>
           <subsystemMoniker Id="61616027-612b-4f9d-bc86-8411df9414b2" LastKnownName="Gestione Evento" />
         </subjects>
@@ -118,40 +64,18 @@
     <useCaseModelRootHasTypes>
       <useCase Id="ed716fa4-5221-47c2-ab63-393603fd9348" name="Modifica Evento" isAbstract="false" isLeaf="false">
         <elementDefinition Id="7fefe5ac-f381-43ec-8d35-18687ba850b2" />
-        <targetEnds>
-          <association Id="c2b860b3-416a-42e8-a595-3e7627892e01" isDerived="false" sourceEndRoleName="Modifica Calendario" targetEndRoleName="Gestione Calendario" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
+        <extendedCases>
+          <extend Id="efe9ae89-ec7c-44ba-bcf0-b13c8edbbf34">
             <useCaseMoniker Id="94b77652-a8e3-4d25-9cdf-6228c29cd9d4" LastKnownName="Gestione Evento" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="8535b8dc-5f55-4ddf-965e-4c2f07ecfd00" name="Modifica Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="4fb369d4-7b5a-4d7c-8eb3-4fd776787d22" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="684afa30-4d29-48f7-a9e5-5a6ccaddc01b" name="Gestione Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="40c33832-4154-45bc-83e7-b05c60b69f39" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="4d91156a-c8d0-4c73-8ed9-1a460d4ce68a" />
-          </association>
-          <association Id="6ca82bbb-c79f-40f8-a702-040b2552fe63" isDerived="false" sourceEndRoleName="Modifica Evento" targetEndRoleName="Selezione Evento" isLeaf="false" name="&lt;include&gt;" isAbstract="false">
+            <elementDefinition Id="34f3cf8c-061b-4599-880a-14615eca31da" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="a16b4ec4-c337-4f0a-81b5-b8ea3a487146">
             <useCaseMoniker Id="f4510b1e-f107-47f6-92b2-28766af152c4" LastKnownName="Selezione Evento" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="0788c26a-5527-47ee-808c-c8d57a44676b" name="Modifica Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="b33dfc09-2023-430b-b5e6-b4722de6ce79" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="8a05739e-684f-41ad-b574-d8a57ce4bef8" name="Selezione Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="9cd8a34a-de4c-43d6-9bc4-798cfee8cd35" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="aeedcf9a-2d5c-4973-a4dd-e32bfa8ea1d2" />
-          </association>
-        </targetEnds>
+            <elementDefinition Id="46cf79ff-5c8a-4a44-8277-4c1210b940d1" />
+          </include>
+        </additions>
         <subjects>
           <subsystemMoniker Id="61616027-612b-4f9d-bc86-8411df9414b2" LastKnownName="Gestione Evento" />
         </subjects>
@@ -160,40 +84,18 @@
     <useCaseModelRootHasTypes>
       <useCase Id="03677b63-aa6e-4e3c-a3dd-fb774a184492" name="Eliminazione Evento" isAbstract="false" isLeaf="false">
         <elementDefinition Id="ae499806-6e1c-4236-8481-ab4cc0c1193a" />
-        <targetEnds>
-          <association Id="bb4eaecd-92c3-48d1-b0b6-4a8c923fcb72" isDerived="false" sourceEndRoleName="Elimina Calendario" targetEndRoleName="Gestione Calendario" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
+        <extendedCases>
+          <extend Id="e5750ce0-a7b3-4b68-bcce-fb44869e5a22">
             <useCaseMoniker Id="94b77652-a8e3-4d25-9cdf-6228c29cd9d4" LastKnownName="Gestione Evento" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="3183b6bc-2c1e-4094-83c7-317adf392509" name="Elimina Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="ceb7b156-65eb-4255-8999-933a38829c55" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="2230fd09-347b-4836-bc8b-6867235f60b8" name="Gestione Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="958e5143-f614-4ab5-973d-d2ff55beb946" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="156f5ed3-83bf-4d84-91d8-22bfa44350cc" />
-          </association>
-          <association Id="8d9095c4-3ea4-4363-b6fd-d4ba5fb4486e" isDerived="false" sourceEndRoleName="Eliminazione Evento" targetEndRoleName="Selezione Evento" isLeaf="false" name="&lt;include&gt;" isAbstract="false">
+            <elementDefinition Id="9521e1a3-dfdb-409c-98b5-6fb213b3af12" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="eb1644e7-8436-4e5f-a1ae-b86c63d8ce90">
             <useCaseMoniker Id="f4510b1e-f107-47f6-92b2-28766af152c4" LastKnownName="Selezione Evento" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="3d8ee037-32a6-4609-817e-ad3d1183c8db" name="Eliminazione Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="68f3222b-7c4b-42d1-9454-f897c68d34a7" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="34060421-d705-4800-a68c-907ca315c323" name="Selezione Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="7ad535c9-d7cf-455c-92d4-b3a17fa6a122" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="7340b79b-2047-4676-b844-861b660f4d3b" />
-          </association>
-        </targetEnds>
+            <elementDefinition Id="989bf594-1c68-44b2-9f14-7e5edbb67e91" />
+          </include>
+        </additions>
         <subjects>
           <subsystemMoniker Id="61616027-612b-4f9d-bc86-8411df9414b2" LastKnownName="Gestione Evento" />
         </subjects>
@@ -210,40 +112,16 @@
     <packageHasNamedElement>
       <useCase Id="232fd673-34ea-42b3-9340-29a0d0fd0c10" name="Modifica Periodicità" isAbstract="false" isLeaf="false">
         <elementDefinition Id="102e2a8c-49e3-40bc-8298-74acfea659d5" />
-        <targetEnds>
-          <association Id="8816e8d2-43f2-40e2-9ebc-8b1d4d1fc1bf" isDerived="false" sourceEndRoleName="Modifica Periodicità" targetEndRoleName="Modifica Evento" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
+        <extendedCases>
+          <extend Id="83bbca85-41c6-47e4-ba87-d7c1a1cbc803">
             <useCaseMoniker Id="ed716fa4-5221-47c2-ab63-393603fd9348" LastKnownName="Modifica Evento" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="2748c526-6099-4f9f-90d0-c57330d22b5c" name="Modifica Periodicità" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="ace48d18-9895-4b46-aeab-838040ce582a" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="cf2a7aab-31c8-4f80-9d4f-c267edf8cc38" name="Modifica Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="87f05deb-8e7c-4e4a-b4a7-d16477919c30" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="5bb57f59-eb0f-4568-a0c2-b863ebe0235c" />
-          </association>
-          <association Id="c464171d-a05a-4926-a249-b4b381b81e3c" isDerived="false" sourceEndRoleName="Modifica Periodicità" targetEndRoleName="Creazione Evento" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
+            <elementDefinition Id="e1b18625-133e-4054-bacf-3927ae20e573" />
+          </extend>
+          <extend Id="d3c6cc0d-1885-4ba4-b19a-7e2ba2d01cac">
             <useCaseMoniker Id="e7444254-74f5-4530-a71e-8827eb389342" LastKnownName="Creazione Evento" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="ddce0e92-d104-4ca3-b5ce-f0f2f964df07" name="Modifica Periodicità" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="d730d515-75e9-44a6-8f6a-93eb62be50b0" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="ac6df006-a672-4907-abb3-1c15513d3662" name="Creazione Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="98221e06-7854-4a39-a4d4-c8c1935e8cf1" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="b823f05c-f118-4279-9e46-ac297a3a325e" />
-          </association>
-        </targetEnds>
+            <elementDefinition Id="2bb4d0bc-4f9f-4c1a-b360-2816e9ea24e4" />
+          </extend>
+        </extendedCases>
         <subjects>
           <subsystemMoniker Id="61616027-612b-4f9d-bc86-8411df9414b2" LastKnownName="Gestione Evento" />
         </subjects>
@@ -252,24 +130,12 @@
     <packageHasNamedElement>
       <useCase Id="d092b9e8-c1fe-4e0e-833a-38675a514e01" name="Creazione Modello Evento" isAbstract="false" isLeaf="false">
         <elementDefinition Id="9605d560-3a4c-4d84-beb0-01cbee8afb9a" />
-        <targetEnds>
-          <association Id="5a8870ee-9c5e-435f-bccf-43a18b43dc8b" isDerived="false" sourceEndRoleName="Creazione Modello Evento" targetEndRoleName="Creazione Evento" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
+        <extendedCases>
+          <extend Id="dcc96e98-0287-4013-bf72-862e6c847ba2">
             <useCaseMoniker Id="e7444254-74f5-4530-a71e-8827eb389342" LastKnownName="Creazione Evento" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="e09517e8-2563-43d8-8be9-3c5d4c618599" name="Creazione Modello Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="86b7a282-d241-4b24-9ec6-7c425f3bad06" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="1d1b9aba-9b8b-486f-8923-9f99961d9015" name="Creazione Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="a722e18f-1c6f-4f08-a5da-d580aaed7d4a" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="cc30f31d-88df-44d4-a288-b66cb0492452" />
-          </association>
-        </targetEnds>
+            <elementDefinition Id="2ff9af33-9f64-47f9-bdf6-6a4bbdad4722" />
+          </extend>
+        </extendedCases>
         <subjects>
           <subsystemMoniker Id="61616027-612b-4f9d-bc86-8411df9414b2" LastKnownName="Gestione Evento" />
         </subjects>
@@ -294,24 +160,12 @@
     <packageHasNamedElement>
       <useCase Id="8f7408a3-f7cc-4e30-a463-2ecf8aaf1c95" name="Creazione Calendario" isAbstract="false" isLeaf="false">
         <elementDefinition Id="01136250-ca5e-41b2-a272-85ec9dc15c4e" />
-        <targetEnds>
-          <association Id="6a903db0-70d7-4a2f-974e-8f3f6fe0f02e" isDerived="false" sourceEndRoleName="Creazione Calendario" targetEndRoleName="Creazione Evento" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
+        <extendedCases>
+          <extend Id="5ff1e02f-537f-475c-8ec8-9f250b3c5004">
             <useCaseMoniker Id="e7444254-74f5-4530-a71e-8827eb389342" LastKnownName="Creazione Evento" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="3690ab9c-50c9-4d10-a823-944c8f2ff805" name="Creazione Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="57930a2e-b1bf-4c94-88e8-7f7dfeba8754" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="3e14fc51-7562-49c3-9e4f-a5c2fc405ad3" name="Creazione Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="045abc22-4d1d-4501-9a46-7c3af910ba08" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="493f1fbf-be65-4114-bf57-1f2a8e55b6f5" />
-          </association>
-        </targetEnds>
+            <elementDefinition Id="baaf043b-80ff-4977-9cc6-04fde451a3b2" />
+          </extend>
+        </extendedCases>
         <subjects>
           <subsystemMoniker Id="61616027-612b-4f9d-bc86-8411df9414b2" LastKnownName="Gestione Evento" />
         </subjects>
@@ -320,5 +174,25 @@
   </packagedElements>
   <package Id="6e638df3-8c36-4830-aa53-5ffd9b72524f" name="DynamiCalModeling">
     <elementDefinition Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="8cd102ab-038b-4fa6-8f1e-123f2f1ea0af">
+        <profileInstance Id="7eaf4417-39b0-4426-91b2-39a8596ed7bc" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="8ef09d97-1a14-4ecd-930b-c10d8d6fbc62">
+        <profileInstance Id="1af2b670-15aa-4a04-842b-4da18c7c0853" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="76fc2eec-6931-4700-bc50-aa2b05f6186c">
+        <profileInstance Id="eb8c65bc-7bb1-46ce-a4dd-f6c222332173" name="CSharpProfile">
+          <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
+        </profileInstance>
+        <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

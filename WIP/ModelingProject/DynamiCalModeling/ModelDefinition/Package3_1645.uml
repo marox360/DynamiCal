@@ -1362,10 +1362,6 @@
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
-<<<<<<< HEAD
-      <Interface
-        Id="898f09f9-ca74-4012-9f75-e200b025972b"
-=======
       <class
         Id="28b281aa-7e02-46de-8a44-edf7c40a70fc"
         name="EventArgs"
@@ -1426,32 +1422,16 @@
     <packageHasNamedElement>
       <Interface
         Id="f63f7ec8-a6e9-4c5a-9f0c-410d472aafcc"
->>>>>>> origin/master
         name="IEquatable&lt;Voce‎&lt;T‎&gt;‎&gt;"
         isAbstract="false"
         isLeaf="false">
         <appliedStereotypesInternal>
           <stereotypeInstance
-<<<<<<< HEAD
-            Id="b725bae7-29dd-4b95-93b2-ea5eae6d90c8"
-=======
             Id="3ef5ee59-6e3d-48df-817c-1a4a55710879"
->>>>>>> origin/master
             name="interface"
             profile="CSharpProfile">
             <propertyInstances>
               <stereotypeInstanceHasPropertyInstances
-<<<<<<< HEAD
-                Id="ce1415c8-b96a-44c8-a33e-a952629cc59a">
-                <propertyInstance
-                  Id="d49b2a8e-c3f7-468d-bf2a-235d44f270d4"
-                  name="ClrAttributes" />
-              </stereotypeInstanceHasPropertyInstances>
-              <stereotypeInstanceHasPropertyInstances
-                Id="7f8619d1-3b4b-41a4-b422-c4f197b17c24">
-                <propertyInstance
-                  Id="b9a38ef1-c72c-43d9-b55c-149868f34d4f"
-=======
                 Id="c43a8692-dfa3-46b1-9328-6fe5e953343f">
                 <propertyInstance
                   Id="779f4a4b-3816-4974-82ef-97a18a34649d"
@@ -1461,33 +1441,20 @@
                 Id="2c93819e-1a4e-41ad-814f-307ef780f5b8">
                 <propertyInstance
                   Id="0d9c7689-571c-461d-ae66-079f98757cb1"
->>>>>>> origin/master
                   name="IsPartial"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-<<<<<<< HEAD
-                Id="faee6971-dde1-4039-a965-67ed80176994">
-                <propertyInstance
-                  Id="d920a175-8e1f-4d99-af62-741acdc48b2a"
-=======
                 Id="216fe0a1-3788-48a7-8276-ab7fe3243a99">
                 <propertyInstance
                   Id="86691c39-86ce-49a9-970e-cb3ef2f340ed"
->>>>>>> origin/master
                   name="IsUnsafe"
                   value="false" />
               </stereotypeInstanceHasPropertyInstances>
               <stereotypeInstanceHasPropertyInstances
-<<<<<<< HEAD
-                Id="f09d27ab-ba6f-4250-9dd1-f1d7ec4441b3">
-                <propertyInstance
-                  Id="7824306c-8815-4098-9819-00315744cd4a"
-=======
                 Id="30d41310-4803-41d9-91fe-a72b06a6be4c">
                 <propertyInstance
                   Id="6b67214b-517a-4fa7-90bf-9bd4c98ae591"
->>>>>>> origin/master
                   name="PackageVisibility"
                   value="internal" />
               </stereotypeInstanceHasPropertyInstances>
@@ -1496,22 +1463,14 @@
         </appliedStereotypesInternal>
         <signatures>
           <templateBinding
-<<<<<<< HEAD
-            Id="6b52e1c2-82ee-4eb0-a653-72f2ac22941b">
-=======
             Id="772a42aa-4db8-4542-b603-c66354b0d55a">
->>>>>>> origin/master
             <redefinableTemplateSignatureMoniker
               Id="82cb30e4-a5b9-4d3c-95dd-93ff318335e6"
               LastKnownLocation="Package3_1645.uml" />
             <relationshipOwnedElementsInternal>
               <templateBindingHasTemplateParameterSubstitution>
                 <templateParameterSubstitution
-<<<<<<< HEAD
-                  Id="18e9a04d-57f9-4130-b6a4-ae992e17e5fa">
-=======
                   Id="6748232a-f935-4d2e-aafe-4d158064ec9e">
->>>>>>> origin/master
                   <actuals>
                     <classMoniker
                       Id="9e780e61-4d50-4e0b-bf2b-eb69b998c4c1"

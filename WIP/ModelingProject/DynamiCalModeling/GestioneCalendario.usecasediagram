@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="638d5ee9-12bb-425e-823f-fe29a2eacda9" name="GestioneAgendaElettronica" linkedPackageId="815ff20c-7f68-4e28-a9ce-c911103ff9b1" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="638d5ee9-12bb-425e-823f-fe29a2eacda9" name="GestioneAgendaElettronica" linkedPackageId="815ff20c-7f68-4e28-a9ce-c911103ff9b1" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="76821283-50c5-415e-871d-a0443a769805" name="Utente" isAbstract="false" isLeaf="false">
@@ -35,24 +35,12 @@
     <useCaseModelRootHasTypes>
       <useCase Id="861534cf-056c-48ba-9a1c-8a3680e850b8" name="Creazione Calendario" isAbstract="false" isLeaf="false">
         <elementDefinition Id="469c386f-f70b-4a68-9f24-507ac4cd4097" />
-        <targetEnds>
-          <association Id="7ce12a4a-3a66-4787-9a36-30c8c3e13a56" isDerived="false" sourceEndRoleName="Creazione Calendario" targetEndRoleName="Gestione Calendario" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
+        <extendedCases>
+          <extend Id="3916f015-53f6-402e-a91a-77edc8369b18">
             <useCaseMoniker Id="4bce502c-ce9c-4c05-b41f-d3075ca88088" LastKnownName="Gestione Calendario" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="01e422c8-04a2-4051-b15e-8b082c292e2f" name="Creazione Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="9c48b192-cc86-45d2-ba8e-6a63416f6d01" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="9f38c640-ab88-445b-ae27-7c7c22b6ebd5" name="Gestione Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="216b6d48-d149-4c02-b5f8-fdb19d47ad75" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="2571dbb1-f9c8-4e69-9f2d-6a0f5362f2c6" />
-          </association>
-        </targetEnds>
+            <elementDefinition Id="1ee60023-4e28-44ee-85d9-d5f5781a7e87" />
+          </extend>
+        </extendedCases>
         <subjects>
           <subsystemMoniker Id="25176891-45bd-4f43-aeac-9135e50fa7bb" LastKnownName="Gestione Calendario" />
         </subjects>
@@ -61,40 +49,18 @@
     <useCaseModelRootHasTypes>
       <useCase Id="6b648370-cd29-4868-8318-e997e8e963aa" name="Modifica Calendario" isAbstract="false" isLeaf="false">
         <elementDefinition Id="dcde8233-7392-4df9-b166-6071e0c016f6" />
-        <targetEnds>
-          <association Id="841fd5a3-278f-4e4e-a0be-5d8d198f0f3d" isDerived="false" sourceEndRoleName="Modifica Calendario" targetEndRoleName="Gestione Calendario" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
+        <extendedCases>
+          <extend Id="47f51bd5-522a-4dac-92fd-4168169f3f4e">
             <useCaseMoniker Id="4bce502c-ce9c-4c05-b41f-d3075ca88088" LastKnownName="Gestione Calendario" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="c150ff5e-7cf7-47d5-b414-d09ab41c01d5" name="Modifica Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="18330ca4-9b79-4d73-8067-22c7e66d9255" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="ed577362-f663-43ec-90b0-47e9723209a8" name="Gestione Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="0daf9899-0256-45db-8d95-597da07079b0" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="3a72eaa7-437e-4f63-ae20-b49b2a01a795" />
-          </association>
-          <association Id="922f978c-3b0a-449d-87b1-15d22a2beb96" isDerived="false" sourceEndRoleName="Modifica Calendario" targetEndRoleName="Seleziona Calendario" isLeaf="false" name="&lt;include&gt;" isAbstract="false">
+            <elementDefinition Id="e749774e-55b0-4b6c-af32-62fa1e993630" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="11055804-e5f8-4240-8a65-72ce0958c33c">
             <useCaseMoniker Id="aeff27ee-a18d-4371-95a3-1ebaee0403f1" LastKnownName="Selezione Calendario" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="e6280fe0-67d4-4700-8ec6-8da8c62b6d54" name="Modifica Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="da339fd4-23d4-468a-a9a8-a6779ba189d0" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="4dc9fa82-c7b2-4eaa-892d-b3a17931f4eb" name="Seleziona Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="5c05a642-f5a6-48f5-9419-97e628ca6972" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="dfc513f1-501a-4a27-aeaf-9ffdb55b6576" />
-          </association>
-        </targetEnds>
+            <elementDefinition Id="b41a5d66-df1b-4f1d-a173-680066d1d225" />
+          </include>
+        </additions>
         <subjects>
           <subsystemMoniker Id="25176891-45bd-4f43-aeac-9135e50fa7bb" LastKnownName="Gestione Calendario" />
         </subjects>
@@ -103,40 +69,18 @@
     <useCaseModelRootHasTypes>
       <useCase Id="9c3bf46c-e319-4fad-bad7-4ec9b125ea7a" name="Eliminazione Calendario" isAbstract="false" isLeaf="false">
         <elementDefinition Id="8a5bd8dd-6134-4ef3-beb7-669fb6af6fb1" />
-        <targetEnds>
-          <association Id="ae8688f2-0cc5-43de-856b-09e2553d716b" isDerived="false" sourceEndRoleName="Elimina Calendario" targetEndRoleName="Gestione Calendario" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
+        <extendedCases>
+          <extend Id="8d61d823-a64a-43d4-ae5f-ffc414fa44c5">
             <useCaseMoniker Id="4bce502c-ce9c-4c05-b41f-d3075ca88088" LastKnownName="Gestione Calendario" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="d2b76483-f9a8-4215-9192-6080fafd5617" name="Elimina Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="d4f58b23-6ddc-4b9c-833b-08f563d2a306" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="b72f8153-1d60-4fe9-85e4-893072495ee7" name="Gestione Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="f2eb7dde-55ec-45d2-8729-9d0305071c7e" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="24a4b253-2ece-41bd-a58c-dc22082a63aa" />
-          </association>
-          <association Id="8cadb79f-b8ab-4634-a7a3-2d85952b6aa8" isDerived="false" sourceEndRoleName="Elimina Calendario" targetEndRoleName="Seleziona Calendario" isLeaf="false" name="&lt;include&gt;" isAbstract="false">
+            <elementDefinition Id="d33efab3-dc9e-427e-8620-e8a5fef18646" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="5b54589e-1d36-4344-ac12-a63c98705c4a">
             <useCaseMoniker Id="aeff27ee-a18d-4371-95a3-1ebaee0403f1" LastKnownName="Selezione Calendario" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="fec7d591-e30b-4137-a062-98367cd5e90b" name="Elimina Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="ce11825b-9fbb-4cc9-978e-fe172d3532f4" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="0dcdd025-859b-4474-9686-74ebd9d2437e" name="Seleziona Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="d5f4a708-cc7e-4d4c-af50-47c926e11531" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="a6bf7eff-7789-4086-8dc9-1fe440ac3f13" />
-          </association>
-        </targetEnds>
+            <elementDefinition Id="73f772c1-81ff-4021-8e7d-9382f5117867" />
+          </include>
+        </additions>
         <subjects>
           <subsystemMoniker Id="25176891-45bd-4f43-aeac-9135e50fa7bb" LastKnownName="Gestione Calendario" />
         </subjects>
@@ -145,40 +89,16 @@
     <useCaseModelRootHasTypes>
       <useCase Id="78e66ae8-96bb-43d6-8d50-9f95dffe5993" name="Condividisione Calendario" isAbstract="false" isLeaf="false">
         <elementDefinition Id="5203a9a2-41cb-4ee0-a514-3b9f02c96a7a" />
-        <targetEnds>
-          <association Id="48bf4493-d2a0-4eab-aed7-413f5be70116" isDerived="false" sourceEndRoleName="Condividi Calendario" targetEndRoleName="Creazione Calendario" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
-            <useCaseMoniker Id="861534cf-056c-48ba-9a1c-8a3680e850b8" LastKnownName="Creazione Calendario" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="11bab591-7611-4def-83f4-504e1805a3b6" name="Condividi Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="62967476-934c-4444-ade3-1168b63856ea" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="7e4ebc3e-9d76-4db4-9b54-61415f82166f" name="Creazione Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="5bb3fb7e-1a16-4e22-ba73-8662dd03521c" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="235002fe-d826-44b5-b7e4-1896b5d94b79" />
-          </association>
-          <association Id="bfba279e-d74a-4061-a479-f027873fa4a9" isDerived="false" sourceEndRoleName="Condividi Calendario" targetEndRoleName="Modifica Calendario" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
+        <extendedCases>
+          <extend Id="fd5d8d16-2248-42bb-aa14-1d6f11f9eb30">
             <useCaseMoniker Id="6b648370-cd29-4868-8318-e997e8e963aa" LastKnownName="Modifica Calendario" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="126b8332-ffd7-44ec-aad5-3b2641811bef" name="Condividi Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="a2b04a52-8748-4049-a7c3-a0ad4460d1e7" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="a5db4db0-51cd-4570-b0be-690650e835d4" name="Modifica Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="e43c76fc-c775-4c2b-a24f-9e30f6db9785" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="7c9e2dd1-c935-40cb-909c-b7faa6502be9" />
-          </association>
-        </targetEnds>
+            <elementDefinition Id="278dca97-a495-4e11-9393-084c0ef6674d" />
+          </extend>
+          <extend Id="7999bd14-7456-473a-b1f4-4775565ac42d">
+            <useCaseMoniker Id="861534cf-056c-48ba-9a1c-8a3680e850b8" LastKnownName="Creazione Calendario" />
+            <elementDefinition Id="5045a319-5823-44d7-a1dc-25e0ef75307a" />
+          </extend>
+        </extendedCases>
         <subjects>
           <subsystemMoniker Id="25176891-45bd-4f43-aeac-9135e50fa7bb" LastKnownName="Gestione Calendario" />
         </subjects>
@@ -195,24 +115,12 @@
     <useCaseModelRootHasTypes>
       <useCase Id="5f1841a4-d027-47c8-88b6-6c5369fe80bb" name="Eliminazione Evento" isAbstract="false" isLeaf="false">
         <elementDefinition Id="eca280cd-773a-440d-b561-eb3c3de430d2" />
-        <targetEnds>
-          <association Id="af464120-4333-4660-94bb-d961f0d8539c" isDerived="false" sourceEndRoleName="Eliminazione Evento" targetEndRoleName="Elimina Calendario" isLeaf="false" name="&lt;extends&gt;" isAbstract="false">
+        <extendedCases>
+          <extend Id="e6f3d233-d625-4988-bdb3-be6055b77870">
             <useCaseMoniker Id="9c3bf46c-e319-4fad-bad7-4ec9b125ea7a" LastKnownName="Eliminazione Calendario" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd Id="4f828d6e-3955-4df1-bb28-810bceb6dfde" name="Eliminazione Evento" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                  <elementDefinition Id="46103f6c-507c-4e03-a0dc-6952d19f4e9a" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd Id="c8a45fe1-24c5-4d54-a7b6-5d5e8474a022" name="Elimina Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                  <elementDefinition Id="81ea7a34-1f6e-47f8-bf66-a18e67eb26e7" />
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-            <elementDefinition Id="f7db0c73-e6ae-440b-9552-dd2d348bf143" />
-          </association>
-        </targetEnds>
+            <elementDefinition Id="fb77bd28-4d92-4546-a678-2ff3ab77658b" />
+          </extend>
+        </extendedCases>
         <subjects>
           <subsystemMoniker Id="25176891-45bd-4f43-aeac-9135e50fa7bb" LastKnownName="Gestione Calendario" />
         </subjects>

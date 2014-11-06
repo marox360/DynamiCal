@@ -22,8 +22,6 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <Content Include="DiagrammaAgenda.classdiagram">
       <SubType>Content</SubType>
     </Content>
@@ -31,7 +29,6 @@
       <SubType>Content</SubType>
       <DependentUpon>DiagrammaAgenda.classdiagram</DependentUpon>
     </Content>
->>>>>>> origin/master
     <Content Include="DiagrammaCalendario.classdiagram">
       <SubType>Content</SubType>
     </Content>
@@ -53,21 +50,6 @@
       <SubType>Content</SubType>
       <DependentUpon>DiagrammaFiltri.classdiagram</DependentUpon>
     </Content>
-<<<<<<< HEAD
-    <Content Include="DiagrammaModello.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DiagrammaModello.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>DiagrammaModello.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="DiagrammiEvento.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="DiagrammiEvento.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>DiagrammiEvento.classdiagram</DependentUpon>
-=======
     <Content Include="DiagrammaModelloEvento.classdiagram">
       <SubType>Content</SubType>
     </Content>
@@ -81,7 +63,6 @@
     <Content Include="DiagrammaEvento.classdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>DiagrammaEvento.classdiagram</DependentUpon>
->>>>>>> origin/master
     </Content>
     <Content Include="FiltroTemporale_FiltraEventi.sequencediagram">
       <SubType>Content</SubType>

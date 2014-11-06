@@ -113,22 +113,14 @@
         <OperationElementListCompartment Id="5504e2c2-580b-446f-bb8f-83688ed041e8" absoluteBounds="1.5150000000000001, 5.4921324869990347, 2.0949999999999998, 0.84179684768120455" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-<<<<<<< HEAD
-    <interfaceShape Id="3d9ae9b4-bab5-4488-bbda-1ea7bde84331" absoluteBounds="6.25, 1.75, 2.125, 1.5708159291744233" hideQualifiedName="true" increaseHeight="0.18800345897674564" customColor="207, 223, 191">
-=======
     <interfaceShape Id="3d9ae9b4-bab5-4488-bbda-1ea7bde84331" absoluteBounds="1.5, 1.625, 2.125, 1.5708159291744233" hideQualifiedName="true" increaseHeight="0.18800345897674564" customColor="207, 223, 191">
->>>>>>> origin/master
       <interfaceMoniker Id="0d8014b1-9d77-4a6f-94f5-2c6b79a4c19a" LastKnownName="IFiltraggio" />
       <nestedChildShapes>
         <AttributeElementListCompartment Id="77a4e2f5-c8d7-46d0-8631-f5faa08a6c6b" absoluteBounds="1.5149999999999997, 2.2030034589767458, 2.0949999999999998, 0.52148435761531176" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
         <OperationElementListCompartment Id="27e7a773-321b-40ec-8751-6a00ef124e5c" absoluteBounds="1.5149999999999997, 2.7344878165920576, 2.0949999999999998, 0.36132811258236575" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </interfaceShape>
-<<<<<<< HEAD
-    <realizationConnector edgePoints="[(5 : 3.69026299152182); (5.375 : 3.69026299152182); (5.375 : 2.53540796458721); (6.25 : 2.53540796458721)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" showAsLollipop="false">
-=======
     <realizationConnector edgePoints="[(2.5625 : 4.125); (2.5625 : 3.19581592917442)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" showAsLollipop="false">
->>>>>>> origin/master
       <interfaceRealizationMoniker Id="e3aaffab-5436-48e2-a27c-4e43e375bea2" />
       <relativeChildShapes />
       <nodes>
@@ -136,11 +128,7 @@
         <interfaceShapeMoniker Id="3d9ae9b4-bab5-4488-bbda-1ea7bde84331" />
       </nodes>
     </realizationConnector>
-<<<<<<< HEAD
-    <associationConnector edgePoints="[(8.375 : 2.37525171955427); (9.125 : 2.37525171955427)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="*" targetMultiplicity="1">
-=======
     <associationConnector edgePoints="[(3.625 : 2.37525171955427); (9.125 : 2.37525171955427)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="*" targetMultiplicity="1">
->>>>>>> origin/master
       <associationMoniker Id="745d5119-46ef-40ae-a41d-f149f02a32ae" />
       <relativeChildShapes />
       <nodes>
