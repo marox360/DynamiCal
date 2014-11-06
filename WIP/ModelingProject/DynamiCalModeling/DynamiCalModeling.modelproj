@@ -78,6 +78,13 @@
       <SubType>Content</SubType>
       <DependentUpon>GestioneCalendario.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="GestioneCalendarioNew.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GestioneCalendarioNew.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>GestioneCalendarioNew.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="GestioneEvento.usecasediagram">
       <SubType>Content</SubType>
     </Content>
@@ -85,12 +92,26 @@
       <SubType>Content</SubType>
       <DependentUpon>GestioneEvento.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="GestioneEventoNew.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GestioneEventoNew.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>GestioneEventoNew.usecasediagram</DependentUpon>
+    </Content>
     <Content Include="GestioneModelloEvento.usecasediagram">
       <SubType>Content</SubType>
     </Content>
     <Content Include="GestioneModelloEvento.usecasediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>GestioneModelloEvento.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="GestioneModelloEventoNew.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="GestioneModelloEventoNew.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>GestioneModelloEventoNew.usecasediagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\Package1_1645.uml">
       <SubType>Content</SubType>

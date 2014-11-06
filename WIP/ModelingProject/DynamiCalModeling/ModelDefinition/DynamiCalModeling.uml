@@ -19162,6 +19162,668 @@
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="6efff930-4365-4b4e-951b-1755e844078c"
+        name="Utente"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="a6499b11-992e-42d9-ad03-b62c39ac0450"
+            isDerived="false"
+            sourceEndRoleName="Utente"
+            targetEndRoleName="Gestione Calendario"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f884b00a-ae02-44dc-baea-7d3332cedc0e"
+              LastKnownName="Gestione Calendario"
+              LastKnownLocation="DynamiCalModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="42e1686f-3ec6-4338-a4ab-8f1b733a5b16"
+                  name="Utente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cba4c1b5-3c1e-4206-973b-9bbb1bb2d894"
+                  name="Gestione Calendario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="f34e9297-5cb8-4c40-aa0f-3776dac6ba7f"
+        name="Gestione Calendario"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f884b00a-ae02-44dc-baea-7d3332cedc0e"
+        name="Gestione Calendario"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f34e9297-5cb8-4c40-aa0f-3776dac6ba7f"
+            LastKnownName="Gestione Calendario"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="914e305e-8f79-44a9-b9a6-b966e3bdec30"
+        name="Creazione Calendario"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="2ef51e07-916f-4801-9d88-ad5a26d4f6b8">
+            <useCaseMoniker
+              Id="f884b00a-ae02-44dc-baea-7d3332cedc0e"
+              LastKnownName="Gestione Calendario"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="f34e9297-5cb8-4c40-aa0f-3776dac6ba7f"
+            LastKnownName="Gestione Calendario"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b1f54ae9-fc87-4521-a61d-bf370a419929"
+        name="Modifica Calendario"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="72851c22-c706-469a-a8ab-456f7dc05cd8">
+            <useCaseMoniker
+              Id="009b3cd2-4614-4e09-90af-db8b10ff0c45"
+              LastKnownName="Selezione Calendario"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="f34e9297-5cb8-4c40-aa0f-3776dac6ba7f"
+            LastKnownName="Gestione Calendario"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="218ac81f-5c8b-4deb-9793-5179b7b77469"
+        name="Eliminazione Calendario"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="b7c33749-8ea8-4e30-af2a-db4c5ae8c82f">
+            <useCaseMoniker
+              Id="009b3cd2-4614-4e09-90af-db8b10ff0c45"
+              LastKnownName="Selezione Calendario"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="f34e9297-5cb8-4c40-aa0f-3776dac6ba7f"
+            LastKnownName="Gestione Calendario"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a6f796eb-9c04-40b9-a6f3-d58f7e25783d"
+        name="Condividisione Calendario"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="608d5091-5630-4043-b445-c5463866b612">
+            <useCaseMoniker
+              Id="b1f54ae9-fc87-4521-a61d-bf370a419929"
+              LastKnownName="Modifica Calendario"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+          <extend
+            Id="0dc5d2e8-655e-4726-9d47-35a1f01c63e0">
+            <useCaseMoniker
+              Id="914e305e-8f79-44a9-b9a6-b966e3bdec30"
+              LastKnownName="Creazione Calendario"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="f34e9297-5cb8-4c40-aa0f-3776dac6ba7f"
+            LastKnownName="Gestione Calendario"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="009b3cd2-4614-4e09-90af-db8b10ff0c45"
+        name="Selezione Calendario"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="6fe5f0b7-ffb2-4555-9ec1-f89a4e524033">
+            <useCaseMoniker
+              Id="f884b00a-ae02-44dc-baea-7d3332cedc0e"
+              LastKnownName="Gestione Calendario"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="f34e9297-5cb8-4c40-aa0f-3776dac6ba7f"
+            LastKnownName="Gestione Calendario"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="2272f469-5b07-4cc4-a31b-7296633c1860"
+        name="Utente"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="8862300b-797d-4ba5-a2b6-aa49d3d90a65"
+            isDerived="false"
+            sourceEndRoleName="Utente"
+            targetEndRoleName="Gestione Calendario"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="d41b52ba-d5a3-42ec-9f76-756f76245187"
+              LastKnownName="Gestione Modello Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="56c1decf-af43-4557-a7c4-d3685c6a979a"
+                  name="Utente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dccb5c99-676c-4e7e-804b-3b781b9cddf7"
+                  name="Gestione Calendario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="30ad8ad2-ca91-4228-a3a1-e17b3f817b29"
+        name="Gestione Modello Evento"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a9bd745c-f93b-47f9-868e-6c70aa790b54"
+        name="Creazione Modello Evento"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="a9515c27-34df-4cda-9ecb-a171ae7c825f">
+            <useCaseMoniker
+              Id="d41b52ba-d5a3-42ec-9f76-756f76245187"
+              LastKnownName="Gestione Modello Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="30ad8ad2-ca91-4228-a3a1-e17b3f817b29"
+            LastKnownName="Gestione Modello Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b9e3b2ee-81a8-4085-b0dc-5b2bb72de138"
+        name="Eliminazione Modello Evento"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="0ccb371f-02df-4ae1-84fc-cde6ac9c2fd4">
+            <useCaseMoniker
+              Id="796af930-e428-4a6f-b914-c899a62e621d"
+              LastKnownName="Selezione Modello Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="30ad8ad2-ca91-4228-a3a1-e17b3f817b29"
+            LastKnownName="Gestione Modello Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="72bab483-4d4b-47d7-b911-00641b6f3fe2"
+        name="Creazione Voce"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="4fdec481-d388-4b96-943a-ce96c6078a18">
+            <useCaseMoniker
+              Id="a9bd745c-f93b-47f9-868e-6c70aa790b54"
+              LastKnownName="Creazione Modello Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="30ad8ad2-ca91-4228-a3a1-e17b3f817b29"
+            LastKnownName="Gestione Modello Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5cc824a9-45da-4c0b-aa3f-6965fc062ea6"
+        name="Eliminazione Voce"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="b442a264-513f-4431-8abf-dfe651c966df">
+            <useCaseMoniker
+              Id="a9bd745c-f93b-47f9-868e-6c70aa790b54"
+              LastKnownName="Creazione Modello Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="30ad8ad2-ca91-4228-a3a1-e17b3f817b29"
+            LastKnownName="Gestione Modello Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="796af930-e428-4a6f-b914-c899a62e621d"
+        name="Selezione Modello Evento"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="dcd4d553-53de-4331-b720-b5c1449c1064">
+            <useCaseMoniker
+              Id="d41b52ba-d5a3-42ec-9f76-756f76245187"
+              LastKnownName="Gestione Modello Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="30ad8ad2-ca91-4228-a3a1-e17b3f817b29"
+            LastKnownName="Gestione Modello Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="d41b52ba-d5a3-42ec-9f76-756f76245187"
+        name="Gestione Modello Evento"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="30ad8ad2-ca91-4228-a3a1-e17b3f817b29"
+            LastKnownName="Gestione Modello Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="52d8d6dc-bdd7-44e5-85d2-4c90c93f8681"
+        name="Utente"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="4108d579-b7ef-4ab2-898c-ea3c4ead9580"
+            isDerived="false"
+            sourceEndRoleName="Utente"
+            targetEndRoleName="Gestione Calendario"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="965c956e-d686-4f64-aa41-29ea56b13f6f"
+              LastKnownName="Gestione Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a72b12cc-3b3a-4128-885d-58807ddb856c"
+                  name="Utente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1f1ff17e-b7f4-4904-b490-f0ff2113dbb9"
+                  name="Gestione Calendario"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
+        name="Gestione Evento"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="965c956e-d686-4f64-aa41-29ea56b13f6f"
+        name="Gestione Evento"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
+            LastKnownName="Gestione Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="919452de-78c8-42a4-b186-d6022027ac75"
+        name="Creazione Evento"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="46638adf-5b31-4332-a951-7deddf42fc86">
+            <useCaseMoniker
+              Id="965c956e-d686-4f64-aa41-29ea56b13f6f"
+              LastKnownName="Gestione Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include
+            Id="38140824-7620-47c9-b87a-ddc9e9c0f91e">
+            <useCaseMoniker
+              Id="80a2a897-362f-496e-9e7b-f86b7eb67f8a"
+              LastKnownName="Selezione Calendario"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </include>
+          <include
+            Id="906d7c15-8976-4f09-ace4-64bfd793845a">
+            <useCaseMoniker
+              Id="e7cf4b7d-5c60-4c4e-82b9-ad7d556b1acd"
+              LastKnownName="Selezione Modello Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
+            LastKnownName="Gestione Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="05df5b1c-2ab6-4796-b443-1ecfb75384db"
+        name="Modifica Evento"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="1565e71a-3e30-4e21-8fc1-721b678130a9">
+            <useCaseMoniker
+              Id="971a1478-e2f2-4946-bdbf-7259bcf8321a"
+              LastKnownName="Selezione Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
+            LastKnownName="Gestione Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="db0215c7-ac9b-4041-9581-48cf9851df51"
+        name="Eliminazione Evento"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="e0329841-752f-4a44-b1b7-934d502f1463">
+            <useCaseMoniker
+              Id="971a1478-e2f2-4946-bdbf-7259bcf8321a"
+              LastKnownName="Selezione Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
+            LastKnownName="Gestione Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="971a1478-e2f2-4946-bdbf-7259bcf8321a"
+        name="Selezione Evento"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="e65a6b3b-f35d-4c40-a855-4ad9610748a9">
+            <useCaseMoniker
+              Id="965c956e-d686-4f64-aa41-29ea56b13f6f"
+              LastKnownName="Gestione Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
+            LastKnownName="Gestione Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="774bded8-5472-4b4b-bc65-9e60d9a3484b"
+        name="Modifica Periodicità"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="309e6518-7103-4104-a3f6-7ec8d4e58c83">
+            <useCaseMoniker
+              Id="05df5b1c-2ab6-4796-b443-1ecfb75384db"
+              LastKnownName="Modifica Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+          <extend
+            Id="8540f879-48ec-4da3-a374-e5709760c63f">
+            <useCaseMoniker
+              Id="919452de-78c8-42a4-b186-d6022027ac75"
+              LastKnownName="Creazione Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
+            LastKnownName="Gestione Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="dd85fc20-e40c-41d4-85ae-e4298ed93ef1"
+        name="Creazione Modello Evento"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="65ce20b4-0fea-408c-91c7-7adeed34dab2">
+            <useCaseMoniker
+              Id="919452de-78c8-42a4-b186-d6022027ac75"
+              LastKnownName="Creazione Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
+            LastKnownName="Gestione Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e7cf4b7d-5c60-4c4e-82b9-ad7d556b1acd"
+        name="Selezione Modello Evento"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
+            LastKnownName="Gestione Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="80a2a897-362f-496e-9e7b-f86b7eb67f8a"
+        name="Selezione Calendario"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
+            LastKnownName="Gestione Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a007b4a8-3a4f-4f86-b3d5-9214e84e7672"
+        name="Creazione Calendario"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="fb090ea0-375a-4204-bf45-51dad8431a60">
+            <useCaseMoniker
+              Id="919452de-78c8-42a4-b186-d6022027ac75"
+              LastKnownName="Creazione Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
+            LastKnownName="Gestione Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

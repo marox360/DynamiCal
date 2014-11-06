@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="8ddf3611-e266-4564-b6f8-93a501e466e2" name="GestioneCalendarioNew" linkedPackageId="a79c8ccf-17ab-4a2e-8481-d09b20a26928" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="e90eebb6-6828-4802-97c6-67cb2a36c8e6">
+      <profileInstance Id="9ba97c8f-8e94-4225-8230-368cad113af0" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="9ad98d41-8faa-4d7b-a9a6-71bb7329de32">
+      <profileInstance Id="f7563ecd-b6f1-4a5f-a447-c618c8f09c9a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="2381de7a-0637-4214-8ab8-bae748afe4af">
+      <profileInstance Id="f4caf21f-9920-479b-839c-33ee4ae92192" name="CSharpProfile">
+        <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
+      </profileInstance>
+      <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="2752a33f-9168-470f-96a9-e6699967a3fb" name="Utente" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6efff930-4365-4b4e-951b-1755e844078c" />
+        <targetEnds>
+          <association Id="704ae52d-ec6e-4e7d-8d4e-7ecec2e7da01" isDerived="false" sourceEndRoleName="Utente" targetEndRoleName="Gestione Calendario" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0e0dae53-a920-4957-b97b-f4acb09a2fb3" LastKnownName="Gestione Calendario" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7d5ae90b-c5d7-4398-8c9b-88a5ca2a925e" name="Utente" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="42e1686f-3ec6-4338-a4ab-8f1b733a5b16" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b5a2eba0-f561-4c5d-b2fd-9cd372f35ab5" name="Gestione Calendario" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="cba4c1b5-3c1e-4206-973b-9bbb1bb2d894" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a6499b11-992e-42d9-ad03-b62c39ac0450" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="07a78c4c-81d0-4ee4-86bd-27f906f93ceb" name="Gestione Calendario" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f34e9297-5cb8-4c40-aa0f-3776dac6ba7f" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0e0dae53-a920-4957-b97b-f4acb09a2fb3" name="Gestione Calendario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f884b00a-ae02-44dc-baea-7d3332cedc0e" />
+        <subjects>
+          <subsystemMoniker Id="07a78c4c-81d0-4ee4-86bd-27f906f93ceb" LastKnownName="Gestione Calendario" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="42b67a00-911e-429c-bc63-f1e095f7bd91" name="Creazione Calendario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="914e305e-8f79-44a9-b9a6-b966e3bdec30" />
+        <extendedCases>
+          <extend Id="75027118-af83-499a-b509-ef8cef1fb51d">
+            <useCaseMoniker Id="0e0dae53-a920-4957-b97b-f4acb09a2fb3" LastKnownName="Gestione Calendario" />
+            <elementDefinition Id="2ef51e07-916f-4801-9d88-ad5a26d4f6b8" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="07a78c4c-81d0-4ee4-86bd-27f906f93ceb" LastKnownName="Gestione Calendario" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="cb5af186-b793-47d5-bb85-09e09ace200a" name="Modifica Calendario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b1f54ae9-fc87-4521-a61d-bf370a419929" />
+        <extendedCases>
+          <extend Id="2ed9e3d0-1127-4aa8-9b93-dcf111ccc152">
+            <useCaseMoniker Id="b5b6f0e4-d013-401b-9d2d-8447a59ac573" LastKnownName="Selezione Calendario" />
+            <elementDefinition Id="72851c22-c706-469a-a8ab-456f7dc05cd8" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="07a78c4c-81d0-4ee4-86bd-27f906f93ceb" LastKnownName="Gestione Calendario" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="6f3a2dfb-8ab4-4570-a763-a71736f7ef54" name="Eliminazione Calendario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="218ac81f-5c8b-4deb-9793-5179b7b77469" />
+        <extendedCases>
+          <extend Id="2e2de468-87bc-4a88-9ed8-ef0daea791c0">
+            <useCaseMoniker Id="b5b6f0e4-d013-401b-9d2d-8447a59ac573" LastKnownName="Selezione Calendario" />
+            <elementDefinition Id="b7c33749-8ea8-4e30-af2a-db4c5ae8c82f" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="07a78c4c-81d0-4ee4-86bd-27f906f93ceb" LastKnownName="Gestione Calendario" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f978d090-e665-4efc-a357-ad8d4f8d073e" name="Condividisione Calendario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a6f796eb-9c04-40b9-a6f3-d58f7e25783d" />
+        <extendedCases>
+          <extend Id="2e215d29-bbb6-4b73-82a1-0bfba512b4ff">
+            <useCaseMoniker Id="cb5af186-b793-47d5-bb85-09e09ace200a" LastKnownName="Modifica Calendario" />
+            <elementDefinition Id="608d5091-5630-4043-b445-c5463866b612" />
+          </extend>
+          <extend Id="6b243ff8-1820-4ae4-8fb4-a516caf285a7">
+            <useCaseMoniker Id="42b67a00-911e-429c-bc63-f1e095f7bd91" LastKnownName="Creazione Calendario" />
+            <elementDefinition Id="0dc5d2e8-655e-4726-9d47-35a1f01c63e0" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="07a78c4c-81d0-4ee4-86bd-27f906f93ceb" LastKnownName="Gestione Calendario" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="b5b6f0e4-d013-401b-9d2d-8447a59ac573" name="Selezione Calendario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="009b3cd2-4614-4e09-90af-db8b10ff0c45" />
+        <extendedCases>
+          <extend Id="acb964ad-bbdf-41b0-bb30-76de1fe3ff42">
+            <useCaseMoniker Id="0e0dae53-a920-4957-b97b-f4acb09a2fb3" LastKnownName="Gestione Calendario" />
+            <elementDefinition Id="6fe5f0b7-ffb2-4555-9ec1-f89a4e524033" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="07a78c4c-81d0-4ee4-86bd-27f906f93ceb" LastKnownName="Gestione Calendario" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="a79c8ccf-17ab-4a2e-8481-d09b20a26928" name="DynamiCalModeling">
+    <elementDefinition Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c" />
+  </package>
+</useCaseModelRoot>
