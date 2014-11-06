@@ -1434,12 +1434,6 @@
               LastKnownLocation="DynamiCalModeling.uml" />
           </extend>
         </extendedCases>
-        <subjects>
-          <subsystemMoniker
-            Id="fe95987e-4321-4bb2-b779-66366ef91857"
-            LastKnownName="Gestione Calendario"
-            LastKnownLocation="DynamiCalModeling.uml" />
-        </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
