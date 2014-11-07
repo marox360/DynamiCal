@@ -369,7 +369,7 @@
             // 
             this.eliminaModelloEventoToolStripMenuItem.Name = "eliminaModelloEventoToolStripMenuItem";
             this.eliminaModelloEventoToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
-            this.eliminaModelloEventoToolStripMenuItem.Text = "Elimina modello evento";
+            this.eliminaModelloEventoToolStripMenuItem.Text = "Gestisci modelli evento";
             this.eliminaModelloEventoToolStripMenuItem.Click += new System.EventHandler(this.eliminaModelloEventoToolStripMenuItem_Click);
             // 
             // eventoToolStripMenuItem

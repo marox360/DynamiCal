@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="8ddf3611-e266-4564-b6f8-93a501e466e2" name="GestioneCalendarioNew" linkedPackageId="a79c8ccf-17ab-4a2e-8481-d09b20a26928" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="e90eebb6-6828-4802-97c6-67cb2a36c8e6">
-      <profileInstance Id="9ba97c8f-8e94-4225-8230-368cad113af0" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="9ad98d41-8faa-4d7b-a9a6-71bb7329de32">
-      <profileInstance Id="f7563ecd-b6f1-4a5f-a447-c618c8f09c9a" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="2381de7a-0637-4214-8ab8-bae748afe4af">
-      <profileInstance Id="f4caf21f-9920-479b-839c-33ee4ae92192" name="CSharpProfile">
-        <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
-      </profileInstance>
-      <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="8ddf3611-e266-4564-b6f8-93a501e466e2" name="GestioneCalendarioNew" linkedPackageId="a79c8ccf-17ab-4a2e-8481-d09b20a26928" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="2752a33f-9168-470f-96a9-e6699967a3fb" name="Utente" isAbstract="false" isLeaf="false">
@@ -100,7 +80,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="f978d090-e665-4efc-a357-ad8d4f8d073e" name="Condividisione Calendario" isAbstract="false" isLeaf="false">
+      <useCase Id="f978d090-e665-4efc-a357-ad8d4f8d073e" name="Condivisione Calendario" isAbstract="false" isLeaf="false">
         <elementDefinition Id="a6f796eb-9c04-40b9-a6f3-d58f7e25783d" />
         <extendedCases>
           <extend Id="2e215d29-bbb6-4b73-82a1-0bfba512b4ff">
@@ -134,5 +114,25 @@
   </packagedElements>
   <package Id="a79c8ccf-17ab-4a2e-8481-d09b20a26928" name="DynamiCalModeling">
     <elementDefinition Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="e90eebb6-6828-4802-97c6-67cb2a36c8e6">
+        <profileInstance Id="9ba97c8f-8e94-4225-8230-368cad113af0" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="9ad98d41-8faa-4d7b-a9a6-71bb7329de32">
+        <profileInstance Id="f7563ecd-b6f1-4a5f-a447-c618c8f09c9a" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="2381de7a-0637-4214-8ab8-bae748afe4af">
+        <profileInstance Id="f4caf21f-9920-479b-839c-33ee4ae92192" name="CSharpProfile">
+          <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
+        </profileInstance>
+        <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>

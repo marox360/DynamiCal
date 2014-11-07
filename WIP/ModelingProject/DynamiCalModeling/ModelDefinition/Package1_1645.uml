@@ -2409,7 +2409,7 @@
             </ownedParameters>
           </operation>
           <operation
-            Id="50406c55-2158-4b46-bd0b-934e50a1effb"
+            Id="6c0bb72d-938b-4fb0-9840-458ec8754a5f"
             name="ModelloEvento"
             isLeaf="false"
             isStatic="false"
@@ -2418,54 +2418,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="20423492-0ae5-4816-a338-a72c9ee0d99f"
+                Id="04fc6683-3ae1-4552-bb3c-7d40cfb46e77"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DVoce)]))])"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="9f1a3814-9f50-4803-9213-6d26b8292150"
+                Id="2429e0fe-8a30-42ec-b893-96d6ebc4a0a6"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="214aa04d-ddba-462b-b596-e62b69628fb5">
+                    Id="bbfa94b5-83ea-4efc-8d64-25b2d0cb60f2">
                     <propertyInstance
-                      Id="665c5f64-1107-4309-b057-0f990c588b6f"
+                      Id="ea744de3-ebf4-49d9-9693-bb84463c00e9"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="793d12ff-aa3e-48f2-8ed4-156ae6dba6b9">
+                    Id="c0223989-417c-4788-8c55-b887b9be212c">
                     <propertyInstance
-                      Id="992ea5f4-7b6a-43a9-86ac-9c18eaab9264"
+                      Id="95cf5c69-c76c-42b4-bd03-f47f68f4135d"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="11a69fe1-94a3-421a-b36d-6de64a1fa518">
+                    Id="fec804a9-ea22-41d8-83e6-5320280d27b6">
                     <propertyInstance
-                      Id="beebaf11-7a1c-4a78-8b47-d6ee05d5c823"
+                      Id="a88fb480-c8d6-406e-af73-fffc2b56b5b6"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="b82c401d-7fe9-4493-881c-6e6a7c2a82d0">
+                    Id="48c6ced4-aab9-42a6-b583-cc0062c4f232">
                     <propertyInstance
-                      Id="e804f102-fedf-47f2-b293-33a985550734"
+                      Id="6b985d0b-c647-45f0-be41-9ba6229f628e"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="a38ffbfb-b64d-44c7-84a9-84d9842f4b82">
+                    Id="c3d0ee66-6a63-49f1-a987-214a9f69f66a">
                     <propertyInstance
-                      Id="7f9e40a4-1542-464e-b98f-0b51b3d98a6f"
+                      Id="bba08bd7-b916-4224-8062-3331d434a822"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="124decf3-75ed-4c06-bc02-51681b10f794">
+                    Id="e5070418-5b0f-4e33-a46f-a4bfd188cca1">
                     <propertyInstance
-                      Id="61ff6df6-181c-4616-be36-68712b3ad842"
+                      Id="f387edfa-b68a-43fc-abfa-571819ff7eaa"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -2475,12 +2475,12 @@
             <ownedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="bdc50f92-6c4a-47d7-9a27-77aca45e764e"
+                  Id="9e7b59f7-94ef-4aa4-a254-d6cfb2d257f8"
                   name="nome"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="6afdcd53-3a11-431c-b377-df3b446ded91"
+                      Id="882ec3bc-61d1-4a55-a4dd-5fd2bb224463"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DVoce)]))]) ParameterIdentifier%3Dnome"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -2494,12 +2494,12 @@
               </operationHasOwnedParameters>
               <operationHasOwnedParameters>
                 <parameter
-                  Id="7e61e4b2-1c49-48b7-adfa-16e89b7219ce"
+                  Id="e0378bab-878c-49c4-b536-7d690d87f4db"
                   name="voci"
                   direction="In">
                   <referencesInternal>
                     <reference
-                      Id="a860b90d-0ee6-4950-b328-9b6c1f5473fe"
+                      Id="416ef2b8-2356-4e07-891b-38e70988e070"
                       handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DModelloEvento Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DVoce)]))]) ParameterIdentifier%3Dvoci"
                       tag="ViewCode" />
                   </referencesInternal>
@@ -6980,6 +6980,14 @@
             <interfaceMoniker
               Id="0127d9c5-0529-45be-9a27-5e922fdb6878"
               LastKnownName="IEquatable"
+              LastKnownLocation="Package3_1645.uml" />
+          </generalization>
+          <generalization
+            Id="bbe0d65d-5457-4ac0-8e63-7280da55e754"
+            isSubstitutable="false">
+            <interfaceMoniker
+              Id="0c0efdc7-ee7d-4901-a93a-b7fdc65b9c33"
+              LastKnownName="IEquatable&lt;ModelloEvento‎&gt;"
               LastKnownLocation="Package3_1645.uml" />
           </generalization>
         </generalsInternal>

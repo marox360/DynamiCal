@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c"
   name="DynamiCalModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -15413,6 +15413,57 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="688d5f71-b7f7-4a7b-9f61-15c592e2bdaa"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="_modelloEvento"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="fcf905f2-c8e7-4f74-8044-a91b4ed823c8"
+              LastKnownName="ModelloEvento"
+              LastKnownLocation="Package1_1645.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="79066546-16b4-4dbb-a079-aa3184b854d0"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d519fbdb-041c-449b-ac29-679f1b857804"
+                  name="_modelloEvento"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0e374e10-cbc5-4c94-b89d-b40d8bbbd811"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="739c12a4-675d-4283-b308-02053200d4fc"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -19305,7 +19356,7 @@
     <packageHasNamedElement>
       <useCase
         Id="a6f796eb-9c04-40b9-a6f3-d58f7e25783d"
-        name="Condividisione Calendario"
+        name="Condivisione Calendario"
         isAbstract="false"
         isLeaf="false">
         <extendedCases>
@@ -19489,10 +19540,10 @@
         isLeaf="false">
         <extendedCases>
           <extend
-            Id="b442a264-513f-4431-8abf-dfe651c966df">
+            Id="ee36f1e3-cfcf-4a95-a6e6-62f472d56b46">
             <useCaseMoniker
-              Id="a9bd745c-f93b-47f9-868e-6c70aa790b54"
-              LastKnownName="Creazione Modello Evento"
+              Id="40c8e9d1-af98-47c3-b7a5-d5f0bb13983f"
+              LastKnownName="Selezione Voce"
               LastKnownLocation="DynamiCalModeling.uml" />
           </extend>
         </extendedCases>
@@ -19742,12 +19793,6 @@
               LastKnownLocation="DynamiCalModeling.uml" />
           </extend>
         </extendedCases>
-        <subjects>
-          <subsystemMoniker
-            Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
-            LastKnownName="Gestione Evento"
-            LastKnownLocation="DynamiCalModeling.uml" />
-        </subjects>
       </useCase>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -19820,6 +19865,29 @@
           <subsystemMoniker
             Id="c3e0da09-f8a5-4784-bc4a-70fc3abd7339"
             LastKnownName="Gestione Evento"
+            LastKnownLocation="DynamiCalModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="40c8e9d1-af98-47c3-b7a5-d5f0bb13983f"
+        name="Selezione Voce"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="ac1f5ee7-8778-468a-a81b-4035cce94194">
+            <useCaseMoniker
+              Id="a9bd745c-f93b-47f9-868e-6c70aa790b54"
+              LastKnownName="Creazione Modello Evento"
+              LastKnownLocation="DynamiCalModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="30ad8ad2-ca91-4228-a3a1-e17b3f817b29"
+            LastKnownName="Gestione Modello Evento"
             LastKnownLocation="DynamiCalModeling.uml" />
         </subjects>
       </useCase>

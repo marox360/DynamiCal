@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="501d82b0-2011-4dc2-874b-e1535431bf50" name="GestioneModelloEventoNew" linkedPackageId="543dbea4-a4c8-4997-a24e-36966838eb71" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
-  <profileInstances>
-    <packageHasProfileInstances Id="42e5ef37-c31e-4d84-af56-1b0ca3b1dbdb">
-      <profileInstance Id="9387f0d7-5b3e-478c-82e6-e658b647a9af" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="8c88d6e3-64de-4c44-8070-88d3710fe3f2">
-      <profileInstance Id="59e3d2cc-6a05-473e-84cb-ea6a0d1544cb" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="bb7b2f32-efa9-4c6d-a761-c8c7a15b4111">
-      <profileInstance Id="f0f90e72-c658-4e48-ba54-2b7b463f07e0" name="CSharpProfile">
-        <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
-      </profileInstance>
-      <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="501d82b0-2011-4dc2-874b-e1535431bf50" name="GestioneModelloEventoNew" linkedPackageId="543dbea4-a4c8-4997-a24e-36966838eb71" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="27a76613-7248-46f9-8034-74adedf46d69" name="Utente" isAbstract="false" isLeaf="false">
@@ -95,9 +75,9 @@
       <useCase Id="053214d3-75df-4a9e-b13e-b5d7358d72c3" name="Eliminazione Voce" isAbstract="false" isLeaf="false">
         <elementDefinition Id="5cc824a9-45da-4c0b-aa3f-6965fc062ea6" />
         <extendedCases>
-          <extend Id="52c671f6-7b01-4060-8c11-587fd17d6031">
-            <useCaseMoniker Id="935484bc-55c0-47b8-ae6e-92cb4de7c4df" LastKnownName="Creazione Modello Evento" />
-            <elementDefinition Id="b442a264-513f-4431-8abf-dfe651c966df" />
+          <extend Id="c8ca1f0c-9afe-464d-8347-28f2e3321d25">
+            <useCaseMoniker Id="5a3ccacf-4016-4a19-977a-32b4cd7cafc2" LastKnownName="Selezione Voce" />
+            <elementDefinition Id="ee36f1e3-cfcf-4a95-a6e6-62f472d56b46" />
           </extend>
         </extendedCases>
         <subjects>
@@ -127,8 +107,42 @@
         </subjects>
       </useCase>
     </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="5a3ccacf-4016-4a19-977a-32b4cd7cafc2" name="Selezione Voce" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="40c8e9d1-af98-47c3-b7a5-d5f0bb13983f" />
+        <extendedCases>
+          <extend Id="c274d3a8-a8d5-4a07-a5bd-8420bbf33473">
+            <useCaseMoniker Id="935484bc-55c0-47b8-ae6e-92cb4de7c4df" LastKnownName="Creazione Modello Evento" />
+            <elementDefinition Id="ac1f5ee7-8778-468a-a81b-4035cce94194" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="db10d44c-4a84-43d6-bff1-24a9ae0ab364" LastKnownName="Gestione Modello Evento" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="543dbea4-a4c8-4997-a24e-36966838eb71" name="DynamiCalModeling">
     <elementDefinition Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c" />
+    <profileInstances>
+      <packageHasProfileInstances Id="42e5ef37-c31e-4d84-af56-1b0ca3b1dbdb">
+        <profileInstance Id="9387f0d7-5b3e-478c-82e6-e658b647a9af" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="8c88d6e3-64de-4c44-8070-88d3710fe3f2">
+        <profileInstance Id="59e3d2cc-6a05-473e-84cb-ea6a0d1544cb" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="bb7b2f32-efa9-4c6d-a761-c8c7a15b4111">
+        <profileInstance Id="f0f90e72-c658-4e48-ba54-2b7b463f07e0" name="CSharpProfile">
+          <elementDefinition Id="97547678-382b-4d89-8ad7-d7cc831fc3eb" />
+        </profileInstance>
+        <elementDefinition Id="50db23ef-4346-44e4-9474-558aca4ed636" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </useCaseModelRoot>
