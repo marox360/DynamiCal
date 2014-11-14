@@ -6047,6 +6047,129 @@
         <elementDefinition Id="6bc80390-c936-43ad-ac47-26594147588d" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f6fab226-8c6d-4655-b237-686543451d9a" name="VoceFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="81e9b5f8-d7c0-4944-a2ba-4c1f206d3a27" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DVoceFactory" tag="ViewCode">
+            <elementDefinition Id="f97bf499-e1a0-467f-919d-0b59abd96d4b" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="b69d27ec-34ed-4fda-bebe-33a83dd7e22d" name="class" profile="CSharpProfile">
+            <elementDefinition Id="f9e17411-0453-4773-bd74-606b0d06c681" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="f9d1e5d4-29ee-4a59-8308-5a68b6ccb8ef">
+                <propertyInstance Id="f38affca-b04a-469c-8743-031e203e103a" name="ClrAttributes">
+                  <elementDefinition Id="b79fc331-95f5-4fd3-8377-fa7743793145" />
+                </propertyInstance>
+                <elementDefinition Id="e1316e8b-868c-4bd5-a4cf-16f62ff35ca2" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="c2a4cba1-6c99-48a3-a384-0922c69a9733">
+                <propertyInstance Id="95d2c465-72be-41fc-aafa-c3f9ab9c9b00" name="IsPartial" value="false">
+                  <elementDefinition Id="3e76d083-2658-4d95-90bd-38e627e4df69" />
+                </propertyInstance>
+                <elementDefinition Id="54a34ebd-ca0e-4196-8a1e-68d23759eb15" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="46c10aba-5541-45d6-923f-02923f3c2108">
+                <propertyInstance Id="47c64b9e-9975-476a-8f1f-9e05f37f5857" name="IsStatic" value="True">
+                  <elementDefinition Id="d2723866-1a2a-45b7-8680-0318423503c4" />
+                </propertyInstance>
+                <elementDefinition Id="2f479dd9-9229-4d6e-9f78-8d37b2e7a150" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="a05e73a0-1f36-485a-898b-0e7660f7a709">
+                <propertyInstance Id="b2dcdfb4-e4ac-439e-8c69-1713b67229a7" name="IsUnsafe" value="false">
+                  <elementDefinition Id="1a9bb1fb-1335-4c81-b85a-8e87cdfcdd83" />
+                </propertyInstance>
+                <elementDefinition Id="8ba64155-b52c-429f-afaf-d5fde0168630" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="6fb9ca9f-8f95-464d-92de-d9138f7e0077">
+                <propertyInstance Id="1d8b5a62-e631-4e5d-86ab-179ba4941e87" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="4b062aed-94ef-4914-b16f-a16a513c4043" />
+                </propertyInstance>
+                <elementDefinition Id="1fbba9e3-8a03-4fc1-b316-f8160f44f619" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="f22658b4-15ae-47ea-b5dc-c475079b5550" />
+        <ownedOperationsInternal>
+          <operation Id="11828361-6551-404c-b5c9-0b5f9f58491b" name="GetImplementedVoce" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="265fba17-3999-46a1-951d-3fc593281d43" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DVoceFactory Member%3D(Name%3DGetImplementedVoce OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DVoce)])" tag="ViewCode">
+                <elementDefinition Id="40b14085-1558-44ff-bb72-8eb0e32bac3e" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="843ec968-b1c7-46b6-b896-b2e02f18bb80" name="method" profile="CSharpProfile">
+                <elementDefinition Id="0564e2a0-08c2-4422-b8b2-96c9a907d270" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="01e07b76-abc1-4179-93ea-650672f548d4">
+                    <propertyInstance Id="dbe2cf88-572d-49f7-9551-b6ea524b019b" name="ClrAttributes">
+                      <elementDefinition Id="ccadfe32-d71b-4f5b-bf83-0b0b4fdab759" />
+                    </propertyInstance>
+                    <elementDefinition Id="7aa98752-89fd-466b-b30c-8f62b4ee3854" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d14481cf-8d43-4fef-9cd2-5a2dfb29c362">
+                    <propertyInstance Id="bc5270e0-4f98-4da7-b345-02ac7ac531dd" name="IsPartial" value="false">
+                      <elementDefinition Id="170fc00f-80b3-41c0-b365-2987a2b2b0d2" />
+                    </propertyInstance>
+                    <elementDefinition Id="efd9693f-0b3d-456a-a58c-dc7b855dd2d7" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a6fe3ac6-6748-4cb5-9695-ab9fbe55a2ed">
+                    <propertyInstance Id="c406343d-991e-41c2-bb7f-435a308456f0" name="IsUnsafe" value="false">
+                      <elementDefinition Id="2f51da81-5224-465d-9683-fd33bb2baf54" />
+                    </propertyInstance>
+                    <elementDefinition Id="bbae2e97-99d8-49d6-be0a-2da78c662092" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ed78e6d7-6ead-434b-ab80-96d0b8a21aae">
+                    <propertyInstance Id="59a370e8-3fdc-44f7-8d89-6728fb86214d" name="Inheritance" value="none">
+                      <elementDefinition Id="635e4451-fe77-4a3f-8c3f-193d4f3be609" />
+                    </propertyInstance>
+                    <elementDefinition Id="871f7c2e-ea1c-43e5-8dd8-4514d4958d5f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5544b2ce-9050-421f-840d-19327b166bdd">
+                    <propertyInstance Id="4020e94d-91a9-41bf-9461-dfe32ff34c2c" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="40439760-a7f3-40b0-93ac-90a7cdc68f95" />
+                    </propertyInstance>
+                    <elementDefinition Id="bca1f511-3ba4-4daa-b78d-e3889b8291f6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f02ccc20-155e-423b-90ea-5e30072405c1">
+                    <propertyInstance Id="cbecdea4-6d24-4858-ba0c-0109ae591acb" name="params" value="false">
+                      <elementDefinition Id="2238d663-67de-445a-882f-46c06b6743e3" />
+                    </propertyInstance>
+                    <elementDefinition Id="2bdfdbf0-aff3-437a-a3bf-a75b87aedf4f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="925222b7-d338-469f-a01a-36ce8af96b67" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d7f132f7-ac72-4e6a-a015-8dc995f406bc" direction="Return">
+                  <elementDefinition Id="1e43505f-0174-49a4-bb1d-3c07a5a2334f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="18a6576f-39c1-454a-8f8f-c02294ed9f41" LastKnownName="IVoce" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6f44b01e-2cb9-4767-99f7-351c293396ee" name="voce" direction="In">
+                  <referencesInternal>
+                    <reference Id="60a3e15a-ee3b-4715-bd96-587e93a5a612" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DVoceFactory Member%3D(Name%3DGetImplementedVoce OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FTommaso%2FDocuments%2FGitHub%2FDynamiCal%2FWIP%2FPrototipo%2FDynamiCal%2FDynamiCal%2Fbin%2FDebug%2FDynamiCal.exe Namespace%3DDynamiCal.Model Type%3DVoce)]) ParameterIdentifier%3Dvoce" tag="ViewCode">
+                      <elementDefinition Id="1fba2898-9eb6-437e-b80a-8d2de963e3f5" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="50a05877-b01c-4ccf-b1e8-50c2a0fc9d2d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="fbe206a4-40ec-43c1-8091-bf69c92aadd4" LastKnownName="Voce" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="763b5105-f2c4-41b0-981a-e66ec3f2a2e6" name="DynamiCalModeling">
     <elementDefinition Id="ecf7a7a5-52c2-4d1e-8359-f58a05c34f1c" />
