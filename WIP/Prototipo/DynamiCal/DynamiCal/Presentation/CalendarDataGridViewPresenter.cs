@@ -71,7 +71,7 @@ namespace DynamiCal.Presentation
         {
             return FiltroFactory.FiltraPerPeriodo(filtro,
                     new DateTime(_lastDate.Year, _lastDate.Month, 1).AddDays(-14),
-                    new DateTime(_lastDate.Year + Math.Max(0, _lastDate.Month - 11), _lastDate.Month + 1 > 12 ? 1 : _lastDate.Month + 1, 14).EndOfTheDay());
+                    new DateTime(_lastDate.Year + Math.Max(0, _lastDate.Month - 11), _lastDate.Month > 11 ? 1 : _lastDate.Month + 1, 14).EndOfTheDay());
         }
 
         private void filtraggio_FilterChanged(object sender, EventArgs e)
