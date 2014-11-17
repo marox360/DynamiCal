@@ -106,6 +106,14 @@
         <interfaceShapeMoniker Id="482c4140-9f14-4304-be9a-451e34c2e7c1" />
       </nodes>
     </realizationConnector>
+    <associationConnector edgePoints="[(12.4564359444491 : 4.5); (12.4564359444491 : 2.37525171955427); (11.5 : 2.37525171955427)]" fixedFrom="Caller" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="*" targetMultiplicity="1">
+      <associationMoniker Id="4176ee55-0c7d-41e8-b3ed-5c29c80ee29d" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="fd5145c1-97ad-4264-9f55-8213ec49e99f" />
+        <interfaceShapeMoniker Id="482c4140-9f14-4304-be9a-451e34c2e7c1" />
+      </nodes>
+    </associationConnector>
     <classShape Id="f20beef1-f5be-4f15-917f-1de986514d68" absoluteBounds="1.5, 4.125, 2.125, 2.3089293346802395" hideQualifiedName="true" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
       <classMoniker Id="0a566a4b-5dc8-4dcc-837c-52317f8698cf" LastKnownName="Filtraggio" />
       <nestedChildShapes>
@@ -128,7 +136,7 @@
         <interfaceShapeMoniker Id="3d9ae9b4-bab5-4488-bbda-1ea7bde84331" />
       </nodes>
     </realizationConnector>
-    <associationConnector edgePoints="[(3.625 : 2.37525171955427); (9.125 : 2.37525171955427)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="*" targetMultiplicity="1">
+    <associationConnector edgePoints="[(3.625 : 2.37525171955427); (9.125 : 2.37525171955427)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="*" targetMultiplicity="1">
       <associationMoniker Id="745d5119-46ef-40ae-a41d-f149f02a32ae" />
       <relativeChildShapes />
       <nodes>

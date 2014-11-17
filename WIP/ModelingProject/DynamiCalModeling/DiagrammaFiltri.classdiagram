@@ -344,6 +344,34 @@
             <elementDefinition Id="a05b7d73-9ec8-4766-a709-aecbc29d232c" />
           </interfaceRealization>
         </suppliersInternal>
+        <targetEnds>
+          <association Id="4176ee55-0c7d-41e8-b3ed-5c29c80ee29d" isDerived="false" sourceEndRoleName="" targetEndRoleName="Component" isLeaf="false" isAbstract="false">
+            <interfaceMoniker Id="325213de-ccfd-4a69-8263-54246aad0504" LastKnownName="IFiltro" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="05802bea-7fda-4fdf-a7cb-1d8949b528b6" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="6f29f9b5-17e8-4371-b487-c229de0434f8" name="Lower" value="*">
+                      <elementDefinition Id="722a0283-1bb1-4a5c-9847-4f76a3625998" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="cf81d49e-5ad7-4a62-a076-e0be2542921e" name="Upper" value="*">
+                      <elementDefinition Id="82a89d05-9ad5-4f1e-8c6d-a91b94dd5847" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="bf1bb1d4-2563-4115-9f28-eede75b49815" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e6cc6d18-cc1a-45ce-99e4-48bab9954dab" name="Component" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b4b624f4-bb42-49fd-9776-f1fa1777701a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="943bc3ce-3236-4b0a-859d-b3b633e464ea" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="2de75100-3638-4210-becf-72d93bf2790e" name="Component" isLeaf="false" isStatic="false" isReadOnly="true" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>

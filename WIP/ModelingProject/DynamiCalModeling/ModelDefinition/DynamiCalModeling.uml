@@ -2662,6 +2662,59 @@
               LastKnownLocation="DynamiCalModeling.uml" />
           </interfaceRealization>
         </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="943bc3ce-3236-4b0a-859d-b3b633e464ea"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="Component"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="fbde12c0-4acb-4240-953d-f59c3036bab4"
+              LastKnownName="IFiltro"
+              LastKnownLocation="DynamiCalModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bf1bb1d4-2563-4115-9f28-eede75b49815"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="722a0283-1bb1-4a5c-9847-4f76a3625998"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="82a89d05-9ad5-4f1e-8c6d-a91b94dd5847"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b4b624f4-bb42-49fd-9776-f1fa1777701a"
+                  name="Component"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="ab24f728-7b9b-4754-8b8b-598da9933cd4"
